@@ -4,7 +4,7 @@
 
 <p align="center">Windows x64 · C++17 · API 29 · Build de referência 25090264</p>
 
-<p align="center"><a href="https://github.com/andrew-mauricio/BRZ-Api-SDK/releases/latest">📦 Baixar SDK</a> · <a href="docs/GUIA.md">Guia de desenvolvimento</a> · <a href="examples">Exemplos completos</a> · <a href="docs/VALIDACAO.md">Validação</a></p>
+<p align="center"><a href="https://github.com/andrew-mauricio/BRZ-Api-SDK/releases/latest">📦 Baixar SDK</a> · <a href="https://github.com/andrew-mauricio/BRZ-Api">⚙️ API para o servidor</a> · <a href="docs/GUIA.md">Guia de desenvolvimento</a> · <a href="examples">Exemplos completos</a> · <a href="docs/VALIDACAO.md">Validação</a></p>
 
 ## Uma base para criar, adaptar e corrigir plugins
 
@@ -33,7 +33,7 @@ As ideias acima mostram áreas de aplicação das interfaces; não são plugins 
 - **BRZ Api:** o motor compatível, carregado no servidor como `winmm.dll`.
 - **ARK:** o ambiente real onde objetos, funções e eventos do jogo existem.
 
-**O motor `winmm.dll` e o servidor não acompanham este download.** A biblioteca `.lib` é uma biblioteca de importação, não substitui o motor. Para executar os plugins, você precisa de uma instalação compatível da BRZ Api. Este repositório publica o kit de desenvolvimento.
+**O motor `winmm.dll` e o servidor não acompanham este download.** A biblioteca `.lib` é uma biblioteca de importação, não substitui o motor. Para executar os plugins, instale o [motor BRZ Api](https://github.com/andrew-mauricio/BRZ-Api); o pacote está nas [releases da API](https://github.com/andrew-mauricio/BRZ-Api/releases/latest). Este repositório publica o kit de desenvolvimento.
 
 ## Comece em poucos minutos
 

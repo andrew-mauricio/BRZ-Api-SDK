@@ -47,3 +47,7 @@ Carregue pelo procedimento suportado pelo motor e confira os logs de registro. T
 | Código compila, chamada falha no jogo | Assinatura, validade do objeto, thread, build, endereço e layout |
 
 Não contorne uma incompatibilidade alterando casts ou offsets por tentativa. Reduza a um caso reproduzível e verifique o contrato na versão alvo.
+
+## Baixar o motor
+
+O pacote de execução e o guia de instalação estão no [repositório BRZ Api](https://github.com/andrew-mauricio/BRZ-Api). Use a edição correspondente ao SDK e ao jogo.
