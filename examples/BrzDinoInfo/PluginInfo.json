@@ -1,0 +1,7 @@
+{
+  "Name": "BrzDinoInfo",
+  "Version": "1.0.0",
+  "Author": "andrew-mauricio",
+  "Description": "Exemplo educacional do BRZ SDK",
+  "MinApiVersion": 29
+}

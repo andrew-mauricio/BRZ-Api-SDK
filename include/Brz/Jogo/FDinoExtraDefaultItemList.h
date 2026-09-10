@@ -1,0 +1,44 @@
+// ==========================================================================
+//  FDinoExtraDefaultItemList — GERADO por ferramentas/gerar-headers-sdk.py. Nao edite.
+//
+//  BRZ Api — MIT, Copyright (c) 2026 andrew-mauricio.
+//
+//  Uma casca sobre `void*`: sem vtable, sem membro, nada do nosso codigo dentro
+//  do seu DLL alem de `inline`. Voce compila com o compilador que quiser.
+//
+//  O CAMPO e' resolvido pelo NOME, em tempo de execucao, pela reflexao viva da
+//  build que esta' rodando — e nao por offset cravado aqui, que apodreceria na
+//  proxima atualizacao do jogo sem ninguem notar.
+//
+//  A FUNCAO vem da tabela de simbolos desta build. Simbolo que so' existe por
+//  inferencia de posicao e' RECUSADO com o nome no log, em vez de chutado: um
+//  endereco errado nao devolve valor esquisito, ele derruba o servidor ou faz
+//  outra coisa com sucesso.
+// ==========================================================================
+#ifndef BRZ_SDK_JOGO_FDINOEXTRADEFAULTITEMLIST_H
+#define BRZ_SDK_JOGO_FDINOEXTRADEFAULTITEMLIST_H
+
+#include "../Base.h"
+#include "../Campos.h"
+#include "../Colecao.h"
+#include "../Texto.h"
+#include "../Classe.h"
+
+
+struct FDinoExtraDefaultItemList
+{
+    static UClass* StaticClass()
+    { return BrzClassePorNome("FDinoExtraDefaultItemList"); }
+
+    bool IsA(UClass* classe) const
+    { return BrzEhDaClasse(this, classe); }
+
+    float& ChanceToGiveField() const
+    { return *GetNativePointerField<float*>(this, "FDinoExtraDefaultItemList.ChanceToGive"); }
+    TArray<void*>& DefaultItemsToGiveField() const
+    { return *GetNativePointerField<TArray<void*>*>(this, "FDinoExtraDefaultItemList.DefaultItemsToGive"); }
+    int& MinimumDinoLevelField() const
+    { return *GetNativePointerField<int*>(this, "FDinoExtraDefaultItemList.MinimumDinoLevel"); }
+};
+
+#endif  // BRZ_SDK_JOGO_FDINOEXTRADEFAULTITEMLIST_H

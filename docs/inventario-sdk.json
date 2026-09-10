@@ -1,0 +1,4891 @@
+{
+  "game_build": 25090264,
+  "api_version": 29,
+  "files": [
+    {
+      "path": "include/API/ARK/Ark.h",
+      "bytes": 851,
+      "sha256": "3c1bf4cafbe77ae24eefc6bc1a63ccb95c078b593b3b9da60b634d3711d7b801"
+    },
+    {
+      "path": "include/API/Base.h",
+      "bytes": 1081,
+      "sha256": "e31193046aa4483668fb25b6d6f9f14e54f73c764441971583687b8ee6fffdec"
+    },
+    {
+      "path": "include/Brz/Ark.h",
+      "bytes": 2389,
+      "sha256": "3d6fcc76442a44e8499ae2e33a3aadc851414d3d41e8c07f9a0e61e269ae6d0a"
+    },
+    {
+      "path": "include/Brz/Base.h",
+      "bytes": 8728,
+      "sha256": "e6cb1ee424c8763f4640dda0eb5917f334a892126eaca5ef95923ff3d5f683dc"
+    },
+    {
+      "path": "include/Brz/BrzPluginApi.h",
+      "bytes": 114102,
+      "sha256": "7ef27b9b132bda4854cadc85096d7770225561923fd6ec36063781f571376ef5"
+    },
+    {
+      "path": "include/Brz/Campos.h",
+      "bytes": 17773,
+      "sha256": "75c5da87c38515f6686b07335079907ea7dd7bd5dc78e10c7a01ea12e7bcd338"
+    },
+    {
+      "path": "include/Brz/Classe.h",
+      "bytes": 1934,
+      "sha256": "a60ca3852f940bfc5e3bd98f08c6bffbf921e6edb23abd04707bbd435c7c38fb"
+    },
+    {
+      "path": "include/Brz/Colecao.h",
+      "bytes": 13223,
+      "sha256": "faa036afd134dbe85355b57da043f42de8503656712f11a7488ad74c34f404e4"
+    },
+    {
+      "path": "include/Brz/Comum/BrzDino.h",
+      "bytes": 28953,
+      "sha256": "9737c39ce49ec5f46ad4b89b62988377e0812e142181f1b9acabec5be94d0c74"
+    },
+    {
+      "path": "include/Brz/Comum/BrzHeartbeat.h",
+      "bytes": 6222,
+      "sha256": "9fa72bb4e84dee8da828d5e72d033dec48a1470e8f92944171001b177703a99d"
+    },
+    {
+      "path": "include/Brz/Comum/BrzMySql.h",
+      "bytes": 26774,
+      "sha256": "7e5749ad791a50253c7f905527be57a389d6e50e9e79b0c7513a4ddc2d8e97d4"
+    },
+    {
+      "path": "include/Brz/Comum/BrzPluginComum.h",
+      "bytes": 39289,
+      "sha256": "d016854aeebbb7a2b0d1fcfecbb1df74c315596018bfef80c84c6666e07e2ffa"
+    },
+    {
+      "path": "include/Brz/Jogo/AAIAttackCoordinator.h",
+      "bytes": 2513,
+      "sha256": "b702ea141d4b92e9010e3aeff815f4c0d34a8c69ca10eeda42b6da0c2ef16fe5"
+    },
+    {
+      "path": "include/Brz/Jogo/AAIController.h",
+      "bytes": 10434,
+      "sha256": "d3a0c97780d3ad9de275699060385df199fd48c04e7b2fab5acb950049fe330c"
+    },
+    {
+      "path": "include/Brz/Jogo/AARKNXWorldSettings.h",
+      "bytes": 2919,
+      "sha256": "4cd5bbdd33469af31918af026ffa51ce1f0609b888316cea396752eb45c15e5a"
+    },
+    {
+      "path": "include/Brz/Jogo/AActor.h",
+      "bytes": 161247,
+      "sha256": "28374af1a9167f6559ea29e09ca61d65e79cec40bff5b627b6f274f5fbace5ca"
+    },
+    {
+      "path": "include/Brz/Jogo/ABaseBoxTrigger.h",
+      "bytes": 3226,
+      "sha256": "af8dd870bf48ad8e3fd2c2829c865ac090ffc53ca3543810d4abb63963592904"
+    },
+    {
+      "path": "include/Brz/Jogo/ABasePlayerController.h",
+      "bytes": 8101,
+      "sha256": "204aa455883d344a604b5bfcd7c6501ef10c7fa6389493ff2e5f1f517f1bd20d"
+    },
+    {
+      "path": "include/Brz/Jogo/ABasePrimalWorldSettings.h",
+      "bytes": 9064,
+      "sha256": "5f8c049eacd8870263fe3dca15647f2d5763c1d6d7cf2651fae3d6c9afc50b9f"
+    },
+    {
+      "path": "include/Brz/Jogo/ABiomeZoneSettings.h",
+      "bytes": 5388,
+      "sha256": "ab0703b282d9e67bddda360a020c7c357a770ea0ea44a32ac669dc0224be2c1c"
+    },
+    {
+      "path": "include/Brz/Jogo/ABiomeZoneVolume.h",
+      "bytes": 14166,
+      "sha256": "4c3e47d8f89f8cc51a67eb5077789aae035ae7c30c8c418703cdcafe9818df14"
+    },
+    {
+      "path": "include/Brz/Jogo/ACharacter.h",
+      "bytes": 42412,
+      "sha256": "71c481c3e725066e6a78fe41a23fd4f60a36c407679ba9fb7031a9f30558587b"
+    },
+    {
+      "path": "include/Brz/Jogo/AController.h",
+      "bytes": 20637,
+      "sha256": "d28bd5fe124c169fd94b96b058ac092d5582882abadf57286cd78b9a9a256f8f"
+    },
+    {
+      "path": "include/Brz/Jogo/ACustomActorList.h",
+      "bytes": 1524,
+      "sha256": "9151c8339dbca0aec4501073f25a673812a3864ac5681dd6acd534caa5a84a46"
+    },
+    {
+      "path": "include/Brz/Jogo/ACustomGameMode.h",
+      "bytes": 8648,
+      "sha256": "7583fbdeb3b546098129d55bb27bbefb45dffdfe3cb9c16484cf129b0f9df921"
+    },
+    {
+      "path": "include/Brz/Jogo/ACustomGameState.h",
+      "bytes": 10432,
+      "sha256": "e715e434e70608abe90a6152304b2cba4b53fc99d887efdd9454dad7d8fe6f9e"
+    },
+    {
+      "path": "include/Brz/Jogo/ADamageVolumeBase.h",
+      "bytes": 2229,
+      "sha256": "27517fe83e8a487bfb858643e5653c8adeb58c5275827f62ad81feb3eed306c5"
+    },
+    {
+      "path": "include/Brz/Jogo/ADamageVolumeSwamp.h",
+      "bytes": 2833,
+      "sha256": "f12c449ccaa61d9121fe48931a8bc5447c1f9e16214940dd5ec3b944f7679aa4"
+    },
+    {
+      "path": "include/Brz/Jogo/ADayCycleManager.h",
+      "bytes": 18618,
+      "sha256": "47683d187624beaa0f6d07238786f6572b254acb8411f973cf9243ae7c1b9753"
+    },
+    {
+      "path": "include/Brz/Jogo/ADefaultPawn.h",
+      "bytes": 3706,
+      "sha256": "cddac1dfa09cea59b1a3ad33bd0c39a3272af4504962ce50410a254c47fec22e"
+    },
+    {
+      "path": "include/Brz/Jogo/ADroppedItem.h",
+      "bytes": 17529,
+      "sha256": "8f226bd4134ac98689673c214561de2689e11692d4fc907a92b4497a5c648c7c"
+    },
+    {
+      "path": "include/Brz/Jogo/ADroppedItemEgg.h",
+      "bytes": 4062,
+      "sha256": "889dd8c1a56a6f490e74933e44d89e3ef691205c047a6ef81d5fea95d2fc8ad1"
+    },
+    {
+      "path": "include/Brz/Jogo/ADroppedItemMission.h",
+      "bytes": 2932,
+      "sha256": "25f1d81970c134ecc0a12d69acc4d35e026e8844fe22bd18dbd2482a66b1b93c"
+    },
+    {
+      "path": "include/Brz/Jogo/ADroppedItemTorch.h",
+      "bytes": 4255,
+      "sha256": "0889847e656d0d65b44c839e744706ee4592f84c73fe17fe8789c79bbcc8b4c4"
+    },
+    {
+      "path": "include/Brz/Jogo/AGameMode.h",
+      "bytes": 14255,
+      "sha256": "b985552154a050898f955e5dfdf9d226991a43c94baa0aaa303f4a36a95692a6"
+    },
+    {
+      "path": "include/Brz/Jogo/AGameModeBase.h",
+      "bytes": 28143,
+      "sha256": "1be58ad46eea9e292a12da6e93db966c602a2f672dda72d74087099b6f048683"
+    },
+    {
+      "path": "include/Brz/Jogo/AGameNetworkManager.h",
+      "bytes": 10622,
+      "sha256": "528aabb6442bc6a5526c90a3a4dc51b369c4ac93ec047498416eadad7393efda"
+    },
+    {
+      "path": "include/Brz/Jogo/AGameSession.h",
+      "bytes": 9289,
+      "sha256": "d6193aa93cf0e009edb260fb36ce9cc98c06ce755df0a037c516e7d68b54f645"
+    },
+    {
+      "path": "include/Brz/Jogo/AGameState.h",
+      "bytes": 5173,
+      "sha256": "3dd622858dc7eaa5649e147819969c626ae8731bf6c4e359ee8f1766b23bc34b"
+    },
+    {
+      "path": "include/Brz/Jogo/AGameStateBase.h",
+      "bytes": 9965,
+      "sha256": "f4f1cd4ff44aacb2e9ea332e6b84c6a7faf127aa9dd30916d1a0e64a11edfcc0"
+    },
+    {
+      "path": "include/Brz/Jogo/AHazardTrigger.h",
+      "bytes": 3943,
+      "sha256": "1ce33b21c1c7633eba6190519bebbb6521e9621ab575d8f53cb19f31a175857b"
+    },
+    {
+      "path": "include/Brz/Jogo/AHazardTrigger_Slide.h",
+      "bytes": 9501,
+      "sha256": "e3a577bf4c88cbcf2eed4e366e6766603680f84465bf97b0e7638a24fd3585df"
+    },
+    {
+      "path": "include/Brz/Jogo/AHordeCrateManager.h",
+      "bytes": 3856,
+      "sha256": "dbd32799b4bbf226c25446dee333012a591bbbcbb36963a5fb4bf2b8ad3e422b"
+    },
+    {
+      "path": "include/Brz/Jogo/AHoverDronePawn.h",
+      "bytes": 4656,
+      "sha256": "53ab77b33aca05b10407c4c88aff6012e6e272d878bbbeef8ae0beb5a70e0247"
+    },
+    {
+      "path": "include/Brz/Jogo/AInfo.h",
+      "bytes": 1332,
+      "sha256": "27c4ef5b322609b04a61ad7eb3cb24d804c9b54b3ac5d7766175ee9fcf3ebe8e"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelBounds.h",
+      "bytes": 29092,
+      "sha256": "2c8eb4001e196c02a399966c1d5ec094f93e5f85240c6d375a168024fa8ec1b3"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelInstance.h",
+      "bytes": 32237,
+      "sha256": "069a58c1b1bc560c02ec7922f7ecdc2a8a55a7f20ee2276c4ca1a7ef07b02322"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelScriptActor.h",
+      "bytes": 32779,
+      "sha256": "d040184cabb54fb6445edb3f671232666eb13bf648511eb7fad6613ef7d75d86"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelSequenceActor.h",
+      "bytes": 41835,
+      "sha256": "df32ce400a83dfa9cb44155921b80718d13ed03b305826ed33b0a07cc6717769"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelSequenceMediaController.h",
+      "bytes": 32446,
+      "sha256": "4fb2eb39e1abbc66e6a2921b7e73b9acba83d0fc39c12b513052fcddc17d49be"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelStreamingVolume.h",
+      "bytes": 30874,
+      "sha256": "84549fb3bbceb25ac5aa73bb417b9be2614f4be7f57cf8b4745a736c0a45880d"
+    },
+    {
+      "path": "include/Brz/Jogo/ALevelVariantSetsActor.h",
+      "bytes": 30826,
+      "sha256": "66894521724572c95fde1f74a337b169120b996d5dd2412d484ff826d79758e8"
+    },
+    {
+      "path": "include/Brz/Jogo/AMissionType.h",
+      "bytes": 35085,
+      "sha256": "b427f86509fec5e971f76d8b7f51179b7469d91418a2acc9b533c83f4828af82"
+    },
+    {
+      "path": "include/Brz/Jogo/APawn.h",
+      "bytes": 24352,
+      "sha256": "b32f0b52028203e73c6a2daa3b364e2c8716a6b799a1b2dfd1028b092de6985e"
+    },
+    {
+      "path": "include/Brz/Jogo/APhysicsVolume.h",
+      "bytes": 5068,
+      "sha256": "2009e8d05a505937cad260fd7e4f252ed8531c6196487c75343f6664433c5905"
+    },
+    {
+      "path": "include/Brz/Jogo/APlayerCameraManager.h",
+      "bytes": 78499,
+      "sha256": "6933543932fd32b7a27a439f7cdafaa248dd774573b31fa1d588d3949ceb9f9c"
+    },
+    {
+      "path": "include/Brz/Jogo/APlayerController.h",
+      "bytes": 133250,
+      "sha256": "e6a54241c814d550fd5b33cb0ad40d5bc89e93d82c2c32356f3a15a120802a72"
+    },
+    {
+      "path": "include/Brz/Jogo/APlayerStart.h",
+      "bytes": 30088,
+      "sha256": "84e236a92ea71d7d8923166025d2e525ba1b844933cf91172c6c103b1cedf11b"
+    },
+    {
+      "path": "include/Brz/Jogo/APlayerStartPIE.h",
+      "bytes": 28936,
+      "sha256": "63e85e1528365bf4ae7d5b8cb7c5cdc37a46fc53b733d310cc3c9a17cd81a428"
+    },
+    {
+      "path": "include/Brz/Jogo/APlayerState.h",
+      "bytes": 16094,
+      "sha256": "bfecd9cae3985598405d37a85ae008f546aca99d4cc725c01de93194a6c64ddc"
+    },
+    {
+      "path": "include/Brz/Jogo/APointOfInterestActor.h",
+      "bytes": 8008,
+      "sha256": "fc17eebec4960abfcb7524a6e5c67e09ba20bd20f66b350426cc09a8bfaf25e7"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBotAIController.h",
+      "bytes": 19205,
+      "sha256": "cab44282d5c5bbd38fee53e92c2e51ad149932f4704891448fb04de814575fb6"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBotCharacter.h",
+      "bytes": 96338,
+      "sha256": "ffd35e0aa6c87b515a8117c50c7cb5a24302c12811fac054dba6b20a377d6502"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff.h",
+      "bytes": 184210,
+      "sha256": "1cdd54f3e5d6e966190d3344caa25c15d94c19f677f42584d90bb843ceeb8a97"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuffAbilityCharges.h",
+      "bytes": 126803,
+      "sha256": "27cdf9c9945070fbc83595a2f3cdca640a97b1df492836fa8aeaf5114111f529"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_ApiUtils.h",
+      "bytes": 1403,
+      "sha256": "e9eb53389abaed15f94fa96fbaf88a58b46c0bd4dbc13db60bd1530ce2910403"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_Companion.h",
+      "bytes": 54630,
+      "sha256": "f085bfb7325df21d4eddc3a8a53e235627a9dbdfe72d6c7572b94192254eea43"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_DragonHorn.h",
+      "bytes": 175621,
+      "sha256": "e39fbd662ec317d0e912200f89912254d3fd398102a302dda5d1d1f32ee7ab6b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_Grappled.h",
+      "bytes": 102415,
+      "sha256": "5dd3c6c1afcd1e0c6bfda0c54d527ca5d99819b6d9a30c0b3323fe7a87522625"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_HotbarReplacer.h",
+      "bytes": 103515,
+      "sha256": "efdec88b4cac7af81780137186b76ffcedfa0c4335e1e2a520b5e1d3e8f038de"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_MissionData.h",
+      "bytes": 48108,
+      "sha256": "aa31dd47c73cf34705c428e680cc9d4648612d345ed41a3377eb840ce7fefef6"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_Skill.h",
+      "bytes": 99381,
+      "sha256": "2082f4264a432ee76c2f691decb2c948326c60117db9a207f8a9022e57c1a0aa"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalBuff_StorageInterface.h",
+      "bytes": 128817,
+      "sha256": "3f60f9a3a1e76f2989efd37480eb8444fe185ea6654f295ec7f5b331ddc5bc10"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalCableActor.h",
+      "bytes": 1572,
+      "sha256": "0fe3ef249b24c0c89e3ebe52c9589e8645f8e2a2fe5f0fd2ad2b392341565efa"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalCameraProbeActor.h",
+      "bytes": 31043,
+      "sha256": "00a6a659b98d4fd42e013ab069473f7afdec76c99337a882335f51ce04d038c6"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalCharacter.h",
+      "bytes": 431330,
+      "sha256": "1aeeace1dc68ac252969c43b47181d725e971b5e9b548ebd33d6751237c32544"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalCinematicActor.h",
+      "bytes": 39488,
+      "sha256": "a41124f4c6a346b3002f90fae4ba44ad60cb499c62f002adce8f0db434f7a8a1"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalController.h",
+      "bytes": 2075,
+      "sha256": "36d992ca7f1452c3d3cd105b6f64c2d7a6c7731965dc87b3d659536789ab2e69"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalDestroyedMeshActor.h",
+      "bytes": 33523,
+      "sha256": "325e9d4ebc8c6b09acb2ba3478b07fbc1e03d68e5950718c8e361122a2dcb413"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalDestructibleActor.h",
+      "bytes": 32179,
+      "sha256": "d47832d2f889179b9de62db5e8500bce81b420012f5c23165df679fce59272d8"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalDinoAIController.h",
+      "bytes": 70290,
+      "sha256": "6d995ce3a14eb97d44876a11abf0835554a721e62cd9bdb438ba881859195c30"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalDinoCharacter.h",
+      "bytes": 519557,
+      "sha256": "8c2b441f396c7717d0d1b1d22f337adc1e208902067da4da6ccb17da642e5f5f"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalEmitterSpawnable.h",
+      "bytes": 15848,
+      "sha256": "182a204dc07b98fbd20b0835de682050426a4dc7415abcb05b3a3632f831604c"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalFallingTreeActor.h",
+      "bytes": 34389,
+      "sha256": "105e700b0afe6918e52267daa3f23ef2591a0d9626ca46b7dd5afec32139e8ce"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalFoliageSolver.h",
+      "bytes": 34055,
+      "sha256": "0802bf553372ae2ce467230a16d6bb6379fb470fe7c54a28af2ce21edd64fce1"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalGameMode.h",
+      "bytes": 1821,
+      "sha256": "0c2b2901a0813cebb6af9abec1efe1b1f28c9afc03d70bc2854f207b7c6df1d9"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalLevelInstance.h",
+      "bytes": 31241,
+      "sha256": "6c221638388acd2e8ee2d3afd248916afc0c610569f601b3392b32fb507d2ba4"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalLevelSequenceVolumeBase.h",
+      "bytes": 32200,
+      "sha256": "c6841af5f808feb5bad0607bbabfc9558265e353cc9f491644125c079408d65a"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalLevelSequenceVolumeBox.h",
+      "bytes": 32341,
+      "sha256": "509ac1d577777662df3754a4c4f48f8dad96183ac9f3e26c5a1a24b17d874097"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalLevelSequenceVolumeSphere.h",
+      "bytes": 32638,
+      "sha256": "ba1cf0ef40662939120e0030979c6c8d8c7e2b7682e4592f05b5ea77f07616a4"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalNoClimbingVolume.h",
+      "bytes": 30522,
+      "sha256": "dd0d794e31d2f71dd0fc2f0669850538fffc389e842e9093c1348b6c625f0933"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPatrolPoint.h",
+      "bytes": 35097,
+      "sha256": "3855df0b9a4bdfd1f5dd0010eb991123688f563249b723dd2445654141a0d72b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPawn.h",
+      "bytes": 9145,
+      "sha256": "4a076c848ff383e2fab8429cc60d67dfbd6ffdc39694ed7e0ab90c2580ed43dd"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPersistentWorldData.h",
+      "bytes": 1592,
+      "sha256": "2f1193b52ed5bed74491360e74eed4d6f55bb1ce99a89dd2de298f40e4fdff4b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPlayerController.h",
+      "bytes": 13797,
+      "sha256": "b5d434c1b14ef9630529f4fe2aeab465ddacc097169d1d707a23454272029221"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPlayerFollowingShip.h",
+      "bytes": 237079,
+      "sha256": "dd1198a473785b78ce1289863c75f11a59b280281e6f90dff32aa213e064d59c"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPlayerState.h",
+      "bytes": 30387,
+      "sha256": "4db6ccca59b7fd5f50a3663c5f6a7c544941a32409d1bc3c0a06ec11c381bc91"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPointNote.h",
+      "bytes": 28160,
+      "sha256": "24c272c4981d7bbda558da7e6b2d3a1886e11d64b1ec7f31de3c29f0eb961ab1"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalPreviewSceneSetup.h",
+      "bytes": 30677,
+      "sha256": "8997af14f74e402ce9d02e9c8723c3720fd1278c3ab9801ea8d0505d61c01ca7"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalProjectileArrow.h",
+      "bytes": 4906,
+      "sha256": "6a1861b051ae154aa419c7e66ed9742464e51d6b31ecf3d427314af7045c1de3"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalProjectileBoomerang.h",
+      "bytes": 8010,
+      "sha256": "3d03e56a959ffa126b6964bf3cb1e12ccfc8bf3684922517e68904fb5dbedfa5"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalProjectileFlare.h",
+      "bytes": 4071,
+      "sha256": "9d7745ce3637b451355919f5612cc83d5117a888f556f501353970c093572d7b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalProjectileGrapplingHook.h",
+      "bytes": 4413,
+      "sha256": "da9766d551cadccffa42a1174e82a355491a8cb4bb7347141d5b86afc12bcae6"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalProjectileNetGun.h",
+      "bytes": 4336,
+      "sha256": "8df69a5a510090e480a990deea99ed3cf6de66653f7d202b25bbea44d7abad51"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalRaft.h",
+      "bytes": 27542,
+      "sha256": "97989d57f4ec613a20387d32b3aa2403f5622790eb437199ebdb15622531a688"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalRecastNavMesh.h",
+      "bytes": 42631,
+      "sha256": "27b0c43e796d12da87df6668f1c1cd279a24cb947f87675d7f7372dce63feb33"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalReverseVacuumCompartment.h",
+      "bytes": 124428,
+      "sha256": "2b9b4019b4538b69097e03132a311fe1132aa4ad6ebe0ceb7b1307424f4c7b3b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalShip.h",
+      "bytes": 371407,
+      "sha256": "87d3b63866b5512f58999e177a3b20c2a156ba14800f22b9b7919f97906ed01b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalShipAIController.h",
+      "bytes": 68670,
+      "sha256": "287cf76c82cd2388bf13317c8e0ba1e2e3615439783bc0f7312094052462ff91"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalShipCannonProjectile.h",
+      "bytes": 49363,
+      "sha256": "d3907a8e73b6596fd1a742a8b414cdb7b4dd67674b88ca86af6d6a387f52ffef"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalShipDeck.h",
+      "bytes": 53563,
+      "sha256": "9427448b412e9be1d25e26d16281afe84b58331269526db6ce35981c9bb94baf"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalShipLootCrate.h",
+      "bytes": 92890,
+      "sha256": "52659e3e3c542256a72b3ccc67657ac0603096cc2511e130e7cf9bfd87f86f04"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructure.h",
+      "bytes": 234723,
+      "sha256": "847495fbc4aac0026e191169f9aa04a0fe838fb9ce64d433a1c201469fd8af1e"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureBearTrap.h",
+      "bytes": 12638,
+      "sha256": "793a79e930a2415bbdc1b86e90ebac847e6f3fcb1810947e9bb81a00f328e829"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureBed.h",
+      "bytes": 10133,
+      "sha256": "7e8a546b3e3dc37f52ffa5bb609d3b9c89e132c25d4c635a47411075ced59eeb"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureDoor.h",
+      "bytes": 16459,
+      "sha256": "1f4b7e41d450f83f9670dbd8228dd8b699afc09f87d61bb711ac62c4218e0151"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureElevatorPlatform.h",
+      "bytes": 19072,
+      "sha256": "d26e9197ca932b633c90ee38a5a1bfb9f34bc4134e1a69e902cdc0fddb33c9db"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureElevatorTrack.h",
+      "bytes": 9220,
+      "sha256": "45b6bedd8ec18527163bc918db23eefb6688ce542a9744ba3b73b13b669cff35"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureExplosive.h",
+      "bytes": 9998,
+      "sha256": "f3fde255d25b9e67c8e78412c3a8c6de380b8dd164d6fc65065deda61eb410da"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureGhost.h",
+      "bytes": 62881,
+      "sha256": "4b7a1c8851e565afa1a698010dc177fec2d1dc48f4cef36dd249a8dbb3304de5"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureItemContainer.h",
+      "bytes": 97699,
+      "sha256": "51f4f4ed81b4f716d1993181f2da5367a7dfc6d5de15af321a09c13922d2cb5d"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureItemContainer_CropPlot.h",
+      "bytes": 39633,
+      "sha256": "91e2f792e959ec4ae7770a18cacad04282af7669b8aca902e23c201f12be676a"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureItemContainer_CropPlot_VisualItems.h",
+      "bytes": 3600,
+      "sha256": "610ee264e8a8502bf8f10a269c3b40b1f515fa34f7683e49b91160dfb1b34294"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureItemContainer_HordeCrate.h",
+      "bytes": 2543,
+      "sha256": "75c103861a2d62cfc50e2219b8110f2417e3512d0df7f1fbce0f96c29d617f16"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureItemContainer_SupplyCrate.h",
+      "bytes": 18676,
+      "sha256": "6e17c7c66ef739fcc321f5ba36c2f1a3ea5503a32ea6b0c97b6a919149c7da28"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureItemContainer_VisualItems.h",
+      "bytes": 4126,
+      "sha256": "bcac1d1f10cdcaebce61f016cd7620d909eefd5bd396be8c247264ec36702f07"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureKeypad.h",
+      "bytes": 3971,
+      "sha256": "c80356fa9cff58b78d1b5da06294e8ab037d36babeb0e67ed5540e81b8ce41bb"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureLadder.h",
+      "bytes": 15129,
+      "sha256": "ee748ae31b2474648e06a04b26cc6308f5898527cd66dd2abceb3350d1d2c179"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureMarket.h",
+      "bytes": 132544,
+      "sha256": "4d97e1e799233d256f9a3d4a090a80e02a1e6bcdc9ceaaad8d54f79e22b77b7f"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureMine.h",
+      "bytes": 60591,
+      "sha256": "5b83a99f8ea4fe001539bf3e544282467326e5510c9c376557a8070841927181"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureMovingContainer.h",
+      "bytes": 2915,
+      "sha256": "35e4a81aa6424f4482a2c6cc520c85b0d4c66a92489bdbcc670589da1b5d38e0"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructurePlacer.h",
+      "bytes": 23863,
+      "sha256": "6ab07dd8e8d6ab7827c5121236b39f902bf5df6681b2b46353ffa260cb3ba6ba"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructurePortableLadder.h",
+      "bytes": 11310,
+      "sha256": "67301353d3270d12a1c0cded8ccc8f24c514ae966b54dd912b377c3b9a1a34a2"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureSeaMine.h",
+      "bytes": 6063,
+      "sha256": "762d763f927f72e695c7075a09bc9f417177a63b1bedc5226aeea5916ff8ff02"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureSeating.h",
+      "bytes": 29456,
+      "sha256": "3c325f9427a498eb33b4d42c2523414ba5dc7dda9e1692422408b686ea861350"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureSeatingMusic.h",
+      "bytes": 5977,
+      "sha256": "68f402159a216622a4ecf3b29a09f4d55b94821e4eb18f5d92d8676d1a522ab8"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureSeating_DriverSeat.h",
+      "bytes": 171450,
+      "sha256": "d86549c36be828bfe85ac891900ca406b7b375d4504e119979c2c5c8f8e3b654"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureSign.h",
+      "bytes": 7920,
+      "sha256": "89fed3f4bd7061fa37bbc0aa5e833f83577262652c39f85b6f933c02285269fe"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureSkeletalDoor.h",
+      "bytes": 4033,
+      "sha256": "6dc1f6383870602456e530be47d72fa315777f241863c46faa6466303302de17"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTemplate.h",
+      "bytes": 123004,
+      "sha256": "b2e84cf3bf21d1ab18624d150a38aa818d6a328196f56e94e6a61bc18214fafd"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTribeFlag.h",
+      "bytes": 1998,
+      "sha256": "9afbda0c8382063d8a3f1354ea1dc1ad5dd7ae04ab3c59bf09c373cbc5b1e347"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTripwire.h",
+      "bytes": 17256,
+      "sha256": "9b59585e0a9515bdaff4bab9ac1f837571ef230778b178130e0f671157fdec1b"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTurret.h",
+      "bytes": 33256,
+      "sha256": "e4593d7a5e2cf934e1be9dc62eac3a30e7a3e132142cd683c3111b25e11e6461"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTurretAOE.h",
+      "bytes": 110969,
+      "sha256": "fd9c64b9eb974ba5fb617f324ec443fe935d05ef83c65f43fb7353efec78592f"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTurretBallista.h",
+      "bytes": 40954,
+      "sha256": "5171cb13798c2b978212463a9fc59426712db7c479ba7dcc879b10799907d89a"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureTurretPlant.h",
+      "bytes": 8268,
+      "sha256": "4172efa495a1117be9fa77264e986befa40f7642c2fbc703a53515ac1308909a"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureUnderwaterBase.h",
+      "bytes": 17106,
+      "sha256": "8aa3fc6c0e0a7d6848088d7c8a2e292a4fabaaceb01f79823e594c29b006a6d8"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalStructureWaterPipe.h",
+      "bytes": 13727,
+      "sha256": "4e01b2f15ffe4f491a36e187664676c47f01d4ecf6312eabec01cb83141cedc5"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalTargetableActor.h",
+      "bytes": 28525,
+      "sha256": "551c18dec2debbba682b15f883f7ef6800ccd894b4c1413a36c523de90b23eb9"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWeaponBoomerang.h",
+      "bytes": 100695,
+      "sha256": "e596baab5f474ca38a73c99f46f2f1a47692c3de5f2bddf87adc305340fab05a"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWeaponBow.h",
+      "bytes": 18368,
+      "sha256": "607953f23ac78411e43e7adef808ed275e70145de0ead931f57237cc70542e73"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWeaponElectronicBinoculars.h",
+      "bytes": 12728,
+      "sha256": "6829d41c7c7194b1bafadc0a72cad1161008e89e40beb853c3d3d7d186e8b51d"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWeaponGPS.h",
+      "bytes": 26886,
+      "sha256": "eb13e1fae5aab619e17c232a3eb7dcccd0cc256cc357cead70341e92a9867268"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWeaponGrapplingHook.h",
+      "bytes": 7919,
+      "sha256": "bac0ea88029f3849899bbda8371552ef14c678e2e37e6c6c08ee232e0a21304d"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWeaponGrenade.h",
+      "bytes": 11131,
+      "sha256": "7f453249aa57494e37a991c8939b4e78c35a614d621a123c4e234302ef5dd8d0"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWheeledVehicleCharacter.h",
+      "bytes": 82997,
+      "sha256": "f7feb8742c062ef4f011c4d22dc289b2e83c84315b2a7ac7ae45c11b7824a840"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWorldModifier.h",
+      "bytes": 7973,
+      "sha256": "db0570cbeb0f4da5dab906a011666d1a0d10490712f0cffa2b0d5948edcf0b38"
+    },
+    {
+      "path": "include/Brz/Jogo/APrimalWorldSettings.h",
+      "bytes": 49412,
+      "sha256": "de63378a290794c127490d7e264c96fa278d97eb62d3bb4511f9eebb2867d50c"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterCharacter.h",
+      "bytes": 265413,
+      "sha256": "6e72d015197ab37effebd4648440a4603cd4cd0cbd2e48806dfcd6ea13dda709"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterGameMode.h",
+      "bytes": 325467,
+      "sha256": "0d6d3c6b0a703e86f5295a855a9bed167f2b368d1df4c89e17af8536a55d865f"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterGameSession.h",
+      "bytes": 19782,
+      "sha256": "ed0945c934e3f59e3e7ca25f571a1685b130f134601c23314e14ef636ab4755b"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterGameState.h",
+      "bytes": 151163,
+      "sha256": "7aef43b0bef8dd3699fb9de07b13bccde57ef67aaf2f799d11a1318d64e048dc"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterGame_Menu.h",
+      "bytes": 36540,
+      "sha256": "72ccff722dc13ec21ad395c454d42767e68ab76cdc65a59a74e2d9302fe9f63b"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterHUD.h",
+      "bytes": 124383,
+      "sha256": "5c886f4a51779f062e89880e340403b1218889861170dfb60479314c49384f80"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterImpactEffect.h",
+      "bytes": 32728,
+      "sha256": "c93e2d57c714c228faf834d855492c9c3b302d597430dc703d9f45be6655810b"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterMatineeActor.h",
+      "bytes": 34540,
+      "sha256": "63db3ea432d4aae44bcc547fcbe1b02088536616220849f7fd2f7c6cadd5b27a"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterPlayerCameraManager.h",
+      "bytes": 72041,
+      "sha256": "d890791551629b127617735c89ddafaa558cf595fb3595b8b5b11e5d8a772efa"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterPlayerController.h",
+      "bytes": 731586,
+      "sha256": "a431cc16e18aeac29c3f019e77298c62bc63f87508bf6486ea9c673898960b77"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterPlayerController_Menu.h",
+      "bytes": 55548,
+      "sha256": "ef00d6dabdebfcf15db84f639492bbc7880c32f912b6b75d499248e8287dfc9c"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterPlayerState.h",
+      "bytes": 90055,
+      "sha256": "9005e1a386cbd552d0448cf0e95da343ec1ea5c08403326ff0c53c2ac333e9aa"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterProjectile.h",
+      "bytes": 43788,
+      "sha256": "b5729e5d437477844cf743e91fe6cbe000641d8aa5542f5f7392c450ab5cd78c"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterProjectile_Beam.h",
+      "bytes": 58018,
+      "sha256": "5520ce974d25e0fdd9ae2b39de6abf7f96953b78a11e60e6fb40d55633008720"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterProjectile_Swarm.h",
+      "bytes": 13150,
+      "sha256": "a745e1d621e93910c6bbebb9e3928932125379c87ca7a85c51ffe9e68b807095"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterSpectatorPawn.h",
+      "bytes": 49334,
+      "sha256": "cd7a678f642c4270c5598443296eee1a85e33f36d1499f81e7541d13c853968b"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon.h",
+      "bytes": 172929,
+      "sha256": "2d317072353e483eb6344f9d18223e730f9f5051f3d1a113ed17eaf19a515366"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Activated.h",
+      "bytes": 14256,
+      "sha256": "f6b80693a8e39710e44dbe33372e1ba29d1148dc5da5b856e54ef705fc3c8f54"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_ChainSaw.h",
+      "bytes": 6884,
+      "sha256": "441f5cee6808e28047622ba175f9f78348596cfdba2439455efe677655338b90"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_ChargeStack.h",
+      "bytes": 104665,
+      "sha256": "b34dd3bd9886a91f2f11741c653092f56992fb4a970f7d0826122174f1259705"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Climb.h",
+      "bytes": 34974,
+      "sha256": "06aaa36dcf4e4ac671e29705f23d01506a8a57a4e42806054de3ceac99598c8b"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_FlameThrower.h",
+      "bytes": 15122,
+      "sha256": "ef269c226f4e1bfd308e11081edd96b5feb8d6527826fd9fccf7b79afcd65e49"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Instant.h",
+      "bytes": 17683,
+      "sha256": "cbcee0484384c64bc918e78f7e8013c27b30658210e99aee1d4a6d2dd6eef01f"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_InstantCharging.h",
+      "bytes": 3540,
+      "sha256": "0c3b2613df3781dc9a502fa092ecf034343ea08b81d3618c48bde8a9fff6b221"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_InstantPenetrating.h",
+      "bytes": 6680,
+      "sha256": "872a4d313d033fddf1002b059046c15fd460b5e2de13578e7823f8370ab893f9"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Melee.h",
+      "bytes": 2823,
+      "sha256": "6563d71d0176819da2817de57efcd64efdc37b2b68010d9bf2fd48e6a31a07af"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_MeleeLock.h",
+      "bytes": 9418,
+      "sha256": "01be432266da781a545260c5c3c53b11a4187c9efd882468cecb09f7c20c38cc"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Placer.h",
+      "bytes": 13502,
+      "sha256": "845ae8e51b8c48e0e99f7be8934c7b3fd913948aa86de0494fc6ec5767eef9dc"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Projectile.h",
+      "bytes": 21486,
+      "sha256": "5c59e3d337ae35856153fbb7d25e2db402d32dfc9b2154d80cee898b4faf29df"
+    },
+    {
+      "path": "include/Brz/Jogo/AShooterWeapon_Whip.h",
+      "bytes": 6072,
+      "sha256": "0954264dfeb1b691651cb7c1c44c5ed873fe1657a7148c613c5efdb4dffc9b71"
+    },
+    {
+      "path": "include/Brz/Jogo/ASkeletalMeshActor.h",
+      "bytes": 5401,
+      "sha256": "d51b86a5aad58a8b2551bb2fe17355590d711afd1894c2c4899bc37108e89698"
+    },
+    {
+      "path": "include/Brz/Jogo/AStaticMeshActor.h",
+      "bytes": 2941,
+      "sha256": "d4382af8485a05a92cb53e2e8dfba91cc5d33df855e01d6aec3eede08e44d36c"
+    },
+    {
+      "path": "include/Brz/Jogo/AStructurePreventionZoneVolume.h",
+      "bytes": 8613,
+      "sha256": "36999ff87414a1f890c803a89126530fdf1537f90e4d0af3af654175ebedfd48"
+    },
+    {
+      "path": "include/Brz/Jogo/ASupplyCrateSpawningSettings.h",
+      "bytes": 3678,
+      "sha256": "0f1e653614fc98c73141b3faaa534139501024f67355f7d2f399ff18591817ee"
+    },
+    {
+      "path": "include/Brz/Jogo/ASupplyCrateSpawningVolume.h",
+      "bytes": 9750,
+      "sha256": "e92e3b276d1b023997cc5a8add8bde6991e472c2ff81d627dba474e1a5513c58"
+    },
+    {
+      "path": "include/Brz/Jogo/ASwitchActor.h",
+      "bytes": 2241,
+      "sha256": "cb3d2e2b97439eb691ac02b1f30a8067d19c1dcc1df9d701a17bffe3107949fc"
+    },
+    {
+      "path": "include/Brz/Jogo/ATogglePainVolume.h",
+      "bytes": 8597,
+      "sha256": "bda12e135bc639778603666bdcbe1e15ca24fb85b6df67339edb8e7ea0a11e6d"
+    },
+    {
+      "path": "include/Brz/Jogo/ATriggerBase.h",
+      "bytes": 1549,
+      "sha256": "390d52deffefeb29f449be08fafdce2e3fea8d7a1387b91c3e3248e08076d2be"
+    },
+    {
+      "path": "include/Brz/Jogo/AWorldDataLayers.h",
+      "bytes": 39116,
+      "sha256": "228904aa126d55fec4a4204d163252c1e340253da4e2d890b700196365e66d75"
+    },
+    {
+      "path": "include/Brz/Jogo/AWorldPartitionHLOD.h",
+      "bytes": 32879,
+      "sha256": "99c38e0aebfac8f56bb1be318ca9c4211b9b6f0029bf2bce75a48171bc510b30"
+    },
+    {
+      "path": "include/Brz/Jogo/AWorldPartitionMiniMap.h",
+      "bytes": 30782,
+      "sha256": "659c65ab22a93690caab59642664c40a1ff47b943116860a3b77f39469a6a855"
+    },
+    {
+      "path": "include/Brz/Jogo/AWorldPartitionReplay.h",
+      "bytes": 32407,
+      "sha256": "da53a6bbf349c25c47dfb58ca29d064f7b357a9c6ce80e3b7b0a1eec34495f66"
+    },
+    {
+      "path": "include/Brz/Jogo/AWorldSettings.h",
+      "bytes": 19574,
+      "sha256": "b81502f31f5a28781c704775544e04033c5363d139b0819a0f6b808987f53d19"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorArrayDistanceSort.h",
+      "bytes": 1606,
+      "sha256": "7a4bf19a5fff15f38164d1d07abdca6ee77cb1eceb634a13b710035fc2df7c30"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorArrayDistanceSort2D.h",
+      "bytes": 1620,
+      "sha256": "a59f3a1a4e29e611731a3d48f7932622d27e1741c2825b20a3ca79da8104d391"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorClassAttachmentInfo.h",
+      "bytes": 3625,
+      "sha256": "114906a2930ec0d19e9212af3704c5eb732e2e93948bebc4f9fc03a6eca0fb19"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorClusterReferenceProcessor.h",
+      "bytes": 2682,
+      "sha256": "fe080ef6c92402cf9f518060462747867de8f2e86fb176ad0653dd505008e4ca"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorComponentInstanceData.h",
+      "bytes": 3229,
+      "sha256": "2712e7e637bde57212290c9445879cf3fa974399ac8f372ceae82ec3d8b49b75"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorComponentInstanceSourceInfo.h",
+      "bytes": 2124,
+      "sha256": "cceb236d50af4334f33ee702a407f614953553c4e5f58b36096fd0679fc2f344"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorComponentTickFunction.h",
+      "bytes": 2945,
+      "sha256": "f202e22b70187dad97109ca2eb19e74c49d597fc21d0324301786b323c30303b"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorConnectionPair.h",
+      "bytes": 1733,
+      "sha256": "e76585da949a6aefd8368ac81d3fd6bb2c4e42d4466563049fc60c85169c1e79"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorContainerID.h",
+      "bytes": 1558,
+      "sha256": "768c0d585e0adedc89f943d97abd1a93408fe0db73dbf2fe133e32d4b841aac7"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorContainerPath.h",
+      "bytes": 1592,
+      "sha256": "6265444b427f67f7614e868ac899bc1d1a7f22e7f91c73ab92e04731f1edc7b9"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorCreationParams.h",
+      "bytes": 2155,
+      "sha256": "ed12d48dc96ebae00deb016fdd81afaf3ff88f5b759b992ed71aa7dc47272183"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorDataLayer.h",
+      "bytes": 1521,
+      "sha256": "36888a334eae9db8edcb6c9f6082d1a837a347ef36909958c7a720085be9de2d"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorDesc.h",
+      "bytes": 2910,
+      "sha256": "8621acc9e7eeb9c88174561be2a98af3d9c2303632a628fc9f91bec158bfce21"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorDestructionInfo.h",
+      "bytes": 1837,
+      "sha256": "ce5126094d2c07b22fe901f84abcc96b75727a4e9980b50c7a59aa02d61d7f49"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorElementData.h",
+      "bytes": 1560,
+      "sha256": "5af916c86a31bff03ab64e6b9737a5d08fc809ded82a9c80ab05e6455baefd79"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorFolderSet.h",
+      "bytes": 1560,
+      "sha256": "c895b398cf6b1f91a37c3be12fe022325600af31c99b2f451b4d588a646d1b22"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorForWorldTransforms.h",
+      "bytes": 1922,
+      "sha256": "5f8c3e4e949724aeb8460cb5afc22f0840542e962c142502dec87d95a44352ae"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorGUIDGenerator.h",
+      "bytes": 2386,
+      "sha256": "5d15814164ee5ad53f6d489bd5b2362ad5d8e9b83825ebb93839be77b47379db"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorInstanceData.h",
+      "bytes": 2122,
+      "sha256": "1c6da4eb2ebe9b8532d76a9862f624392480599eef770f71d55d3f2c7f0abf09"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorInstanceGuid.h",
+      "bytes": 5197,
+      "sha256": "24712bd04d585b9a9f7ed1cf4bf2318e78ada215db6511dcce752d43e738c903"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorInstanceHandleInternalHelper.h",
+      "bytes": 2203,
+      "sha256": "6bc89be5f9da931f7bdc0cdbcf4158cc03f5898d4f558596f6a87ce4bd3400da"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorIteratorState.h",
+      "bytes": 2588,
+      "sha256": "d97a1403f0a7c113fe861be7ab606fe7bf3a484c91a578e8fe12918657aa40fb"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorLastRenderTime.h",
+      "bytes": 1534,
+      "sha256": "e7e6ce9e1b21814855d3dffbe9e2553cfa977a991f1dc3da10eb02bc1bec227f"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorLayer.h",
+      "bytes": 1493,
+      "sha256": "8c387242d1cb571fa3e9031602cb649da1075371d3cbac18e37c6d58a5600c33"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorLocatorFragment.h",
+      "bytes": 2693,
+      "sha256": "b0543de83d2c703612cf4fc2a25e7add6bd9606ceae31335054eb225abf6653e"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorLocatorFragmentResolveParameter.h",
+      "bytes": 2641,
+      "sha256": "af31a69393e0d39a38a50a43417c332599807f53bc0c22a2ac2e193abf936b32"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorParentComponentSetter.h",
+      "bytes": 2009,
+      "sha256": "2fa8268aef4ae23e49009711ebdb71253c6829028f041b7e1b1a6fa399a7b41d"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPerceptionBlueprintInfo.h",
+      "bytes": 2034,
+      "sha256": "9298fbff74049fbb6995be76412cfe472845fc565ce76aa06912761458dd541f"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPerceptionInfo.h",
+      "bytes": 2888,
+      "sha256": "bfd7ed54b7478246476952e73baea4a9a8d4d03b0220771ba9d27f69a52f6262"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPerceptionUpdateInfo.h",
+      "bytes": 1936,
+      "sha256": "8dd799a32614f4736e4ba53d593f1f0183299c937773f4b10d86b15282fe8417"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPlacementDataLayers.h",
+      "bytes": 2195,
+      "sha256": "50effb86601c3275118f5e651696199d8c430efdddcd13686d71443f49c76021"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPrimitiveColorHandler.h",
+      "bytes": 1920,
+      "sha256": "5c4b7e81f76ae4f5faf704dd21a67ce580e566640a54b58b02a9964e387504bf"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPrimitiveComponentInterface.h",
+      "bytes": 12181,
+      "sha256": "f9f1908fad075bc6dc63b6e7896136651f46f864f88cb6e5f391a53110a5208c"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPriority.h",
+      "bytes": 1754,
+      "sha256": "5a249f6fe7d5603fc4e1826b6cc2c17fbb3e9701235e05e3d676a8843f4f67f2"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorPropertyReader.h",
+      "bytes": 1965,
+      "sha256": "e8eee13682ae8e66565b866328a11801a5636716d0da651198fc074ba31b31bd"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorRange.h",
+      "bytes": 1651,
+      "sha256": "767d36a2276425dd8e633ddf740e9baa7d86f084337dc8d8114751ff690b4d14"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorRepList.h",
+      "bytes": 1706,
+      "sha256": "833860353304533959b9ee94330c0721bf679fe34cd482a4a4b074a3b5644462"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorRepListRefView.h",
+      "bytes": 6385,
+      "sha256": "88659f67d20712df06c41898d64bd683164e574905ae6f19f9529d7da76e3f46"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorRepListStatCollector.h",
+      "bytes": 4201,
+      "sha256": "d96d2aab4069827b26d9bb05077031bb4963369bda01ae111c4d2d15cda2b916"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorRootComponentReconstructionData.h",
+      "bytes": 2386,
+      "sha256": "47589d5591a794815c80e5fe0a4ce13adce930e7ae4dc15afcea5363ede26efb"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorSequenceObjectReference.h",
+      "bytes": 2436,
+      "sha256": "6a15c8fa9af4e37334a125d983541d559ac467cf781c9ff92fd55e36da8405b5"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorSequenceObjectReferenceMap.h",
+      "bytes": 2445,
+      "sha256": "7630065a65023bd7f580c5bee6a605981e5613c6ffa08398254784b6e1dac5e4"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorSequenceObjectReferences.h",
+      "bytes": 1651,
+      "sha256": "844a63d18ab783e4a09639702d8bb838db775aa1fb1aabf9cb82dfd13a464b33"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorSpawnUtils.h",
+      "bytes": 2595,
+      "sha256": "d19413308cd6a5a7d6e74058b36b0d0f9cf789e15eee47fd8fc59945c8eb7481"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorStaticMeshComponentInterface.h",
+      "bytes": 2625,
+      "sha256": "ef5e5f0cbf1892ab7f604810f4cb76b8cd1d5850dfa9004c2132fae0232dc314"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorThreadContext.h",
+      "bytes": 1394,
+      "sha256": "c648ec2507ebb6bb1e39f22b6395592256d5c223e117865b4f795caf57b9e3fc"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorTickFunction.h",
+      "bytes": 2848,
+      "sha256": "665d9acc28badcf7a566efbae442b5a0da0efbfd372eb81a0be0b3088e2408b3"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorToken.h",
+      "bytes": 1667,
+      "sha256": "e9f52cd3eadd665d2bb460ccb1fcdb41e64f992b9452b8080b3671dbc00de868"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorTransactionAnnotationData.h",
+      "bytes": 1618,
+      "sha256": "b310b5aa68ddf73e7ea6e41a33513b6370ba08f3731a9928ac88adab6bd44b3c"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorWidgetPair.h",
+      "bytes": 1689,
+      "sha256": "2475d6caf76402e304ba4abd866466b1ffa097119c9d13b6ed47b5a78e6c9051"
+    },
+    {
+      "path": "include/Brz/Jogo/FActorsInitializedParams.h",
+      "bytes": 1568,
+      "sha256": "ab328788b200dc9fbe261a09b0f78d1bdb9b9e72e7a22e33d36174552d9ea7c7"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoAbilities.h",
+      "bytes": 1672,
+      "sha256": "046e1326d3d771f6825f4df6f00a5b2ad2ece9a5dbd7abab72f617a075323172"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoAbilityInfo.h",
+      "bytes": 1823,
+      "sha256": "e7b2a9b817cab38cfaf618f093165d50adb407f2f1f7259d6513d8eb7866d4ba"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoAncestorsEntry.h",
+      "bytes": 2305,
+      "sha256": "fd35a8013432986d2dde7d9e9e70c6365fc18e9bd48f2a43e5ef5e1963fc99c1"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoAncestorsEntryBlueprint.h",
+      "bytes": 2289,
+      "sha256": "4429ceeb430fd18c07e96f6fe5a8619018f11963c08679919ef564ef311e144f"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoAttackInfo.h",
+      "bytes": 15519,
+      "sha256": "d431a35e6a064f5306550576525a2f63c32d1eef03adddb18fbeb3fa4cebbb39"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoBabySetup.h",
+      "bytes": 2543,
+      "sha256": "39327d02b73ddd27b858192b0ef5833b728393bf2bea6f5c749a2c41456569d0"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoBaseLevelWeightEntry.h",
+      "bytes": 1889,
+      "sha256": "b04684890a30f73d8b715ec2d1d318f1f4a162f3b2e416eff820b47ad95df5c2"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoClassCount.h",
+      "bytes": 2383,
+      "sha256": "dc0d7b3efef09df85c8f7d49ed406b65ded905b4a61ea0040ea4f63abae52567"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoClassCountStruct.h",
+      "bytes": 2462,
+      "sha256": "1e659ba75956fb833949eb2ad212fb362ca05b57298978169c8082d7837a5c76"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoContentData.h",
+      "bytes": 1376,
+      "sha256": "cf5b10c0b5ae4b3dcc469add8fecc1b14e1028efef0345551c9d98accdb4f9a1"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoDownloadData.h",
+      "bytes": 1739,
+      "sha256": "010dbc7aa961a6679b6badbb2a7ce53736d1935485662441e67f0af798bd74d9"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoExtraDefaultItemList.h",
+      "bytes": 1903,
+      "sha256": "13dc85f9f7159acf89e7db7864257708927690b5ee0e8238fde8332a1899db58"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoFoodEffectivenessMultipliers.h",
+      "bytes": 3052,
+      "sha256": "9278ae4639bd715eeee52d0bf039bc6ba0a67e86bb254c782102cd45d3cf4755"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoIdleFidgetAnimInfo.h",
+      "bytes": 2989,
+      "sha256": "3788cdedc47423a37787bede605b18978370c92af11cfee6b6c9eb26d78c8a84"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoKey.h",
+      "bytes": 1635,
+      "sha256": "d8b589eb6e167770477f00941befee207e33db4d4247a0ea4ef1aa7d26955b02"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoMapMarkerInfo.h",
+      "bytes": 2391,
+      "sha256": "627c263d950dc97f91c6f5e629f89e7d3602f8226f3ed7f0313c0b264f3aad88"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoOrderGroup.h",
+      "bytes": 2192,
+      "sha256": "2b006e3f2238022eb74bac338043002f81a93d644db98129107a6cfbe93004a8"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoOrderID.h",
+      "bytes": 1722,
+      "sha256": "1928b91103539116267834f0af66c96a51324b29fe2da79d2a6899d1b44d78bf"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoSaddleStruct.h",
+      "bytes": 1974,
+      "sha256": "e1290fe10532e9c68282a19fbc73e5272e4b9e447d8a154b6859247649a31b67"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoSelectionGroup.h",
+      "bytes": 1394,
+      "sha256": "efcfab33ffe4d71d92ab83aa983561df442f9434ec0063efb38079605ffb1037"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoSetup.h",
+      "bytes": 7579,
+      "sha256": "d7936296ec20bcb9eae370e570447e078bc36bae638cd73ba79828bf56d0326c"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoSetupGroup.h",
+      "bytes": 3096,
+      "sha256": "d63629916be9988bfd9b961bc9d47a22bb085ca60e3f7918786e14168e13854e"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoSetupSpawner.h",
+      "bytes": 1382,
+      "sha256": "69bf8a04fe144cab75bfb82a2047d573e473389e9956f985a43e29dd8b6df33e"
+    },
+    {
+      "path": "include/Brz/Jogo/FDinoSpawnWeightMultiplier.h",
+      "bytes": 2021,
+      "sha256": "7f1d1ffd820356c8e72abbdcf093ee3ab2e2f43243a96824b33893fbf196cb19"
+    },
+    {
+      "path": "include/Brz/Jogo/FGameModeName.h",
+      "bytes": 1648,
+      "sha256": "56edebedcbd65529253c66b8ab51a51b600a7b35cbe47f65ed4510b65b9b9309"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitData.h",
+      "bytes": 1328,
+      "sha256": "66d64df4ea2fc6c928aeb6c72cb8f2cdc39ba4837c6d6eec951edb3792fa4904"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitFlags.h",
+      "bytes": 1334,
+      "sha256": "fa5c52828e7ae41066d16965bcb92839f97159e2b0783e5080f5a91ed1b1f549"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitGroupSystemRootConstants.h",
+      "bytes": 1753,
+      "sha256": "a8b74d43f22cb88d46d8163ae923862d88ded5fb2c15737d7a49f3bf75f0da09"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitMarkerSettings.h",
+      "bytes": 2123,
+      "sha256": "b27e1bc1425d26c6e7b6eaee3bff221e44ebb559ddc727c55f58bf85cdf4557f"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitProxyArray.h",
+      "bytes": 1905,
+      "sha256": "74149faba8143397d1cdd6c8f6c35d1acd67391ae54f2249d4ae96787b67a842"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitProxyId.h",
+      "bytes": 1903,
+      "sha256": "36c4054d2b04b725f06577f5fdf4f55a0eba9f65429fffa0128f1edbe6db0022"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitProxyPS.h",
+      "bytes": 2368,
+      "sha256": "9a35ecf6ada5fa84009cb28101d329dc3ea6fc5f2f7b02a599355ef39330d6d8"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitProxyShaderElementData.h",
+      "bytes": 1436,
+      "sha256": "504569ad737c2e85ce47e8ce99405f61ddff1a010c499b70f0b504bf6912fbd6"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitProxyVS.h",
+      "bytes": 2368,
+      "sha256": "b286d1e3dd66e9d4a1baf95366f51190be2e2f921908df7307583b1eb8e96710"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitResult.h",
+      "bytes": 4549,
+      "sha256": "abd7a0e617d96daf7c01fbb98b12ba1bedb0072d488fd6dbd67108b672b3d01b"
+    },
+    {
+      "path": "include/Brz/Jogo/FHitTesting.h",
+      "bytes": 1346,
+      "sha256": "8f6450b37a403a9750694f9e94c33c7d0a0bdcf613a32b3cfc94f96bdd075bdd"
+    },
+    {
+      "path": "include/Brz/Jogo/FHittestGrid.h",
+      "bytes": 9567,
+      "sha256": "f4fdef0f3f88c278684244a71193128661360daf45099848848acadd8e23b022"
+    },
+    {
+      "path": "include/Brz/Jogo/FInventoryComponentDefaultItemsAppend.h",
+      "bytes": 2162,
+      "sha256": "474fedfbc6616c27039020f42053282fb1561e86686e9c575f491397b90b0157"
+    },
+    {
+      "path": "include/Brz/Jogo/FInventoryComponentSet.h",
+      "bytes": 1609,
+      "sha256": "b184a8d5d5f65c86a0b3bd0cfc292845615a31de5dcc09502f298ec5097d107e"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemAttachmentInfo.h",
+      "bytes": 5489,
+      "sha256": "755344ac792723810d1901a145a925cdf1d1f298e936b5e4f3a434d58e04abf2"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemCount.h",
+      "bytes": 2506,
+      "sha256": "22b85fed68a4cf871759776c4356e3df18cb77288993bbb6a6136de102ad0edb"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemCraftQueueEntry.h",
+      "bytes": 2751,
+      "sha256": "61c5823961f20c47190bb6168c6881c2c07a6159496df890ab61dffc6ed22a67"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemCraftingConsumptionReplenishment.h",
+      "bytes": 1902,
+      "sha256": "68b469d1c52f201ef5db8437778e0461764d685ca73c66f12becc3988a9e4eac"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemCraftingCostOverride.h",
+      "bytes": 1814,
+      "sha256": "ff91bf6eabd1807cb4abfbb9847d780ecf465315b60615a15d715486391354ba"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemCraftingResourceRequirementQuantityData.h",
+      "bytes": 2225,
+      "sha256": "90fddf9ec0f6c06246cc5da591e57cfbad73e1cabb4b76496c5a2e59910c51e0"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemInfo.h",
+      "bytes": 1655,
+      "sha256": "80f786ef14d9ba0714c0f9349d86f871963b51baf5cbcd0eb9b415db4459f9e7"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemMaxItemQuantityOverride.h",
+      "bytes": 1801,
+      "sha256": "53be04dd4c9b9566fa6c83bb3d20453126ec7b42689ce67c7b64da67e78f64ff"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemMultiplier.h",
+      "bytes": 1682,
+      "sha256": "3f0126a31fc44bb2e95676a08d0b5fb03da4f808b2ea9967b35fe37f8ce247af"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemNetID.h",
+      "bytes": 1651,
+      "sha256": "4d279caf41b851cfab2ac366e9ed14dadf0a90b2e68d3d1f3e4ca633425df67b"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemNetInfo.h",
+      "bytes": 13618,
+      "sha256": "fb58cefd2f182dd14095b21986dc3a47b450942c7c1c17a4898a4ca063e1ea08"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemSetup.h",
+      "bytes": 2308,
+      "sha256": "8d08ad97d2bfc2b4c90ecee9394b6c22e71a8c4d929d370bc54fd093997b7352"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemSpawnActorClassOverride.h",
+      "bytes": 1821,
+      "sha256": "843b373030463892335c458bbaed583c35654331f9b4acafde08aa8b9a3ae98c"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemSpawnBlacklistInfo.h",
+      "bytes": 1614,
+      "sha256": "eccf569239263dc3d522a9c890e43c5637994a8293052162939c506bb36c2da4"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemStatInfo.h",
+      "bytes": 3954,
+      "sha256": "c1ab914bddd7893b050b8dc02da5883a11f7beea4becfcf023179045486ffb45"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemToDinoStatParams.h",
+      "bytes": 2431,
+      "sha256": "281058140656447f2e4c8e1c8903c753345672f5d2f5f340f26b5008a240b9ef"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemToDisplayInStructureTooltip.h",
+      "bytes": 1982,
+      "sha256": "26e2e284fa4aaa3475011a63d91f3ca6e95a51c5476442a73837ec2fb0b6b1d8"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemTraitModifier.h",
+      "bytes": 1745,
+      "sha256": "873b79df3dce40011429892dbcab285e50b8538a212e23c1de5e46db703cd939"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemTraitModifierArray.h",
+      "bytes": 1610,
+      "sha256": "09329a61b05be44e1f3d75545f8c8873f5fb542a57c1b41b7e7ea46ba69abfea"
+    },
+    {
+      "path": "include/Brz/Jogo/FItemWidgetDragDropOp.h",
+      "bytes": 3289,
+      "sha256": "2daee906831a60a350544c36901439096530c42f57ea45652040de5fff92d804"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelBasedActorList.h",
+      "bytes": 3046,
+      "sha256": "fcaff917ea46fc1a295f3f693fc547160c6ecb68bc835260e95255b80cb51082"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelCollection.h",
+      "bytes": 3253,
+      "sha256": "a2896d710e3f9b6536c9464e3a0424d4107c63f9ea83c87740c92eb021aab36b"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelExperienceRamp.h",
+      "bytes": 1619,
+      "sha256": "8af2de63cc46bce3efb9281c2522a622d69e5321b0b132952043df9811138a29"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelGrid_Struct.h",
+      "bytes": 1382,
+      "sha256": "07d122564dacfcf4cdc0332b97ccb475750dbc5833990bec842c993f417c246d"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelGuids.h",
+      "bytes": 1485,
+      "sha256": "73ea2f16e3598d042ec8188eff4f7806d07143dd531828351b53b05a84e515f3"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelInstanceActorGuid.h",
+      "bytes": 1755,
+      "sha256": "e25b5a94a09d623dccaf0548bee01099721abe9e8f336ec8303e9ead39c71936"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelInstanceActorImpl.h",
+      "bytes": 2894,
+      "sha256": "849cb5da320e1de7c65dd1f65ccec1fcb68471251151f834da18492d9bdc5c72"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelInstanceActorPropertyOverride.h",
+      "bytes": 1490,
+      "sha256": "f077ca835c0f4d557e19f33aa888ec5386d1a6963594a85a6a2b81e449220ebb"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelInstanceGuid.h",
+      "bytes": 1628,
+      "sha256": "d00e93aa541a09602cc095f4a2431eaa338914cd6e365392ddb0cc2c814e8f23"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelInstanceID.h",
+      "bytes": 2299,
+      "sha256": "63741e4607e942189e6fcb72ccd7446c9bcbb8abbbfc385c4c7a224237419558"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelLegacyMapBuildData.h",
+      "bytes": 1652,
+      "sha256": "217d71209d300bc756e35011bcab3934f8efaae1e3e0d4d3ccc38088070e08d2"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelNameAndTime.h",
+      "bytes": 1735,
+      "sha256": "b9255c437a12f3c65edfef9d08b5f87977c2a70af8727d9d4e0e57aa3143c422"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelRenderAssetManager.h",
+      "bytes": 4458,
+      "sha256": "87c3406d1f9ac6cba2ef7a065dc0693450baa4ea7431225ce72e61723505a105"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceActorSpawner.h",
+      "bytes": 2184,
+      "sha256": "4bf53058db685dfb89efa62e449dd78afbf1999b4dfc9f20aad0cafe1728f5b5"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceAnimSequenceLinkItem.h",
+      "bytes": 4297,
+      "sha256": "2364c3c4c44e5a92f5ead25bd010e62b056bc1779d2ec2ca1e64d2d974b79e7e"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceBindingReference.h",
+      "bytes": 1993,
+      "sha256": "2ebe05a2920f77f5ab279726ca59a0620673635f731b7a0c621d9aafde13e30b"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceBindingReferenceArray.h",
+      "bytes": 1696,
+      "sha256": "9f5ba1af432b08f666b3f07c0344d7ef0b9a44aec7636d70bea711e5ce894232"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceBindingReferences.h",
+      "bytes": 2058,
+      "sha256": "acfe3b9bfba54bbac1be3755fd06469682609ae088c39951fb301f88c14e3248"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceCameraSettings.h",
+      "bytes": 1787,
+      "sha256": "c77115145270a548a516b63a27973501ecc2a85846e748bad7e1b7cbcc18b2c1"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceLegacyObjectReference.h",
+      "bytes": 1655,
+      "sha256": "58b4515ba164aa4ab4059bc271efe1cac6948f5e6f8f792bd83f3aa91dfface9"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceModule.h",
+      "bytes": 2924,
+      "sha256": "a1390ecdaed84ceed8c579ca63e787fd8b2f3882bf88b793e799c36226e24bcc"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceObject.h",
+      "bytes": 1917,
+      "sha256": "d39e2e987f81d87c56112d42ba91b5a6ddd5570b2deb4ae070044d4fdecba46f"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceObjectReferenceMap.h",
+      "bytes": 2178,
+      "sha256": "dde9952088510ce4c781525291d186ef381750125a18090b9e59f8708f7f911b"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequencePlayerSnapshot.h",
+      "bytes": 3141,
+      "sha256": "34b5fc5b123974c185d7b69786c8c37c2b2c05deb8991751e7f7ce78845eecab"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSequenceSpawnRegister.h",
+      "bytes": 2142,
+      "sha256": "71449cb825e52e28279b93c09b19df4ff235a5e13edc5449061faead20d451dd"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelSimplificationDetails.h",
+      "bytes": 2674,
+      "sha256": "6334b539b754ed9f3072fde4a6ebc882d252464d0850b80bc86ac57589780318"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelStaticMeshReskinDefinition.h",
+      "bytes": 1863,
+      "sha256": "ce2602df6939a1824f319d772074a1e306b70e0ea18582bdbab5da578cd641aa"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelStreamingGCHelper.h",
+      "bytes": 6180,
+      "sha256": "a55ac5ca9fc6292135ccb56c59eb9f90631cd1e8515bba5abc23ca0de792a036"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelStreamingStatus.h",
+      "bytes": 1969,
+      "sha256": "5d3616a2c55397f5af06c591e73f17d0b99d1a2342c8c6c159c92d3441dc3d7f"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelUtils.h",
+      "bytes": 5244,
+      "sha256": "28be09d96abf9f6c59075a31cb90420d949819c1909993eb52d100bef356cfdf"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelViewportInfo.h",
+      "bytes": 1943,
+      "sha256": "efd148d428eba0a7071cedf2a277038e1d26265a5b57be391fc04bff6f98511a"
+    },
+    {
+      "path": "include/Brz/Jogo/FLevelVisibilityComponentData.h",
+      "bytes": 1648,
+      "sha256": "ceee9443451d9b48ce85c963d4984ca5a9030f4bc2c487cb9a5b7d3257eb20a6"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalBotCharacterSparseClassData.h",
+      "bytes": 12126,
+      "sha256": "258c643563011dd0bce19192032a89dae753eaa2865d99f667bd725d702bfb7f"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraInterpParams.h",
+      "bytes": 1968,
+      "sha256": "361cbd0ad0e598852ff06d58eca2e4a5cf08a2a65ab415591941e13fec99d5c3"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraInterpScreenAreaModifier.h",
+      "bytes": 2954,
+      "sha256": "84c8d99ee38ce1220ffb12e1954518b5069a67075e38c65941bcfaf9f1b0f665"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraMode.h",
+      "bytes": 2691,
+      "sha256": "b1d29970957556865261b784a9535fd484fd463d3b720e2af5555ce9c02b3e5c"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraParams.h",
+      "bytes": 5987,
+      "sha256": "28553c8a1cf25e90c80b75be9293afd613608114d1d709d2797876a2e88431a9"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraParamsOverride.h",
+      "bytes": 4234,
+      "sha256": "3ee7507a2c3c13b7405ff04c8a9c742df124162492ab1f77895fe96d424ef908"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraPitchBasedModifier.h",
+      "bytes": 4078,
+      "sha256": "6c98845daeadd6757c28647980b4a0b1fd5d7f7eeeefe1b3f9e959d8f845d989"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraPivotZInterpOverrides.h",
+      "bytes": 2772,
+      "sha256": "b6ba68d9139ed1679257c20530963b80d38c8d604fd6d8046149cde2ad1ff98e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraProfile.h",
+      "bytes": 3295,
+      "sha256": "cd4a0d86838207bd52f0b40d2491d996bb5e4a22983d983173cf7365b4e913a0"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraSettings.h",
+      "bytes": 1910,
+      "sha256": "6dc5c41c20b4d76e3d0c381c76eaf7e0185240472cc6f3215ab983fccd861a1a"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraSettingsConditions.h",
+      "bytes": 1849,
+      "sha256": "2cf8bccb6054200a35c02ba7f3ea0dea789ae29aa52e5725bb161d27efe8f95a"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraSettingsOverride.h",
+      "bytes": 1998,
+      "sha256": "0b631fd8f853582d2aeb711abefab22e71d84bb3985804b7f7bece77a128b9a6"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCameraSettingsOverrideGroup.h",
+      "bytes": 1703,
+      "sha256": "ca52117c9ada4091691852d6b31bc142d14844fc920f7f556479ebea640aa2ec"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterMoveData.h",
+      "bytes": 1862,
+      "sha256": "76f51820f2ef903dcb8ab9d62b0861f070df6188e59fc9588af3b192e5fac9a7"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterNetworkMoveData.h",
+      "bytes": 2050,
+      "sha256": "c341375526f13a2e0b7f5e4bb3d16bedccb31608d4130613d309c2113303074b"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterNetworkMoveDataContainer.h",
+      "bytes": 1520,
+      "sha256": "07315cc4c6da71360bad389072b60ea02002bded51b7c41f5aae489f40e5acd1"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterSparseClassData.h",
+      "bytes": 31181,
+      "sha256": "73efcee18053d1078c8b04bb493e984a7e772faac2f63dbdb282dbbdac0e8572"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterStatusStateDefinition.h",
+      "bytes": 3467,
+      "sha256": "3d48c726e3be93efdc411d6bdb87efbb2a86fa25f985c8f89a257cd05de2a4ac"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterStatusStateThresholds.h",
+      "bytes": 2425,
+      "sha256": "d0c5f5f392c17b90fcea092674bb4d66c9a4b903f01d250cae66e082a509a243"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterStatusValueDefinition.h",
+      "bytes": 2373,
+      "sha256": "6d7d4550c4bfa7224ee7792849b5ea91823d98629e6b358c13df881bdd58c8a5"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalCharacterStatusValueModifier.h",
+      "bytes": 2902,
+      "sha256": "1ba58f97a719082237e5d745e53e3dd02bc21037238104cf605d5cf828f89450"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalChatFontData.h",
+      "bytes": 1876,
+      "sha256": "8989ce71f5bf273dc052e3d6b9a05e3dde1df03c24b1603327a1f080b525e5e1"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalChatMessage.h",
+      "bytes": 3658,
+      "sha256": "7a241d058432aa4f720f69726be6651fac31b5c6a1b628f3ec4cc164c64f23dd"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalDinoCharacterSparseClassData.h",
+      "bytes": 103677,
+      "sha256": "5b063e2991af5defc31c4cbd29f2a54616e24c784feef911a816f13b85543d6e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalDinoDBEntry.h",
+      "bytes": 3296,
+      "sha256": "ff6a991a79e512b4a4d5dda7c6da82b97d5b44842b7815372fa0e6778dfa1361"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalDormantSortingParams.h",
+      "bytes": 1442,
+      "sha256": "608b9a4ca3d2b7834e4e731dea0993a4a6ad500e380483f46ffd3d91fe2771f1"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalDroppedItemOnPlatform.h",
+      "bytes": 2153,
+      "sha256": "2c2f41b4adb2e9c6045adc8e911df24674a0fd2205beb91fdbde12ba3f2dd43d"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalEquipmentDefinition.h",
+      "bytes": 1819,
+      "sha256": "41f49fcbff339938a210667c6f1c1345e60de11fe2ecf79dc967f81a7f876146"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalErrorString.h",
+      "bytes": 1727,
+      "sha256": "ac34c9224796e1a468bb5b14d050939285b2afb226a67e81f770ed39f99795f6"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalFolderIcons.h",
+      "bytes": 1928,
+      "sha256": "4f4ac27144df8fd6dea442f31d10696caa68c0c44f2c18ebcf89df080daa78dd"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalFurPhysicsPointSettings.h",
+      "bytes": 2880,
+      "sha256": "e1a82edd54fc423975cdbd9566a21fe7b57ec80209cba9d8e8a2e4df38d48779"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalGameSpecificMessageResult.h",
+      "bytes": 1631,
+      "sha256": "c419286f0555af5c70bedc8bff576dd23907c3681964cea844b14cfe0a83925e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalImageDecorator.h",
+      "bytes": 3042,
+      "sha256": "2c52a6188aec3f590be054bb27d077e9d601ca490b3a43f30c9e263b53757572"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalImageStyle.h",
+      "bytes": 1717,
+      "sha256": "f985f51f309ad981f4c3b89711ea83b2ca21c6e9f8c353d9e39ecd9e14219b78"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalInputPreprocessor.h",
+      "bytes": 3223,
+      "sha256": "9bbd975b904f09812f547555ae3c6262e0556f6fae0b20d447f9d3a4e29ab7c2"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalInventoryDBEntry.h",
+      "bytes": 2094,
+      "sha256": "09e709541cb01563904836383b4011b724d9dabbe5ca8ab991215cd2b6e84f73"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalItemDefinition.h",
+      "bytes": 1902,
+      "sha256": "b20228b466838a19b66e11e4dc44cf1a256ddb94f4cc5d7487be6a9e3afb5aa9"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalItemQuality.h",
+      "bytes": 2344,
+      "sha256": "d691d1788027cf4fb7840965b8848fef8197c750f9706b0787fad991f0f25f96"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalItemSparseClassData.h",
+      "bytes": 27072,
+      "sha256": "311e0e52045eb21d62ba906e3c67ab544b916a4f1d3e8dca4123590205472eb3"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalItemStatDefinition.h",
+      "bytes": 1775,
+      "sha256": "1796fa1d3b94c5fdbfcab7d026001fd0a1fb743afd907c2b86b72d8617c40950"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalMapMarkerEntryData.h",
+      "bytes": 2338,
+      "sha256": "bc473fd2955dab88706f49813bba2eb5eb9c92fd7df02f169c0d15399c4a3b64"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalMilestone.h",
+      "bytes": 4257,
+      "sha256": "fc55ce9e76a92f010a52c10320c6978959a7c16bf6f039bc3bd7d7b78bd04616"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalMilestoneBranch.h",
+      "bytes": 2263,
+      "sha256": "fc43f6dfe034b0bc7d5c1fa6ed6dcad8cc83735414ba34286742fe9792241370"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalMilestoneLvlReward.h",
+      "bytes": 1984,
+      "sha256": "4bfb5a6e2095b96e5fc057c1f098a305bc66804f56f05d8a73adc03dbaf1345e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalMissionDBEntry.h",
+      "bytes": 1525,
+      "sha256": "a63c2113f562b0291da93491b437e2f1af387a823870c116fc77c045017a704d"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalMovementFragment.h",
+      "bytes": 5083,
+      "sha256": "9a5eeb457c66c4558f6bd36db60c8bea54fc8260023832dbb30270bce074fb70"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalNavMeshInvokers.h",
+      "bytes": 1617,
+      "sha256": "35eb94be8fe23a2963ca7c82b6759557e559e17e6421c9a0958ca945ca07ab81"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalNetworkPropertyData.h",
+      "bytes": 1537,
+      "sha256": "0cbb644d2c5e98a75869b39ddc0f4fe8b998b4df02a6484b353ea28e24858afb"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalPODVariant.h",
+      "bytes": 2665,
+      "sha256": "c35eb70153f591dbfc57c069e3aa01ab52d360e652a6ae86863de03a4d17a814"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalPersistentCharacterStatsStruct.h",
+      "bytes": 12959,
+      "sha256": "36b340628603e8c2470c528a77339b7f3b0b57dfa049544848576c7b3114977c"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalPlayerCharacterConfigStruct.h",
+      "bytes": 6049,
+      "sha256": "b4d4b510599705e6d698fe0b142eb0affdb6a90d1fc2a972ae565b7fed7a458b"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalPlayerCharacterConfigStructReplicated.h",
+      "bytes": 7197,
+      "sha256": "f3ff941f63af7f965eec8ccb6866d52933c5f885ba9109085f7b7771ad9afdac"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalPlayerDataStruct.h",
+      "bytes": 7808,
+      "sha256": "c1b9c1d9d75bea0cd928d1fc4bbc3cd7e7069381a3a7c8e33f1b0624bc31f379"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalProgressionNode.h",
+      "bytes": 2079,
+      "sha256": "3df94fb18d90ba5517666bab88aa0be7985196aacad3731333d23df304fe6e9c"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalProgressionPath.h",
+      "bytes": 1599,
+      "sha256": "9cbf7028abe9fad5161122fc92480c5d0278211f4737355079225aede07f0bd2"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalProgressionPrereqGroup.h",
+      "bytes": 1660,
+      "sha256": "6d922667269bdc12dbdc39aedec8c1d153dc74a03ebd556ddbda1443b28618f6"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalRaftSparseClassData.h",
+      "bytes": 2231,
+      "sha256": "a2bfbb6e3b96ef95e42f27048d416891cc740640b94e15d6a0c304f474567205"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalRecastNavMeshGenerator.h",
+      "bytes": 2659,
+      "sha256": "2ce6668bff22d757a415bdd4a60dd9e901ed57cbd698793cdad7f818c5b991be"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalRecastTileGenerator.h",
+      "bytes": 2082,
+      "sha256": "6fe1c0c5a71eed865b132d3f07aa7f6c52d78501de414e9adf16ce5d7985cd7e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalReverseVacuumDoorInfo.h",
+      "bytes": 1983,
+      "sha256": "1e1b9fc02873cd4db3cc856380edf1433c937809db9323be3ca4d6bc264d4ff0"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalSaddleStructure.h",
+      "bytes": 2095,
+      "sha256": "7df0b953877d348f97db91a44809519c6ac2eb3815000b7574eaeca6a2862996"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalServerMoveExtendedData.h",
+      "bytes": 1818,
+      "sha256": "935e590dd4f2573c11ff1b493dafbc01b08d49538edd8491a2cfd9fdfe737ff8"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalSkill.h",
+      "bytes": 5056,
+      "sha256": "89164eea629fb5ad98f56469292e0379d91fbceb025b071eb981b29c583cdfab"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalSnapshotPose.h",
+      "bytes": 2490,
+      "sha256": "ad3d01f6dfe783e7563b525bed272ff72d77e14548dc8974a8658d6d8930a5fb"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalSnowManager.h",
+      "bytes": 4479,
+      "sha256": "8b1f4089645d8aa21149048ca22891ff6a750e9a58ac4d4ea800b240447424a2"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStats.h",
+      "bytes": 1751,
+      "sha256": "082679e78f6c0a2efe185a780f55a49cc1d088249c49b17705f047f27cb448e7"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSkinCollisionComponents.h",
+      "bytes": 2422,
+      "sha256": "eed5001ab0952f48efbfab863665bbd143eceeb921af7b25cb26ab96d5ae58ef"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSkinData.h",
+      "bytes": 3745,
+      "sha256": "5e5ce4bd849888e5524699efe7dd984dae0444b838b389b94b52d3e8d13d9535"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSkinExtraComponents.h",
+      "bytes": 3090,
+      "sha256": "f214dc0ba628369d205677e066fa7552fcbf4c68227dcf9bbadb3f82bb4a38cf"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSkinMaterialData.h",
+      "bytes": 2189,
+      "sha256": "8336d881527986972a5c26607d629b642870aafdb4ff7297792b5612a496f689"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSkinParticleSystemData.h",
+      "bytes": 2588,
+      "sha256": "c03202a8755591db424dc18426f21c2808812fe82f270600ebedade187e0d0b9"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSkinVariant.h",
+      "bytes": 2070,
+      "sha256": "38e03120cf93dd67b91c1b6def2a6e2faa131c0518ac6444769146a7c87bcbfa"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSnapPoint.h",
+      "bytes": 6289,
+      "sha256": "2973c71ea2743d9cc1338f2017ea9f0923459ef098527b0183dbfc8e5cba0e4a"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSnapPointOverride.h",
+      "bytes": 4012,
+      "sha256": "464c13a1b643424eb9cea74484b8bfb2524b0f29d5b6eab8fc075ba37c4207b8"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSnapTagSettings.h",
+      "bytes": 2287,
+      "sha256": "cfb836838f06020302cb5f424033b051bb25b12781e55f5bdd1452f706b11f71"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSoundsOverride.h",
+      "bytes": 2515,
+      "sha256": "58d929898ddfe6960fbb001e2e700accad31ff8ff88145ad5f01eabf37be96f9"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureSparseClassData.h",
+      "bytes": 50688,
+      "sha256": "5f494e829bbd58411a3db1e8aa78c83059f6eb71d2344ec7a4e4432c7d5f41bf"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureTemplateData.h",
+      "bytes": 5136,
+      "sha256": "5c4cc9f342143d09e1487f057d59acf6518a0c340700b1206fe90ac3a4a7f953"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureTemplateEntry.h",
+      "bytes": 4803,
+      "sha256": "aee504d3ad113c467b182a8950df181136cd71fc1ae5d444a14fdd6ac12afc7f"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalStructureTemplateMeshOverride.h",
+      "bytes": 2389,
+      "sha256": "832a594b68e061165cb9a8e0d209d10245979e8590122f6970614515f6e1e8a8"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalTargetableActorSparseClassData.h",
+      "bytes": 5547,
+      "sha256": "f081b6ce38e8512ed9420e3447be3f909df7bb3e2ba7bcf6fc4ecc331722387e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalTemplateModBinaryData.h",
+      "bytes": 1819,
+      "sha256": "04086a7fdd3051b30771773a63fcece6ba06b5623a56ac4a409c1392f52a99f2"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalTextStyle.h",
+      "bytes": 1707,
+      "sha256": "4c78520be6f129078f24b3bafac290a8b715d2059d2821db70db8aaf49bd1808"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalTriggerEffect.h",
+      "bytes": 2323,
+      "sha256": "3b57f50ecbd012a52e2de470158341dc134aad25eae84fe29dfb25a1d4108018"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalVariant.h",
+      "bytes": 2399,
+      "sha256": "6b736918e97036f9d323f4356586050cce9e53b867b058c01aff08147b17e61a"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalWheeledCharSparseClassData.h",
+      "bytes": 3922,
+      "sha256": "f5de975b9e36edd0be73ffb4e3130ce1ce44b2ff149249d9b9be2770e2825cbd"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalWirelessReferences.h",
+      "bytes": 1807,
+      "sha256": "59d7ec28070b6ee67666418398e395f1d43b619e6a3aed0e44148020d2f8d0e5"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimalWorldModifierList.h",
+      "bytes": 2299,
+      "sha256": "fe0c10239da59a156745cf876c4c8b47b461733bfbd15eb42a0a5693a9387530"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimal_WindowsPlatformTextField.h",
+      "bytes": 2266,
+      "sha256": "f082fa7d3b047a695565e4836f1c656f4d2f05f9ff6d0ddbcffee493d312ae8e"
+    },
+    {
+      "path": "include/Brz/Jogo/FPrimal_WindowsVirtualKeyboardModule.h",
+      "bytes": 2042,
+      "sha256": "96f3e62c044aec291578d30b8c617c662f529280df5b1b89d0bf91d4fb4e28a6"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3d.h",
+      "bytes": 1608,
+      "sha256": "1981fdec270256da9f9dbea15e0db26ac639383fb77c547778a12cb034781d61"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3dCameraParameter.h",
+      "bytes": 2197,
+      "sha256": "b74d608b7d7cae60159ec5e0e0960fc87d07c2e66a0e66a71710a77f889bce7c"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3dCameraRigParameterOverride.h",
+      "bytes": 1588,
+      "sha256": "413602313f5221c1d618eef55f450b257cc30e5ff3d3e67aea4815abac2d1ea4"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3dCameraVariableReference.h",
+      "bytes": 2228,
+      "sha256": "fe28cea2ff5d6b6b8c34212778ee6e08465e0ceda22f104ce51096dd82767de4"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3f.h",
+      "bytes": 1608,
+      "sha256": "c004c73d218cfd1209c971849a809f1e676bf0ddc473363cf1d075bff92adb66"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3fCameraParameter.h",
+      "bytes": 1673,
+      "sha256": "6971eebf4c8b3177740fc7864ce5e6af228008bac24c2d526b3f6f89e78dfa5f"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3fCameraRigParameterOverride.h",
+      "bytes": 1588,
+      "sha256": "d932d39bc02807e83821edc0ed08d5887d9f58981b25c65987b63b2c246ef03a"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotator3fCameraVariableReference.h",
+      "bytes": 1678,
+      "sha256": "b7582d089d163fccd64cf62b8bb8fe1666099c06649e65cd5b6136d9199d5f15"
+    },
+    {
+      "path": "include/Brz/Jogo/FRotatorPropertyPair.h",
+      "bytes": 1611,
+      "sha256": "022410cae56facccc2870bbb4e742bd23325f60f7ea9f431399da6ad91329908"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringAnimationAttribute.h",
+      "bytes": 1522,
+      "sha256": "b92e52696289fb1c48148e3535b84fd9b61f1d5fa66d3ea5a1a5fe1905b0bcb9"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringAppendDataflowNode.h",
+      "bytes": 2503,
+      "sha256": "d28099c8a17b5bf9196a71f3e68e4787ad12a527d9509cb22e8a4f940b4b51c6"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringArray.h",
+      "bytes": 1525,
+      "sha256": "a255087df4f726a8a2ff3d3df7b54aebe5befdbcb7311bf963ffac7f36c5d6e4"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringCurve.h",
+      "bytes": 2531,
+      "sha256": "cc5743d86bee9f2a137d0eb9228dc0ca970cc5d603a951e00e8b3816182a6294"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringCurveKey.h",
+      "bytes": 1568,
+      "sha256": "0695212ef96d9bdf5502a2e6a7e97adee4f2ea9ac74dc18e16eb38ba67a0e7f8"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringFormatArg.h",
+      "bytes": 3032,
+      "sha256": "21c1288315a08838a1ebb2e371fa80bba7a949199fc23508d21a104dbe742fd6"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringFormatter.h",
+      "bytes": 2762,
+      "sha256": "ea12f32c59cdac234e0a9a7c341145d4dcb3ab8682d2b0cdfacf994d6554ba6d"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringLiteral.h",
+      "bytes": 1500,
+      "sha256": "6f04bae2208e6840f2d5b0abdcbdd24b89fcd9304965666d7d57c39aa9394191"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringOutputDevice.h",
+      "bytes": 2870,
+      "sha256": "7a452cd75dd5a0c2fdebff21264ec2023dc1810aaf524440571fbced1e42487c"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringOutputDeviceCountLines.h",
+      "bytes": 1454,
+      "sha256": "643f8c3f7952a4579a630d2b4b280c206a3fc4ceefd8f74b3eac29caedaafc77"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringPropertyPair.h",
+      "bytes": 1602,
+      "sha256": "11e7f85f85c8eebf594455eb22fdc7d329fbbb814d24b7626089cd28c91960a9"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringResponse.h",
+      "bytes": 1460,
+      "sha256": "918f99af8ad0950bdb26cea52f416352b38907348eab1e0786987ea0b2ffca87"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTable.h",
+      "bytes": 6922,
+      "sha256": "3eb88fd52196211cbd784180aa4b5a308b59e7345494a1f7b0375809ea9c3894"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTableEngineBridge.h",
+      "bytes": 7088,
+      "sha256": "5b477fe08b28f44f7f0e0aa716872788b714563d7a077ec0cf202962ab660115"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTableEntry.h",
+      "bytes": 1533,
+      "sha256": "a220db6059b8bf38e2a56b692eb5afbe547869a962b222d6d6ad6e9d06ad3628"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTableRedirects.h",
+      "bytes": 2721,
+      "sha256": "a424d2a6bff34bfe0373049e928f700f25b764e74537e5be0fc249e17f67c951"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTableRegistry.h",
+      "bytes": 5280,
+      "sha256": "9b8254906fd9962b3ec27594ac6d3c07b714e057962f62ec34fd78e700b46ce2"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTemplate.h",
+      "bytes": 2050,
+      "sha256": "7d0f8fbf9d0f8c2f83a99f3b49362786101ef6abd6923a01f9ccb2a5fe072b37"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringTemplateResolver.h",
+      "bytes": 1567,
+      "sha256": "6d39950e85e46371391a67523c2cc223f5c7124c5487a24d7cf0b097f86c8f63"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringToken.h",
+      "bytes": 1494,
+      "sha256": "6ca3b50f42f99a60b2959c988ad384604347c73a8f59f5b769d7a27cb6958799"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringValuePair.h",
+      "bytes": 2106,
+      "sha256": "52912676c4a33825e3931bf74a9f61f351f080babffdaedfacd7d7c564a20955"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringsFNameDummy.h",
+      "bytes": 1388,
+      "sha256": "663fd1adec9ca4d7def86208d52d7f55ad590c6aeebbd0fc858c13ae48117982"
+    },
+    {
+      "path": "include/Brz/Jogo/FStringsStaticStringDummy.h",
+      "bytes": 1430,
+      "sha256": "a317a747bb2a5b5e55515408283f72475ea9e06d51f0d3677bed2bc85145349f"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3d.h",
+      "bytes": 1815,
+      "sha256": "087201952a0124b191ac3ad438d6ad78b0b1d82eff347fc96c6ba2cb5612f497"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3dCameraParameter.h",
+      "bytes": 2215,
+      "sha256": "7f8bba60693a4fb0a670df774323cc44d4027c46ac46843abf431dc25b97c3d3"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3dCameraRigParameterOverride.h",
+      "bytes": 1600,
+      "sha256": "38f89993882cbfe9fcd30db8150a37754da6a5d70345c84c17b4e1657edde6f4"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3dCameraVariableReference.h",
+      "bytes": 2246,
+      "sha256": "f4d755387c2c924dcf090772650a08d837a20eaef2e6a5018480921cf4beb9d1"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3f.h",
+      "bytes": 1815,
+      "sha256": "7e1a3de6c129c28490198a2f991cc33f5c0160b40e0b30bf740e809d4e154df5"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3fCameraParameter.h",
+      "bytes": 2215,
+      "sha256": "38795325a997fec63ed0c9b4782bde39c2a1faa683d7e34b10aca53b1fe0ee3f"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3fCameraRigParameterOverride.h",
+      "bytes": 1600,
+      "sha256": "79d60e6e20bb9cfb80d45e257e7dcfe0e5e011fa7cc8ade597fbf7c90d735ca2"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransform3fCameraVariableReference.h",
+      "bytes": 2246,
+      "sha256": "f03c7b5001dddaebe0d3a2377746076b182d3a7adf0907ac3f5fcf649e3adaf7"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformAnimationAttribute.h",
+      "bytes": 3303,
+      "sha256": "924302991b362f57bb7269a76644fa73200baa33fdef8f9b00fda3da0a471176"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformBlockHeader.h",
+      "bytes": 1406,
+      "sha256": "f8c8c300b932cd1d7642e2b50bf028e69b66eb7cb42f934cf3f6ab9e443d7b6c"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformCollection.h",
+      "bytes": 4944,
+      "sha256": "2c66cef7d98c974fa5915c2ca2925374257fb992393ff01452a95a4549b83366"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformCollectionAttributeDataflowNode.h",
+      "bytes": 3049,
+      "sha256": "6756c363cd65348b168bbde8199e006eee31434d5435d592937f8198049f21c4"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformCollectionDataflowNode.h",
+      "bytes": 3352,
+      "sha256": "fa6c9fd0b2f094a28cb8b4be59321b8809eaca3a515fffd7f5afa2296aa44d9d"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformConstraint.h",
+      "bytes": 2074,
+      "sha256": "f687c58540d0460e9aca62a977476432925d1f2176e5e854c0fc5fedeecfa353"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformConstraintDescription.h",
+      "bytes": 5602,
+      "sha256": "95f93b73705b160ecc0f0a25d053c7b8ba1e0acf85afb5b234aa382f332c6183"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformConstraintUtils.h",
+      "bytes": 4877,
+      "sha256": "73251a09e4147a59cd445949c32083d48681f75e95049efa14ee1c7cc6f6f547"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformCurve.h",
+      "bytes": 1868,
+      "sha256": "20fbe98ecf40b49df3848f94e956970e36fe4eeb51df41e4c70a7d4616471720"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformDynamicCollection.h",
+      "bytes": 6292,
+      "sha256": "b3db3c29e00503ba8732654d039142a550518a28159576d823d1fe90cd27ae49"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformFilter.h",
+      "bytes": 1883,
+      "sha256": "285b66b9dfb33a3368f0e003a487f027202da5bbce3d143b8998d73dd54260db"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformFragment.h",
+      "bytes": 2095,
+      "sha256": "6c4cf43af43d7c4f9b8f3f8aab2237d30218f08b09245d16a6c41881d5b8c0bb"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformGizmoDataBinder.h",
+      "bytes": 1430,
+      "sha256": "2b62e58311b49b073ec822735238f35304bf56a05e3bb48d258f1ea85bf0069a"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformMeshDataflowNode.h",
+      "bytes": 3319,
+      "sha256": "6269bf78949144034aa8a2faf5f07ac6884a8501541629c03349ebb4105ca728"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformMeshesTarget.h",
+      "bytes": 1775,
+      "sha256": "e54d94c6254a351ff02e38d7ae406530c52161562dac7c3988896cba8b7099ef"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformNoScale.h",
+      "bytes": 1623,
+      "sha256": "5dd0ac2761dc15ae90d3065ce17878084266beacfd67374b4d49f81322a0d0cd"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformParameterNameAndCurves.h",
+      "bytes": 2611,
+      "sha256": "a154fac7f8d7db0f14ce62436d836ac495cd389eecdec258626ea6bd771e97b7"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformParameterNameAndValue.h",
+      "bytes": 2045,
+      "sha256": "f3ecc4fbafcc1bea0b60ba3af93ae01f9abd79a63d8718912e372a2b324dbdea"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformProxyChange.h",
+      "bytes": 2737,
+      "sha256": "23e4c4dc335b288a002c62cc7f81a8aa88d25eb0e22734811b809bec31ed80fe"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformProxyChangeSource.h",
+      "bytes": 2519,
+      "sha256": "3128209bc800c831bbc90feb466140537120ed97c27526615e9a4b05b48720e8"
+    },
+    {
+      "path": "include/Brz/Jogo/FTransformableRegistry.h",
+      "bytes": 2362,
+      "sha256": "b0142a0b20892ecb3080c81db1a9033c288e9321d825541f8e9f24a9538f3fab"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2D.h",
+      "bytes": 1501,
+      "sha256": "65b4ff84d45876181c70c9771add2098f363e948368df5f4b55b05ac7a400901"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2DHalf.h",
+      "bytes": 1525,
+      "sha256": "25b5da27cbb2ace38bc569824419e829d1f534f5e645eb8c9ba137b4e2260756"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2DInterrogationData.h",
+      "bytes": 1783,
+      "sha256": "d202d61902a7b8e633ff1bce752e3083baabdb7b28fe9b69fb024ec6d9a8b344"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2DParameterNameAndCurves.h",
+      "bytes": 1984,
+      "sha256": "b3ae5b801e21ea78235615d7298acdf23d98434967a45b01cc59b43644536d72"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2DParameterNameAndValue.h",
+      "bytes": 1718,
+      "sha256": "b5239d029e0d9743da9ee9e1bb94ba03c259ad71cd8ecf53ac34f7671b382a0b"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2DParameterStringAndValue.h",
+      "bytes": 1732,
+      "sha256": "92d06f566b3be9d8af3500e259f1979a2cfca51aab533e487e65861c62587b09"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2MaterialInput.h",
+      "bytes": 1854,
+      "sha256": "733b1764038a2fd7dedd8673f08be92371f539a1ee27d0ec42e2883ffbd8b453"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2VertexDeclaration.h",
+      "bytes": 1430,
+      "sha256": "720206bd78f17a680a8754b16d1cd26b208297e27ae5336ef679d48170a5694e"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2dCameraParameter.h",
+      "bytes": 1666,
+      "sha256": "f897e6a60aced212774306199d9841504b773087fce3f974fa9905964b33c96c"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2dCameraRigParameterOverride.h",
+      "bytes": 1582,
+      "sha256": "a9c492f27665dbfc63d853ca631516f030d3fc133a148092d785db6c6c3fa47e"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2dCameraVariableReference.h",
+      "bytes": 1671,
+      "sha256": "9fc9187baf3dd69b87ad733b47a4cd23beb6e6b7d6851939b4e5584c5ea4d3cc"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2f.h",
+      "bytes": 1501,
+      "sha256": "fcd7cf955458e9797fbaa43de9d493b5c32c428b5ab41e259ff17dcfde37759c"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2fCameraParameter.h",
+      "bytes": 1666,
+      "sha256": "1756590ab7682f3319e6a3e89c0d703c38c710bdd005f5fedfb61900c4e78f8b"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2fCameraRigParameterOverride.h",
+      "bytes": 1582,
+      "sha256": "3a9ed888db3fb9415da0aca5d4662bb691ca1aabf506be5f8e9aba668d04118a"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector2fCameraVariableReference.h",
+      "bytes": 1671,
+      "sha256": "fd2ea4783df20271db531f832aeda539b569c987e225452493c7d79b4f239434"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3SOA.h",
+      "bytes": 1596,
+      "sha256": "5669436bb475a22ae36f58b5a26ec4a42d7a2672ae60566e849d06e2026010c7"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3VertexDeclaration.h",
+      "bytes": 1430,
+      "sha256": "2d6d91ac33de15a1c8eb59a3b5e7e9a3fc070da721f39aa4c311627b6080a1b2"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3d.h",
+      "bytes": 1584,
+      "sha256": "dfdd13d1eb0f88b9d0c6cfba1eedc6140023308c303b7c2856697934564ee23d"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3dCameraParameter.h",
+      "bytes": 1666,
+      "sha256": "2e0f68307ade41cd04b22f01952f15cbf7b1b0d59d1ea30f83ddd59fffb43359"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3dCameraRigParameterOverride.h",
+      "bytes": 1582,
+      "sha256": "e8d4133516c394db53ee5cd8bdb7cd975f51afd8aae0bd4482d047201a9fb273"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3dCameraVariableReference.h",
+      "bytes": 1671,
+      "sha256": "55b273cfd5544c240e789faf19c160ee3e3ccabcab8cfe7ca87b12eef3608ff8"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3f.h",
+      "bytes": 1584,
+      "sha256": "b5f3d70cc2a3582fa9b4576f11d504b769160b38740fa4f2d60709b44e47205a"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3fCameraParameter.h",
+      "bytes": 1666,
+      "sha256": "956cb0b3245abd2df18bc8e1659f124f9b0049ce87e659762168f7cb525d3db3"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3fCameraRigParameterOverride.h",
+      "bytes": 1582,
+      "sha256": "679c762099e735189e3f22371417ab46d15e6b85d179cd490ffb23afb775d3a5"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector3fCameraVariableReference.h",
+      "bytes": 1671,
+      "sha256": "b8d1b4bc1ea7a9b6c364c80e5ab184cfcb489c3b7e07c195bd678a0fcda0b974"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4.h",
+      "bytes": 1698,
+      "sha256": "e98074b6ff655834b234fddeb364f273d7dde850e0c6cb47dfaacf76643bf659"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4Distribution.h",
+      "bytes": 1581,
+      "sha256": "67cf598afc33ee6ef3992b013b438f3496afce27493d6ae5c66a32e04775e8c3"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4SOA.h",
+      "bytes": 1719,
+      "sha256": "1ff8fa598ad67c6ab83dfaea6b2787888b81e6b4dee9187d11098a6801f2c787"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4VertexDeclaration.h",
+      "bytes": 1430,
+      "sha256": "10de524fc0d3c8b568ba6b1c84686aa00d85709bcef6ba5a642d55101e79f98c"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4d.h",
+      "bytes": 1705,
+      "sha256": "01930ff9dacc0a3c5c169dfb347ce7d8d13ec7f26b8492abf028c39cbcabadb9"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4dCameraParameter.h",
+      "bytes": 1666,
+      "sha256": "0ecf4fb0e7f0ff3cbba5fc8bda978dc6a7c85d9d69b51a7271d187360bbca568"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4dCameraRigParameterOverride.h",
+      "bytes": 1582,
+      "sha256": "df46ce84f4601bab4f9742265a626596d15aa17e0832bb0fee62531a3a2378e2"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4dCameraVariableReference.h",
+      "bytes": 1671,
+      "sha256": "7cf5e67a7c9256200da8c9c4316f9cab78c83093621b456d3db0c98392669f33"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4f.h",
+      "bytes": 1705,
+      "sha256": "bdbb92035a7fa2cc2ae7cf95249636fda0beb9119bd1ab85d3fa3a5478dbfa05"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4fCameraParameter.h",
+      "bytes": 1666,
+      "sha256": "ef914c928d53cfc79999672060d13f83ce4ca23a4036aaa7044fb6cc85b0667f"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4fCameraRigParameterOverride.h",
+      "bytes": 1582,
+      "sha256": "7762912bac106d2bff08cb11664d7f6a83b5028ea0e69f72a13d4fd10e8ed2a5"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector4fCameraVariableReference.h",
+      "bytes": 1671,
+      "sha256": "28e62839dbccc31369f2e490421b9af440e6eec4776a856f95700692b24e5a1e"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorAnimationAttribute.h",
+      "bytes": 2061,
+      "sha256": "d4fdf9b42ebd917620709c74ff8cfbb3c65d8cc809af3c21dd95c7570a7697cd"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorArrayNormalizeDataflowNode.h",
+      "bytes": 2786,
+      "sha256": "5a2e89c57c8d2fec99a5f51e888f59e7d88eded4b6d3f8f6c50d493ef36585f1"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorBoolPair.h",
+      "bytes": 1610,
+      "sha256": "542cd1a19a2845ff06bf4bb9c1cff508a5b6737800d9542215afb688ad92e077"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorCurve.h",
+      "bytes": 2022,
+      "sha256": "6367af6ac90a1f382b90bb2c6dd088f48089ddff95cdbc3b1e985a4dc7051247"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorDistribution.h",
+      "bytes": 1574,
+      "sha256": "9149559b08f509b5ecc78982e7843374376c1491a05c289c45952ccfc3ec0a99"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldAnimatedResource.h",
+      "bytes": 1579,
+      "sha256": "bf3dc27b74a5f7e83e0befa191012d755476a52838b514f0fc3ebe89c02a7d9d"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldCollectorResources.h",
+      "bytes": 1460,
+      "sha256": "bd05c37cd8ffdc0c8e663a7d9eb4a5d703189021f1dd1261d1af18af7e48c762"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldInstance.h",
+      "bytes": 2626,
+      "sha256": "e774a04c21011d739f3f414019ef41b1f833a4ff017431f6c891f3431dc53677"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldResource.h",
+      "bytes": 2121,
+      "sha256": "252dfa8a68d854e7928f4770e90bcec6e54f9fd01c41a0dfa6f184645255190c"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldSceneProxy.h",
+      "bytes": 3268,
+      "sha256": "3871418e7d70f95c5db0ddb5a92ae10495683e9bcbf849198bdd7c07143c92a6"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldStaticResource.h",
+      "bytes": 1949,
+      "sha256": "b995bc67f3899f992805e6074842c560dd5f8290fb5da851b979b9063550f7b7"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldStaticResourceBulkDataInterface.h",
+      "bytes": 1538,
+      "sha256": "19e212033f9cf3ec52a1c61bd658de2ee13c11c609a7d39e5f1cf18f84529db5"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldTextureAccessor.h",
+      "bytes": 1907,
+      "sha256": "0d885a855d95985f9075e8285420e5b7798dbceca3116c2944982e96758bc650"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldTextureAccessorImpl.h",
+      "bytes": 1664,
+      "sha256": "28d318452de817f0a14edef938f3a158e23f9990933646245159ed46fd78aab3"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldUniformParameters.h",
+      "bytes": 1604,
+      "sha256": "bf9d7ba3e3d247a248643fddfcfcb76ff25e83eafb35f7f2c72af34c23980358"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldVisualizationParameters.h",
+      "bytes": 1744,
+      "sha256": "0074abe5b8702582f0336b3909d82485febd87fa2ced8abfd7d8d504ebafed4d"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldVisualizationUserData.h",
+      "bytes": 1478,
+      "sha256": "fe2d95073dea1e9f6339cbf23dfac95c12f854c05364bb695c91765816a347fe"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldVisualizationVertexDeclaration.h",
+      "bytes": 1532,
+      "sha256": "7a89c6fe10f7b121ccb1737b51e8bbac2ddbc913fe82e9d087b31667bde2ff8c"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldVisualizationVertexFactory.h",
+      "bytes": 2154,
+      "sha256": "aa232cddc6d3ea0b1cece56e485ea3fd0211b31e403dec5348dd1a1ced34119d"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFieldVisualizationVertexFactoryShaderParameters.h",
+      "bytes": 2603,
+      "sha256": "34ed62a849671787a39bb3a2896cba53771f4ffc55d939e37633718089e9e290"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorFixed48.h",
+      "bytes": 1614,
+      "sha256": "8d0a830f49b218e72d9e798bd24ea0d9e36db9e891887fd5fcbe0e126e898491"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorInterrogationData.h",
+      "bytes": 1767,
+      "sha256": "0b2f2f511f1c83bb8c5f63bc5732daea52d171055ab04c40f598f3edc482e54f"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorIntervalFixed32NoW.h",
+      "bytes": 1618,
+      "sha256": "7d7943fe00e7c746b61ac4b3652d6785a092c6748b1f3b1d6b246c65a636b946"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorKernelExecutionIndex.h",
+      "bytes": 1967,
+      "sha256": "d9ebc268b36c062aace1e5799402e430f199d2bc151b09204fe43dda298c6a29"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorKernelFastDot4.h",
+      "bytes": 1987,
+      "sha256": "5cdeb95577ef7701927d4e23701be37917f91fe766a81071b5cdf3616ca1d72a"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorKernelFastMatrixToQuaternion.h",
+      "bytes": 2099,
+      "sha256": "334c6104722c6a78ea4d10d8b01ca9e8ce5c3d4fa74acc998ce854a3948269e9"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorKernelFastUniqueRandom.h",
+      "bytes": 2683,
+      "sha256": "96967d362c046be36acbe70968424369af7e903b3dcdd4ff4109e69e8618a13f"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorMaterialInput.h",
+      "bytes": 1694,
+      "sha256": "442303a3c86bf31e8b185bdd6861e153150076890ff0d4ab7fab86d9597369a7"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorParameterNameAndCurves.h",
+      "bytes": 2119,
+      "sha256": "fb7de0f1270a465e49ea04e225a363c333a0c05df9270e90857bab610f95d83c"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorParameterNameAndValue.h",
+      "bytes": 1704,
+      "sha256": "e1bfec8d87e86a599a2df16d9192741f98309210b59a2c27df573e4a59b9c59a"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorParameterStringAndValue.h",
+      "bytes": 1718,
+      "sha256": "8869bb9c927d83124aca03dd6ea76ca36328d5d0dc8a2ecebc871d4cc09d715f"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorParameterValue.h",
+      "bytes": 1926,
+      "sha256": "7a79cc9f70e5039b9e003e093cdcdb150c2b18d877331468c7b597e8171c876b"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorPropertyPair.h",
+      "bytes": 1602,
+      "sha256": "d6c66efbfb27c156e7fedb0eac8ba238d91decaafbe0797e54f8d10f9b247677"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorRK4SpringInterpolator.h",
+      "bytes": 1829,
+      "sha256": "3a22513300153be6ae4ea8c0fa4860650c3ad4f715f6c62c311e104bc34e90e0"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorSpringState.h",
+      "bytes": 1485,
+      "sha256": "84e95c521d150f07c5c91f9d3dfebaa2f8a6d6c67d4aba8c0618c267c4530870"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorToStringDataflowNode.h",
+      "bytes": 2370,
+      "sha256": "c786c2c08fe5de90fefc6da40fa18d98dc86942f15d1f5b7829f62eea08fc6bc"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMBatchState.h",
+      "bytes": 1651,
+      "sha256": "fd80411e2b254e90684e896d9ba7236d727ff1c3f57416d9585a8d14186c6cf7"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMCodeOptimizerContext.h",
+      "bytes": 1454,
+      "sha256": "fc5b9709b30d591458bbeadbea09cac5dd8ad72832befb0b9f69a0537e629d20"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMContext.h",
+      "bytes": 3346,
+      "sha256": "3ef78581475f0c46de26003ae399201ee0a73c7fc7867958185a2c6935bc2529"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMExecContext.h",
+      "bytes": 1554,
+      "sha256": "0559155de9e3042ced652021fd11ea41d6e4f37592cb46f0801025259dd71fcd"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMExtFunctionData.h",
+      "bytes": 1729,
+      "sha256": "b7c6905e76459b24606641fc263d41fd2322fb1e3ec16489f9bbf7bcba156b0e"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMExternalFunctionContextExperimental.h",
+      "bytes": 2242,
+      "sha256": "28abdafbc9723d27d235ba81ab0d22b58c72559fd8746c3bb82c4bb2b0db6382"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMExternalFunctionContextLegacy.h",
+      "bytes": 1508,
+      "sha256": "a163c64dd6f586a4b0fbb42043192ddd5ad94ef29ff3e188d386cf9c5eb0ac99"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMExternalFunctionContextProxy.h",
+      "bytes": 1502,
+      "sha256": "b601cddd4064fb3ae239a6b7af3d3a9cd477d20d8373d535d130535a0516c444"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMOptimizeContext.h",
+      "bytes": 1734,
+      "sha256": "a6e12242e29c7ad3a470217e0cbd17d83327b6d832f5e143d45def5f815b5846"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMSerializeState.h",
+      "bytes": 1562,
+      "sha256": "1ecd92e23e36997707829f7d415458e95e962937e87eaccc6de94ebbbcabfe01"
+    },
+    {
+      "path": "include/Brz/Jogo/FVectorVMState.h",
+      "bytes": 1654,
+      "sha256": "0b70a9317e662532fcb8122eee83996adea5430f9da73bec17b3002f48d3863a"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector_NetQuantize.h",
+      "bytes": 1856,
+      "sha256": "8e737edd4022feb3ef4dd5850915c75bec609cc8339598bd7b62a5a5633c6739"
+    },
+    {
+      "path": "include/Brz/Jogo/FVector_NetQuantizeNormal.h",
+      "bytes": 2065,
+      "sha256": "9ac6f3655196219811480fd2f7c6c7b3d21e5aac754a1659cf7536f93dfe2fde"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldAsyncTraceState.h",
+      "bytes": 1562,
+      "sha256": "828ffaab8cce1782ebd59825b7419360fa92a22b81b43cc251f79014ad2de444"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldBuffDefinition.h",
+      "bytes": 6178,
+      "sha256": "83d63dc5773d48a0de8d406933c3b775a5440d2583c72721c097bf8662090a23"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldBuffPersistantData.h",
+      "bytes": 1965,
+      "sha256": "42dc3a6fcdf1c886a2601f519ce839c55ae5c19a3453c3b912623fc7aa8520e3"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldBuffTrackerItem.h",
+      "bytes": 1893,
+      "sha256": "011d8a36dddc897a0bd5e2e6e6ba8c01bfdd1011d9b35736385e1f88f5ff46e4"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldCachedViewInfo.h",
+      "bytes": 2379,
+      "sha256": "dedee967b995af1d8a693a7a1ad7b2f5e6a0a9cefcdea0734e3a3841f00adc67"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldCompositionTile.h",
+      "bytes": 1848,
+      "sha256": "4891a1da7e315e6284fc30e8df15bd112adcdaf4446200c8ef655000105345df"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionBase.h",
+      "bytes": 2332,
+      "sha256": "f437be590fdaf741d5d3ede4e762ea05943085ba14909c7fc7d750e3cda4de4f"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionCommonActorBase.h",
+      "bytes": 2043,
+      "sha256": "2ed5894585aadd4d0754af0f151e003459ad2bf0dec71b50c0e91d41582b4868"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionCommonBase.h",
+      "bytes": 2003,
+      "sha256": "03f1726c22ff61a58c690281fcc2a7b9548ab79231116addbf346979e5eabb0e"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionContext.h",
+      "bytes": 3940,
+      "sha256": "dfb721056babb941b9ed6e689a687492857d7dcff31a59d08196b748c927e6c7"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionContextData.h",
+      "bytes": 2778,
+      "sha256": "61606f4933c57b2a1854999355281ca86ead7999cfa9364e665d07c5a531caf8"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionContextDataDesc.h",
+      "bytes": 1920,
+      "sha256": "7ff238725bb97d5c730388725394a5a26380828c478d6ec9760a4729aa60734a"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionContextDataRef.h",
+      "bytes": 1670,
+      "sha256": "e4049789ec9f07077aeca4a0f1eef9f64094a7f01791de2d715419a1625a5ffb"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionDataView.h",
+      "bytes": 1692,
+      "sha256": "5e0db2d0831ef573e2679f910001bd2643dcb1e9a2931c15128fe3c8fc665f1f"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionItem.h",
+      "bytes": 1706,
+      "sha256": "f0d3e3e616ed428e847f8299a65d2af2cdd561fa1dc270d73821804825b421bc"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionQuery.h",
+      "bytes": 1753,
+      "sha256": "69642d73adcf090f76c253b01810313c7801ae16a68918a6c8a06ebe09d0bbd2"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionQueryDefinition.h",
+      "bytes": 3840,
+      "sha256": "d772656b4a8ddbfa308c7d1638e7469d25c8247c4090c2f99d37e1ecb9f2bfbe"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionQuerySharedDefinition.h",
+      "bytes": 3557,
+      "sha256": "124b4cdbb29ac43eaceba1a5b96710057cf28dde6546d2e1da2cdacb4f4451e2"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionQueryState.h",
+      "bytes": 4453,
+      "sha256": "78427566de92247fbf78e42ed843282074adf952228725983a2aa9f177f7f5ec"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionResult.h",
+      "bytes": 1604,
+      "sha256": "e35bd045bd347542ea3e334731432e1ec6777fe1cd7c9e43eae205e7f4a7998f"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionResultInvalidationHandle.h",
+      "bytes": 2021,
+      "sha256": "aadc6dcf32a21f5f375d6aeb05bceeb193e11fcfa87e92c48f6217f083fe8865"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldConditionStateObject.h",
+      "bytes": 1623,
+      "sha256": "c51e8f37b3c9925d7b669fd445ef0f3a79ad1652d5ccccf802a14db0ac21a922"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldCondition_SmartObjectActorTagQuery.h",
+      "bytes": 3963,
+      "sha256": "dd2fc215ebf0927ca16be2c06618aa478e9619780cffa6e273c6ef9d63df5bc0"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldCondition_SmartObjectActorTagQueryState.h",
+      "bytes": 1550,
+      "sha256": "fba26c496e6b25464873f7de9f05d7e344fcc998ac8eca408a0e5754a192f188"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldContext.h",
+      "bytes": 4029,
+      "sha256": "aeecf234936d0c1058c3a1f3130b59564a6a3ee08039e5102a7b6569497a4605"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldDataLayersEffectiveStates.h",
+      "bytes": 3177,
+      "sha256": "2eb0dedf0d96aab08d6384c00f6fbe072bb05ad3859646e4b517f21381d4b2de"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldDefaultItemSet.h",
+      "bytes": 2334,
+      "sha256": "03d07b54fb69c7895011f86d8c31e13fa098089cbd7f76b68698b38ed5922f0b"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldElementPasteImporter.h",
+      "bytes": 1939,
+      "sha256": "d12979e139a6ea5852457fea9e73aad86d971b8afbed3b4dc72e99fad1390a6e"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldInGamePerformanceTrackers.h",
+      "bytes": 1466,
+      "sha256": "12bbed0c1bb70a239b33e99b9b2e6a45e2e20bed660de6852ba08b3cd98b51f2"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldInitializationValues.h",
+      "bytes": 1643,
+      "sha256": "a03b7e5c3a89522fbcd31d90b56dabe72602572078ffc80e66172b7d29b7ce70"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldMetricCollection.h",
+      "bytes": 2251,
+      "sha256": "9fa02d84f7fcf5b04e818081ffb460aa0d4992d13b14d70adec12d1eac5aa288"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPSCPool.h",
+      "bytes": 2601,
+      "sha256": "5befe7bd38036b6e4dfd26f44fde5010c348d9397c2c1034d753277c7c24c8f8"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionCanvasBoxItem.h",
+      "bytes": 1789,
+      "sha256": "6db6b9504f25dc33537c1f1653f15cef314649bbca9c5fe14efc6f93def4b341"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionCanvasItems.h",
+      "bytes": 1729,
+      "sha256": "a3c876138e9404ba4a6ccf87dfd809815614680df86a724fd7e472fb7b0c717c"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionCanvasMultiLineTextItem.h",
+      "bytes": 1672,
+      "sha256": "f42139c74f4e45a33026a854950d48189a8c5699a032475dc7d24d53422330f7"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionDebugHelper.h",
+      "bytes": 5922,
+      "sha256": "f280917c1b8600299c5067cf2f7bf2ad9bb64e10cefbd7c50b8bfd41f867ce59"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionDestructibleHLODDamagedActorState.h",
+      "bytes": 1969,
+      "sha256": "135aecc8ac7b2fa985bc032d79900d70551637900ea15b1d495f4402a1a07f69"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionDestructibleHLODState.h",
+      "bytes": 3056,
+      "sha256": "b0915ce5cd3d17f3b84c3fad52507c6682b4030e0398973a5d18dd7dd1a96519"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionDraw2DCanvas.h",
+      "bytes": 2626,
+      "sha256": "dffe09df9e857088d8e91588ef9b45c9b58adde32ceff310f08ffd344efa3d12"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionDraw2DContext.h",
+      "bytes": 4923,
+      "sha256": "f047efe6feae8c24b04da135c4f1bfd91fa3fb7bc0e9b8dbf7927e1136016b6b"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionHLODDestructionTag.h",
+      "bytes": 2365,
+      "sha256": "4cae5e818e1cf6f4a62f3cc17b9344a6742b1fd550406d17af66edca2eff64fc"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionHelpersPrivate.h",
+      "bytes": 2060,
+      "sha256": "9ec77bac3c6f9dc30a87011dc55a72f21e12f79dc7fb0be6d2940216b03a98e5"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionLevelHelper.h",
+      "bytes": 3144,
+      "sha256": "169dd0601ad1bddd4b40ff7f9d23bb8ab3a2eb31be74aa0853930afc5225bbff"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionLineCanvasItem.h",
+      "bytes": 1939,
+      "sha256": "535d760ab66c696b792eb4223e34fda644c7ace356f5a0355e06e7765b493720"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionQueryCache.h",
+      "bytes": 2562,
+      "sha256": "06d708d491a025abea324aaf26f67eb95a8eddc5acc07e2c24e857fdc337f22b"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionReplaySample.h",
+      "bytes": 1726,
+      "sha256": "5e791a1a0a6ae8443661e7d3a29b26bb7fca1f587e13b5d56b8b43bf7631284d"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionResolveData.h",
+      "bytes": 1813,
+      "sha256": "2d9cb7ca7a58d97a74ceb20dbee7885fc90b90e3803b890fa9bdd42cc045762c"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionRuntimeCellDebugInfo.h",
+      "bytes": 2301,
+      "sha256": "ecf99b566945ff220423553f55265b51a7432185d23c92ae24c0a3a8df32d069"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionRuntimeCellStreamingData.h",
+      "bytes": 1887,
+      "sha256": "41976c417b023d0b79d4289b0dc637770caf1306aa3a09b23eb305bc9ce955cb"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionRuntimeContainer.h",
+      "bytes": 1684,
+      "sha256": "cf1a63ae33be8b0d6eaab18ad5f9435766f4b1adf818b8b7a9c7011127da5374"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionRuntimeContainerInstance.h",
+      "bytes": 1905,
+      "sha256": "e7cf5ca2735d063728678faed5a72a15bf42a9f530eba63b70a24382a007b4ed"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionRuntimeContainerResolver.h",
+      "bytes": 3269,
+      "sha256": "de95af7dc67b849f8d2d1e814c04606b4ad373eecb677b5e334b3559dce080ed"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionStreamingContext.h",
+      "bytes": 2838,
+      "sha256": "9f9417f446d231e334942ed585596e09a090610b8bc3241984a885a5e72e7971"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionStreamingQuerySource.h",
+      "bytes": 2250,
+      "sha256": "45bad7eb5c083c929655db7f89e69e36cb1550b1050a8aca8f5a88ced37359ca"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionStreamingSource.h",
+      "bytes": 4572,
+      "sha256": "2f235a8d6760d9343da9a03c5315ae9598779a66ed87eff2938e6790d37e59c6"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionUpdateStreamingCurrentState.h",
+      "bytes": 1929,
+      "sha256": "2ce59f7239e600c3c910995dbdfafa2843267a9d1b8d9055b97e4df8347a4a82"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldPartitionUpdateStreamingTargetState.h",
+      "bytes": 2775,
+      "sha256": "bc99d235404dcaef6e3275bf5c1528f0c409358c939971c528468480923131eb"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldResolution.h",
+      "bytes": 2108,
+      "sha256": "c2c664ef6f97d81755916f9ef22c0075c9a74170cbb1ad93a2a21eb6ef45701b"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldReticleParameters.h",
+      "bytes": 1608,
+      "sha256": "f6602130847cc77f524877d4ee8fdda3ffb26097cf36681f60ada40ea27f0684"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldSceneViewExtension.h",
+      "bytes": 2197,
+      "sha256": "65a699f3dd71a9190caf2b2a53a2505559c48b41f7d8fbccf3858c09297e8e98"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldSelectionElementArgs.h",
+      "bytes": 2085,
+      "sha256": "4226654dd68ca381919d7e9e049a5aa114fef493a6f2d36f099c6c81b6b9fc38"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldSettingsScalabilityOverrides.h",
+      "bytes": 1727,
+      "sha256": "9030ce732c0578e7fcd47863125a5fadf3cc185b52ae61fb0afb8471a0de1861"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldTileInfo.h",
+      "bytes": 3040,
+      "sha256": "15be41d2efedd321d56257cc79a0cdf88fed1d56d74cb5dbdc277610c0234ed0"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldTileLODInfo.h",
+      "bytes": 1382,
+      "sha256": "2ad4e19cd4f135c867d3310526fdaa52f437aa11c17cf4e0fb124ce62fe46dd9"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldTileLayer.h",
+      "bytes": 1587,
+      "sha256": "3fafcaf47a9385246f7216d93a905a35ab2d205b52026c5530b5fdf53df03a21"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldTilesGatherer.h",
+      "bytes": 1394,
+      "sha256": "91bd4aa8ac63b50522b46f53267eb91bbe9f65a6ea357809784a0541b3da25f0"
+    },
+    {
+      "path": "include/Brz/Jogo/FWorldWidgetScreenLayer.h",
+      "bytes": 2737,
+      "sha256": "94a95aa4a9a3ea25183a90ca0bb9a8eb6d292050f71878ba9657cda2fb263b97"
+    },
+    {
+      "path": "include/Brz/Jogo/Tudo.h",
+      "bytes": 36929,
+      "sha256": "b744e7711252261c700517e05231b781bca172eae58f89119339d1571b4e80c3"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorChannel.h",
+      "bytes": 27589,
+      "sha256": "e73911541d433902fc47cb34eb391fc0cc3df5029bd00afa72c0f98135ffbfbb"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorComponent.h",
+      "bytes": 46228,
+      "sha256": "5e2d1b4b7766309913f56e30bd82fbeb0537dfad9f7d81ec5621bdd02e9f1f41"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorContainer.h",
+      "bytes": 1548,
+      "sha256": "d1694c045271ba922ca3689a8a213584081dbb8066530d27ed757bcf55fcea77"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorElementCounterInterface.h",
+      "bytes": 2144,
+      "sha256": "450b145e7fe763f7db2db20d5fce2b5648a70951ac6ecddca8f1fbfcc6dc3aff"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorElementObjectInterface.h",
+      "bytes": 2062,
+      "sha256": "3d470f47f0a85e3bf2de8967ee63f21b7e698d43fc6fa587db0c10b7c18ff168"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorElementWorldInterface.h",
+      "bytes": 9233,
+      "sha256": "3fda60eb2aea1b292093b66a78c6b1301f6cf76145a2e81fa3b1ca8b8f536a85"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorPartitionSubsystem.h",
+      "bytes": 1818,
+      "sha256": "8ad8768ddd49c91e289d14dba041da20409d6ae3bb29184a87a796232e182531"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorSequence.h",
+      "bytes": 4822,
+      "sha256": "5b42e1f27a396cd133055448e2cdf6c9d69613fcc29efca5ebcdfb0e7c70b1b3"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorSequenceComponent.h",
+      "bytes": 6364,
+      "sha256": "1b1c52381f7bd82a456a6c75606df0bc086bdecfe95ae1134e3dddbb92270e1d"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorSequencePlayer.h",
+      "bytes": 5052,
+      "sha256": "b75381d79bc7ce7472982c3e2a7d0e5afd08a5623dbce358926458cc6917c416"
+    },
+    {
+      "path": "include/Brz/Jogo/UActorSoundParameterInterface.h",
+      "bytes": 2824,
+      "sha256": "b66671b757e26f81970a385f14ef42f40000001761e2f582016cc8511aa82fa7"
+    },
+    {
+      "path": "include/Brz/Jogo/UCharacterMovementComponent.h",
+      "bytes": 110612,
+      "sha256": "c80a9329dd70d3d6a35518e5793f17afe8991526ce8b2c2ffd839efa30579e98"
+    },
+    {
+      "path": "include/Brz/Jogo/UCheatFunctionInfoEntryButton.h",
+      "bytes": 20841,
+      "sha256": "774630c5ae08cabf710961be3558c9762b0470913a95111e6607cf83978cc4e5"
+    },
+    {
+      "path": "include/Brz/Jogo/UCheatManager.h",
+      "bytes": 24218,
+      "sha256": "a72062237bf6c2806d1cf412c741bb15e4facf34dc0dd4f51970e4908fef3a49"
+    },
+    {
+      "path": "include/Brz/Jogo/UCheatManagerExtension.h",
+      "bytes": 2443,
+      "sha256": "09da478ea469ec218c741bac2a53fcec724991f07bc55b3810dbd7f80aef50a4"
+    },
+    {
+      "path": "include/Brz/Jogo/UClass.h",
+      "bytes": 22441,
+      "sha256": "ea18a86f6e71eff0e8b627bb471b797335684f84404a5122f88669f7c52ea628"
+    },
+    {
+      "path": "include/Brz/Jogo/UClassCookedMetaData.h",
+      "bytes": 3201,
+      "sha256": "4868192f54bb5ad44a415a4f4b1378a5ee898d9222ba8513462e6f5b03e6203e"
+    },
+    {
+      "path": "include/Brz/Jogo/UClassProperty.h",
+      "bytes": 1837,
+      "sha256": "b7aa819e4a4a9f0d1c2e7b6b498f496381c31b6c5c6b1a026ad7b697dbbe7a05"
+    },
+    {
+      "path": "include/Brz/Jogo/UDamageType.h",
+      "bytes": 2298,
+      "sha256": "f2edcf49e5587ae5d751753b4fb5613e4ab40ab7e4f849eda73daf71ed643d11"
+    },
+    {
+      "path": "include/Brz/Jogo/UEngine.h",
+      "bytes": 141295,
+      "sha256": "42cc636118a1b4bb921702584242b0f51bd101678a0921fe0b84c6a04c0c282a"
+    },
+    {
+      "path": "include/Brz/Jogo/UEngineCustomTimeStep.h",
+      "bytes": 1967,
+      "sha256": "cfd4ceadcfda720de759a178f72880aecb2207bd5e530b59fe7e11a5175ec435"
+    },
+    {
+      "path": "include/Brz/Jogo/UEngineHandlerComponentFactory.h",
+      "bytes": 2251,
+      "sha256": "6167030f34a16c68020253773252540ff02ec633f79f2b9b29869b59463c0bad"
+    },
+    {
+      "path": "include/Brz/Jogo/UEngineMessage.h",
+      "bytes": 2984,
+      "sha256": "8ba4156dc892b8fb3c3c4c536018804336e540ec4101bd3fc5537d0e45967ef1"
+    },
+    {
+      "path": "include/Brz/Jogo/UEngineReplicationBridge.h",
+      "bytes": 1671,
+      "sha256": "7f1bcff36c467e2d8f9dc3c1333c207e1e1db65c2aa2adb270c8eb5948dd65c6"
+    },
+    {
+      "path": "include/Brz/Jogo/UEngineTypes.h",
+      "bytes": 3649,
+      "sha256": "b37c17727460249635faec86c583f9219e62208ba995998c6b9eb680dff99e9b"
+    },
+    {
+      "path": "include/Brz/Jogo/UField.h",
+      "bytes": 2916,
+      "sha256": "54f5709fe460964acd989d2d47188f4058f8ed3965002f03159bc3668b6d9233"
+    },
+    {
+      "path": "include/Brz/Jogo/UFoliageBaseType.h",
+      "bytes": 1938,
+      "sha256": "94000026b85377405430f093951c6fc94e3906d780d76e4f52247f5b615d50e3"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayAbilitiesDeveloperSettings.h",
+      "bytes": 5428,
+      "sha256": "458f63e9f4c152c32eb8d3bd119885b58613d7cbdaf08df908a9f7de79de2a24"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayAbilitiesEditorDeveloperSettings.h",
+      "bytes": 2084,
+      "sha256": "9900a5f444cb42cecfb5bf011179b8b780df2656b4f2fbf0f850b6725b64ed84"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayAbility.h",
+      "bytes": 38084,
+      "sha256": "27d57600701b1411422c148db110a9212cf8ec9a4177ee2fb890d5da49b6e0f4"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayAbilitySet.h",
+      "bytes": 1735,
+      "sha256": "2686bba34c000983dd9994f0b39b30040ec392c2ec58b44bdff5dd64a38ac7d1"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayAbility_CharacterJump.h",
+      "bytes": 6246,
+      "sha256": "948f661fc65b478e98bcdccbb4dd29443e6b7ed2030cb2fe6b6e672a0690faf5"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayAbility_Montage.h",
+      "bytes": 7525,
+      "sha256": "8d6910c5807e5d225e17156b76661291eed6a58684482ebd8b8213867f1751fc"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCameraComponent.h",
+      "bytes": 13688,
+      "sha256": "a2dbe4d8b419c2aea4d10a3c0eb415863226916aa9784b5cb8857cf81225d7b2"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCameraSystemComponent.h",
+      "bytes": 13301,
+      "sha256": "1d1d91772970794f0b1759eaab815a138a218d7ba6fb215fcaa47d7187f5b3b3"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCameraSystemHost.h",
+      "bytes": 2641,
+      "sha256": "c6a4a0a1d115e8be4669d5c4dc3fb92b1debefa45003e857dd28cf36af6865b2"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCamerasSettings.h",
+      "bytes": 2575,
+      "sha256": "461bbe522697de223fb0bec04012321031094cdba656b775fd53e6dbb38c32d2"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayControlRotationComponent.h",
+      "bytes": 8464,
+      "sha256": "5eb4705081b3a6a147f992a7f37387d0e7aa62e535d12aee4a8f0b7ba1c7e145"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueManager.h",
+      "bytes": 18687,
+      "sha256": "9643acaaa63366711af4a6afae65bafc81f7280b05c402fb741b684f83f5dda4"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueNotify_Burst.h",
+      "bytes": 2936,
+      "sha256": "7bbc92cbb6ceaa4263141dbc1e99bda9575d6ac46035792deff60d45743c755a"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueNotify_HitImpact.h",
+      "bytes": 2819,
+      "sha256": "289c870f1d06af67a5ba689a7bdf344784980acd6fe6f5144497dfebeb8d69c9"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueNotify_Static.h",
+      "bytes": 2479,
+      "sha256": "8243ab7d3950656ffb019a786f6c1ccf0f117c135f3b997fd45d3e5f23367da0"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueNotify_UnitTest.h",
+      "bytes": 4862,
+      "sha256": "356d3fdacec91de9b4bd000c77a333558ff0d2a20f7ba304f8378451f1ca3cf2"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueSet.h",
+      "bytes": 6653,
+      "sha256": "849f585df67fbab64895dc59d66db4f2bca7fcc1926cfce5eb43a2e39648fc85"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayCueTranslator_Test.h",
+      "bytes": 3001,
+      "sha256": "81f4522f2f467d984eac93d3fb168ee8f30ea48be3dc13a53fdce93580c05fdf"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayDebuggerConfig.h",
+      "bytes": 8674,
+      "sha256": "a8f0a5a6ca685786126ad45e499dc5d956db74b72b7f34e2181382b7da6d613d"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayDebuggerLocalController.h",
+      "bytes": 2711,
+      "sha256": "54176056abe1b405131e5b8844d5b2ab6ea894cf997c9995efffda4f32a19f69"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayDebuggerRenderingComponent.h",
+      "bytes": 29662,
+      "sha256": "a14a3a3c741bdc24c0f6ed22b9500f7c066716954a7527a295213a10ff8c37ed"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayDebuggerUserSettings.h",
+      "bytes": 2001,
+      "sha256": "a62b83f2ab74c5f6298e2b21600d8fc25eb313a399f5150c7d8ef72509b3657c"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayEffect.h",
+      "bytes": 12602,
+      "sha256": "2d7b3272939f8ef81b608d9b8e283c42b12370315c4b971876c880e330360467"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayEffectCalculation.h",
+      "bytes": 1667,
+      "sha256": "7590d8a56eb511de054fdff64e72678ab06f7437c1465f43f6af4ed7be32a6c3"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayEffectExecutionCalculation.h",
+      "bytes": 2456,
+      "sha256": "b5ad0d39f1cec1c82867ac51e99328896e796d2043653896f86fdfc9e0365009"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayEffectUIData_TextOnly.h",
+      "bytes": 1663,
+      "sha256": "285d2aa09e8f1becccd91852b9c222a048ea9374b2d2c1a64174751e23916bbd"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayModMagnitudeCalculation.h",
+      "bytes": 2407,
+      "sha256": "3fe86f945524cdf73ffc644cfb7d53ba6f88850187afa54339709289f572721e"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayStatics.h",
+      "bytes": 44549,
+      "sha256": "846850bc91b69e115b500b7dbb76c8daec7eb85f8cebd3baf65c12ffe60a4c67"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTagReponseTable.h",
+      "bytes": 4808,
+      "sha256": "b862d58d7a40bc93c4f4e4ffa36b0e0de9eafc75f7b442417c8a1b9249de23a2"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTagTransitionCondition.h",
+      "bytes": 2488,
+      "sha256": "58a3641ebeb4d45747ad0a5ef18dffde37b61613082bcc7b8243bcb9f9c45009"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTagsDeveloperSettings.h",
+      "bytes": 1805,
+      "sha256": "5620da04540ddc899ee10b61e5fe2eec553570e20c020c840e2eddd7835d4f2a"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTagsList.h",
+      "bytes": 1714,
+      "sha256": "4a2ca54a4e7e9c557bf362824fa9b2af36d6273df22a507cad44dbf74da34b6d"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTagsManager.h",
+      "bytes": 24561,
+      "sha256": "dfef500e1b69738e312f1d77df81215a512e655c8c7e257c5bd53f26acbd0f34"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTagsSettings.h",
+      "bytes": 3829,
+      "sha256": "200082712f1aa7d9ff85f347ca9628c1905f3dec495ee1a70afae35c21aea6f7"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTask.h",
+      "bytes": 13294,
+      "sha256": "8fbc967cb785b3f05def492949c703888aee729b4ac3096db8646d22098ba0ba"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTaskResource.h",
+      "bytes": 2836,
+      "sha256": "5c50640efdd9d573237573125dc9d5fb85739eed6f01b64a4463975e29f8a4ea"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTask_ClaimResource.h",
+      "bytes": 2700,
+      "sha256": "794fbaf7927991ac72d969077d683b198810e57db5aaa2f00450c731e05b40e7"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTask_SpawnActor.h",
+      "bytes": 4017,
+      "sha256": "3f27e6f179991c2abbd8768e61b987110f73fa686aace53ee1ffd3c43b02b56c"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTask_TimeLimitedExecution.h",
+      "bytes": 4987,
+      "sha256": "ffc4ffb6999d4749807fbf9f08838ef54f8c5280733ec895f7b0f5c22b4a960e"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTask_WaitDelay.h",
+      "bytes": 3477,
+      "sha256": "0d83f8bde395b09d907d11c1a884dafe035bd6e2a9293075a44a6ee8f5ab7317"
+    },
+    {
+      "path": "include/Brz/Jogo/UGameplayTasksComponent.h",
+      "bytes": 15418,
+      "sha256": "37ee43772ecdb73c8719bda33486fc682deb6da6ef6e943c81fb32182c674418"
+    },
+    {
+      "path": "include/Brz/Jogo/UGeneTraitDefinitions.h",
+      "bytes": 26119,
+      "sha256": "3abaf151f8d26253b97726ffd57d53eac654e4d2f90347213e4fefdc75cbc11e"
+    },
+    {
+      "path": "include/Brz/Jogo/UInstancedStaticMeshComponent.h",
+      "bytes": 41002,
+      "sha256": "15556e90140161b623e98117c79f499543e4e6fc3ae45d79e6697d1eecf169f9"
+    },
+    {
+      "path": "include/Brz/Jogo/UInventoryArkCreaturesPanel.h",
+      "bytes": 33714,
+      "sha256": "eb36fdee8c3e518030919ff5e924bc00d94f89f80455c584d3a72d31def6ca15"
+    },
+    {
+      "path": "include/Brz/Jogo/UInventoryDinoAncestryPanel.h",
+      "bytes": 24088,
+      "sha256": "824aa5693052ca324e598e9934ce0ee02cdcd7e6cf42c980c569ba400a2fe6b5"
+    },
+    {
+      "path": "include/Brz/Jogo/UInventoryPanelWidget.h",
+      "bytes": 61389,
+      "sha256": "c7fa6f077ed212e34e95eff2b3826b462035c519c0d697b181421bc6468ae3f9"
+    },
+    {
+      "path": "include/Brz/Jogo/UInventoryQuickSlotsPanel.h",
+      "bytes": 21792,
+      "sha256": "7cd817c52b4eace47dca0368d96277481c9fbbf909ae8c59e6bce69d901a9640"
+    },
+    {
+      "path": "include/Brz/Jogo/UInventoryStatsPanel.h",
+      "bytes": 31880,
+      "sha256": "17eb0d69d36b0779db72cd6ec33d4dd3885f64c69b17cdb0fa6a140b0a610ad6"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetAnimationLibrary.h",
+      "bytes": 5932,
+      "sha256": "164a29ea4101f4917aa3f6520155f825a7c958bfc73621bee88e41105f36c0f2"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetArrayLibrary.h",
+      "bytes": 9597,
+      "sha256": "8ad3f679505b1314fd856b2ab4c1e8be8bdff83805fd93360b98d707a2fea89f"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetInputLibrary.h",
+      "bytes": 2032,
+      "sha256": "1801f6f5d320e24b41e1fb35da318d6085ff2b0e2102a7ed6308a20f375afef9"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetMaterialLibrary.h",
+      "bytes": 5037,
+      "sha256": "bd781af7d2b9858ea53a14e9c3692f889e03ca6a2148fad31508755fc1ad63e6"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetMathLibrary.h",
+      "bytes": 23428,
+      "sha256": "9d4d33eef8e745b225852ae3926fcf9b21a191487530a2ee765a4b2022a76910"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetProceduralMeshLibrary.h",
+      "bytes": 5024,
+      "sha256": "1018a3c8b3f14eb8362045115c2da25ae7d7d37ea0b3464fb8462a8f1d191663"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetRenderingLibrary.h",
+      "bytes": 6050,
+      "sha256": "00fbf3e14163a71ff834a00405471385d48eeca03f502aa5840ca69658fe1bb6"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetStringLibrary.h",
+      "bytes": 3347,
+      "sha256": "c03c7ef1ded584e5f2f642df30884011178654726208a9e6fe7a0b757fc9e6fd"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetSystemLibrary.h",
+      "bytes": 37618,
+      "sha256": "606de7a98f37cdcf49bfcb535131a981104271e244befac415e8537f67ee79d2"
+    },
+    {
+      "path": "include/Brz/Jogo/UKismetTextLibrary.h",
+      "bytes": 20770,
+      "sha256": "311eb252dff6c2f73ed4e705d67c0c43ac9d777882f6b4fa366810347f536ebe"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevel.h",
+      "bytes": 37492,
+      "sha256": "f1706c1002757e157f3e207a3640e276cac7e2512b53632f67d228e7ebb7c554"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelActorContainer.h",
+      "bytes": 2564,
+      "sha256": "e4178cbd15944f0099bf391ff0c3c1a4b39f9bbabd05e03627a97fb28e5b580b"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelCapture.h",
+      "bytes": 4314,
+      "sha256": "c1b5680adec8c0a89b5075ae445219bbb8d216682d981560d3452b54a7b68cba"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelInstanceComponent.h",
+      "bytes": 10251,
+      "sha256": "d729433279c0e7bff73670de334094a82f0f674b9febf2cf004f2ee095fc05be"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelInstanceSettings.h",
+      "bytes": 1616,
+      "sha256": "6cb9179dd9a12df4697ff593537618f284471e6b36fcd69f002f191e1fd7a4fa"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelInstanceSubsystem.h",
+      "bytes": 7617,
+      "sha256": "ce669e28b8391f2aee79a6d09d2a9d2044f01b9fe4fde1c6b2732f288074be5a"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequence.h",
+      "bytes": 6145,
+      "sha256": "2e1f72a79abe40d7466fec33842b0e31ffd1f3388f4f026ac5b176577ed5dd77"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequenceAnimSequenceLink.h",
+      "bytes": 1675,
+      "sha256": "a26449d444b2ae69754c4805ce43dc336509ea0f773cf8979edd63ce889bab40"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequenceBurnIn.h",
+      "bytes": 11883,
+      "sha256": "25a48626cd13b21d9e6698ec3210dee52e9e51cda8e6fc16ef34f08723ef02e0"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequenceBurnInOptions.h",
+      "bytes": 2331,
+      "sha256": "85133149e767cbc5dd4a1766f5758a79e61594a239fc7b7403416cdbc1a0c237"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequenceDirector.h",
+      "bytes": 6694,
+      "sha256": "1182f1d2b1acf15b661bbcaa7035f435aaa51403c732b008f8be347050264f65"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequencePlayer.h",
+      "bytes": 11888,
+      "sha256": "ff691fcdfb75bbc0ad3717150056ff1cfa5b6eee2670ac6d41baabb1fc3613bf"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelSequenceProjectSettings.h",
+      "bytes": 2084,
+      "sha256": "ea611489049e565afd41b85f34b5d9c6e9b4fe1816e5086e9f40c952db6e3346"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelStreaming.h",
+      "bytes": 28130,
+      "sha256": "b76e592eb73f473752546240cba7654fa5d8d079483e4c075ef3993f9814ef21"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelStreamingAlwaysLoaded.h",
+      "bytes": 5282,
+      "sha256": "2e0bf8c20f97fc2a2bc9ae121b12227cb7cf876614b27af01f4c3881d691bcab"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelStreamingDynamic.h",
+      "bytes": 9202,
+      "sha256": "3c4eca370ef80c48e026245a9991550cda6117c209b82d2ad1980eaffd54a666"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelStreamingLevelInstance.h",
+      "bytes": 7086,
+      "sha256": "8ce598aa881dcf2762025191d08cb6dc275535fedf50142af4a2cb719c2a8f86"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelStreamingPersistent.h",
+      "bytes": 5240,
+      "sha256": "51f9ad2ccf10ad47211f134694d3c19746b5e7904081a3a27fcab9699153a1d0"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelStreamingProfilingSubsystem.h",
+      "bytes": 12937,
+      "sha256": "6ef577b0602459131942948d68d52001cd43e3cdfbf0f3c572b06a8d56e9c5f2"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelVariantSets.h",
+      "bytes": 2821,
+      "sha256": "10884bca465de88bc44a4cca9abbe4de61d96fdd0d8c5fd7e30a809ba22d2937"
+    },
+    {
+      "path": "include/Brz/Jogo/ULevelVariantSetsFunctionDirector.h",
+      "bytes": 1961,
+      "sha256": "217cc5c36516ca6ae7fbebe815143bb38451ea4ceb67356edd75515fe66cb88b"
+    },
+    {
+      "path": "include/Brz/Jogo/UMeshComponent.h",
+      "bytes": 6564,
+      "sha256": "57b338b31eb1cdc5445d6fb7e5e64c4911595dee6de28c8db993d54ae9fd470e"
+    },
+    {
+      "path": "include/Brz/Jogo/UMinimapData.h",
+      "bytes": 1611,
+      "sha256": "256f8c64060e8fe5e5d3052d9d700a3ebd93c5747c55414f0e06a835f6fb06f2"
+    },
+    {
+      "path": "include/Brz/Jogo/UMovementComponent.h",
+      "bytes": 14867,
+      "sha256": "01bcb1af3f6cd7b9156bb908ea560c6bb135fd506deffd1982d46ac1449c0a3b"
+    },
+    {
+      "path": "include/Brz/Jogo/UNetConnection.h",
+      "bytes": 24737,
+      "sha256": "0d2eb2611e062da1c0b341f8fc0c7bd9e5197ed41fb4d36f0f7d0738d9f620be"
+    },
+    {
+      "path": "include/Brz/Jogo/UNetDriver.h",
+      "bytes": 7161,
+      "sha256": "3aed0d30c2437aa805b744e921d4948d4e2efe342373eb02544eaf163f453180"
+    },
+    {
+      "path": "include/Brz/Jogo/UObject.h",
+      "bytes": 27090,
+      "sha256": "77790b36357a4a4af8c623b2e87d66710bde4dd53668f39fe12d463c03ad11b6"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectBase.h",
+      "bytes": 7511,
+      "sha256": "cb5acb3ffe35d1ded9b84419342f24e29af7edf42d287c50819833c2b5d6e036"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectBaseUtility.h",
+      "bytes": 118877,
+      "sha256": "d64a593e7e48360775b30e6a2df45b628e7f883c4352f8aa6991ae6a818cb629"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectChooser_Asset.h",
+      "bytes": 1581,
+      "sha256": "6c0c1cf4825a0bd5f924ba6641cd81594d7274c388c18b338d80ce31196b8da4"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectChooser_EvaluateChooser.h",
+      "bytes": 1655,
+      "sha256": "8b49ee18a0a92f52d2216702d99765fbc19514058313d609305eda8188175468"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectElementCounterInterface.h",
+      "bytes": 2794,
+      "sha256": "cb21a55d36fa34875ab5b3bec5bf5169d4a13cfe1bed00ed08cb4f8579c3472c"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectElementObjectInterface.h",
+      "bytes": 2087,
+      "sha256": "3a03874609653241a7be3d603b0bc6db6aac9c615dc4181babe56171338e466c"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectLibrary.h",
+      "bytes": 8013,
+      "sha256": "d358af46f776c383cbede918ebca6d1178852c203bb9aba00582693de3f9f938"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectPathChannelEvaluatorSystem.h",
+      "bytes": 1674,
+      "sha256": "c97915d55c73a399e0b2361703154747d68db7c761be466835c514168e1d3d29"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectPropertyBase.h",
+      "bytes": 1590,
+      "sha256": "24314fb8fc17e2f54ad12a702622cc260bc7fdbd145e597308926d1fbedf41a3"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectReachabilityStressData.h",
+      "bytes": 1639,
+      "sha256": "413d07271cd80b0189259be3f5e9ae98ea5e03fe966460c286ff904825c9b032"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectRedirector.h",
+      "bytes": 2554,
+      "sha256": "7b42b99319ab90fc5eefe89f2e31c9e2df5a4eefc4e41cc217e74417115a6ced"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectReferencer.h",
+      "bytes": 1584,
+      "sha256": "2f9371bc05aaf7cfe407cc5ac4fd7f21696204bced65e7c432a395f805fa1275"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectSerializer.h",
+      "bytes": 2937,
+      "sha256": "c89e9826432d2811d2d0d99a0fdddbd855341da4e2d389646d84bba889b548d2"
+    },
+    {
+      "path": "include/Brz/Jogo/UObjectTraceWorldSubsystem.h",
+      "bytes": 1726,
+      "sha256": "849d26334dffd0d355c5e35536fb15acb0338e6570f068a8682256bb7921b828"
+    },
+    {
+      "path": "include/Brz/Jogo/UObject_WithWorldContext.h",
+      "bytes": 3131,
+      "sha256": "79b728c39d42a08e207ce1aedcea3c2dcd88908eda639a59b28a6a8ad0ac5b2a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPawnMovementComponent.h",
+      "bytes": 4363,
+      "sha256": "a8b68c88ed79377e2293773730d8dcced1f34e33865669824e4af1f6f544a678"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIState.h",
+      "bytes": 11543,
+      "sha256": "587b2d0328c4b224342d382fcbe5a6e356496e047853d75a1bb3a44fde585e9e"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateBPBase.h",
+      "bytes": 16863,
+      "sha256": "01f2be1038fd4c7501e98dfcad9de7cf1d8683895a767265510c485626cb8137"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateBotRangedState.h",
+      "bytes": 7480,
+      "sha256": "6eea6b9c3a53a9e566764a3ae2a87c3f0ed903851d5e9d7670acada53b488f96"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoFlyerGrab.h",
+      "bytes": 6470,
+      "sha256": "66bd793e7a69d59c8d1f1236109586ebf1bd0e69e3879e77177e2f0a52cd7ab9"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoGrabAndReleaseState.h",
+      "bytes": 7151,
+      "sha256": "70fcd54ef593b8db815f0747e7142ceb2d7c22e7f9b48a78bb81fc787059e451"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoMeleeState.h",
+      "bytes": 11890,
+      "sha256": "b963c805afcacdeabddca95b4cd8949278303f10f7c7c0647215d7fce8fcf494"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoRangedState.h",
+      "bytes": 15786,
+      "sha256": "1d098f4f56b5ddbb08767aebff5c2b14a1abed781fe7a430886fc6d3d48ee3cb"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoSpiderMinions.h",
+      "bytes": 8871,
+      "sha256": "d94bb2857946565c9aecb76a74d7e8bfc12b6e72b20a4f6ae8c78091317a0128"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoSpiderRangedAcidState.h",
+      "bytes": 7430,
+      "sha256": "4e4c59022c15510d62cac8a576e5f7585aaeead31384ffa83b1ec44455d6cf05"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoSpiderRangedWebState.h",
+      "bytes": 8676,
+      "sha256": "25bcb3ee6554a9350e79a9b213208494204f0200746159f8200f9c5667cc56c8"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAIStateDinoSpineyLizardTailRangeState.h",
+      "bytes": 6579,
+      "sha256": "406e16f74bf06bcfb12977416e053c66ab19c47b5eae1ca33780419a94699020"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalActor.h",
+      "bytes": 75864,
+      "sha256": "2b01aae1e10bded02a713ec1f27a1a68d3d36eb901fcf73e0292762103d18293"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalActorComponent.h",
+      "bytes": 1979,
+      "sha256": "d5a451005a9ce4abffc12b250edcaa01cc712cfee5bbf017a90085beb7b3f365"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAnimInstance.h",
+      "bytes": 12733,
+      "sha256": "06448fa4637df04ea5727ec47db9b0305d0845f0ee2981221dd01f463b813202"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAnimSharingStateProcessor.h",
+      "bytes": 2440,
+      "sha256": "89ecbc575491555c323f71e02634a3060e577b1f86abc159de2cd9e5048e031e"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAssets.h",
+      "bytes": 26991,
+      "sha256": "958d341ec3dadd36d1f8e6e1a4fb20f7a30bfa27e2339a2108364a014ccbcbb3"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalAssetsBase.h",
+      "bytes": 1340,
+      "sha256": "e55def459c0bcbd8b76800ab9eaec45ac33e7ae02f11d742111bb9817db7ad07"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalBlueprintFunctions.h",
+      "bytes": 8363,
+      "sha256": "b0232bf60bf91ba854705a297888bec19959d8766d8ad5160bc93d53a647d47b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalBotRidingComponent.h",
+      "bytes": 6258,
+      "sha256": "5fc601b0888d39b805f39fe05f3500aafcea76af2b4bf742b2ba5a41ff0fc28f"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalBotSeatingComponent.h",
+      "bytes": 8727,
+      "sha256": "fd087ee07b17c0ab17470cdffad612e769ed2910e9d8e404423505474d625737"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalBuffPersistentData.h",
+      "bytes": 2749,
+      "sha256": "3ee82010882c556ab89772003e28b3d24f039df4800027c38b61369f410f0842"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalBuffPersistentData_DragonHorn.h",
+      "bytes": 7155,
+      "sha256": "b56143b614a43b7f356ecbbe8247a79206533189611a1a48615e198ffa159627"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalBuffPersistentData_MissionData.h",
+      "bytes": 3380,
+      "sha256": "c605dd71fc2deb26eff7f5fab7c343e8dd233787789c815d5e1cb8a16abf626f"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCableComponent.h",
+      "bytes": 35971,
+      "sha256": "e0ab45873f0fd74b5831572e8aa76b723b276c1122ebc9dd920e5394559abd89"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCameraConfig.h",
+      "bytes": 3038,
+      "sha256": "31f252aa0b57b27fddd688a5edb70a6856ad72a1b7a52590dca1a533bc783385"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCameraConfig_WeaponOverride.h",
+      "bytes": 1727,
+      "sha256": "44ae57aa935ea51a8d2befd4db6393621cd74e3abe3834544a83f876642753af"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCharacterMovement.h",
+      "bytes": 115576,
+      "sha256": "ddf8523a5878020aed5e7b20fe4b05ace9717481e00fecc761f47d16dccf038b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCharacterSetting.h",
+      "bytes": 1624,
+      "sha256": "a47dd3259dd8a6266cc41baab24936c27c2848e3c730fbecd7ea83c23fe5cbdf"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCharacterStatusComponent.h",
+      "bytes": 89153,
+      "sha256": "8412916904b5cf6fb660ccd5b565435dd0bdeb7284ebef54f23d7f4a7204a663"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCheatManagerExtension.h",
+      "bytes": 4235,
+      "sha256": "b835e69d590b04bc2606071646df8155ec93c02ccbc5cd118e7cd336be6347d1"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalClimbingSettings.h",
+      "bytes": 11304,
+      "sha256": "e9c4b7d8715222ff112a7dfa18bc0e54451fdb579bcdaf3657afc8b7433a8a0a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalColorSet.h",
+      "bytes": 2126,
+      "sha256": "b6b3df842ce0ea2cc7cf28262af817fa74bfade41185c5349e87b90b256e1db6"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalCryopodTooltipWidget.h",
+      "bytes": 17462,
+      "sha256": "783c716a11d3104c5fd58fdaf81e7f382f06975c0279b8671861ffb8eef5ffb1"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDamageType.h",
+      "bytes": 4009,
+      "sha256": "e18759392c342abdb59f73e50cb21e7c91781c990ce8e3de86c3a4a91c056af2"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDataChannelFunctionLibrary.h",
+      "bytes": 2311,
+      "sha256": "46fc679cb364db80b534c3ad5ae031a1d12e13f3c15acaee6427a8f1c5efbf74"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoAnimInstance.h",
+      "bytes": 10589,
+      "sha256": "819995bb63cd51eb225e09b07ab774828c630da36e9ff585f8d44b14a196e495"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoDB.h",
+      "bytes": 2238,
+      "sha256": "87c49314efe4120454de7f03214bee2599a572159c0829ca57584ae7b343fb70"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoEntry.h",
+      "bytes": 2560,
+      "sha256": "5c83b9ec265d4c9698a951d29cb491e917687b38b419b2b4e85869062a417576"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoMeshComponent.h",
+      "bytes": 61857,
+      "sha256": "49e49276906e2eb93601a04dbe03bb975ad279fc82722fd7a723939fe34d8e36"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoSettings.h",
+      "bytes": 2750,
+      "sha256": "985fa4ddf864deb9dac82be1e65f334a4971e316d27c9cb491cf33b9de1399e7"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoStatusComponent.h",
+      "bytes": 37176,
+      "sha256": "755d90a83fac9924f9092c0a0388db6f7e696088808845b3dc7d0f371f35aa68"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalDinoToolTipWidget.h",
+      "bytes": 29380,
+      "sha256": "8b59a86c2cd4f400fd9fe93fad02bc1ba79b0870ceb508a779d8375443e6b3e5"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalEggToolTipWidget.h",
+      "bytes": 17667,
+      "sha256": "3da775517577be38f640c3bb4b62591be2a298eabc80f727e3546de6431b40ea"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalEggToolTipWidget_Crop.h",
+      "bytes": 17017,
+      "sha256": "a47677146c031ea7d91883c37cccf34dbcb1690f4b93aa26b0292fbeb2e0e8bb"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalEngineStatics.h",
+      "bytes": 1439,
+      "sha256": "0fe78553132051c0d577fece85fb208b8d87b3c60d297c124b7fc449f7b43b3b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalEngramEntry.h",
+      "bytes": 8413,
+      "sha256": "e4b2bcd42178478f0f736649fbe650baeb05ce11f28104eee21c8ec6cc945c47"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalFurBPFunctionLibrary.h",
+      "bytes": 4482,
+      "sha256": "9488ac7ca5be093cb2fabaedb66698b6997ed4f8b8d97bd5bd7e5cd4901a48e1"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGPUMessageHelpers.h",
+      "bytes": 2324,
+      "sha256": "138100379cf420ec28eb8344c91581337a805aa7c45599177069e055c295f7a8"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGameData.h",
+      "bytes": 114042,
+      "sha256": "a3bdd29a0e9b9609d906e69683b575a381bec5104f36eef4f93afc9ea87be50c"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGameInstance.h",
+      "bytes": 2485,
+      "sha256": "24099818268e37a2cf0cd1a88cf5a622f686638cd18e78e4eaaeef5cc99f4209"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGameSettingsData.h",
+      "bytes": 37517,
+      "sha256": "8b1dc272bcee56abd37d73f7b810a3a59084d0e4c42a8fc2fa820b62cda806bf"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGlobalUIData.h",
+      "bytes": 6912,
+      "sha256": "31b562e89482e8a4311441c23e9c9a54e770e59ebce8e1d45c7d6567b204221e"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGlobals.h",
+      "bytes": 18621,
+      "sha256": "9ce348fa25834bc1c07e859b09b286054fc8b836d8a55b7f5c730b805cc6fe42"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalGroupComponent.h",
+      "bytes": 31818,
+      "sha256": "0465a2cc6fffb8401ce361d86057ff57ff9aa1d538bc181797badb36d1adc55a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalHarvestingComponent.h",
+      "bytes": 25093,
+      "sha256": "795d23ef101c84320d34e37d363cf06e0d999e27d28af43c1527fc6b3b993d4a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalHitNotifyObserver.h",
+      "bytes": 3542,
+      "sha256": "dd6758c09723ff567cbd0b4914be7833a85b4943e2d8517c12d08656bd72663d"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalInventoryComponent.h",
+      "bytes": 195250,
+      "sha256": "f389166b8eec08779e1fb209f0251ad67dc823371aa9398b2615ef5b6585c7d8"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalInventoryComponent_Market.h",
+      "bytes": 43648,
+      "sha256": "a16e31383b04f03a336cd2a77808956b8ae02090093e01e2acfa6740c6a3b71e"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalInventoryComponent_Static.h",
+      "bytes": 42501,
+      "sha256": "f0b95945f2a90ee5879682325c7bd4f30515318ddbb10a118896e8474586e54e"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalInventoryComponent_StorageInterface.h",
+      "bytes": 91393,
+      "sha256": "963ee2001482612ad125cdc7b4f401f3bfe26e9c0ec3d1fce66a99414bf8539b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalInventoryDB.h",
+      "bytes": 1824,
+      "sha256": "e7db396640bb224f1422fa47d5dc76a4cbed660f4b6aa88d005df6e39a8f9583"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem.h",
+      "bytes": 232662,
+      "sha256": "a8bc42de4a6895c457dcabdfd7648d3065dbee36955331367fec80966a10ab77"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItemInventoryToolTipWidget.h",
+      "bytes": 24723,
+      "sha256": "7725fb0806b0bab3207cc43a71d8452adbae7b71ef884ecdb3ef84017ae3af0a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems.h",
+      "bytes": 3929,
+      "sha256": "cbe65af992bc0c59efe6dba346471351c100146f4529ff2e3a72f81db3e0ef84"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItemInventoryToolTipWidget_HelperAddDynamicTextblockItems.h",
+      "bytes": 1664,
+      "sha256": "3038e83472ce38dd30d61dca8ea68a95f660db4cfc51aac93f37ba7578814860"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItemToolTipWidget.h",
+      "bytes": 18134,
+      "sha256": "5a7cce39b27b605634b64c36b2390ba86c68927ac32ace5d39ab78a40b65f57b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItemTrait.h",
+      "bytes": 7521,
+      "sha256": "85de2f2e551892131c5752e0441be8edf260b61d0fe96a81b9bad6b1157bcb86"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem_DeathEssence.h",
+      "bytes": 62492,
+      "sha256": "cc10d1c980736c2535c1f32368e9fe095240051ff33fde611d1b59c23f69a349"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem_DragonHorn.h",
+      "bytes": 64734,
+      "sha256": "d63af5320f6e854a3f449048a3a358a9a680c259445fbf760dd7b468ff94928b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem_Dye.h",
+      "bytes": 63331,
+      "sha256": "d5611bcb42269bce0b30e9aa741dde7fa2167990b80b9532256359f25a92fd1c"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem_HotbarSkill.h",
+      "bytes": 64006,
+      "sha256": "2e577e6b8262cb0e1aed2ba6985bbaa88b9108d43e4a64e7d07f0b56ec194d1f"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem_ItemTrait.h",
+      "bytes": 64601,
+      "sha256": "3c6bbbe53859786d0003e83d0b0e0a4dca2f126aeb41135a180a3151fb10f8ce"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalItem_Radio.h",
+      "bytes": 64763,
+      "sha256": "1ddc5ecd307873aa4630838ca59f64d5c55abae4433fd775b6436f41f9d111f9"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalLevelInstanceSubsystem.h",
+      "bytes": 2065,
+      "sha256": "f16df6778669f86a9457dac733f654cc887726e8768ecc43e8e29c166e8c30a7"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalLocalProfile.h",
+      "bytes": 42354,
+      "sha256": "6178869051dba9d35219d8102c30d4515b9ba7f23076343276767da44c524b97"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalMassSubsystem.h",
+      "bytes": 7378,
+      "sha256": "b0676b4182a4a837e5f4585569fc26c64993428ea5886b6c4194ba2e6f90b535"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalMissionDB.h",
+      "bytes": 1804,
+      "sha256": "99d443b45fa52793710d5a9ee78ce2e69a01c6c59e54a989c8c2348fb994bda9"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalMoveMassProcessor.h",
+      "bytes": 7834,
+      "sha256": "e49ee3dad911ef8f3b18b9ff16f4301fa906e8abba2173e2c3246bfb191962a9"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalNavModifierComponent.h",
+      "bytes": 9070,
+      "sha256": "bef41bdce51f3be852fdb6fed93b25735eeae859ecd5764db865133a5fcc6bf3"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalNavigationInvokerComponent.h",
+      "bytes": 7989,
+      "sha256": "45b003d59bf67672c7415155605ec61946732bd9fc82afd7d1ae4d5ed2d3818b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalNavigationSystem.h",
+      "bytes": 6959,
+      "sha256": "e322b1b8aae8fec06f72559964be6927869b483f0b313011175090ec52f86ba3"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalNavigationSystemConfig.h",
+      "bytes": 4336,
+      "sha256": "4c513438880b3c74664ac99e1dbb462557a76907e296ea0ddaa9eaab0f8a6f3d"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalPathFollowingComponent.h",
+      "bytes": 14820,
+      "sha256": "4246827215802360fdd9fad224a77bdb051e6d898f2dc6d4765f02e8abb70e57"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalPlayerData.h",
+      "bytes": 18502,
+      "sha256": "3a08cee2947805f461ad8afdee958379522697452b21692434d2f91915f5342e"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalPlayerStatusComponent.h",
+      "bytes": 37334,
+      "sha256": "487fc400efbc02eb3c290ba9bda6c0fd9e1d28bc9163b1c116817aad894e1279"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalProgressionTreeAsset.h",
+      "bytes": 3497,
+      "sha256": "46cb5c43f252fb89c1ee92186ce1160c31cb39b85ee417b079b825481655d030"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalProgressionTreeGraph.h",
+      "bytes": 14180,
+      "sha256": "68b3d7f2e3b34227efb82779cea37752f71badabb88f72a16678d1808bd2b438"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalProgressionTreeGraph_RowsAndTiers.h",
+      "bytes": 4278,
+      "sha256": "0ce2cafd7a0b8e552d402e277874b039f471a3a6f502cebb6e47e4759e265668"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalProgressionTreeRowFeature.h",
+      "bytes": 4355,
+      "sha256": "1a484bf68767c1c50c19fe02d57c62ec2762a8beaeb4f5e07c7aa2668b4cfa30"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalProgressionTreeTierFeature.h",
+      "bytes": 5745,
+      "sha256": "06176571d5a26d1e59b0dc76d84f03cf6e967a52e11f3a1f87547c5be34ec35d"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalRichTextBlock.h",
+      "bytes": 15039,
+      "sha256": "6a72e05dbd223a192e610bd87f68366893019525304e2d37a680eb63ebdd703b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalScrollBox.h",
+      "bytes": 13654,
+      "sha256": "64e718a9a496ab35adb0e3d5789cebf7a5babf3b0de8e3281e8cddeadf3d1ff7"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalShipAnimInstance.h",
+      "bytes": 6037,
+      "sha256": "d4a6ed22f94a3d5de5c1ca2cecf6e7e4b131a7cfa00364ea0f1c587f49f2e078"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalShipCannonComponent.h",
+      "bytes": 47280,
+      "sha256": "cc47f4e97805698151cddec8f0f399144ebe0bf8403e4ee5cbae4a678702b794"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalShipCannonControlComponent.h",
+      "bytes": 65714,
+      "sha256": "965258fed7b02f09edf3e7af7be21aa7a71565d1e7a641258acc6fb44e960f30"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalShipSailComponent.h",
+      "bytes": 39534,
+      "sha256": "edf89b3a71914b6df0d1289d84d74c60c5fede4d4b5b7959c466bfa504c49bb7"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStaticData.h",
+      "bytes": 2019,
+      "sha256": "ca171dd1b302c23b42ef6620879bc6d9749f6775213a6343dfb759676877dfa8"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStaticData_MissionCompanionData.h",
+      "bytes": 1749,
+      "sha256": "09eb6d3c3d4ce5d3154b1661d91b7bd378f54286b812d56d3c801a2dbca5841a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStaticData_MissionCompanionReactionData.h",
+      "bytes": 2243,
+      "sha256": "0f16279512babf56fbf10a45e7c672126096bb990e020836ac7d5fbdb9c40e2a"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStructureDB.h",
+      "bytes": 2298,
+      "sha256": "972ca9a1651299d1cdf19ea919e479be4e9a54a296485f2a016eca9756b940c7"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStructureModTemplateData.h",
+      "bytes": 2477,
+      "sha256": "4a38de0f7b88883863b8dc37d73d228e50e9092b721c00a0adb685239843f8d0"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStructureSettings.h",
+      "bytes": 2125,
+      "sha256": "0b9cb37ba0617dd3da235194a58de149ed3f53e7a9680ec9277f44faecebf6c5"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalStructureToolTipWidget.h",
+      "bytes": 15511,
+      "sha256": "022c521a69e1fbcefcd1cfdf9900262f5d6bbdbade43f6fbf75eba32f93ee70c"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalSubMenuUI.h",
+      "bytes": 21929,
+      "sha256": "26704cdba47e2f4dafb1541d1b9800638b3a47ec77a88743eaf228212d23f1f2"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalSupplyCrateItemSet.h",
+      "bytes": 1620,
+      "sha256": "3d04368cc18257393827421ea3dab78f8e3fefc67165a919bdf0b05a76f57c87"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalSupplyCrateItemSets.h",
+      "bytes": 1618,
+      "sha256": "f9222c77736683856e846ad47b480622dd33455f5cde9e693326274175756d86"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalTransformUpdateMassProcessor.h",
+      "bytes": 3380,
+      "sha256": "3a8c4d1a6bec7aacd5bed113f0d8db7ef3921476d60b5c0f34b2d2eabbf918ae"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalTribeData.h",
+      "bytes": 1561,
+      "sha256": "4021c12117e7a0294da4c99caf3a946e44231004febd81cd365e59446155ca58"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalUI.h",
+      "bytes": 114759,
+      "sha256": "13e5ebeae41a36be55b5fdd531282ead7d97184794b5dccfe649e48de8859edc"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalUI_Toast.h",
+      "bytes": 24678,
+      "sha256": "2670f8229fad9e58ec849c3e04fce9e9b47adbb1935899f27acc6c3565a72d78"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalUserWidget.h",
+      "bytes": 22275,
+      "sha256": "39cc978819920b3898a389f7c9b5be7080f60e14ea23f756bcbbcac9c233ebd3"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWheeledVehicleDustType.h",
+      "bytes": 5762,
+      "sha256": "5377c74eb5e9abc769b5d0da70fcac9ab17e4752031a0172d800d05e0cbeb30f"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWindSourceComponent.h",
+      "bytes": 26587,
+      "sha256": "c4b08e0646bdefbc4b217773439de9a0cff2fb6aaed5d561e7be7b306268a162"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWirelessExchangeData.h",
+      "bytes": 4882,
+      "sha256": "d9d4fdc56566b4ca387d2766ab529044ffb81bf192ccd167b3cec008fd9f3978"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWordFilter.h",
+      "bytes": 6759,
+      "sha256": "ae91430da861f96d1dbfcee705868f1a797150da986d23c72e37a5ff6118ec79"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWordList.h",
+      "bytes": 1696,
+      "sha256": "d59e397db3317f2a8299bb7cdca64df10ae7acfbc2d2d7521c34617b050e56b3"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWorld.h",
+      "bytes": 17892,
+      "sha256": "b672364ed5c890166bcb145dca912a7b7feab36bacee0d0b94ee77b72597fd52"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWorldBuffCustomImplement.h",
+      "bytes": 5768,
+      "sha256": "6ebcd77f2a06ddee0e9fa3fa444ba457279a3fa371fb9b79ad4ec46393536942"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWorldBuffData.h",
+      "bytes": 11677,
+      "sha256": "0072291509eef3314853b288010a2244afeb690d3f356e074b450b91640bfb63"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimalWorldSettingsEventOverrides.h",
+      "bytes": 2155,
+      "sha256": "c59ad1c7c37be8e72f2e9275ea5fdca312f1fd9db5d6fca7beda3b016d8ab27b"
+    },
+    {
+      "path": "include/Brz/Jogo/UPrimitiveComponent.h",
+      "bytes": 67177,
+      "sha256": "513e2b66d4f48e8a5c87872bad9e5aa7de0311c50cbcc33e0350c96dc44a65fd"
+    },
+    {
+      "path": "include/Brz/Jogo/USceneComponent.h",
+      "bytes": 36998,
+      "sha256": "f7839b6443d0144b459e9ada9859e66f40c3295323666ce0348afcf38392da25"
+    },
+    {
+      "path": "include/Brz/Jogo/UShapeComponent.h",
+      "bytes": 3231,
+      "sha256": "e16e6f19dc9478044fa49a62315e8436b4efb35e361621d51401ef40366de358"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterActorChannel.h",
+      "bytes": 2377,
+      "sha256": "9c8244c31a539a5987e12f3ec0690524ee56ec9c474a0652d15cc13b1d90709c"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterCharacterMovement.h",
+      "bytes": 64370,
+      "sha256": "ff578309bf57cd7b0735bb435235fc69ab9fe490632b85286fddbce16cc93324"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterCheatManager.h",
+      "bytes": 173488,
+      "sha256": "13040784b60e1c8570520dfbb2e41bba7d00662ca9eb0763695b3fe1ec2a89ad"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterDamageType.h",
+      "bytes": 17856,
+      "sha256": "ff3b78b58829c1f5f6428f07cb2b2fa8e5906a04c6ae39dae6714526d23bf57b"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterDamageType_Passive.h",
+      "bytes": 4170,
+      "sha256": "746ce26336e4d72b473bd37747a6333c092ca7ac54d5e500a6016e21fff1aea6"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterDiscordUISubsystem.h",
+      "bytes": 12443,
+      "sha256": "75af4ce21ead43ac7ee867cf077cadd8a574c313a1119819f09c4afafd69c3a6"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterEngine.h",
+      "bytes": 86308,
+      "sha256": "b61f57c12d696ce303f9c9dc2133f8dd5e3c0e954a8a518a42486a9b8799ac52"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGameInstance.h",
+      "bytes": 97611,
+      "sha256": "128c04d98a3486087d7be0363321115621edb3ab74c8ffcc9526e3b2bfd8daf2"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGameLoadingScreenManager.h",
+      "bytes": 3526,
+      "sha256": "0a35526d1b25ed2e6023f64ff6f58e87d79063bb395662ca19321901bc0fee9c"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGameUserSettings.h",
+      "bytes": 78253,
+      "sha256": "c677bfd6506fe7665f7da030984bd75eb7ab6929594cf9ebc0a2cfa0debdd858"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGameViewportClient.h",
+      "bytes": 41748,
+      "sha256": "3c2f7a7dd543b7aa379ea8bd7dc0f21cdee587bc7c97e7347d9f31a963f3f7c9"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_AlwaysRelevantBase.h",
+      "bytes": 2237,
+      "sha256": "68652b11cc015795afc4f577f6ec2f961af066e339ade875edcebcbdd76b2131"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_BaseSpatialGrid.h",
+      "bytes": 1688,
+      "sha256": "54ef72294887e76ecce156224e98cf7c5ca165d27b8fa93a6c81d80f3251774f"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_ConnectionSpecificAlwaysRelevant.h",
+      "bytes": 1807,
+      "sha256": "5eef773f65ae499a3fa517f4237fa41b61c1e71b71372faeb63cc30e95ccb09f"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_Default.h",
+      "bytes": 2251,
+      "sha256": "91afb53c46524892868d2db3b20b2ac21d0537351c1d909cc0e11970303979c5"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_DormantGridCell.h",
+      "bytes": 3511,
+      "sha256": "aaf09a90a19739cb48dbc97e0993a922c8dee210321fa1c255f07ec12fd21daf"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_DormantSpatialGrid.h",
+      "bytes": 3589,
+      "sha256": "535ff2801519cd2d84761af47c4f20fec299c1fdd32a7897e92d2c6aec03a2eb"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_DynamicGridCell.h",
+      "bytes": 2024,
+      "sha256": "e080e33e4d996d6613199b14e44d1c90ea09a62ed15eb94e68f1f12d34248662"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_DynamicSpatialGrid.h",
+      "bytes": 1709,
+      "sha256": "1ba3350b4a50a2fa3f5493879c0b5ecf2adddac24d4ce20a66ec7713c44c5c47"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_StaggeredByDistance.h",
+      "bytes": 3170,
+      "sha256": "f0a12e6f271767ab5ffe001f9fa83b7d0d5d602740fa9f4f801a5922b79b027d"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_TeamAlwaysRelevant.h",
+      "bytes": 8978,
+      "sha256": "24cc85717cff4f80e1240b44f801998f57cc61877cee6c87a904273ca7891dd2"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterGraphNode_TeamSpecificAlwaysRelevant.h",
+      "bytes": 1765,
+      "sha256": "648b03d0262d4332310301ae79f08c22a68ee9ddb6113f0f5a5a096aa1cca5d3"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterHaptics.h",
+      "bytes": 1721,
+      "sha256": "bd2f933a6af3ee6908d437b7cbcaf562562383d186341f7a28c2f68058b7250f"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterLaserBeamComponent.h",
+      "bytes": 34276,
+      "sha256": "0c53a5eed8c167fc3ed988bbe44088afb6370469f12a8668ed9d7d41779b0cd4"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterLocalPlayer.h",
+      "bytes": 12621,
+      "sha256": "cbba16daaf95dbc2182be83404ab2f36b9f9f0a71beb24d5858884077db13e0e"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterOnlineSessionClient.h",
+      "bytes": 2260,
+      "sha256": "2a521bc767e2d57ccb7564f54b3c0b71f22bc8a51d427f6140bc016e6a9b1ebd"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterPendingNetGame.h",
+      "bytes": 4019,
+      "sha256": "68f5646cb01e0f95e29c479b8d26ad8e937351c62b26e7846eb489e879f1f79a"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterPersistentUser.h",
+      "bytes": 4273,
+      "sha256": "d18a5ea1ac6ac77a026d7292852e17227bc7567b4c8e0cb9bc2413c62c6c9f88"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterProjectileMovement.h",
+      "bytes": 15064,
+      "sha256": "3714fd66aa984560a65d5fbdaf38ea7e8740d5ec21a91198ea2a60c4f5e8e33e"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterReplicationConnectionGraph.h",
+      "bytes": 3840,
+      "sha256": "552708e83583475cf4adbd734ef427bd06d20a89cea6da2f3d3a8125ee7494ca"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterReplicationGraph.h",
+      "bytes": 14398,
+      "sha256": "5a0466e559d3409b2e7c428d437e680a8a64a3f84aa07df5bca0d835d5fd47ea"
+    },
+    {
+      "path": "include/Brz/Jogo/UShooterWeaponDB.h",
+      "bytes": 2730,
+      "sha256": "4822a62cecd4f480c5a604d5cf8a3cc74ee22f11744aa5e6b80e186df67d4bc3"
+    },
+    {
+      "path": "include/Brz/Jogo/USoundBase.h",
+      "bytes": 7323,
+      "sha256": "baa94ec17f80fcef10a5dadeb4577e6502234c6bb05b42f61290e9917e6b7c9b"
+    },
+    {
+      "path": "include/Brz/Jogo/USparseDataOverrideManager.h",
+      "bytes": 7941,
+      "sha256": "98693db429def916d22068f18fde8dafef231b426b6e95bdac9f1748064b5269"
+    },
+    {
+      "path": "include/Brz/Jogo/USphereComponent.h",
+      "bytes": 3510,
+      "sha256": "544787910a16e559ff1dfc78032e150b0ba9dc723567c1ff9c2c24184a1c7d61"
+    },
+    {
+      "path": "include/Brz/Jogo/UStaticMeshComponent.h",
+      "bytes": 30543,
+      "sha256": "2d26fdbcab9c96a83959dd166e0a36e8513421d2a98202c6f3d0c8bd2ff9e740"
+    },
+    {
+      "path": "include/Brz/Jogo/UStreamableRenderAsset.h",
+      "bytes": 8089,
+      "sha256": "d8282b1a8e54cb35490bd9d82a972e5793ad3d6d060d72a009c2690dfe3ec91c"
+    },
+    {
+      "path": "include/Brz/Jogo/UStruct.h",
+      "bytes": 7077,
+      "sha256": "e6901177b5da8cfb3dd55e0dd79dc6ed3cd02aee6083379aacd7eca554d5feb1"
+    },
+    {
+      "path": "include/Brz/Jogo/UTexture.h",
+      "bytes": 10229,
+      "sha256": "e4194200c83148d902acc4e45c8663db01cfdc40e2916d5fda551114bc446b98"
+    },
+    {
+      "path": "include/Brz/Jogo/UTexture2D.h",
+      "bytes": 6028,
+      "sha256": "99b3612f1550a976dbd9140112d8eb6ba4aa43388c6d1d139d927292c67377d4"
+    },
+    {
+      "path": "include/Brz/Jogo/UVictoryCore.h",
+      "bytes": 341712,
+      "sha256": "661f672c213fdd73b584105a04cbf0ce1085e52cee3766461ba0b9d100c16074"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorld.h",
+      "bytes": 150462,
+      "sha256": "c148a22ce1a2fd76d56103c3f63177880eb59c1caa6cacc1b70abdb49d12ccb9"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldBuffEntryWidget.h",
+      "bytes": 15161,
+      "sha256": "a8419c79e894dc1dc14403efa81ff743dc9f0e54e0e456fa3acfd803b346551c"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldComposition.h",
+      "bytes": 13023,
+      "sha256": "3a7b1be7d971fd73c4a727271a08e373f29ea0883ca7e32f0ed91539915c7543"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldConditionSchema.h",
+      "bytes": 3996,
+      "sha256": "6bbde56e131c39c377d8fd2b7467f87d35fe27daed690245dc1a39b8f6d2d91b"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldMetricsActorTracker.h",
+      "bytes": 3962,
+      "sha256": "df9565de258b10b89661caf0bba8b2a41051d6b085036e95fa4ea416af6e6c6c"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldMetricsSubsystem.h",
+      "bytes": 9126,
+      "sha256": "7c57b780cb81478dde86609bb128cacf73dbc79b38801a21b220e8e44ff80a6c"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldModifiersContainer.h",
+      "bytes": 1627,
+      "sha256": "8ad7cc0a98edcf2a282aa94d9cc432061d6ebc7c93e445620fa98189efa1dc0a"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartition.h",
+      "bytes": 24519,
+      "sha256": "ec3fa956dc573b27d054a44f05dcc9407fd07d4bdb97aa0eb4f8cff48dcb118f"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionDestructibleHLODComponent.h",
+      "bytes": 11475,
+      "sha256": "b9a6dcf533c57d907db1cc6e9ee736477e3896851d6e440ce8f009187e021e1b"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionDestructibleHLODMeshComponent.h",
+      "bytes": 13503,
+      "sha256": "2f7b92bbb2a89d1fccd89317bbeedf6cd2d28219d52edd35204183306fd69878"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionHLODRuntimeSubsystem.h",
+      "bytes": 9433,
+      "sha256": "9884b5510cf287f361d8494977ba4e5a3f797703e3ef135cd138cf1c089de36c"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionLevelStreamingDynamic.h",
+      "bytes": 10908,
+      "sha256": "f4d002044252cdad0f0f0e92620701866847ce9176dc02e72eb0aa7097a00084"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionLevelStreamingPolicy.h",
+      "bytes": 9233,
+      "sha256": "1d4bb476872b257e0de774ba32f9edb95bdce06c913116db5f4ec12d01c08637"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeCell.h",
+      "bytes": 11893,
+      "sha256": "8b4bcda8ef7476eacc43d86a3fc7ee3d0ce2b14b1987bdc7cd5932ce86b83f46"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeCellData.h",
+      "bytes": 5097,
+      "sha256": "16a88c1cd5eb5e55f8bfe00529fab9ddd2a03f07c1923a14e21cc200a86407f0"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeCellDataHashSet.h",
+      "bytes": 2353,
+      "sha256": "1936f3ec8e6106b2bab67e048c576f27bc05f195f9e85b19d3c55a738832e47b"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeCellDataSpatialHash.h",
+      "bytes": 7451,
+      "sha256": "113db02a51aa39604a6b7a399213405109080369c827bda593cd61fcb6eb807f"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeHash.h",
+      "bytes": 7567,
+      "sha256": "82e7cf63dbdae9f873a4f499f24e056ebd3fe70a5dc0d390edad3a0ad4c2d557"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeHashSet.h",
+      "bytes": 9659,
+      "sha256": "f4542461be7144542581ecd0c8a216e537696609c5d9690d8dcdc574721546ee"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeLevelStreamingCell.h",
+      "bytes": 8710,
+      "sha256": "0c8a19a2c1c2190d62318cc9ddd6e9441ed24094a7d7fd32647925b7b48681ba"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionRuntimeSpatialHash.h",
+      "bytes": 11913,
+      "sha256": "5f5126813fd35d89827a58abbc7522968dcc49affbb1cce982c27ceefc9322ad"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionSettings.h",
+      "bytes": 2438,
+      "sha256": "6f7436bbd79c5029970419f88b4de0e281c6465c1d242d4862706635e5c80177"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionStreamingPolicy.h",
+      "bytes": 16054,
+      "sha256": "6f83a131e8b31ecccbb818f3a64e658db033266fa99cdfd406868ef09679d9a8"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionStreamingSourceComponent.h",
+      "bytes": 9937,
+      "sha256": "148a6f7e1aadef09091d2e1421697f03867b37f1e29f371e52b8c355f5f1c1f1"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldPartitionSubsystem.h",
+      "bytes": 17259,
+      "sha256": "ad09bc6ccc6e296524ecf713514305819b378b167846a1f08004c1836f652e31"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldProxy.h",
+      "bytes": 1518,
+      "sha256": "eab9790cb328319cf1f00bb527204d65da9cdd142c87734324bb101951b05cef"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldSubsystem.h",
+      "bytes": 2984,
+      "sha256": "137c5c1c879c37c30533b2caad68eb3604f33226d5800da5d2889a36933827ab"
+    },
+    {
+      "path": "include/Brz/Jogo/UWorldVO_DataAsset.h",
+      "bytes": 1727,
+      "sha256": "a554c4425166bb6e2238e5e12b315a76fe0bc52ba9b64bdbf1921fa3d86d1958"
+    },
+    {
+      "path": "include/Brz/Registro.h",
+      "bytes": 6045,
+      "sha256": "828a7ef45581dd4da5deb085bdb96875d2d4944ae0456d658496aad79178c805"
+    },
+    {
+      "path": "include/Brz/Servicos.h",
+      "bytes": 24838,
+      "sha256": "d5ce0b021acd6c16e062cccaba50a22eb79f2d13a79549a7f1bfae7a8771a42c"
+    },
+    {
+      "path": "include/Brz/Texto.h",
+      "bytes": 8520,
+      "sha256": "60af53415bbd7545ab11ff5b5f0f3409f08ed28a363dfff4e72a8b0d49ede33f"
+    },
+    {
+      "path": "include/BrzHeartbeat.h",
+      "bytes": 6222,
+      "sha256": "9fa72bb4e84dee8da828d5e72d033dec48a1470e8f92944171001b177703a99d"
+    },
+    {
+      "path": "include/Permissions.h",
+      "bytes": 6203,
+      "sha256": "7f55311557ded4b60f760b3f3efa0df1826fe715951456f2a332a65c5a1b09fc"
+    },
+    {
+      "path": "include/Points.h",
+      "bytes": 4281,
+      "sha256": "9891c1dbeaa838fd420eb112b6f022b97ac414e269c237cf4a62c4d0c62fcc62"
+    },
+    {
+      "path": "include/Timer.h",
+      "bytes": 1873,
+      "sha256": "3f3b9aed4f60dc92b2a826a8b21d9bd15196c1430618c2b986043e0df25a2779"
+    },
+    {
+      "path": "include/json.hpp",
+      "bytes": 919975,
+      "sha256": "9bea4c8066ef4a1c206b2be5a36302f8926f7fdc6087af5d20b417d0cf103ea6"
+    },
+    {
+      "path": "lib/winmm.lib",
+      "bytes": 84142,
+      "sha256": "6015668fb2ea5c462341e3b70a70b406be288df3d8347e7aac0087df93e06f85"
+    }
+  ]
+}
