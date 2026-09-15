@@ -1760,22 +1760,31 @@ typedef struct BrzApiTabela
 // that exports just BrzPluginCarregar behaves exactly as before — with the dead
 // window it always had.
 //
-// BrzPluginDescarregar is RESERVED AND NOT CALLED TODAY. Read this before you
-// put cleanup in it:
+// BrzPluginDescarregar IS CALLED — since 10/09/2026, on hot reload only. This
+// paragraph used to say it was reserved and never called; the promise at the
+// bottom was that it would change in the same commit as the code, and this is
+// that commit.
 //
-//   The loader never unloads a plugin — not on failure, not on reload, not at
-//   shutdown. A plugin in use has hooks armed and tasks scheduled that point
+//   WHEN it runs: only when the RECARREGAR trigger asks for your plugin by
+//   name. The loader calls it, then takes everything you registered out of
+//   circulation (commands, clocks, ticks, chat hooks, HTTP, services), then
+//   loads the NEW build. It is your one chance to persist what you produced.
+//
+//   It still does NOT run at shutdown, and it still does not mean the DLL gets
+//   freed. The loader never calls FreeLibrary — not on failure, not on reload,
+//   not at exit. A plugin in use has hooks armed and tasks scheduled that point
 //   into its own DLL, and freeing that code makes the game jump into unmapped
-//   memory later, far from the cause.
+//   memory later, far from the cause. On reload the old DLL simply stays
+//   mapped and inert, and the new one comes in under a `.hotN` copy.
 //
 //   At process exit the operating system reclaims everything anyway, and
 //   running plugin code inside DllMain's DETACH — under the loader lock, with
 //   other threads possibly already gone — is a well-known way to hang or crash
 //   a process on the way out.
 //
-//   So: do NOT rely on it running. Anything that must be persisted, persist
-//   when you produce it, not at the end. If a later version starts calling it,
-//   this comment changes with the code, in the same commit.
+//   So: do NOT rely on it running at process exit. Anything that must survive a
+//   crash or a restart, persist WHEN YOU PRODUCE IT, not at the end — a reload
+//   is not the only way your plugin stops.
 //
 //   This paragraph exists because the equivalent header in our Conan API
 //   announced this function as "called at unload" while no line of the project
@@ -1783,7 +1792,7 @@ typedef struct BrzApiTabela
 //   absent feature: someone writes their save routine into it and loses data.
 typedef void (*BrzFnRegistrar)(const BrzApiTabela* api);   // fase 1
 typedef void (*BrzFnCarregar)(const BrzApiTabela* api);    // fase 2
-typedef void (*BrzFnDescarregar)(void);                    // reservada, ver acima
+typedef void (*BrzFnDescarregar)(void);                    // chamada na recarga, ver acima
 
 #ifdef __cplusplus
 }  // extern "C"

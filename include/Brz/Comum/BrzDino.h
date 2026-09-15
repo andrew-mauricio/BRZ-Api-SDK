@@ -526,15 +526,48 @@ inline bool EscreverTextoNoCampo(const Contexto& c, void* obj, uint32_t offset,
     return true;
 }
 
-//  O dino está morto ou morrendo? `bIsDead` é bit, e a máscara vem da reflexão.
-//  Sem os campos, a resposta é "sim" — o lado seguro: no pior caso o comando
-//  recusa, em vez de mexer num cadáver.
+//  O dino esta morto ou morrendo?
+//
+//  Quem responde e' o JOGO, pela native `IsDeadOrDying()` — casamento de bytes
+//  nesta build. O bit `bIsDead` e' so' a reserva, e por um motivo medido em
+//  13/09/2026: no boot da build 25241345 a API mediu o layout do FBoolProperty
+//  cedo demais (0 amostras), nao mediu de novo, e TODO bit passou a devolver
+//  -1 ("nao sei") por dois dias — o bit continuava refletido; quem nao
+//  respondia era a medida (corrigido no motor em 13/09: mede na primeira
+//  pergunta). A versao anterior desta funcao tratava -1 como "morto" —
+//  pelo "lado seguro" de nao mexer em cadaver — e para quem precisa APAGAR isso
+//  era o lado inseguro: o Ambush via todo thrall como cadaver, pulava todos no
+//  `Recolher`, e os thralls nunca sumiam ao fim do tempo. Nem o marcador de alvo
+//  que eles poem no jogador, porque seguiam vivos e ordenados.
+//
+//  E' o mesmo padrao do `/wake` de 11/09: `-1 > 0` e `-1 != 0` escondem o "nao
+//  sei" atras de uma resposta. Quando existe native que responde a mesma
+//  pergunta, ela e' a fonte; o bit nao decide sozinho.
 inline bool MortoOuMorrendo(const Contexto& c, void* dino)
 {
+    if (!dino) return true;
+    typedef bool (*Fn)(void*);
+    void* fn = Simbolo(c, "APrimalCharacter.IsDeadOrDying()",
+                       "saber se um dino esta morto ou morrendo");
+    if (fn) return ((Fn)fn)(dino);
+
+    //  Reserva: o bit. Mantem o lado seguro (-1 = "sim"), mas DIZ que caiu aqui,
+    //  para a proxima build em que a native faltar nao repetir 13/09 em silencio.
     const int b = Bit(c, dino, "bIsDead");
-    if (b != 0) return true;
-    const int d = Bit(c, dino, "bIsDying");
-    return d == 1;
+    if (b < 0)
+    {
+        static bool avisou = false;
+        if (!avisou && c.api && c.api->Log)
+        {
+            avisou = true;
+            c.api->Log("[morto] sem a native IsDeadOrDying E sem o bit bIsDead nesta build: "
+                       "respondo 'morto' para TUDO, pelo lado seguro. Quem APAGA dino "
+                       "(Ambush) vai deixar tudo vivo ate isto ser resolvido.");
+        }
+        return true;
+    }
+    if (b == 1) return true;
+    return Bit(c, dino, "bIsDying") == 1;
 }
 
 // ── ESTE DINO É DE ALGUÉM?  1 sim · 0 selvagem · -1 NÃO SEI ────────────────
