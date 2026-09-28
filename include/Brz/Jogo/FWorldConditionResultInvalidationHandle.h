@@ -40,6 +40,11 @@ struct FWorldConditionResultInvalidationHandle
     {
         return NativeCall<void*>(this, "FWorldConditionResultInvalidationHandle.InvalidateResult()");
     }
+
+    BrzCampoPonteiro ItemOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionResultInvalidationHandle.ItemOffset")); }
+    BrzCampoPonteiro WeakStateMemoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionResultInvalidationHandle.WeakStateMemory")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDCONDITIONRESULTINVALIDATIONHANDLE_H

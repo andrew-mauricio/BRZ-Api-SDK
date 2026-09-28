@@ -45,6 +45,12 @@ struct UPrimalBuffPersistentData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData.ForPrimalBuffClass")); }
     FString& ForPrimalBuffClassStringField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalBuffPersistentData.ForPrimalBuffClassString"); }
+    BrzCampoPonteiro bPermanentlyPersistField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData.bPermanentlyPersist")); }
+    BrzCampoPonteiro bSaveAndStopRefreshingOnDisconnectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData.bSaveAndStopRefreshingOnDisconnect")); }
+    BrzCampoPonteiro bSerializeAndStopRefreshingIfDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData.bSerializeAndStopRefreshingIfDead")); }
     BitFieldValue<bool, unsigned __int32> bPermanentlyPersist()
     { return { (void*)this, "bPermanentlyPersist" }; }
     BitFieldValue<bool, unsigned __int32> bSaveAndStopRefreshingOnDisconnect()

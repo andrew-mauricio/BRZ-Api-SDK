@@ -57,7 +57,7 @@ struct APrimalShipCannonProjectile
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShipCannonProjectile.GetDamageMultiplierForTarget(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDamageMultiplierForTarget(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShipCannonProjectile.GetDamageMultiplierForTarget(AActor*)", a0);
@@ -73,7 +73,7 @@ struct APrimalShipCannonProjectile
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShipCannonProjectile.OnImpact_Implementation(FHitResult&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=114+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnImpact_Implementation(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalShipCannonProjectile.OnImpact_Implementation(FHitResult&,bool)", a0, a1);
@@ -167,8 +167,8 @@ struct APrimalShipCannonProjectile
     { return *GetNativePointerField<float*>(this, "APrimalShipCannonProjectile.FragmentOriginOffset"); }
     BrzCampoPonteiro FragmentProjectileTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.FragmentProjectileTemplate")); }
-    BitFieldValue<bool, unsigned __int32> HasPerformedAnEnvirnonmentalImpact()
-    { return { (void*)this, "HasPerformedAnEnvirnonmentalImpact" }; }
+    BrzCampoPonteiro HasPerformedAnEnvirnonmentalImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.HasPerformedAnEnvirnonmentalImpact")); }
     BrzCampoPonteiro HitCharacterBuffField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.HitCharacterBuff")); }
     TArray<void*>& IgnoreNonBlockingHitClassesField() const
@@ -349,366 +349,366 @@ struct APrimalShipCannonProjectile
     { return *GetNativePointerField<unsigned char*>(this, "APrimalShipCannonProjectile.WeaponColorizeVFXUseColorRegion"); }
     BrzCampoPonteiro WeaponConfigField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.WeaponConfig")); }
-    BitFieldValue<bool, unsigned __int32> bActorEnableCollision()
-    { return { (void*)this, "bActorEnableCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bActorIsBeingDestroyed()
-    { return { (void*)this, "bActorIsBeingDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bActorPreventPhysicsSceneRegistration()
-    { return { (void*)this, "bActorPreventPhysicsSceneRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowReceiveTickEventOnDedicatedServer()
-    { return { (void*)this, "bAllowReceiveTickEventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTickBeforeBeginPlay()
-    { return { (void*)this, "bAllowTickBeforeBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevant()
-    { return { (void*)this, "bAlwaysRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevantPrimalStructure()
-    { return { (void*)this, "bAlwaysRelevantPrimalStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bAsyncPhysicsTickEnabled()
-    { return { (void*)this, "bAsyncPhysicsTickEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachOnImpact()
-    { return { (void*)this, "bAttachOnImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachOnProjectileBounced()
-    { return { (void*)this, "bAttachOnProjectileBounced" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachmentReplicationUseNetworkParent()
-    { return { (void*)this, "bAttachmentReplicationUseNetworkParent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDestroyWhenFinished()
-    { return { (void*)this, "bAutoDestroyWhenFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoStasis()
-    { return { (void*)this, "bAutoStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryItemUsedHandlesDurability()
-    { return { (void*)this, "bBPInventoryItemUsedHandlesDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPostInitializeComponents()
-    { return { (void*)this, "bBPPostInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPreInitializeComponents()
-    { return { (void*)this, "bBPPreInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBlockInput()
-    { return { (void*)this, "bBlockInput" }; }
-    BitFieldValue<bool, unsigned __int32> bBlueprintMultiUseEntries()
-    { return { (void*)this, "bBlueprintMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplication()
-    { return { (void*)this, "bCallPreReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplicationForReplay()
-    { return { (void*)this, "bCallPreReplicationForReplay" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDamaged()
-    { return { (void*)this, "bCanBeDamaged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeInCluster()
-    { return { (void*)this, "bCanBeInCluster" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckForNonBlockingHitImpactFX()
-    { return { (void*)this, "bCheckForNonBlockingHitImpactFX" }; }
-    BitFieldValue<bool, unsigned __int32> bClearStructureColorsOnImpact()
-    { return { (void*)this, "bClearStructureColorsOnImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bClientTickWhenInAirAndCheckForNonBlockingHitImpactFX()
-    { return { (void*)this, "bClientTickWhenInAirAndCheckForNonBlockingHitImpactFX" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWhenPlacing()
-    { return { (void*)this, "bCollideWhenPlacing" }; }
-    BitFieldValue<bool, unsigned __int32> bColorizeStructureOnImpact()
-    { return { (void*)this, "bColorizeStructureOnImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bDamageOnBeginOverlap()
-    { return { (void*)this, "bDamageOnBeginOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bDesiredRepGraphBehaviorHasBeenSet()
-    { return { (void*)this, "bDesiredRepGraphBehaviorHasBeenSet" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyDontClearNetworkChildren()
-    { return { (void*)this, "bDestroyDontClearNetworkChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyOnExplode()
-    { return { (void*)this, "bDestroyOnExplode" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyOnExplodeNonBlockingImpact()
-    { return { (void*)this, "bDestroyOnExplodeNonBlockingImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNodes()
-    { return { (void*)this, "bDisableRigidBodyAnimNodes" }; }
-    BitFieldValue<bool, unsigned __int32> bDoFinalTraceCheckFromInstigatorToDirectDamageVictim()
-    { return { (void*)this, "bDoFinalTraceCheckFromInstigatorToDirectDamageVictim" }; }
-    BitFieldValue<bool, unsigned __int32> bDoFinalTraceCheckToDirectDamageVictim()
-    { return { (void*)this, "bDoFinalTraceCheckToDirectDamageVictim" }; }
-    BitFieldValue<bool, unsigned __int32> bDoFullRadialDamage()
-    { return { (void*)this, "bDoFullRadialDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bDontExplodeOnAnyDamage()
-    { return { (void*)this, "bDontExplodeOnAnyDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bDontFragmentOnDamage()
-    { return { (void*)this, "bDontFragmentOnDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bEditorOnlyActorShowInPIE()
-    { return { (void*)this, "bEditorOnlyActorShowInPIE" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiUse()
-    { return { (void*)this, "bEnableMultiUse" }; }
-    BitFieldValue<bool, unsigned __int32> bExchangedRoles()
-    { return { (void*)this, "bExchangedRoles" }; }
-    BitFieldValue<bool, unsigned __int32> bExplodeEffectOnDestroy()
-    { return { (void*)this, "bExplodeEffectOnDestroy" }; }
-    BitFieldValue<bool, unsigned __int32> bExplodeOnClient()
-    { return { (void*)this, "bExplodeOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bExplodeOnImpact()
-    { return { (void*)this, "bExplodeOnImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bExplodeOnLifeTimeEnd()
-    { return { (void*)this, "bExplodeOnLifeTimeEnd" }; }
-    BitFieldValue<bool, unsigned __int32> bExplodeOnNonBlockingImpact()
-    { return { (void*)this, "bExplodeOnNonBlockingImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bExploded()
-    { return { (void*)this, "bExploded" }; }
-    BitFieldValue<bool, unsigned __int32> bExplosionOrientUpwards()
-    { return { (void*)this, "bExplosionOrientUpwards" }; }
-    BitFieldValue<bool, unsigned __int32> bFindCameraComponentWhenViewTarget()
-    { return { (void*)this, "bFindCameraComponentWhenViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowNetMulticast()
-    { return { (void*)this, "bForceAllowNetMulticast" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHiddenReplication()
-    { return { (void*)this, "bForceHiddenReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHighQualityViewerReplication()
-    { return { (void*)this, "bForceHighQualityViewerReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceIgnoreBlockingHitClasses()
-    { return { (void*)this, "bForceIgnoreBlockingHitClasses" }; }
-    BitFieldValue<bool, unsigned __int32> bForceIgnoreFriendlyFire()
-    { return { (void*)this, "bForceIgnoreFriendlyFire" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInfiniteDrawDistance()
-    { return { (void*)this, "bForceInfiniteDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetAddressable()
-    { return { (void*)this, "bForceNetAddressable" }; }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAttachOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAttachOnImpact")); }
+    BrzCampoPonteiro bAttachOnProjectileBouncedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAttachOnProjectileBounced")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAutoDestroyWhenFinished")); }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bAutoStasis")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bBlockInput")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bCanBeInCluster")); }
+    BrzCampoPonteiro bCheckForNonBlockingHitImpactFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bCheckForNonBlockingHitImpactFX")); }
+    BrzCampoPonteiro bClearStructureColorsOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bClearStructureColorsOnImpact")); }
+    BrzCampoPonteiro bClientTickWhenInAirAndCheckForNonBlockingHitImpactFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bClientTickWhenInAirAndCheckForNonBlockingHitImpactFX")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bClimbable")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bColorizeStructureOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bColorizeStructureOnImpact")); }
+    BrzCampoPonteiro bDamageOnBeginOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDamageOnBeginOverlap")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bDestroyOnExplodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDestroyOnExplode")); }
+    BrzCampoPonteiro bDestroyOnExplodeNonBlockingImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDestroyOnExplodeNonBlockingImpact")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bDoFinalTraceCheckFromInstigatorToDirectDamageVictimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDoFinalTraceCheckFromInstigatorToDirectDamageVictim")); }
+    BrzCampoPonteiro bDoFinalTraceCheckToDirectDamageVictimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDoFinalTraceCheckToDirectDamageVictim")); }
+    BrzCampoPonteiro bDoFullRadialDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDoFullRadialDamage")); }
+    BrzCampoPonteiro bDontExplodeOnAnyDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDontExplodeOnAnyDamage")); }
+    BrzCampoPonteiro bDontFragmentOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bDontFragmentOnDamage")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bEditorOnlyActorShowInPIE")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bEnableMultiUse")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExchangedRoles")); }
+    BrzCampoPonteiro bExplodeEffectOnDestroyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExplodeEffectOnDestroy")); }
+    BrzCampoPonteiro bExplodeOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExplodeOnClient")); }
+    BrzCampoPonteiro bExplodeOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExplodeOnImpact")); }
+    BrzCampoPonteiro bExplodeOnLifeTimeEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExplodeOnLifeTimeEnd")); }
+    BrzCampoPonteiro bExplodeOnNonBlockingImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExplodeOnNonBlockingImpact")); }
+    BrzCampoPonteiro bExplodedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExploded")); }
+    BrzCampoPonteiro bExplosionOrientUpwardsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bExplosionOrientUpwards")); }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceAllowNetMulticast")); }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceIgnoreBlockingHitClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceIgnoreBlockingHitClasses")); }
+    BrzCampoPonteiro bForceIgnoreFriendlyFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceIgnoreFriendlyFire")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceNetAddressable")); }
     bool& bForceNetUpdateField() const
     { return *GetNativePointerField<bool*>(this, "APrimalShipCannonProjectile.bForceNetUpdate"); }
-    BitFieldValue<bool, unsigned __int32> bForceNetworkSpatialization()
-    { return { (void*)this, "bForceNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNonBlockingHits()
-    { return { (void*)this, "bForceNonBlockingHits" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventSeamlessTravel()
-    { return { (void*)this, "bForcePreventSeamlessTravel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceReplicateDormantChildrenWithoutSpatialRelevancy()
-    { return { (void*)this, "bForceReplicateDormantChildrenWithoutSpatialRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bForceUseTickFunction()
-    { return { (void*)this, "bForceUseTickFunction" }; }
-    BitFieldValue<bool, unsigned __int32> bForcedHudDrawingRequiresSameTeam()
-    { return { (void*)this, "bForcedHudDrawingRequiresSameTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bFragmentate()
-    { return { (void*)this, "bFragmentate" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEventsDuringLevelStreaming()
-    { return { (void*)this, "bGenerateOverlapEventsDuringLevelStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bHadAttachParent()
-    { return { (void*)this, "bHadAttachParent" }; }
-    BitFieldValue<bool, unsigned __int32> bHasHighVolumeRPCs()
-    { return { (void*)this, "bHasHighVolumeRPCs" }; }
-    BitFieldValue<bool, unsigned __int32> bHasImpacted()
-    { return { (void*)this, "bHasImpacted" }; }
-    BitFieldValue<bool, unsigned __int32> bHibernateChange()
-    { return { (void*)this, "bHibernateChange" }; }
-    BitFieldValue<bool, unsigned __int32> bHidden()
-    { return { (void*)this, "bHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDirectImpactRadialDamage()
-    { return { (void*)this, "bIgnoreDirectImpactRadialDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNetworkRangeScaling()
-    { return { (void*)this, "bIgnoreNetworkRangeScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByTurrets()
-    { return { (void*)this, "bIgnoredByTurrets" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoresOriginShifting()
-    { return { (void*)this, "bIgnoresOriginShifting" }; }
-    BitFieldValue<bool, unsigned __int32> bImpactPvEOnlyAlly()
-    { return { (void*)this, "bImpactPvEOnlyAlly" }; }
-    BitFieldValue<bool, unsigned __int32> bImpactRequiresDinoLineOfSight()
-    { return { (void*)this, "bImpactRequiresDinoLineOfSight" }; }
-    BitFieldValue<bool, unsigned __int32> bImpactSetRotationToNormal()
-    { return { (void*)this, "bImpactSetRotationToNormal" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyedFromChildActorComponent()
-    { return { (void*)this, "bIsDestroyedFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnlyActor()
-    { return { (void*)this, "bIsEditorOnlyActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromChildActorComponent()
-    { return { (void*)this, "bIsFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsGlowStick()
-    { return { (void*)this, "bIsGlowStick" }; }
-    BitFieldValue<bool, unsigned __int32> bIsGlowStickSelf()
-    { return { (void*)this, "bIsGlowStickSelf" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInvincible()
-    { return { (void*)this, "bIsInvincible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMapActor()
-    { return { (void*)this, "bIsMapActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidUnstasisCaster()
-    { return { (void*)this, "bIsValidUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bLoadedFromSaveGame()
-    { return { (void*)this, "bLoadedFromSaveGame" }; }
-    BitFieldValue<bool, unsigned __int32> bMoveIgnoreOwner()
-    { return { (void*)this, "bMoveIgnoreOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiTraceCollideAgainstPawns()
-    { return { (void*)this, "bMultiTraceCollideAgainstPawns" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiUseCenterHUD()
-    { return { (void*)this, "bMultiUseCenterHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bNetCritical()
-    { return { (void*)this, "bNetCritical" }; }
-    BitFieldValue<bool, unsigned __int32> bNetLoadOnClient()
-    { return { (void*)this, "bNetLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bNetTemporary()
-    { return { (void*)this, "bNetTemporary" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseClientRelevancy()
-    { return { (void*)this, "bNetUseClientRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseOwnerRelevancy()
-    { return { (void*)this, "bNetUseOwnerRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSpatializationForceRelevancyCheck()
-    { return { (void*)this, "bNetworkSpatializationForceRelevancyCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bNoImpactEmitterOnCharacterHit()
-    { return { (void*)this, "bNoImpactEmitterOnCharacterHit" }; }
-    BitFieldValue<bool, unsigned __int32> bNonBlockingImpactNoExplosionEmitter()
-    { return { (void*)this, "bNonBlockingImpactNoExplosionEmitter" }; }
-    BitFieldValue<bool, unsigned __int32> bNonBlockingVolumeMustBeWater()
-    { return { (void*)this, "bNonBlockingVolumeMustBeWater" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyReplicateOnNetForcedUpdate()
-    { return { (void*)this, "bOnlyReplicateOnNetForcedUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventActorStasis()
-    { return { (void*)this, "bPreventActorStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasingAllowSteppingUp()
-    { return { (void*)this, "bPreventCharacterBasingAllowSteppingUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCliffPlatforms()
-    { return { (void*)this, "bPreventCliffPlatforms" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLevelBoundsRelevant()
-    { return { (void*)this, "bPreventLevelBoundsRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNPCSpawnFloor()
-    { return { (void*)this, "bPreventNPCSpawnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventReflecting()
-    { return { (void*)this, "bPreventReflecting" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularForceNetUpdate()
-    { return { (void*)this, "bPreventRegularForceNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSaving()
-    { return { (void*)this, "bPreventSaving" }; }
-    BitFieldValue<bool, unsigned __int32> bRadialDamageIgnoreDamageCauser()
-    { return { (void*)this, "bRadialDamageIgnoreDamageCauser" }; }
-    BitFieldValue<bool, unsigned __int32> bRealtimeThrottledTickUseNativeTick()
-    { return { (void*)this, "bRealtimeThrottledTickUseNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForLevelBounds()
-    { return { (void*)this, "bRelevantForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForNetworkReplays()
-    { return { (void*)this, "bRelevantForNetworkReplays" }; }
-    BitFieldValue<bool, unsigned __int32> bReplayRewindable()
-    { return { (void*)this, "bReplayRewindable" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateHidden()
-    { return { (void*)this, "bReplicateHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateImpact()
-    { return { (void*)this, "bReplicateImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateMovement()
-    { return { (void*)this, "bReplicateMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bResetHasImpactedOnMultiTraceForBlocking()
-    { return { (void*)this, "bResetHasImpactedOnMultiTraceForBlocking" }; }
-    BitFieldValue<bool, unsigned __int32> bRotateMeshWhileMoving()
-    { return { (void*)this, "bRotateMeshWhileMoving" }; }
-    BitFieldValue<bool, unsigned __int32> bSavedWhenStasised()
-    { return { (void*)this, "bSavedWhenStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bSpawnExplosionTemplateOnClient()
-    { return { (void*)this, "bSpawnExplosionTemplateOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bSpawnImpactEffectOnHit()
-    { return { (void*)this, "bSpawnImpactEffectOnHit" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisComponentRadiusForceDistanceCheck()
-    { return { (void*)this, "bStasisComponentRadiusForceDistanceCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bStasised()
-    { return { (void*)this, "bStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bStopOnExplode()
-    { return { (void*)this, "bStopOnExplode" }; }
-    BitFieldValue<bool, unsigned __int32> bTearOff()
-    { return { (void*)this, "bTearOff" }; }
-    BitFieldValue<bool, unsigned __int32> bTickedNonBlockingHitImpactFX()
-    { return { (void*)this, "bTickedNonBlockingHitImpactFX" }; }
-    BitFieldValue<bool, unsigned __int32> bTraceForBlockingDoImpactBackTrace()
-    { return { (void*)this, "bTraceForBlockingDoImpactBackTrace" }; }
-    BitFieldValue<bool, unsigned __int32> bTriggerDealtDirectDamageEvent()
-    { return { (void*)this, "bTriggerDealtDirectDamageEvent" }; }
-    BitFieldValue<bool, unsigned __int32> bUnstreamComponentsUseEndOverlap()
-    { return { (void*)this, "bUnstreamComponentsUseEndOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bUseActorNotifyCustomEventBP()
-    { return { (void*)this, "bUseActorNotifyCustomEventBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachmentReplication()
-    { return { (void*)this, "bUseAttachmentReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowActorSpawn()
-    { return { (void*)this, "bUseBPAllowActorSpawn" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPChangedActorTeam()
-    { return { (void*)this, "bUseBPChangedActorTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckForErrors()
-    { return { (void*)this, "bUseBPCheckForErrors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomIsRelevantForClient()
-    { return { (void*)this, "bUseBPCustomIsRelevantForClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawEntry()
-    { return { (void*)this, "bUseBPDrawEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFilterMultiUseEntries()
-    { return { (void*)this, "bUseBPFilterMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowsInventoryUse()
-    { return { (void*)this, "bUseBPForceAllowsInventoryUse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetBonesToHideOnAllocation()
-    { return { (void*)this, "bUseBPGetBonesToHideOnAllocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetCameraCollisionIgnoreActors()
-    { return { (void*)this, "bUseBPGetCameraCollisionIgnoreActors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetHUDDrawLocationOffset()
-    { return { (void*)this, "bUseBPGetHUDDrawLocationOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterText()
-    { return { (void*)this, "bUseBPGetMultiUseCenterText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterTextWithName()
-    { return { (void*)this, "bUseBPGetMultiUseCenterTextWithName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOrbitCamTargetLocation()
-    { return { (void*)this, "bUseBPGetOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetShowDebugAnimationComponents()
-    { return { (void*)this, "bUseBPGetShowDebugAnimationComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPIgnoreProjectileImpact()
-    { return { (void*)this, "bUseBPIgnoreProjectileImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPIgnoreRadialDamageVictim()
-    { return { (void*)this, "bUseBPIgnoreRadialDamageVictim" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemDropped()
-    { return { (void*)this, "bUseBPInventoryItemDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemUsed()
-    { return { (void*)this, "bUseBPInventoryItemUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTargetingLocation()
-    { return { (void*)this, "bUseBPOverrideTargetingLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideUILocation()
-    { return { (void*)this, "bUseBPOverrideUILocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventAttachments()
-    { return { (void*)this, "bUseBPPreventAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPProjectileBounced()
-    { return { (void*)this, "bUseBPProjectileBounced" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRadialDamageMultiplier()
-    { return { (void*)this, "bUseBPRadialDamageMultiplier" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPUpdateExplosionEmitter()
-    { return { (void*)this, "bUseBPUpdateExplosionEmitter" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCanMoveThroughActor()
-    { return { (void*)this, "bUseCanMoveThroughActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseClientHitDetermination()
-    { return { (void*)this, "bUseClientHitDetermination" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomColor()
-    { return { (void*)this, "bUseCustomColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMultiTraceForBlocking()
-    { return { (void*)this, "bUseMultiTraceForBlocking" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNetworkSpatialization()
-    { return { (void*)this, "bUseNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnlyPointForLevelBounds()
-    { return { (void*)this, "bUseOnlyPointForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOwnerProjectileLife()
-    { return { (void*)this, "bUseOwnerProjectileLife" }; }
-    BitFieldValue<bool, unsigned __int32> bUseProjectileTraceChannel()
-    { return { (void*)this, "bUseProjectileTraceChannel" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStasisGrid()
-    { return { (void*)this, "bUseStasisGrid" }; }
-    BitFieldValue<bool, unsigned __int32> bUseTraceForBlocking()
-    { return { (void*)this, "bUseTraceForBlocking" }; }
-    BitFieldValue<bool, unsigned __int32> bUseTraceForBlockingStopOnExplode()
-    { return { (void*)this, "bUseTraceForBlockingStopOnExplode" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWeaponColorization()
-    { return { (void*)this, "bUseWeaponColorization" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPerformanceThrottledTick()
-    { return { (void*)this, "bWantsPerformanceThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsRealtimeThrottledTick()
-    { return { (void*)this, "bWantsRealtimeThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsServerThrottledTick()
-    { return { (void*)this, "bWantsServerThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWeaponColorizationColorizeVFX()
-    { return { (void*)this, "bWeaponColorizationColorizeVFX" }; }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForceUseTickFunctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForceUseTickFunction")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bForcedHudDrawingRequiresSameTeam")); }
+    BrzCampoPonteiro bFragmentateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bFragmentate")); }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bHadAttachParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bHadAttachParent")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHasImpactedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bHasImpacted")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bHibernateChange")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bHidden")); }
+    BrzCampoPonteiro bIgnoreDirectImpactRadialDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIgnoreDirectImpactRadialDamage")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIgnoredByTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIgnoredByTurrets")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIgnoresOriginShifting")); }
+    BrzCampoPonteiro bImpactPvEOnlyAllyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bImpactPvEOnlyAlly")); }
+    BrzCampoPonteiro bImpactRequiresDinoLineOfSightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bImpactRequiresDinoLineOfSight")); }
+    BrzCampoPonteiro bImpactSetRotationToNormalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bImpactSetRotationToNormal")); }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsGlowStickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsGlowStick")); }
+    BrzCampoPonteiro bIsGlowStickSelfField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsGlowStickSelf")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsInvincible")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsMapActor")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bIsValidUnstasisCaster")); }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bMoveIgnoreOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bMoveIgnoreOwner")); }
+    BrzCampoPonteiro bMultiTraceCollideAgainstPawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bMultiTraceCollideAgainstPawns")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNetCritical")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bNoImpactEmitterOnCharacterHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNoImpactEmitterOnCharacterHit")); }
+    BrzCampoPonteiro bNonBlockingImpactNoExplosionEmitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNonBlockingImpactNoExplosionEmitter")); }
+    BrzCampoPonteiro bNonBlockingVolumeMustBeWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bNonBlockingVolumeMustBeWater")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventReflectingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventReflecting")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bPreventSaving")); }
+    BrzCampoPonteiro bRadialDamageIgnoreDamageCauserField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bRadialDamageIgnoreDamageCauser")); }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bRelevantForNetworkReplays")); }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bReplicateHidden")); }
+    BrzCampoPonteiro bReplicateImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bReplicateImpact")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bReplicates")); }
+    BrzCampoPonteiro bResetHasImpactedOnMultiTraceForBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bResetHasImpactedOnMultiTraceForBlocking")); }
+    BrzCampoPonteiro bRotateMeshWhileMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bRotateMeshWhileMoving")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bSavedWhenStasised")); }
+    BrzCampoPonteiro bSpawnExplosionTemplateOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bSpawnExplosionTemplateOnClient")); }
+    BrzCampoPonteiro bSpawnImpactEffectOnHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bSpawnImpactEffectOnHit")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bStasised")); }
+    BrzCampoPonteiro bStopOnExplodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bStopOnExplode")); }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bTearOff")); }
+    BrzCampoPonteiro bTickedNonBlockingHitImpactFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bTickedNonBlockingHitImpactFX")); }
+    BrzCampoPonteiro bTraceForBlockingDoImpactBackTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bTraceForBlockingDoImpactBackTrace")); }
+    BrzCampoPonteiro bTriggerDealtDirectDamageEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bTriggerDealtDirectDamageEvent")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPIgnoreProjectileImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPIgnoreProjectileImpact")); }
+    BrzCampoPonteiro bUseBPIgnoreRadialDamageVictimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPIgnoreRadialDamageVictim")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseBPProjectileBouncedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPProjectileBounced")); }
+    BrzCampoPonteiro bUseBPRadialDamageMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPRadialDamageMultiplier")); }
+    BrzCampoPonteiro bUseBPUpdateExplosionEmitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseBPUpdateExplosionEmitter")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseClientHitDeterminationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseClientHitDetermination")); }
+    BrzCampoPonteiro bUseCustomColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseCustomColor")); }
+    BrzCampoPonteiro bUseMultiTraceForBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseMultiTraceForBlocking")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUseOwnerProjectileLifeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseOwnerProjectileLife")); }
+    BrzCampoPonteiro bUseProjectileTraceChannelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseProjectileTraceChannel")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseStasisGrid")); }
+    BrzCampoPonteiro bUseTraceForBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseTraceForBlocking")); }
+    BrzCampoPonteiro bUseTraceForBlockingStopOnExplodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseTraceForBlockingStopOnExplode")); }
+    BrzCampoPonteiro bUseWeaponColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bUseWeaponColorization")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bWantsServerThrottledTick")); }
+    BrzCampoPonteiro bWeaponColorizationColorizeVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShipCannonProjectile.bWeaponColorizationColorizeVFX")); }
 };
 
 #endif  // BRZ_SDK_JOGO_APRIMALSHIPCANNONPROJECTILE_H

@@ -49,7 +49,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.ClientProcessNetExecCommandBP(AActor*,FName,FBPNetExecParams)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientProcessNetExecCommandBP(void* a0, unsigned long long a1, void* a2) const
     {
         NativeCall<void, void*, unsigned long long, void*>(this, "APrimalPlayerController.ClientProcessNetExecCommandBP(AActor*,FName,FBPNetExecParams)", a0, a1, a2);
@@ -65,7 +65,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.ClientProcessNetExecCommandUnreliableBP(AActor*,FName,FBPNetExecParams)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientProcessNetExecCommandUnreliableBP(void* a0, unsigned long long a1, void* a2) const
     {
         NativeCall<void, void*, unsigned long long, void*>(this, "APrimalPlayerController.ClientProcessNetExecCommandUnreliableBP(AActor*,FName,FBPNetExecParams)", a0, a1, a2);
@@ -81,7 +81,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.ClientProcessSimpleNetExecCommandBP_Implementation(AActor*,FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=217+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientProcessSimpleNetExecCommandBP_Implementation(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "APrimalPlayerController.ClientProcessSimpleNetExecCommandBP_Implementation(AActor*,FName)", a0, a1);
@@ -89,7 +89,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.ClientProcessSimpleNetExecCommandUnreliableBP_Implementation(AActor*,FNa
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=149+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientProcessSimpleNetExecCommandUnreliableBP_Implementation(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "APrimalPlayerController.ClientProcessSimpleNetExecCommandUnreliableBP_Implementation(AActor*,FName)", a0, a1);
@@ -105,7 +105,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.ClientSetHUD_Implementation(TSubclassOf<AHUD>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=98]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientSetHUD_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalPlayerController.ClientSetHUD_Implementation(TSubclassOf<AHUD>)", a0);
@@ -113,7 +113,7 @@ struct APrimalPlayerController : public APlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalPlayerController.ComponentPropertyServerToClients(UActorComponent*,FName,TArray<unsignedc
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ComponentPropertyServerToClients(void* a0, unsigned long long a1, void* a2) const
     {
         return NativeCall<void*, void*, unsigned long long, void*>(this, "APrimalPlayerController.ComponentPropertyServerToClients(UActorComponent*,FName,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -121,7 +121,7 @@ struct APrimalPlayerController : public APlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalPlayerController.ComponentPropertyServerToClientsUnreliable(UActorComponent*,FName,TArray
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ComponentPropertyServerToClientsUnreliable(void* a0, unsigned long long a1, void* a2) const
     {
         return NativeCall<void*, void*, unsigned long long, void*>(this, "APrimalPlayerController.ComponentPropertyServerToClientsUnreliable(UActorComponent*,FName,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -137,7 +137,7 @@ struct APrimalPlayerController : public APlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalPlayerController.GetLevelStreamingPawnViewLocation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=285]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetLevelStreamingPawnViewLocation() const
     {
         return NativeCall<void*>(this, "APrimalPlayerController.GetLevelStreamingPawnViewLocation()");
@@ -161,7 +161,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.PropertyServerToClients(AActor*,FName,TArray<unsignedchar,TSizedDefaultA
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PropertyServerToClients(void* a0, unsigned long long a1, void* a2) const
     {
         NativeCall<void, void*, unsigned long long, void*>(this, "APrimalPlayerController.PropertyServerToClients(AActor*,FName,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -169,7 +169,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.PropertyServerToClientsUnreliable(AActor*,FName,TArray<unsignedchar,TSiz
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PropertyServerToClientsUnreliable(void* a0, unsigned long long a1, void* a2) const
     {
         NativeCall<void, void*, unsigned long long, void*>(this, "APrimalPlayerController.PropertyServerToClientsUnreliable(AActor*,FName,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -177,7 +177,7 @@ struct APrimalPlayerController : public APlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPlayerController.PropertyServerToClientsUnreliable_Implementation(AActor*,FName,TArray<un
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PropertyServerToClientsUnreliable_Implementation(void* a0, unsigned long long a1, void* a2) const
     {
         NativeCall<void, void*, unsigned long long, void*>(this, "APrimalPlayerController.PropertyServerToClientsUnreliable_Implementation(AActor*,FName,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -185,7 +185,7 @@ struct APrimalPlayerController : public APlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalPlayerController.ServerProcessNetExecCommand(AActor*,FName,FBPNetExecParams)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=254+grafo=9/9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerProcessNetExecCommand(void* a0, unsigned long long a1, void* a2) const
     {
         return NativeCall<void*, void*, unsigned long long, void*>(this, "APrimalPlayerController.ServerProcessNetExecCommand(AActor*,FName,FBPNetExecParams)", a0, a1, a2);
@@ -201,6 +201,16 @@ struct APrimalPlayerController : public APlayerController
 
     BrzCampoPonteiro PreviousRotationInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPlayerController.PreviousRotationInput")); }
+    BrzCampoPonteiro bCheatPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPlayerController.bCheatPlayer")); }
+    BrzCampoPonteiro bForceShowMouseCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPlayerController.bForceShowMouseCursor")); }
+    BrzCampoPonteiro bIsAdminField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPlayerController.bIsAdmin")); }
+    BrzCampoPonteiro bLockedInputUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPlayerController.bLockedInputUI")); }
+    BrzCampoPonteiro bShowExtendedInfoKeyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPlayerController.bShowExtendedInfoKey")); }
     BitFieldValue<bool, unsigned __int32> bLockedInputUI()
     { return { (void*)this, "bLockedInputUI" }; }
     BitFieldValue<bool, unsigned __int32> bPossessedAnyPawn()

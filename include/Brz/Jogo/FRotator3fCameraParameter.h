@@ -33,8 +33,8 @@ struct FRotator3fCameraParameter
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FRotator3fCameraParameter.Value")); }
     BrzCampoPonteiro VariableField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FRotator3fCameraParameter.Variable")); }
 };

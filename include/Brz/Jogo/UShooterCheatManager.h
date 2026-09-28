@@ -95,7 +95,7 @@ struct UShooterCheatManager : public UCheatManager
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCheatManager.AddExperience(float,bool,bool,EXPType::Type)
     // classe: a funcao mora em AShooterPlayerController, e UShooterCheatManager herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AddExperience(float a0, bool a1, bool a2, int a3) const
     {
         return NativeCall<void*, float, bool, bool, int>(this, "AShooterPlayerController.AddExperience(float,bool,bool,EXPType::Type)", a0, a1, a2, a3);
@@ -191,7 +191,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.AddWorldBuff(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=100]]
+    // endereco: casamento de bytes com a build de referencia
     void AddWorldBuff(const FString& a0) const
     {
         NativeCall<void, void*>(this, "UShooterCheatManager.AddWorldBuff(FString&)", const_cast<FString*>(&a0));
@@ -307,7 +307,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.CamZoomIn()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=89]]
+    // endereco: casamento de bytes com a build de referencia
     void CamZoomIn() const
     {
         NativeCall<void>(this, "UShooterCheatManager.CamZoomIn()");
@@ -447,7 +447,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.CryoAOE(float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=408+bytes40+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void CryoAOE(float a0) const
     {
         NativeCall<void, float>(this, "UShooterCheatManager.CryoAOE(float)", a0);
@@ -455,7 +455,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.CryoMyTarget()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void CryoMyTarget() const
     {
         NativeCall<void>(this, "UShooterCheatManager.CryoMyTarget()");
@@ -499,7 +499,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DebugCompanionAsyncLoadedFiles()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=180]]
+    // endereco: casamento de bytes com a build de referencia
     void DebugCompanionAsyncLoadedFiles() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DebugCompanionAsyncLoadedFiles()");
@@ -507,7 +507,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DebugCompanionReactions()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=175]]
+    // endereco: casamento de bytes com a build de referencia
     void DebugCompanionReactions() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DebugCompanionReactions()");
@@ -575,7 +575,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DestroyAllEnemies()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=923+grafo=8/10]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=923+grafo=7/7]]
     void DestroyAllEnemies() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DestroyAllEnemies()");
@@ -607,7 +607,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DestroyMyTarget()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=687+grafo=9/9]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=687+grafo=8/8]]
     void DestroyMyTarget() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DestroyMyTarget()");
@@ -631,7 +631,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DestroyStructures()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=939+grafo=8/10]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=939+grafo=7/7]]
     void DestroyStructures() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DestroyStructures()");
@@ -723,7 +723,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DetachChar()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DetachChar() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DetachChar()");
@@ -803,7 +803,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DoDestroyTribeIdStructures()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoDestroyTribeIdStructures() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DoDestroyTribeIdStructures()");
@@ -843,7 +843,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.DoStall(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoStall(float a0) const
     {
         NativeCall<void, float>(this, "UShooterCheatManager.DoStall(float)", a0);
@@ -863,7 +863,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DoTame()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoTame() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DoTame()");
@@ -871,7 +871,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.DoTestingThing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoTestingThing() const
     {
         NativeCall<void>(this, "UShooterCheatManager.DoTestingThing()");
@@ -979,7 +979,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.FillTradeLog(int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=4473+bytes40+grafo=91/92]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=4473+bytes40+grafo=85/86]]
     void FillTradeLog(int a0) const
     {
         NativeCall<void, int>(this, "UShooterCheatManager.FillTradeLog(int)", a0);
@@ -1003,7 +1003,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.FoShoDestroyMyTarget()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=654+grafo=9/9]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=654+grafo=8/8]]
     void FoShoDestroyMyTarget() const
     {
         NativeCall<void>(this, "UShooterCheatManager.FoShoDestroyMyTarget()");
@@ -1135,7 +1135,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ForceTame()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ForceTame() const
     {
         NativeCall<void>(this, "UShooterCheatManager.ForceTame()");
@@ -1143,7 +1143,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ForceTameAOE(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ForceTameAOE(float a0) const
     {
         NativeCall<void, float>(this, "UShooterCheatManager.ForceTameAOE(float)", a0);
@@ -1191,7 +1191,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GCM()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GCM() const
     {
         NativeCall<void>(this, "UShooterCheatManager.GCM()");
@@ -1199,7 +1199,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GCMP(__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GCMP(long long a0) const
     {
         NativeCall<void, long long>(this, "UShooterCheatManager.GCMP(__int64)", a0);
@@ -1207,7 +1207,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GCMT()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GCMT() const
     {
         NativeCall<void>(this, "UShooterCheatManager.GCMT()");
@@ -1251,7 +1251,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GMBuff()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void GMBuff() const
     {
         NativeCall<void>(this, "UShooterCheatManager.GMBuff()");
@@ -1312,9 +1312,9 @@ struct UShooterCheatManager : public UCheatManager
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GetAllNumbers()
     // endereco: casamento de bytes com a build de referencia
-    static void GetAllNumbers()
+    void GetAllNumbers() const
     {
-        NativeCall<void>(nullptr, "UShooterCheatManager.GetAllNumbers()");
+        NativeCall<void>(this, "UShooterCheatManager.GetAllNumbers()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -1411,11 +1411,11 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GetWorld()
-    // classe: a funcao mora em AActor, e UShooterCheatManager herda dela: o `this` e' compativel por construcao
+    // classe: a funcao mora em UCheatManager, e UShooterCheatManager herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     UWorld* GetWorld() const
     {
-        return NativeCall<UWorld*>(this, "AActor.GetWorld()");
+        return NativeCall<UWorld*>(this, "UCheatManager.GetWorld()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -1500,7 +1500,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GiveCreativeModeToPlayer(__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=445+grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     void GiveCreativeModeToPlayer(long long a0) const
     {
         NativeCall<void, long long>(this, "UShooterCheatManager.GiveCreativeModeToPlayer(__int64)", a0);
@@ -1524,7 +1524,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GiveEngrams()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GiveEngrams() const
     {
         NativeCall<void>(this, "UShooterCheatManager.GiveEngrams()");
@@ -1532,7 +1532,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GiveEngramsTekOnly()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GiveEngramsTekOnly() const
     {
         NativeCall<void>(this, "UShooterCheatManager.GiveEngramsTekOnly()");
@@ -1740,7 +1740,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.HidePlayer(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void HidePlayer(bool a0) const
     {
         NativeCall<void, bool>(this, "UShooterCheatManager.HidePlayer(bool)", a0);
@@ -1816,7 +1816,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.Kill()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void Kill() const
     {
         NativeCall<void>(this, "UShooterCheatManager.Kill()");
@@ -1928,7 +1928,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ListAllPlayerBuffs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=211+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ListAllPlayerBuffs() const
     {
         NativeCall<void>(this, "UShooterCheatManager.ListAllPlayerBuffs()");
@@ -1961,9 +1961,9 @@ struct UShooterCheatManager : public UCheatManager
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ListDinos()
     // endereco: casamento de bytes com a build de referencia
-    static void ListDinos(void* retorno)
+    void ListDinos(void* retorno) const
     {
-        NativeCall<void, void*>(nullptr, "UShooterCheatManager.ListDinos()", retorno);
+        NativeCall<void, void*>(this, "UShooterCheatManager.ListDinos()", retorno);
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -2056,7 +2056,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.MakeTribeAdmin()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MakeTribeAdmin() const
     {
         NativeCall<void>(this, "UShooterCheatManager.MakeTribeAdmin()");
@@ -2104,7 +2104,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.OneHP()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=119]]
+    // endereco: casamento de bytes com a build de referencia
     void OneHP() const
     {
         NativeCall<void>(this, "UShooterCheatManager.OneHP()");
@@ -2141,13 +2141,13 @@ struct UShooterCheatManager : public UCheatManager
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCheatManager.OwnsDLC(FString&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro OwnsDLC(const FString& a0)
+    BrzPonteiro OwnsDLC(const FString& a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "UShooterCheatManager.OwnsDLC(FString&)", const_cast<FString*>(&a0));
+        return NativeCall<void*, void*>(this, "UShooterCheatManager.OwnsDLC(FString&)", const_cast<FString*>(&a0));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static BrzPonteiro OwnsDLC(FString* a0)
+    BrzPonteiro OwnsDLC(FString* a0) const
     { return OwnsDLC(*a0); }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -2180,7 +2180,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.PerformGCAndCleanupActors()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PerformGCAndCleanupActors() const
     {
         NativeCall<void>(this, "UShooterCheatManager.PerformGCAndCleanupActors()");
@@ -2388,7 +2388,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.RemoveAccessories()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=363]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveAccessories() const
     {
         NativeCall<void>(this, "UShooterCheatManager.RemoveAccessories()");
@@ -2424,7 +2424,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.RemoveWorldBuff(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=94]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveWorldBuff(const FString& a0) const
     {
         NativeCall<void, void*>(this, "UShooterCheatManager.RemoveWorldBuff(FString&)", const_cast<FString*>(&a0));
@@ -2556,7 +2556,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.ResetSparseDataModifications()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetSparseDataModifications() const
     {
         NativeCall<void>(this, "UShooterCheatManager.ResetSparseDataModifications()");
@@ -2584,7 +2584,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.SAP()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SAP() const
     {
         NativeCall<void>(this, "UShooterCheatManager.SAP()");
@@ -2644,7 +2644,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.SaveBackup()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SaveBackup() const
     {
         NativeCall<void>(this, "UShooterCheatManager.SaveBackup()");
@@ -2652,10 +2652,10 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.SaveWorld()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
-    static void SaveWorld()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    void SaveWorld() const
     {
-        NativeCall<void>(nullptr, "UShooterCheatManager.SaveWorld()");
+        NativeCall<void>(this, "UShooterCheatManager.SaveWorld()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -2712,7 +2712,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ServerChatTo(FString&,FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=264+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerChatTo(const FString& a0, const FString& a1) const
     {
         NativeCall<void, void*, void*>(this, "UShooterCheatManager.ServerChatTo(FString&,FString&)", const_cast<FString*>(&a0), const_cast<FString*>(&a1));
@@ -2724,7 +2724,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ServerChatToPlayer(FString&,FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=271+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerChatToPlayer(const FString& a0, const FString& a1) const
     {
         NativeCall<void, void*, void*>(this, "UShooterCheatManager.ServerChatToPlayer(FString&,FString&)", const_cast<FString*>(&a0), const_cast<FString*>(&a1));
@@ -2905,7 +2905,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.SetShowAllPlayers(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetShowAllPlayers(bool a0) const
     {
         NativeCall<void, bool>(this, "UShooterCheatManager.SetShowAllPlayers(bool)", a0);
@@ -3174,13 +3174,13 @@ struct UShooterCheatManager : public UCheatManager
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.SpawnDino(FString&,float,float,float,int)
     // endereco: casamento de bytes com a build de referencia
-    static void SpawnDino(const FString& a0, float a1, float a2, float a3, int a4)
+    void SpawnDino(const FString& a0, float a1, float a2, float a3, int a4) const
     {
-        NativeCall<void, void*, float, float, float, int>(nullptr, "UShooterCheatManager.SpawnDino(FString&,float,float,float,int)", const_cast<FString*>(&a0), a1, a2, a3, a4);
+        NativeCall<void, void*, float, float, float, int>(this, "UShooterCheatManager.SpawnDino(FString&,float,float,float,int)", const_cast<FString*>(&a0), a1, a2, a3, a4);
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static void SpawnDino(FString* a0, float a1, float a2, float a3, int a4)
+    void SpawnDino(FString* a0, float a1, float a2, float a3, int a4) const
     { SpawnDino(*a0, a1, a2, a3, a4); }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -3317,7 +3317,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.StartPerformanceRecording()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartPerformanceRecording() const
     {
         NativeCall<void>(this, "UShooterCheatManager.StartPerformanceRecording()");
@@ -3325,7 +3325,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCheatManager.StartPerformanceRecordingOfChannels(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StartPerformanceRecordingOfChannels(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterCheatManager.StartPerformanceRecordingOfChannels(FString&)", const_cast<FString*>(&a0));
@@ -3353,7 +3353,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.StopPerformanceRecording()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void StopPerformanceRecording() const
     {
         NativeCall<void>(this, "UShooterCheatManager.StopPerformanceRecording()");
@@ -3385,7 +3385,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.TOD(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TOD(const FString& a0) const
     {
         NativeCall<void, void*>(this, "UShooterCheatManager.TOD(FString&)", const_cast<FString*>(&a0));
@@ -3417,7 +3417,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.TPName(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TPName(const FString& a0) const
     {
         NativeCall<void, void*>(this, "UShooterCheatManager.TPName(FString&)", const_cast<FString*>(&a0));
@@ -3465,7 +3465,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.TacoBell()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=301]]
+    // endereco: casamento de bytes com a build de referencia
     void TacoBell() const
     {
         NativeCall<void>(this, "UShooterCheatManager.TacoBell()");
@@ -3565,7 +3565,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ToggleClawStepping()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void ToggleClawStepping() const
     {
         NativeCall<void>(this, "UShooterCheatManager.ToggleClawStepping()");
@@ -3669,7 +3669,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.ToggleVolumetricDispatcher()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ToggleVolumetricDispatcher() const
     {
         NativeCall<void>(this, "UShooterCheatManager.ToggleVolumetricDispatcher()");
@@ -3826,27 +3826,29 @@ struct UShooterCheatManager : public UCheatManager
     BrzCampoPonteiro CheatManagerExtentionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCheatManager.CheatManagerExtentions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsRCONCheatManager` +8, medido na build 25090264
+    //  ancorado em `bIsRCONCheatManager` +8, medido na build 25535041
     //  (offset absoluto medido: 0xB8; confianca alta)
     AShooterPlayerController*& MyPCField() const
     { return BrzCampoAncorado<AShooterPlayerController*>(this, "bIsRCONCheatManager", 8); }
     BrzCampoPonteiro PaintModeTimerHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCheatManager.PaintModeTimerHandle")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatManagerExtentions` +24, medido na build 25090264
+    //  ancorado em `CheatManagerExtentions` +24, medido na build 25535041
     //  (offset absoluto medido: 0xA0; confianca alta)
     void*& PendingCheatCommandsField() const
     { return BrzCampoAncorado<void*>(this, "CheatManagerExtentions", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsRCONCheatManager` +16, medido na build 25090264
+    //  ancorado em `bIsRCONCheatManager` +16, medido na build 25535041
     //  (offset absoluto medido: 0xC0; confianca alta)
     int& PendingTribeTeamIDField() const
     { return BrzCampoAncorado<int>(this, "bIsRCONCheatManager", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatManagerExtentions` +16, medido na build 25090264
+    //  ancorado em `CheatManagerExtentions` +16, medido na build 25535041
     //  (offset absoluto medido: 0x98; confianca alta)
     void*& SpectatorTargetField() const
     { return BrzCampoAncorado<void*>(this, "CheatManagerExtentions", 16); }
+    BrzCampoPonteiro bIsRCONCheatManagerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCheatManager.bIsRCONCheatManager")); }
     BitFieldValue<bool, unsigned __int32> bIsRCONCheatManager()
     { return { (void*)this, "bIsRCONCheatManager" }; }
 

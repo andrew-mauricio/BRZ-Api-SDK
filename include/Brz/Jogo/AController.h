@@ -39,7 +39,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.AddPawnTickDependency(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=25]]
+    // endereco: casamento de bytes com a build de referencia
     void AddPawnTickDependency(void* a0) const
     {
         NativeCall<void, void*>(this, "AController.AddPawnTickDependency(APawn*)", a0);
@@ -47,7 +47,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.AttachToPawn(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=280]]
+    // endereco: casamento de bytes com a build de referencia
     void AttachToPawn(void* a0) const
     {
         NativeCall<void, void*>(this, "AController.AttachToPawn(APawn*)", a0);
@@ -95,7 +95,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=109+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "AController.Destroyed()");
@@ -111,7 +111,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.DisplayDebug(UCanvas*,FDebugDisplayInfo&,float&,float&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void DisplayDebug(void* a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, void*, void*, void*, void*>(this, "AController.DisplayDebug(UCanvas*,FDebugDisplayInfo&,float&,float&)", a0, a1, a2, a3);
@@ -127,7 +127,7 @@ struct AController : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AController.GetControlRotation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetControlRotation() const
     {
         return NativeCall<void*>(this, "AController.GetControlRotation()");
@@ -151,7 +151,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.GetMoveGoalReachTest(AActor*,UE::Math::TVector<double>&,UE::Math::TVector<double>&,f
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetMoveGoalReachTest(void* a0, void* a1, void* a2, void* a3, void* a4) const
     {
         NativeCall<void, void*, void*, void*, void*, void*>(this, "AController.GetMoveGoalReachTest(AActor*,UE::Math::TVector<double>&,UE::Math::TVector<double>&,float&,float&)", a0, a1, a2, a3, a4);
@@ -167,7 +167,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.GetNavAgentPropertiesRef()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNavAgentPropertiesRef() const
     {
         return NativeCall<void*>(this, "AController.GetNavAgentPropertiesRef()");
@@ -175,20 +175,19 @@ struct AController : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AController.GetPawn<APrimalPawn>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=56]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetPawn_APrimalPawn_() const
     {
         return NativeCall<void*>(this, "AController.GetPawn<APrimalPawn>()");
     }
 
-    // ── NAO EXISTE COMO FUNCAO: e' `inline` na Unreal ──────────────
-    //
-    //   AController.GetStateName() nao tem endereco nesta build e nao vai ter:
-    //   o compilador dissolve o getter dentro de quem chama.
-    //   Ate' 09/09/2026 esta chamada devolvia o ZERO do tipo.
-    //
-    //   Agora le' o campo, pela reflexao viva, como o resto do SDK.
-    FName GetStateName() const { return StateNameField(); }
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AController.GetStateName()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro GetStateName() const
+    {
+        return NativeCall<void*>(this, "AController.GetStateName()");
+    }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.InitPlayerState()
@@ -208,7 +207,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.IsInState(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsInState(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AController.IsInState(FName)", a0);
@@ -224,7 +223,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.IsLookInputIgnored()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsLookInputIgnored() const
     {
         return NativeCall<bool>(this, "AController.IsLookInputIgnored()");
@@ -232,7 +231,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.IsMoveInputIgnored()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsMoveInputIgnored() const
     {
         return NativeCall<bool>(this, "AController.IsMoveInputIgnored()");
@@ -264,7 +263,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.OnRep_PlayerState()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_PlayerState() const
     {
         NativeCall<void>(this, "AController.OnRep_PlayerState()");
@@ -272,7 +271,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.OnUnPossess()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=56]]
+    // endereco: casamento de bytes com a build de referencia
     void OnUnPossess() const
     {
         NativeCall<void>(this, "AController.OnUnPossess()");
@@ -296,7 +295,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "AController.PostInitializeComponents()");
@@ -304,7 +303,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.RemovePawnTickDependency(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=24]]
+    // endereco: casamento de bytes com a build de referencia
     void RemovePawnTickDependency(void* a0) const
     {
         NativeCall<void, void*>(this, "AController.RemovePawnTickDependency(APawn*)", a0);
@@ -312,7 +311,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.Reset()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void Reset() const
     {
         NativeCall<void>(this, "AController.Reset()");
@@ -320,7 +319,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.ResetIgnoreLookInput()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetIgnoreLookInput() const
     {
         NativeCall<void>(this, "AController.ResetIgnoreLookInput()");
@@ -328,7 +327,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.ResetIgnoreMoveInput()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetIgnoreMoveInput() const
     {
         NativeCall<void>(this, "AController.ResetIgnoreMoveInput()");
@@ -344,7 +343,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.SetIgnoreLookInput(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetIgnoreLookInput(bool a0) const
     {
         NativeCall<void, bool>(this, "AController.SetIgnoreLookInput(bool)", a0);
@@ -352,7 +351,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.SetIgnoreMoveInput(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetIgnoreMoveInput(bool a0) const
     {
         NativeCall<void, bool>(this, "AController.SetIgnoreMoveInput(bool)", a0);
@@ -368,7 +367,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.SetPawn(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetPawn(void* a0) const
     {
         NativeCall<void, void*>(this, "AController.SetPawn(APawn*)", a0);
@@ -376,7 +375,7 @@ struct AController : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AController.SetPawnFromRep(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=120]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetPawnFromRep(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AController.SetPawnFromRep(APawn*)", a0);
@@ -384,7 +383,7 @@ struct AController : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AController.SetPlayerState(APlayerState*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetPlayerState(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AController.SetPlayerState(APlayerState*)", a0);
@@ -392,7 +391,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.ShouldParticipateInSeamlessTravel()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldParticipateInSeamlessTravel() const
     {
         return NativeCall<bool>(this, "AController.ShouldParticipateInSeamlessTravel()");
@@ -400,7 +399,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.ShouldPostponePathUpdates()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldPostponePathUpdates() const
     {
         return NativeCall<bool>(this, "AController.ShouldPostponePathUpdates()");
@@ -417,7 +416,7 @@ struct AController : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AController.UnPossess()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UnPossess() const
     {
         NativeCall<void>(this, "AController.UnPossess()");
@@ -428,14 +427,14 @@ struct AController : public AActor
     BrzCampoPonteiro ControlRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AController.ControlRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Pawn` +8, medido na build 25090264
+    //  ancorado em `Pawn` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4D8; confianca alta)
     TWeakObjectPtr<void>& OldPawnField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "Pawn", 8); }
     BrzCampoPonteiro OnInstigatedAnyDamageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AController.OnInstigatedAnyDamage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TransformComponent` +8, medido na build 25090264
+    //  ancorado em `TransformComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4F0; confianca alta)
     void*& OnNewPawnField() const
     { return BrzCampoAncorado<void*>(this, "TransformComponent", 8); }
@@ -446,7 +445,7 @@ struct AController : public AActor
     TObjectPtr<APlayerState>& PlayerStateField() const
     { return *GetNativePointerField<TObjectPtr<APlayerState>*>(this, "AController.PlayerState"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerState` +8, medido na build 25090264
+    //  ancorado em `PlayerState` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4A0; confianca alta)
     TWeakObjectPtr<void>& StartSpotField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "PlayerState", 8); }
@@ -454,6 +453,10 @@ struct AController : public AActor
     { return *GetNativePointerField<FName*>(this, "AController.StateName"); }
     TObjectPtr<USceneComponent>& TransformComponentField() const
     { return *GetNativePointerField<TObjectPtr<USceneComponent>*>(this, "AController.TransformComponent"); }
+    BrzCampoPonteiro bAttachToPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AController.bAttachToPawn")); }
+    BrzCampoPonteiro bCanPossessWithoutAuthorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AController.bCanPossessWithoutAuthority")); }
     BitFieldValue<bool, unsigned __int32> bAttachToPawn()
     { return { (void*)this, "bAttachToPawn" }; }
     BitFieldValue<bool, unsigned __int32> bIsPlayerController()

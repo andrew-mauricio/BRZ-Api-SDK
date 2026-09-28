@@ -67,6 +67,14 @@ struct UGameplayAbilitiesDeveloperSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesDeveloperSettings.GlobalGameplayCueManagerName")); }
     int& MinimalReplicationTagCountBitsField() const
     { return *GetNativePointerField<int*>(this, "UGameplayAbilitiesDeveloperSettings.MinimalReplicationTagCountBits"); }
+    BrzCampoPonteiro PredictTargetGameplayEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesDeveloperSettings.PredictTargetGameplayEffects")); }
+    BrzCampoPonteiro ReplicateActivationOwnedTagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesDeveloperSettings.ReplicateActivationOwnedTags")); }
+    BrzCampoPonteiro bAllowGameplayModEvaluationChannelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesDeveloperSettings.bAllowGameplayModEvaluationChannels")); }
+    BrzCampoPonteiro bUseDebugTargetFromHudField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesDeveloperSettings.bUseDebugTargetFromHud")); }
     BitFieldValue<bool, unsigned __int32> PredictTargetGameplayEffects()
     { return { (void*)this, "PredictTargetGameplayEffects" }; }
     BitFieldValue<bool, unsigned __int32> ReplicateActivationOwnedTags()

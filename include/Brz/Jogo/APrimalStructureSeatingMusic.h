@@ -54,7 +54,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.OnAltFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=50]]
+    // endereco: casamento de bytes com a build de referencia
     void OnAltFire() const
     {
         NativeCall<void>(this, "APrimalStructureSeatingMusic.OnAltFire()");
@@ -62,7 +62,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.OnPrimaryFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=49]]
+    // endereco: casamento de bytes com a build de referencia
     void OnPrimaryFire() const
     {
         NativeCall<void>(this, "APrimalStructureSeatingMusic.OnPrimaryFire()");
@@ -70,7 +70,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.OnUseKey(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void OnUseKey(int a0) const
     {
         NativeCall<void, int>(this, "APrimalStructureSeatingMusic.OnUseKey(int)", a0);
@@ -78,16 +78,15 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.PostInitializeComponents()
-    // classe: a funcao mora em APrimalStructureSeating, e APrimalStructureSeatingMusic herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "APrimalStructureSeating.PostInitializeComponents()");
+        NativeCall<void>(this, "APrimalStructureSeatingMusic.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.Release(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=107]]
+    // endereco: casamento de bytes com a build de referencia
     void Release(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureSeatingMusic.Release(AShooterCharacter*)", a0);

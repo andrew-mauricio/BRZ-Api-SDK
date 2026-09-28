@@ -55,16 +55,24 @@ struct UPrimalNavigationSystemConfig
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.NavigationSystemClass")); }
     BrzCampoPonteiro SupportedAgentsMaskField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.SupportedAgentsMask")); }
-    BitFieldValue<bool, unsigned __int32> bAutoSpawnMissingNavData()
-    { return { (void*)this, "bAutoSpawnMissingNavData" }; }
-    BitFieldValue<bool, unsigned __int32> bCreateOnClient()
-    { return { (void*)this, "bCreateOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bIsOverriden()
-    { return { (void*)this, "bIsOverriden" }; }
-    BitFieldValue<bool, unsigned __int32> bSpawnNavDataInNavBoundsLevel()
-    { return { (void*)this, "bSpawnNavDataInNavBoundsLevel" }; }
-    BitFieldValue<bool, unsigned __int32> bStrictlyStatic()
-    { return { (void*)this, "bStrictlyStatic" }; }
+    BrzCampoPonteiro bAutoSpawnMissingNavDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bAutoSpawnMissingNavData")); }
+    BrzCampoPonteiro bCreateOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bCreateOnClient")); }
+    BrzCampoPonteiro bEnableGenerateNavigationOnlyAroundNavigationInvokersOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bEnableGenerateNavigationOnlyAroundNavigationInvokersOverride")); }
+    BrzCampoPonteiro bEnableShouldDiscardSubLevelNavDataOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bEnableShouldDiscardSubLevelNavDataOverride")); }
+    BrzCampoPonteiro bGenerateNavigationOnlyAroundNavigationInvokersOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bGenerateNavigationOnlyAroundNavigationInvokersOverride")); }
+    BrzCampoPonteiro bIsOverridenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bIsOverriden")); }
+    BrzCampoPonteiro bShouldDiscardSubLevelNavDataOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bShouldDiscardSubLevelNavDataOverride")); }
+    BrzCampoPonteiro bSpawnNavDataInNavBoundsLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bSpawnNavDataInNavBoundsLevel")); }
+    BrzCampoPonteiro bStrictlyStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystemConfig.bStrictlyStatic")); }
     BitFieldValue<bool, unsigned __int32> bEnableGenerateNavigationOnlyAroundNavigationInvokersOverride()
     { return { (void*)this, "bEnableGenerateNavigationOnlyAroundNavigationInvokersOverride" }; }
     BitFieldValue<bool, unsigned __int32> bEnableShouldDiscardSubLevelNavDataOverride()

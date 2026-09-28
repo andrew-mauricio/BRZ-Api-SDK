@@ -37,11 +37,14 @@ struct FVectorFieldTextureAccessor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FVectorFieldTextureAccessor.GetTexture()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UTexture2D* GetTexture() const
     {
         return NativeCall<UTexture2D*>(this, "FVectorFieldTextureAccessor.GetTexture()");
     }
+
+    BrzCampoPonteiro ImplField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldTextureAccessor.Impl")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDTEXTUREACCESSOR_H

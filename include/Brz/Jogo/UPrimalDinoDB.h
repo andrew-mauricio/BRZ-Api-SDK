@@ -45,8 +45,8 @@ struct UPrimalDinoDB
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoDB.CachedDinoData")); }
     BrzCampoPonteiro NativeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoDB.NativeClass")); }
-    BitFieldValue<bool, unsigned __int32> bForceRepopulateAll()
-    { return { (void*)this, "bForceRepopulateAll" }; }
+    BrzCampoPonteiro bForceRepopulateAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoDB.bForceRepopulateAll")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALDINODB_H

@@ -71,7 +71,7 @@ struct UWorldPartitionRuntimeLevelStreamingCell
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeLevelStreamingCell.GetLevel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevel() const
     {
         return NativeCall<void*>(this, "UWorldPartitionRuntimeLevelStreamingCell.GetLevel()");
@@ -103,7 +103,7 @@ struct UWorldPartitionRuntimeLevelStreamingCell
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeLevelStreamingCell.SetIsAlwaysLoaded(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsAlwaysLoaded(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UWorldPartitionRuntimeLevelStreamingCell.SetIsAlwaysLoaded(bool)", a0);
@@ -131,14 +131,14 @@ struct UWorldPartitionRuntimeLevelStreamingCell
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeLevelStreamingCell.RuntimeCellData")); }
     BrzCampoPonteiro SourceCellGuidField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeLevelStreamingCell.SourceCellGuid")); }
-    BitFieldValue<bool, unsigned __int32> bBlockOnSlowLoading()
-    { return { (void*)this, "bBlockOnSlowLoading" }; }
-    BitFieldValue<bool, unsigned __int32> bClientOnlyVisible()
-    { return { (void*)this, "bClientOnlyVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAlwaysLoaded()
-    { return { (void*)this, "bIsAlwaysLoaded" }; }
-    BitFieldValue<bool, unsigned __int32> bIsHLOD()
-    { return { (void*)this, "bIsHLOD" }; }
+    BrzCampoPonteiro bBlockOnSlowLoadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeLevelStreamingCell.bBlockOnSlowLoading")); }
+    BrzCampoPonteiro bClientOnlyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeLevelStreamingCell.bClientOnlyVisible")); }
+    BrzCampoPonteiro bIsAlwaysLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeLevelStreamingCell.bIsAlwaysLoaded")); }
+    BrzCampoPonteiro bIsHLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeLevelStreamingCell.bIsHLOD")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UWORLDPARTITIONRUNTIMELEVELSTREAMINGCELL_H

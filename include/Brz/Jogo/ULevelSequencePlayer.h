@@ -59,7 +59,7 @@ struct ULevelSequencePlayer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelSequencePlayer.GetCameraBlendPlayRate()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCameraBlendPlayRate() const
     {
         return NativeCall<void*>(this, "ULevelSequencePlayer.GetCameraBlendPlayRate()");
@@ -115,7 +115,7 @@ struct ULevelSequencePlayer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelSequencePlayer.OnStartedPlaying()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStartedPlaying() const
     {
         return NativeCall<void*>(this, "ULevelSequencePlayer.OnStartedPlaying()");
@@ -123,7 +123,7 @@ struct ULevelSequencePlayer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelSequencePlayer.OnStopped()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStopped() const
     {
         return NativeCall<void*>(this, "ULevelSequencePlayer.OnStopped()");
@@ -131,7 +131,7 @@ struct ULevelSequencePlayer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelSequencePlayer.ShouldUpdateCameraCut()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldUpdateCameraCut() const
     {
         return NativeCall<void*>(this, "ULevelSequencePlayer.ShouldUpdateCameraCut()");
@@ -183,8 +183,8 @@ struct ULevelSequencePlayer
     { return *GetNativePointerField<unsigned char*>(this, "ULevelSequencePlayer.Status"); }
     BrzCampoPonteiro TickManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequencePlayer.TickManager")); }
-    BitFieldValue<bool, unsigned __int32> bReversePlayback()
-    { return { (void*)this, "bReversePlayback" }; }
+    BrzCampoPonteiro bReversePlaybackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequencePlayer.bReversePlayback")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELSEQUENCEPLAYER_H

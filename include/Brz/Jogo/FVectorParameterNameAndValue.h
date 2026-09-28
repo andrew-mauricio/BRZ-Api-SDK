@@ -35,8 +35,8 @@ struct FVectorParameterNameAndValue
 
     BrzCampoPonteiro ParameterNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorParameterNameAndValue.ParameterName")); }
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorParameterNameAndValue.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORPARAMETERNAMEANDVALUE_H

@@ -43,7 +43,7 @@ struct ABasePlayerController : public APrimalPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePlayerController.ClientGameEnded_Implementation(AActor*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=132]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientGameEnded_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "ABasePlayerController.ClientGameEnded_Implementation(AActor*,bool)", a0, a1);
@@ -91,7 +91,7 @@ struct ABasePlayerController : public APrimalPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePlayerController.IsGameInputAllowed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=187]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsGameInputAllowed() const
     {
         return NativeCall<bool>(this, "ABasePlayerController.IsGameInputAllowed()");
@@ -107,7 +107,7 @@ struct ABasePlayerController : public APrimalPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePlayerController.QueryAchievements()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=798+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void QueryAchievements() const
     {
         NativeCall<void>(this, "ABasePlayerController.QueryAchievements()");
@@ -147,7 +147,7 @@ struct ABasePlayerController : public APrimalPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePlayerController.SetVirtualCursorPosition(UE::Math::TVector2<double>)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=392+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void SetVirtualCursorPosition(void* a0) const
     {
         NativeCall<void, void*>(this, "ABasePlayerController.SetVirtualCursorPosition(UE::Math::TVector2<double>)", a0);
@@ -161,8 +161,10 @@ struct ABasePlayerController : public APrimalPlayerController
         NativeCall<void, float, int, void*>(this, "ABasePlayerController.TickActor(float,ELevelTick,FActorTickFunction&)", a0, a1, a2);
     }
 
+    BrzCampoPonteiro bIsGamepadActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePlayerController.bIsGamepadActive")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `customCursor` +8, medido na build 25090264
+    //  ancorado em `customCursor` +8, medido na build 25535041
     //  (offset absoluto medido: 0xB18; confianca alta)
     TWeakObjectPtr<void>& consoleMouseCursorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "customCursor", 8); }

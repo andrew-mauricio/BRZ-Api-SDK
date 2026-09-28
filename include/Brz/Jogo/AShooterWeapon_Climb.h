@@ -42,7 +42,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.AllowStatusRecovery()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowStatusRecovery() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Climb.AllowStatusRecovery()");
@@ -50,7 +50,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.AllowUnequip_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowUnequip_Implementation() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Climb.AllowUnequip_Implementation()");
@@ -74,7 +74,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.AttachOtherMeshes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: casamento de bytes com a build de referencia
     void AttachOtherMeshes() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.AttachOtherMeshes()");
@@ -98,7 +98,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=80+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.BeginPlay()");
@@ -114,7 +114,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.CanClimbOnSurface(FHitResult&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=829+grafo=12/12]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanClimbOnSurface(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AShooterWeapon_Climb.CanClimbOnSurface(FHitResult&)", a0);
@@ -146,7 +146,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Climb.ClientNotifyNoClimbSurface()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyNoClimbSurface() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.ClientNotifyNoClimbSurface()");
@@ -154,7 +154,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ClientNotifyNoClimbSurface_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void ClientNotifyNoClimbSurface_Implementation() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.ClientNotifyNoClimbSurface_Implementation()");
@@ -178,7 +178,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // dump_sobre_sdk_287a0
     //   AShooterWeapon_Climb.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=110]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.Destroyed()");
@@ -202,7 +202,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.GetAimOffsets(float,UE::Math::TRotator<double>&,float&,float,UE::Math::TVec
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=65]]
+    // endereco: casamento de bytes com a build de referencia
     bool GetAimOffsets(float a0, void* a1, void* a2, float a3, void* a4, void* a5, void* a6, void* a7, void* a8) const
     {
         return NativeCall<bool, float, void*, void*, float, void*, void*, void*, void*, void*>(this, "AShooterWeapon_Climb.GetAimOffsets(float,UE::Math::TRotator<double>&,float&,float,UE::Math::TVector<double>&,UE::Math::TRotator<double>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TRotator<double>&)", a0, a1, a2, a3, a4, a5, a6, a7, a8);
@@ -218,7 +218,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Climb.GetClimbingSettingsFast()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     UPrimalClimbingSettings* GetClimbingSettingsFast() const
     {
         return NativeCall<UPrimalClimbingSettings*>(this, "AShooterWeapon_Climb.GetClimbingSettingsFast()");
@@ -242,7 +242,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.GetStandingAnimation_Implementation(float&,float&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     UAnimSequence* GetStandingAnimation_Implementation(void* a0, void* a1) const
     {
         return NativeCall<UAnimSequence*, void*, void*>(this, "AShooterWeapon_Climb.GetStandingAnimation_Implementation(float&,float&)", a0, a1);
@@ -250,7 +250,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Climb.GetViewDirection()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=62]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetViewDirection() const
     {
         return NativeCall<void*>(this, "AShooterWeapon_Climb.GetViewDirection()");
@@ -258,7 +258,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Climb.GetViewLocation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=44]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetViewLocation() const
     {
         return NativeCall<void*>(this, "AShooterWeapon_Climb.GetViewLocation()");
@@ -266,7 +266,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.IsClimbing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsClimbing() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Climb.IsClimbing()");
@@ -274,7 +274,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.IsClimbingHanging()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsClimbingHanging() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Climb.IsClimbingHanging()");
@@ -306,7 +306,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.PlayClimbAnim(unsignedchar,unsignedchar)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     void PlayClimbAnim(unsigned char a0, unsigned char a1) const
     {
         NativeCall<void, unsigned char, unsigned char>(this, "AShooterWeapon_Climb.PlayClimbAnim(unsignedchar,unsignedchar)", a0, a1);
@@ -338,7 +338,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Climb.SelectMeleeAttackAnim(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=87]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SelectMeleeAttackAnim(int a0) const
     {
         return NativeCall<void*, int>(this, "AShooterWeapon_Climb.SelectMeleeAttackAnim(int)", a0);
@@ -354,7 +354,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ServerPerformTurn_Implementation(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerPerformTurn_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Climb.ServerPerformTurn_Implementation(bool)", a0);
@@ -362,7 +362,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ServerReleaseClimbingAnchor_Implementation(bool,FVector_NetQuantizeNormal,b
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ServerReleaseClimbingAnchor_Implementation(bool a0, void* a1, bool a2) const
     {
         NativeCall<void, bool, void*, bool>(this, "AShooterWeapon_Climb.ServerReleaseClimbingAnchor_Implementation(bool,FVector_NetQuantizeNormal,bool)", a0, a1, a2);
@@ -378,7 +378,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ServerRequestClimbMove_Implementation(unsignedchar,UE::Math::TVector<double
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestClimbMove_Implementation(unsigned char a0, void* a1, bool a2) const
     {
         NativeCall<void, unsigned char, void*, bool>(this, "AShooterWeapon_Climb.ServerRequestClimbMove_Implementation(unsignedchar,UE::Math::TVector<double>,bool)", a0, a1, a2);
@@ -394,7 +394,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ServerSetClimbingLeftArm_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetClimbingLeftArm_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Climb.ServerSetClimbingLeftArm_Implementation(bool)", a0);
@@ -418,7 +418,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ShouldOverrideOpenInventory()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldOverrideOpenInventory() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Climb.ShouldOverrideOpenInventory()");
@@ -426,7 +426,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ShouldShowTargetingArray()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldShowTargetingArray() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Climb.ShouldShowTargetingArray()");
@@ -434,7 +434,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.StartAltFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=121]]
+    // endereco: casamento de bytes com a build de referencia
     void StartAltFire() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.StartAltFire()");
@@ -442,7 +442,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.StartFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=79]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Climb.StartFire(bool)", a0);
@@ -450,7 +450,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.StopAltFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=108]]
+    // endereco: casamento de bytes com a build de referencia
     void StopAltFire() const
     {
         NativeCall<void>(this, "AShooterWeapon_Climb.StopAltFire()");
@@ -474,7 +474,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.UpdateClimbDirection(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateClimbDirection(float a0) const
     {
         NativeCall<void, float>(this, "AShooterWeapon_Climb.UpdateClimbDirection(float)", a0);
@@ -490,7 +490,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.UpdateFirstPersonMeshes(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=115]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateFirstPersonMeshes(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Climb.UpdateFirstPersonMeshes(bool)", a0);
@@ -517,7 +517,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
     BrzCampoPonteiro ClimbingAnchorPositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.ClimbingAnchorPosition")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClimbingAnchorNormal` +24, medido na build 25090264
+    //  ancorado em `ClimbingAnchorNormal` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1178; confianca alta)
     TWeakObjectPtr<void>& ClimbingAttachedActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "ClimbingAnchorNormal", 24); }
@@ -550,7 +550,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
     UAnimSequence*& InventoryRightClimbHangAnimationField() const
     { return *GetNativePointerField<UAnimSequence**>(this, "AShooterWeapon_Climb.InventoryRightClimbHangAnimation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClimbingLastAttachedStartedTime` +12, medido na build 25090264
+    //  ancorado em `ClimbingLastAttachedStartedTime` +12, medido na build 25535041
     //  (offset absoluto medido: 0x1854; confianca alta)
     float& LastDistanceField() const
     { return BrzCampoAncorado<float>(this, "ClimbingLastAttachedStartedTime", 12); }
@@ -612,6 +612,16 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.TurnRightAnimHanging")); }
     float& UpdatingDirectionTimeField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_Climb.UpdatingDirectionTime"); }
+    BrzCampoPonteiro bClimbingLeftArmField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.bClimbingLeftArm")); }
+    BrzCampoPonteiro bEarthquakeLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.bEarthquakeLocked")); }
+    BrzCampoPonteiro bHasAValidClimbingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.bHasAValidClimbingTarget")); }
+    BrzCampoPonteiro bInitialAttachField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.bInitialAttach")); }
+    BrzCampoPonteiro bPreventJumpingRotationChangeOnSmallDeltaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.bPreventJumpingRotationChangeOnSmallDelta")); }
     BitFieldValue<bool, unsigned __int32> bClimbingLeftArm()
     { return { (void*)this, "bClimbingLeftArm" }; }
     BitFieldValue<bool, unsigned __int32> bInitialAttach()

@@ -32,8 +32,15 @@ struct FVectorFieldVisualizationParameters
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
-    BitFieldValue<bool, unsigned __int32> Scale()
-    { return { (void*)this, "Scale" }; }
+
+    BrzCampoPonteiro RelativeVolumeToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationParameters.RelativeVolumeToWorld")); }
+    BrzCampoPonteiro ScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationParameters.Scale")); }
+    BrzCampoPonteiro VolumeToWorldHighField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationParameters.VolumeToWorldHigh")); }
+    BrzCampoPonteiro VolumeToWorldNoScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationParameters.VolumeToWorldNoScale")); }
     BrzCampoPonteiro VoxelSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationParameters.VoxelSize")); }
 };

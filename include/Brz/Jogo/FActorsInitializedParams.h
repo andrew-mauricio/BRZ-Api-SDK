@@ -32,6 +32,9 @@ struct FActorsInitializedParams
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ResetTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorsInitializedParams.ResetTime")); }
     BrzCampoPonteiro WorldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorsInitializedParams.World")); }
 };

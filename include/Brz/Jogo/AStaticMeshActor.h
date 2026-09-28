@@ -63,6 +63,8 @@ struct AStaticMeshActor : public AActor
     { return *GetNativePointerField<TObjectPtr<UStaticMeshComponent>*>(this, "AStaticMeshActor.StaticMeshComponent"); }
     BrzCampoPonteiro StaticMeshPhysicsReplicationModeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStaticMeshActor.StaticMeshPhysicsReplicationMode")); }
+    BrzCampoPonteiro bStaticMeshReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStaticMeshActor.bStaticMeshReplicateMovement")); }
     BitFieldValue<bool, unsigned __int32> bStaticMeshReplicateMovement()
     { return { (void*)this, "bStaticMeshReplicateMovement" }; }
 

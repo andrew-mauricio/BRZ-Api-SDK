@@ -37,6 +37,8 @@ struct FWorldCachedViewInfo
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCachedViewInfo.AverageSceneLuminance")); }
     BrzCampoPonteiro EyeAdaptationExposureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCachedViewInfo.EyeAdaptationExposure")); }
+    BrzCampoPonteiro FinalPostProcessSettingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCachedViewInfo.FinalPostProcessSettings")); }
     BrzCampoPonteiro ProjectionMatrixField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCachedViewInfo.ProjectionMatrix")); }
     BrzCampoPonteiro ViewMatrixField() const

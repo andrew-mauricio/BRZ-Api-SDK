@@ -32,6 +32,11 @@ struct FLevelInstanceActorPropertyOverride
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ActorPropertyOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceActorPropertyOverride.ActorPropertyOverride")); }
+    BrzCampoPonteiro LevelInstanceIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceActorPropertyOverride.LevelInstanceID")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELINSTANCEACTORPROPERTYOVERRIDE_H

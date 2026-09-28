@@ -35,7 +35,7 @@ struct FItemWidgetDragDropOp
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FItemWidgetDragDropOp.IsOfTypeImpl(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsOfTypeImpl(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "FItemWidgetDragDropOp.IsOfTypeImpl(FString&)", const_cast<FString*>(&a0));
@@ -55,7 +55,7 @@ struct FItemWidgetDragDropOp
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FItemWidgetDragDropOp.OnDrop(bool,FPointerEvent&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=100]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnDrop(bool a0, void* a1) const
     {
         return NativeCall<void*, bool, void*>(this, "FItemWidgetDragDropOp.OnDrop(bool,FPointerEvent&)", a0, a1);
@@ -63,6 +63,10 @@ struct FItemWidgetDragDropOp
 
     BrzCampoPonteiro DraggedWidgetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemWidgetDragDropOp.DraggedWidget")); }
+    BrzCampoPonteiro ExportedSlotPropertiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemWidgetDragDropOp.ExportedSlotProperties")); }
+    BrzCampoPonteiro ItemWidgetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemWidgetDragDropOp.ItemWidget")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FITEMWIDGETDRAGDROPOP_H

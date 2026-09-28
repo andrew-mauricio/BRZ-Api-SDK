@@ -39,8 +39,12 @@ struct FPrimalCharacterStatusValueDefinition
     { return *GetNativePointerField<UTexture2D**>(this, "FPrimalCharacterStatusValueDefinition.StatusValueIcon"); }
     FString& StatusValueNameField() const
     { return *GetNativePointerField<FString*>(this, "FPrimalCharacterStatusValueDefinition.StatusValueName"); }
+    BrzCampoPonteiro bDisplayAsPercentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusValueDefinition.bDisplayAsPercent")); }
     bool& bDisplayHideCurrentValueField() const
     { return *GetNativePointerField<bool*>(this, "FPrimalCharacterStatusValueDefinition.bDisplayHideCurrentValue"); }
+    BrzCampoPonteiro bLevelUpSetToMaxValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusValueDefinition.bLevelUpSetToMaxValue")); }
     BitFieldValue<bool, unsigned __int32> bDisplayAsPercent()
     { return { (void*)this, "bDisplayAsPercent" }; }
     BitFieldValue<bool, unsigned __int32> bDisplayHideCurrentValue()

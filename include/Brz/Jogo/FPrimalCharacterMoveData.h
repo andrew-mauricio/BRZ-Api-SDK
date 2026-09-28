@@ -37,8 +37,10 @@ struct FPrimalCharacterMoveData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterMoveData.MaxSpeed")); }
     BrzCampoPonteiro RotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterMoveData.Rotation")); }
-    BitFieldValue<bool, unsigned __int32> bAccelerationFollowsRotation()
-    { return { (void*)this, "bAccelerationFollowsRotation" }; }
+    BrzCampoPonteiro bAccelerationFollowsRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterMoveData.bAccelerationFollowsRotation")); }
+    BrzCampoPonteiro bClientIsRunningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterMoveData.bClientIsRunning")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALCHARACTERMOVEDATA_H

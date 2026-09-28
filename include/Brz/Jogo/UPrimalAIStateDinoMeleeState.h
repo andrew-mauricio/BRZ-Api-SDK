@@ -57,7 +57,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.BPPreventStopActiveStateOnTick()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPPreventStopActiveStateOnTick() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateDinoMeleeState.BPPreventStopActiveStateOnTick()");
@@ -73,7 +73,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.EndAnimationState(FName,ENetRole)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndAnimationState(unsigned long long a0, int a1) const
     {
         return NativeCall<void*, unsigned long long, int>(this, "UPrimalAIStateDinoMeleeState.EndAnimationState(FName,ENetRole)", a0, a1);
@@ -81,7 +81,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.IsChildState()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsChildState() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateDinoMeleeState.IsChildState()");
@@ -97,7 +97,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.OnEnd()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=147]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnEnd() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateDinoMeleeState.OnEnd()");
@@ -139,10 +139,10 @@ struct UPrimalAIStateDinoMeleeState
     { return *GetNativePointerField<FName*>(this, "UPrimalAIStateDinoMeleeState.AnimationCustomName"); }
     BrzCampoPonteiro ChildStatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.ChildStates")); }
-    BitFieldValue<bool, unsigned __int32> IsInAnimationState()
-    { return { (void*)this, "IsInAnimationState" }; }
-    BitFieldValue<bool, unsigned __int32> IsInAttackState()
-    { return { (void*)this, "IsInAttackState" }; }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.IsInAttackState")); }
     BrzCampoPonteiro ParentStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.ParentState")); }
     TObjectPtr<APawn>& PawnField() const
@@ -159,20 +159,40 @@ struct UPrimalAIStateDinoMeleeState
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateDinoMeleeState.SpawnProjectileInterval"); }
     FName& SpawnProjectileSocketField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalAIStateDinoMeleeState.SpawnProjectileSocket"); }
-    BitFieldValue<bool, unsigned __int32> bBPCanUseState()
-    { return { (void*)this, "bBPCanUseState" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldResetInLosingTarget()
-    { return { (void*)this, "bShouldResetInLosingTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAttack()
-    { return { (void*)this, "bUseBPCanAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanInterrupt()
-    { return { (void*)this, "bUseBPCanInterrupt" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAttackWeight()
-    { return { (void*)this, "bUseBPOverrideAttackWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipIntervalCheck()
-    { return { (void*)this, "bUseBPSkipIntervalCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipRangeCheck()
-    { return { (void*)this, "bUseBPSkipRangeCheck" }; }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bBPCanUseState")); }
+    BrzCampoPonteiro bCanAttackWhileFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bCanAttackWhileFlying")); }
+    BrzCampoPonteiro bClearAttackStateOnEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bClearAttackStateOnEnd")); }
+    BrzCampoPonteiro bDidAnySweepAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bDidAnySweepAttacks")); }
+    BrzCampoPonteiro bDoSecondarySwingTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bDoSecondarySwingTrace")); }
+    BrzCampoPonteiro bDontActuallyDealDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bDontActuallyDealDamage")); }
+    BrzCampoPonteiro bForceNoCachedTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bForceNoCachedTrace")); }
+    BrzCampoPonteiro bSecondarySwingTraceForCorpsesOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bSecondarySwingTraceForCorpsesOnly")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseBPAdjustProjectileSpawnTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPAdjustProjectileSpawnTransform")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPGetSocketLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPGetSocketLocation")); }
+    BrzCampoPonteiro bUseBPOnHitActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPOnHitActor")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoMeleeState.bUseBPSkipRangeCheck")); }
     BitFieldValue<bool, unsigned __int32> bCanAttackWhileFlying()
     { return { (void*)this, "bCanAttackWhileFlying" }; }
     BitFieldValue<bool, unsigned __int32> bClearAttackStateOnEnd()

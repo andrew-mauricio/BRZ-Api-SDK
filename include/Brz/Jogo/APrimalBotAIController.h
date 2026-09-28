@@ -54,7 +54,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBotAIController.BPOnCharacterAttachedToStructure(APrimalStructureSeating*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPOnCharacterAttachedToStructure(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "APrimalBotAIController.BPOnCharacterAttachedToStructure(APrimalStructureSeating*,int)", a0, a1);
@@ -62,7 +62,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBotAIController.BPOnCharacterDetachedFromDino(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPOnCharacterDetachedFromDino(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBotAIController.BPOnCharacterDetachedFromDino(APrimalDinoCharacter*)", a0);
@@ -70,7 +70,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBotAIController.BPOnClaimedSeatingStructure(APrimalStructureSeating*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPOnClaimedSeatingStructure(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "APrimalBotAIController.BPOnClaimedSeatingStructure(APrimalStructureSeating*,int)", a0, a1);
@@ -86,7 +86,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.CanSitOnStructure(APrimalStructureSeating*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=429+grafo=6/7]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanSitOnStructure(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBotAIController.CanSitOnStructure(APrimalStructureSeating*)", a0);
@@ -174,7 +174,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.IsTooCloseToAttack()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     bool IsTooCloseToAttack() const
     {
         return NativeCall<bool>(this, "APrimalBotAIController.IsTooCloseToAttack()");
@@ -182,7 +182,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.IsTooFarToAttack()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     bool IsTooFarToAttack() const
     {
         return NativeCall<bool>(this, "APrimalBotAIController.IsTooFarToAttack()");
@@ -206,7 +206,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBotAIController.OnCharacterDetachedFromDino(APrimalDinoCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1056+grafo=14/15]]
+    // endereco: casamento de bytes com a build de referencia
     void OnCharacterDetachedFromDino(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBotAIController.OnCharacterDetachedFromDino(APrimalDinoCharacter*)", a0);
@@ -230,11 +230,10 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBotAIController.OnUnPossess()
-    // classe: a funcao mora em AAIController, e APrimalBotAIController herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=93]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnUnPossess() const
     {
-        return NativeCall<void*>(this, "AAIController.OnUnPossess()");
+        return NativeCall<void*>(this, "APrimalBotAIController.OnUnPossess()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -247,7 +246,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.ReleaseClaimOnSeatingStructure()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ReleaseClaimOnSeatingStructure() const
     {
         NativeCall<void>(this, "APrimalBotAIController.ReleaseClaimOnSeatingStructure()");
@@ -255,7 +254,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.SetAttackCoordinator(AAIAttackCoordinator*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAttackCoordinator(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBotAIController.SetAttackCoordinator(AAIAttackCoordinator*)", a0);
@@ -271,7 +270,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBotAIController.SetHasAttackPriority(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=102+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void SetHasAttackPriority(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBotAIController.SetHasAttackPriority(bool)", a0);
@@ -279,7 +278,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBotAIController.SetIsDodgingBlackboardValue(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsDodgingBlackboardValue(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalBotAIController.SetIsDodgingBlackboardValue(bool)", a0);
@@ -287,7 +286,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBotAIController.SetRiddenDinoAttackPriority()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetRiddenDinoAttackPriority() const
     {
         NativeCall<void>(this, "APrimalBotAIController.SetRiddenDinoAttackPriority()");
@@ -295,7 +294,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.ShouldReleaseFromSeatingStructure()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldReleaseFromSeatingStructure() const
     {
         return NativeCall<bool>(this, "APrimalBotAIController.ShouldReleaseFromSeatingStructure()");
@@ -303,7 +302,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBotAIController.TimeSinceGivenAttackPriority()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     float TimeSinceGivenAttackPriority() const
     {
         return NativeCall<float>(this, "APrimalBotAIController.TimeSinceGivenAttackPriority()");
@@ -311,7 +310,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBotAIController.UpdateDinoClaim()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=636+grafo=14/14]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateDinoClaim() const
     {
         NativeCall<void>(this, "APrimalBotAIController.UpdateDinoClaim()");
@@ -319,7 +318,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBotAIController.UpdateSeatingStructureClaim()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=272+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateSeatingStructureClaim() const
     {
         NativeCall<void>(this, "APrimalBotAIController.UpdateSeatingStructureClaim()");
@@ -327,7 +326,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBotAIController.WantsAttackPriority()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=60]]
+    // endereco: casamento de bytes com a build de referencia
     bool WantsAttackPriority() const
     {
         return NativeCall<bool>(this, "APrimalBotAIController.WantsAttackPriority()");
@@ -346,7 +345,7 @@ struct APrimalBotAIController : public APrimalDinoAIController
     float& DinoSearchRadiusField() const
     { return *GetNativePointerField<float*>(this, "APrimalBotAIController.DinoSearchRadius"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClaimedDino` +12, medido na build 25090264
+    //  ancorado em `ClaimedDino` +12, medido na build 25535041
     //  (offset absoluto medido: 0xAB8; confianca alta)
     double& LastTimeGivenAttackPriorityField() const
     { return BrzCampoAncorado<double>(this, "ClaimedDino", 12); }
@@ -362,6 +361,8 @@ struct APrimalBotAIController : public APrimalDinoAIController
     { return *GetNativePointerField<float*>(this, "APrimalBotAIController.SeatingStructureSearchRadius"); }
     float& SeatingStructureSearchRadiusStationairyField() const
     { return *GetNativePointerField<float*>(this, "APrimalBotAIController.SeatingStructureSearchRadiusStationairy"); }
+    BrzCampoPonteiro bClaimTamedDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBotAIController.bClaimTamedDinos")); }
     BitFieldValue<bool, unsigned __int32> bClaimTamedDinos()
     { return { (void*)this, "bClaimTamedDinos" }; }
 

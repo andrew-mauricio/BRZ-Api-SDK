@@ -46,7 +46,7 @@ struct UShooterLocalPlayer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterLocalPlayer.ClearUITick(UPrimalUI*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClearUITick(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterLocalPlayer.ClearUITick(UPrimalUI*)", a0);
@@ -194,10 +194,10 @@ struct UShooterLocalPlayer
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterLocalPlayer.UITicks")); }
     BrzCampoPonteiro ViewportClientField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterLocalPlayer.ViewportClient")); }
-    BitFieldValue<bool, unsigned __int32> bSentSplitJoin()
-    { return { (void*)this, "bSentSplitJoin" }; }
-    BitFieldValue<bool, unsigned __int32> bValidCachedViewFrustum()
-    { return { (void*)this, "bValidCachedViewFrustum" }; }
+    BrzCampoPonteiro bSentSplitJoinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterLocalPlayer.bSentSplitJoin")); }
+    BrzCampoPonteiro bValidCachedViewFrustumField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterLocalPlayer.bValidCachedViewFrustum")); }
 };
 
 #endif  // BRZ_SDK_JOGO_USHOOTERLOCALPLAYER_H

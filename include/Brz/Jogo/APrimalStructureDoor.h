@@ -39,16 +39,15 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.AllowPickupForItem(AShooterPlayerController*)
-    // classe: a funcao mora em APrimalStructure, e APrimalStructureDoor herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     bool AllowPickupForItem(void* a0) const
     {
-        return NativeCall<bool, void*>(this, "APrimalStructure.AllowPickupForItem(AShooterPlayerController*)", a0);
+        return NativeCall<bool, void*>(this, "APrimalStructureDoor.AllowPickupForItem(AShooterPlayerController*)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.AllowStructureAccess(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=99]]
+    // endereco: casamento de bytes com a build de referencia
     bool AllowStructureAccess(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureDoor.AllowStructureAccess(APlayerController*)", a0);
@@ -56,7 +55,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.ApplyPinCode(AShooterPlayerController*,int,bool,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=513+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     bool ApplyPinCode(void* a0, int a1, bool a2, int a3) const
     {
         return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureDoor.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
@@ -80,7 +79,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureDoor.BPSetDoorState(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPSetDoorState(int a0) const
     {
         NativeCall<void, int>(this, "APrimalStructureDoor.BPSetDoorState(int)", a0);
@@ -88,15 +87,16 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=152]]
+    // classe: a funcao mora em APrimalStructure, e APrimalStructureDoor herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
-        NativeCall<void>(this, "APrimalStructureDoor.BeginPlay()");
+        NativeCall<void>(this, "APrimalStructure.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.CanOpen(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=397+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanOpen(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureDoor.CanOpen(APlayerController*)", a0);
@@ -120,7 +120,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.DelayedGotoDoorStateTimer()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DelayedGotoDoorStateTimer() const
     {
         NativeCall<void>(this, "APrimalStructureDoor.DelayedGotoDoorStateTimer()");
@@ -184,7 +184,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.PreventCharacterBasing(AActor*,UPrimitiveComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     bool PreventCharacterBasing(void* a0, void* a1) const
     {
         return NativeCall<bool, void*, void*>(this, "APrimalStructureDoor.PreventCharacterBasing(AActor*,UPrimitiveComponent*)", a0, a1);
@@ -262,6 +262,52 @@ struct APrimalStructureDoor : public APrimalStructure
     { return *GetNativePointerField<UStaticMeshComponent**>(this, "APrimalStructureDoor.SecondDoorMesh"); }
     USoundBase*& UnlockDoorSoundField() const
     { return *GetNativePointerField<USoundBase**>(this, "APrimalStructureDoor.UnlockDoorSound"); }
+    BrzCampoPonteiro bAdminOnlyAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bAdminOnlyAccess")); }
+    BrzCampoPonteiro bCanBeForcedOpenByDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bCanBeForcedOpenByDino")); }
+    BrzCampoPonteiro bDoesntAffectDinoNavigationWhileOpenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bDoesntAffectDinoNavigationWhileOpen")); }
+    BrzCampoPonteiro bDoesntUseOpenModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bDoesntUseOpenMode")); }
+    BrzCampoPonteiro bForceDoorOpenInField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bForceDoorOpenIn")); }
+    BrzCampoPonteiro bForceDoorOpenOutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bForceDoorOpenOut")); }
+    BrzCampoPonteiro bForceNoPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bForceNoPinLocking")); }
+    BrzCampoPonteiro bForceStaticMobilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bForceStaticMobility")); }
+    BrzCampoPonteiro bInitializedRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bInitializedRotation")); }
+    BrzCampoPonteiro bInvertOpenCloseDirectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bInvertOpenCloseDirection")); }
+    BrzCampoPonteiro bIsDoorMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bIsDoorMoving")); }
+    BrzCampoPonteiro bIsLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bIsLocked")); }
+    BrzCampoPonteiro bIsPinLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bIsPinLocked")); }
+    BrzCampoPonteiro bPreventBasingWhileMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bPreventBasingWhileMoving")); }
+    BrzCampoPonteiro bPreventDoorInterpolationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bPreventDoorInterpolation")); }
+    BrzCampoPonteiro bRotatePitchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bRotatePitch")); }
+    BrzCampoPonteiro bRotateRollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bRotateRoll")); }
+    BrzCampoPonteiro bRotateYawField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bRotateYaw")); }
+    BrzCampoPonteiro bSupportsLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bSupportsLocking")); }
+    BrzCampoPonteiro bSupportsPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bSupportsPinLocking")); }
+    BrzCampoPonteiro bUseBPGotoDoorStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bUseBPGotoDoorState")); }
+    BrzCampoPonteiro bUseBPOverrideChangeDoorStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bUseBPOverrideChangeDoorState")); }
+    BrzCampoPonteiro bUseSecondDoorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureDoor.bUseSecondDoor")); }
     BitFieldValue<bool, unsigned __int32> bInvertOpenCloseDirection()
     { return { (void*)this, "bInvertOpenCloseDirection" }; }
     BitFieldValue<bool, unsigned __int32> bSupportsLocking()

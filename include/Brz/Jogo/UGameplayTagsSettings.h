@@ -33,18 +33,28 @@ struct UGameplayTagsSettings
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
+    BrzCampoPonteiro AllowEditorTagUnloadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.AllowEditorTagUnloading")); }
+    BrzCampoPonteiro AllowGameTagUnloadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.AllowGameTagUnloading")); }
     BrzCampoPonteiro CategoryRemappingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.CategoryRemapping")); }
+    BrzCampoPonteiro ClearInvalidTagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.ClearInvalidTags")); }
     BrzCampoPonteiro CommonlyReplicatedTagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.CommonlyReplicatedTags")); }
     FString& ConfigFileNameField() const
     { return *GetNativePointerField<FString*>(this, "UGameplayTagsSettings.ConfigFileName"); }
+    BrzCampoPonteiro FastReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.FastReplication")); }
     BrzCampoPonteiro GameplayTagListField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.GameplayTagList")); }
     BrzCampoPonteiro GameplayTagRedirectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.GameplayTagRedirects")); }
     BrzCampoPonteiro GameplayTagTableListField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.GameplayTagTableList")); }
+    BrzCampoPonteiro ImportTagsFromConfigField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.ImportTagsFromConfig")); }
     FString& InvalidTagCharactersField() const
     { return *GetNativePointerField<FString*>(this, "UGameplayTagsSettings.InvalidTagCharacters"); }
     int& NetIndexFirstBitSegmentField() const
@@ -53,6 +63,10 @@ struct UGameplayTagsSettings
     { return *GetNativePointerField<int*>(this, "UGameplayTagsSettings.NumBitsForContainerSize"); }
     BrzCampoPonteiro RestrictedConfigFilesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.RestrictedConfigFiles")); }
+    BrzCampoPonteiro WarnOnInvalidTagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.WarnOnInvalidTags")); }
+    BrzCampoPonteiro bDynamicReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsSettings.bDynamicReplication")); }
     BitFieldValue<bool, unsigned __int32> AllowEditorTagUnloading()
     { return { (void*)this, "AllowEditorTagUnloading" }; }
     BitFieldValue<bool, unsigned __int32> AllowGameTagUnloading()

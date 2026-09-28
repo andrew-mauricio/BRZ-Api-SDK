@@ -45,18 +45,18 @@ struct FPrimalStructureTemplateData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FPrimalStructureTemplateData.StaticStruct()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo+string_aprovado]
-    static UScriptStruct* StaticStruct()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    UScriptStruct* StaticStruct() const
     {
-        return NativeCall<UScriptStruct*>(nullptr, "FPrimalStructureTemplateData.StaticStruct()");
+        return NativeCall<UScriptStruct*>(this, "FPrimalStructureTemplateData.StaticStruct()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FPrimalStructureTemplateData.Validate()
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro Validate()
+    BrzPonteiro Validate() const
     {
-        return NativeCall<void*>(nullptr, "FPrimalStructureTemplateData.Validate()");
+        return NativeCall<void*>(this, "FPrimalStructureTemplateData.Validate()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.

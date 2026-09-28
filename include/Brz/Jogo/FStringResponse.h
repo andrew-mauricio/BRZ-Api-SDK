@@ -33,8 +33,8 @@ struct FStringResponse
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Data()
-    { return { (void*)this, "Data" }; }
+    BrzCampoPonteiro DataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringResponse.Data")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGRESPONSE_H

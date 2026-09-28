@@ -56,16 +56,16 @@ struct UGameplayDebuggerRenderingComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayDebuggerRenderingComponent.GetDebugDrawDelegateHelper()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDebugDrawDelegateHelper() const
     {
         return NativeCall<void*>(this, "UGameplayDebuggerRenderingComponent.GetDebugDrawDelegateHelper()");
     }
 
-    BitFieldValue<bool, unsigned __int32> AlwaysLoadOnClient()
-    { return { (void*)this, "AlwaysLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> AlwaysLoadOnServer()
-    { return { (void*)this, "AlwaysLoadOnServer" }; }
+    BrzCampoPonteiro AlwaysLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.AlwaysLoadOnClient")); }
+    BrzCampoPonteiro AlwaysLoadOnServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.AlwaysLoadOnServer")); }
     TArray<void*>& AssetUserDataField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UGameplayDebuggerRenderingComponent.AssetUserData"); }
     TArray<void*>& AttachChildrenField() const
@@ -84,8 +84,8 @@ struct UGameplayDebuggerRenderingComponent
     { return *GetNativePointerField<float*>(this, "UGameplayDebuggerRenderingComponent.CachedMaxDrawDistance"); }
     unsigned char& CanCharacterStepUpOnField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayDebuggerRenderingComponent.CanCharacterStepUpOn"); }
-    BitFieldValue<bool, unsigned __int32> CastShadow()
-    { return { (void*)this, "CastShadow" }; }
+    BrzCampoPonteiro CastShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.CastShadow")); }
     TArray<void*>& ClientAttachedChildrenField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UGameplayDebuggerRenderingComponent.ClientAttachedChildren"); }
     TArray<void*>& ComponentTagsField() const
@@ -196,244 +196,244 @@ struct UGameplayDebuggerRenderingComponent
     { return { (void*)this, "UGameplayDebuggerRenderingComponent.VirtualTextureRenderPassType" }; }
     int& VisibilityIdField() const
     { return *GetNativePointerField<int*>(this, "UGameplayDebuggerRenderingComponent.VisibilityId"); }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteLocation()
-    { return { (void*)this, "bAbsoluteLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteRotation()
-    { return { (void*)this, "bAbsoluteRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteScale()
-    { return { (void*)this, "bAbsoluteScale" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectDistanceFieldLighting()
-    { return { (void*)this, "bAffectDistanceFieldLighting" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectDynamicIndirectLighting()
-    { return { (void*)this, "bAffectDynamicIndirectLighting" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectIndirectLightingWhileHidden()
-    { return { (void*)this, "bAffectIndirectLightingWhileHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCullDistanceVolume()
-    { return { (void*)this, "bAllowCullDistanceVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyImpulseOnDamage()
-    { return { (void*)this, "bApplyImpulseOnDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachedSoundsForceHighPriority()
-    { return { (void*)this, "bAttachedSoundsForceHighPriority" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bBoundsChangeTriggersStreamingDataRebuild()
-    { return { (void*)this, "bBoundsChangeTriggersStreamingDataRebuild" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bCastCinematicShadow()
-    { return { (void*)this, "bCastCinematicShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastContactShadow()
-    { return { (void*)this, "bCastContactShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastDynamicShadow()
-    { return { (void*)this, "bCastDynamicShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastFarShadow()
-    { return { (void*)this, "bCastFarShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastHiddenShadow()
-    { return { (void*)this, "bCastHiddenShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastInsetShadow()
-    { return { (void*)this, "bCastInsetShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastShadowAsTwoSided()
-    { return { (void*)this, "bCastShadowAsTwoSided" }; }
-    BitFieldValue<bool, unsigned __int32> bCastStaticShadow()
-    { return { (void*)this, "bCastStaticShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastVolumetricTranslucentShadow()
-    { return { (void*)this, "bCastVolumetricTranslucentShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bClientSyncAlwaysUpdatePhysicsCollision()
-    { return { (void*)this, "bClientSyncAlwaysUpdatePhysicsCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentToWorldUpdated()
-    { return { (void*)this, "bComponentToWorldUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeBoundsOnceForGame()
-    { return { (void*)this, "bComputeBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeFastLocalBounds()
-    { return { (void*)this, "bComputeFastLocalBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bComputedBoundsOnceForGame()
-    { return { (void*)this, "bComputedBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
+    BrzCampoPonteiro bAbsoluteLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAbsoluteLocation")); }
+    BrzCampoPonteiro bAbsoluteRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAbsoluteRotation")); }
+    BrzCampoPonteiro bAbsoluteScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAbsoluteScale")); }
+    BrzCampoPonteiro bAffectDistanceFieldLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAffectDistanceFieldLighting")); }
+    BrzCampoPonteiro bAffectDynamicIndirectLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAffectDynamicIndirectLighting")); }
+    BrzCampoPonteiro bAffectIndirectLightingWhileHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAffectIndirectLightingWhileHidden")); }
+    BrzCampoPonteiro bAllowCullDistanceVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAllowCullDistanceVolume")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bApplyImpulseOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bApplyImpulseOnDamage")); }
+    BrzCampoPonteiro bAttachedSoundsForceHighPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAttachedSoundsForceHighPriority")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bAutoActivate")); }
+    BrzCampoPonteiro bBoundsChangeTriggersStreamingDataRebuildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bBoundsChangeTriggersStreamingDataRebuild")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCastCinematicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastCinematicShadow")); }
+    BrzCampoPonteiro bCastContactShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastContactShadow")); }
+    BrzCampoPonteiro bCastDynamicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastDynamicShadow")); }
+    BrzCampoPonteiro bCastFarShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastFarShadow")); }
+    BrzCampoPonteiro bCastHiddenShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastHiddenShadow")); }
+    BrzCampoPonteiro bCastInsetShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastInsetShadow")); }
+    BrzCampoPonteiro bCastShadowAsTwoSidedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastShadowAsTwoSided")); }
+    BrzCampoPonteiro bCastStaticShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastStaticShadow")); }
+    BrzCampoPonteiro bCastVolumetricTranslucentShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bCastVolumetricTranslucentShadow")); }
+    BrzCampoPonteiro bClientSyncAlwaysUpdatePhysicsCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bClientSyncAlwaysUpdatePhysicsCollision")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bClimbable")); }
+    BrzCampoPonteiro bComponentToWorldUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bComponentToWorldUpdated")); }
+    BrzCampoPonteiro bComputeBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bComputeBoundsOnceForGame")); }
+    BrzCampoPonteiro bComputeFastLocalBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bComputeFastLocalBounds")); }
+    BrzCampoPonteiro bComputedBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bComputedBoundsOnceForGame")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bEditableWhenInherited")); }
     bool& bEmissiveLightSourceField() const
     { return *GetNativePointerField<bool*>(this, "UGameplayDebuggerRenderingComponent.bEmissiveLightSource"); }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bExcludeFromLevelBounds()
-    { return { (void*)this, "bExcludeFromLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bExcludeFromLightAttachmentGroup()
-    { return { (void*)this, "bExcludeFromLightAttachmentGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bFillCollisionUnderneathForNavmesh()
-    { return { (void*)this, "bFillCollisionUnderneathForNavmesh" }; }
-    BitFieldValue<bool, unsigned __int32> bForceMipStreaming()
-    { return { (void*)this, "bForceMipStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bForceOverlapEvents()
-    { return { (void*)this, "bForceOverlapEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventBlockingProjectiles()
-    { return { (void*)this, "bForcePreventBlockingProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEvents()
-    { return { (void*)this, "bGenerateOverlapEvents" }; }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bExcludeFromLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bExcludeFromLevelBounds")); }
+    BrzCampoPonteiro bExcludeFromLightAttachmentGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bExcludeFromLightAttachmentGroup")); }
+    BrzCampoPonteiro bFillCollisionUnderneathForNavmeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bFillCollisionUnderneathForNavmesh")); }
+    BrzCampoPonteiro bForceMipStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bForceMipStreaming")); }
+    BrzCampoPonteiro bForceOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bForceOverlapEvents")); }
+    BrzCampoPonteiro bForcePreventBlockingProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bForcePreventBlockingProjectiles")); }
+    BrzCampoPonteiro bGenerateOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bGenerateOverlapEvents")); }
     unsigned char& bHasCustomNavigableGeometryField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayDebuggerRenderingComponent.bHasCustomNavigableGeometry"); }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHasNoStreamableTextures()
-    { return { (void*)this, "bHasNoStreamableTextures" }; }
-    BitFieldValue<bool, unsigned __int32> bHasPerInstanceHitProxies()
-    { return { (void*)this, "bHasPerInstanceHitProxies" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInGame()
-    { return { (void*)this, "bHiddenInGame" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInSceneCapture()
-    { return { (void*)this, "bHiddenInSceneCapture" }; }
-    BitFieldValue<bool, unsigned __int32> bHoldout()
-    { return { (void*)this, "bHoldout" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreParentTransformUpdate()
-    { return { (void*)this, "bIgnoreParentTransformUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRadialForce()
-    { return { (void*)this, "bIgnoreRadialForce" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRadialImpulse()
-    { return { (void*)this, "bIgnoreRadialImpulse" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreUpdatingOwnersLastRenderTime()
-    { return { (void*)this, "bIgnoreUpdatingOwnersLastRenderTime" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIncludeBoundsRadiusInDrawDistances()
-    { return { (void*)this, "bIncludeBoundsRadiusInDrawDistances" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAbstractBasingComponent()
-    { return { (void*)this, "bIsAbstractBasingComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActorTextureStreamingBuiltData()
-    { return { (void*)this, "bIsActorTextureStreamingBuiltData" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBeingMovedByEditor()
-    { return { (void*)this, "bIsBeingMovedByEditor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInForeground()
-    { return { (void*)this, "bIsInForeground" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNotRenderAttachmentRoot()
-    { return { (void*)this, "bIsNotRenderAttachmentRoot" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidTextureStreamingBuiltData()
-    { return { (void*)this, "bIsValidTextureStreamingBuiltData" }; }
-    BitFieldValue<bool, unsigned __int32> bLightAsIfStatic()
-    { return { (void*)this, "bLightAsIfStatic" }; }
-    BitFieldValue<bool, unsigned __int32> bLightAttachmentsAsGroup()
-    { return { (void*)this, "bLightAttachmentsAsGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bMovableUseDynamicDrawDistance()
-    { return { (void*)this, "bMovableUseDynamicDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiBodyOverlap()
-    { return { (void*)this, "bMultiBodyOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bNeverDistanceCull()
-    { return { (void*)this, "bNeverDistanceCull" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyOwnerSee()
-    { return { (void*)this, "bOnlyOwnerSee" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOwnerNoSee()
-    { return { (void*)this, "bOwnerNoSee" }; }
-    BitFieldValue<bool, unsigned __int32> bPlaceholderBool1()
-    { return { (void*)this, "bPlaceholderBool1" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDamage()
-    { return { (void*)this, "bPreventDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bRayTracingFarField()
-    { return { (void*)this, "bRayTracingFarField" }; }
-    BitFieldValue<bool, unsigned __int32> bReceiveMobileCSMShadows()
-    { return { (void*)this, "bReceiveMobileCSMShadows" }; }
-    BitFieldValue<bool, unsigned __int32> bReceivesDecals()
-    { return { (void*)this, "bReceivesDecals" }; }
-    BitFieldValue<bool, unsigned __int32> bRegisterWithMaterialGPUMessageQueue()
-    { return { (void*)this, "bRegisterWithMaterialGPUMessageQueue" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderCustomDepth()
-    { return { (void*)this, "bRenderCustomDepth" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderInDepthPass()
-    { return { (void*)this, "bRenderInDepthPass" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderInMainPass()
-    { return { (void*)this, "bRenderInMainPass" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicatePhysicsToAutonomousProxy()
-    { return { (void*)this, "bReplicatePhysicsToAutonomousProxy" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bReturnMaterialOnMove()
-    { return { (void*)this, "bReturnMaterialOnMove" }; }
-    BitFieldValue<bool, unsigned __int32> bSelectable()
-    { return { (void*)this, "bSelectable" }; }
-    BitFieldValue<bool, unsigned __int32> bSelfShadowOnly()
-    { return { (void*)this, "bSelfShadowOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeAttached()
-    { return { (void*)this, "bShouldBeAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapLocationWhenAttached()
-    { return { (void*)this, "bShouldSnapLocationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapRotationWhenAttached()
-    { return { (void*)this, "bShouldSnapRotationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapScaleWhenAttached()
-    { return { (void*)this, "bShouldSnapScaleWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldUpdatePhysicsVolume()
-    { return { (void*)this, "bShouldUpdatePhysicsVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bSingleSampleShadowFromStationaryLights()
-    { return { (void*)this, "bSingleSampleShadowFromStationaryLights" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bStaticWhenNotMoveable()
-    { return { (void*)this, "bStaticWhenNotMoveable" }; }
-    BitFieldValue<bool, unsigned __int32> bTraceComplexOnMove()
-    { return { (void*)this, "bTraceComplexOnMove" }; }
-    BitFieldValue<bool, unsigned __int32> bTreatAsBackgroundForOcclusion()
-    { return { (void*)this, "bTreatAsBackgroundForOcclusion" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateChildOverlaps()
-    { return { (void*)this, "bUpdateChildOverlaps" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAbsoluteMaxDrawDisatance()
-    { return { (void*)this, "bUseAbsoluteMaxDrawDisatance" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsOccluder()
-    { return { (void*)this, "bUseAsOccluder" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsUnfogger()
-    { return { (void*)this, "bUseAsUnfogger" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachParentBound()
-    { return { (void*)this, "bUseAttachParentBound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseEditorCompositing()
-    { return { (void*)this, "bUseEditorCompositing" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInternalOctree()
-    { return { (void*)this, "bUseInternalOctree" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInternalOctreeOnClient()
-    { return { (void*)this, "bUseInternalOctreeOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseViewOwnerDepthPriorityGroup()
-    { return { (void*)this, "bUseViewOwnerDepthPriorityGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bVisible()
-    { return { (void*)this, "bVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInRayTracing()
-    { return { (void*)this, "bVisibleInRayTracing" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInRealTimeSkyCaptures()
-    { return { (void*)this, "bVisibleInRealTimeSkyCaptures" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInReflectionCaptures()
-    { return { (void*)this, "bVisibleInReflectionCaptures" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInSceneCaptureOnly()
-    { return { (void*)this, "bVisibleInSceneCaptureOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsEditorEffects()
-    { return { (void*)this, "bWantsEditorEffects" }; }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHasNoStreamableTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bHasNoStreamableTextures")); }
+    BrzCampoPonteiro bHasPerInstanceHitProxiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bHasPerInstanceHitProxies")); }
+    BrzCampoPonteiro bHiddenInGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bHiddenInGame")); }
+    BrzCampoPonteiro bHiddenInSceneCaptureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bHiddenInSceneCapture")); }
+    BrzCampoPonteiro bHoldoutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bHoldout")); }
+    BrzCampoPonteiro bIgnoreParentTransformUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIgnoreParentTransformUpdate")); }
+    BrzCampoPonteiro bIgnoreRadialForceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIgnoreRadialForce")); }
+    BrzCampoPonteiro bIgnoreRadialImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIgnoreRadialImpulse")); }
+    BrzCampoPonteiro bIgnoreUpdatingOwnersLastRenderTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIgnoreUpdatingOwnersLastRenderTime")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIncludeBoundsRadiusInDrawDistancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIncludeBoundsRadiusInDrawDistances")); }
+    BrzCampoPonteiro bIsAbstractBasingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsAbstractBasingComponent")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsActive")); }
+    BrzCampoPonteiro bIsActorTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsActorTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bIsBeingMovedByEditorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsBeingMovedByEditor")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsInForegroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsInForeground")); }
+    BrzCampoPonteiro bIsNotRenderAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsNotRenderAttachmentRoot")); }
+    BrzCampoPonteiro bIsValidTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bIsValidTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bLightAsIfStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bLightAsIfStatic")); }
+    BrzCampoPonteiro bLightAttachmentsAsGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bLightAttachmentsAsGroup")); }
+    BrzCampoPonteiro bMovableUseDynamicDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bMovableUseDynamicDrawDistance")); }
+    BrzCampoPonteiro bMultiBodyOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bMultiBodyOverlap")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bNetAddressable")); }
+    BrzCampoPonteiro bNeverDistanceCullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bNeverDistanceCull")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyOwnerSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bOnlyOwnerSee")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOwnerNoSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bOwnerNoSee")); }
+    BrzCampoPonteiro bPlaceholderBool1Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPlaceholderBool1")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPreventDamage")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bRayTracingFarFieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bRayTracingFarField")); }
+    BrzCampoPonteiro bReceiveMobileCSMShadowsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bReceiveMobileCSMShadows")); }
+    BrzCampoPonteiro bReceivesDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bReceivesDecals")); }
+    BrzCampoPonteiro bRegisterWithMaterialGPUMessageQueueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bRegisterWithMaterialGPUMessageQueue")); }
+    BrzCampoPonteiro bRenderCustomDepthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bRenderCustomDepth")); }
+    BrzCampoPonteiro bRenderInDepthPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bRenderInDepthPass")); }
+    BrzCampoPonteiro bRenderInMainPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bRenderInMainPass")); }
+    BrzCampoPonteiro bReplicatePhysicsToAutonomousProxyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bReplicatePhysicsToAutonomousProxy")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bReplicates")); }
+    BrzCampoPonteiro bReturnMaterialOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bReturnMaterialOnMove")); }
+    BrzCampoPonteiro bSelectableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bSelectable")); }
+    BrzCampoPonteiro bSelfShadowOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bSelfShadowOnly")); }
+    BrzCampoPonteiro bShouldBeAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bShouldBeAttached")); }
+    BrzCampoPonteiro bShouldSnapLocationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bShouldSnapLocationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapRotationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bShouldSnapRotationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapScaleWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bShouldSnapScaleWhenAttached")); }
+    BrzCampoPonteiro bShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bSingleSampleShadowFromStationaryLightsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bSingleSampleShadowFromStationaryLights")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bStaticWhenNotMoveableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bStaticWhenNotMoveable")); }
+    BrzCampoPonteiro bTraceComplexOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bTraceComplexOnMove")); }
+    BrzCampoPonteiro bTreatAsBackgroundForOcclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bTreatAsBackgroundForOcclusion")); }
+    BrzCampoPonteiro bUpdateChildOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUpdateChildOverlaps")); }
+    BrzCampoPonteiro bUseAbsoluteMaxDrawDisatanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseAbsoluteMaxDrawDisatance")); }
+    BrzCampoPonteiro bUseAsOccluderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseAsOccluder")); }
+    BrzCampoPonteiro bUseAsUnfoggerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseAsUnfogger")); }
+    BrzCampoPonteiro bUseAttachParentBoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseAttachParentBound")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseEditorCompositingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseEditorCompositing")); }
+    BrzCampoPonteiro bUseInternalOctreeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseInternalOctree")); }
+    BrzCampoPonteiro bUseInternalOctreeOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseInternalOctreeOnClient")); }
+    BrzCampoPonteiro bUseViewOwnerDepthPriorityGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bUseViewOwnerDepthPriorityGroup")); }
+    BrzCampoPonteiro bVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bVisible")); }
+    BrzCampoPonteiro bVisibleInRayTracingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bVisibleInRayTracing")); }
+    BrzCampoPonteiro bVisibleInRealTimeSkyCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bVisibleInRealTimeSkyCaptures")); }
+    BrzCampoPonteiro bVisibleInReflectionCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bVisibleInReflectionCaptures")); }
+    BrzCampoPonteiro bVisibleInSceneCaptureOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bVisibleInSceneCaptureOnly")); }
+    BrzCampoPonteiro bWantsEditorEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerRenderingComponent.bWantsEditorEffects")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UGAMEPLAYDEBUGGERRENDERINGCOMPONENT_H

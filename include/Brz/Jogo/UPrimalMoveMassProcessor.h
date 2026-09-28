@@ -103,10 +103,10 @@ struct UPrimalMoveMassProcessor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMoveMassProcessor.ExecutionOrder")); }
     BrzCampoPonteiro ProcessingPhaseField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMoveMassProcessor.ProcessingPhase")); }
-    BitFieldValue<bool, unsigned __int32> bAutoRegisterWithProcessingPhases()
-    { return { (void*)this, "bAutoRegisterWithProcessingPhases" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiresGameThreadExecution()
-    { return { (void*)this, "bRequiresGameThreadExecution" }; }
+    BrzCampoPonteiro bAutoRegisterWithProcessingPhasesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMoveMassProcessor.bAutoRegisterWithProcessingPhases")); }
+    BrzCampoPonteiro bRequiresGameThreadExecutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMoveMassProcessor.bRequiresGameThreadExecution")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALMOVEMASSPROCESSOR_H

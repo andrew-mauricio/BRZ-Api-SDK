@@ -35,7 +35,7 @@ struct UPrimalWirelessExchangeData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWirelessExchangeData.GetMatchingExchange(TArray<UPrimalWirelessExchangeData*,TSizedDefaul
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMatchingExchange(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalWirelessExchangeData.GetMatchingExchange(TArray<UPrimalWirelessExchangeData*,TSizedDefaultAllocator<32>>&)", a0);
@@ -43,7 +43,7 @@ struct UPrimalWirelessExchangeData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWirelessExchangeData.IsAtMaxNumConnectedConsumers(FPrimalWirelessReferences&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsAtMaxNumConnectedConsumers(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalWirelessExchangeData.IsAtMaxNumConnectedConsumers(FPrimalWirelessReferences&)", a0);
@@ -51,7 +51,7 @@ struct UPrimalWirelessExchangeData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWirelessExchangeData.IsAtMaxNumConnectedSources(FPrimalWirelessReferences&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsAtMaxNumConnectedSources(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalWirelessExchangeData.IsAtMaxNumConnectedSources(FPrimalWirelessReferences&)", a0);
@@ -75,6 +75,10 @@ struct UPrimalWirelessExchangeData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWirelessExchangeData.WirelessTagOverrides")); }
     BrzCampoPonteiro WirelessTypeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWirelessExchangeData.WirelessType")); }
+    BrzCampoPonteiro bIsManualConnectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWirelessExchangeData.bIsManualConnection")); }
+    BrzCampoPonteiro bShowPlacementPreviewField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWirelessExchangeData.bShowPlacementPreview")); }
     BitFieldValue<bool, unsigned __int32> bIsManualConnection()
     { return { (void*)this, "bIsManualConnection" }; }
     BitFieldValue<bool, unsigned __int32> bShowPlacementPreview()

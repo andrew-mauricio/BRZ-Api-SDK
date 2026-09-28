@@ -171,7 +171,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.AreVector2DsEqual(UE::Math::TVector2<double>&,UE::Math::TVector2<double>&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool AreVector2DsEqual(void* a0, void* a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "UVictoryCore.AreVector2DsEqual(UE::Math::TVector2<double>&,UE::Math::TVector2<double>&)", a0, a1);
@@ -179,7 +179,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.AreVector2DsNearlyEqual(UE::Math::TVector2<double>&,UE::Math::TVector2<double>&,flo
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool AreVector2DsNearlyEqual(void* a0, void* a1, float a2)
     {
         return NativeCall<bool, void*, void*, float>(nullptr, "UVictoryCore.AreVector2DsNearlyEqual(UE::Math::TVector2<double>&,UE::Math::TVector2<double>&,float)", a0, a1, a2);
@@ -187,7 +187,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.AreVectorsNearlyEqual(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool AreVectorsNearlyEqual(void* a0, void* a1, float a2)
     {
         return NativeCall<bool, void*, void*, float>(nullptr, "UVictoryCore.AreVectorsNearlyEqual(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -203,7 +203,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.BPFLerp(float,float,float,bool,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float BPFLerp(float a0, float a1, float a2, bool a3, bool a4)
     {
         return NativeCall<float, float, float, float, bool, bool>(nullptr, "UVictoryCore.BPFLerp(float,float,float,bool,bool)", a0, a1, a2, a3, a4);
@@ -255,7 +255,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.BPGetWeightedRandomIndex(TArray<float,TSizedDefaultAllocator<32>>&,float)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     static int BPGetWeightedRandomIndex(void* a0, float a1)
     {
         return NativeCall<int, void*, float>(nullptr, "UVictoryCore.BPGetWeightedRandomIndex(TArray<float,TSizedDefaultAllocator<32>>&,float)", a0, a1);
@@ -263,7 +263,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.BPIsDinoIDEqual(int,int,int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool BPIsDinoIDEqual(int a0, int a1, int a2, int a3)
     {
         return NativeCall<bool, int, int, int, int>(nullptr, "UVictoryCore.BPIsDinoIDEqual(int,int,int,int)", a0, a1, a2, a3);
@@ -463,7 +463,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.CanPlayerCheatSpawnActor(APlayerController*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool CanPlayerCheatSpawnActor(void* a0, void* a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "UVictoryCore.CanPlayerCheatSpawnActor(APlayerController*,AActor*)", a0, a1);
@@ -703,7 +703,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.Conv_VectorToVectorNetQuantize(UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void Conv_VectorToVectorNetQuantize(void* retorno, void* a0)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.Conv_VectorToVectorNetQuantize(UE::Math::TVector<double>)", retorno, a0);
@@ -727,7 +727,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.ConvertRotatorFromLocalToWorld(UE::Math::TRotator<double>&,UE::Math::TRotator<doubl
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void ConvertRotatorFromLocalToWorld(void* retorno, void* a0, void* a1)
     {
         NativeCall<void, void*, void*, void*>(nullptr, "UVictoryCore.ConvertRotatorFromLocalToWorld(UE::Math::TRotator<double>&,UE::Math::TRotator<double>&)", retorno, a0, a1);
@@ -751,7 +751,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.CopyDinoColorSetIndicies(APrimalDinoCharacter*,APrimalDinoCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void CopyDinoColorSetIndicies(void* a0, void* a1)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.CopyDinoColorSetIndicies(APrimalDinoCharacter*,APrimalDinoCharacter*)", a0, a1);
@@ -795,7 +795,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.DeactivateMissionForPlayerCharacter(AShooterCharacter*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=84]]
+    // endereco: casamento de bytes com a build de referencia
     static void DeactivateMissionForPlayerCharacter(void* a0, bool a1)
     {
         NativeCall<void, void*, bool>(nullptr, "UVictoryCore.DeactivateMissionForPlayerCharacter(AShooterCharacter*,bool)", a0, a1);
@@ -867,7 +867,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.DisableGCM(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     static void DisableGCM(void* a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.DisableGCM(AActor*)", a0);
@@ -947,7 +947,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.ExitApplication()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void ExitApplication()
     {
         NativeCall<void>(nullptr, "UVictoryCore.ExitApplication()");
@@ -955,7 +955,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.FindActorAIState(TSubclassOf<UPrimalAIState>,TArray<FDinoAttackInfo,TSizedDefaultAl
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static UPrimalAIState* FindActorAIState(void* a0, void* a1)
     {
         return NativeCall<UPrimalAIState*, void*, void*>(nullptr, "UVictoryCore.FindActorAIState(TSubclassOf<UPrimalAIState>,TArray<FDinoAttackInfo,TSizedDefaultAllocator<32>>)", a0, a1);
@@ -979,7 +979,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.FindNearbyCharactersOfClass(UObject*,UE::Math::TVector<double>,float,TSubclassOf<AP
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     static void FindNearbyCharactersOfClass(void* retorno, void* a0, void* a1, float a2, void* a3, bool a4, bool a5)
     {
         NativeCall<void, void*, void*, void*, float, void*, bool, bool>(nullptr, "UVictoryCore.FindNearbyCharactersOfClass(UObject*,UE::Math::TVector<double>,float,TSubclassOf<APrimalCharacter>,bool,bool)", retorno, a0, a1, a2, a3, a4, a5);
@@ -1063,7 +1063,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.FloatToDouble(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static double FloatToDouble(float a0)
     {
         return NativeCall<double, float>(nullptr, "UVictoryCore.FloatToDouble(float)", a0);
@@ -1087,7 +1087,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.ForceDestroyWildDinos(UWorld*const)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     static void ForceDestroyWildDinos(void* a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.ForceDestroyWildDinos(UWorld*const)", a0);
@@ -1155,7 +1155,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GameModeHasPlayerTethering(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool GameModeHasPlayerTethering(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.GameModeHasPlayerTethering(UObject*)", a0);
@@ -1299,7 +1299,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetAllLocalPlayerControllers(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void GetAllLocalPlayerControllers(void* retorno, void* a0)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.GetAllLocalPlayerControllers(UObject*)", retorno, a0);
@@ -1307,7 +1307,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetAllMissionActors(UObject*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void GetAllMissionActors(void* retorno, void* a0)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.GetAllMissionActors(UObject*)", retorno, a0);
@@ -1315,7 +1315,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetAllMissionDispatcherPoints(UObject*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void GetAllMissionDispatcherPoints(void* retorno, void* a0)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.GetAllMissionDispatcherPoints(UObject*)", retorno, a0);
@@ -1643,7 +1643,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetDinoSetupPointsPerStat(FDinoSetup&,TEnumAsByte<EPrimalCharacterStatusValue::Type
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static int GetDinoSetupPointsPerStat(void* a0, unsigned char a1, bool a2)
     {
         return NativeCall<int, void*, unsigned char, bool>(nullptr, "UVictoryCore.GetDinoSetupPointsPerStat(FDinoSetup&,TEnumAsByte<EPrimalCharacterStatusValue::Type>,bool)", a0, a1, a2);
@@ -1899,7 +1899,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetMatineeLength(AMatineeActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float GetMatineeLength(void* a0)
     {
         return NativeCall<float, void*>(nullptr, "UVictoryCore.GetMatineeLength(AMatineeActor*)", a0);
@@ -1907,7 +1907,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.GetMinimapMarkAssodicatedItemID(FMinimapMark&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     static BrzPonteiro GetMinimapMarkAssodicatedItemID(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UVictoryCore.GetMinimapMarkAssodicatedItemID(FMinimapMark&)", a0);
@@ -1979,7 +1979,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetNearestAllieDDino(UObject*,int,UE::Math::TVector<double>&,TArray<AActor*,TSizedD
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=227+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static AActor* GetNearestAllieDDino(void* a0, int a1, void* a2, void* a3)
     {
         return NativeCall<AActor*, void*, int, void*, void*>(nullptr, "UVictoryCore.GetNearestAllieDDino(UObject*,int,UE::Math::TVector<double>&,TArray<AActor*,TSizedDefaultAllocator<32>>)", a0, a1, a2, a3);
@@ -1987,7 +1987,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.GetNearestAlliedControlledPlayer(UObject*,int,UE::Math::TVector<double>&,TArray<AAc
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetNearestAlliedControlledPlayer(void* a0, int a1, void* a2, void* a3)
     {
         return NativeCall<void*, void*, int, void*, void*>(nullptr, "UVictoryCore.GetNearestAlliedControlledPlayer(UObject*,int,UE::Math::TVector<double>&,TArray<AActor*,TSizedDefaultAllocator<32>>)", a0, a1, a2, a3);
@@ -2003,7 +2003,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetNearestAlliedPlayer(UObject*,int,UE::Math::TVector<double>&,TArray<AActor*,TSize
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=224+chamadores=2+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=224+chamadores=2+grafo=5/5]]
     static AActor* GetNearestAlliedPlayer(void* a0, int a1, void* a2, void* a3)
     {
         return NativeCall<AActor*, void*, int, void*, void*>(nullptr, "UVictoryCore.GetNearestAlliedPlayer(UObject*,int,UE::Math::TVector<double>&,TArray<AActor*,TSizedDefaultAllocator<32>>)", a0, a1, a2, a3);
@@ -2019,7 +2019,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetNetworkTime(UWorld*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static double GetNetworkTime(void* a0)
     {
         return NativeCall<double, void*>(nullptr, "UVictoryCore.GetNetworkTime(UWorld*)", a0);
@@ -2035,7 +2035,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetObjectName(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static unsigned long long GetObjectName(void* a0)
     {
         return NativeCall<unsigned long long, void*>(nullptr, "UVictoryCore.GetObjectName(UObject*)", a0);
@@ -2111,7 +2111,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetPlayerHeatLevel(UObject*,UE::Math::TVector<double>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=4]]
     static int GetPlayerHeatLevel(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.GetPlayerHeatLevel(UObject*,UE::Math::TVector<double>&)", a0, a1);
@@ -2127,7 +2127,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetPlayerUnderwaterHeatLevel(UObject*,UE::Math::TVector<double>&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
     static int GetPlayerUnderwaterHeatLevel(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.GetPlayerUnderwaterHeatLevel(UObject*,UE::Math::TVector<double>&)", a0, a1);
@@ -2199,7 +2199,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetRealWorldUtcTimeInSeconds()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     static double GetRealWorldUtcTimeInSeconds()
     {
         return NativeCall<double>(nullptr, "UVictoryCore.GetRealWorldUtcTimeInSeconds()");
@@ -2239,7 +2239,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.GetSeaLevel(UWorld*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=101]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float GetSeaLevel(void* a0)
     {
         return NativeCall<float, void*>(nullptr, "UVictoryCore.GetSeaLevel(UWorld*)", a0);
@@ -2399,7 +2399,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.GetTeamColor(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetTeamColor(int a0)
     {
         return NativeCall<void*, int>(nullptr, "UVictoryCore.GetTeamColor(int)", a0);
@@ -2439,7 +2439,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetUpsellIndex()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=75+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static int GetUpsellIndex()
     {
         return NativeCall<int>(nullptr, "UVictoryCore.GetUpsellIndex()");
@@ -2455,7 +2455,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetVolumeOfCapsule(float,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float GetVolumeOfCapsule(float a0, float a1)
     {
         return NativeCall<float, float, float>(nullptr, "UVictoryCore.GetVolumeOfCapsule(float,float)", a0, a1);
@@ -2463,7 +2463,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.GetWaterSurfaceZAtLocation(UWorld*,UE::Math::TVector<double>,bool&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     static BrzPonteiro GetWaterSurfaceZAtLocation(void* a0, void* a1, void* a2, float a3)
     {
         return NativeCall<void*, void*, void*, void*, float>(nullptr, "UVictoryCore.GetWaterSurfaceZAtLocation(UWorld*,UE::Math::TVector<double>,bool&,float)", a0, a1, a2, a3);
@@ -2511,7 +2511,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.GetWorldOceanVolume(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static UObject* GetWorldOceanVolume(void* a0)
     {
         return NativeCall<UObject*, void*>(nullptr, "UVictoryCore.GetWorldOceanVolume(UWorld*)", a0);
@@ -2611,7 +2611,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.HasCraftingRequirementsGreaterThanOne(UPrimalItem*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool HasCraftingRequirementsGreaterThanOne(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.HasCraftingRequirementsGreaterThanOne(UPrimalItem*)", a0);
@@ -2643,7 +2643,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.InlineLoadLevels(TArray<FName,TSizedDefaultAllocator<32>>&,TArray<FName,TSizedDefau
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void InlineLoadLevels(void* a0, void* a1, bool a2)
     {
         NativeCall<void, void*, void*, bool>(nullptr, "UVictoryCore.InlineLoadLevels(TArray<FName,TSizedDefaultAllocator<32>>&,TArray<FName,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
@@ -2651,7 +2651,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.IntBitsToFloat(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float IntBitsToFloat(int a0)
     {
         return NativeCall<float, int>(nullptr, "UVictoryCore.IntBitsToFloat(int)", a0);
@@ -2783,7 +2783,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsChildOfClassesSoftRefT<AActor>(TSubclassOf<UObject>,TArray<TSoftClassPtr<AActor>,
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+chamadores=2+grafo=4/4]]
     static int IsChildOfClassesSoftRefT_AActor_(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.IsChildOfClassesSoftRefT<AActor>(TSubclassOf<UObject>,TArray<TSoftClassPtr<AActor>,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -2823,7 +2823,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsChildOfClassesSoftRefT<UObject>(TSubclassOf<UObject>,TArray<TSoftClassPtr<UObject
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+chamadores=5+grafo=4/4]]
     static int IsChildOfClassesSoftRefT_UObject_(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.IsChildOfClassesSoftRefT<UObject>(TSubclassOf<UObject>,TArray<TSoftClassPtr<UObject>,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -2839,7 +2839,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsChildOfClassesT<UPrimalItem>(TSubclassOf<UObject>,TArray<TSubclassOf<UPrimalItem>
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=322+bytes40+chamadores=4]]
     static int IsChildOfClassesT_UPrimalItem_(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.IsChildOfClassesT<UPrimalItem>(TSubclassOf<UObject>,TArray<TSubclassOf<UPrimalItem>,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -2847,7 +2847,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsConsoleBuild()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsConsoleBuild()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.IsConsoleBuild()");
@@ -2855,7 +2855,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsConsoleServerBuild()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsConsoleServerBuild()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.IsConsoleServerBuild()");
@@ -2899,7 +2899,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsDistanceGreaterThan(UE::Math::TVector<double>,UE::Math::TVector<double>,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsDistanceGreaterThan(void* a0, void* a1, float a2)
     {
         return NativeCall<bool, void*, void*, float>(nullptr, "UVictoryCore.IsDistanceGreaterThan(UE::Math::TVector<double>,UE::Math::TVector<double>,float)", a0, a1, a2);
@@ -2907,7 +2907,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsDistanceLessThan(UE::Math::TVector<double>,UE::Math::TVector<double>,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsDistanceLessThan(void* a0, void* a1, float a2)
     {
         return NativeCall<bool, void*, void*, float>(nullptr, "UVictoryCore.IsDistanceLessThan(UE::Math::TVector<double>,UE::Math::TVector<double>,float)", a0, a1, a2);
@@ -2915,7 +2915,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsEngramGroupAllowed(AShooterPlayerController*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsEngramGroupAllowed(void* a0, int a1)
     {
         return NativeCall<bool, void*, int>(nullptr, "UVictoryCore.IsEngramGroupAllowed(AShooterPlayerController*,int)", a0, a1);
@@ -2987,7 +2987,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsLoadingSaveGame()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsLoadingSaveGame()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.IsLoadingSaveGame()");
@@ -3043,7 +3043,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsModInstalled(__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=255]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsModInstalled(int a0)
     {
         return NativeCall<bool, int>(nullptr, "UVictoryCore.IsModInstalled(__int64)", a0);
@@ -3051,7 +3051,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsModPremium(__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=260]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsModPremium(int a0)
     {
         return NativeCall<bool, int>(nullptr, "UVictoryCore.IsModPremium(__int64)", a0);
@@ -3067,7 +3067,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.IsOnMap(EPrimalMaps)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsOnMap(int a0)
     {
         return NativeCall<void*, int>(nullptr, "UVictoryCore.IsOnMap(EPrimalMaps)", a0);
@@ -3075,7 +3075,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsPS4Build()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsPS4Build()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.IsPS4Build()");
@@ -3139,7 +3139,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsSOTF()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsSOTF()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.IsSOTF()");
@@ -3191,7 +3191,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsTimerActive(UObject*,FString)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=439+grafo=11/11]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsTimerActive(void* a0, const FString& a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "UVictoryCore.IsTimerActive(UObject*,FString)", a0, const_cast<FString*>(&a1));
@@ -3203,7 +3203,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsTimerPaused(UObject*,FString)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=439+grafo=11/11]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsTimerPaused(void* a0, const FString& a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "UVictoryCore.IsTimerPaused(UObject*,FString)", a0, const_cast<FString*>(&a1));
@@ -3231,7 +3231,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.IsValidSlateBrushResource(FSlateBrush&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsValidSlateBrushResource(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UVictoryCore.IsValidSlateBrushResource(FSlateBrush&)", a0);
@@ -3267,7 +3267,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsXboxOneBuild()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsXboxOneBuild()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.IsXboxOneBuild()");
@@ -3383,7 +3383,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.MarkGen2IntroAsSeen(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void MarkGen2IntroAsSeen(void* a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.MarkGen2IntroAsSeen(UObject*)", a0);
@@ -3547,7 +3547,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.NoDinoSpawning()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     static bool NoDinoSpawning()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.NoDinoSpawning()");
@@ -3563,7 +3563,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.ObjectIsChildOf(UObject*,UClass*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool ObjectIsChildOf(void* a0, void* a1, bool a2)
     {
         return NativeCall<bool, void*, void*, bool>(nullptr, "UVictoryCore.ObjectIsChildOf(UObject*,UClass*,bool)", a0, a1, a2);
@@ -3631,7 +3631,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OverlappingActors(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,UE::Ma
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=301+chamadores=8+grafo=5/5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=301+chamadores=17+grafo=4/4]]
     static bool OverlappingActors(void* a0, void* a1, void* a2, float a3, int a4, void* a5, unsigned long long a6, bool a7)
     {
         return NativeCall<bool, void*, void*, void*, float, int, void*, unsigned long long, bool>(nullptr, "UVictoryCore.OverlappingActors(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>,float,int,AActor*,FName,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -3647,7 +3647,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OverlappingActorsTrace(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,U
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=298+chamadores=2+grafo=5/5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=298+chamadores=7+grafo=4/4]]
     static bool OverlappingActorsTrace(void* a0, void* a1, void* a2, float a3, int a4, void* a5, unsigned long long a6, bool a7)
     {
         return NativeCall<bool, void*, void*, void*, float, int, void*, unsigned long long, bool>(nullptr, "UVictoryCore.OverlappingActorsTrace(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>,float,ECollisionChannel,AActor*,FName,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -3671,7 +3671,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsAberration()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsAberration()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsAberration()");
@@ -3679,7 +3679,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsAstraeos()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsAstraeos()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsAstraeos()");
@@ -3687,7 +3687,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsBobsTallTales()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsBobsTallTales()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsBobsTallTales()");
@@ -3715,7 +3715,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsDarkPegasus()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsDarkPegasus()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsDarkPegasus()");
@@ -3723,7 +3723,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsExtinction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsExtinction()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsExtinction()");
@@ -3731,7 +3731,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsFireLion()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsFireLion()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsFireLion()");
@@ -3739,7 +3739,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsGenesis()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsGenesis()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsGenesis()");
@@ -3747,7 +3747,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsGenesisSeasonPass()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsGenesisSeasonPass()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsGenesisSeasonPass()");
@@ -3755,7 +3755,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsScorchedEarth()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsScorchedEarth()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsScorchedEarth()");
@@ -3763,7 +3763,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OwnsShoulderDragon()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsShoulderDragon()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsShoulderDragon()");
@@ -3771,7 +3771,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.OwnsSpiritBear()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool OwnsSpiritBear()
     {
         return NativeCall<bool>(nullptr, "UVictoryCore.OwnsSpiritBear()");
@@ -3903,7 +3903,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.PlayerOwnsAstraeos(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsAstraeos(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerOwnsAstraeos(AShooterPlayerController*)", a0);
@@ -3911,7 +3911,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerOwnsBobsTallTales(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsBobsTallTales(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerOwnsBobsTallTales(AShooterPlayerController*)", a0);
@@ -3943,7 +3943,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerOwnsDLCServerOnly(AShooterPlayerController*,FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsDLCServerOnly(void* a0, const FString& a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "UVictoryCore.PlayerOwnsDLCServerOnly(AShooterPlayerController*,FString&)", a0, const_cast<FString*>(&a1));
@@ -3955,7 +3955,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerOwnsDarkPegasus(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsDarkPegasus(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerOwnsDarkPegasus(AShooterPlayerController*)", a0);
@@ -4003,7 +4003,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerOwnsShoulderDragon(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsShoulderDragon(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerOwnsShoulderDragon(AShooterPlayerController*)", a0);
@@ -4011,7 +4011,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.PlayerOwnsSpiritBear(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsSpiritBear(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerOwnsSpiritBear(AShooterPlayerController*)", a0);
@@ -4019,7 +4019,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.PlayerOwnsTidesOfFortune(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerOwnsTidesOfFortune(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerOwnsTidesOfFortune(AShooterPlayerController*)", a0);
@@ -4027,7 +4027,7 @@ struct UVictoryCore : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UVictoryCore.PlayerStateOwnsASASeasonPass1(AShooterPlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=74]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerStateOwnsASASeasonPass1(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerStateOwnsASASeasonPass1(AShooterPlayerState*)", a0);
@@ -4035,7 +4035,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerStateOwnsBobsTallTales(AShooterPlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     static bool PlayerStateOwnsBobsTallTales(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerStateOwnsBobsTallTales(AShooterPlayerState*)", a0);
@@ -4043,7 +4043,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerStateOwnsDLC(APlayerState*,FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerStateOwnsDLC(void* a0, const FString& a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "UVictoryCore.PlayerStateOwnsDLC(APlayerState*,FString&)", a0, const_cast<FString*>(&a1));
@@ -4055,7 +4055,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PlayerStateOwnsLostColony(AShooterPlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=74]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool PlayerStateOwnsLostColony(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UVictoryCore.PlayerStateOwnsLostColony(AShooterPlayerState*)", a0);
@@ -4111,7 +4111,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PrecisionRound(float,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float PrecisionRound(float a0, int a1)
     {
         return NativeCall<float, float, int>(nullptr, "UVictoryCore.PrecisionRound(float,int)", a0, a1);
@@ -4147,7 +4147,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.PrintNativeCallstack()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=119+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void PrintNativeCallstack()
     {
         NativeCall<void>(nullptr, "UVictoryCore.PrintNativeCallstack()");
@@ -4259,7 +4259,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.RecordMeshingMetrics(AActor*,bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void RecordMeshingMetrics(void* a0, bool a1)
     {
         NativeCall<void, void*, bool>(nullptr, "UVictoryCore.RecordMeshingMetrics(AActor*,bool)", a0, a1);
@@ -4267,7 +4267,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.RecordOutsideWorldMetrics(AActor*,bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void RecordOutsideWorldMetrics(void* a0, bool a1)
     {
         NativeCall<void, void*, bool>(nullptr, "UVictoryCore.RecordOutsideWorldMetrics(AActor*,bool)", a0, a1);
@@ -4323,7 +4323,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.RemovePitchAndRollFromRotator(UE::Math::TRotator<double>&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void RemovePitchAndRollFromRotator(void* retorno, void* a0)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.RemovePitchAndRollFromRotator(UE::Math::TRotator<double>&)", retorno, a0);
@@ -4351,7 +4351,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.ResetCooldown(double&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void ResetCooldown(void* a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.ResetCooldown(double&)", a0);
@@ -4375,7 +4375,7 @@ struct UVictoryCore : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UVictoryCore.RotDegreesBetweenYaw(UE::Math::TRotator<double>,UE::Math::TRotator<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro RotDegreesBetweenYaw(void* a0, void* a1)
     {
         return NativeCall<void*, void*, void*>(nullptr, "UVictoryCore.RotDegreesBetweenYaw(UE::Math::TRotator<double>,UE::Math::TRotator<double>)", a0, a1);
@@ -4419,7 +4419,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.SelectCloserVector(UE::Math::TVector<double>,UE::Math::TVector<double>,UE::Math::TV
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void SelectCloserVector(void* retorno, void* a0, void* a1, void* a2, void* a3)
     {
         NativeCall<void, void*, void*, void*, void*, void*>(nullptr, "UVictoryCore.SelectCloserVector(UE::Math::TVector<double>,UE::Math::TVector<double>,UE::Math::TVector<double>,bool&)", retorno, a0, a1, a2, a3);
@@ -4427,7 +4427,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.SelectVectorIfWithinRange(UE::Math::TVector<double>,UE::Math::TVector<double>,bool&
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void SelectVectorIfWithinRange(void* retorno, void* a0, void* a1, void* a2, float a3)
     {
         NativeCall<void, void*, void*, void*, void*, float>(nullptr, "UVictoryCore.SelectVectorIfWithinRange(UE::Math::TVector<double>,UE::Math::TVector<double>,bool&,float)", retorno, a0, a1, a2, a3);
@@ -4559,7 +4559,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.SetDinoSetupPointsPerStat(FDinoSetup&,TEnumAsByte<EPrimalCharacterStatusValue::Type
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void SetDinoSetupPointsPerStat(void* a0, unsigned char a1, int a2, bool a3, bool a4)
     {
         NativeCall<void, void*, unsigned char, int, bool, bool>(nullptr, "UVictoryCore.SetDinoSetupPointsPerStat(FDinoSetup&,TEnumAsByte<EPrimalCharacterStatusValue::Type>,int,bool,bool)", a0, a1, a2, a3, a4);
@@ -4575,7 +4575,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.SetExtraCmdLine(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: casamento de bytes com a build de referencia
     static void SetExtraCmdLine(const FString& a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.SetExtraCmdLine(FString&)", const_cast<FString*>(&a0));
@@ -4659,7 +4659,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.SetMultiUseEntryPriority(TArray<FMultiUseEntry,TSizedDefaultAllocator<32>>&,bool,in
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     static bool SetMultiUseEntryPriority(void* a0, bool a1, int a2, int a3)
     {
         return NativeCall<bool, void*, bool, int, int>(nullptr, "UVictoryCore.SetMultiUseEntryPriority(TArray<FMultiUseEntry,TSizedDefaultAllocator<32>>&,bool,int,int)", a0, a1, a2, a3);
@@ -4951,7 +4951,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.StaticGetMinimapLocation(UObject*,UE::Math::TVector<double>)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     static void StaticGetMinimapLocation(void* retorno, void* a0, void* a1)
     {
         NativeCall<void, void*, void*, void*>(nullptr, "UVictoryCore.StaticGetMinimapLocation(UObject*,UE::Math::TVector<double>)", retorno, a0, a1);
@@ -4983,7 +4983,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.StaticRegisterNativesUVictoryCore()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesUVictoryCore()
     {
         NativeCall<void>(nullptr, "UVictoryCore.StaticRegisterNativesUVictoryCore()");
@@ -4991,7 +4991,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.StopAllMusicTracks(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StopAllMusicTracks(void* a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.StopAllMusicTracks(UObject*)", a0);
@@ -5167,7 +5167,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.TransformVectorByScreenProjectionGlobalTransform(UE::Math::TVector2<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void TransformVectorByScreenProjectionGlobalTransform(void* retorno, void* a0)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.TransformVectorByScreenProjectionGlobalTransform(UE::Math::TVector2<double>)", retorno, a0);
@@ -5239,7 +5239,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.UnPauseTimer(UObject*,FString)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=377+bytes40+grafo=11/11]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=377+bytes40+chamadores=2+grafo=11/11]]
     static void UnPauseTimer(void* a0, const FString& a1)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.UnPauseTimer(UObject*,FString)", a0, const_cast<FString*>(&a1));
@@ -5411,7 +5411,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.VectorDistance(UE::Math::TVector<double>,UE::Math::TVector<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float VectorDistance(void* a0, void* a1)
     {
         return NativeCall<float, void*, void*>(nullptr, "UVictoryCore.VectorDistance(UE::Math::TVector<double>,UE::Math::TVector<double>)", a0, a1);
@@ -5427,7 +5427,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.ViewTrailer(bool,bool)
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void ViewTrailer(bool a0, bool a1)
     {
         NativeCall<void, bool, bool>(nullptr, "UVictoryCore.ViewTrailer(bool,bool)", a0, a1);

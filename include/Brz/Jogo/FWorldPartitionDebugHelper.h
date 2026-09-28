@@ -87,7 +87,7 @@ struct FWorldPartitionDebugHelper
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FWorldPartitionDebugHelper.IsDebugStreamingStatusShown(EStreamingStatus)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsDebugStreamingStatusShown(int a0)
     {
         return NativeCall<void*, int>(nullptr, "FWorldPartitionDebugHelper.IsDebugStreamingStatusShown(EStreamingStatus)", a0);

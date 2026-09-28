@@ -48,7 +48,7 @@ struct AShooterGameSession : public AGameSession
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameSession.CancelFindSessions()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CancelFindSessions() const
     {
         return NativeCall<void*>(this, "AShooterGameSession.CancelFindSessions()");
@@ -120,7 +120,7 @@ struct AShooterGameSession : public AGameSession
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameSession.GetSearchResultStatus(int&,int&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSearchResultStatus(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterGameSession.GetSearchResultStatus(int&,int&)", a0, a1);
@@ -128,7 +128,7 @@ struct AShooterGameSession : public AGameSession
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameSession.GetSearchResults()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSearchResults() const
     {
         return NativeCall<void*>(this, "AShooterGameSession.GetSearchResults()");
@@ -224,10 +224,10 @@ struct AShooterGameSession : public AGameSession
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameSession.KickPlayer(APlayerController*,FText&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=573+grafo=13/14]]
-    static bool KickPlayer(void* a0, void* a1)
+    // endereco: casamento de bytes com a build de referencia
+    bool KickPlayer(void* a0, void* a1) const
     {
-        return NativeCall<bool, void*, void*>(nullptr, "AShooterGameSession.KickPlayer(APlayerController*,FText&)", a0, a1);
+        return NativeCall<bool, void*, void*>(this, "AShooterGameSession.KickPlayer(APlayerController*,FText&)", a0, a1);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -280,7 +280,7 @@ struct AShooterGameSession : public AGameSession
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameSession.OnRecreateSessionListenServerDestroy(FName,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRecreateSessionListenServerDestroy(unsigned long long a0, bool a1) const
     {
         NativeCall<void, unsigned long long, bool>(this, "AShooterGameSession.OnRecreateSessionListenServerDestroy(FName,bool)", a0, a1);
@@ -344,7 +344,7 @@ struct AShooterGameSession : public AGameSession
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameSession.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "AShooterGameSession.Tick(float)", a0);
@@ -372,6 +372,14 @@ struct AShooterGameSession : public AGameSession
     void UpdateSearchResults() const
     {
         NativeCall<void>(this, "AShooterGameSession.UpdateSearchResults()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterGameSession.`vcall'{3904,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__3904__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterGameSession.`vcall'{3904,{flat}}()");
     }
 
 };

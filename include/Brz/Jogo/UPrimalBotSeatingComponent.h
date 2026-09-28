@@ -106,48 +106,48 @@ struct UPrimalBotSeatingComponent
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "UPrimalBotSeatingComponent.SeatedBot"); }
     int& UCSSerializationIndexField() const
     { return *GetNativePointerField<int*>(this, "UPrimalBotSeatingComponent.UCSSerializationIndex"); }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bAutoActivate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bReplicates")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBotSeatingComponent.bUseBPOnComponentTick")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALBOTSEATINGCOMPONENT_H

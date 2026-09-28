@@ -49,7 +49,7 @@ struct UPrimalCableComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCableComponent.GetCableMidPoint()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCableMidPoint() const
     {
         return NativeCall<void*>(this, "UPrimalCableComponent.GetCableMidPoint()");
@@ -57,7 +57,7 @@ struct UPrimalCableComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCableComponent.GetCableParticle(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCableParticle(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalCableComponent.GetCableParticle(int)", a0);
@@ -119,10 +119,10 @@ struct UPrimalCableComponent
         return NativeCall<void*, void*>(this, "UPrimalCableComponent.UpdateProceduralMesh(TArray<UE::Math::TVector<float>,TSizedDefaultAllocator<32>>&)", a0);
     }
 
-    BitFieldValue<bool, unsigned __int32> AlwaysLoadOnClient()
-    { return { (void*)this, "AlwaysLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> AlwaysLoadOnServer()
-    { return { (void*)this, "AlwaysLoadOnServer" }; }
+    BrzCampoPonteiro AlwaysLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.AlwaysLoadOnClient")); }
+    BrzCampoPonteiro AlwaysLoadOnServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.AlwaysLoadOnServer")); }
     TArray<void*>& AssetUserDataField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalCableComponent.AssetUserData"); }
     BrzCampoPonteiro AsyncBodySetupQueueField() const
@@ -149,8 +149,8 @@ struct UPrimalCableComponent
     { return *GetNativePointerField<float*>(this, "UPrimalCableComponent.CachedMaxDrawDistance"); }
     unsigned char& CanCharacterStepUpOnField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalCableComponent.CanCharacterStepUpOn"); }
-    BitFieldValue<bool, unsigned __int32> CastShadow()
-    { return { (void*)this, "CastShadow" }; }
+    BrzCampoPonteiro CastShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.CastShadow")); }
     TArray<void*>& ClientAttachedChildrenField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalCableComponent.ClientAttachedChildren"); }
     BrzCampoPonteiro CollisionConvexElemsField() const
@@ -291,252 +291,256 @@ struct UPrimalCableComponent
     { return { (void*)this, "UPrimalCableComponent.VirtualTextureRenderPassType" }; }
     int& VisibilityIdField() const
     { return *GetNativePointerField<int*>(this, "UPrimalCableComponent.VisibilityId"); }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteLocation()
-    { return { (void*)this, "bAbsoluteLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteRotation()
-    { return { (void*)this, "bAbsoluteRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteScale()
-    { return { (void*)this, "bAbsoluteScale" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectDistanceFieldLighting()
-    { return { (void*)this, "bAffectDistanceFieldLighting" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectDynamicIndirectLighting()
-    { return { (void*)this, "bAffectDynamicIndirectLighting" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectIndirectLightingWhileHidden()
-    { return { (void*)this, "bAffectIndirectLightingWhileHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCullDistanceVolume()
-    { return { (void*)this, "bAllowCullDistanceVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyImpulseOnDamage()
-    { return { (void*)this, "bApplyImpulseOnDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachedSoundsForceHighPriority()
-    { return { (void*)this, "bAttachedSoundsForceHighPriority" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bBoundsChangeTriggersStreamingDataRebuild()
-    { return { (void*)this, "bBoundsChangeTriggersStreamingDataRebuild" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bCastCinematicShadow()
-    { return { (void*)this, "bCastCinematicShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastContactShadow()
-    { return { (void*)this, "bCastContactShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastDynamicShadow()
-    { return { (void*)this, "bCastDynamicShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastFarShadow()
-    { return { (void*)this, "bCastFarShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastHiddenShadow()
-    { return { (void*)this, "bCastHiddenShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastInsetShadow()
-    { return { (void*)this, "bCastInsetShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastShadowAsTwoSided()
-    { return { (void*)this, "bCastShadowAsTwoSided" }; }
-    BitFieldValue<bool, unsigned __int32> bCastStaticShadow()
-    { return { (void*)this, "bCastStaticShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastVolumetricTranslucentShadow()
-    { return { (void*)this, "bCastVolumetricTranslucentShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bClientSyncAlwaysUpdatePhysicsCollision()
-    { return { (void*)this, "bClientSyncAlwaysUpdatePhysicsCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentToWorldUpdated()
-    { return { (void*)this, "bComponentToWorldUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeBoundsOnceForGame()
-    { return { (void*)this, "bComputeBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeFastLocalBounds()
-    { return { (void*)this, "bComputeFastLocalBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bComputedBoundsOnceForGame()
-    { return { (void*)this, "bComputedBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bDisablePerPixelPainting()
-    { return { (void*)this, "bDisablePerPixelPainting" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
+    BrzCampoPonteiro bAbsoluteLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAbsoluteLocation")); }
+    BrzCampoPonteiro bAbsoluteRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAbsoluteRotation")); }
+    BrzCampoPonteiro bAbsoluteScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAbsoluteScale")); }
+    BrzCampoPonteiro bAffectDistanceFieldLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAffectDistanceFieldLighting")); }
+    BrzCampoPonteiro bAffectDynamicIndirectLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAffectDynamicIndirectLighting")); }
+    BrzCampoPonteiro bAffectIndirectLightingWhileHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAffectIndirectLightingWhileHidden")); }
+    BrzCampoPonteiro bAllowCullDistanceVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAllowCullDistanceVolume")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bApplyImpulseOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bApplyImpulseOnDamage")); }
+    BrzCampoPonteiro bAttachedSoundsForceHighPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAttachedSoundsForceHighPriority")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bAutoActivate")); }
+    BrzCampoPonteiro bBoundsChangeTriggersStreamingDataRebuildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bBoundsChangeTriggersStreamingDataRebuild")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCastCinematicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastCinematicShadow")); }
+    BrzCampoPonteiro bCastContactShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastContactShadow")); }
+    BrzCampoPonteiro bCastDynamicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastDynamicShadow")); }
+    BrzCampoPonteiro bCastFarShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastFarShadow")); }
+    BrzCampoPonteiro bCastHiddenShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastHiddenShadow")); }
+    BrzCampoPonteiro bCastInsetShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastInsetShadow")); }
+    BrzCampoPonteiro bCastShadowAsTwoSidedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastShadowAsTwoSided")); }
+    BrzCampoPonteiro bCastStaticShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastStaticShadow")); }
+    BrzCampoPonteiro bCastVolumetricTranslucentShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bCastVolumetricTranslucentShadow")); }
+    BrzCampoPonteiro bClientSyncAlwaysUpdatePhysicsCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bClientSyncAlwaysUpdatePhysicsCollision")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bClimbable")); }
+    BrzCampoPonteiro bComponentToWorldUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bComponentToWorldUpdated")); }
+    BrzCampoPonteiro bComputeBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bComputeBoundsOnceForGame")); }
+    BrzCampoPonteiro bComputeFastLocalBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bComputeFastLocalBounds")); }
+    BrzCampoPonteiro bComputedBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bComputedBoundsOnceForGame")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bDisablePerPixelPaintingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bDisablePerPixelPainting")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bEditableWhenInherited")); }
     bool& bEmissiveLightSourceField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalCableComponent.bEmissiveLightSource"); }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMaterialParameterCaching()
-    { return { (void*)this, "bEnableMaterialParameterCaching" }; }
-    BitFieldValue<bool, unsigned __int32> bExcludeFromLevelBounds()
-    { return { (void*)this, "bExcludeFromLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bExcludeFromLightAttachmentGroup()
-    { return { (void*)this, "bExcludeFromLightAttachmentGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bFillCollisionUnderneathForNavmesh()
-    { return { (void*)this, "bFillCollisionUnderneathForNavmesh" }; }
-    BitFieldValue<bool, unsigned __int32> bForceMipStreaming()
-    { return { (void*)this, "bForceMipStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bForceOverlapEvents()
-    { return { (void*)this, "bForceOverlapEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventBlockingProjectiles()
-    { return { (void*)this, "bForcePreventBlockingProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEvents()
-    { return { (void*)this, "bGenerateOverlapEvents" }; }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableMaterialParameterCachingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bEnableMaterialParameterCaching")); }
+    BrzCampoPonteiro bEndPointIsInWorldSpaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bEndPointIsInWorldSpace")); }
+    BrzCampoPonteiro bExcludeFromLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bExcludeFromLevelBounds")); }
+    BrzCampoPonteiro bExcludeFromLightAttachmentGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bExcludeFromLightAttachmentGroup")); }
+    BrzCampoPonteiro bFillCollisionUnderneathForNavmeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bFillCollisionUnderneathForNavmesh")); }
+    BrzCampoPonteiro bForceMipStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bForceMipStreaming")); }
+    BrzCampoPonteiro bForceOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bForceOverlapEvents")); }
+    BrzCampoPonteiro bForcePreventBlockingProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bForcePreventBlockingProjectiles")); }
+    BrzCampoPonteiro bGenerateOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bGenerateOverlapEvents")); }
     unsigned char& bHasCustomNavigableGeometryField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalCableComponent.bHasCustomNavigableGeometry"); }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHasNoStreamableTextures()
-    { return { (void*)this, "bHasNoStreamableTextures" }; }
-    BitFieldValue<bool, unsigned __int32> bHasPerInstanceHitProxies()
-    { return { (void*)this, "bHasPerInstanceHitProxies" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInGame()
-    { return { (void*)this, "bHiddenInGame" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInSceneCapture()
-    { return { (void*)this, "bHiddenInSceneCapture" }; }
-    BitFieldValue<bool, unsigned __int32> bHoldout()
-    { return { (void*)this, "bHoldout" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreParentTransformUpdate()
-    { return { (void*)this, "bIgnoreParentTransformUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRadialForce()
-    { return { (void*)this, "bIgnoreRadialForce" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRadialImpulse()
-    { return { (void*)this, "bIgnoreRadialImpulse" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreUpdatingOwnersLastRenderTime()
-    { return { (void*)this, "bIgnoreUpdatingOwnersLastRenderTime" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIncludeBoundsRadiusInDrawDistances()
-    { return { (void*)this, "bIncludeBoundsRadiusInDrawDistances" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAbstractBasingComponent()
-    { return { (void*)this, "bIsAbstractBasingComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActorTextureStreamingBuiltData()
-    { return { (void*)this, "bIsActorTextureStreamingBuiltData" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBeingMovedByEditor()
-    { return { (void*)this, "bIsBeingMovedByEditor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInForeground()
-    { return { (void*)this, "bIsInForeground" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNotRenderAttachmentRoot()
-    { return { (void*)this, "bIsNotRenderAttachmentRoot" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidTextureStreamingBuiltData()
-    { return { (void*)this, "bIsValidTextureStreamingBuiltData" }; }
-    BitFieldValue<bool, unsigned __int32> bLightAsIfStatic()
-    { return { (void*)this, "bLightAsIfStatic" }; }
-    BitFieldValue<bool, unsigned __int32> bLightAttachmentsAsGroup()
-    { return { (void*)this, "bLightAttachmentsAsGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bMovableUseDynamicDrawDistance()
-    { return { (void*)this, "bMovableUseDynamicDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiBodyOverlap()
-    { return { (void*)this, "bMultiBodyOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bNeverDistanceCull()
-    { return { (void*)this, "bNeverDistanceCull" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyOwnerSee()
-    { return { (void*)this, "bOnlyOwnerSee" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOwnerNoSee()
-    { return { (void*)this, "bOwnerNoSee" }; }
-    BitFieldValue<bool, unsigned __int32> bPlaceholderBool1()
-    { return { (void*)this, "bPlaceholderBool1" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDamage()
-    { return { (void*)this, "bPreventDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bRayTracingFarField()
-    { return { (void*)this, "bRayTracingFarField" }; }
-    BitFieldValue<bool, unsigned __int32> bReceiveMobileCSMShadows()
-    { return { (void*)this, "bReceiveMobileCSMShadows" }; }
-    BitFieldValue<bool, unsigned __int32> bReceivesDecals()
-    { return { (void*)this, "bReceivesDecals" }; }
-    BitFieldValue<bool, unsigned __int32> bRegisterWithMaterialGPUMessageQueue()
-    { return { (void*)this, "bRegisterWithMaterialGPUMessageQueue" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderCustomDepth()
-    { return { (void*)this, "bRenderCustomDepth" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderInDepthPass()
-    { return { (void*)this, "bRenderInDepthPass" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderInMainPass()
-    { return { (void*)this, "bRenderInMainPass" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicatePhysicsToAutonomousProxy()
-    { return { (void*)this, "bReplicatePhysicsToAutonomousProxy" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bReturnMaterialOnMove()
-    { return { (void*)this, "bReturnMaterialOnMove" }; }
-    BitFieldValue<bool, unsigned __int32> bSelectable()
-    { return { (void*)this, "bSelectable" }; }
-    BitFieldValue<bool, unsigned __int32> bSelfShadowOnly()
-    { return { (void*)this, "bSelfShadowOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeAttached()
-    { return { (void*)this, "bShouldBeAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapLocationWhenAttached()
-    { return { (void*)this, "bShouldSnapLocationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapRotationWhenAttached()
-    { return { (void*)this, "bShouldSnapRotationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapScaleWhenAttached()
-    { return { (void*)this, "bShouldSnapScaleWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldUpdatePhysicsVolume()
-    { return { (void*)this, "bShouldUpdatePhysicsVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bSingleSampleShadowFromStationaryLights()
-    { return { (void*)this, "bSingleSampleShadowFromStationaryLights" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bStaticWhenNotMoveable()
-    { return { (void*)this, "bStaticWhenNotMoveable" }; }
-    BitFieldValue<bool, unsigned __int32> bTraceComplexOnMove()
-    { return { (void*)this, "bTraceComplexOnMove" }; }
-    BitFieldValue<bool, unsigned __int32> bTreatAsBackgroundForOcclusion()
-    { return { (void*)this, "bTreatAsBackgroundForOcclusion" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateChildOverlaps()
-    { return { (void*)this, "bUpdateChildOverlaps" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAbsoluteMaxDrawDisatance()
-    { return { (void*)this, "bUseAbsoluteMaxDrawDisatance" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsOccluder()
-    { return { (void*)this, "bUseAsOccluder" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsUnfogger()
-    { return { (void*)this, "bUseAsUnfogger" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsyncCooking()
-    { return { (void*)this, "bUseAsyncCooking" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachParentBound()
-    { return { (void*)this, "bUseAttachParentBound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseComplexAsSimpleCollision()
-    { return { (void*)this, "bUseComplexAsSimpleCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bUseEditorCompositing()
-    { return { (void*)this, "bUseEditorCompositing" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInternalOctree()
-    { return { (void*)this, "bUseInternalOctree" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInternalOctreeOnClient()
-    { return { (void*)this, "bUseInternalOctreeOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseViewOwnerDepthPriorityGroup()
-    { return { (void*)this, "bUseViewOwnerDepthPriorityGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bVisible()
-    { return { (void*)this, "bVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInRayTracing()
-    { return { (void*)this, "bVisibleInRayTracing" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInRealTimeSkyCaptures()
-    { return { (void*)this, "bVisibleInRealTimeSkyCaptures" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInReflectionCaptures()
-    { return { (void*)this, "bVisibleInReflectionCaptures" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInSceneCaptureOnly()
-    { return { (void*)this, "bVisibleInSceneCaptureOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsEditorEffects()
-    { return { (void*)this, "bWantsEditorEffects" }; }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHasNoStreamableTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bHasNoStreamableTextures")); }
+    BrzCampoPonteiro bHasPerInstanceHitProxiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bHasPerInstanceHitProxies")); }
+    BrzCampoPonteiro bHiddenInGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bHiddenInGame")); }
+    BrzCampoPonteiro bHiddenInSceneCaptureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bHiddenInSceneCapture")); }
+    BrzCampoPonteiro bHoldoutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bHoldout")); }
+    BrzCampoPonteiro bIgnoreParentTransformUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIgnoreParentTransformUpdate")); }
+    BrzCampoPonteiro bIgnoreRadialForceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIgnoreRadialForce")); }
+    BrzCampoPonteiro bIgnoreRadialImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIgnoreRadialImpulse")); }
+    BrzCampoPonteiro bIgnoreUpdatingOwnersLastRenderTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIgnoreUpdatingOwnersLastRenderTime")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIncludeBoundsRadiusInDrawDistancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIncludeBoundsRadiusInDrawDistances")); }
+    BrzCampoPonteiro bIsAbstractBasingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsAbstractBasingComponent")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsActive")); }
+    BrzCampoPonteiro bIsActorTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsActorTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bIsBeingMovedByEditorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsBeingMovedByEditor")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsInForegroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsInForeground")); }
+    BrzCampoPonteiro bIsNotRenderAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsNotRenderAttachmentRoot")); }
+    BrzCampoPonteiro bIsValidTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bIsValidTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bLightAsIfStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bLightAsIfStatic")); }
+    BrzCampoPonteiro bLightAttachmentsAsGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bLightAttachmentsAsGroup")); }
+    BrzCampoPonteiro bMovableUseDynamicDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bMovableUseDynamicDrawDistance")); }
+    BrzCampoPonteiro bMultiBodyOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bMultiBodyOverlap")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bNetAddressable")); }
+    BrzCampoPonteiro bNeverDistanceCullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bNeverDistanceCull")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyOwnerSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bOnlyOwnerSee")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOwnerNoSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bOwnerNoSee")); }
+    BrzCampoPonteiro bPlaceholderBool1Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPlaceholderBool1")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPreventDamage")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bRayTracingFarFieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bRayTracingFarField")); }
+    BrzCampoPonteiro bReceiveMobileCSMShadowsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bReceiveMobileCSMShadows")); }
+    BrzCampoPonteiro bReceivesDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bReceivesDecals")); }
+    BrzCampoPonteiro bRegisterWithMaterialGPUMessageQueueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bRegisterWithMaterialGPUMessageQueue")); }
+    BrzCampoPonteiro bRenderCustomDepthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bRenderCustomDepth")); }
+    BrzCampoPonteiro bRenderFirstHalfOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bRenderFirstHalfOnly")); }
+    BrzCampoPonteiro bRenderInDepthPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bRenderInDepthPass")); }
+    BrzCampoPonteiro bRenderInMainPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bRenderInMainPass")); }
+    BrzCampoPonteiro bReplicatePhysicsToAutonomousProxyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bReplicatePhysicsToAutonomousProxy")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bReplicates")); }
+    BrzCampoPonteiro bReturnMaterialOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bReturnMaterialOnMove")); }
+    BrzCampoPonteiro bSelectableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bSelectable")); }
+    BrzCampoPonteiro bSelfShadowOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bSelfShadowOnly")); }
+    BrzCampoPonteiro bShouldBeAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bShouldBeAttached")); }
+    BrzCampoPonteiro bShouldSnapLocationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bShouldSnapLocationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapRotationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bShouldSnapRotationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapScaleWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bShouldSnapScaleWhenAttached")); }
+    BrzCampoPonteiro bShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bSingleSampleShadowFromStationaryLightsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bSingleSampleShadowFromStationaryLights")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bStaticWhenNotMoveableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bStaticWhenNotMoveable")); }
+    BrzCampoPonteiro bTraceComplexOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bTraceComplexOnMove")); }
+    BrzCampoPonteiro bTreatAsBackgroundForOcclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bTreatAsBackgroundForOcclusion")); }
+    BrzCampoPonteiro bUpdateChildOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUpdateChildOverlaps")); }
+    BrzCampoPonteiro bUseAbsoluteMaxDrawDisatanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseAbsoluteMaxDrawDisatance")); }
+    BrzCampoPonteiro bUseAsOccluderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseAsOccluder")); }
+    BrzCampoPonteiro bUseAsUnfoggerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseAsUnfogger")); }
+    BrzCampoPonteiro bUseAsyncCookingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseAsyncCooking")); }
+    BrzCampoPonteiro bUseAttachParentBoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseAttachParentBound")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseComplexAsSimpleCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseComplexAsSimpleCollision")); }
+    BrzCampoPonteiro bUseEditorCompositingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseEditorCompositing")); }
+    BrzCampoPonteiro bUseInternalOctreeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseInternalOctree")); }
+    BrzCampoPonteiro bUseInternalOctreeOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseInternalOctreeOnClient")); }
+    BrzCampoPonteiro bUseViewOwnerDepthPriorityGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bUseViewOwnerDepthPriorityGroup")); }
+    BrzCampoPonteiro bVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bVisible")); }
+    BrzCampoPonteiro bVisibleInRayTracingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bVisibleInRayTracing")); }
+    BrzCampoPonteiro bVisibleInRealTimeSkyCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bVisibleInRealTimeSkyCaptures")); }
+    BrzCampoPonteiro bVisibleInReflectionCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bVisibleInReflectionCaptures")); }
+    BrzCampoPonteiro bVisibleInSceneCaptureOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bVisibleInSceneCaptureOnly")); }
+    BrzCampoPonteiro bWantsEditorEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCableComponent.bWantsEditorEffects")); }
     BitFieldValue<bool, unsigned __int32> bEndPointIsInWorldSpace()
     { return { (void*)this, "bEndPointIsInWorldSpace" }; }
     BitFieldValue<bool, unsigned __int32> bRenderFirstHalfOnly()

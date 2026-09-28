@@ -85,8 +85,8 @@ struct UActorSequencePlayer
     { return *GetNativePointerField<unsigned char*>(this, "UActorSequencePlayer.Status"); }
     BrzCampoPonteiro TickManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorSequencePlayer.TickManager")); }
-    BitFieldValue<bool, unsigned __int32> bReversePlayback()
-    { return { (void*)this, "bReversePlayback" }; }
+    BrzCampoPonteiro bReversePlaybackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorSequencePlayer.bReversePlayback")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UACTORSEQUENCEPLAYER_H

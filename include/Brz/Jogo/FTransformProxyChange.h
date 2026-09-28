@@ -53,8 +53,8 @@ struct FTransformProxyChange
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformProxyChange.From")); }
     BrzCampoPonteiro ToField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformProxyChange.To")); }
-    BitFieldValue<bool, unsigned __int32> bSetPivotMode()
-    { return { (void*)this, "bSetPivotMode" }; }
+    BrzCampoPonteiro bSetPivotModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformProxyChange.bSetPivotMode")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FTRANSFORMPROXYCHANGE_H

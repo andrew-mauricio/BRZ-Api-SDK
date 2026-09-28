@@ -43,8 +43,8 @@ struct FPrimalStructureSkinParticleSystemData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSkinParticleSystemData.ParticleSystem")); }
     BrzCampoPonteiro RotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSkinParticleSystemData.Rot")); }
-    BitFieldValue<bool, unsigned __int32> Scale()
-    { return { (void*)this, "Scale" }; }
+    BrzCampoPonteiro ScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSkinParticleSystemData.Scale")); }
     BrzCampoPonteiro floatParamsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSkinParticleSystemData.floatParams")); }
 };

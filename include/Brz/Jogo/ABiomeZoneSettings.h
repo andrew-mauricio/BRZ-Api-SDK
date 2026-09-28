@@ -83,6 +83,8 @@ struct ABiomeZoneSettings : public AActor
     { return *GetNativePointerField<float*>(this, "ABiomeZoneSettings.PreOffsetTemperatureExponent"); }
     float& PreOffsetTemperatureMultiplierField() const
     { return *GetNativePointerField<float*>(this, "ABiomeZoneSettings.PreOffsetTemperatureMultiplier"); }
+    BrzCampoPonteiro bPreventCropsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABiomeZoneSettings.bPreventCrops")); }
     BitFieldValue<bool, unsigned __int32> bPreventCrops()
     { return { (void*)this, "bPreventCrops" }; }
 

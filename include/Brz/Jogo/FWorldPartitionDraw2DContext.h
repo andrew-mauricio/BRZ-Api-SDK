@@ -72,6 +72,23 @@ struct FWorldPartitionDraw2DContext
     {
         return NativeCall<void*, void*, void*, void*, void*, void*, void*>(this, "FWorldPartitionDraw2DContext.PushDrawTile(UE::Math::TBox2<double>&,UE::Math::TVector2<double>&,UE::Math::TVector2<double>&,UE::Math::TVector2<double>&,UE::Math::TVector2<double>&,FLinearColor&)", a0, a1, a2, a3, a4, a5);
     }
+
+    BrzCampoPonteiro CanvasItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.CanvasItems")); }
+    BrzCampoPonteiro CanvasRegionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.CanvasRegion")); }
+    BrzCampoPonteiro DesiredWorldBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.DesiredWorldBounds")); }
+    BrzCampoPonteiro UsedCanvasBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.UsedCanvasBounds")); }
+    BrzCampoPonteiro WorldRegionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.WorldRegion")); }
+    BrzCampoPonteiro bDrawGridAxisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.bDrawGridAxis")); }
+    BrzCampoPonteiro bDrawGridBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.bDrawGridBounds")); }
+    BrzCampoPonteiro bIsDetailedModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DContext.bIsDetailedMode")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDPARTITIONDRAW2DCONTEXT_H

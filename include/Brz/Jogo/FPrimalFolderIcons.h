@@ -33,8 +33,8 @@ struct FPrimalFolderIcons
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Back()
-    { return { (void*)this, "Back" }; }
+    BrzCampoPonteiro BackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalFolderIcons.Back")); }
     BrzCampoPonteiro CustomFolderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalFolderIcons.CustomFolder")); }
     BrzCampoPonteiro NormalFolderField() const

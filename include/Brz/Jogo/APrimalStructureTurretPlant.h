@@ -53,11 +53,10 @@ struct APrimalStructureTurretPlant : public APrimalStructureTurret
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretPlant.Demolish(APlayerController*,AActor*)
-    // classe: a funcao mora em APrimalStructure, e APrimalStructureTurretPlant herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void Demolish(void* a0, void* a1) const
     {
-        NativeCall<void, void*, void*>(this, "APrimalStructure.Demolish(APlayerController*,AActor*)", a0, a1);
+        NativeCall<void, void*, void*>(this, "APrimalStructureTurretPlant.Demolish(APlayerController*,AActor*)", a0, a1);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -78,7 +77,7 @@ struct APrimalStructureTurretPlant : public APrimalStructureTurret
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretPlant.PlayDying(float,FDamageEvent&,APawn*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=95]]
+    // endereco: casamento de bytes com a build de referencia
     void PlayDying(float a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, float, void*, void*, void*>(this, "APrimalStructureTurretPlant.PlayDying(float,FDamageEvent&,APawn*,AActor*)", a0, a1, a2, a3);
@@ -94,7 +93,7 @@ struct APrimalStructureTurretPlant : public APrimalStructureTurret
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretPlant.RecoverHealthTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=162]]
+    // endereco: casamento de bytes com a build de referencia
     void RecoverHealthTimer() const
     {
         NativeCall<void>(this, "APrimalStructureTurretPlant.RecoverHealthTimer()");
@@ -102,7 +101,7 @@ struct APrimalStructureTurretPlant : public APrimalStructureTurret
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretPlant.SelectAttackOrigin(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     void SelectAttackOrigin(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTurretPlant.SelectAttackOrigin(UE::Math::TVector<double>&)", a0);

@@ -36,7 +36,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.CleanupBrainComponent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CleanupBrainComponent() const
     {
         NativeCall<void>(this, "AAIController.CleanupBrainComponent()");
@@ -44,7 +44,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.ClearFocus(unsignedchar)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=109]]
+    // endereco: casamento de bytes com a build de referencia
     void ClearFocus(unsigned char a0) const
     {
         NativeCall<void, unsigned char>(this, "AAIController.ClearFocus(unsignedchar)", a0);
@@ -68,7 +68,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.GetFocusActor()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     AActor* GetFocusActor() const
     {
         return NativeCall<AActor*>(this, "AAIController.GetFocusActor()");
@@ -76,7 +76,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.GetGameplayTaskDefaultPriority()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned char GetGameplayTaskDefaultPriority() const
     {
         return NativeCall<unsigned char>(this, "AAIController.GetGameplayTaskDefaultPriority()");
@@ -84,7 +84,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.GetPathFollowingAgent()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetPathFollowingAgent() const
     {
         return NativeCall<void*>(this, "AAIController.GetPathFollowingAgent()");
@@ -92,7 +92,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.IsFollowingAPath()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsFollowingAPath() const
     {
         return NativeCall<bool>(this, "AAIController.IsFollowingAPath()");
@@ -116,7 +116,7 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.OnUnPossess()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=93]]
+    // endereco: casamento de bytes com a build de referencia
     void OnUnPossess() const
     {
         NativeCall<void>(this, "AAIController.OnUnPossess()");
@@ -124,15 +124,16 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=315]]
+    // classe: a funcao mora em AController, e AAIController herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "AAIController.PostInitializeComponents()");
+        NativeCall<void>(this, "AController.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.PostRegisterAllComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=41]]
+    // endereco: casamento de bytes com a build de referencia
     void PostRegisterAllComponents() const
     {
         NativeCall<void>(this, "AAIController.PostRegisterAllComponents()");
@@ -210,6 +211,24 @@ struct AAIController : public APrimalController
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.PerceptionComponent")); }
     BrzCampoPonteiro ReceiveMoveCompletedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.ReceiveMoveCompleted")); }
+    BrzCampoPonteiro bAllowStrafeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bAllowStrafe")); }
+    BrzCampoPonteiro bExecutingRotateToFaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bExecutingRotateToFace")); }
+    BrzCampoPonteiro bLOSflagField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bLOSflag")); }
+    BrzCampoPonteiro bLastRequestedMoveToLocationWasPlayerCommandField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bLastRequestedMoveToLocationWasPlayerCommand")); }
+    BrzCampoPonteiro bSetControlRotationFromPawnOrientationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bSetControlRotationFromPawnOrientation")); }
+    BrzCampoPonteiro bSkipExtraLOSChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bSkipExtraLOSChecks")); }
+    BrzCampoPonteiro bStartAILogicOnPossessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bStartAILogicOnPossess")); }
+    BrzCampoPonteiro bStopAILogicOnUnpossesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bStopAILogicOnUnposses")); }
+    BrzCampoPonteiro bWantsPlayerStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AAIController.bWantsPlayerState")); }
     BitFieldValue<bool, unsigned __int32> bStartAILogicOnPossess()
     { return { (void*)this, "bStartAILogicOnPossess" }; }
     BitFieldValue<bool, unsigned __int32> bStopAILogicOnUnposses()

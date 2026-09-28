@@ -32,6 +32,9 @@ struct FLevelGuids
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro GuidsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelGuids.Guids")); }
     BrzCampoPonteiro LevelNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelGuids.LevelName")); }
 };

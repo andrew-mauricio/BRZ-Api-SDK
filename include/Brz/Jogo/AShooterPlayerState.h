@@ -115,7 +115,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.CheckIfBlockCausedKickFromTribe()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CheckIfBlockCausedKickFromTribe() const
     {
         return NativeCall<void*>(this, "AShooterPlayerState.CheckIfBlockCausedKickFromTribe()");
@@ -139,7 +139,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.ClientGetAllPlayerNamesAndLocations_Implementation(TArray<FAliveNameAndLocat
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=116]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientGetAllPlayerNamesAndLocations_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerState.ClientGetAllPlayerNamesAndLocations_Implementation(TArray<FAliveNameAndLocation,TSizedDefaultAllocator<32>>&)", a0);
@@ -147,7 +147,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.ClientGetPlayerAdministratorData(TArray<FAdminPlayerDataInfo,TSizedDefaultAl
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientGetPlayerAdministratorData(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerState.ClientGetPlayerAdministratorData(TArray<FAdminPlayerDataInfo,TSizedDefaultAllocator<32>>&)", a0);
@@ -243,7 +243,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ClientUpdateNewRallyPoint_Implementation(bool,FTeamPingData)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=148]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientUpdateNewRallyPoint_Implementation(bool a0, void* a1) const
     {
         NativeCall<void, bool, void*>(this, "AShooterPlayerState.ClientUpdateNewRallyPoint_Implementation(bool,FTeamPingData)", a0, a1);
@@ -283,7 +283,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.GetCharacterLevel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     int GetCharacterLevel() const
     {
         return NativeCall<int>(this, "AShooterPlayerState.GetCharacterLevel()");
@@ -347,7 +347,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.GetHexCostToPurchaseNextEngramPoint()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetHexCostToPurchaseNextEngramPoint() const
     {
         return NativeCall<int>(this, "AShooterPlayerState.GetHexCostToPurchaseNextEngramPoint()");
@@ -363,7 +363,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.GetNameValue(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     double GetNameValue(unsigned long long a0) const
     {
         return NativeCall<double, unsigned long long>(this, "AShooterPlayerState.GetNameValue(FName)", a0);
@@ -371,7 +371,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.GetObject()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetObject() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerState.GetObject()");
@@ -379,7 +379,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.GetPlayerOrTribeName()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void GetPlayerOrTribeName(void* retorno) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.GetPlayerOrTribeName()", retorno);
@@ -387,7 +387,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.GetShooterController()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AShooterPlayerController* GetShooterController() const
     {
         return NativeCall<AShooterPlayerController*>(this, "AShooterPlayerState.GetShooterController()");
@@ -403,7 +403,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.GetTreeFreeSkillPoints(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetTreeFreeSkillPoints(unsigned long long a0) const
     {
         return NativeCall<int, unsigned long long>(this, "AShooterPlayerState.GetTreeFreeSkillPoints(FName)", a0);
@@ -411,7 +411,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.GetTreeSkillPointsTotal(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetTreeSkillPointsTotal(unsigned long long a0) const
     {
         return NativeCall<int, unsigned long long>(this, "AShooterPlayerState.GetTreeSkillPointsTotal(FName)", a0);
@@ -419,7 +419,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.GetTribeId()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetTribeId() const
     {
         return NativeCall<int>(this, "AShooterPlayerState.GetTribeId()");
@@ -451,7 +451,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.HasTribeWarRequest(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HasTribeWarRequest(int a0) const
     {
         return NativeCall<void*, int>(this, "AShooterPlayerState.HasTribeWarRequest(int)", a0);
@@ -459,7 +459,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.InitMilestones(FPrimalPlayerDataStruct&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro InitMilestones(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerState.InitMilestones(FPrimalPlayerDataStruct&)", a0);
@@ -483,7 +483,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.IsAllowedToCopySettings()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsAllowedToCopySettings() const
     {
         return NativeCall<bool>(this, "AShooterPlayerState.IsAllowedToCopySettings()");
@@ -491,7 +491,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsDinoClassInOrderGroup(int,TSubclassOf<APrimalDinoCharacter>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsDinoClassInOrderGroup(int a0, void* a1) const
     {
         return NativeCall<bool, int, void*>(this, "AShooterPlayerState.IsDinoClassInOrderGroup(int,TSubclassOf<APrimalDinoCharacter>)", a0, a1);
@@ -499,7 +499,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsDinoInOrderGroup(int,APrimalDinoCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsDinoInOrderGroup(int a0, void* a1) const
     {
         return NativeCall<bool, int, void*>(this, "AShooterPlayerState.IsDinoInOrderGroup(int,APrimalDinoCharacter*)", a0, a1);
@@ -507,7 +507,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsExclusivelyTribeAdmin(unsignedint)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsExclusivelyTribeAdmin(unsigned int a0) const
     {
         return NativeCall<bool, unsigned int>(this, "AShooterPlayerState.IsExclusivelyTribeAdmin(unsignedint)", a0);
@@ -515,7 +515,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsExclusivelyTribeOwner(unsignedint)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsExclusivelyTribeOwner(unsigned int a0) const
     {
         return NativeCall<bool, unsigned int>(this, "AShooterPlayerState.IsExclusivelyTribeOwner(unsignedint)", a0);
@@ -539,7 +539,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsInTribe()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsInTribe() const
     {
         return NativeCall<bool>(this, "AShooterPlayerState.IsInTribe()");
@@ -547,7 +547,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsInTribeWar(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=79]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsInTribeWar(int a0) const
     {
         return NativeCall<bool, int>(this, "AShooterPlayerState.IsInTribeWar(int)", a0);
@@ -555,7 +555,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsTribeAdmin()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsTribeAdmin() const
     {
         return NativeCall<bool>(this, "AShooterPlayerState.IsTribeAdmin()");
@@ -563,7 +563,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.IsTribeFounder()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsTribeFounder() const
     {
         return NativeCall<void*>(this, "AShooterPlayerState.IsTribeFounder()");
@@ -571,7 +571,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsTribeOwner(unsignedint)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsTribeOwner(unsigned int a0) const
     {
         return NativeCall<bool, unsigned int>(this, "AShooterPlayerState.IsTribeOwner(unsignedint)", a0);
@@ -579,7 +579,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.LocalSetSelectedDinoOrderGroup(int,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro LocalSetSelectedDinoOrderGroup(int a0, bool a1) const
     {
         return NativeCall<void*, int, bool>(this, "AShooterPlayerState.LocalSetSelectedDinoOrderGroup(int,bool)", a0, a1);
@@ -603,7 +603,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.NotifyPlayerJoinedTribe(FString&,FString&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyPlayerJoinedTribe(const FString& a0, const FString& a1, bool a2) const
     {
         NativeCall<void, void*, void*, bool>(this, "AShooterPlayerState.NotifyPlayerJoinedTribe(FString&,FString&,bool)", const_cast<FString*>(&a0), const_cast<FString*>(&a1), a2);
@@ -615,7 +615,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyPlayerJoined_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=531+grafo=9/9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyPlayerJoined_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyPlayerJoined_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -627,7 +627,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.NotifyPlayerLeft(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyPlayerLeft(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyPlayerLeft(FString&)", const_cast<FString*>(&a0));
@@ -639,7 +639,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.NotifyPlayerLeftTribe(FString&,FString&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=302+bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyPlayerLeftTribe(const FString& a0, const FString& a1, bool a2) const
     {
         NativeCall<void, void*, void*, bool>(this, "AShooterPlayerState.NotifyPlayerLeftTribe(FString&,FString&,bool)", const_cast<FString*>(&a0), const_cast<FString*>(&a1), a2);
@@ -651,7 +651,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyPlayerLeft_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=531+grafo=9/9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyPlayerLeft_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyPlayerLeft_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -663,7 +663,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.NotifyTribememberJoined(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyTribememberJoined(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyTribememberJoined(FString&)", const_cast<FString*>(&a0));
@@ -675,7 +675,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyTribememberJoined_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyTribememberJoined_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyTribememberJoined_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -687,7 +687,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyTribememberLeft_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyTribememberLeft_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyTribememberLeft_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -699,7 +699,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyUniqueDinoDownloadAllowed_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyUniqueDinoDownloadAllowed_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyUniqueDinoDownloadAllowed_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -711,7 +711,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyUniqueDinoDownloaded_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyUniqueDinoDownloaded_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.NotifyUniqueDinoDownloaded_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -731,7 +731,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.OnSetUniqueId()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=131]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnSetUniqueId() const
     {
         return NativeCall<void*>(this, "AShooterPlayerState.OnSetUniqueId()");
@@ -755,7 +755,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ReceivedPlayerCharacter(AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ReceivedPlayerCharacter(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ReceivedPlayerCharacter(AShooterCharacter*)", a0);
@@ -787,7 +787,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.ResetUnlockedSkills()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=135+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ResetUnlockedSkills() const
     {
         return NativeCall<void*>(this, "AShooterPlayerState.ResetUnlockedSkills()");
@@ -835,7 +835,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerDeclareTribeWar_Implementation(int,int,int,float,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=150]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerDeclareTribeWar_Implementation(int a0, int a1, int a2, float a3, float a4) const
     {
         NativeCall<void, int, int, int, float, float>(this, "AShooterPlayerState.ServerDeclareTribeWar_Implementation(int,int,int,float,float)", a0, a1, a2, a3, a4);
@@ -875,7 +875,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.ServerDinoOrderGroup_Clear(int,bool,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerDinoOrderGroup_Clear(int a0, bool a1, bool a2) const
     {
         NativeCall<void, int, bool, bool>(this, "AShooterPlayerState.ServerDinoOrderGroup_Clear(int,bool,bool)", a0, a1, a2);
@@ -899,7 +899,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerDinoOrderGroup_RemoveEntryByIndex_Implementation(int,bool,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerDinoOrderGroup_RemoveEntryByIndex_Implementation(int a0, bool a1, int a2) const
     {
         NativeCall<void, int, bool, int>(this, "AShooterPlayerState.ServerDinoOrderGroup_RemoveEntryByIndex_Implementation(int,bool,int)", a0, a1, a2);
@@ -907,7 +907,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerGetAlivePlayerConnectedData_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetAlivePlayerConnectedData_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetAlivePlayerConnectedData_Implementation()");
@@ -915,7 +915,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerGetAllPlayerNamesAndLocations()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetAllPlayerNamesAndLocations() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetAllPlayerNamesAndLocations()");
@@ -923,7 +923,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerGetAllPlayerNamesAndLocations_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetAllPlayerNamesAndLocations_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetAllPlayerNamesAndLocations_Implementation()");
@@ -931,7 +931,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.ServerGetPlayerAdministratorData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetPlayerAdministratorData() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetPlayerAdministratorData()");
@@ -947,7 +947,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.ServerGetPlayerBannedData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetPlayerBannedData() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetPlayerBannedData()");
@@ -963,7 +963,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.ServerGetPlayerConnectedData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetPlayerConnectedData() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetPlayerConnectedData()");
@@ -979,7 +979,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.ServerGetPlayerWhiteListedData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetPlayerWhiteListedData() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetPlayerWhiteListedData()");
@@ -987,7 +987,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.ServerGetServerOptions()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetServerOptions() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerGetServerOptions()");
@@ -1035,7 +1035,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestChangePlayerData(FPrimalPlayerCharacterConfigStructReplicated)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestChangePlayerData(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ServerRequestChangePlayerData(FPrimalPlayerCharacterConfigStructReplicated)", a0);
@@ -1051,7 +1051,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.ServerRequestCreateNewPlayer(FPrimalPlayerCharacterConfigStructReplicated)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestCreateNewPlayer(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerState.ServerRequestCreateNewPlayer(FPrimalPlayerCharacterConfigStructReplicated)", a0);
@@ -1091,7 +1091,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.ServerRequestDemotePlayerInMyTribe(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestDemotePlayerInMyTribe(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerState.ServerRequestDemotePlayerInMyTribe(int)", a0);
@@ -1115,7 +1115,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.ServerRequestLeaveAlliance(unsignedint)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestLeaveAlliance(unsigned int a0) const
     {
         return NativeCall<void*, unsigned int>(this, "AShooterPlayerState.ServerRequestLeaveAlliance(unsignedint)", a0);
@@ -1123,7 +1123,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestLeaveAlliance_Implementation(unsignedint)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestLeaveAlliance_Implementation(unsigned int a0) const
     {
         NativeCall<void, unsigned int>(this, "AShooterPlayerState.ServerRequestLeaveAlliance_Implementation(unsignedint)", a0);
@@ -1139,7 +1139,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestLeaveTribe_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=118+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestLeaveTribe_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerRequestLeaveTribe_Implementation()");
@@ -1227,7 +1227,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestRenameTribe(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestRenameTribe(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ServerRequestRenameTribe(FString&)", const_cast<FString*>(&a0));
@@ -1259,7 +1259,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestSetTribeGovernment_Implementation(FTribeGovernment)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=118]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestSetTribeGovernment_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ServerRequestSetTribeGovernment_Implementation(FTribeGovernment)", a0);
@@ -1307,7 +1307,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestTransferOwnershipInMyTribe_Implementation(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestTransferOwnershipInMyTribe_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerState.ServerRequestTransferOwnershipInMyTribe_Implementation(int)", a0);
@@ -1323,7 +1323,7 @@ struct AShooterPlayerState : public APlayerState
 
     // dump_sobre_sdk_287a0
     //   AShooterPlayerState.ServerSetDefaultItemSlotClass_Implementation(int,TSubclassOf<UPrimalItem>,bo
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=35]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerSetDefaultItemSlotClass_Implementation(int a0, void* a1, bool a2, unsigned long long a3) const
     {
         NativeCall<void, int, void*, bool, unsigned long long>(this, "AShooterPlayerState.ServerSetDefaultItemSlotClass_Implementation(int,TSubclassOf<UPrimalItem>,bool,FName)", a0, a1, a2, a3);
@@ -1355,7 +1355,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerSetSelectedDinoOrderGroup_Implementation(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetSelectedDinoOrderGroup_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerState.ServerSetSelectedDinoOrderGroup_Implementation(int)", a0);
@@ -1363,7 +1363,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.ServerTribeRequestAddRankGroup(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTribeRequestAddRankGroup(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ServerTribeRequestAddRankGroup(FString&)", const_cast<FString*>(&a0));
@@ -1395,7 +1395,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.ServerTribeRequestNewAlliance(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTribeRequestNewAlliance(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ServerTribeRequestNewAlliance(FString&)", const_cast<FString*>(&a0));
@@ -1435,7 +1435,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.ServerTribeRequestRemoveRankGroup(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTribeRequestRemoveRankGroup(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerState.ServerTribeRequestRemoveRankGroup(int)", a0);
@@ -1443,7 +1443,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerTribeRequestRemoveRankGroup_Implementation(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=255+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerTribeRequestRemoveRankGroup_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerState.ServerTribeRequestRemoveRankGroup_Implementation(int)", a0);
@@ -1451,7 +1451,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerUnlockEngram(TSubclassOf<UPrimalItem>,bool,bool)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     void ServerUnlockEngram(void* a0, bool a1, bool a2) const
     {
         NativeCall<void, void*, bool, bool>(this, "AShooterPlayerState.ServerUnlockEngram(TSubclassOf<UPrimalItem>,bool,bool)", a0, a1, a2);
@@ -1467,7 +1467,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.SetQuitter(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetQuitter(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterPlayerState.SetQuitter(bool)", a0);
@@ -1475,7 +1475,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.SetTribeData(FTribeData&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetTribeData(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.SetTribeData(FTribeData&)", a0);
@@ -1491,7 +1491,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.StaticRegisterNativesAShooterPlayerState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     static void StaticRegisterNativesAShooterPlayerState()
     {
         NativeCall<void>(nullptr, "AShooterPlayerState.StaticRegisterNativesAShooterPlayerState()");
@@ -1515,7 +1515,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.UpdatedPlayerData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdatedPlayerData() const
     {
         NativeCall<void>(this, "AShooterPlayerState.UpdatedPlayerData()");
@@ -1531,7 +1531,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1098+grafo=13/13]]
     void ValidateGeneratedRepEnums(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)", a0);
@@ -1540,17 +1540,17 @@ struct AShooterPlayerState : public APlayerState
     float& AllowedRespawnIntervalField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerState.AllowedRespawnInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +80, medido na build 25090264
+    //  ancorado em `NextAllowTurretCopySettingsTime` +80, medido na build 25535041
     //  (offset absoluto medido: 0x13C0; confianca media)
     void*& CachedPlayerIPAddressField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +72, medido na build 25090264
+    //  ancorado em `NextAllowTurretCopySettingsTime` +72, medido na build 25535041
     //  (offset absoluto medido: 0x13B8; confianca media)
     void*& CachedPlayerPlatformField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +24, medido na build 25090264
+    //  ancorado em `NextAllowTurretCopySettingsTime` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1388; confianca alta)
     void*& CachedPlayerUniqueNetIdField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 24); }
@@ -1577,7 +1577,7 @@ struct AShooterPlayerState : public APlayerState
     unsigned int& HashedUniqueIDField() const
     { return *GetNativePointerField<unsigned int*>(this, "AShooterPlayerState.HashedUniqueID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +16, medido na build 25090264
+    //  ancorado em `NextAllowTurretCopySettingsTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1380; confianca alta)
     void*& LastChangedPlayerDataTimeField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 16); }
@@ -1586,7 +1586,7 @@ struct AShooterPlayerState : public APlayerState
     BrzCampoPonteiro LastTribeInviteDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerState.LastTribeInviteData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +8, medido na build 25090264
+    //  ancorado em `NextAllowTurretCopySettingsTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1378; confianca alta)
     double& LastTribeRequestTimeField() const
     { return BrzCampoAncorado<double>(this, "NextAllowTurretCopySettingsTime", 8); }
@@ -1601,32 +1601,32 @@ struct AShooterPlayerState : public APlayerState
     double& NextAllowedRespawnTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerState.NextAllowedRespawnTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +504, medido na build 25090264
+    //  ancorado em `LastTribeInviteData` +504, medido na build 25535041
     //  (offset absoluto medido: 0x10D0; confianca baixa)
     void*& OnClientAdminInfoPlayerAdministratorRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 504); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +488, medido na build 25090264
+    //  ancorado em `LastTribeInviteData` +488, medido na build 25535041
     //  (offset absoluto medido: 0x10C0; confianca baixa)
     void*& OnClientAdminInfoPlayerBannedRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 488); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +456, medido na build 25090264
+    //  ancorado em `LastTribeInviteData` +456, medido na build 25535041
     //  (offset absoluto medido: 0x10A0; confianca baixa)
     void*& OnClientAdminInfoPlayerConnectedRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 456); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +472, medido na build 25090264
+    //  ancorado em `LastTribeInviteData` +472, medido na build 25535041
     //  (offset absoluto medido: 0x10B0; confianca baixa)
     void*& OnClientServerOptionsInfoRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 472); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultItemSlotSkills` +84, medido na build 25090264
+    //  ancorado em `DefaultItemSlotSkills` +84, medido na build 25535041
     //  (offset absoluto medido: 0xD00; confianca media)
     void*& OwnedDLCsField() const
     { return BrzCampoAncorado<void*>(this, "DefaultItemSlotSkills", 84); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EngramItemBlueprints` +16, medido na build 25090264
+    //  ancorado em `EngramItemBlueprints` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1118; confianca alta)
     void*& ServerEngramItemBlueprintsSetField() const
     { return BrzCampoAncorado<void*>(this, "EngramItemBlueprints", 16); }
@@ -1636,6 +1636,8 @@ struct AShooterPlayerState : public APlayerState
     { return *GetNativePointerField<int*>(this, "AShooterPlayerState.TotalSkillPoints"); }
     BrzCampoPonteiro TreeSkillPointsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerState.TreeSkillPoints")); }
+    BrzCampoPonteiro bQuitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerState.bQuitter")); }
     BitFieldValue<bool, unsigned __int32> bQuitter()
     { return { (void*)this, "bQuitter" }; }
 

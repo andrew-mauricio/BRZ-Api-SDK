@@ -71,7 +71,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.DisconnectMe_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void DisconnectMe_Implementation() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.DisconnectMe_Implementation()");
@@ -119,7 +119,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.IsWireComponentValid()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsWireComponentValid() const
     {
         return NativeCall<bool>(this, "APrimalStructureTripwire.IsWireComponentValid()");
@@ -127,7 +127,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalStructureTripwire.Multicast_ConnectedTo(APrimalStructureTripwire*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=8]]
     void Multicast_ConnectedTo(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.Multicast_ConnectedTo(APrimalStructureTripwire*)", a0);
@@ -135,7 +135,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.Multicast_ConnectedTo_Implementation(APrimalStructureTripwire*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=105]]
+    // endereco: casamento de bytes com a build de referencia
     void Multicast_ConnectedTo_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.Multicast_ConnectedTo_Implementation(APrimalStructureTripwire*)", a0);
@@ -143,7 +143,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.NetUpdateBoxName(FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=167+bytes40+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=167+bytes40+chamadores=4]]
     void NetUpdateBoxName(const FString& a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.NetUpdateBoxName(FString&)", const_cast<FString*>(&a0));
@@ -167,7 +167,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.OnRep_ConnectedTo()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=103]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_ConnectedTo() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.OnRep_ConnectedTo()");
@@ -175,7 +175,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.OnRep_UnwiredTrap()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_UnwiredTrap() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.OnRep_UnwiredTrap()");
@@ -199,7 +199,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=74]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitProperties() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.PostInitProperties()");
@@ -219,7 +219,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.SetConnectedTo(APrimalStructureTripwire*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetConnectedTo(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.SetConnectedTo(APrimalStructureTripwire*)", a0);
@@ -227,7 +227,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.SetStaticMobility()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=84]]
+    // endereco: casamento de bytes com a build de referencia
     void SetStaticMobility() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.SetStaticMobility()");
@@ -235,7 +235,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.SetUnwiredTrap(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetUnwiredTrap(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureTripwire.SetUnwiredTrap(bool)", a0);
@@ -243,7 +243,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.ShowWireComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ShowWireComponent() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.ShowWireComponent()");
@@ -251,7 +251,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTripwire.TriggerTouched(UPrimitiveComponent*,AActor*,UPrimitiveComponent*,int,bo
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=510+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TriggerTouched(void* a0, void* a1, void* a2, int a3, bool a4, void* a5) const
     {
         return NativeCall<void*, void*, void*, void*, int, bool, void*>(this, "APrimalStructureTripwire.TriggerTouched(UPrimitiveComponent*,AActor*,UPrimitiveComponent*,int,bool,FHitResult&)", a0, a1, a2, a3, a4, a5);
@@ -321,6 +321,26 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
     //  nesta build ele e' `WireComponent` — resolve por NOME.
     BrzCampoPonteiro WireComponentRelativeLocationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.WireComponent")); }
+    BrzCampoPonteiro bAllowToggleForceIgnoreAlliesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bAllowToggleForceIgnoreAllies")); }
+    BrzCampoPonteiro bAllowToggleForceIgnoreWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bAllowToggleForceIgnoreWildDinos")); }
+    BrzCampoPonteiro bDoingWireCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bDoingWireCheck")); }
+    BrzCampoPonteiro bForceIgnoreAlliesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bForceIgnoreAllies")); }
+    BrzCampoPonteiro bForceIgnoreWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bForceIgnoreWildDinos")); }
+    BrzCampoPonteiro bIgnoreAlliesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bIgnoreAllies")); }
+    BrzCampoPonteiro bNotifyTripChatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bNotifyTripChat")); }
+    BrzCampoPonteiro bOnlyPrimalCharactersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bOnlyPrimalCharacters")); }
+    BrzCampoPonteiro bShowingWireComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bShowingWireComponent")); }
+    BrzCampoPonteiro bUnwiredTrapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTripwire.bUnwiredTrap")); }
     BitFieldValue<bool, unsigned __int32> bOnlyPrimalCharacters()
     { return { (void*)this, "bOnlyPrimalCharacters" }; }
     BitFieldValue<bool, unsigned __int32> bIgnoreAllies()

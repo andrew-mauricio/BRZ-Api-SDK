@@ -32,6 +32,21 @@ struct FVectorVMCodeOptimizerContext
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro BaseContextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.BaseContext")); }
+    BrzCampoPonteiro BaseContextCodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.BaseContextCode")); }
+    BrzCampoPonteiro ExternalFunctionRegisterCountsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.ExternalFunctionRegisterCounts")); }
+    BrzCampoPonteiro JumpTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.JumpTable")); }
+    BrzCampoPonteiro OptimizedCodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.OptimizedCode")); }
+    BrzCampoPonteiro OptimizedCodeLengthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.OptimizedCodeLength")); }
+    BrzCampoPonteiro StartInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMCodeOptimizerContext.StartInstance")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMCODEOPTIMIZERCONTEXT_H

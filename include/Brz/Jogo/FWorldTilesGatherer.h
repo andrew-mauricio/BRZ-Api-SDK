@@ -32,6 +32,13 @@ struct FWorldTilesGatherer
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro MapFilesToConsiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTilesGatherer.MapFilesToConsider")); }
+    BrzCampoPonteiro TilesCollectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTilesGatherer.TilesCollection")); }
+    BrzCampoPonteiro TilesLODCollectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTilesGatherer.TilesLODCollection")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDTILESGATHERER_H

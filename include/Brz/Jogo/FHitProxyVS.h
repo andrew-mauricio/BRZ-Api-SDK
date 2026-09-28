@@ -43,11 +43,14 @@ struct FHitProxyVS
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FHitProxyVS.ShouldCompilePermutationImpl(FShaderPermutationParameters&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldCompilePermutationImpl(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FHitProxyVS.ShouldCompilePermutationImpl(FShaderPermutationParameters&)", a0);
     }
+
+    BrzCampoPonteiro VertexFetch_HitProxyIdBufferField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitProxyVS.VertexFetch_HitProxyIdBuffer")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITPROXYVS_H

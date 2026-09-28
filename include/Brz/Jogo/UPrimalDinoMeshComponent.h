@@ -72,10 +72,10 @@ struct UPrimalDinoMeshComponent
         return NativeCall<void*, void*>(this, "UPrimalDinoMeshComponent.SetAnimUpdateParameters(FAnimUpdateRateParameters*)", a0);
     }
 
-    BitFieldValue<bool, unsigned __int32> AlwaysLoadOnClient()
-    { return { (void*)this, "AlwaysLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> AlwaysLoadOnServer()
-    { return { (void*)this, "AlwaysLoadOnServer" }; }
+    BrzCampoPonteiro AlwaysLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.AlwaysLoadOnClient")); }
+    BrzCampoPonteiro AlwaysLoadOnServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.AlwaysLoadOnServer")); }
     BrzCampoPonteiro AnimBlueprintGeneratedClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.AnimBlueprintGeneratedClass")); }
     BrzCampoPonteiro AnimClassField() const
@@ -84,8 +84,8 @@ struct UPrimalDinoMeshComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.AnimScriptInstance")); }
     BrzCampoPonteiro AnimationDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.AnimationData")); }
-    BitFieldValue<bool, unsigned __int32> AnimationFrozen()
-    { return { (void*)this, "AnimationFrozen" }; }
+    BrzCampoPonteiro AnimationFrozenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.AnimationFrozen")); }
     unsigned char& AnimationModeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalDinoMeshComponent.AnimationMode"); }
     TArray<void*>& AssetUserDataField() const
@@ -126,8 +126,8 @@ struct UPrimalDinoMeshComponent
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalDinoMeshComponent.CanCharacterStepUpOn"); }
     float& CapsuleIndirectShadowMinVisibilityField() const
     { return *GetNativePointerField<float*>(this, "UPrimalDinoMeshComponent.CapsuleIndirectShadowMinVisibility"); }
-    BitFieldValue<bool, unsigned __int32> CastShadow()
-    { return { (void*)this, "CastShadow" }; }
+    BrzCampoPonteiro CastShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.CastShadow")); }
     TArray<void*>& ClientAttachedChildrenField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalDinoMeshComponent.ClientAttachedChildren"); }
     float& ClothBlendWeightField() const
@@ -394,8 +394,8 @@ struct UPrimalDinoMeshComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.TwoLegVirtualHitLocationWSTarget")); }
     int& UCSSerializationIndexField() const
     { return *GetNativePointerField<int*>(this, "UPrimalDinoMeshComponent.UCSSerializationIndex"); }
-    BitFieldValue<bool, unsigned __int32> UseWorldSpaceFeetAlignment()
-    { return { (void*)this, "UseWorldSpaceFeetAlignment" }; }
+    BrzCampoPonteiro UseWorldSpaceFeetAlignmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.UseWorldSpaceFeetAlignment")); }
     unsigned char& ViewOwnerDepthPriorityGroupField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalDinoMeshComponent.ViewOwnerDepthPriorityGroup"); }
     char& VirtualTextureCullMipsField() const
@@ -410,484 +410,484 @@ struct UPrimalDinoMeshComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.VisibilityBasedAnimTickOption")); }
     int& VisibilityIdField() const
     { return *GetNativePointerField<int*>(this, "UPrimalDinoMeshComponent.VisibilityId"); }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteLocation()
-    { return { (void*)this, "bAbsoluteLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteRotation()
-    { return { (void*)this, "bAbsoluteRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteScale()
-    { return { (void*)this, "bAbsoluteScale" }; }
-    BitFieldValue<bool, unsigned __int32> bAddAttachedParentBounds()
-    { return { (void*)this, "bAddAttachedParentBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectDistanceFieldLighting()
-    { return { (void*)this, "bAffectDistanceFieldLighting" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectDynamicIndirectLighting()
-    { return { (void*)this, "bAffectDynamicIndirectLighting" }; }
-    BitFieldValue<bool, unsigned __int32> bAffectIndirectLightingWhileHidden()
-    { return { (void*)this, "bAffectIndirectLightingWhileHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bAlignRootOnlyToGround()
-    { return { (void*)this, "bAlignRootOnlyToGround" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAlwaysEvaluatePostProcessAnimBP()
-    { return { (void*)this, "bAllowAlwaysEvaluatePostProcessAnimBP" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAnimCurveEvaluation()
-    { return { (void*)this, "bAllowAnimCurveEvaluation" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowClothActors()
-    { return { (void*)this, "bAllowClothActors" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCullDistanceVolume()
-    { return { (void*)this, "bAllowCullDistanceVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowKinematicUpdateStaggering()
-    { return { (void*)this, "bAllowKinematicUpdateStaggering" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysForceUpdateKinematicsOnDedicatedServer()
-    { return { (void*)this, "bAlwaysForceUpdateKinematicsOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysTeleportKinematic()
-    { return { (void*)this, "bAlwaysTeleportKinematic" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysUpdateMeshForShadowRendering()
-    { return { (void*)this, "bAlwaysUpdateMeshForShadowRendering" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysUseMeshDeformer()
-    { return { (void*)this, "bAlwaysUseMeshDeformer" }; }
-    BitFieldValue<bool, unsigned __int32> bAnimTreeInitialised()
-    { return { (void*)this, "bAnimTreeInitialised" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyGroundBoneModifiers()
-    { return { (void*)this, "bApplyGroundBoneModifiers" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyImpulseOnDamage()
-    { return { (void*)this, "bApplyImpulseOnDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachedSoundsForceHighPriority()
-    { return { (void*)this, "bAttachedSoundsForceHighPriority" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bBasedPawnsTriggerChildTick()
-    { return { (void*)this, "bBasedPawnsTriggerChildTick" }; }
-    BitFieldValue<bool, unsigned __int32> bBlendPhysics()
-    { return { (void*)this, "bBlendPhysics" }; }
-    BitFieldValue<bool, unsigned __int32> bBoundsChangeTriggersStreamingDataRebuild()
-    { return { (void*)this, "bBoundsChangeTriggersStreamingDataRebuild" }; }
-    BitFieldValue<bool, unsigned __int32> bCPUSkinning()
-    { return { (void*)this, "bCPUSkinning" }; }
-    BitFieldValue<bool, unsigned __int32> bCachedLocalBoundsUpToDate()
-    { return { (void*)this, "bCachedLocalBoundsUpToDate" }; }
-    BitFieldValue<bool, unsigned __int32> bCachedWorldSpaceBoundsUpToDate()
-    { return { (void*)this, "bCachedWorldSpaceBoundsUpToDate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bCanHighlightSelectedSections()
-    { return { (void*)this, "bCanHighlightSelectedSections" }; }
-    BitFieldValue<bool, unsigned __int32> bCastCapsuleDirectShadow()
-    { return { (void*)this, "bCastCapsuleDirectShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastCapsuleIndirectShadow()
-    { return { (void*)this, "bCastCapsuleIndirectShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastCinematicShadow()
-    { return { (void*)this, "bCastCinematicShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastContactShadow()
-    { return { (void*)this, "bCastContactShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastDynamicShadow()
-    { return { (void*)this, "bCastDynamicShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastFarShadow()
-    { return { (void*)this, "bCastFarShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastHiddenShadow()
-    { return { (void*)this, "bCastHiddenShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastInsetShadow()
-    { return { (void*)this, "bCastInsetShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastShadowAsTwoSided()
-    { return { (void*)this, "bCastShadowAsTwoSided" }; }
-    BitFieldValue<bool, unsigned __int32> bCastStaticShadow()
-    { return { (void*)this, "bCastStaticShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bCastVolumetricTranslucentShadow()
-    { return { (void*)this, "bCastVolumetricTranslucentShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bChartDistanceFactor()
-    { return { (void*)this, "bChartDistanceFactor" }; }
-    BitFieldValue<bool, unsigned __int32> bClientSyncAlwaysUpdatePhysicsCollision()
-    { return { (void*)this, "bClientSyncAlwaysUpdatePhysicsCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWithAttachedChildren()
-    { return { (void*)this, "bCollideWithAttachedChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWithEnvironment()
-    { return { (void*)this, "bCollideWithEnvironment" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentToWorldUpdated()
-    { return { (void*)this, "bComponentToWorldUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentUseFixedSkelBounds()
-    { return { (void*)this, "bComponentUseFixedSkelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeBoundsOnceForGame()
-    { return { (void*)this, "bComputeBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeFastLocalBounds()
-    { return { (void*)this, "bComputeFastLocalBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bComputedBoundsOnceForGame()
-    { return { (void*)this, "bComputedBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bConsiderAllBodiesForBounds()
-    { return { (void*)this, "bConsiderAllBodiesForBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bDeferKinematicBoneUpdate()
-    { return { (void*)this, "bDeferKinematicBoneUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKAnimationLegZOffseting()
-    { return { (void*)this, "bDinoIKAnimationLegZOffseting" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKLerpFeet()
-    { return { (void*)this, "bDinoIKLerpFeet" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKLerpLegs()
-    { return { (void*)this, "bDinoIKLerpLegs" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKRootWorldSpaceLerpZ()
-    { return { (void*)this, "bDinoIKRootWorldSpaceLerpZ" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKSlopeMatchingRootHeightOffsetMultiplier()
-    { return { (void*)this, "bDinoIKSlopeMatchingRootHeightOffsetMultiplier" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKSmoothGroundPlaneLerping()
-    { return { (void*)this, "bDinoIKSmoothGroundPlaneLerping" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKUseExperimentalInvalidTraceZeroing()
-    { return { (void*)this, "bDinoIKUseExperimentalInvalidTraceZeroing" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoIKUseLegLimits()
-    { return { (void*)this, "bDinoIKUseLegLimits" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableClothSimulation()
-    { return { (void*)this, "bDisableClothSimulation" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableMorphTarget()
-    { return { (void*)this, "bDisableMorphTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bDisablePerPixelPainting()
-    { return { (void*)this, "bDisablePerPixelPainting" }; }
-    BitFieldValue<bool, unsigned __int32> bDisablePostProcessBlueprint()
-    { return { (void*)this, "bDisablePostProcessBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNode()
-    { return { (void*)this, "bDisableRigidBodyAnimNode" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayDebugUpdateRateOptimizations()
-    { return { (void*)this, "bDisplayDebugUpdateRateOptimizations" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
+    BrzCampoPonteiro bAbsoluteLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAbsoluteLocation")); }
+    BrzCampoPonteiro bAbsoluteRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAbsoluteRotation")); }
+    BrzCampoPonteiro bAbsoluteScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAbsoluteScale")); }
+    BrzCampoPonteiro bAddAttachedParentBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAddAttachedParentBounds")); }
+    BrzCampoPonteiro bAffectDistanceFieldLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAffectDistanceFieldLighting")); }
+    BrzCampoPonteiro bAffectDynamicIndirectLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAffectDynamicIndirectLighting")); }
+    BrzCampoPonteiro bAffectIndirectLightingWhileHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAffectIndirectLightingWhileHidden")); }
+    BrzCampoPonteiro bAlignRootOnlyToGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlignRootOnlyToGround")); }
+    BrzCampoPonteiro bAllowAlwaysEvaluatePostProcessAnimBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAllowAlwaysEvaluatePostProcessAnimBP")); }
+    BrzCampoPonteiro bAllowAnimCurveEvaluationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAllowAnimCurveEvaluation")); }
+    BrzCampoPonteiro bAllowClothActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAllowClothActors")); }
+    BrzCampoPonteiro bAllowCullDistanceVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAllowCullDistanceVolume")); }
+    BrzCampoPonteiro bAllowKinematicUpdateStaggeringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAllowKinematicUpdateStaggering")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysForceUpdateKinematicsOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlwaysForceUpdateKinematicsOnDedicatedServer")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAlwaysTeleportKinematicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlwaysTeleportKinematic")); }
+    BrzCampoPonteiro bAlwaysUpdateMeshForShadowRenderingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlwaysUpdateMeshForShadowRendering")); }
+    BrzCampoPonteiro bAlwaysUseMeshDeformerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAlwaysUseMeshDeformer")); }
+    BrzCampoPonteiro bAnimTreeInitialisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAnimTreeInitialised")); }
+    BrzCampoPonteiro bApplyGroundBoneModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bApplyGroundBoneModifiers")); }
+    BrzCampoPonteiro bApplyImpulseOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bApplyImpulseOnDamage")); }
+    BrzCampoPonteiro bAttachedSoundsForceHighPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAttachedSoundsForceHighPriority")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bAutoActivate")); }
+    BrzCampoPonteiro bBasedPawnsTriggerChildTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bBasedPawnsTriggerChildTick")); }
+    BrzCampoPonteiro bBlendPhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bBlendPhysics")); }
+    BrzCampoPonteiro bBoundsChangeTriggersStreamingDataRebuildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bBoundsChangeTriggersStreamingDataRebuild")); }
+    BrzCampoPonteiro bCPUSkinningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCPUSkinning")); }
+    BrzCampoPonteiro bCachedLocalBoundsUpToDateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCachedLocalBoundsUpToDate")); }
+    BrzCampoPonteiro bCachedWorldSpaceBoundsUpToDateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCachedWorldSpaceBoundsUpToDate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCanHighlightSelectedSectionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCanHighlightSelectedSections")); }
+    BrzCampoPonteiro bCastCapsuleDirectShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastCapsuleDirectShadow")); }
+    BrzCampoPonteiro bCastCapsuleIndirectShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastCapsuleIndirectShadow")); }
+    BrzCampoPonteiro bCastCinematicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastCinematicShadow")); }
+    BrzCampoPonteiro bCastContactShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastContactShadow")); }
+    BrzCampoPonteiro bCastDynamicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastDynamicShadow")); }
+    BrzCampoPonteiro bCastFarShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastFarShadow")); }
+    BrzCampoPonteiro bCastHiddenShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastHiddenShadow")); }
+    BrzCampoPonteiro bCastInsetShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastInsetShadow")); }
+    BrzCampoPonteiro bCastShadowAsTwoSidedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastShadowAsTwoSided")); }
+    BrzCampoPonteiro bCastStaticShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastStaticShadow")); }
+    BrzCampoPonteiro bCastVolumetricTranslucentShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCastVolumetricTranslucentShadow")); }
+    BrzCampoPonteiro bChartDistanceFactorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bChartDistanceFactor")); }
+    BrzCampoPonteiro bClientSyncAlwaysUpdatePhysicsCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bClientSyncAlwaysUpdatePhysicsCollision")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bClimbable")); }
+    BrzCampoPonteiro bCollideWithAttachedChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCollideWithAttachedChildren")); }
+    BrzCampoPonteiro bCollideWithEnvironmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bCollideWithEnvironment")); }
+    BrzCampoPonteiro bComponentToWorldUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bComponentToWorldUpdated")); }
+    BrzCampoPonteiro bComponentUseFixedSkelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bComponentUseFixedSkelBounds")); }
+    BrzCampoPonteiro bComputeBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bComputeBoundsOnceForGame")); }
+    BrzCampoPonteiro bComputeFastLocalBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bComputeFastLocalBounds")); }
+    BrzCampoPonteiro bComputedBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bComputedBoundsOnceForGame")); }
+    BrzCampoPonteiro bConsiderAllBodiesForBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bConsiderAllBodiesForBounds")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bDeferKinematicBoneUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDeferKinematicBoneUpdate")); }
+    BrzCampoPonteiro bDinoIKAnimationLegZOffsetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKAnimationLegZOffseting")); }
+    BrzCampoPonteiro bDinoIKLerpFeetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKLerpFeet")); }
+    BrzCampoPonteiro bDinoIKLerpLegsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKLerpLegs")); }
+    BrzCampoPonteiro bDinoIKRootWorldSpaceLerpZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKRootWorldSpaceLerpZ")); }
+    BrzCampoPonteiro bDinoIKSlopeMatchingRootHeightOffsetMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKSlopeMatchingRootHeightOffsetMultiplier")); }
+    BrzCampoPonteiro bDinoIKSmoothGroundPlaneLerpingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKSmoothGroundPlaneLerping")); }
+    BrzCampoPonteiro bDinoIKUseExperimentalInvalidTraceZeroingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKUseExperimentalInvalidTraceZeroing")); }
+    BrzCampoPonteiro bDinoIKUseLegLimitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDinoIKUseLegLimits")); }
+    BrzCampoPonteiro bDisableClothSimulationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDisableClothSimulation")); }
+    BrzCampoPonteiro bDisableMorphTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDisableMorphTarget")); }
+    BrzCampoPonteiro bDisablePerPixelPaintingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDisablePerPixelPainting")); }
+    BrzCampoPonteiro bDisablePostProcessBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDisablePostProcessBlueprint")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDisableRigidBodyAnimNode")); }
+    BrzCampoPonteiro bDisplayDebugUpdateRateOptimizationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bDisplayDebugUpdateRateOptimizations")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEditableWhenInherited")); }
     bool& bEmissiveLightSourceField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalDinoMeshComponent.bEmissiveLightSource"); }
-    BitFieldValue<bool, unsigned __int32> bEnableAnimation()
-    { return { (void*)this, "bEnableAnimation" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableIKCartGroundConforming()
-    { return { (void*)this, "bEnableIKCartGroundConforming" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableIKTraceFreezing()
-    { return { (void*)this, "bEnableIKTraceFreezing" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableIkOnlyWhenIdle()
-    { return { (void*)this, "bEnableIkOnlyWhenIdle" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableLineCheckWithBounds()
-    { return { (void*)this, "bEnableLineCheckWithBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMaterialParameterCaching()
-    { return { (void*)this, "bEnableMaterialParameterCaching" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiFabrik()
-    { return { (void*)this, "bEnableMultiFabrik" }; }
-    BitFieldValue<bool, unsigned __int32> bEnablePerPolyCollision()
-    { return { (void*)this, "bEnablePerPolyCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bEnablePhysicsOnDedicatedServer()
-    { return { (void*)this, "bEnablePhysicsOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableSimpleIK()
-    { return { (void*)this, "bEnableSimpleIK" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableUpdateRateOptimizations()
-    { return { (void*)this, "bEnableUpdateRateOptimizations" }; }
-    BitFieldValue<bool, unsigned __int32> bExcludeFromLevelBounds()
-    { return { (void*)this, "bExcludeFromLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bExcludeFromLightAttachmentGroup()
-    { return { (void*)this, "bExcludeFromLightAttachmentGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bFillCollisionUnderneathForNavmesh()
-    { return { (void*)this, "bFillCollisionUnderneathForNavmesh" }; }
-    BitFieldValue<bool, unsigned __int32> bFilteredAnimCurvesIsAllowList()
-    { return { (void*)this, "bFilteredAnimCurvesIsAllowList" }; }
-    BitFieldValue<bool, unsigned __int32> bFollowerShouldTickPose()
-    { return { (void*)this, "bFollowerShouldTickPose" }; }
-    BitFieldValue<bool, unsigned __int32> bFootZDiffIsCached()
-    { return { (void*)this, "bFootZDiffIsCached" }; }
-    BitFieldValue<bool, unsigned __int32> bForceCollisionUpdate()
-    { return { (void*)this, "bForceCollisionUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisablePhysicsOnDediServer()
-    { return { (void*)this, "bForceDisablePhysicsOnDediServer" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisablePhysicsOnDediServerAllowRagdoll()
-    { return { (void*)this, "bForceDisablePhysicsOnDediServerAllowRagdoll" }; }
-    BitFieldValue<bool, unsigned __int32> bForceMeshObjectUpdate()
-    { return { (void*)this, "bForceMeshObjectUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bForceMipStreaming()
-    { return { (void*)this, "bForceMipStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bForceOverlapEvents()
-    { return { (void*)this, "bForceOverlapEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventBlockingProjectiles()
-    { return { (void*)this, "bForcePreventBlockingProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bForceRefpose()
-    { return { (void*)this, "bForceRefpose" }; }
-    BitFieldValue<bool, unsigned __int32> bForceSimpleIK()
-    { return { (void*)this, "bForceSimpleIK" }; }
-    BitFieldValue<bool, unsigned __int32> bForceTickDisabled()
-    { return { (void*)this, "bForceTickDisabled" }; }
-    BitFieldValue<bool, unsigned __int32> bForceTickPoseWithinRange()
-    { return { (void*)this, "bForceTickPoseWithinRange" }; }
-    BitFieldValue<bool, unsigned __int32> bForceUpdateKinematic()
-    { return { (void*)this, "bForceUpdateKinematic" }; }
-    BitFieldValue<bool, unsigned __int32> bForceWireframe()
-    { return { (void*)this, "bForceWireframe" }; }
-    BitFieldValue<bool, unsigned __int32> bFreeSpaceBasesOnUnregister()
-    { return { (void*)this, "bFreeSpaceBasesOnUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bFreezeGroundPlaneIK()
-    { return { (void*)this, "bFreezeGroundPlaneIK" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEvents()
-    { return { (void*)this, "bGenerateOverlapEvents" }; }
+    BrzCampoPonteiro bEnableAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableAnimation")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableIKCartGroundConformingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableIKCartGroundConforming")); }
+    BrzCampoPonteiro bEnableIKTraceFreezingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableIKTraceFreezing")); }
+    BrzCampoPonteiro bEnableIkOnlyWhenIdleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableIkOnlyWhenIdle")); }
+    BrzCampoPonteiro bEnableLineCheckWithBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableLineCheckWithBounds")); }
+    BrzCampoPonteiro bEnableMaterialParameterCachingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableMaterialParameterCaching")); }
+    BrzCampoPonteiro bEnableMultiFabrikField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableMultiFabrik")); }
+    BrzCampoPonteiro bEnablePerPolyCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnablePerPolyCollision")); }
+    BrzCampoPonteiro bEnablePhysicsOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnablePhysicsOnDedicatedServer")); }
+    BrzCampoPonteiro bEnableSimpleIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableSimpleIK")); }
+    BrzCampoPonteiro bEnableUpdateRateOptimizationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bEnableUpdateRateOptimizations")); }
+    BrzCampoPonteiro bExcludeFromLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bExcludeFromLevelBounds")); }
+    BrzCampoPonteiro bExcludeFromLightAttachmentGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bExcludeFromLightAttachmentGroup")); }
+    BrzCampoPonteiro bFillCollisionUnderneathForNavmeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bFillCollisionUnderneathForNavmesh")); }
+    BrzCampoPonteiro bFilteredAnimCurvesIsAllowListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bFilteredAnimCurvesIsAllowList")); }
+    BrzCampoPonteiro bFollowerShouldTickPoseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bFollowerShouldTickPose")); }
+    BrzCampoPonteiro bFootZDiffIsCachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bFootZDiffIsCached")); }
+    BrzCampoPonteiro bForceCollisionUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceCollisionUpdate")); }
+    BrzCampoPonteiro bForceDisablePhysicsOnDediServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceDisablePhysicsOnDediServer")); }
+    BrzCampoPonteiro bForceDisablePhysicsOnDediServerAllowRagdollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceDisablePhysicsOnDediServerAllowRagdoll")); }
+    BrzCampoPonteiro bForceMeshObjectUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceMeshObjectUpdate")); }
+    BrzCampoPonteiro bForceMipStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceMipStreaming")); }
+    BrzCampoPonteiro bForceOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceOverlapEvents")); }
+    BrzCampoPonteiro bForcePreventBlockingProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForcePreventBlockingProjectiles")); }
+    BrzCampoPonteiro bForceRefposeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceRefpose")); }
+    BrzCampoPonteiro bForceSimpleIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceSimpleIK")); }
+    BrzCampoPonteiro bForceTickDisabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceTickDisabled")); }
+    BrzCampoPonteiro bForceTickPoseWithinRangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceTickPoseWithinRange")); }
+    BrzCampoPonteiro bForceUpdateKinematicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceUpdateKinematic")); }
+    BrzCampoPonteiro bForceWireframeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bForceWireframe")); }
+    BrzCampoPonteiro bFreeSpaceBasesOnUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bFreeSpaceBasesOnUnregister")); }
+    BrzCampoPonteiro bFreezeGroundPlaneIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bFreezeGroundPlaneIK")); }
+    BrzCampoPonteiro bGenerateOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bGenerateOverlapEvents")); }
     unsigned char& bHasCustomNavigableGeometryField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalDinoMeshComponent.bHasCustomNavigableGeometry"); }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHasNoStreamableTextures()
-    { return { (void*)this, "bHasNoStreamableTextures" }; }
-    BitFieldValue<bool, unsigned __int32> bHasPerInstanceHitProxies()
-    { return { (void*)this, "bHasPerInstanceHitProxies" }; }
-    BitFieldValue<bool, unsigned __int32> bHasValidBodies()
-    { return { (void*)this, "bHasValidBodies" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInGame()
-    { return { (void*)this, "bHiddenInGame" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInSceneCapture()
-    { return { (void*)this, "bHiddenInSceneCapture" }; }
-    BitFieldValue<bool, unsigned __int32> bHideSkin()
-    { return { (void*)this, "bHideSkin" }; }
-    BitFieldValue<bool, unsigned __int32> bHoldout()
-    { return { (void*)this, "bHoldout" }; }
-    BitFieldValue<bool, unsigned __int32> bHumanIKUseBoneModiferLegScalars()
-    { return { (void*)this, "bHumanIKUseBoneModiferLegScalars" }; }
-    BitFieldValue<bool, unsigned __int32> bIKRotationEnabled()
-    { return { (void*)this, "bIKRotationEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreLeaderPoseComponentLOD()
-    { return { (void*)this, "bIgnoreLeaderPoseComponentLOD" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreParentTransformUpdate()
-    { return { (void*)this, "bIgnoreParentTransformUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRadialForce()
-    { return { (void*)this, "bIgnoreRadialForce" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRadialImpulse()
-    { return { (void*)this, "bIgnoreRadialImpulse" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreUpdatingOwnersLastRenderTime()
-    { return { (void*)this, "bIgnoreUpdatingOwnersLastRenderTime" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIncludeBoundsRadiusInDrawDistances()
-    { return { (void*)this, "bIncludeBoundsRadiusInDrawDistances" }; }
-    BitFieldValue<bool, unsigned __int32> bIncludeComponentLocationIntoBounds()
-    { return { (void*)this, "bIncludeComponentLocationIntoBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bInitOffset()
-    { return { (void*)this, "bInitOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bInitializedArticulated()
-    { return { (void*)this, "bInitializedArticulated" }; }
-    BitFieldValue<bool, unsigned __int32> bInterpolateRootPhys()
-    { return { (void*)this, "bInterpolateRootPhys" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAbstractBasingComponent()
-    { return { (void*)this, "bIsAbstractBasingComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActorTextureStreamingBuiltData()
-    { return { (void*)this, "bIsActorTextureStreamingBuiltData" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAutonomousTickPose()
-    { return { (void*)this, "bIsAutonomousTickPose" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBeingMovedByEditor()
-    { return { (void*)this, "bIsBeingMovedByEditor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInForeground()
-    { return { (void*)this, "bIsInForeground" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNotRenderAttachmentRoot()
-    { return { (void*)this, "bIsNotRenderAttachmentRoot" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidTextureStreamingBuiltData()
-    { return { (void*)this, "bIsValidTextureStreamingBuiltData" }; }
-    BitFieldValue<bool, unsigned __int32> bLightAsIfStatic()
-    { return { (void*)this, "bLightAsIfStatic" }; }
-    BitFieldValue<bool, unsigned __int32> bLightAttachmentsAsGroup()
-    { return { (void*)this, "bLightAttachmentsAsGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bModifyBoneAnimNodeUseCurrentBoneModifiers()
-    { return { (void*)this, "bModifyBoneAnimNodeUseCurrentBoneModifiers" }; }
-    BitFieldValue<bool, unsigned __int32> bMovableUseDynamicDrawDistance()
-    { return { (void*)this, "bMovableUseDynamicDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bMovedLastFrame()
-    { return { (void*)this, "bMovedLastFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiBodyOverlap()
-    { return { (void*)this, "bMultiBodyOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bNeedsQueuedAnimEventsDispatched()
-    { return { (void*)this, "bNeedsQueuedAnimEventsDispatched" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bNeverDistanceCull()
-    { return { (void*)this, "bNeverDistanceCull" }; }
-    BitFieldValue<bool, unsigned __int32> bNeverTickOnDediServer()
-    { return { (void*)this, "bNeverTickOnDediServer" }; }
-    BitFieldValue<bool, unsigned __int32> bNoSkeletonUpdate()
-    { return { (void*)this, "bNoSkeletonUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bOldForceRefPose()
-    { return { (void*)this, "bOldForceRefPose" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyAllowAutonomousTickPose()
-    { return { (void*)this, "bOnlyAllowAutonomousTickPose" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyOwnerSee()
-    { return { (void*)this, "bOnlyOwnerSee" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyTickWhenRenderedDontDisableOnDedicatedServer()
-    { return { (void*)this, "bOnlyTickWhenRenderedDontDisableOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideMinLOD()
-    { return { (void*)this, "bOverrideMinLOD" }; }
-    BitFieldValue<bool, unsigned __int32> bOwnerNoSee()
-    { return { (void*)this, "bOwnerNoSee" }; }
-    BitFieldValue<bool, unsigned __int32> bPauseAnims()
-    { return { (void*)this, "bPauseAnims" }; }
-    BitFieldValue<bool, unsigned __int32> bPerBoneMotionBlur()
-    { return { (void*)this, "bPerBoneMotionBlur" }; }
-    BitFieldValue<bool, unsigned __int32> bPhysicsRequiredOnDediServer()
-    { return { (void*)this, "bPhysicsRequiredOnDediServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPlaceholderBool1()
-    { return { (void*)this, "bPlaceholderBool1" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDamage()
-    { return { (void*)this, "bPreventDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDediServerAutoUnregistration()
-    { return { (void*)this, "bPreventDediServerAutoUnregistration" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bPropagateCurvesToFollowers()
-    { return { (void*)this, "bPropagateCurvesToFollowers" }; }
-    BitFieldValue<bool, unsigned __int32> bRayTracingFarField()
-    { return { (void*)this, "bRayTracingFarField" }; }
-    BitFieldValue<bool, unsigned __int32> bReceiveMobileCSMShadows()
-    { return { (void*)this, "bReceiveMobileCSMShadows" }; }
-    BitFieldValue<bool, unsigned __int32> bReceivesDecals()
-    { return { (void*)this, "bReceivesDecals" }; }
-    BitFieldValue<bool, unsigned __int32> bRecentlyRendered()
-    { return { (void*)this, "bRecentlyRendered" }; }
-    BitFieldValue<bool, unsigned __int32> bRegisterWithMaterialGPUMessageQueue()
-    { return { (void*)this, "bRegisterWithMaterialGPUMessageQueue" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderCustomDepth()
-    { return { (void*)this, "bRenderCustomDepth" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderInDepthPass()
-    { return { (void*)this, "bRenderInDepthPass" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderInMainPass()
-    { return { (void*)this, "bRenderInMainPass" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderStatic()
-    { return { (void*)this, "bRenderStatic" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicatePhysicsToAutonomousProxy()
-    { return { (void*)this, "bReplicatePhysicsToAutonomousProxy" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiredBonesUpToDate()
-    { return { (void*)this, "bRequiredBonesUpToDate" }; }
-    BitFieldValue<bool, unsigned __int32> bResetAfterTeleport()
-    { return { (void*)this, "bResetAfterTeleport" }; }
-    BitFieldValue<bool, unsigned __int32> bReturnMaterialOnMove()
-    { return { (void*)this, "bReturnMaterialOnMove" }; }
-    BitFieldValue<bool, unsigned __int32> bRotateFeetToAlignWithGround()
-    { return { (void*)this, "bRotateFeetToAlignWithGround" }; }
-    BitFieldValue<bool, unsigned __int32> bRotateToMatchWalkingSlope()
-    { return { (void*)this, "bRotateToMatchWalkingSlope" }; }
-    BitFieldValue<bool, unsigned __int32> bSelectable()
-    { return { (void*)this, "bSelectable" }; }
-    BitFieldValue<bool, unsigned __int32> bSelfShadowOnly()
-    { return { (void*)this, "bSelfShadowOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bSetAttachmentMasterPoseComponent()
-    { return { (void*)this, "bSetAttachmentMasterPoseComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bSetKinematicsSleeping()
-    { return { (void*)this, "bSetKinematicsSleeping" }; }
-    BitFieldValue<bool, unsigned __int32> bSetMeshDeformer()
-    { return { (void*)this, "bSetMeshDeformer" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeAttached()
-    { return { (void*)this, "bShouldBeAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldCacheFootZDiff()
-    { return { (void*)this, "bShouldCacheFootZDiff" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapLocationWhenAttached()
-    { return { (void*)this, "bShouldSnapLocationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapRotationWhenAttached()
-    { return { (void*)this, "bShouldSnapRotationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapScaleWhenAttached()
-    { return { (void*)this, "bShouldSnapScaleWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldUpdatePhysicsVolume()
-    { return { (void*)this, "bShouldUpdatePhysicsVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bShowPrePhysBones()
-    { return { (void*)this, "bShowPrePhysBones" }; }
-    BitFieldValue<bool, unsigned __int32> bSingleSampleShadowFromStationaryLights()
-    { return { (void*)this, "bSingleSampleShadowFromStationaryLights" }; }
-    BitFieldValue<bool, unsigned __int32> bSkipBoundsUpdateWhenInterpolating()
-    { return { (void*)this, "bSkipBoundsUpdateWhenInterpolating" }; }
-    BitFieldValue<bool, unsigned __int32> bSkipKinematicUpdateWhenInterpolating()
-    { return { (void*)this, "bSkipKinematicUpdateWhenInterpolating" }; }
-    BitFieldValue<bool, unsigned __int32> bSkipUpdateTransformIfBlendedPhysics()
-    { return { (void*)this, "bSkipUpdateTransformIfBlendedPhysics" }; }
-    BitFieldValue<bool, unsigned __int32> bSleepKinematicsWhenNotRefreshingBones()
-    { return { (void*)this, "bSleepKinematicsWhenNotRefreshingBones" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bStaticWhenNotMoveable()
-    { return { (void*)this, "bStaticWhenNotMoveable" }; }
-    BitFieldValue<bool, unsigned __int32> bSuppressAnimNotifies()
-    { return { (void*)this, "bSuppressAnimNotifies" }; }
-    BitFieldValue<bool, unsigned __int32> bSyncAttachParentLOD()
-    { return { (void*)this, "bSyncAttachParentLOD" }; }
-    BitFieldValue<bool, unsigned __int32> bTraceComplexOnMove()
-    { return { (void*)this, "bTraceComplexOnMove" }; }
-    BitFieldValue<bool, unsigned __int32> bTreatAsBackgroundForOcclusion()
-    { return { (void*)this, "bTreatAsBackgroundForOcclusion" }; }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHasNoStreamableTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHasNoStreamableTextures")); }
+    BrzCampoPonteiro bHasPerInstanceHitProxiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHasPerInstanceHitProxies")); }
+    BrzCampoPonteiro bHasValidBodiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHasValidBodies")); }
+    BrzCampoPonteiro bHiddenInGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHiddenInGame")); }
+    BrzCampoPonteiro bHiddenInSceneCaptureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHiddenInSceneCapture")); }
+    BrzCampoPonteiro bHideSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHideSkin")); }
+    BrzCampoPonteiro bHoldoutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHoldout")); }
+    BrzCampoPonteiro bHumanIKUseBoneModiferLegScalarsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bHumanIKUseBoneModiferLegScalars")); }
+    BrzCampoPonteiro bIKRotationEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIKRotationEnabled")); }
+    BrzCampoPonteiro bIgnoreLeaderPoseComponentLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIgnoreLeaderPoseComponentLOD")); }
+    BrzCampoPonteiro bIgnoreParentTransformUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIgnoreParentTransformUpdate")); }
+    BrzCampoPonteiro bIgnoreRadialForceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIgnoreRadialForce")); }
+    BrzCampoPonteiro bIgnoreRadialImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIgnoreRadialImpulse")); }
+    BrzCampoPonteiro bIgnoreUpdatingOwnersLastRenderTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIgnoreUpdatingOwnersLastRenderTime")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIncludeBoundsRadiusInDrawDistancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIncludeBoundsRadiusInDrawDistances")); }
+    BrzCampoPonteiro bIncludeComponentLocationIntoBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIncludeComponentLocationIntoBounds")); }
+    BrzCampoPonteiro bInitOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bInitOffset")); }
+    BrzCampoPonteiro bInitializedArticulatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bInitializedArticulated")); }
+    BrzCampoPonteiro bInterpolateRootPhysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bInterpolateRootPhys")); }
+    BrzCampoPonteiro bIsAbstractBasingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsAbstractBasingComponent")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsActive")); }
+    BrzCampoPonteiro bIsActorTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsActorTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bIsAutonomousTickPoseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsAutonomousTickPose")); }
+    BrzCampoPonteiro bIsBeingMovedByEditorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsBeingMovedByEditor")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsInForegroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsInForeground")); }
+    BrzCampoPonteiro bIsNotRenderAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsNotRenderAttachmentRoot")); }
+    BrzCampoPonteiro bIsValidTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bIsValidTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bLightAsIfStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bLightAsIfStatic")); }
+    BrzCampoPonteiro bLightAttachmentsAsGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bLightAttachmentsAsGroup")); }
+    BrzCampoPonteiro bModifyBoneAnimNodeUseCurrentBoneModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bModifyBoneAnimNodeUseCurrentBoneModifiers")); }
+    BrzCampoPonteiro bMovableUseDynamicDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bMovableUseDynamicDrawDistance")); }
+    BrzCampoPonteiro bMovedLastFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bMovedLastFrame")); }
+    BrzCampoPonteiro bMultiBodyOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bMultiBodyOverlap")); }
+    BrzCampoPonteiro bNeedsQueuedAnimEventsDispatchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bNeedsQueuedAnimEventsDispatched")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bNetAddressable")); }
+    BrzCampoPonteiro bNeverDistanceCullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bNeverDistanceCull")); }
+    BrzCampoPonteiro bNeverTickOnDediServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bNeverTickOnDediServer")); }
+    BrzCampoPonteiro bNoSkeletonUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bNoSkeletonUpdate")); }
+    BrzCampoPonteiro bOldForceRefPoseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOldForceRefPose")); }
+    BrzCampoPonteiro bOnlyAllowAutonomousTickPoseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOnlyAllowAutonomousTickPose")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyOwnerSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOnlyOwnerSee")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyTickWhenRenderedDontDisableOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOnlyTickWhenRenderedDontDisableOnDedicatedServer")); }
+    BrzCampoPonteiro bOverrideMinLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOverrideMinLOD")); }
+    BrzCampoPonteiro bOwnerNoSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bOwnerNoSee")); }
+    BrzCampoPonteiro bPauseAnimsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPauseAnims")); }
+    BrzCampoPonteiro bPerBoneMotionBlurField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPerBoneMotionBlur")); }
+    BrzCampoPonteiro bPhysicsRequiredOnDediServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPhysicsRequiredOnDediServer")); }
+    BrzCampoPonteiro bPlaceholderBool1Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPlaceholderBool1")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventDamage")); }
+    BrzCampoPonteiro bPreventDediServerAutoUnregistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventDediServerAutoUnregistration")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bPropagateCurvesToFollowersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bPropagateCurvesToFollowers")); }
+    BrzCampoPonteiro bRayTracingFarFieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRayTracingFarField")); }
+    BrzCampoPonteiro bReceiveMobileCSMShadowsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bReceiveMobileCSMShadows")); }
+    BrzCampoPonteiro bReceivesDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bReceivesDecals")); }
+    BrzCampoPonteiro bRecentlyRenderedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRecentlyRendered")); }
+    BrzCampoPonteiro bRegisterWithMaterialGPUMessageQueueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRegisterWithMaterialGPUMessageQueue")); }
+    BrzCampoPonteiro bRenderCustomDepthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRenderCustomDepth")); }
+    BrzCampoPonteiro bRenderInDepthPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRenderInDepthPass")); }
+    BrzCampoPonteiro bRenderInMainPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRenderInMainPass")); }
+    BrzCampoPonteiro bRenderStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRenderStatic")); }
+    BrzCampoPonteiro bReplicatePhysicsToAutonomousProxyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bReplicatePhysicsToAutonomousProxy")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bReplicates")); }
+    BrzCampoPonteiro bRequiredBonesUpToDateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRequiredBonesUpToDate")); }
+    BrzCampoPonteiro bResetAfterTeleportField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bResetAfterTeleport")); }
+    BrzCampoPonteiro bReturnMaterialOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bReturnMaterialOnMove")); }
+    BrzCampoPonteiro bRotateFeetToAlignWithGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRotateFeetToAlignWithGround")); }
+    BrzCampoPonteiro bRotateToMatchWalkingSlopeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bRotateToMatchWalkingSlope")); }
+    BrzCampoPonteiro bSelectableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSelectable")); }
+    BrzCampoPonteiro bSelfShadowOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSelfShadowOnly")); }
+    BrzCampoPonteiro bSetAttachmentMasterPoseComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSetAttachmentMasterPoseComponent")); }
+    BrzCampoPonteiro bSetKinematicsSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSetKinematicsSleeping")); }
+    BrzCampoPonteiro bSetMeshDeformerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSetMeshDeformer")); }
+    BrzCampoPonteiro bShouldBeAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShouldBeAttached")); }
+    BrzCampoPonteiro bShouldCacheFootZDiffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShouldCacheFootZDiff")); }
+    BrzCampoPonteiro bShouldSnapLocationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShouldSnapLocationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapRotationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShouldSnapRotationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapScaleWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShouldSnapScaleWhenAttached")); }
+    BrzCampoPonteiro bShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bShowPrePhysBonesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bShowPrePhysBones")); }
+    BrzCampoPonteiro bSingleSampleShadowFromStationaryLightsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSingleSampleShadowFromStationaryLights")); }
+    BrzCampoPonteiro bSkipBoundsUpdateWhenInterpolatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSkipBoundsUpdateWhenInterpolating")); }
+    BrzCampoPonteiro bSkipKinematicUpdateWhenInterpolatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSkipKinematicUpdateWhenInterpolating")); }
+    BrzCampoPonteiro bSkipUpdateTransformIfBlendedPhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSkipUpdateTransformIfBlendedPhysics")); }
+    BrzCampoPonteiro bSleepKinematicsWhenNotRefreshingBonesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSleepKinematicsWhenNotRefreshingBones")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bStaticWhenNotMoveableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bStaticWhenNotMoveable")); }
+    BrzCampoPonteiro bSuppressAnimNotifiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSuppressAnimNotifies")); }
+    BrzCampoPonteiro bSyncAttachParentLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bSyncAttachParentLOD")); }
+    BrzCampoPonteiro bTraceComplexOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bTraceComplexOnMove")); }
+    BrzCampoPonteiro bTreatAsBackgroundForOcclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bTreatAsBackgroundForOcclusion")); }
     unsigned char& bUpdateBoundsWhenStationaryField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalDinoMeshComponent.bUpdateBoundsWhenStationary"); }
-    BitFieldValue<bool, unsigned __int32> bUpdateChildOverlaps()
-    { return { (void*)this, "bUpdateChildOverlaps" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateJointsFromAnimation()
-    { return { (void*)this, "bUpdateJointsFromAnimation" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateMeshWhenKinematic()
-    { return { (void*)this, "bUpdateMeshWhenKinematic" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateOverlapsOnAnimationFinalize()
-    { return { (void*)this, "bUpdateOverlapsOnAnimationFinalize" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdatedKinematics()
-    { return { (void*)this, "bUpdatedKinematics" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdatedKinematicsOnce()
-    { return { (void*)this, "bUpdatedKinematicsOnce" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAbsoluteMaxDrawDisatance()
-    { return { (void*)this, "bUseAbsoluteMaxDrawDisatance" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsOccluder()
-    { return { (void*)this, "bUseAsOccluder" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsUnfogger()
-    { return { (void*)this, "bUseAsUnfogger" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachParentBound()
-    { return { (void*)this, "bUseAttachParentBound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPControlRigNotify()
-    { return { (void*)this, "bUseBPControlRigNotify" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBoundsFromLeaderPoseComponent()
-    { return { (void*)this, "bUseBoundsFromLeaderPoseComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bUseEditorCompositing()
-    { return { (void*)this, "bUseEditorCompositing" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInternalOctree()
-    { return { (void*)this, "bUseInternalOctree" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInternalOctreeOnClient()
-    { return { (void*)this, "bUseInternalOctreeOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseItemSlotAttachmentTranformOffsets()
-    { return { (void*)this, "bUseItemSlotAttachmentTranformOffsets" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRefPoseOnInitAnim()
-    { return { (void*)this, "bUseRefPoseOnInitAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRotOffset()
-    { return { (void*)this, "bUseRotOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseScreenRenderStateForUpdate()
-    { return { (void*)this, "bUseScreenRenderStateForUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bUseViewOwnerDepthPriorityGroup()
-    { return { (void*)this, "bUseViewOwnerDepthPriorityGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bVisible()
-    { return { (void*)this, "bVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInRayTracing()
-    { return { (void*)this, "bVisibleInRayTracing" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInRealTimeSkyCaptures()
-    { return { (void*)this, "bVisibleInRealTimeSkyCaptures" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInReflectionCaptures()
-    { return { (void*)this, "bVisibleInReflectionCaptures" }; }
-    BitFieldValue<bool, unsigned __int32> bVisibleInSceneCaptureOnly()
-    { return { (void*)this, "bVisibleInSceneCaptureOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bWaitForParallelClothTask()
-    { return { (void*)this, "bWaitForParallelClothTask" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsEditorEffects()
-    { return { (void*)this, "bWantsEditorEffects" }; }
+    BrzCampoPonteiro bUpdateChildOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUpdateChildOverlaps")); }
+    BrzCampoPonteiro bUpdateJointsFromAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUpdateJointsFromAnimation")); }
+    BrzCampoPonteiro bUpdateMeshWhenKinematicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUpdateMeshWhenKinematic")); }
+    BrzCampoPonteiro bUpdateOverlapsOnAnimationFinalizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUpdateOverlapsOnAnimationFinalize")); }
+    BrzCampoPonteiro bUpdatedKinematicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUpdatedKinematics")); }
+    BrzCampoPonteiro bUpdatedKinematicsOnceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUpdatedKinematicsOnce")); }
+    BrzCampoPonteiro bUseAbsoluteMaxDrawDisatanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseAbsoluteMaxDrawDisatance")); }
+    BrzCampoPonteiro bUseAsOccluderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseAsOccluder")); }
+    BrzCampoPonteiro bUseAsUnfoggerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseAsUnfogger")); }
+    BrzCampoPonteiro bUseAttachParentBoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseAttachParentBound")); }
+    BrzCampoPonteiro bUseBPControlRigNotifyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseBPControlRigNotify")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseBoundsFromLeaderPoseComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseBoundsFromLeaderPoseComponent")); }
+    BrzCampoPonteiro bUseEditorCompositingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseEditorCompositing")); }
+    BrzCampoPonteiro bUseInternalOctreeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseInternalOctree")); }
+    BrzCampoPonteiro bUseInternalOctreeOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseInternalOctreeOnClient")); }
+    BrzCampoPonteiro bUseItemSlotAttachmentTranformOffsetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseItemSlotAttachmentTranformOffsets")); }
+    BrzCampoPonteiro bUseRefPoseOnInitAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseRefPoseOnInitAnim")); }
+    BrzCampoPonteiro bUseRotOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseRotOffset")); }
+    BrzCampoPonteiro bUseScreenRenderStateForUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseScreenRenderStateForUpdate")); }
+    BrzCampoPonteiro bUseViewOwnerDepthPriorityGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bUseViewOwnerDepthPriorityGroup")); }
+    BrzCampoPonteiro bVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bVisible")); }
+    BrzCampoPonteiro bVisibleInRayTracingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bVisibleInRayTracing")); }
+    BrzCampoPonteiro bVisibleInRealTimeSkyCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bVisibleInRealTimeSkyCaptures")); }
+    BrzCampoPonteiro bVisibleInReflectionCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bVisibleInReflectionCaptures")); }
+    BrzCampoPonteiro bVisibleInSceneCaptureOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bVisibleInSceneCaptureOnly")); }
+    BrzCampoPonteiro bWaitForParallelClothTaskField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bWaitForParallelClothTask")); }
+    BrzCampoPonteiro bWantsEditorEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoMeshComponent.bWantsEditorEffects")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALDINOMESHCOMPONENT_H

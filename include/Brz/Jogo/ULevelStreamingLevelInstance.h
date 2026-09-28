@@ -87,34 +87,34 @@ struct ULevelStreamingLevelInstance
     { return *GetNativePointerField<int*>(this, "ULevelStreamingLevelInstance.StreamingPriority"); }
     BrzCampoPonteiro WorldAssetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.WorldAsset")); }
-    BitFieldValue<bool, unsigned __int32> bClientOnlyVisible()
-    { return { (void*)this, "bClientOnlyVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableDistanceStreaming()
-    { return { (void*)this, "bDisableDistanceStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bDrawOnLevelStatusMap()
-    { return { (void*)this, "bDrawOnLevelStatusMap" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableTileStreaming()
-    { return { (void*)this, "bEnableTileStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bInitiallyLoaded()
-    { return { (void*)this, "bInitiallyLoaded" }; }
-    BitFieldValue<bool, unsigned __int32> bInitiallyVisible()
-    { return { (void*)this, "bInitiallyVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsStatic()
-    { return { (void*)this, "bIsStatic" }; }
-    BitFieldValue<bool, unsigned __int32> bLevelStreamingDesiredVisibility()
-    { return { (void*)this, "bLevelStreamingDesiredVisibility" }; }
-    BitFieldValue<bool, unsigned __int32> bLevelStreamingVisibilityOnly()
-    { return { (void*)this, "bLevelStreamingVisibilityOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bLocked()
-    { return { (void*)this, "bLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeLoaded()
-    { return { (void*)this, "bShouldBeLoaded" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeVisible()
-    { return { (void*)this, "bShouldBeVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBlockOnLoad()
-    { return { (void*)this, "bShouldBlockOnLoad" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBlockOnUnload()
-    { return { (void*)this, "bShouldBlockOnUnload" }; }
+    BrzCampoPonteiro bClientOnlyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bClientOnlyVisible")); }
+    BrzCampoPonteiro bDisableDistanceStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bDisableDistanceStreaming")); }
+    BrzCampoPonteiro bDrawOnLevelStatusMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bDrawOnLevelStatusMap")); }
+    BrzCampoPonteiro bEnableTileStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bEnableTileStreaming")); }
+    BrzCampoPonteiro bInitiallyLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bInitiallyLoaded")); }
+    BrzCampoPonteiro bInitiallyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bInitiallyVisible")); }
+    BrzCampoPonteiro bIsStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bIsStatic")); }
+    BrzCampoPonteiro bLevelStreamingDesiredVisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bLevelStreamingDesiredVisibility")); }
+    BrzCampoPonteiro bLevelStreamingVisibilityOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bLevelStreamingVisibilityOnly")); }
+    BrzCampoPonteiro bLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bLocked")); }
+    BrzCampoPonteiro bShouldBeLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bShouldBeLoaded")); }
+    BrzCampoPonteiro bShouldBeVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bShouldBeVisible")); }
+    BrzCampoPonteiro bShouldBlockOnLoadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bShouldBlockOnLoad")); }
+    BrzCampoPonteiro bShouldBlockOnUnloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingLevelInstance.bShouldBlockOnUnload")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELSTREAMINGLEVELINSTANCE_H

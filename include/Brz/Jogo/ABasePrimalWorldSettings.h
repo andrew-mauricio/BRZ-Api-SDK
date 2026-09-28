@@ -36,7 +36,7 @@ struct ABasePrimalWorldSettings : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePrimalWorldSettings.AddActorToUnstasisSet(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=77]]
+    // endereco: casamento de bytes com a build de referencia
     void AddActorToUnstasisSet(void* a0) const
     {
         NativeCall<void, void*>(this, "ABasePrimalWorldSettings.AddActorToUnstasisSet(AActor*)", a0);
@@ -68,7 +68,7 @@ struct ABasePrimalWorldSettings : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePrimalWorldSettings.GetActorListCount(EActorLists)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetActorListCount(int a0) const
     {
         return NativeCall<int, int>(this, "ABasePrimalWorldSettings.GetActorListCount(EActorLists)", a0);
@@ -76,7 +76,7 @@ struct ABasePrimalWorldSettings : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABasePrimalWorldSettings.GetActorWithTag(FName)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     AActor* GetActorWithTag(unsigned long long a0) const
     {
         return NativeCall<AActor*, unsigned long long>(this, "ABasePrimalWorldSettings.GetActorWithTag(FName)", a0);
@@ -131,14 +131,14 @@ struct ABasePrimalWorldSettings : public AInfo
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableSplitscreen` +486, medido na build 25090264
+    //  ancorado em `bDisableSplitscreen` +486, medido na build 25535041
     //  (offset absoluto medido: 0x6C8; confianca baixa)
     void*& AtomicActorUnstasisListCountField() const
     { return BrzCampoAncorado<void*>(this, "bDisableSplitscreen", 486); }
     float& BaseNetStasisDistanceField() const
     { return *GetNativePointerField<float*>(this, "ABasePrimalWorldSettings.BaseNetStasisDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableSplitscreen` +510, medido na build 25090264
+    //  ancorado em `bDisableSplitscreen` +510, medido na build 25535041
     //  (offset absoluto medido: 0x6E0; confianca baixa)
     void*& CurrentUnStasisedIndexField() const
     { return BrzCampoAncorado<void*>(this, "bDisableSplitscreen", 510); }
@@ -155,12 +155,12 @@ struct ABasePrimalWorldSettings : public AInfo
     BrzCampoPonteiro PlatformGrassQualitiesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.PlatformGrassQualities")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BaseNetStasisDistance` +4, medido na build 25090264
+    //  ancorado em `BaseNetStasisDistance` +4, medido na build 25535041
     //  (offset absoluto medido: 0x6E8; confianca alta)
     void*& PlayerCharacterUnstasisViewpointTimestampsField() const
     { return BrzCampoAncorado<void*>(this, "BaseNetStasisDistance", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableSplitscreen` +494, medido na build 25090264
+    //  ancorado em `bDisableSplitscreen` +494, medido na build 25535041
     //  (offset absoluto medido: 0x6D0; confianca baixa)
     TArray<TWeakObjectPtr<void>>& QuickTickUnstasisListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "bDisableSplitscreen", 494); }
@@ -168,6 +168,14 @@ struct ABasePrimalWorldSettings : public AInfo
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.StructureIDMap")); }
     TArray<void*>& TreeStumpCreationTimesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "ABasePrimalWorldSettings.TreeStumpCreationTimes"); }
+    BrzCampoPonteiro bDisableSplitscreenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.bDisableSplitscreen")); }
+    BrzCampoPonteiro bForceRouteBeginPlayOnLoadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.bForceRouteBeginPlayOnLoad")); }
+    BrzCampoPonteiro bSeamlessTravelWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.bSeamlessTravelWorld")); }
+    BrzCampoPonteiro bSkipRuntimeCellsTransformerStackInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.bSkipRuntimeCellsTransformerStackInPIE")); }
     BitFieldValue<bool, unsigned __int32> bDisableSplitscreen()
     { return { (void*)this, "bDisableSplitscreen" }; }
     BitFieldValue<bool, unsigned __int32> bForceRouteBeginPlayOnLoad()

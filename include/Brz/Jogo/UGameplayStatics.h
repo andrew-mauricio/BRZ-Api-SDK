@@ -96,7 +96,7 @@ struct UGameplayStatics
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UGameplayStatics.ApplyRadialDamageWithFalloff_V2(UObject*,float,float,UE::Math::TVector<double>&
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     static bool ApplyRadialDamageWithFalloff_V2(void* a0, float a1, float a2, void* a3, float a4, float a5, float a6, void* a7, void* a8, void* a9, void* a10, int a11, float a12, void* a13, int a14, bool a15)
     {
         return NativeCall<bool, void*, float, float, void*, float, float, float, void*, void*, void*, void*, int, float, void*, int, bool>(nullptr, "UGameplayStatics.ApplyRadialDamageWithFalloff_V2(UObject*,float,float,UE::Math::TVector<double>&,float,float,float,TSubclassOf<UDamageType>,TArray<AActor*,TSizedDefaultAllocator<32>>&,AActor*,AController*,ECollisionChannel,float,TArray<AActor*,TSizedDefaultAllocator<32>>*,int,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15);
@@ -292,7 +292,7 @@ struct UGameplayStatics
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UGameplayStatics.GetPlayerCharacter(UObject*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     static ACharacter* GetPlayerCharacter(void* a0, int a1)
     {
         return NativeCall<ACharacter*, void*, int>(nullptr, "UGameplayStatics.GetPlayerCharacter(UObject*,int)", a0, a1);
@@ -588,7 +588,7 @@ struct UGameplayStatics
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UGameplayStatics.StaticRegisterNativesUGameplayStatics()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesUGameplayStatics()
     {
         NativeCall<void>(nullptr, "UGameplayStatics.StaticRegisterNativesUGameplayStatics()");
@@ -622,12 +622,16 @@ struct UGameplayStatics
     { return *GetNativePointerField<TArray<AActor*>*>(this, "UGameplayStatics.ActorsToIgnore"); }
     float& CollisionRadiusField() const
     { return *GetNativePointerField<float*>(this, "UGameplayStatics.CollisionRadius"); }
-    BitFieldValue<bool, unsigned __int32> End()
-    { return { (void*)this, "End" }; }
+    BrzCampoPonteiro EndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayStatics.End")); }
     float& OverrideGravityZField() const
     { return *GetNativePointerField<float*>(this, "UGameplayStatics.OverrideGravityZ"); }
-    BitFieldValue<bool, unsigned __int32> Start()
-    { return { (void*)this, "Start" }; }
+    BrzCampoPonteiro ResponseParamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayStatics.ResponseParam")); }
+    BrzCampoPonteiro StartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayStatics.Start")); }
+    float& TossSpeedField() const
+    { return *GetNativePointerField<float*>(this, "UGameplayStatics.TossSpeed"); }
     int& TraceOptionField() const
     { return *GetNativePointerField<int*>(this, "UGameplayStatics.TraceOption"); }
     BrzCampoPonteiro WorldContextObjectField() const

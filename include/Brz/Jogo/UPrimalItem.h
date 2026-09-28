@@ -48,7 +48,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.AddAttachments(AActor*,bool,USkeletalMeshComponent*,bool,bool,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [chamadores=10+grafo=249/249]]
+    // endereco: casamento de bytes com a build de referencia
     void AddAttachments(void* a0, bool a1, void* a2, bool a3, bool a4, bool a5) const
     {
         NativeCall<void, void*, bool, void*, bool, bool, bool>(this, "UPrimalItem.AddAttachments(AActor*,bool,USkeletalMeshComponent*,bool,bool,bool)", a0, a1, a2, a3, a4, a5);
@@ -128,7 +128,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.AllowInventoryItem(UPrimalInventoryComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowInventoryItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalItem.AllowInventoryItem(UPrimalInventoryComponent*)", a0);
@@ -184,7 +184,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.ApplyColorsFromStructure(APrimalStructure*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=154]]
+    // endereco: casamento de bytes com a build de referencia
     void ApplyColorsFromStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.ApplyColorsFromStructure(APrimalStructure*)", a0);
@@ -232,7 +232,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.BPBreakItemID(FItemNetID,int&,int&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPBreakItemID(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, void*, void*>(this, "UPrimalItem.BPBreakItemID(FItemNetID,int&,int&)", a0, a1, a2);
@@ -240,7 +240,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BPCanAddToInventory(UPrimalInventoryComponent*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=2]]
     bool BPCanAddToInventory(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalItem.BPCanAddToInventory(UPrimalInventoryComponent*)", a0);
@@ -340,7 +340,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetCropTendingWindowBeforeLosingEffectiveness()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=3]]
     float BPGetCropTendingWindowBeforeLosingEffectiveness() const
     {
         return NativeCall<float>(this, "UPrimalItem.BPGetCropTendingWindowBeforeLosingEffectiveness()");
@@ -356,7 +356,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BPGetCustomDurabilityText()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPGetCustomDurabilityText(void* retorno) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.BPGetCustomDurabilityText()", retorno);
@@ -380,7 +380,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BPGetCustomInventoryWidgetText()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPGetCustomInventoryWidgetText(void* retorno) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.BPGetCustomInventoryWidgetText()", retorno);
@@ -416,7 +416,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetItemDurabilityPercentage()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=2]]
     float BPGetItemDurabilityPercentage() const
     {
         return NativeCall<float>(this, "UPrimalItem.BPGetItemDurabilityPercentage()");
@@ -424,7 +424,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.BPGetItemID(int&,int&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPGetItemID(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalItem.BPGetItemID(int&,int&)", a0, a1);
@@ -460,7 +460,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetItemStatModifier(int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float BPGetItemStatModifier(int a0, int a1) const
     {
         return NativeCall<float, int, int>(this, "UPrimalItem.BPGetItemStatModifier(int,int)", a0, a1);
@@ -496,7 +496,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetNumberOfDefaultSaddleStructures()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=7]]
+    // endereco: casamento de bytes com a build de referencia
     int BPGetNumberOfDefaultSaddleStructures() const
     {
         return NativeCall<int>(this, "UPrimalItem.BPGetNumberOfDefaultSaddleStructures()");
@@ -504,7 +504,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetSaddleWeightMultiplier()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     float BPGetSaddleWeightMultiplier() const
     {
         return NativeCall<float>(this, "UPrimalItem.BPGetSaddleWeightMultiplier()");
@@ -544,7 +544,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPItemBelowDurabilityThreshold()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPItemBelowDurabilityThreshold() const
     {
         NativeCall<void>(this, "UPrimalItem.BPItemBelowDurabilityThreshold()");
@@ -560,7 +560,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPMakeItemID(int,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPMakeItemID(int a0, int a1) const
     {
         return NativeCall<void*, int, int>(this, "UPrimalItem.BPMakeItemID(int,int)", a0, a1);
@@ -568,7 +568,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPMatchesItemID(int,int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPMatchesItemID(int a0, int a1) const
     {
         return NativeCall<bool, int, int>(this, "UPrimalItem.BPMatchesItemID(int,int)", a0, a1);
@@ -784,7 +784,7 @@ struct UPrimalItem : public UObject
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   UPrimalItem.BPPostInitializeItem(UWorld*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPPostInitializeItem(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.BPPostInitializeItem(UWorld*)", a0);
@@ -792,7 +792,7 @@ struct UPrimalItem : public UObject
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   UPrimalItem.BPPreInitializeItem(UWorld*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPPreInitializeItem(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.BPPreInitializeItem(UWorld*)", a0);
@@ -808,7 +808,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPPreventEquip(UPrimalInventoryComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventEquip(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalItem.BPPreventEquip(UPrimalInventoryComponent*)", a0);
@@ -816,7 +816,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPPreventUseOntoItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventUseOntoItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalItem.BPPreventUseOntoItem(UPrimalItem*)", a0);
@@ -852,7 +852,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPServerVerifyStructurePlacementData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPServerVerifyStructurePlacementData() const
     {
         NativeCall<void>(this, "UPrimalItem.BPServerVerifyStructurePlacementData()");
@@ -884,7 +884,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPShouldForceAllowSaddleBasing()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool BPShouldForceAllowSaddleBasing() const
     {
         return NativeCall<bool>(this, "UPrimalItem.BPShouldForceAllowSaddleBasing()");
@@ -912,7 +912,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BPTributeItemDownloaded(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPTributeItemDownloaded(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.BPTributeItemDownloaded(UObject*)", a0);
@@ -928,10 +928,11 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BeginDestroy()
+    // classe: a funcao mora em UObject, e UPrimalItem herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void BeginDestroy() const
     {
-        NativeCall<void>(this, "UPrimalItem.BeginDestroy()");
+        NativeCall<void>(this, "UObject.BeginDestroy()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -960,7 +961,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BlueprintUnequipped()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BlueprintUnequipped() const
     {
         NativeCall<void>(this, "UPrimalItem.BlueprintUnequipped()");
@@ -984,7 +985,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.CanBeDyed()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanBeDyed() const
     {
         return NativeCall<void*>(this, "UPrimalItem.CanBeDyed()");
@@ -1048,7 +1049,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.CanPlayerCheatSpawn(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanPlayerCheatSpawn(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalItem.CanPlayerCheatSpawn(APlayerController*)", a0);
@@ -1056,7 +1057,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.CanRemoveWeaponAccessory()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanRemoveWeaponAccessory() const
     {
         return NativeCall<bool>(this, "UPrimalItem.CanRemoveWeaponAccessory()");
@@ -1064,7 +1065,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.CanRepair(bool,bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanRepair(bool a0, bool a1, bool a2) const
     {
         return NativeCall<bool, bool, bool, bool>(this, "UPrimalItem.CanRepair(bool,bool,bool)", a0, a1, a2);
@@ -1112,7 +1113,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.CanTendCrop(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanTendCrop(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalItem.CanTendCrop(APlayerController*)", a0);
@@ -1200,7 +1201,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.ClearItemIcon()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClearItemIcon() const
     {
         return NativeCall<void*>(this, "UPrimalItem.ClearItemIcon()");
@@ -1280,7 +1281,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.DoesItemUseColorRegion(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool DoesItemUseColorRegion(int a0) const
     {
         return NativeCall<bool, int>(this, "UPrimalItem.DoesItemUseColorRegion(int)", a0);
@@ -1288,7 +1289,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.DoesItemUseMultiSellOrder()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool DoesItemUseMultiSellOrder() const
     {
         return NativeCall<bool>(this, "UPrimalItem.DoesItemUseMultiSellOrder()");
@@ -1360,7 +1361,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetActualEquipmentType(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned char GetActualEquipmentType(bool a0) const
     {
         return NativeCall<unsigned char, bool>(this, "UPrimalItem.GetActualEquipmentType(bool)", a0);
@@ -1384,7 +1385,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.GetAssociatedDinoID(int&,int&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAssociatedDinoID(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalItem.GetAssociatedDinoID(int&,int&)", a0, a1);
@@ -1400,7 +1401,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetAttachedComponentsNum()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetAttachedComponentsNum() const
     {
         return NativeCall<int>(this, "UPrimalItem.GetAttachedComponentsNum()");
@@ -1448,7 +1449,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.GetCombinedItemID()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCombinedItemID() const
     {
         return NativeCall<void*>(this, "UPrimalItem.GetCombinedItemID()");
@@ -1512,7 +1513,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetCraftingResourceRequirement(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetCraftingResourceRequirement(int a0) const
     {
         return NativeCall<int, int>(this, "UPrimalItem.GetCraftingResourceRequirement(int)", a0);
@@ -1596,7 +1597,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetEntryIcon(UObject*,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UTexture2D* GetEntryIcon(void* a0, bool a1) const
     {
         return NativeCall<UTexture2D*, void*, bool>(this, "UPrimalItem.GetEntryIcon(UObject*,bool)", a0, a1);
@@ -1676,7 +1677,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetInventoryIconDisplayTextSize()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     float GetInventoryIconDisplayTextSize() const
     {
         return NativeCall<float>(this, "UPrimalItem.GetInventoryIconDisplayTextSize()");
@@ -1684,7 +1685,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetInventoryIconDisplayText_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetInventoryIconDisplayText_Implementation(void* retorno) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.GetInventoryIconDisplayText_Implementation()", retorno);
@@ -1692,7 +1693,7 @@ struct UPrimalItem : public UObject
 
     // dump_sobre_sdk_287a0
     //   UPrimalItem.GetItemAttachmentInfos(AActor*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void GetItemAttachmentInfos(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "UPrimalItem.GetItemAttachmentInfos(AActor*,bool)", a0, a1);
@@ -1708,7 +1709,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetItemColorID(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetItemColorID(int a0) const
     {
         return NativeCall<int, int>(this, "UPrimalItem.GetItemColorID(int)", a0);
@@ -1772,7 +1773,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetItemQualityColor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetItemQualityColor(void* retorno) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.GetItemQualityColor()", retorno);
@@ -1788,7 +1789,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetItemStatInfo(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetItemStatInfo(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalItem.GetItemStatInfo(int)", a0);
@@ -1796,7 +1797,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetItemStatModifier(EPrimalItemStat::Type)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetItemStatModifier(int a0) const
     {
         return NativeCall<float, int>(this, "UPrimalItem.GetItemStatModifier(EPrimalItemStat::Type)", a0);
@@ -1804,7 +1805,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.GetItemStatModifierForTemplateItem(EPrimalItemStat::Type)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetItemStatModifierForTemplateItem(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalItem.GetItemStatModifierForTemplateItem(EPrimalItemStat::Type)", a0);
@@ -1812,7 +1813,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetItemStatString(EPrimalItemStat::Type)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetItemStatString(void* retorno, int a0) const
     {
         NativeCall<void, void*, int>(this, "UPrimalItem.GetItemStatString(EPrimalItemStat::Type)", retorno, a0);
@@ -1820,7 +1821,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetItemStatValues(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetItemStatValues(int a0) const
     {
         return NativeCall<int, int>(this, "UPrimalItem.GetItemStatValues(int)", a0);
@@ -1844,7 +1845,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetItemTrait(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetItemTrait(unsigned long long a0) const
     {
         return NativeCall<UObject*, unsigned long long>(this, "UPrimalItem.GetItemTrait(FName)", a0);
@@ -1860,7 +1861,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.GetItemTypeColor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetItemTypeColor() const
     {
         return NativeCall<void*>(this, "UPrimalItem.GetItemTypeColor()");
@@ -1868,7 +1869,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.GetItemTypeIcon()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetItemTypeIcon() const
     {
         return NativeCall<void*>(this, "UPrimalItem.GetItemTypeIcon()");
@@ -1884,7 +1885,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetItemWeight(bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetItemWeight(bool a0, bool a1) const
     {
         return NativeCall<float, bool, bool>(this, "UPrimalItem.GetItemWeight(bool,bool)", a0, a1);
@@ -1920,7 +1921,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetMaxDurability()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMaxDurability() const
     {
         return NativeCall<float>(this, "UPrimalItem.GetMaxDurability()");
@@ -2064,7 +2065,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetRepairingRequirements(UPrimalInventoryComponent*,bool,float,APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRepairingRequirements(void* a0, bool a1, float a2, void* a3) const
     {
         return NativeCall<void*, void*, bool, float, void*>(this, "UPrimalItem.GetRepairingRequirements(UPrimalInventoryComponent*,bool,float,APlayerController*)", a0, a1, a2, a3);
@@ -2080,7 +2081,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetRequiresBobsTallTalesORTOFToCraft()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=112+chamadores=2]]
     bool GetRequiresBobsTallTalesORTOFToCraft() const
     {
         return NativeCall<bool>(this, "UPrimalItem.GetRequiresBobsTallTalesORTOFToCraft()");
@@ -2112,7 +2113,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetSortedRepairingRequirements(bool,UPrimalInventoryComponent*,bool,float,APlayerCon
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSortedRepairingRequirements(bool a0, void* a1, bool a2, float a3, void* a4) const
     {
         return NativeCall<void*, bool, void*, bool, float, void*>(this, "UPrimalItem.GetSortedRepairingRequirements(bool,UPrimalInventoryComponent*,bool,float,APlayerController*)", a0, a1, a2, a3, a4);
@@ -2152,7 +2153,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetUnderwearOverrideTag()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=145+chamadores=2]]
     unsigned long long GetUnderwearOverrideTag() const
     {
         return NativeCall<unsigned long long>(this, "UPrimalItem.GetUnderwearOverrideTag()");
@@ -2160,7 +2161,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetUnreplicatedEggData(FUnreplicatedEggData&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1740+bytes40+grafo=6/6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1740+bytes40+chamadores=2+grafo=3/3]]
     void GetUnreplicatedEggData(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.GetUnreplicatedEggData(FUnreplicatedEggData&)", a0);
@@ -2176,7 +2177,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetWeaponAmmoOverrideItemCDO()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetWeaponAmmoOverrideItemCDO() const
     {
         return NativeCall<UObject*>(this, "UPrimalItem.GetWeaponAmmoOverrideItemCDO()");
@@ -2184,7 +2185,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetWeaponClipAmmo()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetWeaponClipAmmo() const
     {
         return NativeCall<int>(this, "UPrimalItem.GetWeaponClipAmmo()");
@@ -2240,7 +2241,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.HasCharacterSkinApplied()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasCharacterSkinApplied() const
     {
         return NativeCall<bool>(this, "UPrimalItem.HasCharacterSkinApplied()");
@@ -2248,7 +2249,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.HasCustomItemData(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasCustomItemData(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "UPrimalItem.HasCustomItemData(FName)", a0);
@@ -2280,7 +2281,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.InitItemIcon()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InitItemIcon() const
     {
         return NativeCall<void*>(this, "UPrimalItem.InitItemIcon()");
@@ -2328,7 +2329,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.IsAutoUnlocked()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro IsAutoUnlocked() const
     {
         return NativeCall<void*>(this, "UPrimalItem.IsAutoUnlocked()");
@@ -2336,7 +2337,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.IsBlueprintDeprecated(UWorld*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsBlueprintDeprecated(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalItem.IsBlueprintDeprecated(UWorld*)", a0);
@@ -2372,7 +2373,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.IsDeprecated(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsDeprecated(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalItem.IsDeprecated(UWorld*)", a0);
@@ -2380,7 +2381,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.IsDyed()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsDyed() const
     {
         return NativeCall<bool>(this, "UPrimalItem.IsDyed()");
@@ -2436,7 +2437,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.IsPreventUploadIncludingLiveTuning()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsPreventUploadIncludingLiveTuning() const
     {
         return NativeCall<void*>(this, "UPrimalItem.IsPreventUploadIncludingLiveTuning()");
@@ -2460,7 +2461,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.IsUnlockedCosmetic()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=188+chamadores=18]]
     BrzPonteiro IsUnlockedCosmetic() const
     {
         return NativeCall<void*>(this, "UPrimalItem.IsUnlockedCosmetic()");
@@ -2556,7 +2557,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.OnItemTraitEffectActivated(FName,float,FBPNetExecParams&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnItemTraitEffectActivated(unsigned long long a0, float a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, float, void*>(this, "UPrimalItem.OnItemTraitEffectActivated(FName,float,FBPNetExecParams&)", a0, a1, a2);
@@ -2580,7 +2581,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.OnVersionChange(bool&,UWorld*,AShooterGameMode*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnVersionChange(void* a0, void* a1, void* a2, int a3) const
     {
         NativeCall<void, void*, void*, void*, int>(this, "UPrimalItem.OnVersionChange(bool&,UWorld*,AShooterGameMode*,int)", a0, a1, a2, a3);
@@ -2652,10 +2653,11 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // classe: a funcao mora em UObject, e UPrimalItem herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro PostInitProperties() const
     {
-        return NativeCall<void*>(this, "UPrimalItem.PostInitProperties()");
+        return NativeCall<void*>(this, "UObject.PostInitProperties()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -2704,7 +2706,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.RemoveAttachments(AActor*,bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveAttachments(void* a0, bool a1, bool a2) const
     {
         NativeCall<void, void*, bool, bool>(this, "UPrimalItem.RemoveAttachments(AActor*,bool,bool)", a0, a1, a2);
@@ -2728,7 +2730,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.RemoveFromSlot(bool,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemoveFromSlot(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "UPrimalItem.RemoveFromSlot(bool,bool)", a0, a1);
@@ -2820,7 +2822,7 @@ struct UPrimalItem : public UObject
 
     // jogo_confirmou_dump
     //   UPrimalItem.ServerRemoveItemSkin()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemoveItemSkin() const
     {
         NativeCall<void>(this, "UPrimalItem.ServerRemoveItemSkin()");
@@ -2828,7 +2830,7 @@ struct UPrimalItem : public UObject
 
     // jogo_confirmou_dump
     //   UPrimalItem.ServerRemoveItemSkinOnly()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=1379+grafo=19/19]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemoveItemSkinOnly() const
     {
         NativeCall<void>(this, "UPrimalItem.ServerRemoveItemSkinOnly()");
@@ -2860,7 +2862,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.ServerUpdatedWeaponClipAmmo()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerUpdatedWeaponClipAmmo() const
     {
         NativeCall<void>(this, "UPrimalItem.ServerUpdatedWeaponClipAmmo()");
@@ -2900,7 +2902,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.SetCustomColorParams(UPrimalItem*,UMaterialInstanceDynamic*,FLinearColor&,int)
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetCustomColorParams(void* a0, void* a1, void* a2, int a3) const
     {
         return NativeCall<void*, void*, void*, void*, int>(this, "UPrimalItem.SetCustomColorParams(UPrimalItem*,UMaterialInstanceDynamic*,FLinearColor&,int)", a0, a1, a2, a3);
@@ -2908,7 +2910,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.SetCustomItemData(FCustomItemData&)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=17/17]]
+    // endereco: casamento de bytes com a build de referencia
     void SetCustomItemData(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.SetCustomItemData(FCustomItemData&)", a0);
@@ -2916,7 +2918,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.SetEngramBlueprint()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetEngramBlueprint() const
     {
         NativeCall<void>(this, "UPrimalItem.SetEngramBlueprint()");
@@ -2940,7 +2942,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.SetItemStatInfo(int,FItemStatInfo&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetItemStatInfo(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalItem.SetItemStatInfo(int,FItemStatInfo&)", a0, a1);
@@ -2948,7 +2950,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.SetItemStatValues(int,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetItemStatValues(int a0, int a1) const
     {
         NativeCall<void, int, int>(this, "UPrimalItem.SetItemStatValues(int,int)", a0, a1);
@@ -3036,7 +3038,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.SlottedTick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=54]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SlottedTick(float a0) const
     {
         NativeCall<void, float>(this, "UPrimalItem.SlottedTick(float)", a0);
@@ -3160,7 +3162,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.UseItemOntoItem(UPrimalItem*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=10/10]]
+    // endereco: casamento de bytes com a build de referencia
     bool UseItemOntoItem(void* a0, int a1) const
     {
         return NativeCall<bool, void*, int>(this, "UPrimalItem.UseItemOntoItem(UPrimalItem*,int)", a0, a1);
@@ -3176,7 +3178,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.UsesDurability()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool UsesDurability() const
     {
         return NativeCall<bool>(this, "UPrimalItem.UsesDurability()");
@@ -3192,7 +3194,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.WantsToOverrideGender_Implementation(bool&,bool&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro WantsToOverrideGender_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalItem.WantsToOverrideGender_Implementation(bool&,bool&)", a0, a1);
@@ -3204,6 +3206,14 @@ struct UPrimalItem : public UObject
     bool WantsToUseCustomCosmeticEmote(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "UPrimalItem.WantsToUseCustomCosmeticEmote(FName)", a0);
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   UPrimalItem.`vcall'{976,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__976__flat__() const
+    {
+        return NativeCall<void*>(this, "UPrimalItem.`vcall'{976,{flat}}()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -3233,6 +3243,10 @@ struct UPrimalItem : public UObject
     { return *GetNativePointerField<float*>(this, "UPrimalItem.AddDinoTargetingRange"); }
     TArray<void*>& AllowClassesToBeUsedAsParentSkinField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.AllowClassesToBeUsedAsParentSkin"); }
+    BrzCampoPonteiro AllowToggleDisableCharacterCustomizationProportionsForSkin_BoneModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.AllowToggleDisableCharacterCustomizationProportionsForSkin_BoneModifiers")); }
+    BrzCampoPonteiro AllowToggleDisableCharacterCustomizationProportionsForSkin_MaterialParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.AllowToggleDisableCharacterCustomizationProportionsForSkin_MaterialParameters")); }
     UTexture2D*& AlternateItemIconBelowDurabilityField() const
     { return *GetNativePointerField<UTexture2D**>(this, "UPrimalItem.AlternateItemIconBelowDurability"); }
     BrzCampoPonteiro AlternateItemIconBelowDurabilityJITField() const
@@ -3286,14 +3300,14 @@ struct UPrimalItem : public UObject
     TArray<void*>& CachedStructuresToBuildField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.CachedStructuresToBuild"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSpoilingTime` +8, medido na build 25090264
+    //  ancorado em `LastSpoilingTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x9A0; confianca alta)
     double& ClusterSpoilingTimeUTCField() const
     { return BrzCampoAncorado<double>(this, "LastSpoilingTime", 8); }
     BrzCampoPonteiro CostumeDinoSaddleOverrideMeshMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.CostumeDinoSaddleOverrideMeshMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyItemTraits` +16, medido na build 25090264
+    //  ancorado em `MyItemTraits` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3E0; confianca alta)
     void*& CostumeDinoSaddleOverrideRefsField() const
     { return BrzCampoAncorado<void*>(this, "MyItemTraits", 16); }
@@ -3310,7 +3324,7 @@ struct UPrimalItem : public UObject
     TArray<void*>& CraftingRequiresInventoryComponentField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.CraftingRequiresInventoryComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WheelItemsAmmo` +16, medido na build 25090264
+    //  ancorado em `WheelItemsAmmo` +16, medido na build 25535041
     //  (offset absoluto medido: 0x330; confianca alta)
     TArray<void*>& CraftingResourceRequirementsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "WheelItemsAmmo", 16); }
@@ -3373,7 +3387,7 @@ struct UPrimalItem : public UObject
     FString& DurabilityStringShortField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalItem.DurabilityStringShort"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActorClassAttachmentInfos` +24, medido na build 25090264
+    //  ancorado em `ActorClassAttachmentInfos` +24, medido na build 25535041
     //  (offset absoluto medido: 0x240; confianca alta)
     TArray<void*>& DynamicItemAttachmentInfosField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "ActorClassAttachmentInfos", 24); }
@@ -3412,7 +3426,7 @@ struct UPrimalItem : public UObject
     float& EggTamedIneffectivenessModifierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalItem.EggTamedIneffectivenessModifier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticAuthVars` +88, medido na build 25090264
+    //  ancorado em `CustomCosmeticAuthVars` +88, medido na build 25535041
     //  (offset absoluto medido: 0x798; confianca media)
     void*& EquipAnimationTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticAuthVars", 88); }
@@ -3429,29 +3443,29 @@ struct UPrimalItem : public UObject
     float& ExtraEggLoseDurabilityPerSecondMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalItem.ExtraEggLoseDurabilityPerSecondMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +32, medido na build 25090264
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +32, medido na build 25535041
     //  (offset absoluto medido: 0x8D8; confianca alta)
     UTexture2D*& FPVHandsMeshTextureMaskField() const
     { return BrzCampoAncorado<UTexture2D*>(this, "BlueprintBackgroundOverrideTexture", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +20, medido na build 25090264
+    //  ancorado em `StructureToBuildIndex` +20, medido na build 25535041
     //  (offset absoluto medido: 0xA74; confianca alta)
     int& FPVHandsMeshTextureMaskMaterialIndexField() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +24, medido na build 25090264
+    //  ancorado em `StructureToBuildIndex` +24, medido na build 25535041
     //  (offset absoluto medido: 0xA78; confianca alta)
     int& FPVHandsMeshTextureMaskMaterialIndex2Field() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CrafterTribeName` +32, medido na build 25090264
+    //  ancorado em `CrafterTribeName` +32, medido na build 25535041
     //  (offset absoluto medido: 0x620; confianca alta)
     FName& FPVHandsMeshTextureMaskParamNameField() const
     { return BrzCampoAncorado<FName>(this, "CrafterTribeName", 32); }
     UMaterialInstanceDynamic*& HUDIconMaterialField() const
     { return *GetNativePointerField<UMaterialInstanceDynamic**>(this, "UPrimalItem.HUDIconMaterial"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActorClassAttachmentInfos` +16, medido na build 25090264
+    //  ancorado em `ActorClassAttachmentInfos` +16, medido na build 25535041
     //  (offset absoluto medido: 0x238; confianca alta)
     void*& ItemAttachmentInfosField() const
     { return BrzCampoAncorado<void*>(this, "ActorClassAttachmentInfos", 16); }
@@ -3512,19 +3526,19 @@ struct UPrimalItem : public UObject
     double& LastAutoDurabilityDecreaseTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalItem.LastAutoDurabilityDecreaseTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CropMaxFruits` +4, medido na build 25090264
+    //  ancorado em `CropMaxFruits` +4, medido na build 25535041
     //  (offset absoluto medido: 0xA88; confianca alta)
     int& LastCalculatedTotalAmmoInvUpdatedFrameField() const
     { return BrzCampoAncorado<int>(this, "CropMaxFruits", 4); }
     double& LastEquippedReduceDurabilityTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalItem.LastEquippedReduceDurabilityTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastEquippedReduceDurabilityTime` +8, medido na build 25090264
+    //  ancorado em `LastEquippedReduceDurabilityTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x9B0; confianca alta)
     double& LastItemAdditionTimeField() const
     { return BrzCampoAncorado<double>(this, "LastEquippedReduceDurabilityTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastUseTime` +8, medido na build 25090264
+    //  ancorado em `LastUseTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x988; confianca alta)
     double& LastLocalUseTimeField() const
     { return BrzCampoAncorado<double>(this, "LastUseTime", 8); }
@@ -3581,22 +3595,22 @@ struct UPrimalItem : public UObject
     TArray<void*>& OnlyUsableOnSpecificClassesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.OnlyUsableOnSpecificClasses"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +24, medido na build 25090264
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +24, medido na build 25535041
     //  (offset absoluto medido: 0x8D0; confianca alta)
     void*& OriginalGenderPlayerMeshNoItemDefaultTextureMaskField() const
     { return BrzCampoAncorado<void*>(this, "BlueprintBackgroundOverrideTexture", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +16, medido na build 25090264
+    //  ancorado em `StructureToBuildIndex` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA70; confianca alta)
     void*& OriginalGenderPlayerMeshTextureMaskMaterialIndexAltField() const
     { return BrzCampoAncorado<void*>(this, "StructureToBuildIndex", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +12, medido na build 25090264
+    //  ancorado em `StructureToBuildIndex` +12, medido na build 25535041
     //  (offset absoluto medido: 0xA6C; confianca alta)
     void*& OriginalGenderPlayerMeshTextureMaskMaterialIndexNewField() const
     { return BrzCampoAncorado<void*>(this, "StructureToBuildIndex", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CrafterTribeName` +24, medido na build 25090264
+    //  ancorado em `CrafterTribeName` +24, medido na build 25535041
     //  (offset absoluto medido: 0x618; confianca alta)
     void*& OriginalGenderPlayerMeshTextureMaskParamNameField() const
     { return BrzCampoAncorado<void*>(this, "CrafterTribeName", 24); }
@@ -3615,27 +3629,27 @@ struct UPrimalItem : public UObject
     BrzCampoPonteiro PendingSkinRefundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.PendingSkinRefund")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +16, medido na build 25090264
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +16, medido na build 25535041
     //  (offset absoluto medido: 0x8C8; confianca alta)
     UTexture2D*& PlayerMeshNoItemDefaultTextureMaskField() const
     { return BrzCampoAncorado<UTexture2D*>(this, "BlueprintBackgroundOverrideTexture", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +8, medido na build 25090264
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +8, medido na build 25535041
     //  (offset absoluto medido: 0x8C0; confianca alta)
     UTexture2D*& PlayerMeshTextureMaskField() const
     { return BrzCampoAncorado<UTexture2D*>(this, "BlueprintBackgroundOverrideTexture", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +8, medido na build 25090264
+    //  ancorado em `StructureToBuildIndex` +8, medido na build 25535041
     //  (offset absoluto medido: 0xA68; confianca alta)
     int& PlayerMeshTextureMaskMaterialIndexAltField() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +4, medido na build 25090264
+    //  ancorado em `StructureToBuildIndex` +4, medido na build 25535041
     //  (offset absoluto medido: 0xA64; confianca alta)
     int& PlayerMeshTextureMaskMaterialIndexNewField() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CrafterTribeName` +16, medido na build 25090264
+    //  ancorado em `CrafterTribeName` +16, medido na build 25535041
     //  (offset absoluto medido: 0x610; confianca alta)
     FName& PlayerMeshTextureMaskParamNameField() const
     { return BrzCampoAncorado<FName>(this, "CrafterTribeName", 16); }
@@ -3676,7 +3690,7 @@ struct UPrimalItem : public UObject
     int& TempSlotIndexField() const
     { return *GetNativePointerField<int*>(this, "UPrimalItem.TempSlotIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastEquippedReduceDurabilityTime` +16, medido na build 25090264
+    //  ancorado em `LastEquippedReduceDurabilityTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x9B8; confianca alta)
     double& UploadEarliestValidTimeField() const
     { return BrzCampoAncorado<double>(this, "LastEquippedReduceDurabilityTime", 16); }
@@ -3685,7 +3699,7 @@ struct UPrimalItem : public UObject
     TArray<void*>& UseRequiresOwnerActorClassesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.UseRequiresOwnerActorClasses"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +40, medido na build 25090264
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +40, medido na build 25535041
     //  (offset absoluto medido: 0x8E0; confianca media)
     UPrimalItem*& WeaponAmmoOverrideItemCDOField() const
     { return BrzCampoAncorado<UPrimalItem*>(this, "BlueprintBackgroundOverrideTexture", 40); }
@@ -3696,7 +3710,7 @@ struct UPrimalItem : public UObject
     BrzCampoPonteiro WeaponTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.WeaponTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CropMaxFruits` +8, medido na build 25090264
+    //  ancorado em `CropMaxFruits` +8, medido na build 25535041
     //  (offset absoluto medido: 0xA8C; confianca alta)
     int& WeaponTotalAmmoField() const
     { return BrzCampoAncorado<int>(this, "CropMaxFruits", 8); }
@@ -3704,10 +3718,508 @@ struct UPrimalItem : public UObject
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.WheelItemsAmmo"); }
     BrzCampoPonteiro WidgetCustomBrokenOverlayStyleBrushField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.WidgetCustomBrokenOverlayStyleBrush")); }
+    BrzCampoPonteiro bAllowCraftingWithStarterAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowCraftingWithStarterAmmo")); }
+    BrzCampoPonteiro bAllowCustomColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowCustomColors")); }
+    BrzCampoPonteiro bAllowDefaultCharacterAttachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowDefaultCharacterAttachment")); }
+    BrzCampoPonteiro bAllowEquppingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowEquppingItem")); }
+    BrzCampoPonteiro bAllowInvalidItemVersionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowInvalidItemVersion")); }
+    BrzCampoPonteiro bAllowInventoryItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowInventoryItem")); }
+    BrzCampoPonteiro bAllowOverrideItemAutoDecreaseDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowOverrideItemAutoDecreaseDurability")); }
+    BrzCampoPonteiro bAllowRemoteUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowRemoteUseInInventory")); }
+    BrzCampoPonteiro bAllowRemovalFromInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowRemovalFromInventory")); }
+    BrzCampoPonteiro bAllowRemoveFromSteamInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowRemoveFromSteamInventory")); }
+    BrzCampoPonteiro bAllowRepairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowRepair")); }
+    BrzCampoPonteiro bAllowUseIgnoreMovementModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowUseIgnoreMovementMode")); }
+    BrzCampoPonteiro bAllowUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowUseInInventory")); }
+    BrzCampoPonteiro bAllowUseWhileRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowUseWhileRiding")); }
+    BrzCampoPonteiro bAllowWakingTameZeroAffinityEffectivenessMultiField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAllowWakingTameZeroAffinityEffectivenessMulti")); }
+    BrzCampoPonteiro bAlwaysLearnedEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAlwaysLearnedEngram")); }
+    BrzCampoPonteiro bAlwaysTriggerTributeDownloadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAlwaysTriggerTributeDownloaded")); }
+    BrzCampoPonteiro bAppendPrimaryColorToNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAppendPrimaryColorToName")); }
+    BrzCampoPonteiro bAutoCraftBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAutoCraftBlueprint")); }
+    BrzCampoPonteiro bAutoDecreaseDurabilityOverTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAutoDecreaseDurabilityOverTime")); }
+    BrzCampoPonteiro bAutoTameSpawnedActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bAutoTameSpawnedActor")); }
+    BrzCampoPonteiro bBPAllowRemoteAddToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bBPAllowRemoteAddToInventory")); }
+    BrzCampoPonteiro bBPAllowRemoteRemoveFromInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bBPAllowRemoteRemoveFromInventory")); }
+    BrzCampoPonteiro bBPCanUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bBPCanUse")); }
+    BrzCampoPonteiro bBPInventoryNotifyCraftingFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bBPInventoryNotifyCraftingFinished")); }
+    BrzCampoPonteiro bCanBeArkTributeItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCanBeArkTributeItem")); }
+    BrzCampoPonteiro bCanBeBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCanBeBlueprint")); }
+    BrzCampoPonteiro bCanBuildStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCanBuildStructures")); }
+    BrzCampoPonteiro bCanSlotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCanSlot")); }
+    BrzCampoPonteiro bCanUseSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCanUseSwimming")); }
+    BrzCampoPonteiro bCensoredItemSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCensoredItemSkin")); }
+    BrzCampoPonteiro bCheckBPAllowCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCheckBPAllowCrafting")); }
+    BrzCampoPonteiro bClearSkinOnInventoryRemovalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bClearSkinOnInventoryRemoval")); }
+    BrzCampoPonteiro bConfirmBeforeUsingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bConfirmBeforeUsing")); }
+    BrzCampoPonteiro bConsumeItemOnUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bConsumeItemOnUse")); }
+    BrzCampoPonteiro bCopyCustomDescriptionIntoSpoiledItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCopyCustomDescriptionIntoSpoiledItem")); }
+    BrzCampoPonteiro bCopyDurabilityIntoSpoiledItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCopyDurabilityIntoSpoiledItem")); }
+    BrzCampoPonteiro bCopyItemDurabilityFromCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCopyItemDurabilityFromCraftingResource")); }
+    BrzCampoPonteiro bCostumeHideSaddleMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCostumeHideSaddleMesh")); }
+    BrzCampoPonteiro bCraftDontActuallyGiveItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCraftDontActuallyGiveItem")); }
+    BrzCampoPonteiro bCraftedRequestCustomItemDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCraftedRequestCustomItemDescription")); }
+    BrzCampoPonteiro bCustomBrokenIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCustomBrokenIcon")); }
+    BrzCampoPonteiro bCustomBrokenOverlayIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bCustomBrokenOverlayIcon")); }
+    BrzCampoPonteiro bDeferWeaponBeginPlayToAssociatedItemSetTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDeferWeaponBeginPlayToAssociatedItemSetTime")); }
+    BrzCampoPonteiro bDeprecateBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDeprecateBlueprint")); }
+    BrzCampoPonteiro bDeprecateItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDeprecateItem")); }
+    BrzCampoPonteiro bDestroyBrokenItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDestroyBrokenItem")); }
+    BrzCampoPonteiro bDisableAutoDecreaseDurabilityOverTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDisableAutoDecreaseDurabilityOverTime")); }
+    BrzCampoPonteiro bDisableItemUITooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDisableItemUITooltip")); }
+    BrzCampoPonteiro bDivideTimeToCraftByGlobalCropGrowthSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDivideTimeToCraftByGlobalCropGrowthSpeed")); }
+    BrzCampoPonteiro bDoApplyOriginalColorsWhenUnskinnedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDoApplyOriginalColorsWhenUnskinned")); }
+    BrzCampoPonteiro bDontCountItemForUploadRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDontCountItemForUploadRestrictions")); }
+    BrzCampoPonteiro bDontRemoveOnEquipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDontRemoveOnEquip")); }
+    BrzCampoPonteiro bDontResetAttachmentIfNotUpdatingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDontResetAttachmentIfNotUpdatingItem")); }
+    BrzCampoPonteiro bDontScaleSnapshotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDontScaleSnapshot")); }
+    BrzCampoPonteiro bDontUseDurabilityDamageOverlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDontUseDurabilityDamageOverlay")); }
+    BrzCampoPonteiro bDragClearDyedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDragClearDyedItem")); }
+    BrzCampoPonteiro bDroppedItemAllowDinoPickupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDroppedItemAllowDinoPickup")); }
+    BrzCampoPonteiro bDurabilityRequirementIgnoredInWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bDurabilityRequirementIgnoredInWater")); }
+    BrzCampoPonteiro bEggSpoilsWhenFertilizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEggSpoilsWhenFertilized")); }
+    BrzCampoPonteiro bEquipAddTekExtendedInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipAddTekExtendedInfo")); }
+    BrzCampoPonteiro bEquipPreventsCharacterSkinsCosmeticsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipPreventsCharacterSkinsCosmetics")); }
+    BrzCampoPonteiro bEquipRequiresDLC_AberrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipRequiresDLC_Aberration")); }
+    BrzCampoPonteiro bEquipRequiresDLC_ExtinctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipRequiresDLC_Extinction")); }
+    BrzCampoPonteiro bEquipRequiresDLC_GenesisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipRequiresDLC_Genesis")); }
+    BrzCampoPonteiro bEquipRequiresDLC_ScorchedEarthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipRequiresDLC_ScorchedEarth")); }
+    BrzCampoPonteiro bEquipmentForceHairHidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipmentForceHairHiding")); }
+    BrzCampoPonteiro bEquipmentForceHideAllHairComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipmentForceHideAllHairComponents")); }
+    BrzCampoPonteiro bEquipmentHatHideItemEyeHairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipmentHatHideItemEyeHair")); }
+    BrzCampoPonteiro bEquipmentHatHideItemFacialHairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipmentHatHideItemFacialHair")); }
+    BrzCampoPonteiro bEquipmentHatHideItemHeadHairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquipmentHatHideItemHeadHair")); }
+    BrzCampoPonteiro bEquippedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bEquippedItem")); }
+    BrzCampoPonteiro bForceAllowCustomItemDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceAllowCustomItemDescription")); }
+    BrzCampoPonteiro bForceAllowDraggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceAllowDragging")); }
+    BrzCampoPonteiro bForceAllowGrindingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceAllowGrinding")); }
+    BrzCampoPonteiro bForceAllowRemovalWhenDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceAllowRemovalWhenDead")); }
+    BrzCampoPonteiro bForceAllowSkinColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceAllowSkinColorization")); }
+    BrzCampoPonteiro bForceDediAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceDediAttachments")); }
+    BrzCampoPonteiro bForceDisplayInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceDisplayInInventory")); }
+    BrzCampoPonteiro bForceDropDestructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceDropDestruction")); }
+    BrzCampoPonteiro bForceHideAllDefaultPawnAttachmentsWhenEquippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceHideAllDefaultPawnAttachmentsWhenEquipped")); }
+    BrzCampoPonteiro bForceNoLearnedEngramRequirementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceNoLearnedEngramRequirement")); }
+    BrzCampoPonteiro bForceNotificationItemCombatModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceNotificationItemCombatMode")); }
+    BrzCampoPonteiro bForcePreventConsumableWhileHandcuffedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForcePreventConsumableWhileHandcuffed")); }
+    BrzCampoPonteiro bForcePreventGrindingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForcePreventGrinding")); }
+    BrzCampoPonteiro bForceQualityColorOverlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceQualityColorOverlay")); }
+    BrzCampoPonteiro bForceRequiresExplicitOwnerChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceRequiresExplicitOwnerChecks")); }
+    BrzCampoPonteiro bForceUseItemAddCharacterStatsOnDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bForceUseItemAddCharacterStatsOnDinos")); }
+    BrzCampoPonteiro bFromSteamInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bFromSteamInventory")); }
+    BrzCampoPonteiro bGiveItemWhenUsedCopyItemStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bGiveItemWhenUsedCopyItemStats")); }
+    BrzCampoPonteiro bHideCustomDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bHideCustomDescription")); }
+    BrzCampoPonteiro bHideFromInventoryDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bHideFromInventoryDisplay")); }
+    BrzCampoPonteiro bHideFromRemoteInventoryDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bHideFromRemoteInventoryDisplay")); }
+    BrzCampoPonteiro bHideMoreOptionsIfNonRemovableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bHideMoreOptionsIfNonRemovable")); }
+    BrzCampoPonteiro bIgnoreDrawingItemButtonIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIgnoreDrawingItemButtonIcon")); }
+    BrzCampoPonteiro bIgnoreMinimumUseIntervalForDinoAutoEatingFoodField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIgnoreMinimumUseIntervalForDinoAutoEatingFood")); }
+    BrzCampoPonteiro bIsAbstractItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsAbstractItem")); }
+    BrzCampoPonteiro bIsBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsBlueprint")); }
+    BrzCampoPonteiro bIsCharacterSkinOrCosmeticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsCharacterSkinOrCosmetic")); }
+    BrzCampoPonteiro bIsClubArkRewardField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsClubArkReward")); }
+    BrzCampoPonteiro bIsClubArkTradeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsClubArkTrade")); }
+    BrzCampoPonteiro bIsCookingIngredientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsCookingIngredient")); }
+    BrzCampoPonteiro bIsCustomRecipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsCustomRecipe")); }
+    BrzCampoPonteiro bIsDescriptionOnlyItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsDescriptionOnlyItem")); }
+    BrzCampoPonteiro bIsDinoAutoHealingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsDinoAutoHealingItem")); }
+    BrzCampoPonteiro bIsEggField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsEgg")); }
+    BrzCampoPonteiro bIsEmbryoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsEmbryo")); }
+    BrzCampoPonteiro bIsEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsEngram")); }
+    BrzCampoPonteiro bIsFoodRecipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsFoodRecipe")); }
+    BrzCampoPonteiro bIsFromAllClustersInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsFromAllClustersInventory")); }
+    BrzCampoPonteiro bIsGhostItemSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsGhostItemSkin")); }
+    BrzCampoPonteiro bIsInitialItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsInitialItem")); }
+    BrzCampoPonteiro bIsItemAccessoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsItemAccessory")); }
+    BrzCampoPonteiro bIsItemSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsItemSkin")); }
+    BrzCampoPonteiro bIsMisssionItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsMisssionItem")); }
+    BrzCampoPonteiro bIsRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bIsRepairing")); }
+    BrzCampoPonteiro bItemIsUsableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemIsUsable")); }
+    BrzCampoPonteiro bItemSkinAllowEquippingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinAllowEquipping")); }
+    BrzCampoPonteiro bItemSkinIgnoreSkinIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinIgnoreSkinIcon")); }
+    BrzCampoPonteiro bItemSkinKeepOriginalIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinKeepOriginalIcon")); }
+    BrzCampoPonteiro bItemSkinKeepOriginalItemNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinKeepOriginalItemName")); }
+    BrzCampoPonteiro bItemSkinKeepOriginalWeaponTemplateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinKeepOriginalWeaponTemplate")); }
+    BrzCampoPonteiro bItemSkinReceiveOwnerEquippedBlueprintEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinReceiveOwnerEquippedBlueprintEvents")); }
+    BrzCampoPonteiro bItemSkinReceiveOwnerEquippedBlueprintTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bItemSkinReceiveOwnerEquippedBlueprintTick")); }
+    BrzCampoPonteiro bMergeCustomDataFromCraftingResourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bMergeCustomDataFromCraftingResources")); }
+    BrzCampoPonteiro bMuteExtraEquipmentSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bMuteExtraEquipmentSounds")); }
+    BrzCampoPonteiro bNameForceNoStatQualityRankField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bNameForceNoStatQualityRank")); }
     bool& bNetInfoFromClientField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalItem.bNetInfoFromClient"); }
+    BrzCampoPonteiro bNewWeaponAutoFillClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bNewWeaponAutoFillClipAmmo")); }
+    BrzCampoPonteiro bNonBlockingShieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bNonBlockingShield")); }
+    BrzCampoPonteiro bOnlyCanUseInFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bOnlyCanUseInFalling")); }
+    BrzCampoPonteiro bOnlyCanUseInWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bOnlyCanUseInWater")); }
+    BrzCampoPonteiro bOnlyEquipWhenUnconsciousField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bOnlyEquipWhenUnconscious")); }
+    BrzCampoPonteiro bOverrideExactClassCraftingRequirementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bOverrideExactClassCraftingRequirement")); }
+    BrzCampoPonteiro bOverrideRepairingRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bOverrideRepairingRequirements")); }
+    BrzCampoPonteiro bPickupEggAlertsDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPickupEggAlertsDinos")); }
+    BrzCampoPonteiro bPickupEggForceAggroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPickupEggForceAggro")); }
+    BrzCampoPonteiro bPreventArmorDurabiltyConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventArmorDurabiltyConsumption")); }
+    BrzCampoPonteiro bPreventCheatGiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventCheatGive")); }
+    BrzCampoPonteiro bPreventColdStorageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventColdStorage")); }
+    BrzCampoPonteiro bPreventConsumeItemOnDragField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventConsumeItemOnDrag")); }
+    BrzCampoPonteiro bPreventCraftingResourceAtFullDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventCraftingResourceAtFullDurability")); }
+    BrzCampoPonteiro bPreventDepositDroppingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventDepositDropping")); }
+    BrzCampoPonteiro bPreventDinoAutoConsumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventDinoAutoConsume")); }
+    BrzCampoPonteiro bPreventDragOntoOtherItemIfSameCustomDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventDragOntoOtherItemIfSameCustomData")); }
+    BrzCampoPonteiro bPreventEquipOnTaxidermyBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventEquipOnTaxidermyBase")); }
+    BrzCampoPonteiro bPreventItemBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventItemBlueprint")); }
+    BrzCampoPonteiro bPreventItemSkinsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventItemSkins")); }
+    BrzCampoPonteiro bPreventModifyArmorValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventModifyArmorValue")); }
+    BrzCampoPonteiro bPreventNativeItemBrokenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventNativeItemBroken")); }
+    BrzCampoPonteiro bPreventNotificationItemCombatModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventNotificationItemCombatMode")); }
+    BrzCampoPonteiro bPreventOnFullEquippedSuitHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventOnFullEquippedSuitHUD")); }
+    BrzCampoPonteiro bPreventOnSkinTabField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventOnSkinTab")); }
+    BrzCampoPonteiro bPreventRegularDroppingButStillDropInBulkAndDestructionCachesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventRegularDroppingButStillDropInBulkAndDestructionCaches")); }
+    BrzCampoPonteiro bPreventRemovingClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventRemovingClipAmmo")); }
+    BrzCampoPonteiro bPreventUploadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUpload")); }
+    BrzCampoPonteiro bPreventUploadingWeaponClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUploadingWeaponClipAmmo")); }
+    BrzCampoPonteiro bPreventUseAndShouldShowDLCPurchaseItemWhenAttemptingToUseIfDLCIsNotOwnedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUseAndShouldShowDLCPurchaseItemWhenAttemptingToUseIfDLCIsNotOwned")); }
+    BrzCampoPonteiro bPreventUseAtTameLimitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUseAtTameLimit")); }
+    BrzCampoPonteiro bPreventUseByDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUseByDinos")); }
+    BrzCampoPonteiro bPreventUseByHumansField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUseByHumans")); }
+    BrzCampoPonteiro bPreventUseWhenSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bPreventUseWhenSleeping")); }
+    BrzCampoPonteiro bRefreshOnDyeUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bRefreshOnDyeUsed")); }
+    BrzCampoPonteiro bRequiresBobsTallTalesToCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bRequiresBobsTallTalesToCraft")); }
+    BrzCampoPonteiro bResourcePreventGivingFromDemolitionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bResourcePreventGivingFromDemolition")); }
+    BrzCampoPonteiro bRestoreDurabilityWhenColorizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bRestoreDurabilityWhenColorized")); }
+    BrzCampoPonteiro bSaddleUseRegularDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSaddleUseRegularDurability")); }
+    BrzCampoPonteiro bScaleOverridenRepairingRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bScaleOverridenRepairingRequirements")); }
+    BrzCampoPonteiro bSetCraftingActorToSpawnTeamFromCrafterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSetCraftingActorToSpawnTeamFromCrafter")); }
+    BrzCampoPonteiro bShowItemRatingAsPercentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bShowItemRatingAsPercent")); }
+    BrzCampoPonteiro bShowTooltipColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bShowTooltipColors")); }
+    BrzCampoPonteiro bSkinAddWeightToSkinnedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSkinAddWeightToSkinnedItem")); }
+    BrzCampoPonteiro bSkinDisableWhenSubmergedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSkinDisableWhenSubmerged")); }
+    BrzCampoPonteiro bSkinReequipOnClientBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSkinReequipOnClientBeginPlay")); }
+    BrzCampoPonteiro bSkipEquipAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSkipEquipAnimation")); }
+    BrzCampoPonteiro bSpawnActorOnWaterOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSpawnActorOnWaterOnly")); }
+    BrzCampoPonteiro bSupportDragOntoOtherItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bSupportDragOntoOtherItem")); }
+    BrzCampoPonteiro bTekItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bTekItem")); }
+    BrzCampoPonteiro bThrowOnHotKeyUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bThrowOnHotKeyUse")); }
+    BrzCampoPonteiro bThrowUsesSecondaryActionDropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bThrowUsesSecondaryActionDrop")); }
+    BrzCampoPonteiro bUnappliedItemSkinIgnoreItemAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUnappliedItemSkinIgnoreItemAttachments")); }
+    BrzCampoPonteiro bUnlockAsPersistentProfileItemOnCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUnlockAsPersistentProfileItemOnCraft")); }
+    BrzCampoPonteiro bUsableWithTekGrenadeLauncherField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUsableWithTekGrenadeLauncher")); }
+    BrzCampoPonteiro bUseBPAddedAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPAddedAttachments")); }
+    BrzCampoPonteiro bUseBPAddedToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPAddedToInventory")); }
+    BrzCampoPonteiro bUseBPAllowAddToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPAllowAddToInventory")); }
+    BrzCampoPonteiro bUseBPCanPlayerUseItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCanPlayerUseItem")); }
+    BrzCampoPonteiro bUseBPConsumeProjectileImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPConsumeProjectileImpact")); }
+    BrzCampoPonteiro bUseBPCraftedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCrafted")); }
+    BrzCampoPonteiro bUseBPCustomAutoDecreaseDurabilityPerIntervalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCustomAutoDecreaseDurabilityPerInterval")); }
+    BrzCampoPonteiro bUseBPCustomDurabilityTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCustomDurabilityText")); }
+    BrzCampoPonteiro bUseBPCustomDurabilityTextColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCustomDurabilityTextColor")); }
+    BrzCampoPonteiro bUseBPCustomInventoryWidgetTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCustomInventoryWidgetText")); }
+    BrzCampoPonteiro bUseBPCustomInventoryWidgetTextColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCustomInventoryWidgetTextColor")); }
+    BrzCampoPonteiro bUseBPCustomInventoryWidgetTextForBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPCustomInventoryWidgetTextForBlueprint")); }
+    BrzCampoPonteiro bUseBPDrawItemIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPDrawItemIcon")); }
+    BrzCampoPonteiro bUseBPEquippedItemOnXPEarningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPEquippedItemOnXPEarning")); }
+    BrzCampoPonteiro bUseBPForceAllowRemoteAddToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPForceAllowRemoteAddToInventory")); }
+    BrzCampoPonteiro bUseBPGetItemDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetItemDescription")); }
+    BrzCampoPonteiro bUseBPGetItemDurabilityPercentageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetItemDurabilityPercentage")); }
+    BrzCampoPonteiro bUseBPGetItemIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetItemIcon")); }
+    BrzCampoPonteiro bUseBPGetItemNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetItemName")); }
+    BrzCampoPonteiro bUseBPGetItemNetInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetItemNetInfo")); }
+    BrzCampoPonteiro bUseBPGetItemStatStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetItemStatString")); }
+    BrzCampoPonteiro bUseBPGetMaxAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPGetMaxAmmo")); }
+    BrzCampoPonteiro bUseBPInitFromItemNetInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPInitFromItemNetInfo")); }
+    BrzCampoPonteiro bUseBPInitItemColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPInitItemColors")); }
+    BrzCampoPonteiro bUseBPInitializeItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPInitializeItem")); }
+    BrzCampoPonteiro bUseBPIsValidForCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPIsValidForCrafting")); }
+    BrzCampoPonteiro bUseBPNotifyDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPNotifyDropped")); }
+    BrzCampoPonteiro bUseBPNotifyItemRefreshedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPNotifyItemRefreshed")); }
+    BrzCampoPonteiro bUseBPOnCropPhaseIncreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOnCropPhaseIncrease")); }
+    BrzCampoPonteiro bUseBPOnItemConsumedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOnItemConsumed")); }
+    BrzCampoPonteiro bUseBPOnUpdatedItemContextMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOnUpdatedItemContextMenu")); }
+    BrzCampoPonteiro bUseBPOverrideAnimMontageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideAnimMontage")); }
+    BrzCampoPonteiro bUseBPOverrideCraftingConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideCraftingConsumption")); }
+    BrzCampoPonteiro bUseBPOverrideDeathAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideDeathAnim")); }
+    BrzCampoPonteiro bUseBPOverrideHoldItemSlotActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideHoldItemSlotAction")); }
+    BrzCampoPonteiro bUseBPOverrideInheritedStatWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideInheritedStatWeight")); }
+    BrzCampoPonteiro bUseBPOverrideProjectileTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideProjectileType")); }
+    BrzCampoPonteiro bUseBPOverrideRemainingCooldownTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideRemainingCooldownTime")); }
+    BrzCampoPonteiro bUseBPOverrideSoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPOverrideSound")); }
+    BrzCampoPonteiro bUseBPPostAddBuffToGiveOwnerCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPPostAddBuffToGiveOwnerCharacter")); }
+    BrzCampoPonteiro bUseBPPreventUploadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPPreventUpload")); }
+    BrzCampoPonteiro bUseBPPreventUseOntoItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPPreventUseOntoItem")); }
+    BrzCampoPonteiro bUseBPPrimalDinoCharacterConsumedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPPrimalDinoCharacterConsumedItem")); }
+    BrzCampoPonteiro bUseBPRemovedFromInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPRemovedFromInventory")); }
+    BrzCampoPonteiro bUseBPSetupHUDIconMaterialField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBPSetupHUDIconMaterial")); }
+    BrzCampoPonteiro bUseBlueprintEquippedNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseBlueprintEquippedNotifications")); }
+    BrzCampoPonteiro bUseEquippedItemBlueprintTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseEquippedItemBlueprintTick")); }
+    BrzCampoPonteiro bUseEquippedItemNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseEquippedItemNativeTick")); }
+    BrzCampoPonteiro bUseInWaterRestoreDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseInWaterRestoreDurability")); }
     FieldArray<unsigned char> bUseItemColorField() const
     { return { (void*)this, "UPrimalItem.bUseItemColor" }; }
+    BrzCampoPonteiro bUseItemColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseItemColors")); }
+    BrzCampoPonteiro bUseItemDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseItemDurability")); }
+    BrzCampoPonteiro bUseItemStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseItemStats")); }
+    BrzCampoPonteiro bUseMultiSaddleMeshOverrideMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseMultiSaddleMeshOverrideMap")); }
+    BrzCampoPonteiro bUseOnItemSetIndexAsDestinationItemCustomDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseOnItemSetIndexAsDestinationItemCustomData")); }
+    BrzCampoPonteiro bUseOnItemWeaponRemoveClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseOnItemWeaponRemoveClipAmmo")); }
+    BrzCampoPonteiro bUseOntoItemRequiresImmobilizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseOntoItemRequiresImmobilization")); }
+    BrzCampoPonteiro bUseScaleStatEffectivenessByDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseScaleStatEffectivenessByDurability")); }
+    BrzCampoPonteiro bUseSkinDroppedItemTemplateForSecondryActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSkinDroppedItemTemplateForSecondryAction")); }
+    BrzCampoPonteiro bUseSkinnedBPCustomInventoryWidgetTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSkinnedBPCustomInventoryWidgetText")); }
+    BrzCampoPonteiro bUseSlottedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSlottedTick")); }
+    BrzCampoPonteiro bUseSpawnActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSpawnActor")); }
+    BrzCampoPonteiro bUseSpawnActorRelativeLocField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSpawnActorRelativeLoc")); }
+    BrzCampoPonteiro bUseSpawnActorTakeOwnerRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSpawnActorTakeOwnerRotation")); }
+    BrzCampoPonteiro bUseSpawnActorWhenRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUseSpawnActorWhenRiding")); }
+    BrzCampoPonteiro bUsesCreationTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUsesCreationTime")); }
+    BrzCampoPonteiro bUsingRequiresStandingOnSolidGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bUsingRequiresStandingOnSolidGround")); }
+    BrzCampoPonteiro bValidCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.bValidCraftingResource")); }
     BitFieldValue<bool, unsigned __int32> bCanBuildStructures()
     { return { (void*)this, "bCanBuildStructures" }; }
     BitFieldValue<bool, unsigned __int32> bAllowEquppingItem()

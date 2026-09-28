@@ -45,7 +45,7 @@ struct APrimalStructureExplosive : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureExplosive.ForceDetonateExplosive()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ForceDetonateExplosive() const
     {
         return NativeCall<void*>(this, "APrimalStructureExplosive.ForceDetonateExplosive()");
@@ -61,7 +61,7 @@ struct APrimalStructureExplosive : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureExplosive.OnDeserializedByGame(EOnDeserializationType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=19]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnDeserializedByGame(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureExplosive.OnDeserializedByGame(EOnDeserializationType::Type)", a0);
@@ -85,7 +85,7 @@ struct APrimalStructureExplosive : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureExplosive.PrepareAsPlacementPreview()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=408+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     void PrepareAsPlacementPreview() const
     {
         NativeCall<void>(this, "APrimalStructureExplosive.PrepareAsPlacementPreview()");
@@ -93,7 +93,7 @@ struct APrimalStructureExplosive : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureExplosive.SetPlayerConstructor(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=74]]
+    // endereco: casamento de bytes com a build de referencia
     void SetPlayerConstructor(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureExplosive.SetPlayerConstructor(APlayerController*)", a0);
@@ -161,6 +161,10 @@ struct APrimalStructureExplosive : public APrimalStructure
     { return *GetNativePointerField<float*>(this, "APrimalStructureExplosive.PlacementInitialSpeed"); }
     float& PlacementMaxSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureExplosive.PlacementMaxSpeed"); }
+    BrzCampoPonteiro bAlertDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureExplosive.bAlertDinos")); }
+    BrzCampoPonteiro bAnimatePlacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureExplosive.bAnimatePlacement")); }
     //  no cache antigo este campo se chamava bExplosiveReady.
     //  nesta build ele e' `PlacementInitialSpeed` — resolve por NOME.
     BrzCampoPonteiro bExplosiveReadyField() const

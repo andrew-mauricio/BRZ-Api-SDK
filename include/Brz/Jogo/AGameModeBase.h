@@ -153,7 +153,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.ForceClearUnpauseDelegates(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ForceClearUnpauseDelegates(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameModeBase.ForceClearUnpauseDelegates(AActor*)", a0);
@@ -161,7 +161,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.GenericPlayerInitialization(AController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=83]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GenericPlayerInitialization(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameModeBase.GenericPlayerInitialization(AController*)", a0);
@@ -169,7 +169,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.GetDefaultPawnClassForController(AController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=142+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=142+chamadores=3]]
     UClass* GetDefaultPawnClassForController(void* a0) const
     {
         return NativeCall<UClass*, void*>(this, "AGameModeBase.GetDefaultPawnClassForController(AController*)", a0);
@@ -177,7 +177,7 @@ struct AGameModeBase : public AInfo
 
     // dump_sobre_sdk_287a0
     //   AGameModeBase.GetGameSessionClass()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=144]]
+    // endereco: casamento de bytes com a build de referencia
     void** GetGameSessionClass() const
     {
         return NativeCall<void**>(this, "AGameModeBase.GetGameSessionClass()");
@@ -193,7 +193,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.GetNumPlayers()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=123]]
+    // endereco: casamento de bytes com a build de referencia
     int GetNumPlayers() const
     {
         return NativeCall<int>(this, "AGameModeBase.GetNumPlayers()");
@@ -201,7 +201,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.GetNumSpectators()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=123]]
+    // endereco: casamento de bytes com a build de referencia
     int GetNumSpectators() const
     {
         return NativeCall<int>(this, "AGameModeBase.GetNumSpectators()");
@@ -253,7 +253,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.InitGameState()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void InitGameState() const
     {
         NativeCall<void>(this, "AGameModeBase.InitGameState()");
@@ -289,7 +289,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.IsPaused()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPaused() const
     {
         return NativeCall<bool>(this, "AGameModeBase.IsPaused()");
@@ -309,7 +309,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.Logout(AController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=88]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Logout(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameModeBase.Logout(AController*)", a0);
@@ -317,7 +317,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.MustSpectate(APlayerController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=141+chamadores=10]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=141+chamadores=14]]
     bool MustSpectate(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AGameModeBase.MustSpectate(APlayerController*)", a0);
@@ -325,7 +325,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.MustSpectate_Implementation(APlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool MustSpectate_Implementation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AGameModeBase.MustSpectate_Implementation(APlayerController*)", a0);
@@ -333,7 +333,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.PlayerCanRestart(APlayerController*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=141+chamadores=3]]
     bool PlayerCanRestart(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AGameModeBase.PlayerCanRestart(APlayerController*)", a0);
@@ -341,7 +341,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.PlayerCanRestart_Implementation(APlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PlayerCanRestart_Implementation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AGameModeBase.PlayerCanRestart_Implementation(APlayerController*)", a0);
@@ -349,7 +349,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.PostLogin(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=111]]
+    // endereco: casamento de bytes com a build de referencia
     void PostLogin(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameModeBase.PostLogin(APlayerController*)", a0);
@@ -357,7 +357,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.PostSeamlessTravel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=6]]
+    // endereco: casamento de bytes com a build de referencia
     void PostSeamlessTravel() const
     {
         NativeCall<void>(this, "AGameModeBase.PostSeamlessTravel()");
@@ -425,7 +425,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.RestartPlayer(AController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=57]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RestartPlayer(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameModeBase.RestartPlayer(AController*)", a0);
@@ -509,7 +509,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.UpdateGameplayMuteList(APlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateGameplayMuteList(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameModeBase.UpdateGameplayMuteList(APlayerController*)", a0);
@@ -557,6 +557,12 @@ struct AGameModeBase : public AInfo
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameModeBase.ServerStatReplicatorClass")); }
     BrzCampoPonteiro SpectatorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameModeBase.SpectatorClass")); }
+    BrzCampoPonteiro bPauseableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameModeBase.bPauseable")); }
+    BrzCampoPonteiro bStartPlayersAsSpectatorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameModeBase.bStartPlayersAsSpectators")); }
+    BrzCampoPonteiro bUseSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameModeBase.bUseSeamlessTravel")); }
     BitFieldValue<bool, unsigned __int32> bUseSeamlessTravel()
     { return { (void*)this, "bUseSeamlessTravel" }; }
     BitFieldValue<bool, unsigned __int32> bStartPlayersAsSpectators()

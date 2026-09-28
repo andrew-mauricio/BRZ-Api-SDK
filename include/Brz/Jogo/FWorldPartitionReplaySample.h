@@ -35,6 +35,10 @@ struct FWorldPartitionReplaySample
 
     BrzCampoPonteiro ReplayField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionReplaySample.Replay")); }
+    BrzCampoPonteiro StreamingSourceNameIndicesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionReplaySample.StreamingSourceNameIndices")); }
+    BrzCampoPonteiro StreamingSourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionReplaySample.StreamingSources")); }
     double& TimeSecondsField() const
     { return *GetNativePointerField<double*>(this, "FWorldPartitionReplaySample.TimeSeconds"); }
 };

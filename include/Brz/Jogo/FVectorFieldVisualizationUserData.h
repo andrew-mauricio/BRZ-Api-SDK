@@ -32,6 +32,11 @@ struct FVectorFieldVisualizationUserData
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro UniformBufferField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationUserData.UniformBuffer")); }
+    BrzCampoPonteiro VectorFieldTextureRHIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationUserData.VectorFieldTextureRHI")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDVISUALIZATIONUSERDATA_H

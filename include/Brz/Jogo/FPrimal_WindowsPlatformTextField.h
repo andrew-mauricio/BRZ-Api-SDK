@@ -43,6 +43,8 @@ struct FPrimal_WindowsPlatformTextField
 
     BrzCampoPonteiro ViewField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimal_WindowsPlatformTextField.View")); }
+    BrzCampoPonteiro View3Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimal_WindowsPlatformTextField.View3")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMAL_WINDOWSPLATFORMTEXTFIELD_H

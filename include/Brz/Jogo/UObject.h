@@ -35,7 +35,7 @@ struct UObject : public UObjectBaseUtility
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObject.AreAllOuterObjectsValid()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AreAllOuterObjectsValid() const
     {
         return NativeCall<bool>(this, "UObject.AreAllOuterObjectsValid()");
@@ -59,7 +59,7 @@ struct UObject : public UObjectBaseUtility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObject.CallAddReferencedObjects(FReferenceCollector&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CallAddReferencedObjects(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UObject.CallAddReferencedObjects(FReferenceCollector&)", a0);
@@ -163,7 +163,7 @@ struct UObject : public UObjectBaseUtility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObject.EnsureNotRetrievingVTablePtr()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EnsureNotRetrievingVTablePtr() const
     {
         return NativeCall<void*>(this, "UObject.EnsureNotRetrievingVTablePtr()");
@@ -187,7 +187,7 @@ struct UObject : public UObjectBaseUtility
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObject.GetArchetype()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetArchetype() const
     {
         return NativeCall<void*>(this, "UObject.GetArchetype()");
@@ -283,7 +283,7 @@ struct UObject : public UObjectBaseUtility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObject.GetSparseClassDataStruct()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSparseClassDataStruct() const
     {
         return NativeCall<void*>(this, "UObject.GetSparseClassDataStruct()");
@@ -467,7 +467,7 @@ struct UObject : public UObjectBaseUtility
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObject.Serialize(FArchive&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=99+chamadores=59]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=99+chamadores=60]]
     void Serialize(void* a0) const
     {
         NativeCall<void, void*>(this, "UObject.Serialize(FArchive&)", a0);
@@ -539,14 +539,17 @@ struct UObject : public UObjectBaseUtility
     //  Para chamar uma destas, use `NativeCall` direto com a chave:
     //    UObject.SerializeScriptProperties(FStructuredArchiveSlot)
     //      (colide com UObject.SerializeScriptProperties(FArchive&))
+
+    BrzCampoPonteiro DisplayFlagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObject.DisplayFlags")); }
     BrzCampoPonteiro EntryPointField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObject.EntryPoint")); }
     FString& NameField() const
     { return *GetNativePointerField<FString*>(this, "UObject.Name"); }
     FName& TypeField() const
     { return *GetNativePointerField<FName*>(this, "UObject.Type"); }
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObject.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UOBJECT_H

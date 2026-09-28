@@ -35,7 +35,7 @@ struct FWorldPartitionHLODDestructionTag
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FWorldPartitionHLODDestructionTag.IsValid()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsValid() const
     {
         return NativeCall<void*>(this, "FWorldPartitionHLODDestructionTag.IsValid()");

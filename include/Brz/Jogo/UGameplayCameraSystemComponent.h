@@ -119,90 +119,92 @@ struct UGameplayCameraSystemComponent
     { return *GetNativePointerField<int*>(this, "UGameplayCameraSystemComponent.UCSSerializationIndex"); }
     TWeakObjectPtr<void>& WeakPlayerControllerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "UGameplayCameraSystemComponent.WeakPlayerController"); }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteLocation()
-    { return { (void*)this, "bAbsoluteLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteRotation()
-    { return { (void*)this, "bAbsoluteRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteScale()
-    { return { (void*)this, "bAbsoluteScale" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachedSoundsForceHighPriority()
-    { return { (void*)this, "bAttachedSoundsForceHighPriority" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bBoundsChangeTriggersStreamingDataRebuild()
-    { return { (void*)this, "bBoundsChangeTriggersStreamingDataRebuild" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bClientSyncAlwaysUpdatePhysicsCollision()
-    { return { (void*)this, "bClientSyncAlwaysUpdatePhysicsCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentToWorldUpdated()
-    { return { (void*)this, "bComponentToWorldUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeBoundsOnceForGame()
-    { return { (void*)this, "bComputeBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeFastLocalBounds()
-    { return { (void*)this, "bComputeFastLocalBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bComputedBoundsOnceForGame()
-    { return { (void*)this, "bComputedBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInGame()
-    { return { (void*)this, "bHiddenInGame" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreParentTransformUpdate()
-    { return { (void*)this, "bIgnoreParentTransformUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNotRenderAttachmentRoot()
-    { return { (void*)this, "bIsNotRenderAttachmentRoot" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeAttached()
-    { return { (void*)this, "bShouldBeAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapLocationWhenAttached()
-    { return { (void*)this, "bShouldSnapLocationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapRotationWhenAttached()
-    { return { (void*)this, "bShouldSnapRotationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapScaleWhenAttached()
-    { return { (void*)this, "bShouldSnapScaleWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldUpdatePhysicsVolume()
-    { return { (void*)this, "bShouldUpdatePhysicsVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateChildOverlaps()
-    { return { (void*)this, "bUpdateChildOverlaps" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachParentBound()
-    { return { (void*)this, "bUseAttachParentBound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bVisible()
-    { return { (void*)this, "bVisible" }; }
+    BrzCampoPonteiro bAbsoluteLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bAbsoluteLocation")); }
+    BrzCampoPonteiro bAbsoluteRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bAbsoluteRotation")); }
+    BrzCampoPonteiro bAbsoluteScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bAbsoluteScale")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAttachedSoundsForceHighPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bAttachedSoundsForceHighPriority")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bAutoActivate")); }
+    BrzCampoPonteiro bBoundsChangeTriggersStreamingDataRebuildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bBoundsChangeTriggersStreamingDataRebuild")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bClientSyncAlwaysUpdatePhysicsCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bClientSyncAlwaysUpdatePhysicsCollision")); }
+    BrzCampoPonteiro bComponentToWorldUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bComponentToWorldUpdated")); }
+    BrzCampoPonteiro bComputeBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bComputeBoundsOnceForGame")); }
+    BrzCampoPonteiro bComputeFastLocalBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bComputeFastLocalBounds")); }
+    BrzCampoPonteiro bComputedBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bComputedBoundsOnceForGame")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHiddenInGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bHiddenInGame")); }
+    BrzCampoPonteiro bIgnoreParentTransformUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bIgnoreParentTransformUpdate")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsNotRenderAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bIsNotRenderAttachmentRoot")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bReplicates")); }
+    BrzCampoPonteiro bSetPlayerControllerRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bSetPlayerControllerRotation")); }
+    BrzCampoPonteiro bShouldBeAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bShouldBeAttached")); }
+    BrzCampoPonteiro bShouldSnapLocationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bShouldSnapLocationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapRotationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bShouldSnapRotationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapScaleWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bShouldSnapScaleWhenAttached")); }
+    BrzCampoPonteiro bShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUpdateChildOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bUpdateChildOverlaps")); }
+    BrzCampoPonteiro bUseAttachParentBoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bUseAttachParentBound")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemComponent.bVisible")); }
     BitFieldValue<bool, unsigned __int32> bSetPlayerControllerRotation()
     { return { (void*)this, "bSetPlayerControllerRotation" }; }
 

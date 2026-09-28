@@ -43,6 +43,8 @@ struct FDinoSaddleStruct
     { return *GetNativePointerField<USkeletalMeshComponent**>(this, "FDinoSaddleStruct.Saddle"); }
     USkeletalMesh*& SkeletalMeshField() const
     { return *GetNativePointerField<USkeletalMesh**>(this, "FDinoSaddleStruct.SkeletalMesh"); }
+    BrzCampoPonteiro bJustRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoSaddleStruct.bJustRemoved")); }
     BitFieldValue<bool, unsigned __int32> bJustRemoved()
     { return { (void*)this, "bJustRemoved" }; }
 

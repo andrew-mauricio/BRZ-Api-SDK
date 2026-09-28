@@ -59,7 +59,7 @@ struct UWorldPartitionRuntimeCell
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCell.GetContentBounds()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetContentBounds() const
     {
         return NativeCall<void*>(this, "UWorldPartitionRuntimeCell.GetContentBounds()");
@@ -67,7 +67,7 @@ struct UWorldPartitionRuntimeCell
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCell.GetContentBundleID()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetContentBundleID() const
     {
         return NativeCall<void*>(this, "UWorldPartitionRuntimeCell.GetContentBundleID()");
@@ -83,7 +83,7 @@ struct UWorldPartitionRuntimeCell
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCell.GetDebugColor(EWorldPartitionRuntimeCellVisualizeMode)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=156]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetDebugColor(int a0) const
     {
         return NativeCall<void*, int>(this, "UWorldPartitionRuntimeCell.GetDebugColor(EWorldPartitionRuntimeCellVisualizeMode)", a0);
@@ -91,7 +91,7 @@ struct UWorldPartitionRuntimeCell
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCell.GetExternalDataLayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetExternalDataLayer() const
     {
         return NativeCall<void*>(this, "UWorldPartitionRuntimeCell.GetExternalDataLayer()");
@@ -173,12 +173,12 @@ struct UWorldPartitionRuntimeCell
     BrzCampoPonteiro DataLayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.DataLayers")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SourceCellGuid` +16, medido na build 25090264
+    //  ancorado em `SourceCellGuid` +16, medido na build 25535041
     //  (offset absoluto medido: 0x9C; confianca alta)
     void*& EffectiveWantedStateField() const
     { return BrzCampoAncorado<void*>(this, "SourceCellGuid", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SourceCellGuid` +20, medido na build 25090264
+    //  ancorado em `SourceCellGuid` +20, medido na build 25535041
     //  (offset absoluto medido: 0xA0; confianca alta)
     void*& EffectiveWantedStateEpochField() const
     { return BrzCampoAncorado<void*>(this, "SourceCellGuid", 20); }
@@ -186,6 +186,14 @@ struct UWorldPartitionRuntimeCell
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.RuntimeCellData")); }
     BrzCampoPonteiro SourceCellGuidField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.SourceCellGuid")); }
+    BrzCampoPonteiro bBlockOnSlowLoadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.bBlockOnSlowLoading")); }
+    BrzCampoPonteiro bClientOnlyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.bClientOnlyVisible")); }
+    BrzCampoPonteiro bIsAlwaysLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.bIsAlwaysLoaded")); }
+    BrzCampoPonteiro bIsHLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCell.bIsHLOD")); }
     BitFieldValue<bool, unsigned __int32> bBlockOnSlowLoading()
     { return { (void*)this, "bBlockOnSlowLoading" }; }
     BitFieldValue<bool, unsigned __int32> bClientOnlyVisible()

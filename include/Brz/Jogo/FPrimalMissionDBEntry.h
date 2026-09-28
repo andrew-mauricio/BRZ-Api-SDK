@@ -33,6 +33,8 @@ struct FPrimalMissionDBEntry
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
+    BrzCampoPonteiro bUsesFallbackSeedsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMissionDBEntry.bUsesFallbackSeeds")); }
     BitFieldValue<bool, unsigned __int32> bUsesFallbackSeeds()
     { return { (void*)this, "bUsesFallbackSeeds" }; }
 

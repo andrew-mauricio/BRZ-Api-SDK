@@ -33,7 +33,7 @@ struct AHazardTrigger : public ABaseBoxTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger.Activate()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void Activate() const
     {
         NativeCall<void>(this, "AHazardTrigger.Activate()");
@@ -41,7 +41,7 @@ struct AHazardTrigger : public ABaseBoxTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger.Deactivate()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=51]]
+    // endereco: casamento de bytes com a build de referencia
     void Deactivate() const
     {
         NativeCall<void>(this, "AHazardTrigger.Deactivate()");
@@ -77,6 +77,10 @@ struct AHazardTrigger : public ABaseBoxTrigger
     { return *GetNativePointerField<double*>(this, "AHazardTrigger.LastActivationTime"); }
     BrzCampoPonteiro SplineTraceChannelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHazardTrigger.SplineTraceChannel")); }
+    BrzCampoPonteiro bConformToTerrainField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHazardTrigger.bConformToTerrain")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHazardTrigger.bIsActive")); }
     BitFieldValue<bool, unsigned __int32> bConformToTerrain()
     { return { (void*)this, "bConformToTerrain" }; }
     BitFieldValue<bool, unsigned __int32> bIsActive()

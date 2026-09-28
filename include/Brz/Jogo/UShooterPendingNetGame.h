@@ -37,7 +37,7 @@ struct UShooterPendingNetGame
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterPendingNetGame.GetPlatformAuthToken()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=241+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetPlatformAuthToken() const
     {
         return NativeCall<void*>(this, "UShooterPendingNetGame.GetPlatformAuthToken()");
@@ -45,7 +45,7 @@ struct UShooterPendingNetGame
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterPendingNetGame.IsUsingSharedAccount(FUniqueNetIdRepl&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=214+grafo=3/3]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsUsingSharedAccount(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterPendingNetGame.IsUsingSharedAccount(FUniqueNetIdRepl&)", a0);

@@ -41,7 +41,7 @@ struct ADroppedItemTorch : public ADroppedItem
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItemTorch.GetDroppedItemLifeTime()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=48]]
+    // endereco: casamento de bytes com a build de referencia
     float GetDroppedItemLifeTime() const
     {
         return NativeCall<float>(this, "ADroppedItemTorch.GetDroppedItemLifeTime()");
@@ -57,7 +57,7 @@ struct ADroppedItemTorch : public ADroppedItem
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItemTorch.LoadData()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=485+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void LoadData() const
     {
         NativeCall<void>(this, "ADroppedItemTorch.LoadData()");
@@ -73,7 +73,7 @@ struct ADroppedItemTorch : public ADroppedItem
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItemTorch.SetDroppedItemLifeTime()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=475+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void SetDroppedItemLifeTime() const
     {
         NativeCall<void>(this, "ADroppedItemTorch.SetDroppedItemLifeTime()");
@@ -87,6 +87,8 @@ struct ADroppedItemTorch : public ADroppedItem
         NativeCall<void, float>(this, "ADroppedItemTorch.Tick(float)", a0);
     }
 
+    BrzCampoPonteiro FireIsOnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItemTorch.FireIsOn")); }
     double& LastDurabilityConsumptionTimeField() const
     { return *GetNativePointerField<double*>(this, "ADroppedItemTorch.LastDurabilityConsumptionTime"); }
     float& LifeTimeMeterField() const

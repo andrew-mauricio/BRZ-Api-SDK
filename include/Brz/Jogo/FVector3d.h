@@ -33,12 +33,12 @@ struct FVector3d
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> X()
-    { return { (void*)this, "X" }; }
-    BitFieldValue<bool, unsigned __int32> Y()
-    { return { (void*)this, "Y" }; }
-    BitFieldValue<bool, unsigned __int32> Z()
-    { return { (void*)this, "Z" }; }
+    BrzCampoPonteiro XField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector3d.X")); }
+    BrzCampoPonteiro YField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector3d.Y")); }
+    BrzCampoPonteiro ZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector3d.Z")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTOR3D_H

@@ -43,7 +43,7 @@ struct FTransformDynamicCollection
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformDynamicCollection.GetHasParent(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetHasParent(int a0) const
     {
         return NativeCall<void*, int>(this, "FTransformDynamicCollection.GetHasParent(int)", a0);
@@ -59,7 +59,7 @@ struct FTransformDynamicCollection
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformDynamicCollection.GetParent(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetParent(int a0) const
     {
         return NativeCall<void*, int>(this, "FTransformDynamicCollection.GetParent(int)", a0);
@@ -67,7 +67,7 @@ struct FTransformDynamicCollection
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformDynamicCollection.GetTransform(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTransform(int a0) const
     {
         return NativeCall<void*, int>(this, "FTransformDynamicCollection.GetTransform(int)", a0);
@@ -104,10 +104,17 @@ struct FTransformDynamicCollection
     {
         return NativeCall<void*, int, void*>(this, "FTransformDynamicCollection.SetTransform(int,UE::Math::TTransform<float>&)", a0, a1);
     }
+
+    BrzCampoPonteiro HasParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformDynamicCollection.HasParent")); }
     BrzCampoPonteiro RestCollectionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformDynamicCollection.RestCollection")); }
+    BrzCampoPonteiro RestCollectionSharedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformDynamicCollection.RestCollectionShared")); }
     BrzCampoPonteiro TransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformDynamicCollection.Transform")); }
+    BrzCampoPonteiro bTransformHasChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformDynamicCollection.bTransformHasChanged")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FTRANSFORMDYNAMICCOLLECTION_H

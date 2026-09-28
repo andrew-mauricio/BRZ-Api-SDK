@@ -37,6 +37,8 @@ struct FPrimalStats
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStats.PrimalStatsValues")); }
     BrzCampoPonteiro StartStatsTimeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStats.StartStatsTime")); }
+    BrzCampoPonteiro bUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStats.bUsed")); }
     BitFieldValue<bool, unsigned __int32> bUsed()
     { return { (void*)this, "bUsed" }; }
 

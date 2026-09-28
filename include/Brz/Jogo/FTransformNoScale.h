@@ -33,8 +33,8 @@ struct FTransformNoScale
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Location()
-    { return { (void*)this, "Location" }; }
+    BrzCampoPonteiro LocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformNoScale.Location")); }
     BrzCampoPonteiro RotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformNoScale.Rotation")); }
 };

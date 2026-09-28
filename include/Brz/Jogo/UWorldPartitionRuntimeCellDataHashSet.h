@@ -43,6 +43,8 @@ struct UWorldPartitionRuntimeCellDataHashSet
     { return *GetNativePointerField<int*>(this, "UWorldPartitionRuntimeCellDataHashSet.HierarchicalLevel"); }
     int& PriorityField() const
     { return *GetNativePointerField<int*>(this, "UWorldPartitionRuntimeCellDataHashSet.Priority"); }
+    BrzCampoPonteiro bIs2DField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeCellDataHashSet.bIs2D")); }
     BitFieldValue<bool, unsigned __int32> bIs2D()
     { return { (void*)this, "bIs2D" }; }
 

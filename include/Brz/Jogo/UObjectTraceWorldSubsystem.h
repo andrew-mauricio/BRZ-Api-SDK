@@ -37,6 +37,8 @@ struct UObjectTraceWorldSubsystem
     { return *GetNativePointerField<double*>(this, "UObjectTraceWorldSubsystem.ElapsedTime"); }
     BrzCampoPonteiro FrameIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectTraceWorldSubsystem.FrameIndex")); }
+    BrzCampoPonteiro RecordingIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectTraceWorldSubsystem.RecordingIndex")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UOBJECTTRACEWORLDSUBSYSTEM_H

@@ -46,7 +46,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.AllowCraftingResourceConsumption(TSubclassOf<UPrimalItem>
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=368]]
+    // endereco: casamento de bytes com a build de referencia
     bool AllowCraftingResourceConsumption(void* a0, int a1) const
     {
         return NativeCall<bool, void*, int>(this, "APrimalStructureItemContainer_CropPlot.AllowCraftingResourceConsumption(TSubclassOf<UPrimalItem>,int)", a0, a1);
@@ -126,7 +126,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.BPOnRemovedCrop()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPOnRemovedCrop() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot.BPOnRemovedCrop()");
@@ -142,7 +142,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=171+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot.BeginPlay()");
@@ -150,7 +150,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.CanTendCrop(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanTendCrop(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureItemContainer_CropPlot.CanTendCrop(APlayerController*)", a0);
@@ -158,7 +158,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.CopyCreatureDataFromSeed(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=146]]
+    // endereco: casamento de bytes com a build de referencia
     void CopyCreatureDataFromSeed(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer_CropPlot.CopyCreatureDataFromSeed(UPrimalItem*)", a0);
@@ -182,7 +182,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_CropPlot.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=50]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer_CropPlot.EndPlay(EEndPlayReason::Type)", a0);
@@ -206,7 +206,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.GetGreenHouseCropGrowthMultiplier()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetGreenHouseCropGrowthMultiplier() const
     {
         return NativeCall<float>(this, "APrimalStructureItemContainer_CropPlot.GetGreenHouseCropGrowthMultiplier()");
@@ -246,7 +246,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.GetRandomTendingResourceIndex()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     unsigned char GetRandomTendingResourceIndex() const
     {
         return NativeCall<unsigned char>(this, "APrimalStructureItemContainer_CropPlot.GetRandomTendingResourceIndex()");
@@ -270,7 +270,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_CropPlot.GetTendingResourceFromIndex_Implementation(unsignedchar)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=298+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetTendingResourceFromIndex_Implementation(unsigned char a0) const
     {
         return NativeCall<void*, unsigned char>(this, "APrimalStructureItemContainer_CropPlot.GetTendingResourceFromIndex_Implementation(unsignedchar)", a0);
@@ -310,7 +310,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_CropPlot.NotifyCraftedItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=56]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro NotifyCraftedItem(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer_CropPlot.NotifyCraftedItem(UPrimalItem*)", a0);
@@ -334,7 +334,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_CropPlot.OnRep_CurrentCropPhase(ESeedCropPhase::Type)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_CurrentCropPhase(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer_CropPlot.OnRep_CurrentCropPhase(ESeedCropPhase::Type)", a0);
@@ -342,7 +342,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.OnRep_HasFruitItems(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_HasFruitItems(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureItemContainer_CropPlot.OnRep_HasFruitItems(bool)", a0);
@@ -358,7 +358,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.OnRep_WaterAmount()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_WaterAmount() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot.OnRep_WaterAmount()");
@@ -366,7 +366,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.OverrideHasWaterSource()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool OverrideHasWaterSource() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer_CropPlot.OverrideHasWaterSource()");
@@ -374,7 +374,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.PlacedStructure(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=51]]
+    // endereco: casamento de bytes com a build de referencia
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer_CropPlot.PlacedStructure(AShooterPlayerController*)", a0);
@@ -414,7 +414,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.RemovePlantedCrop()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1392+grafo=24/24]]
+    // endereco: casamento de bytes com a build de referencia
     void RemovePlantedCrop() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot.RemovePlantedCrop()");
@@ -430,7 +430,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.SetWaterState(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void SetWaterState(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureItemContainer_CropPlot.SetWaterState(bool)", a0);
@@ -511,7 +511,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.UseItemSpoilingTimeMultipliers()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool UseItemSpoilingTimeMultipliers() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer_CropPlot.UseItemSpoilingTimeMultipliers()");
@@ -617,10 +617,60 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.WateredOverridesCraftingItemTemplate")); }
     TArray<void*>& WateringItemTemplatesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureItemContainer_CropPlot.WateringItemTemplates"); }
+    BrzCampoPonteiro bAllowOpenToSkyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bAllowOpenToSky")); }
+    BrzCampoPonteiro bAutoFillField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bAutoFill")); }
+    BrzCampoPonteiro bAutoMaxGreenhouseEffectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bAutoMaxGreenhouseEffect")); }
+    BrzCampoPonteiro bAutoMaxWaterAndFertilizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bAutoMaxWaterAndFertilize")); }
+    BrzCampoPonteiro bCropUsesGreenhouseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bCropUsesGreenhouse")); }
     //  no cache antigo este campo se chamava bDelayCropRefresh.
     //  nesta build ele e' `CropRefreshIntervalMin` — resolve por NOME.
     BrzCampoPonteiro bDelayCropRefreshField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.CropRefreshIntervalMin")); }
+    BrzCampoPonteiro bDontAddWaterOnInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bDontAddWaterOnInventoryItemUsed")); }
+    BrzCampoPonteiro bGainWaterOverTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bGainWaterOverTime")); }
+    BrzCampoPonteiro bHasFruitItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bHasFruitItems")); }
+    BrzCampoPonteiro bIsFertilizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bIsFertilized")); }
+    BrzCampoPonteiro bIsSeededField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bIsSeeded")); }
+    BrzCampoPonteiro bIsWaterTankField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bIsWaterTank")); }
+    BrzCampoPonteiro bIsWateredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bIsWatered")); }
+    BrzCampoPonteiro bShowWaterAmountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bShowWaterAmount")); }
+    BrzCampoPonteiro bUseBPAdjustCropYield_MaxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPAdjustCropYield_Max")); }
+    BrzCampoPonteiro bUseBPAdjustCropYield_SingleRefreshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPAdjustCropYield_SingleRefresh")); }
+    BrzCampoPonteiro bUseBPGetAdditionalGrowthMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPGetAdditionalGrowthMultiplier")); }
+    BrzCampoPonteiro bUseBPOnCropPhaseDecreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnCropPhaseDecrease")); }
+    BrzCampoPonteiro bUseBPOnCropPhaseIncreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnCropPhaseIncrease")); }
+    BrzCampoPonteiro bUseBPOnFertilizerItemUsedUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnFertilizerItemUsedUp")); }
+    BrzCampoPonteiro bUseBPOnHarvestItemsCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnHarvestItemsCreated")); }
+    BrzCampoPonteiro bUseBPOnNotifyCraftedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnNotifyCraftedItem")); }
+    BrzCampoPonteiro bUseBPOnRefreshCropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnRefreshCrop")); }
+    BrzCampoPonteiro bUseBPOnRemovedCropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnRemovedCrop")); }
+    BrzCampoPonteiro bUseBPOnUpdateCropVisualsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUseBPOnUpdateCropVisuals")); }
+    BrzCampoPonteiro bUsesCropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot.bUsesCrop")); }
     BitFieldValue<bool, unsigned __int32> bUsesCrop()
     { return { (void*)this, "bUsesCrop" }; }
     BitFieldValue<bool, unsigned __int32> bIsWaterTank()

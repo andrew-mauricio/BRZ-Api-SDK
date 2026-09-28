@@ -70,7 +70,7 @@ struct UPrimalItemInventoryToolTipWidget
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItemInventoryToolTipWidget.UpdateCraftInfo(UPrimalItem&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateCraftInfo(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalItemInventoryToolTipWidget.UpdateCraftInfo(UPrimalItem&)", a0);
@@ -155,7 +155,7 @@ struct UPrimalItemInventoryToolTipWidget
     BrzCampoPonteiro Craft_RequirementsUnmetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.Craft_RequirementsUnmet")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ItemQualityOverlay` +8, medido na build 25090264
+    //  ancorado em `ItemQualityOverlay` +8, medido na build 25535041
     //  (offset absoluto medido: 0x568; confianca alta)
     void*& CraftingRequirementsCustomLabelField() const
     { return BrzCampoAncorado<void*>(this, "ItemQualityOverlay", 8); }
@@ -195,10 +195,10 @@ struct UPrimalItemInventoryToolTipWidget
     { return *GetNativePointerField<float*>(this, "UPrimalItemInventoryToolTipWidget.GamepadSelectClosestDistanceMultiplier"); }
     float& General_GroupFreqField() const
     { return *GetNativePointerField<float*>(this, "UPrimalItemInventoryToolTipWidget.General_GroupFreq"); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.HandleVisibilityWithInput")); }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.Highlightable")); }
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UPrimalItemInventoryToolTipWidget.InputComponent"); }
     BrzCampoPonteiro ItemQualityOverlayField() const
@@ -263,8 +263,8 @@ struct UPrimalItemInventoryToolTipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.TraitLabelNames")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UPrimalItemInventoryToolTipWidget.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -277,44 +277,44 @@ struct UPrimalItemInventoryToolTipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.WidgetTree")); }
     int& WidgetWidthField() const
     { return *GetNativePointerField<int*>(this, "UPrimalItemInventoryToolTipWidget.WidgetWidth"); }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoOverlayFade()
-    { return { (void*)this, "bDoOverlayFade" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoOverlayFadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bDoOverlayFade")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bDontRenderHighlight")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitToolTip()
-    { return { (void*)this, "bUseBPInitToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPUpdateToolTip()
-    { return { (void*)this, "bUseBPUpdateToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bIsFocusable")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bIsVolatile")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bUseBPInitToolTip")); }
+    BrzCampoPonteiro bUseBPUpdateToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bUseBPUpdateToolTip")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.bUseWindowClippingForHighlight")); }
     FName& fnameCraftPanelField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalItemInventoryToolTipWidget.fnameCraftPanel"); }
     FName& fnameCraftTitleLabelField() const

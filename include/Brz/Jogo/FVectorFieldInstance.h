@@ -41,16 +41,24 @@ struct FVectorFieldInstance
         return NativeCall<void*, void*>(this, "FVectorFieldInstance.UpdateTransforms(UE::Math::TMatrix<double>&)", a0);
     }
 
-    BitFieldValue<bool, unsigned __int32> Index()
-    { return { (void*)this, "Index" }; }
+    BrzCampoPonteiro IndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.Index")); }
     BrzCampoPonteiro IntensityField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.Intensity")); }
     BrzCampoPonteiro ResourceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.Resource")); }
     BrzCampoPonteiro TightnessField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.Tightness")); }
+    BrzCampoPonteiro VolumeToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.VolumeToWorld")); }
+    BrzCampoPonteiro VolumeToWorldNoScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.VolumeToWorldNoScale")); }
     BrzCampoPonteiro WorldBoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.WorldBounds")); }
+    BrzCampoPonteiro WorldToVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.WorldToVolume")); }
+    BrzCampoPonteiro bInstancedResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldInstance.bInstancedResource")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDINSTANCE_H

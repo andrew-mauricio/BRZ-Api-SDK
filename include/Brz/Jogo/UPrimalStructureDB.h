@@ -45,8 +45,8 @@ struct UPrimalStructureDB
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalStructureDB.CachedStructureData")); }
     BrzCampoPonteiro NativeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalStructureDB.NativeClass")); }
-    BitFieldValue<bool, unsigned __int32> bForceRepopulateAll()
-    { return { (void*)this, "bForceRepopulateAll" }; }
+    BrzCampoPonteiro bForceRepopulateAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalStructureDB.bForceRepopulateAll")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALSTRUCTUREDB_H

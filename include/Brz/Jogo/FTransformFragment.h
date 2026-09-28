@@ -37,10 +37,10 @@ struct FTransformFragment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformFragment.StaticStruct()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo+string_aprovado]
-    static UScriptStruct* StaticStruct()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    UScriptStruct* StaticStruct() const
     {
-        return NativeCall<UScriptStruct*>(nullptr, "FTransformFragment.StaticStruct()");
+        return NativeCall<UScriptStruct*>(this, "FTransformFragment.StaticStruct()");
     }
 
     BrzCampoPonteiro TransformField() const

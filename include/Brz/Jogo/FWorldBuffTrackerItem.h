@@ -32,6 +32,9 @@ struct FWorldBuffTrackerItem
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro CustomImplementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldBuffTrackerItem.CustomImplement")); }
     BrzCampoPonteiro StackCountField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldBuffTrackerItem.StackCount")); }
     BrzCampoPonteiro WorldBuffIdentifierField() const

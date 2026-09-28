@@ -46,7 +46,7 @@ struct UPrimalItemTrait
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItemTrait.GetTraitModifier(UPrimalItem*,FItemTraitModifier&,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTraitModifier(void* a0, void* a1, int a2) const
     {
         return NativeCall<void*, void*, void*, int>(this, "UPrimalItemTrait.GetTraitModifier(UPrimalItem*,FItemTraitModifier&,int)", a0, a1, a2);
@@ -70,7 +70,7 @@ struct UPrimalItemTrait
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItemTrait.OnTraitInitialized(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=128]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnTraitInitialized(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalItemTrait.OnTraitInitialized(UPrimalItem*)", a0);
@@ -78,7 +78,7 @@ struct UPrimalItemTrait
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItemTrait.OnTraitRemoved(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnTraitRemoved(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalItemTrait.OnTraitRemoved(UPrimalItem*)", a0);
@@ -118,6 +118,10 @@ struct UPrimalItemTrait
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemTrait.PreventedItems")); }
     FName& TypeField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalItemTrait.Type"); }
+    BrzCampoPonteiro bReplicateOnItemTraitEffectActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemTrait.bReplicateOnItemTraitEffectActivated")); }
+    BrzCampoPonteiro bUseBPGetTraitModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemTrait.bUseBPGetTraitModifier")); }
     BitFieldValue<bool, unsigned __int32> bReplicateOnItemTraitEffectActivated()
     { return { (void*)this, "bReplicateOnItemTraitEffectActivated" }; }
     BitFieldValue<bool, unsigned __int32> bUseBPGetTraitModifier()

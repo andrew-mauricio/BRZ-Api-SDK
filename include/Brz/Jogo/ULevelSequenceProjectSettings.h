@@ -39,6 +39,8 @@ struct ULevelSequenceProjectSettings
     { return *GetNativePointerField<FString*>(this, "ULevelSequenceProjectSettings.DefaultDisplayRate"); }
     FString& DefaultTickResolutionField() const
     { return *GetNativePointerField<FString*>(this, "ULevelSequenceProjectSettings.DefaultTickResolution"); }
+    BrzCampoPonteiro bDefaultLockEngineToDisplayRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequenceProjectSettings.bDefaultLockEngineToDisplayRate")); }
     BitFieldValue<bool, unsigned __int32> bDefaultLockEngineToDisplayRate()
     { return { (void*)this, "bDefaultLockEngineToDisplayRate" }; }
 

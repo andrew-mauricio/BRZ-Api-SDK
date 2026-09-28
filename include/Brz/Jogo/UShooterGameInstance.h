@@ -125,7 +125,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.BeginWelcomeScreenState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BeginWelcomeScreenState() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.BeginWelcomeScreenState()");
@@ -157,7 +157,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.ClearClientTradeData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=158]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClearClientTradeData() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.ClearClientTradeData()");
@@ -261,7 +261,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.EndMessageMenuState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EndMessageMenuState() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.EndMessageMenuState()");
@@ -269,7 +269,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.EndWelcomeScreenState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndWelcomeScreenState() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.EndWelcomeScreenState()");
@@ -293,7 +293,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.FindRegisteredMarket(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FindRegisteredMarket(int a0) const
     {
         return NativeCall<void*, int>(this, "UShooterGameInstance.FindRegisteredMarket(int)", a0);
@@ -309,7 +309,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.FinishJoinSession(EOnJoinSessionCompleteResult::Type)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=22/22]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FinishJoinSession(int a0) const
     {
         return NativeCall<void*, int>(this, "UShooterGameInstance.FinishJoinSession(EOnJoinSessionCompleteResult::Type)", a0);
@@ -369,7 +369,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.GetGameSpecificMessageResultsForConnection(EPrimalControlMessageID,UNetConn
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetGameSpecificMessageResultsForConnection(int a0, void* a1, void* a2) const
     {
         return NativeCall<void*, int, void*, void*>(this, "UShooterGameInstance.GetGameSpecificMessageResultsForConnection(EPrimalControlMessageID,UNetConnection*,TArray<FPrimalGameSpecificMessageResult,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -385,7 +385,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.GetInstalledDynamicMods()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetInstalledDynamicMods() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.GetInstalledDynamicMods()");
@@ -393,7 +393,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.GetInstalledMods()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetInstalledMods() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.GetInstalledMods()");
@@ -525,7 +525,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.GetSellOrder_Client(int,__int64)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSellOrder_Client(int a0, long long a1) const
     {
         return NativeCall<void*, int, long long>(this, "UShooterGameInstance.GetSellOrder_Client(int,__int64)", a0, a1);
@@ -557,7 +557,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.GetSkeletalPhysCustomBodyAdditionalIgnores()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSkeletalPhysCustomBodyAdditionalIgnores() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.GetSkeletalPhysCustomBodyAdditionalIgnores()");
@@ -633,7 +633,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.HandleGameNetControlMessage(UNetConnection*,unsignedchar,FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleGameNetControlMessage(void* a0, unsigned char a1, const FString& a2) const
     {
         return NativeCall<void*, void*, unsigned char, void*>(this, "UShooterGameInstance.HandleGameNetControlMessage(UNetConnection*,unsignedchar,FString&)", a0, a1, const_cast<FString*>(&a2));
@@ -645,7 +645,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.HandleLocalPlayerAddedForDiscordJoinBinding(ULocalPlayer*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleLocalPlayerAddedForDiscordJoinBinding(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameInstance.HandleLocalPlayerAddedForDiscordJoinBinding(ULocalPlayer*)", a0);
@@ -653,7 +653,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.HandleLoginComplete(int,bool,FUniqueNetId&,FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleLoginComplete(int a0, bool a1, void* a2, const FString& a3) const
     {
         return NativeCall<void*, int, bool, void*, void*>(this, "UShooterGameInstance.HandleLoginComplete(int,bool,FUniqueNetId&,FString&)", a0, a1, a2, const_cast<FString*>(&a3));
@@ -681,7 +681,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.HandleUserLoginChanged(int,ELoginStatus::Type,ELoginStatus::Type,FUniqueNet
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HandleUserLoginChanged(int a0, int a1, int a2, void* a3) const
     {
         return NativeCall<void*, int, int, int, void*>(this, "UShooterGameInstance.HandleUserLoginChanged(int,ELoginStatus::Type,ELoginStatus::Type,FUniqueNetId&)", a0, a1, a2, a3);
@@ -697,7 +697,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.HasCrossplayPrivilege()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasCrossplayPrivilege() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.HasCrossplayPrivilege()");
@@ -725,7 +725,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.InternalTravelToSession(FName&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InternalTravelToSession(const FName& a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameInstance.InternalTravelToSession(FName&)", const_cast<FName*>(&a0));
@@ -809,7 +809,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.LoadGameMedia()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro LoadGameMedia() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.LoadGameMedia()");
@@ -889,7 +889,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.OnPreLoadMap(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=370+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnPreLoadMap(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameInstance.OnPreLoadMap(FString&)", const_cast<FString*>(&a0));
@@ -917,7 +917,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.PrimalBeginAuthenticateClientFromPlatform(UNetConnection*,FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PrimalBeginAuthenticateClientFromPlatform(void* a0, const FString& a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UShooterGameInstance.PrimalBeginAuthenticateClientFromPlatform(UNetConnection*,FString&)", a0, const_cast<FString*>(&a1));
@@ -989,7 +989,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.RequestNewSTSToken(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RequestNewSTSToken(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterGameInstance.RequestNewSTSToken(bool)", a0);
@@ -1029,7 +1029,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.SetIsOnline(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsOnline(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterGameInstance.SetIsOnline(bool)", a0);
@@ -1093,7 +1093,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.Shutdown()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Shutdown() const
     {
         return NativeCall<void*>(this, "UShooterGameInstance.Shutdown()");
@@ -1145,7 +1145,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.Tick(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Tick(float a0) const
     {
         return NativeCall<void*, float>(this, "UShooterGameInstance.Tick(float)", a0);
@@ -1153,7 +1153,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.TravelLocalSessionFailure(UWorld*,ETravelFailure::Type,FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TravelLocalSessionFailure(void* a0, int a1, const FString& a2) const
     {
         return NativeCall<void*, void*, int, void*>(this, "UShooterGameInstance.TravelLocalSessionFailure(UWorld*,ETravelFailure::Type,FString&)", a0, a1, const_cast<FString*>(&a2));
@@ -1173,7 +1173,7 @@ struct UShooterGameInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameInstance.UnregisterMarketByRef(APrimalStructureMarket*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UnregisterMarketByRef(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameInstance.UnregisterMarketByRef(APrimalStructureMarket*)", a0);
@@ -1214,12 +1214,12 @@ struct UShooterGameInstance
     FName& ActiveEventField() const
     { return *GetNativePointerField<FName*>(this, "UShooterGameInstance.ActiveEvent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +336, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +336, medido na build 25535041
     //  (offset absoluto medido: 0xA88; confianca baixa)
     void*& ActiveSettingsCommandArgumentsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 336); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +240, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +240, medido na build 25535041
     //  (offset absoluto medido: 0xA28; confianca baixa)
     void*& ActivityRequestedHandleField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 240); }
@@ -1230,119 +1230,119 @@ struct UShooterGameInstance
     BrzCampoPonteiro BackblazeCloudStorageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.BackblazeCloudStorage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +304, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +304, medido na build 25535041
     //  (offset absoluto medido: 0xA68; confianca baixa)
     void*& BannedServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 304); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +128, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +128, medido na build 25535041
     //  (offset absoluto medido: 0x9B8; confianca media)
     void*& CacheOwnedPremiumModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +280, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +280, medido na build 25535041
     //  (offset absoluto medido: 0xA50; confianca baixa)
     void*& CanBindActivityField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 280); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +112, medido na build 25090264
+    //  ancorado em `OnAsyncAssetLoaded` +112, medido na build 25535041
     //  (offset absoluto medido: 0x290; confianca media)
     void*& Client_BlockedUserIdsField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +248, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +248, medido na build 25535041
     //  (offset absoluto medido: 0xA30; confianca baixa)
     void*& CurrentActivityField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 248); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +184, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +184, medido na build 25535041
     //  (offset absoluto medido: 0x9F0; confianca baixa)
     void*& DinoIKCooldownTimerField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +192, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +192, medido na build 25535041
     //  (offset absoluto medido: 0x9F8; confianca baixa)
     void*& DinoIKDistanceMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +8, medido na build 25090264
+    //  ancorado em `WorldModifiersContainer` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3A0; confianca media)
     void*& EnabledModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +324, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +324, medido na build 25535041
     //  (offset absoluto medido: 0xA7C; confianca baixa)
     void*& FailedAttemptsToGetBannerServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 324); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +320, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +320, medido na build 25535041
     //  (offset absoluto medido: 0xA78; confianca baixa)
     void*& FailedAttemptsToGetOfficialServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 320); }
     BrzCampoPonteiro GlobalTradeData_ClientField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.GlobalTradeData_Client")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +16, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +16, medido na build 25535041
     //  (offset absoluto medido: 0x948; confianca media)
     void*& InputPreprocessorPtrField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +216, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +216, medido na build 25535041
     //  (offset absoluto medido: 0xA10; confianca baixa)
     void*& InvitePasswordField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +200, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +200, medido na build 25535041
     //  (offset absoluto medido: 0xA00; confianca baixa)
     void*& InvitePasswordUIField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +272, medido na build 25090264
+    //  ancorado em `OnAsyncAssetLoaded` +272, medido na build 25535041
     //  (offset absoluto medido: 0x330; confianca baixa)
     void*& ListenServerVoiceLobbyIdField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 272); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +48, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +48, medido na build 25535041
     //  (offset absoluto medido: 0x968; confianca media)
     void*& LocalOwnedPremiumModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 48); }
     BrzCampoPonteiro LocalPlayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.LocalPlayers")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +192, medido na build 25090264
+    //  ancorado em `OnAsyncAssetLoaded` +192, medido na build 25535041
     //  (offset absoluto medido: 0x2E0; confianca baixa)
     void*& MainMenuBlockedUserResultsField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 192); }
     FString& MainMenuMapField() const
     { return *GetNativePointerField<FString*>(this, "UShooterGameInstance.MainMenuMap"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +8, medido na build 25090264
+    //  ancorado em `BackblazeCloudStorage` +8, medido na build 25535041
     //  (offset absoluto medido: 0xAA8; confianca alta)
     void*& ModBrowserManagementActorRefField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 8); }
     BrzCampoPonteiro MusicPlayerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.MusicPlayer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +176, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +176, medido na build 25535041
     //  (offset absoluto medido: 0x9E8; confianca baixa)
     void*& NumDinoIKThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +196, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +196, medido na build 25535041
     //  (offset absoluto medido: 0x9FC; confianca baixa)
     void*& NumDinoIKThisFrameTargetField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 196); }
     BrzCampoPonteiro ObjectsPendingTimeShiftField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.ObjectsPendingTimeShift")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +288, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +288, medido na build 25535041
     //  (offset absoluto medido: 0xA58; confianca baixa)
     void*& OfficialServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 288); }
     BrzCampoPonteiro OnAsyncAssetLoadedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.OnAsyncAssetLoaded")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +32, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +32, medido na build 25535041
     //  (offset absoluto medido: 0x958; confianca media)
     void*& OnAutoUpdatingModsCompleteField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 32); }
@@ -1351,7 +1351,7 @@ struct UShooterGameInstance
     BrzCampoPonteiro OnPawnControllerChangedDelegatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.OnPawnControllerChangedDelegates")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +16, medido na build 25090264
+    //  ancorado em `OnAsyncAssetLoaded` +16, medido na build 25535041
     //  (offset absoluto medido: 0x230; confianca media)
     void*& OnPossessBlockPlayerNotificationField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 16); }
@@ -1362,54 +1362,54 @@ struct UShooterGameInstance
     BrzCampoPonteiro OpenColorIOObjectField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.OpenColorIOObject")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +144, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +144, medido na build 25535041
     //  (offset absoluto medido: 0x9C8; confianca baixa)
     void*& PMXMField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +88, medido na build 25090264
+    //  ancorado em `WorldModifiersContainer` +88, medido na build 25535041
     //  (offset absoluto medido: 0x3F0; confianca media)
     void*& PassiveModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +264, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +264, medido na build 25535041
     //  (offset absoluto medido: 0xA40; confianca baixa)
     void*& PendingActivityChangeField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 264); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPgoSweepInterval` +232, medido na build 25090264
+    //  ancorado em `AutoPgoSweepInterval` +232, medido na build 25535041
     //  (offset absoluto medido: 0x558; confianca baixa)
     void*& PendingInviteField() const
     { return BrzCampoAncorado<void*>(this, "AutoPgoSweepInterval", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPgoSweepInterval` +160, medido na build 25090264
+    //  ancorado em `AutoPgoSweepInterval` +160, medido na build 25535041
     //  (offset absoluto medido: 0x510; confianca baixa)
     void*& PendingMessageAfterReachingStateField() const
     { return BrzCampoAncorado<void*>(this, "AutoPgoSweepInterval", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +352, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +352, medido na build 25535041
     //  (offset absoluto medido: 0xA98; confianca baixa)
     void*& PendingModDeeplinkField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 352); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +24, medido na build 25090264
+    //  ancorado em `BackblazeCloudStorage` +24, medido na build 25535041
     //  (offset absoluto medido: 0xAB8; confianca alta)
     void*& PreviewAudienceHandleField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +160, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +160, medido na build 25535041
     //  (offset absoluto medido: 0x9D8; confianca baixa)
     void*& PrimalCinematicActorField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +168, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +168, medido na build 25535041
     //  (offset absoluto medido: 0x9E0; confianca baixa)
     void*& PrimalLevelSequenceDirectorHidingUIField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 168); }
     BrzCampoPonteiro ReferencedObjectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.ReferencedObjects")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +32, medido na build 25090264
+    //  ancorado em `OnAsyncAssetLoaded` +32, medido na build 25535041
     //  (offset absoluto medido: 0x240; confianca media)
     void*& Server_BlockedUserMapField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 32); }
@@ -1420,42 +1420,44 @@ struct UShooterGameInstance
     BrzCampoPonteiro WorldModifiersContainerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.WorldModifiersContainer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +329, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +329, medido na build 25535041
     //  (offset absoluto medido: 0xA81; confianca baixa)
     void*& bBusyGettingBannedServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 329); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +328, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +328, medido na build 25535041
     //  (offset absoluto medido: 0xA80; confianca baixa)
     void*& bBusyGettingOfficialServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 328); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +16, medido na build 25090264
+    //  ancorado em `BackblazeCloudStorage` +16, medido na build 25535041
     //  (offset absoluto medido: 0xAB0; confianca alta)
     void*& bForceCallToBeginMainMenuStateField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +168, medido na build 25090264
+    //  ancorado em `WorldModifiersContainer` +168, medido na build 25535041
     //  (offset absoluto medido: 0x440; confianca baixa)
     void*& bForceDefaultMainMenuField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +169, medido na build 25090264
+    //  ancorado em `WorldModifiersContainer` +169, medido na build 25535041
     //  (offset absoluto medido: 0x441; confianca baixa)
     void*& bForceStateChangeField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 169); }
+    BrzCampoPonteiro bHasPlayedMainMenuIntroOnceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.bHasPlayedMainMenuIntroOnce")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +32, medido na build 25090264
+    //  ancorado em `BackblazeCloudStorage` +32, medido na build 25535041
     //  (offset absoluto medido: 0xAC0; confianca alta)
     void*& bIsPreviewAuthenticatedField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPgoSweepInterval` +224, medido na build 25090264
+    //  ancorado em `AutoPgoSweepInterval` +224, medido na build 25535041
     //  (offset absoluto medido: 0x550; confianca baixa)
     void*& bShouldShowMessageAfterReachingStateField() const
     { return BrzCampoAncorado<void*>(this, "AutoPgoSweepInterval", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +330, medido na build 25090264
+    //  ancorado em `WorldModifierConfigOverride` +330, medido na build 25535041
     //  (offset absoluto medido: 0xA82; confianca baixa)
     void*& bTransferringMapsFromBlueprintCallField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 330); }

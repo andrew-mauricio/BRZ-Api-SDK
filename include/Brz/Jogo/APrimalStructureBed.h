@@ -124,7 +124,7 @@ struct APrimalStructureBed : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBed.PlacedStructure(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=264+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureBed.PlacedStructure(AShooterPlayerController*)", a0);
@@ -182,6 +182,8 @@ struct APrimalStructureBed : public APrimalStructureSeating
     { return *GetNativePointerField<float*>(this, "APrimalStructureBed.UseCooldownRadius"); }
     float& UseCooldownTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureBed.UseCooldownTime"); }
+    BrzCampoPonteiro bDestroyAfterRespawnUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBed.bDestroyAfterRespawnUse")); }
     BitFieldValue<bool, unsigned __int32> bDestroyAfterRespawnUse()
     { return { (void*)this, "bDestroyAfterRespawnUse" }; }
 

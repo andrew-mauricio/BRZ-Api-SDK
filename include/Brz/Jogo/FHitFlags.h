@@ -32,6 +32,9 @@ struct FHitFlags
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro HitFlagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitFlags.HitFlags")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITFLAGS_H

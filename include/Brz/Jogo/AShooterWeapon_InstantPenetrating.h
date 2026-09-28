@@ -49,7 +49,7 @@ struct AShooterWeapon_InstantPenetrating : public AShooterWeapon_Instant
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_InstantPenetrating.PassiveUseAmmo(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=255]]
+    // endereco: casamento de bytes com a build de referencia
     int PassiveUseAmmo(int a0) const
     {
         return NativeCall<int, int>(this, "AShooterWeapon_InstantPenetrating.PassiveUseAmmo(int)", a0);
@@ -57,10 +57,11 @@ struct AShooterWeapon_InstantPenetrating : public AShooterWeapon_Instant
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_InstantPenetrating.Serialize(FArchive&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=46]]
+    // classe: a funcao mora em AActor, e AShooterWeapon_InstantPenetrating herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void Serialize(void* a0) const
     {
-        NativeCall<void, void*>(this, "AShooterWeapon_InstantPenetrating.Serialize(FArchive&)", a0);
+        NativeCall<void, void*>(this, "AActor.Serialize(FArchive&)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -101,6 +102,10 @@ struct AShooterWeapon_InstantPenetrating : public AShooterWeapon_Instant
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_InstantPenetrating.PenaltyPerPenetration"); }
     float& PenaltyPerUnrealUnitField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_InstantPenetrating.PenaltyPerUnrealUnit"); }
+    BrzCampoPonteiro bDebugPenetrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_InstantPenetrating.bDebugPenetration")); }
+    BrzCampoPonteiro bUseBPStopPenetratingAtHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_InstantPenetrating.bUseBPStopPenetratingAtHit")); }
     BitFieldValue<bool, unsigned __int32> bDebugPenetration()
     { return { (void*)this, "bDebugPenetration" }; }
     BitFieldValue<bool, unsigned __int32> bUseBPStopPenetratingAtHit()

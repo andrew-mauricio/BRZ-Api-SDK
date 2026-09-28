@@ -32,6 +32,9 @@ struct FHitTesting
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro SlateAppField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitTesting.SlateApp")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITTESTING_H

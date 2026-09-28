@@ -47,6 +47,10 @@ struct FPrimalFurPhysicsPointSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalFurPhysicsPointSettings.SocketName")); }
     BrzCampoPonteiro SpringFactorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalFurPhysicsPointSettings.SpringFactor")); }
+    BrzCampoPonteiro bEnableDistanceConstraintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalFurPhysicsPointSettings.bEnableDistanceConstraint")); }
+    BrzCampoPonteiro bEnablePivotConstraintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalFurPhysicsPointSettings.bEnablePivotConstraint")); }
     BitFieldValue<bool, unsigned __int32> bEnableDistanceConstraint()
     { return { (void*)this, "bEnableDistanceConstraint" }; }
     BitFieldValue<bool, unsigned __int32> bEnablePivotConstraint()

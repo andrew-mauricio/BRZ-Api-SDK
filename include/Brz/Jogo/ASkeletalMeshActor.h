@@ -37,7 +37,7 @@ struct ASkeletalMeshActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ASkeletalMeshActor.GetSkeletalMeshComponent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     USkeletalMeshComponent* GetSkeletalMeshComponent() const
     {
         return NativeCall<USkeletalMeshComponent*>(this, "ASkeletalMeshActor.GetSkeletalMeshComponent()");
@@ -45,7 +45,7 @@ struct ASkeletalMeshActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ASkeletalMeshActor.OnRep_ReplicatedMaterial0()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedMaterial0() const
     {
         NativeCall<void>(this, "ASkeletalMeshActor.OnRep_ReplicatedMaterial0()");
@@ -53,7 +53,7 @@ struct ASkeletalMeshActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ASkeletalMeshActor.OnRep_ReplicatedMaterial1()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedMaterial1() const
     {
         NativeCall<void>(this, "ASkeletalMeshActor.OnRep_ReplicatedMaterial1()");
@@ -61,7 +61,7 @@ struct ASkeletalMeshActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ASkeletalMeshActor.OnRep_ReplicatedMesh()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedMesh() const
     {
         NativeCall<void>(this, "ASkeletalMeshActor.OnRep_ReplicatedMesh()");
@@ -69,7 +69,7 @@ struct ASkeletalMeshActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ASkeletalMeshActor.OnRep_ReplicatedPhysAsset()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedPhysAsset() const
     {
         NativeCall<void>(this, "ASkeletalMeshActor.OnRep_ReplicatedPhysAsset()");
@@ -77,7 +77,7 @@ struct ASkeletalMeshActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ASkeletalMeshActor.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=35]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "ASkeletalMeshActor.PostInitializeComponents()");
@@ -109,6 +109,8 @@ struct ASkeletalMeshActor : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASkeletalMeshActor.ReplicatedPhysAsset")); }
     TObjectPtr<USkeletalMeshComponent>& SkeletalMeshComponentField() const
     { return *GetNativePointerField<TObjectPtr<USkeletalMeshComponent>*>(this, "ASkeletalMeshActor.SkeletalMeshComponent"); }
+    BrzCampoPonteiro bShouldDoAnimNotifiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASkeletalMeshActor.bShouldDoAnimNotifies")); }
     BitFieldValue<bool, unsigned __int32> bShouldDoAnimNotifies()
     { return { (void*)this, "bShouldDoAnimNotifies" }; }
 

@@ -35,10 +35,16 @@ struct FWorldPartitionStreamingQuerySource
 
     BrzCampoPonteiro DataLayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingQuerySource.DataLayers")); }
-    BitFieldValue<bool, unsigned __int32> Location()
-    { return { (void*)this, "Location" }; }
+    BrzCampoPonteiro LocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingQuerySource.Location")); }
     BrzCampoPonteiro RadiusField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingQuerySource.Radius")); }
+    BrzCampoPonteiro bDataLayersOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingQuerySource.bDataLayersOnly")); }
+    BrzCampoPonteiro bSpatialQueryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingQuerySource.bSpatialQuery")); }
+    BrzCampoPonteiro bUseGridLoadingRangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingQuerySource.bUseGridLoadingRange")); }
     BitFieldValue<bool, unsigned __int32> bDataLayersOnly()
     { return { (void*)this, "bDataLayersOnly" }; }
     BitFieldValue<bool, unsigned __int32> bSpatialQuery()

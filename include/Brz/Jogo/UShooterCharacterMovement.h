@@ -66,7 +66,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.BP_GetAnalogueInputModifier()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BP_GetAnalogueInputModifier() const
     {
         return NativeCall<void*>(this, "UShooterCharacterMovement.BP_GetAnalogueInputModifier()");
@@ -74,7 +74,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.BP_PerformMovement(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BP_PerformMovement(float a0) const
     {
         return NativeCall<void*, float>(this, "UShooterCharacterMovement.BP_PerformMovement(float)", a0);
@@ -82,7 +82,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.CanCrouchInCurrentState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=48]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanCrouchInCurrentState() const
     {
         return NativeCall<void*>(this, "UShooterCharacterMovement.CanCrouchInCurrentState()");
@@ -186,7 +186,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.IsUsingLadderPhysics()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsUsingLadderPhysics() const
     {
         return NativeCall<void*>(this, "UShooterCharacterMovement.IsUsingLadderPhysics()");
@@ -210,7 +210,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.LocalClientPostAdjustPosition()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=305]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro LocalClientPostAdjustPosition() const
     {
         return NativeCall<void*>(this, "UShooterCharacterMovement.LocalClientPostAdjustPosition()");
@@ -218,7 +218,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.LocalClientPreAdjustPosition()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=92]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro LocalClientPreAdjustPosition() const
     {
         return NativeCall<void*>(this, "UShooterCharacterMovement.LocalClientPreAdjustPosition()");
@@ -226,7 +226,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.OnMovementModeChanged(EMovementMode,unsignedchar)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnMovementModeChanged(int a0, unsigned char a1) const
     {
         return NativeCall<void*, int, unsigned char>(this, "UShooterCharacterMovement.OnMovementModeChanged(EMovementMode,unsignedchar)", a0, a1);
@@ -266,7 +266,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.SetClimbingTarget(UE::Math::TVector<double>&,UE::Math::TRotator<double
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=49]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetClimbingTarget(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UShooterCharacterMovement.SetClimbingTarget(UE::Math::TVector<double>&,UE::Math::TRotator<double>&)", a0, a1);
@@ -620,8 +620,8 @@ struct UShooterCharacterMovement
     { return *GetNativePointerField<TObjectPtr<USceneComponent>*>(this, "UShooterCharacterMovement.UpdatedComponent"); }
     TObjectPtr<UPrimitiveComponent>& UpdatedPrimitiveField() const
     { return *GetNativePointerField<TObjectPtr<UPrimitiveComponent>*>(this, "UShooterCharacterMovement.UpdatedPrimitive"); }
-    BitFieldValue<bool, unsigned __int32> Velocity()
-    { return { (void*)this, "Velocity" }; }
+    BrzCampoPonteiro VelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.Velocity")); }
     float& WalkableFloorAngleField() const
     { return *GetNativePointerField<float*>(this, "UShooterCharacterMovement.WalkableFloorAngle"); }
     float& WalkableFloorZField() const
@@ -636,268 +636,274 @@ struct UShooterCharacterMovement
     { return *GetNativePointerField<float*>(this, "UShooterCharacterMovement.WaveLockingMaxZOffset"); }
     BrzCampoPonteiro WorldToGravityTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.WorldToGravityTransform")); }
-    BitFieldValue<bool, unsigned __int32> bAccelerationFollowsRotation()
-    { return { (void*)this, "bAccelerationFollowsRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowImpactDeflection()
-    { return { (void*)this, "bAllowImpactDeflection" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowPhysicsRotationDuringAnimRootMotion()
-    { return { (void*)this, "bAllowPhysicsRotationDuringAnimRootMotion" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowSimulatedTickDistanceSkip()
-    { return { (void*)this, "bAllowSimulatedTickDistanceSkip" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCheckFloor()
-    { return { (void*)this, "bAlwaysCheckFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCheckForInvallidFloor()
-    { return { (void*)this, "bAlwaysCheckForInvallidFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyGravityWhileJumping()
-    { return { (void*)this, "bApplyGravityWhileJumping" }; }
-    BitFieldValue<bool, unsigned __int32> bAssumeSymmetricalRotation()
-    { return { (void*)this, "bAssumeSymmetricalRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoRegisterPhysicsVolumeUpdates()
-    { return { (void*)this, "bAutoRegisterPhysicsVolumeUpdates" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoRegisterUpdatedComponent()
-    { return { (void*)this, "bAutoRegisterUpdatedComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoUpdateTickRegistration()
-    { return { (void*)this, "bAutoUpdateTickRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bBaseOnAttachmentRoot()
-    { return { (void*)this, "bBaseOnAttachmentRoot" }; }
-    BitFieldValue<bool, unsigned __int32> bBasedMovementIgnorePhysicsBase()
-    { return { (void*)this, "bBasedMovementIgnorePhysicsBase" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bCanSlide()
-    { return { (void*)this, "bCanSlide" }; }
-    BitFieldValue<bool, unsigned __int32> bCanWalkOffLedges()
-    { return { (void*)this, "bCanWalkOffLedges" }; }
-    BitFieldValue<bool, unsigned __int32> bCanWalkOffLedgesWhenCrouching()
-    { return { (void*)this, "bCanWalkOffLedgesWhenCrouching" }; }
-    BitFieldValue<bool, unsigned __int32> bCheatFlying()
-    { return { (void*)this, "bCheatFlying" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckFallingAITempIgnoreDinoRiderMesh()
-    { return { (void*)this, "bCheckFallingAITempIgnoreDinoRiderMesh" }; }
-    BitFieldValue<bool, unsigned __int32> bClippedToWaterSurface()
-    { return { (void*)this, "bClippedToWaterSurface" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentShouldUpdatePhysicsVolume()
-    { return { (void*)this, "bComponentShouldUpdatePhysicsVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bConstrainToPlane()
-    { return { (void*)this, "bConstrainToPlane" }; }
-    BitFieldValue<bool, unsigned __int32> bCrouchMaintainsBaseLocation()
-    { return { (void*)this, "bCrouchMaintainsBaseLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bDeferUpdateMoveComponent()
-    { return { (void*)this, "bDeferUpdateMoveComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableSimulatedMovement()
-    { return { (void*)this, "bDisableSimulatedMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bDontClearRequestedVelocity()
-    { return { (void*)this, "bDontClearRequestedVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bDontFallBelowJumpZVelocityDuringJump()
-    { return { (void*)this, "bDontFallBelowJumpZVelocityDuringJump" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bEnablePhysicsInteraction()
-    { return { (void*)this, "bEnablePhysicsInteraction" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableScopedMovementUpdates()
-    { return { (void*)this, "bEnableScopedMovementUpdates" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableServerDualMoveScopedMovementUpdates()
-    { return { (void*)this, "bEnableServerDualMoveScopedMovementUpdates" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableSwimmingOutsideOfWater()
-    { return { (void*)this, "bEnableSwimmingOutsideOfWater" }; }
-    BitFieldValue<bool, unsigned __int32> bFallVelocityRecursionGuard()
-    { return { (void*)this, "bFallVelocityRecursionGuard" }; }
-    BitFieldValue<bool, unsigned __int32> bFastAttachedMove()
-    { return { (void*)this, "bFastAttachedMove" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAccelerationFollowsRotationInSwimming()
-    { return { (void*)this, "bForceAccelerationFollowsRotationInSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDontAllowDesiredRotationWhenFalling()
-    { return { (void*)this, "bForceDontAllowDesiredRotationWhenFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bForceMaxAccel()
-    { return { (void*)this, "bForceMaxAccel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceModifyDesiredRotation()
-    { return { (void*)this, "bForceModifyDesiredRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNextFloorCheck()
-    { return { (void*)this, "bForceNextFloorCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventExitingWater()
-    { return { (void*)this, "bForcePreventExitingWater" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHasRequestedVelocity()
-    { return { (void*)this, "bHasRequestedVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreBaseRotation()
-    { return { (void*)this, "bIgnoreBaseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreClientMovementErrorChecksAndCorrection()
-    { return { (void*)this, "bIgnoreClientMovementErrorChecksAndCorrection" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreRotationAccelerationWhenSwimming()
-    { return { (void*)this, "bIgnoreRotationAccelerationWhenSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bImpartBaseAngularVelocity()
-    { return { (void*)this, "bImpartBaseAngularVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bImpartBaseVelocityX()
-    { return { (void*)this, "bImpartBaseVelocityX" }; }
-    BitFieldValue<bool, unsigned __int32> bImpartBaseVelocityY()
-    { return { (void*)this, "bImpartBaseVelocityY" }; }
-    BitFieldValue<bool, unsigned __int32> bImpartBaseVelocityZ()
-    { return { (void*)this, "bImpartBaseVelocityZ" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bJustTeleported()
-    { return { (void*)this, "bJustTeleported" }; }
-    BitFieldValue<bool, unsigned __int32> bLastHasRequestedVelocity()
-    { return { (void*)this, "bLastHasRequestedVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bMaintainHorizontalGroundVelocity()
-    { return { (void*)this, "bMaintainHorizontalGroundVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bMovementInProgress()
-    { return { (void*)this, "bMovementInProgress" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkAlwaysReplicateTransformUpdateTimestamp()
-    { return { (void*)this, "bNetworkAlwaysReplicateTransformUpdateTimestamp" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkGravityDirectionChanged()
-    { return { (void*)this, "bNetworkGravityDirectionChanged" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkMovementModeChanged()
-    { return { (void*)this, "bNetworkMovementModeChanged" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSkipProxyPredictionOnNetUpdate()
-    { return { (void*)this, "bNetworkSkipProxyPredictionOnNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkUpdateReceived()
-    { return { (void*)this, "bNetworkUpdateReceived" }; }
-    BitFieldValue<bool, unsigned __int32> bNotifyApex()
-    { return { (void*)this, "bNotifyApex" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyForwardsInputAcceleration()
-    { return { (void*)this, "bOnlyForwardsInputAcceleration" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyForwardsInputAccelerationWalking()
-    { return { (void*)this, "bOnlyForwardsInputAccelerationWalking" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyUseRotationAccelerationWhenNoLinearAcceleration()
-    { return { (void*)this, "bOnlyUseRotationAccelerationWhenNoLinearAcceleration" }; }
-    BitFieldValue<bool, unsigned __int32> bOrientRotationToMovement()
-    { return { (void*)this, "bOrientRotationToMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bPerformingJumpOff()
-    { return { (void*)this, "bPerformingJumpOff" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventAddingImpulse()
-    { return { (void*)this, "bPreventAddingImpulse" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventEnteringWater()
-    { return { (void*)this, "bPreventEnteringWater" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventExitingWater()
-    { return { (void*)this, "bPreventExitingWater" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventPhysicsModeChange()
-    { return { (void*)this, "bPreventPhysicsModeChange" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSlidingWhileFalling()
-    { return { (void*)this, "bPreventSlidingWhileFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventWaterSurfaceHopping()
-    { return { (void*)this, "bPreventWaterSurfaceHopping" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventZeroPitchAndRollWhileFalling()
-    { return { (void*)this, "bPreventZeroPitchAndRollWhileFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bProjectNavMeshOnBothWorldChannels()
-    { return { (void*)this, "bProjectNavMeshOnBothWorldChannels" }; }
-    BitFieldValue<bool, unsigned __int32> bProjectNavMeshWalking()
-    { return { (void*)this, "bProjectNavMeshWalking" }; }
-    BitFieldValue<bool, unsigned __int32> bPushForceScaledToMass()
-    { return { (void*)this, "bPushForceScaledToMass" }; }
-    BitFieldValue<bool, unsigned __int32> bPushForceUsingZOffset()
-    { return { (void*)this, "bPushForceUsingZOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bReduceBackwardsMovement()
-    { return { (void*)this, "bReduceBackwardsMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bRequestedMoveUseAcceleration()
-    { return { (void*)this, "bRequestedMoveUseAcceleration" }; }
-    BitFieldValue<bool, unsigned __int32> bRequestedMoveWithMaxSpeed()
-    { return { (void*)this, "bRequestedMoveWithMaxSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bRequireAccelerationForUseControllerDesiredRotation()
-    { return { (void*)this, "bRequireAccelerationForUseControllerDesiredRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bRunPhysicsWithNoController()
-    { return { (void*)this, "bRunPhysicsWithNoController" }; }
-    BitFieldValue<bool, unsigned __int32> bSaveNonLocallyControlledRootMotion()
-    { return { (void*)this, "bSaveNonLocallyControlledRootMotion" }; }
-    BitFieldValue<bool, unsigned __int32> bScalePushForceToVelocity()
-    { return { (void*)this, "bScalePushForceToVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bServerAcceptClientAuthoritativePosition()
-    { return { (void*)this, "bServerAcceptClientAuthoritativePosition" }; }
-    BitFieldValue<bool, unsigned __int32> bServerCorrectForMovementModeChanges()
-    { return { (void*)this, "bServerCorrectForMovementModeChanges" }; }
-    BitFieldValue<bool, unsigned __int32> bShrinkProxyCapsule()
-    { return { (void*)this, "bShrinkProxyCapsule" }; }
-    BitFieldValue<bool, unsigned __int32> bSlipOffLedges()
-    { return { (void*)this, "bSlipOffLedges" }; }
-    BitFieldValue<bool, unsigned __int32> bSnapToPlaneAtStart()
-    { return { (void*)this, "bSnapToPlaneAtStart" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bStayBasedInAir()
-    { return { (void*)this, "bStayBasedInAir" }; }
-    BitFieldValue<bool, unsigned __int32> bSweepWhileNavWalking()
-    { return { (void*)this, "bSweepWhileNavWalking" }; }
-    BitFieldValue<bool, unsigned __int32> bTickBeforeOwner()
-    { return { (void*)this, "bTickBeforeOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bTouchForceScaledToMass()
-    { return { (void*)this, "bTouchForceScaledToMass" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateNavAgentWithOwnersCollision()
-    { return { (void*)this, "bUpdateNavAgentWithOwnersCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateOnlyIfRendered()
-    { return { (void*)this, "bUpdateOnlyIfRendered" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAccelerationForPaths()
-    { return { (void*)this, "bUseAccelerationForPaths" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAsyncWalking()
-    { return { (void*)this, "bUseAsyncWalking" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAcknowledgeServerCorrection()
-    { return { (void*)this, "bUseBPAcknowledgeServerCorrection" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAdjustServerMoveDeltaTime()
-    { return { (void*)this, "bUseBPAdjustServerMoveDeltaTime" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCharacterInterpolationAndStops()
-    { return { (void*)this, "bUseCharacterInterpolationAndStops" }; }
-    BitFieldValue<bool, unsigned __int32> bUseControllerDesiredRotation()
-    { return { (void*)this, "bUseControllerDesiredRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseFixedBrakingDistanceForPaths()
-    { return { (void*)this, "bUseFixedBrakingDistanceForPaths" }; }
-    BitFieldValue<bool, unsigned __int32> bUseFlatBaseForFloorChecks()
-    { return { (void*)this, "bUseFlatBaseForFloorChecks" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRVOAvoidance()
-    { return { (void*)this, "bUseRVOAvoidance" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRotationAcceleration()
-    { return { (void*)this, "bUseRotationAcceleration" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSeparateBrakingFriction()
-    { return { (void*)this, "bUseSeparateBrakingFriction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWaveLocking()
-    { return { (void*)this, "bUseWaveLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWeaponSpeedMultiplierByDirection()
-    { return { (void*)this, "bUseWeaponSpeedMultiplierByDirection" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsToCrouch()
-    { return { (void*)this, "bWantsToCrouch" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsToDodge()
-    { return { (void*)this, "bWantsToDodge" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsToLeaveNavWalking()
-    { return { (void*)this, "bWantsToLeaveNavWalking" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsToProne()
-    { return { (void*)this, "bWantsToProne" }; }
-    BitFieldValue<bool, unsigned __int32> bWasAvoidanceUpdated()
-    { return { (void*)this, "bWasAvoidanceUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bWasSimulatingRootMotion()
-    { return { (void*)this, "bWasSimulatingRootMotion" }; }
-    BitFieldValue<bool, unsigned __int32> bZeroPitchWhenNoAcceleration()
-    { return { (void*)this, "bZeroPitchWhenNoAcceleration" }; }
+    BrzCampoPonteiro bAccelerationFollowsRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAccelerationFollowsRotation")); }
+    BrzCampoPonteiro bAllowImpactDeflectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAllowImpactDeflection")); }
+    BrzCampoPonteiro bAllowPhysicsRotationDuringAnimRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAllowPhysicsRotationDuringAnimRootMotion")); }
+    BrzCampoPonteiro bAllowSimulatedTickDistanceSkipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAllowSimulatedTickDistanceSkip")); }
+    BrzCampoPonteiro bAllowWaterWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAllowWaterWalking")); }
+    BrzCampoPonteiro bAlwaysCheckFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAlwaysCheckFloor")); }
+    BrzCampoPonteiro bAlwaysCheckForInvallidFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAlwaysCheckForInvallidFloor")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bApplyGravityWhileJumpingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bApplyGravityWhileJumping")); }
+    BrzCampoPonteiro bAssumeSymmetricalRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAssumeSymmetricalRotation")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAutoActivate")); }
+    BrzCampoPonteiro bAutoRegisterPhysicsVolumeUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAutoRegisterPhysicsVolumeUpdates")); }
+    BrzCampoPonteiro bAutoRegisterUpdatedComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAutoRegisterUpdatedComponent")); }
+    BrzCampoPonteiro bAutoUpdateTickRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bAutoUpdateTickRegistration")); }
+    BrzCampoPonteiro bBaseOnAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bBaseOnAttachmentRoot")); }
+    BrzCampoPonteiro bBasedMovementIgnorePhysicsBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bBasedMovementIgnorePhysicsBase")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCanSlideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCanSlide")); }
+    BrzCampoPonteiro bCanWalkOffLedgesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCanWalkOffLedges")); }
+    BrzCampoPonteiro bCanWalkOffLedgesWhenCrouchingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCanWalkOffLedgesWhenCrouching")); }
+    BrzCampoPonteiro bCheatFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCheatFlying")); }
+    BrzCampoPonteiro bCheckFallingAITempIgnoreDinoRiderMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCheckFallingAITempIgnoreDinoRiderMesh")); }
+    BrzCampoPonteiro bClippedToWaterSurfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bClippedToWaterSurface")); }
+    BrzCampoPonteiro bComponentShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bComponentShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bConstrainToPlaneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bConstrainToPlane")); }
+    BrzCampoPonteiro bCrouchMaintainsBaseLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bCrouchMaintainsBaseLocation")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bDeferUpdateMoveComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bDeferUpdateMoveComponent")); }
+    BrzCampoPonteiro bDisableSimulatedMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bDisableSimulatedMovement")); }
+    BrzCampoPonteiro bDontClearRequestedVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bDontClearRequestedVelocity")); }
+    BrzCampoPonteiro bDontFallBelowJumpZVelocityDuringJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bDontFallBelowJumpZVelocityDuringJump")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bEditableWhenInherited")); }
+    BrzCampoPonteiro bEnablePhysicsInteractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bEnablePhysicsInteraction")); }
+    BrzCampoPonteiro bEnableScopedMovementUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bEnableScopedMovementUpdates")); }
+    BrzCampoPonteiro bEnableServerDualMoveScopedMovementUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bEnableServerDualMoveScopedMovementUpdates")); }
+    BrzCampoPonteiro bEnableSwimmingOutsideOfWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bEnableSwimmingOutsideOfWater")); }
+    BrzCampoPonteiro bFallVelocityRecursionGuardField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bFallVelocityRecursionGuard")); }
+    BrzCampoPonteiro bFastAttachedMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bFastAttachedMove")); }
+    BrzCampoPonteiro bForceAccelerationFollowsRotationInSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bForceAccelerationFollowsRotationInSwimming")); }
+    BrzCampoPonteiro bForceDontAllowDesiredRotationWhenFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bForceDontAllowDesiredRotationWhenFalling")); }
+    BrzCampoPonteiro bForceMaxAccelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bForceMaxAccel")); }
+    BrzCampoPonteiro bForceModifyDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bForceModifyDesiredRotation")); }
+    BrzCampoPonteiro bForceNextFloorCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bForceNextFloorCheck")); }
+    BrzCampoPonteiro bForcePreventExitingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bForcePreventExitingWater")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHasRequestedVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bHasRequestedVelocity")); }
+    BrzCampoPonteiro bIgnoreBaseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bIgnoreBaseRotation")); }
+    BrzCampoPonteiro bIgnoreClientMovementErrorChecksAndCorrectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bIgnoreClientMovementErrorChecksAndCorrection")); }
+    BrzCampoPonteiro bIgnoreRotationAccelerationWhenSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bIgnoreRotationAccelerationWhenSwimming")); }
+    BrzCampoPonteiro bImpartBaseAngularVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bImpartBaseAngularVelocity")); }
+    BrzCampoPonteiro bImpartBaseVelocityXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bImpartBaseVelocityX")); }
+    BrzCampoPonteiro bImpartBaseVelocityYField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bImpartBaseVelocityY")); }
+    BrzCampoPonteiro bImpartBaseVelocityZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bImpartBaseVelocityZ")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bIsEditorOnly")); }
+    BrzCampoPonteiro bJustTeleportedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bJustTeleported")); }
+    BrzCampoPonteiro bLastHasRequestedVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bLastHasRequestedVelocity")); }
+    BrzCampoPonteiro bMaintainHorizontalGroundVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bMaintainHorizontalGroundVelocity")); }
+    BrzCampoPonteiro bMovementInProgressField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bMovementInProgress")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNetAddressable")); }
+    BrzCampoPonteiro bNetworkAlwaysReplicateTransformUpdateTimestampField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNetworkAlwaysReplicateTransformUpdateTimestamp")); }
+    BrzCampoPonteiro bNetworkGravityDirectionChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNetworkGravityDirectionChanged")); }
+    BrzCampoPonteiro bNetworkMovementModeChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNetworkMovementModeChanged")); }
+    BrzCampoPonteiro bNetworkSkipProxyPredictionOnNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNetworkSkipProxyPredictionOnNetUpdate")); }
+    BrzCampoPonteiro bNetworkUpdateReceivedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNetworkUpdateReceived")); }
+    BrzCampoPonteiro bNotifyApexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bNotifyApex")); }
+    BrzCampoPonteiro bOnlyForwardsInputAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bOnlyForwardsInputAcceleration")); }
+    BrzCampoPonteiro bOnlyForwardsInputAccelerationWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bOnlyForwardsInputAccelerationWalking")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyUseRotationAccelerationWhenNoLinearAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bOnlyUseRotationAccelerationWhenNoLinearAcceleration")); }
+    BrzCampoPonteiro bOrientRotationToMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bOrientRotationToMovement")); }
+    BrzCampoPonteiro bPerformingJumpOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPerformingJumpOff")); }
+    BrzCampoPonteiro bPreventAddingImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventAddingImpulse")); }
+    BrzCampoPonteiro bPreventEnteringWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventEnteringWater")); }
+    BrzCampoPonteiro bPreventExitingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventExitingWater")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bPreventPhysicsModeChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventPhysicsModeChange")); }
+    BrzCampoPonteiro bPreventSlidingWhileFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventSlidingWhileFalling")); }
+    BrzCampoPonteiro bPreventWaterSurfaceHoppingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventWaterSurfaceHopping")); }
+    BrzCampoPonteiro bPreventZeroPitchAndRollWhileFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPreventZeroPitchAndRollWhileFalling")); }
+    BrzCampoPonteiro bProjectNavMeshOnBothWorldChannelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bProjectNavMeshOnBothWorldChannels")); }
+    BrzCampoPonteiro bProjectNavMeshWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bProjectNavMeshWalking")); }
+    BrzCampoPonteiro bPushForceScaledToMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPushForceScaledToMass")); }
+    BrzCampoPonteiro bPushForceUsingZOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bPushForceUsingZOffset")); }
+    BrzCampoPonteiro bReduceBackwardsMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bReduceBackwardsMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bReplicates")); }
+    BrzCampoPonteiro bRequestedMoveUseAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bRequestedMoveUseAcceleration")); }
+    BrzCampoPonteiro bRequestedMoveWithMaxSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bRequestedMoveWithMaxSpeed")); }
+    BrzCampoPonteiro bRequireAccelerationForUseControllerDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bRequireAccelerationForUseControllerDesiredRotation")); }
+    BrzCampoPonteiro bRunPhysicsWithNoControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bRunPhysicsWithNoController")); }
+    BrzCampoPonteiro bSaveNonLocallyControlledRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bSaveNonLocallyControlledRootMotion")); }
+    BrzCampoPonteiro bScalePushForceToVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bScalePushForceToVelocity")); }
+    BrzCampoPonteiro bServerAcceptClientAuthoritativePositionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bServerAcceptClientAuthoritativePosition")); }
+    BrzCampoPonteiro bServerCorrectForMovementModeChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bServerCorrectForMovementModeChanges")); }
+    BrzCampoPonteiro bShrinkProxyCapsuleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bShrinkProxyCapsule")); }
+    BrzCampoPonteiro bSlipOffLedgesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bSlipOffLedges")); }
+    BrzCampoPonteiro bSnapToPlaneAtStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bSnapToPlaneAtStart")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bStayBasedInAirField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bStayBasedInAir")); }
+    BrzCampoPonteiro bSweepWhileNavWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bSweepWhileNavWalking")); }
+    BrzCampoPonteiro bTickBeforeOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bTickBeforeOwner")); }
+    BrzCampoPonteiro bTouchForceScaledToMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bTouchForceScaledToMass")); }
+    BrzCampoPonteiro bUpdateNavAgentWithOwnersCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUpdateNavAgentWithOwnersCollision")); }
+    BrzCampoPonteiro bUpdateOnlyIfRenderedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUpdateOnlyIfRendered")); }
+    BrzCampoPonteiro bUseAccelerationForPathsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseAccelerationForPaths")); }
+    BrzCampoPonteiro bUseAdditionalLinePenetrationChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseAdditionalLinePenetrationChecks")); }
+    BrzCampoPonteiro bUseAsyncWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseAsyncWalking")); }
+    BrzCampoPonteiro bUseBPAcknowledgeServerCorrectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseBPAcknowledgeServerCorrection")); }
+    BrzCampoPonteiro bUseBPAdjustServerMoveDeltaTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseBPAdjustServerMoveDeltaTime")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseCharacterInterpolationAndStopsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseCharacterInterpolationAndStops")); }
+    BrzCampoPonteiro bUseControllerDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseControllerDesiredRotation")); }
+    BrzCampoPonteiro bUseFixedBrakingDistanceForPathsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseFixedBrakingDistanceForPaths")); }
+    BrzCampoPonteiro bUseFlatBaseForFloorChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseFlatBaseForFloorChecks")); }
+    BrzCampoPonteiro bUseRVOAvoidanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseRVOAvoidance")); }
+    BrzCampoPonteiro bUseRotationAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseRotationAcceleration")); }
+    BrzCampoPonteiro bUseSeparateBrakingFrictionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseSeparateBrakingFriction")); }
+    BrzCampoPonteiro bUseWaveLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseWaveLocking")); }
+    BrzCampoPonteiro bUseWeaponSpeedMultiplierByDirectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bUseWeaponSpeedMultiplierByDirection")); }
+    BrzCampoPonteiro bWantsToCrouchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWantsToCrouch")); }
+    BrzCampoPonteiro bWantsToDodgeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWantsToDodge")); }
+    BrzCampoPonteiro bWantsToLeaveNavWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWantsToLeaveNavWalking")); }
+    BrzCampoPonteiro bWantsToProneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWantsToProne")); }
+    BrzCampoPonteiro bWasAvoidanceUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWasAvoidanceUpdated")); }
+    BrzCampoPonteiro bWasSimulatingRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWasSimulatingRootMotion")); }
+    BrzCampoPonteiro bWaterBaseOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bWaterBaseOnly")); }
+    BrzCampoPonteiro bZeroPitchWhenNoAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCharacterMovement.bZeroPitchWhenNoAcceleration")); }
     BitFieldValue<bool, unsigned __int32> bAllowWaterWalking()
     { return { (void*)this, "bAllowWaterWalking" }; }
     BitFieldValue<bool, unsigned __int32> bUseAdditionalLinePenetrationChecks()

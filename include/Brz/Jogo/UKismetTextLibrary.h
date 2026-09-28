@@ -163,7 +163,7 @@ struct UKismetTextLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetTextLibrary.Conv_RotatorToText(UE::Math::TRotator<double>)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1544+grafo=18/18]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1544+grafo=14/14]]
     static BrzPonteiro Conv_RotatorToText(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UKismetTextLibrary.Conv_RotatorToText(UE::Math::TRotator<double>)", a0);
@@ -199,7 +199,7 @@ struct UKismetTextLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetTextLibrary.Conv_VectorToText(UE::Math::TVector<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro Conv_VectorToText(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UKismetTextLibrary.Conv_VectorToText(UE::Math::TVector<double>)", a0);

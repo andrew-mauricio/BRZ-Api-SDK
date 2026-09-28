@@ -55,7 +55,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.AttachOtherMeshes()
     // classe: a funcao mora em AShooterWeapon_Projectile, e APrimalWeaponBow herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void AttachOtherMeshes() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.AttachOtherMeshes()");
@@ -71,7 +71,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponBow.BPIsArrowHidden()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPIsArrowHidden() const
     {
         return NativeCall<bool>(this, "APrimalWeaponBow.BPIsArrowHidden()");
@@ -79,7 +79,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponBow.BPSimulatedResetSetPullingTime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPSimulatedResetSetPullingTime() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.BPSimulatedResetSetPullingTime()");
@@ -87,7 +87,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWeaponBow.CanMeleeAttack()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=66]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanMeleeAttack() const
     {
         return NativeCall<void*>(this, "APrimalWeaponBow.CanMeleeAttack()");
@@ -95,16 +95,15 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.CanReload()
-    // classe: a funcao mora em AShooterWeapon, e APrimalWeaponBow herda dela: o `this` e' compativel por construcao
-    // endereco: cache_pdb_25090264
+    // endereco: casamento de bytes com a build de referencia
     bool CanReload() const
     {
-        return NativeCall<bool>(this, "AShooterWeapon.CanReload()");
+        return NativeCall<bool>(this, "APrimalWeaponBow.CanReload()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.CanRun()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanRun() const
     {
         return NativeCall<bool>(this, "APrimalWeaponBow.CanRun()");
@@ -112,7 +111,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponBow.CancelPullString()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CancelPullString() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.CancelPullString()");
@@ -120,7 +119,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.DetachOtherMeshes()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DetachOtherMeshes() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.DetachOtherMeshes()");
@@ -145,7 +144,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.DoMeleeAttack()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=101]]
+    // endereco: casamento de bytes com a build de referencia
     void DoMeleeAttack() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.DoMeleeAttack()");
@@ -153,7 +152,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.FireProjectileEx(UE::Math::TVector<double>,FVector_NetQuantizeNormal,float,int,
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=202]]
+    // endereco: casamento de bytes com a build de referencia
     void FireProjectileEx(void* a0, void* a1, float a2, int a3, int a4) const
     {
         NativeCall<void, void*, void*, float, int, int>(this, "APrimalWeaponBow.FireProjectileEx(UE::Math::TVector<double>,FVector_NetQuantizeNormal,float,int,int)", a0, a1, a2, a3, a4);
@@ -161,7 +160,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.FireWeapon()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=39]]
+    // endereco: casamento de bytes com a build de referencia
     void FireWeapon() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.FireWeapon()");
@@ -185,7 +184,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.OnEquip()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=330+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void OnEquip() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.OnEquip()");
@@ -210,7 +209,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.PullString()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PullString() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.PullString()");
@@ -235,7 +234,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.ServerSetPullString_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetPullString_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponBow.ServerSetPullString_Implementation(bool)", a0);
@@ -244,7 +243,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.StartFire(bool)
     // classe: a funcao mora em AShooterWeapon, e APrimalWeaponBow herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon.StartFire(bool)", a0);
@@ -252,7 +251,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.StartUnequip_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartUnequip_Implementation() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.StartUnequip_Implementation()");
@@ -260,7 +259,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.StopFire()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopFire() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.StopFire()");
@@ -268,7 +267,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.StopOwnerEffects()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopOwnerEffects() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.StopOwnerEffects()");
@@ -285,7 +284,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.UnHideArrow()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void UnHideArrow() const
     {
         NativeCall<void>(this, "APrimalWeaponBow.UnHideArrow()");
@@ -294,7 +293,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.UpdateFirstPersonMeshes(bool)
     // classe: a funcao mora em AShooterWeapon, e APrimalWeaponBow herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=60]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateFirstPersonMeshes(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon.UpdateFirstPersonMeshes(bool)", a0);
@@ -310,7 +309,7 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponBow.UseAlternateAimOffsetAnim()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool UseAlternateAimOffsetAnim() const
     {
         return NativeCall<bool>(this, "APrimalWeaponBow.UseAlternateAimOffsetAnim()");
@@ -348,6 +347,42 @@ struct APrimalWeaponBow : public AShooterWeapon_Projectile
     { return *GetNativePointerField<float*>(this, "APrimalWeaponBow.PullingTime"); }
     float& PullingTimeForMaximumSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalWeaponBow.PullingTimeForMaximumSpeed"); }
+    BrzCampoPonteiro bAlwaysPlayTPVPullStringAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bAlwaysPlayTPVPullStringAnim")); }
+    BrzCampoPonteiro bAttachArrowToWeaponMesh3PField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bAttachArrowToWeaponMesh3P")); }
+    BrzCampoPonteiro bDidFireWeaponField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bDidFireWeapon")); }
+    BrzCampoPonteiro bDisablePullingOnCrouchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bDisablePullingOnCrouch")); }
+    BrzCampoPonteiro bDisablePullingOnProneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bDisablePullingOnProne")); }
+    BrzCampoPonteiro bDontRequireIdleForReloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bDontRequireIdleForReload")); }
+    BrzCampoPonteiro bForceServerCheckPullingTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bForceServerCheckPullingTime")); }
+    BrzCampoPonteiro bHideOriginalArrowBone1PField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bHideOriginalArrowBone1P")); }
+    BrzCampoPonteiro bHideWeaponOnLaunchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bHideWeaponOnLaunch")); }
+    BrzCampoPonteiro bIsLastArrowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bIsLastArrow")); }
+    BrzCampoPonteiro bIsPlayingPullStringAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bIsPlayingPullStringAnim")); }
+    BrzCampoPonteiro bIsPullingStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bIsPullingString")); }
+    BrzCampoPonteiro bNewPullStringEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bNewPullStringEvent")); }
+    BrzCampoPonteiro bPendingPullStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bPendingPullString")); }
+    BrzCampoPonteiro bPreventMeleeWhileFiringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bPreventMeleeWhileFiring")); }
+    BrzCampoPonteiro bReloadOnEmptyClipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bReloadOnEmptyClip")); }
+    BrzCampoPonteiro bUseArrowMesh1PField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bUseArrowMesh1P")); }
+    BrzCampoPonteiro bUseBPCanStartFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponBow.bUseBPCanStartFire")); }
     BitFieldValue<bool, unsigned __int32> bDisablePullingOnCrouch()
     { return { (void*)this, "bDisablePullingOnCrouch" }; }
     BitFieldValue<bool, unsigned __int32> bDisablePullingOnProne()

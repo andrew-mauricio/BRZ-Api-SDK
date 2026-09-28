@@ -37,14 +37,14 @@ struct FVectorAnimationAttribute
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FVectorAnimationAttribute.StaticStruct()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
-    static UScriptStruct* StaticStruct()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    UScriptStruct* StaticStruct() const
     {
-        return NativeCall<UScriptStruct*>(nullptr, "FVectorAnimationAttribute.StaticStruct()");
+        return NativeCall<UScriptStruct*>(this, "FVectorAnimationAttribute.StaticStruct()");
     }
 
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorAnimationAttribute.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORANIMATIONATTRIBUTE_H

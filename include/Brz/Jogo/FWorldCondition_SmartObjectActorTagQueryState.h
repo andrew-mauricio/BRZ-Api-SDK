@@ -32,6 +32,9 @@ struct FWorldCondition_SmartObjectActorTagQueryState
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro DelegateHandleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCondition_SmartObjectActorTagQueryState.DelegateHandle")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDCONDITION_SMARTOBJECTACTORTAGQUERYSTATE_H

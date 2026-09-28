@@ -43,6 +43,8 @@ struct UGameplayEffectExecutionCalculation
 
     BrzCampoPonteiro RelevantAttributesToCaptureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffectExecutionCalculation.RelevantAttributesToCapture")); }
+    BrzCampoPonteiro bRequiresPassedInTagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffectExecutionCalculation.bRequiresPassedInTags")); }
     BitFieldValue<bool, unsigned __int32> bRequiresPassedInTags()
     { return { (void*)this, "bRequiresPassedInTags" }; }
 

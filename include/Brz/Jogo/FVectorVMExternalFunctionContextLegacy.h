@@ -32,6 +32,9 @@ struct FVectorVMExternalFunctionContextLegacy
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro VectorVMContextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextLegacy.VectorVMContext")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMEXTERNALFUNCTIONCONTEXTLEGACY_H

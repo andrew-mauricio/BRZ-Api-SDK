@@ -62,7 +62,7 @@ struct ULevelCapture
     FString& InheritedCommandLineArgumentsField() const
     { return *GetNativePointerField<FString*>(this, "ULevelCapture.InheritedCommandLineArguments"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bAutoStartCapture` +4, medido na build 25090264
+    //  ancorado em `bAutoStartCapture` +4, medido na build 25535041
     //  (offset absoluto medido: 0x23C; confianca alta)
     void*& PrerequisiteActorField() const
     { return BrzCampoAncorado<void*>(this, "bAutoStartCapture", 4); }
@@ -70,10 +70,12 @@ struct ULevelCapture
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelCapture.PrerequisiteActorId")); }
     BrzCampoPonteiro SettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelCapture.Settings")); }
-    BitFieldValue<bool, unsigned __int32> bCloseEditorWhenCaptureStarts()
-    { return { (void*)this, "bCloseEditorWhenCaptureStarts" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSeparateProcess()
-    { return { (void*)this, "bUseSeparateProcess" }; }
+    BrzCampoPonteiro bAutoStartCaptureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelCapture.bAutoStartCapture")); }
+    BrzCampoPonteiro bCloseEditorWhenCaptureStartsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelCapture.bCloseEditorWhenCaptureStarts")); }
+    BrzCampoPonteiro bUseSeparateProcessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelCapture.bUseSeparateProcess")); }
     BitFieldValue<bool, unsigned __int32> bAutoStartCapture()
     { return { (void*)this, "bAutoStartCapture" }; }
 

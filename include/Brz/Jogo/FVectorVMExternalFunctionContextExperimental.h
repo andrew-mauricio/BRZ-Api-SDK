@@ -32,14 +32,33 @@ struct FVectorVMExternalFunctionContextExperimental
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro DataSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.DataSets")); }
     BrzCampoPonteiro NumInstancesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.NumInstances")); }
     BrzCampoPonteiro NumLoopsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.NumLoops")); }
+    BrzCampoPonteiro NumRegistersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.NumRegisters")); }
     BrzCampoPonteiro NumUserPtrsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.NumUserPtrs")); }
+    BrzCampoPonteiro PerInstanceFnInstanceIdxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.PerInstanceFnInstanceIdx")); }
+    BrzCampoPonteiro RandCountersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.RandCounters")); }
     BrzCampoPonteiro RandStreamField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.RandStream")); }
+    BrzCampoPonteiro RegIncField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.RegInc")); }
+    BrzCampoPonteiro RegReadCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.RegReadCount")); }
+    BrzCampoPonteiro RegisterDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.RegisterData")); }
+    BrzCampoPonteiro StartInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.StartInstance")); }
+    BrzCampoPonteiro UserPtrTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextExperimental.UserPtrTable")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMEXTERNALFUNCTIONCONTEXTEXPERIMENTAL_H

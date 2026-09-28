@@ -38,7 +38,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.AddFireBuff(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddFireBuff(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipSailComponent.AddFireBuff(int)", a0);
@@ -70,7 +70,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.GetSailComponentOpenRatio(USceneComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSailComponentOpenRatio(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalShipSailComponent.GetSailComponentOpenRatio(USceneComponent*)", a0);
@@ -86,7 +86,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.Net_SetUnMannedGoalAngle(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Net_SetUnMannedGoalAngle(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalShipSailComponent.Net_SetUnMannedGoalAngle(float)", a0);
@@ -94,7 +94,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.Net_SetUnMannedThrottleRatio(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Net_SetUnMannedThrottleRatio(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalShipSailComponent.Net_SetUnMannedThrottleRatio(float)", a0);
@@ -102,7 +102,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.OnRep_SetCanvasHealth()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_SetCanvasHealth() const
     {
         return NativeCall<void*>(this, "UPrimalShipSailComponent.OnRep_SetCanvasHealth()");
@@ -110,7 +110,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.OnStructurePlacedNotify(APlayerController*,UE::Math::TVector<double>,UE
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStructurePlacedNotify(void* a0, void* a1, void* a2, void* a3, void* a4, unsigned long long a5, bool a6) const
     {
         return NativeCall<void*, void*, void*, void*, void*, void*, unsigned long long, bool>(this, "UPrimalShipSailComponent.OnStructurePlacedNotify(APlayerController*,UE::Math::TVector<double>,UE::Math::TRotator<double>,UE::Math::TRotator<double>,APawn*,FName,bool)", a0, a1, a2, a3, a4, a5, a6);
@@ -126,7 +126,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.ServerSetSailCanvasHealth_Implementation(float,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerSetSailCanvasHealth_Implementation(float a0, bool a1) const
     {
         return NativeCall<void*, float, bool>(this, "UPrimalShipSailComponent.ServerSetSailCanvasHealth_Implementation(float,bool)", a0, a1);
@@ -134,7 +134,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.SetFireIntensity(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetFireIntensity(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalShipSailComponent.SetFireIntensity(float)", a0);
@@ -142,7 +142,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.SetSailOpenRatio(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSailOpenRatio(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalShipSailComponent.SetSailOpenRatio(float)", a0);
@@ -150,7 +150,7 @@ struct UPrimalShipSailComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipSailComponent.StartSailRepair()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=455+grafo=6/6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=455+grafo=5/5]]
     BrzPonteiro StartSailRepair() const
     {
         return NativeCall<void*>(this, "UPrimalShipSailComponent.StartSailRepair()");
@@ -178,6 +178,14 @@ struct UPrimalShipSailComponent
     BrzPonteiro UpdateCapturedWindPercent() const
     {
         return NativeCall<void*>(this, "UPrimalShipSailComponent.UpdateCapturedWindPercent()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   UPrimalShipSailComponent.`vcall'{1376,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__1376__flat__() const
+    {
+        return NativeCall<void*>(this, "UPrimalShipSailComponent.`vcall'{1376,{flat}}()");
     }
 
     float& AdditionalSailRepairPercentNextIntervalField() const
@@ -211,15 +219,17 @@ struct UPrimalShipSailComponent
     float& FireIntensityField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.FireIntensity"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UnfurlSoundOpenPercentTriggers` +16, medido na build 25090264
+    //  ancorado em `UnfurlSoundOpenPercentTriggers` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2C8; confianca alta)
     void*& HasTriggeredUnfurlAtThresholdIndexField() const
     { return BrzCampoAncorado<void*>(this, "UnfurlSoundOpenPercentTriggers", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastRiggingPegOffsetRight` +104, medido na build 25090264
+    //  ancorado em `MastRiggingPegOffsetRight` +104, medido na build 25535041
     //  (offset absoluto medido: 0x518; confianca media)
     void*& InitialModSailAttachmentTimerField() const
     { return BrzCampoAncorado<void*>(this, "MastRiggingPegOffsetRight", 104); }
+    BrzCampoPonteiro IsReservedToBeMannedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.IsReservedToBeManned")); }
     FName& LeftPegRiggingBoneNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalShipSailComponent.LeftPegRiggingBoneName"); }
     FName& LeftPegRiggingBoneSocketNameField() const
@@ -263,12 +273,12 @@ struct UPrimalShipSailComponent
     float& MinWindEffectivenessSteeringForceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.MinWindEffectivenessSteeringForceMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDontRefreshSeatsLocations` +12, medido na build 25090264
+    //  ancorado em `bDontRefreshSeatsLocations` +12, medido na build 25535041
     //  (offset absoluto medido: 0x5B4; confianca alta)
     void*& ModifiedSailSeatSocketNameLField() const
     { return BrzCampoAncorado<void*>(this, "bDontRefreshSeatsLocations", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDontRefreshSeatsLocations` +4, medido na build 25090264
+    //  ancorado em `bDontRefreshSeatsLocations` +4, medido na build 25535041
     //  (offset absoluto medido: 0x5AC; confianca alta)
     void*& ModifiedSailSeatSocketNameRField() const
     { return BrzCampoAncorado<void*>(this, "bDontRefreshSeatsLocations", 4); }
@@ -293,7 +303,7 @@ struct UPrimalShipSailComponent
     float& RaftRiderSailRotationRateField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.RaftRiderSailRotationRate"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NPC_UseLocation_OffsetFromMast` +4, medido na build 25090264
+    //  ancorado em `NPC_UseLocation_OffsetFromMast` +4, medido na build 25535041
     //  (offset absoluto medido: 0x244; confianca alta)
     float& RepairCheckIntervalField() const
     { return BrzCampoAncorado<float>(this, "NPC_UseLocation_OffsetFromMast", 4); }
@@ -390,7 +400,7 @@ struct UPrimalShipSailComponent
     float& Sail_OpenSpeed_MultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.Sail_OpenSpeed_Multiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastRiggingPegOffsetRight` +100, medido na build 25090264
+    //  ancorado em `MastRiggingPegOffsetRight` +100, medido na build 25535041
     //  (offset absoluto medido: 0x514; confianca media)
     void*& Sail_PreviousCanvasHealthField() const
     { return BrzCampoAncorado<void*>(this, "MastRiggingPegOffsetRight", 100); }
@@ -464,53 +474,95 @@ struct UPrimalShipSailComponent
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.WindPercentage"); }
     float& WindSpeed_NonOceanVolume_DefaultField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.WindSpeed_NonOceanVolume_Default"); }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bAutoActivate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bDontRefreshSeatsLocationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bDontRefreshSeatsLocations")); }
+    BrzCampoPonteiro bEcnhorchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bEcnhorched")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bFirstTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bFirstTick")); }
+    BrzCampoPonteiro bFlushSkeletonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bFlushSkeleton")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bHasMultiUseEntries")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NPCUnboardDistance` +4, medido na build 25090264
+    //  ancorado em `NPCUnboardDistance` +4, medido na build 25535041
     //  (offset absoluto medido: 0x230; confianca alta)
     void*& bHasPlayedTautSoundField() const
     { return BrzCampoAncorado<void*>(this, "NPCUnboardDistance", 4); }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
+    BrzCampoPonteiro bHideLadderControlsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bHideLadderControls")); }
+    BrzCampoPonteiro bIgnoreWindEffectivenessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bIgnoreWindEffectiveness")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsMannedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bIsManned")); }
+    BrzCampoPonteiro bIsPlacingOnModShipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bIsPlacingOnModShip")); }
+    BrzCampoPonteiro bIsSailRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bIsSailRepairing")); }
+    BrzCampoPonteiro bModifiedSailRiggingForModShipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bModifiedSailRiggingForModShip")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventNPCHandIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bPreventNPCHandIK")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bPutSailControlsInRootMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bPutSailControlsInRootMultiUse")); }
+    BrzCampoPonteiro bReallyCanUseShipThrottleUnmannedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bReallyCanUseShipThrottleUnmanned")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bReplicates")); }
+    BrzCampoPonteiro bRiggingPegOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bRiggingPegOnly")); }
+    BrzCampoPonteiro bShooterCharacterRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bShooterCharacterRider")); }
+    BrzCampoPonteiro bSpawnWithFullHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bSpawnWithFullHealth")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUpdateSailsVisualsByPercentageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUpdateSailsVisualsByPercentage")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseConstantSailInterpolationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUseConstantSailInterpolation")); }
+    BrzCampoPonteiro bUseSailSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUseSailSounds")); }
+    BrzCampoPonteiro bUseSeatNumInHandSocketNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUseSeatNumInHandSocketName")); }
+    BrzCampoPonteiro bUsesBillowMaterialParamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bUsesBillowMaterialParam")); }
     BitFieldValue<bool, unsigned __int32> IsReservedToBeManned()
     { return { (void*)this, "IsReservedToBeManned" }; }
     BitFieldValue<bool, unsigned __int32> bDontRefreshSeatsLocations()

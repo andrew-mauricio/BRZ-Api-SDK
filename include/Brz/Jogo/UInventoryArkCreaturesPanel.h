@@ -61,7 +61,7 @@ struct UInventoryArkCreaturesPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryArkCreaturesPanel.GameTick(FGeometry&,float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1082+grafo=7/8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GameTick(void* a0, float a1) const
     {
         return NativeCall<void*, void*, float>(this, "UInventoryArkCreaturesPanel.GameTick(FGeometry&,float)", a0, a1);
@@ -69,7 +69,7 @@ struct UInventoryArkCreaturesPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryArkCreaturesPanel.GetParentPrimalUI()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetParentPrimalUI() const
     {
         return NativeCall<void*>(this, "UInventoryArkCreaturesPanel.GetParentPrimalUI()");
@@ -93,7 +93,7 @@ struct UInventoryArkCreaturesPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryArkCreaturesPanel.GetSelectedDownloadSlotKey()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSelectedDownloadSlotKey() const
     {
         return NativeCall<void*>(this, "UInventoryArkCreaturesPanel.GetSelectedDownloadSlotKey()");
@@ -101,7 +101,7 @@ struct UInventoryArkCreaturesPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryArkCreaturesPanel.GetSelectedUploadSlotKey()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=518+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSelectedUploadSlotKey() const
     {
         return NativeCall<void*>(this, "UInventoryArkCreaturesPanel.GetSelectedUploadSlotKey()");
@@ -125,7 +125,7 @@ struct UInventoryArkCreaturesPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryArkCreaturesPanel.Init(UUI_Inventory*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=297+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Init(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UInventoryArkCreaturesPanel.Init(UUI_Inventory*)", a0);
@@ -181,7 +181,7 @@ struct UInventoryArkCreaturesPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryArkCreaturesPanel.Show()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=468+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Show() const
     {
         return NativeCall<void*>(this, "UInventoryArkCreaturesPanel.Show()");
@@ -250,7 +250,7 @@ struct UInventoryArkCreaturesPanel
     BrzCampoPonteiro DinoSlotButtonTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.DinoSlotButtonTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +32, medido na build 25090264
+    //  ancorado em `DinoSlotButtonTemplate` +32, medido na build 25535041
     //  (offset absoluto medido: 0x840; confianca alta)
     void*& DownloadCreatureButtonField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 32); }
@@ -270,23 +270,23 @@ struct UInventoryArkCreaturesPanel
     { return *GetNativePointerField<float*>(this, "UInventoryArkCreaturesPanel.GamepadSelectClosestDistanceMultiplier"); }
     BrzCampoPonteiro HTTPGetResponseEventField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.HTTPGetResponseEvent")); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.HandleVisibilityWithInput")); }
     unsigned char& HighlightStartPointTypeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UInventoryArkCreaturesPanel.HighlightStartPointType"); }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.Highlightable")); }
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UInventoryArkCreaturesPanel.InputComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +8, medido na build 25090264
+    //  ancorado em `DinoSlotButtonTemplate` +8, medido na build 25535041
     //  (offset absoluto medido: 0x828; confianca alta)
     void*& InventoryUIField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 8); }
     TWeakObjectPtr<void>& ItemContainerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "UInventoryArkCreaturesPanel.ItemContainer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +16, medido na build 25090264
+    //  ancorado em `DinoSlotButtonTemplate` +16, medido na build 25535041
     //  (offset absoluto medido: 0x830; confianca alta)
     void*& LocalCreatureListField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 16); }
@@ -310,8 +310,8 @@ struct UInventoryArkCreaturesPanel
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.OriginalUnStretchedAnchors")); }
     BrzCampoPonteiro OriginalUnstretchedSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.OriginalUnstretchedSize")); }
-    BitFieldValue<bool, unsigned __int32> OverrideButtonSounds()
-    { return { (void*)this, "OverrideButtonSounds" }; }
+    BrzCampoPonteiro OverrideButtonSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.OverrideButtonSounds")); }
     BrzCampoPonteiro PaddingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.Padding")); }
     BrzCampoPonteiro PixelSnappingField() const
@@ -328,8 +328,8 @@ struct UInventoryArkCreaturesPanel
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.RenderTransformPivot")); }
     int& SceneStackPriorityField() const
     { return *GetNativePointerField<int*>(this, "UInventoryArkCreaturesPanel.SceneStackPriority"); }
-    BitFieldValue<bool, unsigned __int32> ShouldStretchMainScreenWhenHandheld()
-    { return { (void*)this, "ShouldStretchMainScreenWhenHandheld" }; }
+    BrzCampoPonteiro ShouldStretchMainScreenWhenHandheldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.ShouldStretchMainScreenWhenHandheld")); }
     BrzCampoPonteiro SizeBoxHandheldSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.SizeBoxHandheldSize")); }
     int& SlotField() const
@@ -353,14 +353,14 @@ struct UInventoryArkCreaturesPanel
     BrzCampoPonteiro ToolTipWidgetDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.ToolTipWidgetDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +40, medido na build 25090264
+    //  ancorado em `DinoSlotButtonTemplate` +40, medido na build 25535041
     //  (offset absoluto medido: 0x848; confianca media)
     void*& UploadCreatureButtonField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 40); }
     FName& UploadCreatureButtonNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryArkCreaturesPanel.UploadCreatureButtonName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +24, medido na build 25090264
+    //  ancorado em `DinoSlotButtonTemplate` +24, medido na build 25535041
     //  (offset absoluto medido: 0x838; confianca alta)
     void*& UploadedCreatureListField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 24); }
@@ -370,126 +370,126 @@ struct UInventoryArkCreaturesPanel
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.UploadedEntryWidgets")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UInventoryArkCreaturesPanel.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.VisibilityGamepadInput")); }
     BrzCampoPonteiro VisibilityKBMInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.VisibilityKBMInput")); }
-    BitFieldValue<bool, unsigned __int32> WasInHandheldMode()
-    { return { (void*)this, "WasInHandheldMode" }; }
+    BrzCampoPonteiro WasInHandheldModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.WasInHandheldMode")); }
     BrzCampoPonteiro WidgetTreeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.WidgetTree")); }
     BrzCampoPonteiro XBoxFooterUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.XBoxFooterUITemplate")); }
-    BitFieldValue<bool, unsigned __int32> bAutoProcessSplitscreenScaling()
-    { return { (void*)this, "bAutoProcessSplitscreenScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCachedIsGamepadActive()
-    { return { (void*)this, "bCachedIsGamepadActive" }; }
-    BitFieldValue<bool, unsigned __int32> bCaptureMouseInput()
-    { return { (void*)this, "bCaptureMouseInput" }; }
-    BitFieldValue<bool, unsigned __int32> bClickClosesMenu()
-    { return { (void*)this, "bClickClosesMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bCloseOnPlayerDie()
-    { return { (void*)this, "bCloseOnPlayerDie" }; }
-    BitFieldValue<bool, unsigned __int32> bConstrainVirtualCursor()
-    { return { (void*)this, "bConstrainVirtualCursor" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoExtraDataListButtonPanelFilteringChecks()
-    { return { (void*)this, "bDoExtraDataListButtonPanelFilteringChecks" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bEscapeClosesMenu()
-    { return { (void*)this, "bEscapeClosesMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bEscapeOpensPauseMenu()
-    { return { (void*)this, "bEscapeOpensPauseMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisableFrameGen()
-    { return { (void*)this, "bForceDisableFrameGen" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFullscreenVirtualCursor()
-    { return { (void*)this, "bForceFullscreenVirtualCursor" }; }
-    BitFieldValue<bool, unsigned __int32> bForceVirtualCursorEnabled()
-    { return { (void*)this, "bForceVirtualCursorEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreUIScaling()
-    { return { (void*)this, "bIgnoreUIScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIsClosing()
-    { return { (void*)this, "bIsClosing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutoProcessSplitscreenScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bAutoProcessSplitscreenScaling")); }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCachedIsGamepadActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bCachedIsGamepadActive")); }
+    BrzCampoPonteiro bCaptureMouseInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bCaptureMouseInput")); }
+    BrzCampoPonteiro bClickClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bClickClosesMenu")); }
+    BrzCampoPonteiro bCloseOnPlayerDieField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bCloseOnPlayerDie")); }
+    BrzCampoPonteiro bConstrainVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bConstrainVirtualCursor")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoExtraDataListButtonPanelFilteringChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bDoExtraDataListButtonPanelFilteringChecks")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bDontRenderHighlight")); }
+    BrzCampoPonteiro bEscapeClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bEscapeClosesMenu")); }
+    BrzCampoPonteiro bEscapeOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bEscapeOpensPauseMenu")); }
+    BrzCampoPonteiro bForceDisableFrameGenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bForceDisableFrameGen")); }
+    BrzCampoPonteiro bForceFullscreenVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bForceFullscreenVirtualCursor")); }
+    BrzCampoPonteiro bForceVirtualCursorEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bForceVirtualCursorEnabled")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIgnoreUIScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIgnoreUIScaling")); }
+    BrzCampoPonteiro bIsClosingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsClosing")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsGameplayUI()
-    { return { (void*)this, "bIsGameplayUI" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTopUI()
-    { return { (void*)this, "bIsTopUI" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bMenuSupportSlomo()
-    { return { (void*)this, "bMenuSupportSlomo" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventGamepadDpadNavegation()
-    { return { (void*)this, "bPreventGamepadDpadNavegation" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleScreenResolution()
-    { return { (void*)this, "bScaleScreenResolution" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldValidateInputOnRemove()
-    { return { (void*)this, "bShouldValidateInputOnRemove" }; }
-    BitFieldValue<bool, unsigned __int32> bShowAcceptIcon()
-    { return { (void*)this, "bShowAcceptIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowBumpersIcon()
-    { return { (void*)this, "bShowBumpersIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowCancelIcon()
-    { return { (void*)this, "bShowCancelIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnBottomIcon()
-    { return { (void*)this, "bShowFaceBtnBottomIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnLeftIcon()
-    { return { (void*)this, "bShowFaceBtnLeftIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnRightIcon()
-    { return { (void*)this, "bShowFaceBtnRightIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnTopIcon()
-    { return { (void*)this, "bShowFaceBtnTopIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLStickIcon()
-    { return { (void*)this, "bShowLStickIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLTBtnIcon()
-    { return { (void*)this, "bShowLTBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLeftShoulderBtnIcon()
-    { return { (void*)this, "bShowLeftShoulderBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowRStickIcon()
-    { return { (void*)this, "bShowRStickIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowRTBtnIcon()
-    { return { (void*)this, "bShowRTBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowStartBtnIcon()
-    { return { (void*)this, "bShowStartBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowXBoxFooter()
-    { return { (void*)this, "bShowXBoxFooter" }; }
-    BitFieldValue<bool, unsigned __int32> bSpecialRightOpensPauseMenu()
-    { return { (void*)this, "bSpecialRightOpensPauseMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitForObjects()
-    { return { (void*)this, "bUseBPInitForObjects" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPrimalItemNotifications()
-    { return { (void*)this, "bWantsPrimalItemNotifications" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsFocusable")); }
+    BrzCampoPonteiro bIsGameplayUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsGameplayUI")); }
+    BrzCampoPonteiro bIsTopUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsTopUI")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bIsVolatile")); }
+    BrzCampoPonteiro bMenuSupportSlomoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bMenuSupportSlomo")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bOverride_Cursor")); }
+    BrzCampoPonteiro bPreventGamepadDpadNavegationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bPreventGamepadDpadNavegation")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bScaleScreenResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bScaleScreenResolution")); }
+    BrzCampoPonteiro bShouldValidateInputOnRemoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShouldValidateInputOnRemove")); }
+    BrzCampoPonteiro bShowAcceptIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowAcceptIcon")); }
+    BrzCampoPonteiro bShowBumpersIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowBumpersIcon")); }
+    BrzCampoPonteiro bShowCancelIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowCancelIcon")); }
+    BrzCampoPonteiro bShowFaceBtnBottomIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowFaceBtnBottomIcon")); }
+    BrzCampoPonteiro bShowFaceBtnLeftIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowFaceBtnLeftIcon")); }
+    BrzCampoPonteiro bShowFaceBtnRightIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowFaceBtnRightIcon")); }
+    BrzCampoPonteiro bShowFaceBtnTopIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowFaceBtnTopIcon")); }
+    BrzCampoPonteiro bShowLStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowLStickIcon")); }
+    BrzCampoPonteiro bShowLTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowLTBtnIcon")); }
+    BrzCampoPonteiro bShowLeftShoulderBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowLeftShoulderBtnIcon")); }
+    BrzCampoPonteiro bShowRStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowRStickIcon")); }
+    BrzCampoPonteiro bShowRTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowRTBtnIcon")); }
+    BrzCampoPonteiro bShowStartBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowStartBtnIcon")); }
+    BrzCampoPonteiro bShowXBoxFooterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bShowXBoxFooter")); }
+    BrzCampoPonteiro bSpecialRightOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bSpecialRightOpensPauseMenu")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitForObjectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bUseBPInitForObjects")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bUseWindowClippingForHighlight")); }
+    BrzCampoPonteiro bWantsPrimalItemNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.bWantsPrimalItemNotifications")); }
     int& virtualCursorFramesField() const
     { return *GetNativePointerField<int*>(this, "UInventoryArkCreaturesPanel.virtualCursorFrames"); }
 };

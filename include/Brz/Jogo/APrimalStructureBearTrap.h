@@ -64,7 +64,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // jogo_confirmou_dump
     //   APrimalStructureBearTrap.DecreaseDamageTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=232]]
+    // endereco: casamento de bytes com a build de referencia
     void DecreaseDamageTimer() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.DecreaseDamageTimer()");
@@ -97,7 +97,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.HideAnimatedSK()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=492+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     void HideAnimatedSK() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.HideAnimatedSK()");
@@ -105,7 +105,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureBearTrap.InitBearTrap()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=32]]
+    // endereco: casamento de bytes com a build de referencia
     void InitBearTrap() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.InitBearTrap()");
@@ -113,7 +113,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureBearTrap.IsTrapPrepared(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsTrapPrepared(float a0) const
     {
         return NativeCall<bool, float>(this, "APrimalStructureBearTrap.IsTrapPrepared(float)", a0);
@@ -121,7 +121,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.PeriodicalTrapDamageTimer()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void PeriodicalTrapDamageTimer() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.PeriodicalTrapDamageTimer()");
@@ -129,7 +129,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.PlacedStructure(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=37]]
+    // endereco: casamento de bytes com a build de referencia
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureBearTrap.PlacedStructure(AShooterPlayerController*)", a0);
@@ -137,7 +137,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // dump_sobre_sdk_287a0
     //   APrimalStructureBearTrap.ShowAnimatedSK()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ShowAnimatedSK() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.ShowAnimatedSK()");
@@ -145,7 +145,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.TakeDamage(float,FDamageEvent&,AController*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=421]]
+    // endereco: casamento de bytes com a build de referencia
     float TakeDamage(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<float, float, void*, void*, void*>(this, "APrimalStructureBearTrap.TakeDamage(float,FDamageEvent&,AController*,AActor*)", a0, a1, a2, a3);
@@ -170,7 +170,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.UpdateStructureMesh()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateStructureMesh() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.UpdateStructureMesh()");
@@ -222,6 +222,20 @@ struct APrimalStructureBearTrap : public APrimalStructure
     { return *GetNativePointerField<USoundCue**>(this, "APrimalStructureBearTrap.TrapTriggerSound"); }
     USphereComponent*& TriggerComponentField() const
     { return *GetNativePointerField<USphereComponent**>(this, "APrimalStructureBearTrap.TriggerComponent"); }
+    BrzCampoPonteiro bBPUseNotifyImmobilizedCharacterIsDeadOrInConsciousField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bBPUseNotifyImmobilizedCharacterIsDeadOrInConscious")); }
+    BrzCampoPonteiro bClosedTrapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bClosedTrap")); }
+    BrzCampoPonteiro bDestroyOnTrapActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bDestroyOnTrapActivated")); }
+    BrzCampoPonteiro bImmuneToNormalDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bImmuneToNormalDamage")); }
+    BrzCampoPonteiro bSkipUpdateTrapMeshVisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bSkipUpdateTrapMeshVisibility")); }
+    BrzCampoPonteiro bUseDragWeightForMassCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bUseDragWeightForMassCheck")); }
+    BrzCampoPonteiro bUseOnlyOnNonAlliedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureBearTrap.bUseOnlyOnNonAllied")); }
     BitFieldValue<bool, unsigned __int32> bBPUseNotifyImmobilizedCharacterIsDeadOrInConscious()
     { return { (void*)this, "bBPUseNotifyImmobilizedCharacterIsDeadOrInConscious" }; }
     BitFieldValue<bool, unsigned __int32> bClosedTrap()

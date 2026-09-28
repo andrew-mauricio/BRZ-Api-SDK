@@ -182,7 +182,7 @@ struct UShooterReplicationGraph
     float& DistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UShooterReplicationGraph.DistanceMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DistanceMultiplier` +4, medido na build 25090264
+    //  ancorado em `DistanceMultiplier` +4, medido na build 25535041
     //  (offset absoluto medido: 0x6B4; confianca alta)
     void*& DistanceMultiplierSqField() const
     { return BrzCampoAncorado<void*>(this, "DistanceMultiplier", 4); }
@@ -206,6 +206,8 @@ struct UShooterReplicationGraph
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterReplicationGraph.ReplicationConnectionManagerClass")); }
     BrzCampoPonteiro TeamAlwaysRelevantNodeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterReplicationGraph.TeamAlwaysRelevantNode")); }
+    BrzCampoPonteiro bEnableSpatialRebuildsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterReplicationGraph.bEnableSpatialRebuilds")); }
     BitFieldValue<bool, unsigned __int32> bEnableSpatialRebuilds()
     { return { (void*)this, "bEnableSpatialRebuilds" }; }
 

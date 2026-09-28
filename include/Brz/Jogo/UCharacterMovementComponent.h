@@ -159,11 +159,10 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.BeginPlay()
-    // classe: a funcao mora em UActorComponent, e UCharacterMovementComponent herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
-        NativeCall<void>(this, "UActorComponent.BeginPlay()");
+        NativeCall<void>(this, "UCharacterMovementComponent.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -176,7 +175,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.BuildAsyncInput()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=49]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BuildAsyncInput() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.BuildAsyncInput()");
@@ -184,7 +183,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.CalcAnimRootMotionVelocity(UE::Math::TVector<double>&,float,UE::Math
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CalcAnimRootMotionVelocity(void* retorno, void* a0, float a1, void* a2) const
     {
         NativeCall<void, void*, void*, float, void*>(this, "UCharacterMovementComponent.CalcAnimRootMotionVelocity(UE::Math::TVector<double>&,float,UE::Math::TVector<double>&)", retorno, a0, a1, a2);
@@ -216,7 +215,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.CanStartPathFollowing()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=95]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanStartPathFollowing() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.CanStartPathFollowing()");
@@ -280,7 +279,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.ClientAdjustPosition_Implementation(float,UE::Math::TVector<double>,
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ClientAdjustPosition_Implementation(float a0, void* a1, void* a2, void* a3, unsigned long long a4, bool a5, bool a6, unsigned char a7, void* a8) const
     {
         NativeCall<void, float, void*, void*, void*, unsigned long long, bool, bool, unsigned char, void*>(this, "UCharacterMovementComponent.ClientAdjustPosition_Implementation(float,UE::Math::TVector<double>,UE::Math::TVector<double>,UPrimitiveComponent*,FName,bool,bool,unsignedchar,TOptional<UE::Math::TRotator<double>>)", a0, a1, a2, a3, a4, a5, a6, a7, a8);
@@ -400,7 +399,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.DisableMovement()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DisableMovement() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.DisableMovement()");
@@ -408,7 +407,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.DoJump(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool DoJump(bool a0) const
     {
         return NativeCall<bool, bool>(this, "UCharacterMovementComponent.DoJump(bool)", a0);
@@ -456,7 +455,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetAvoidanceGroupMask()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetAvoidanceGroupMask() const
     {
         return NativeCall<int>(this, "UCharacterMovementComponent.GetAvoidanceGroupMask()");
@@ -480,7 +479,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetCurrentAcceleration()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetCurrentAcceleration(void* retorno) const
     {
         NativeCall<void, void*>(this, "UCharacterMovementComponent.GetCurrentAcceleration()", retorno);
@@ -528,7 +527,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetMaxJumpHeight()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=83]]
+    // endereco: casamento de bytes com a build de referencia
     float GetMaxJumpHeight() const
     {
         return NativeCall<float>(this, "UCharacterMovementComponent.GetMaxJumpHeight()");
@@ -536,7 +535,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetMaxJumpHeightWithJumpTime()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=59]]
+    // endereco: casamento de bytes com a build de referencia
     float GetMaxJumpHeightWithJumpTime() const
     {
         return NativeCall<float>(this, "UCharacterMovementComponent.GetMaxJumpHeightWithJumpTime()");
@@ -552,7 +551,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetMinAnalogSpeed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMinAnalogSpeed() const
     {
         return NativeCall<float>(this, "UCharacterMovementComponent.GetMinAnalogSpeed()");
@@ -560,7 +559,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetMovementBase()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPrimitiveComponent* GetMovementBase() const
     {
         return NativeCall<UPrimitiveComponent*>(this, "UCharacterMovementComponent.GetMovementBase()");
@@ -616,7 +615,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetRVOAvoidanceConsiderationRadius()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetRVOAvoidanceConsiderationRadius() const
     {
         return NativeCall<float>(this, "UCharacterMovementComponent.GetRVOAvoidanceConsiderationRadius()");
@@ -648,7 +647,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetRVOAvoidanceUID()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetRVOAvoidanceUID() const
     {
         return NativeCall<int>(this, "UCharacterMovementComponent.GetRVOAvoidanceUID()");
@@ -656,7 +655,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetRVOAvoidanceWeight()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetRVOAvoidanceWeight() const
     {
         return NativeCall<float>(this, "UCharacterMovementComponent.GetRVOAvoidanceWeight()");
@@ -672,7 +671,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.GetVelocityForRVOConsideration()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetVelocityForRVOConsideration(void* retorno) const
     {
         NativeCall<void, void*>(this, "UCharacterMovementComponent.GetVelocityForRVOConsideration()", retorno);
@@ -728,7 +727,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.HasValidData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasValidData() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.HasValidData()");
@@ -744,7 +743,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.IsAsyncCallbackRegistered()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsAsyncCallbackRegistered() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.IsAsyncCallbackRegistered()");
@@ -752,7 +751,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.IsCrouching()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsCrouching() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.IsCrouching()");
@@ -760,7 +759,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.IsFalling()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsFalling() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.IsFalling()");
@@ -768,7 +767,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.IsFlying()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsFlying() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.IsFlying()");
@@ -776,7 +775,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.IsMovingOnGround()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsMovingOnGround() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.IsMovingOnGround()");
@@ -784,7 +783,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.IsSwimming()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsSwimming() const
     {
         return NativeCall<bool>(this, "UCharacterMovementComponent.IsSwimming()");
@@ -848,7 +847,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.MaybeSaveBaseLocation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MaybeSaveBaseLocation() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.MaybeSaveBaseLocation()");
@@ -880,7 +879,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.NotifyBumpedPawn(APawn*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void NotifyBumpedPawn(void* a0) const
     {
         NativeCall<void, void*>(this, "UCharacterMovementComponent.NotifyBumpedPawn(APawn*)", a0);
@@ -888,7 +887,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.OnCharacterStuckInGeometry(FHitResult*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=129]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnCharacterStuckInGeometry(void* a0) const
     {
         NativeCall<void, void*>(this, "UCharacterMovementComponent.OnCharacterStuckInGeometry(FHitResult*)", a0);
@@ -904,7 +903,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.OnRegister()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRegister() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.OnRegister()");
@@ -912,7 +911,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.OnTeleported()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     void OnTeleported() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.OnTeleported()");
@@ -920,7 +919,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.PackNetworkMovementMode()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned char PackNetworkMovementMode() const
     {
         return NativeCall<unsigned char>(this, "UCharacterMovementComponent.PackNetworkMovementMode()");
@@ -944,7 +943,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.PhysCustom(float,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PhysCustom(float a0, int a1) const
     {
         NativeCall<void, float, int>(this, "UCharacterMovementComponent.PhysCustom(float,int)", a0, a1);
@@ -1000,7 +999,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.PostBuildAsyncInput()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostBuildAsyncInput() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.PostBuildAsyncInput()");
@@ -1168,7 +1167,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.SetAvoidanceGroupMask(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAvoidanceGroupMask(int a0) const
     {
         NativeCall<void, int>(this, "UCharacterMovementComponent.SetAvoidanceGroupMask(int)", a0);
@@ -1192,7 +1191,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.SetGroupsToAvoidMask(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetGroupsToAvoidMask(int a0) const
     {
         NativeCall<void, int>(this, "UCharacterMovementComponent.SetGroupsToAvoidMask(int)", a0);
@@ -1200,7 +1199,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.SetGroupsToIgnoreMask(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetGroupsToIgnoreMask(int a0) const
     {
         NativeCall<void, int>(this, "UCharacterMovementComponent.SetGroupsToIgnoreMask(int)", a0);
@@ -1232,7 +1231,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.SetRVOAvoidanceUID(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetRVOAvoidanceUID(int a0) const
     {
         NativeCall<void, int>(this, "UCharacterMovementComponent.SetRVOAvoidanceUID(int)", a0);
@@ -1240,7 +1239,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.SetRVOAvoidanceWeight(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetRVOAvoidanceWeight(float a0) const
     {
         NativeCall<void, float>(this, "UCharacterMovementComponent.SetRVOAvoidanceWeight(float)", a0);
@@ -1280,7 +1279,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.ShouldComputeAccelerationToReachRequestedVelocity(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldComputeAccelerationToReachRequestedVelocity(float a0) const
     {
         return NativeCall<bool, float>(this, "UCharacterMovementComponent.ShouldComputeAccelerationToReachRequestedVelocity(float)", a0);
@@ -1352,7 +1351,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.SmoothClientPosition(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=94]]
+    // endereco: casamento de bytes com a build de referencia
     void SmoothClientPosition(float a0) const
     {
         NativeCall<void, float>(this, "UCharacterMovementComponent.SmoothClientPosition(float)", a0);
@@ -1392,7 +1391,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.StopActiveMovement()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=117]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopActiveMovement() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.StopActiveMovement()");
@@ -1464,7 +1463,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.UpdateCharacterStateAfterMovement(float,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=90]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateCharacterStateAfterMovement(float a0, bool a1) const
     {
         NativeCall<void, float, bool>(this, "UCharacterMovementComponent.UpdateCharacterStateAfterMovement(float,bool)", a0, a1);
@@ -1472,7 +1471,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.UpdateCharacterStateBeforeMovement(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateCharacterStateBeforeMovement(float a0) const
     {
         NativeCall<void, float>(this, "UCharacterMovementComponent.UpdateCharacterStateBeforeMovement(float)", a0);
@@ -1480,7 +1479,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.UpdateFloorFromAdjustment()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateFloorFromAdjustment() const
     {
         NativeCall<void>(this, "UCharacterMovementComponent.UpdateFloorFromAdjustment()");
@@ -1488,7 +1487,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCharacterMovementComponent.UpdateFromCompressedFlags(unsignedchar)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateFromCompressedFlags(unsigned char a0) const
     {
         NativeCall<void, unsigned char>(this, "UCharacterMovementComponent.UpdateFromCompressedFlags(unsignedchar)", a0);
@@ -1543,12 +1542,12 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro AvoidanceGroupField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.AvoidanceGroup")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FormerBaseVelocityDecayHalfLife` +40, medido na build 25090264
+    //  ancorado em `FormerBaseVelocityDecayHalfLife` +40, medido na build 25535041
     //  (offset absoluto medido: 0x5B8; confianca media)
     float& AvoidanceLockTimerField() const
     { return BrzCampoAncorado<float>(this, "FormerBaseVelocityDecayHalfLife", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FormerBaseVelocityDecayHalfLife` +16, medido na build 25090264
+    //  ancorado em `FormerBaseVelocityDecayHalfLife` +16, medido na build 25535041
     //  (offset absoluto medido: 0x5A0; confianca alta)
     void*& AvoidanceLockVelocityField() const
     { return BrzCampoAncorado<void*>(this, "FormerBaseVelocityDecayHalfLife", 16); }
@@ -1573,14 +1572,14 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     float& BuoyancyField() const
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.Buoyancy"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +56, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +56, medido na build 25535041
     //  (offset absoluto medido: 0x640; confianca media)
     FHitResult& CachedProjectedNavMeshHitResultField() const
     { return BrzCampoAncorado<FHitResult>(this, "PendingLaunchVelocity", 56); }
     TObjectPtr<ACharacter>& CharacterOwnerField() const
     { return *GetNativePointerField<TObjectPtr<ACharacter>*>(this, "UCharacterMovementComponent.CharacterOwner"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostPhysicsTickFunction` +56, medido na build 25090264
+    //  ancorado em `PostPhysicsTickFunction` +56, medido na build 25535041
     //  (offset absoluto medido: 0x808; confianca media)
     void*& ClientPredictionDataField() const
     { return BrzCampoAncorado<void*>(this, "PostPhysicsTickFunction", 56); }
@@ -1593,7 +1592,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro CustomMovementModeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.CustomMovementMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +344, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +344, medido na build 25535041
     //  (offset absoluto medido: 0x760; confianca baixa)
     void*& DecayingFormerBaseVelocityField() const
     { return BrzCampoAncorado<void*>(this, "PendingLaunchVelocity", 344); }
@@ -1630,12 +1629,12 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     float& JumpZVelocityField() const
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.JumpZVelocity"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +320, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +320, medido na build 25535041
     //  (offset absoluto medido: 0x748; confianca baixa)
     FName& LastServerMovementBaseBoneNameField() const
     { return BrzCampoAncorado<FName>(this, "PendingLaunchVelocity", 320); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogInputModifier` +8, medido na build 25090264
+    //  ancorado em `AnalogInputModifier` +8, medido na build 25535041
     //  (offset absoluto medido: 0x400; confianca alta)
     double& LastStuckWarningTimeField() const
     { return BrzCampoAncorado<double>(this, "AnalogInputModifier", 8); }
@@ -1678,7 +1677,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     float& MaxOutOfWaterStepHeightField() const
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.MaxOutOfWaterStepHeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +336, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +336, medido na build 25535041
     //  (offset absoluto medido: 0x758; confianca baixa)
     float& MaxServerClientErrorWhileFallingField() const
     { return BrzCampoAncorado<float>(this, "PendingLaunchVelocity", 336); }
@@ -1741,17 +1740,17 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     int& NetworkSmoothingModeField() const
     { return *GetNativePointerField<int*>(this, "UCharacterMovementComponent.NetworkSmoothingMode"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogInputModifier` +20, medido na build 25090264
+    //  ancorado em `AnalogInputModifier` +20, medido na build 25535041
     //  (offset absoluto medido: 0x40C; confianca alta)
     int& NumJumpApexAttemptsField() const
     { return BrzCampoAncorado<int>(this, "AnalogInputModifier", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GroundFriction` +44, medido na build 25090264
+    //  ancorado em `GroundFriction` +44, medido na build 25535041
     //  (offset absoluto medido: 0x280; confianca media)
     void*& OldBaseLocationField() const
     { return BrzCampoAncorado<void*>(this, "GroundFriction", 44); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GroundFriction` +12, medido na build 25090264
+    //  ancorado em `GroundFriction` +12, medido na build 25535041
     //  (offset absoluto medido: 0x260; confianca alta)
     void*& OldBaseQuatField() const
     { return BrzCampoAncorado<void*>(this, "GroundFriction", 12); }
@@ -1790,7 +1789,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     double& ServerLastTransformUpdateTimeStampField() const
     { return *GetNativePointerField<double*>(this, "UCharacterMovementComponent.ServerLastTransformUpdateTimeStamp"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostPhysicsTickFunction` +64, medido na build 25090264
+    //  ancorado em `PostPhysicsTickFunction` +64, medido na build 25535041
     //  (offset absoluto medido: 0x810; confianca media)
     void*& ServerPredictionDataField() const
     { return BrzCampoAncorado<void*>(this, "PostPhysicsTickFunction", 64); }
@@ -1799,7 +1798,7 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro StayBasedInAirHeightField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.StayBasedInAirHeight")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogInputModifier` +16, medido na build 25090264
+    //  ancorado em `AnalogInputModifier` +16, medido na build 25535041
     //  (offset absoluto medido: 0x408; confianca alta)
     void*& StuckWarningCountSinceNotifyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogInputModifier", 16); }
@@ -1811,41 +1810,167 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.WalkableFloorZ"); }
     BrzCampoPonteiro WorldToGravityTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.WorldToGravityTransform")); }
+    BrzCampoPonteiro bAllowPhysicsRotationDuringAnimRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bAllowPhysicsRotationDuringAnimRootMotion")); }
+    BrzCampoPonteiro bAlwaysCheckFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bAlwaysCheckFloor")); }
+    BrzCampoPonteiro bAlwaysCheckForInvallidFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bAlwaysCheckForInvallidFloor")); }
+    BrzCampoPonteiro bApplyGravityWhileJumpingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bApplyGravityWhileJumping")); }
+    BrzCampoPonteiro bBaseOnAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bBaseOnAttachmentRoot")); }
+    BrzCampoPonteiro bBasedMovementIgnorePhysicsBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bBasedMovementIgnorePhysicsBase")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +332, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +332, medido na build 25535041
     //  (offset absoluto medido: 0x754; confianca baixa)
     bool& bCanTrustClientOnLandingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 332); }
+    BrzCampoPonteiro bCanWalkOffLedgesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bCanWalkOffLedges")); }
+    BrzCampoPonteiro bCanWalkOffLedgesWhenCrouchingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bCanWalkOffLedgesWhenCrouching")); }
+    BrzCampoPonteiro bCheatFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bCheatFlying")); }
+    BrzCampoPonteiro bCrouchMaintainsBaseLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bCrouchMaintainsBaseLocation")); }
+    BrzCampoPonteiro bDeferUpdateMoveComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bDeferUpdateMoveComponent")); }
+    BrzCampoPonteiro bDontClearRequestedVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bDontClearRequestedVelocity")); }
+    BrzCampoPonteiro bDontFallBelowJumpZVelocityDuringJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bDontFallBelowJumpZVelocityDuringJump")); }
+    BrzCampoPonteiro bEnablePhysicsInteractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bEnablePhysicsInteraction")); }
+    BrzCampoPonteiro bEnableScopedMovementUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bEnableScopedMovementUpdates")); }
+    BrzCampoPonteiro bEnableServerDualMoveScopedMovementUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bEnableServerDualMoveScopedMovementUpdates")); }
+    BrzCampoPonteiro bEnableSwimmingOutsideOfWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bEnableSwimmingOutsideOfWater")); }
+    BrzCampoPonteiro bFastAttachedMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bFastAttachedMove")); }
+    BrzCampoPonteiro bForceMaxAccelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bForceMaxAccel")); }
+    BrzCampoPonteiro bForceModifyDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bForceModifyDesiredRotation")); }
+    BrzCampoPonteiro bForceNextFloorCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bForceNextFloorCheck")); }
+    BrzCampoPonteiro bHasRequestedVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bHasRequestedVelocity")); }
+    BrzCampoPonteiro bIgnoreBaseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bIgnoreBaseRotation")); }
+    BrzCampoPonteiro bIgnoreClientMovementErrorChecksAndCorrectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bIgnoreClientMovementErrorChecksAndCorrection")); }
+    BrzCampoPonteiro bImpartBaseAngularVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bImpartBaseAngularVelocity")); }
+    BrzCampoPonteiro bImpartBaseVelocityXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bImpartBaseVelocityX")); }
+    BrzCampoPonteiro bImpartBaseVelocityYField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bImpartBaseVelocityY")); }
+    BrzCampoPonteiro bImpartBaseVelocityZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bImpartBaseVelocityZ")); }
+    BrzCampoPonteiro bJustTeleportedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bJustTeleported")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +328, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +328, medido na build 25535041
     //  (offset absoluto medido: 0x750; confianca baixa)
     bool& bLastClientIsFallingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 328); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +329, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +329, medido na build 25535041
     //  (offset absoluto medido: 0x751; confianca baixa)
     bool& bLastServerIsFallingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 329); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +330, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +330, medido na build 25535041
     //  (offset absoluto medido: 0x752; confianca baixa)
     bool& bLastServerIsWalkingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 330); }
+    BrzCampoPonteiro bMaintainHorizontalGroundVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bMaintainHorizontalGroundVelocity")); }
+    BrzCampoPonteiro bMovementInProgressField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bMovementInProgress")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `JumpOffJumpZFactor` +28, medido na build 25090264
+    //  ancorado em `JumpOffJumpZFactor` +28, medido na build 25535041
     //  (offset absoluto medido: 0x1E0; confianca alta)
     bool& bMovementModeDirtyField() const
     { return BrzCampoAncorado<bool>(this, "JumpOffJumpZFactor", 28); }
+    BrzCampoPonteiro bNetworkAlwaysReplicateTransformUpdateTimestampField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bNetworkAlwaysReplicateTransformUpdateTimestamp")); }
+    BrzCampoPonteiro bNetworkGravityDirectionChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bNetworkGravityDirectionChanged")); }
+    BrzCampoPonteiro bNetworkMovementModeChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bNetworkMovementModeChanged")); }
+    BrzCampoPonteiro bNetworkSkipProxyPredictionOnNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bNetworkSkipProxyPredictionOnNetUpdate")); }
+    BrzCampoPonteiro bNetworkUpdateReceivedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bNetworkUpdateReceived")); }
+    BrzCampoPonteiro bNotifyApexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bNotifyApex")); }
+    BrzCampoPonteiro bOrientRotationToMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bOrientRotationToMovement")); }
+    BrzCampoPonteiro bPerformingJumpOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bPerformingJumpOff")); }
+    BrzCampoPonteiro bProjectNavMeshOnBothWorldChannelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bProjectNavMeshOnBothWorldChannels")); }
+    BrzCampoPonteiro bProjectNavMeshWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bProjectNavMeshWalking")); }
+    BrzCampoPonteiro bPushForceScaledToMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bPushForceScaledToMass")); }
+    BrzCampoPonteiro bPushForceUsingZOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bPushForceUsingZOffset")); }
+    BrzCampoPonteiro bRequestedMoveUseAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bRequestedMoveUseAcceleration")); }
+    BrzCampoPonteiro bRequestedMoveWithMaxSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bRequestedMoveWithMaxSpeed")); }
+    BrzCampoPonteiro bRunPhysicsWithNoControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bRunPhysicsWithNoController")); }
+    BrzCampoPonteiro bSaveNonLocallyControlledRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bSaveNonLocallyControlledRootMotion")); }
+    BrzCampoPonteiro bScalePushForceToVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bScalePushForceToVelocity")); }
+    BrzCampoPonteiro bServerAcceptClientAuthoritativePositionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bServerAcceptClientAuthoritativePosition")); }
+    BrzCampoPonteiro bShrinkProxyCapsuleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bShrinkProxyCapsule")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +333, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +333, medido na build 25535041
     //  (offset absoluto medido: 0x755; confianca baixa)
     bool& bSimulatedClientWalkingHasFoundValidBaseField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 333); }
+    BrzCampoPonteiro bStayBasedInAirField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bStayBasedInAir")); }
+    BrzCampoPonteiro bSweepWhileNavWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bSweepWhileNavWalking")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +331, medido na build 25090264
+    //  ancorado em `PendingLaunchVelocity` +331, medido na build 25535041
     //  (offset absoluto medido: 0x753; confianca baixa)
     bool& bTeleportedSinceLastUpdateField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 331); }
+    BrzCampoPonteiro bTouchForceScaledToMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bTouchForceScaledToMass")); }
+    BrzCampoPonteiro bUseBPAcknowledgeServerCorrectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bUseBPAcknowledgeServerCorrection")); }
+    BrzCampoPonteiro bUseBPAdjustServerMoveDeltaTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bUseBPAdjustServerMoveDeltaTime")); }
+    BrzCampoPonteiro bUseControllerDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bUseControllerDesiredRotation")); }
+    BrzCampoPonteiro bUseFlatBaseForFloorChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bUseFlatBaseForFloorChecks")); }
+    BrzCampoPonteiro bUseRVOAvoidanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bUseRVOAvoidance")); }
+    BrzCampoPonteiro bUseSeparateBrakingFrictionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bUseSeparateBrakingFriction")); }
+    BrzCampoPonteiro bWantsToCrouchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bWantsToCrouch")); }
+    BrzCampoPonteiro bWantsToLeaveNavWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bWantsToLeaveNavWalking")); }
+    BrzCampoPonteiro bWasAvoidanceUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bWasAvoidanceUpdated")); }
+    BrzCampoPonteiro bWasSimulatingRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bWasSimulatingRootMotion")); }
     BitFieldValue<bool, unsigned __int32> bUseSeparateBrakingFriction()
     { return { (void*)this, "bUseSeparateBrakingFriction" }; }
     BitFieldValue<bool, unsigned __int32> bApplyGravityWhileJumping()

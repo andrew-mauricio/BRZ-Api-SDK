@@ -39,6 +39,8 @@ struct UGameplayDebuggerUserSettings
     { return *GetNativePointerField<float*>(this, "UGameplayDebuggerUserSettings.MaxViewAngle"); }
     float& MaxViewDistanceField() const
     { return *GetNativePointerField<float*>(this, "UGameplayDebuggerUserSettings.MaxViewDistance"); }
+    BrzCampoPonteiro bEnableGameplayDebuggerInEditorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerUserSettings.bEnableGameplayDebuggerInEditor")); }
     BitFieldValue<bool, unsigned __int32> bEnableGameplayDebuggerInEditor()
     { return { (void*)this, "bEnableGameplayDebuggerInEditor" }; }
 

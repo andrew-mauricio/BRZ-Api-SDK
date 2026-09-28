@@ -41,6 +41,14 @@ struct FLevelSimplificationDetails
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSimplificationDetails.LandscapeMaterialSettings")); }
     BrzCampoPonteiro StaticMeshMaterialSettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSimplificationDetails.StaticMeshMaterialSettings")); }
+    BrzCampoPonteiro bBakeFoliageToLandscapeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSimplificationDetails.bBakeFoliageToLandscape")); }
+    BrzCampoPonteiro bBakeGrassToLandscapeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSimplificationDetails.bBakeGrassToLandscape")); }
+    BrzCampoPonteiro bCreatePackagePerAssetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSimplificationDetails.bCreatePackagePerAsset")); }
+    BrzCampoPonteiro bOverrideLandscapeExportLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSimplificationDetails.bOverrideLandscapeExportLOD")); }
     BitFieldValue<bool, unsigned __int32> bBakeFoliageToLandscape()
     { return { (void*)this, "bBakeFoliageToLandscape" }; }
     BitFieldValue<bool, unsigned __int32> bBakeGrassToLandscape()

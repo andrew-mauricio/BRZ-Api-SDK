@@ -41,10 +41,11 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.ApplyPinCode(AShooterPlayerController*,int,bool,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=73]]
+    // classe: a funcao mora em APrimalStructureItemContainer, e APrimalStructureTurret herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     bool ApplyPinCode(void* a0, int a1, bool a2, int a3) const
     {
-        return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureTurret.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
+        return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureItemContainer.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -73,7 +74,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.CanFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=80]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanFire() const
     {
         return NativeCall<bool>(this, "APrimalStructureTurret.CanFire()");
@@ -97,7 +98,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.ConsumeAmmo()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ConsumeAmmo() const
     {
         NativeCall<void>(this, "APrimalStructureTurret.ConsumeAmmo()");
@@ -185,7 +186,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.GetMuzzleFlashSocketName()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void GetMuzzleFlashSocketName(void* retorno) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTurret.GetMuzzleFlashSocketName()", retorno);
@@ -209,7 +210,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.GetSkeletalMeshComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=117]]
+    // endereco: casamento de bytes com a build de referencia
     USkeletalMeshComponent* GetSkeletalMeshComponent() const
     {
         return NativeCall<USkeletalMeshComponent*>(this, "APrimalStructureTurret.GetSkeletalMeshComponent()");
@@ -305,7 +306,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.SpawnTrailEffect(UE::Math::TVector<double>&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void SpawnTrailEffect(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTurret.SpawnTrailEffect(UE::Math::TVector<double>&)", a0);
@@ -361,7 +362,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.UpdateNumBullets()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void UpdateNumBullets() const
     {
         NativeCall<void>(this, "APrimalStructureTurret.UpdateNumBullets()");
@@ -385,7 +386,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=1016+grafo=24/24]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1016+grafo=12/12]]
     void ValidateGeneratedRepEnums(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTurret.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)", a0);
@@ -535,11 +536,45 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureTurret.WarningSettingIcons"); }
     TWeakObjectPtr<void>& WeakTargetField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalStructureTurret.WeakTarget"); }
+    BrzCampoPonteiro bAimIgnoreSocketsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bAimIgnoreSockets")); }
+    BrzCampoPonteiro bClientFireProjectileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bClientFireProjectile")); }
+    BrzCampoPonteiro bFireProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bFireProjectiles")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MySkinSkeletalMeshComp` +16, medido na build 25090264
+    //  ancorado em `MySkinSkeletalMeshComp` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1510; confianca alta)
     void*& bHasNearbyAmmoContainerField() const
     { return BrzCampoAncorado<void*>(this, "MySkinSkeletalMeshComp", 16); }
+    BrzCampoPonteiro bHasOmniDirectionalFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bHasOmniDirectionalFire")); }
+    BrzCampoPonteiro bInWaterOnlyTargetWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bInWaterOnlyTargetWater")); }
+    BrzCampoPonteiro bIsTargetListInclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bIsTargetListInclusion")); }
+    BrzCampoPonteiro bIsTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bIsTargeting")); }
+    BrzCampoPonteiro bOnlyUseAmmoOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bOnlyUseAmmoOnDamage")); }
+    BrzCampoPonteiro bTurretIgnoreProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bTurretIgnoreProjectiles")); }
+    BrzCampoPonteiro bTurretIsDisabledTooManyNearbyTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bTurretIsDisabledTooManyNearbyTurrets")); }
+    BrzCampoPonteiro bUseAmmoFromNearbyContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseAmmoFromNearbyContainer")); }
+    BrzCampoPonteiro bUseBPTurretPreventsTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseBPTurretPreventsTargeting")); }
+    BrzCampoPonteiro bUseInclusionListTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseInclusionListTargeting")); }
+    BrzCampoPonteiro bUseLevelLimitsForTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseLevelLimitsForTargeting")); }
+    BrzCampoPonteiro bUseMaxInventoryForAmmoContainerReloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseMaxInventoryForAmmoContainerReload")); }
+    BrzCampoPonteiro bUseNoAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseNoAmmo")); }
+    BrzCampoPonteiro bUseNoWarningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bUseNoWarning")); }
     //  no cache antigo este campo se chamava bWarned.
     //  nesta build ele e' `DinoTargetList` — resolve por NOME.
     BrzCampoPonteiro bWarnedField() const

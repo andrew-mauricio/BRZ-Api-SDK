@@ -32,6 +32,11 @@ struct FVectorFieldStaticResourceBulkDataInterface
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro BulkDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldStaticResourceBulkDataInterface.BulkData")); }
+    BrzCampoPonteiro BulkDataSizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldStaticResourceBulkDataInterface.BulkDataSize")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDSTATICRESOURCEBULKDATAINTERFACE_H

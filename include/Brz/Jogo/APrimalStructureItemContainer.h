@@ -51,7 +51,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.AddToValidatedByPinCodePlayerControllers(AShooterPlayerController*
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AddToValidatedByPinCodePlayerControllers(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.AddToValidatedByPinCodePlayerControllers(AShooterPlayerController*)", a0);
@@ -75,7 +75,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.AllowSetPinCode()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowSetPinCode() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.AllowSetPinCode()");
@@ -131,7 +131,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPCanAddWirelessExchange(UPrimalWirelessExchangeData*,APrimalStruc
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=76+chamadores=6]]
     BrzPonteiro BPCanAddWirelessExchange(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APrimalStructureItemContainer.BPCanAddWirelessExchange(UPrimalWirelessExchangeData*,APrimalStructureItemContainer*,UPrimalWirelessExchangeData*)", a0, a1, a2);
@@ -183,7 +183,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPGetItemCountQty(TSubclassOf<UPrimalItem>,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPGetItemCountQty(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.BPGetItemCountQty(TSubclassOf<UPrimalItem>,bool)", a0, a1);
@@ -191,7 +191,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPGetQuantityOfItemWithoutCheckingInventory(TSubclassOf<UPrimalIte
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=124]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPGetQuantityOfItemWithoutCheckingInventory(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.BPGetQuantityOfItemWithoutCheckingInventory(TSubclassOf<UPrimalItem>,bool)", a0, a1);
@@ -199,7 +199,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPGetSortingInvComp()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BPGetSortingInvComp() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.BPGetSortingInvComp()");
@@ -231,7 +231,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPNotifyWirelessConsumerAdded(UPrimalWirelessExchangeData*,APrimal
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPNotifyWirelessConsumerAdded(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureItemContainer.BPNotifyWirelessConsumerAdded(UPrimalWirelessExchangeData*,APrimalStructureItemContainer*)", a0, a1);
@@ -239,7 +239,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPNotifyWirelessConsumerRemoved(UPrimalWirelessExchangeData*,APrim
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPNotifyWirelessConsumerRemoved(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureItemContainer.BPNotifyWirelessConsumerRemoved(UPrimalWirelessExchangeData*,APrimalStructureItemContainer*)", a0, a1);
@@ -247,7 +247,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPNotifyWirelessSourceAdded(UPrimalWirelessExchangeData*,APrimalSt
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPNotifyWirelessSourceAdded(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureItemContainer.BPNotifyWirelessSourceAdded(UPrimalWirelessExchangeData*,APrimalStructureItemContainer*)", a0, a1);
@@ -263,7 +263,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPOnContainerActiveHealthDecrease()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPOnContainerActiveHealthDecrease() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.BPOnContainerActiveHealthDecrease()");
@@ -271,7 +271,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPPreGetMultiUseEntries(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPPreGetMultiUseEntries(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.BPPreGetMultiUseEntries(APlayerController*)", a0);
@@ -279,7 +279,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPRename(FString)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=159+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BPRename(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.BPRename(FString)", const_cast<FString*>(&a0));
@@ -307,7 +307,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CanBeActivated()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=308]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanBeActivated() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer.CanBeActivated()");
@@ -315,7 +315,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CanDrawFuelRemaining()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanDrawFuelRemaining() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer.CanDrawFuelRemaining()");
@@ -331,7 +331,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CharacterBasedOnUpdate(AActor*,float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=415+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void CharacterBasedOnUpdate(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalStructureItemContainer.CharacterBasedOnUpdate(AActor*,float)", a0, a1);
@@ -363,7 +363,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CheckFuelSetActive()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=92]]
+    // endereco: casamento de bytes com a build de referencia
     void CheckFuelSetActive() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.CheckFuelSetActive()");
@@ -379,7 +379,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.ClientNotifyInventoryItemChange(bool,UPrimalItem*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyInventoryItemChange(bool a0, void* a1, bool a2) const
     {
         NativeCall<void, bool, void*, bool>(this, "APrimalStructureItemContainer.ClientNotifyInventoryItemChange(bool,UPrimalItem*,bool)", a0, a1, a2);
@@ -395,7 +395,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CopyStructureValuesFrom(APrimalStructureItemContainer*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=520+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void CopyStructureValuesFrom(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.CopyStructureValuesFrom(APrimalStructureItemContainer*)", a0);
@@ -403,7 +403,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.DeferredNotifyItemAdded()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DeferredNotifyItemAdded() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.DeferredNotifyItemAdded()");
@@ -420,16 +420,15 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.DrawStructureTooltip(AShooterHUD*,bool)
-    // classe: a funcao mora em APrimalStructure, e APrimalStructureItemContainer herda dela: o `this` e' compativel por construcao
-    // endereco: cache_pdb_25090264
+    // endereco: casamento de bytes com a build de referencia
     void DrawStructureTooltip(void* a0, bool a1) const
     {
-        NativeCall<void, void*, bool>(this, "APrimalStructure.DrawStructureTooltip(AShooterHUD*,bool)", a0, a1);
+        NativeCall<void, void*, bool>(this, "APrimalStructureItemContainer.DrawStructureTooltip(AShooterHUD*,bool)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=37]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer.EndPlay(EEndPlayReason::Type)", a0);
@@ -469,7 +468,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultA
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2987+grafo=113/113]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2987+chamadores=2+grafo=113/113]]
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -477,7 +476,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.GetMaterialsForActivation(TArray<UMaterialInterface*,TSizedDefault
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetMaterialsForActivation(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "APrimalStructureItemContainer.GetMaterialsForActivation(TArray<UMaterialInterface*,TSizedDefaultAllocator<32>>&,TArray<UMaterialInterface*,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
@@ -501,7 +500,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.GetOverrideParticleLightColor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=230]]
+    // endereco: casamento de bytes com a build de referencia
     void GetOverrideParticleLightColor(void* retorno) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.GetOverrideParticleLightColor()", retorno);
@@ -533,7 +532,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.IsPlayerControllerInPinCodeValidationList(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=171]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsPlayerControllerInPinCodeValidationList(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.IsPlayerControllerInPinCodeValidationList(APlayerController*)", a0);
@@ -541,7 +540,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.IsValidForDinoFeedingContainer(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsValidForDinoFeedingContainer(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.IsValidForDinoFeedingContainer(APrimalDinoCharacter*)", a0);
@@ -549,7 +548,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.IsValidForStorageInterfaceLinking(APrimalStructureItemContainer*,b
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsValidForStorageInterfaceLinking(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.IsValidForStorageInterfaceLinking(APrimalStructureItemContainer*,bool)", a0, a1);
@@ -557,7 +556,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.IsValidWaterSourceForPipe(APrimalStructureWaterPipe*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsValidWaterSourceForPipe(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureItemContainer.IsValidWaterSourceForPipe(APrimalStructureWaterPipe*)", a0);
@@ -581,7 +580,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.ManuallyAddWirelessConnection(UPrimalWirelessExchangeData*,APrimal
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ManuallyAddWirelessConnection(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureItemContainer.ManuallyAddWirelessConnection(UPrimalWirelessExchangeData*,APrimalStructureItemContainer*)", a0, a1);
@@ -597,7 +596,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.MovePowerJunctionLink()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=173+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void MovePowerJunctionLink() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.MovePowerJunctionLink()");
@@ -621,7 +620,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.NetRefreshActiveEffects_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetRefreshActiveEffects_Implementation() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.NetRefreshActiveEffects_Implementation()");
@@ -637,7 +636,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.NetSetContainerActive_Implementation(bool,TSubclassOf<UPrimalItem>
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=105]]
+    // endereco: casamento de bytes com a build de referencia
     void NetSetContainerActive_Implementation(bool a0, void* a1, short a2) const
     {
         NativeCall<void, bool, void*, short>(this, "APrimalStructureItemContainer.NetSetContainerActive_Implementation(bool,TSubclassOf<UPrimalItem>,short)", a0, a1, a2);
@@ -645,7 +644,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.NotifyCraftedItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=48]]
+    // endereco: casamento de bytes com a build de referencia
     void NotifyCraftedItem(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.NotifyCraftedItem(UPrimalItem*)", a0);
@@ -669,7 +668,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.NotifyItemQuantityUpdated(UPrimalItem*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyItemQuantityUpdated(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "APrimalStructureItemContainer.NotifyItemQuantityUpdated(UPrimalItem*,int)", a0, a1);
@@ -685,7 +684,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.NotifySkinInventoryChange()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro NotifySkinInventoryChange() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.NotifySkinInventoryChange()");
@@ -709,7 +708,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.OverrideHasWaterSource()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool OverrideHasWaterSource() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer.OverrideHasWaterSource()");
@@ -717,7 +716,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.PlacedStructure(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=46]]
+    // endereco: casamento de bytes com a build de referencia
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.PlacedStructure(AShooterPlayerController*)", a0);
@@ -769,7 +768,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.RefreshFuelState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshFuelState() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.RefreshFuelState()");
@@ -777,7 +776,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.RefreshInventoryItemCounts()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshInventoryItemCounts() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.RefreshInventoryItemCounts()");
@@ -785,7 +784,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // jogo_confirmou_dump
     //   APrimalStructureItemContainer.RefreshPowerJunctionLink()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=656+grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshPowerJunctionLink() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.RefreshPowerJunctionLink()");
@@ -817,7 +816,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.RefreshWirelessBlueprintSharing(APrimalStructureItemContainer*,boo
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=69]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RefreshWirelessBlueprintSharing(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.RefreshWirelessBlueprintSharing(APrimalStructureItemContainer*,bool)", a0, a1);
@@ -833,7 +832,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.RemovePowerJunctionLinkParticle()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=61]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RemovePowerJunctionLinkParticle() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.RemovePowerJunctionLinkParticle()");
@@ -849,7 +848,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // jogo_confirmou_dump
     //   APrimalStructureItemContainer.RemoveWirelessConnections()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=21]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveWirelessConnections() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.RemoveWirelessConnections()");
@@ -889,7 +888,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.SetDelayedActivation()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=255+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=255+grafo=3/3]]
     void SetDelayedActivation() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.SetDelayedActivation()");
@@ -905,7 +904,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.SetPlayerConstructor(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=51]]
+    // endereco: casamento de bytes com a build de referencia
     void SetPlayerConstructor(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.SetPlayerConstructor(APlayerController*)", a0);
@@ -913,7 +912,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.SetPoweredOverrideCounter(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetPoweredOverrideCounter(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer.SetPoweredOverrideCounter(int)", a0);
@@ -921,7 +920,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.SetSaddleRiderInventoryViewer(AShooterPlayerController*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetSaddleRiderInventoryViewer(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.SetSaddleRiderInventoryViewer(AShooterPlayerController*,bool)", a0, a1);
@@ -929,7 +928,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.SetWaterState(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetWaterState(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureItemContainer.SetWaterState(bool)", a0);
@@ -985,7 +984,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.TargetingTeamChanged()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=292+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void TargetingTeamChanged() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.TargetingTeamChanged()");
@@ -1009,7 +1008,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.TryUpdateNearbyStorageInterfaces()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=436+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TryUpdateNearbyStorageInterfaces() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.TryUpdateNearbyStorageInterfaces()");
@@ -1057,7 +1056,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.UpdateWirelessExchange(UPrimalWirelessExchangeData*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateWirelessExchange(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.UpdateWirelessExchange(UPrimalWirelessExchangeData*)", a0);
@@ -1065,7 +1064,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.UpdateWirelessExchanges()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=21]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateWirelessExchanges() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.UpdateWirelessExchanges()");
@@ -1073,7 +1072,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.UseItemSpoilingTimeMultipliers()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool UseItemSpoilingTimeMultipliers() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer.UseItemSpoilingTimeMultipliers()");
@@ -1081,7 +1080,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.ValidateAndUpdateWirelessExchanges()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=150]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ValidateAndUpdateWirelessExchanges() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.ValidateAndUpdateWirelessExchanges()");
@@ -1097,10 +1096,18 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.VerifyPinCode(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro VerifyPinCode(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer.VerifyPinCode(int)", a0);
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   APrimalStructureItemContainer.`vcall'{4776,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__4776__flat__() const
+    {
+        return NativeCall<void*>(this, "APrimalStructureItemContainer.`vcall'{4776,{flat}}()");
     }
 
     TObjectPtr<UTexture2D>& ActivateContainerIconField() const
@@ -1119,6 +1126,8 @@ struct APrimalStructureItemContainer : public APrimalStructure
     //  nesta build ele e' `WirelessExchangeRefs` — resolve por NOME.
     BrzCampoPonteiro AdjustNetDestructionTimeHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.WirelessExchangeRefs")); }
+    BrzCampoPonteiro AllowOverrideParticleLightColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.AllowOverrideParticleLightColor")); }
     TObjectPtr<UTexture2D>& AllowWirelessCraftingIconField() const
     { return *GetNativePointerField<TObjectPtr<UTexture2D>*>(this, "APrimalStructureItemContainer.AllowWirelessCraftingIcon"); }
     float& BasedCharacterDamageAmountField() const
@@ -1321,14 +1330,190 @@ struct APrimalStructureItemContainer : public APrimalStructure
     //  nesta build ele e' `BlacklistedItemCount` — resolve por NOME.
     BrzCampoPonteiro UpdateContainerActiveHealthDecreaseHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.BlacklistedItemCount")); }
+    BrzCampoPonteiro UseBPApplyPinCodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.UseBPApplyPinCode")); }
     float& ValidCraftingResourceMaxDurabilityField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureItemContainer.ValidCraftingResourceMaxDurability"); }
     TArray<TWeakObjectPtr<void>>& ValidatedByPinCodePlayerControllersField() const
     { return *GetNativePointerField<TArray<TWeakObjectPtr<void>>*>(this, "APrimalStructureItemContainer.ValidatedByPinCodePlayerControllers"); }
     BrzCampoPonteiro WirelessExchangeRefsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.WirelessExchangeRefs")); }
+    BrzCampoPonteiro bActiveRequiresPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bActiveRequiresPower")); }
+    BrzCampoPonteiro bAdjustDamageAsPlayerWithEquipmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAdjustDamageAsPlayerWithEquipment")); }
+    BrzCampoPonteiro bAllowAutoActivateWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAllowAutoActivateWhenNoPower")); }
+    BrzCampoPonteiro bAllowCustomNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAllowCustomName")); }
+    BrzCampoPonteiro bApplyNiagaraColorInBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bApplyNiagaraColorInBP")); }
+    BrzCampoPonteiro bAutoActivateContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAutoActivateContainer")); }
+    BrzCampoPonteiro bAutoActivateIfPoweredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAutoActivateIfPowered")); }
+    BrzCampoPonteiro bAutoActivateWhenFueledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAutoActivateWhenFueled")); }
+    BrzCampoPonteiro bAutoActivateWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bAutoActivateWhenNoPower")); }
+    BrzCampoPonteiro bBPIsValidWaterSourceForPipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bBPIsValidWaterSourceForPipe")); }
+    BrzCampoPonteiro bBPNotifyRemoteViewerChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bBPNotifyRemoteViewerChange")); }
+    BrzCampoPonteiro bBPOnContainerActiveHealthDecreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bBPOnContainerActiveHealthDecrease")); }
+    BrzCampoPonteiro bCanToggleActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bCanToggleActivation")); }
+    BrzCampoPonteiro bCheckStartedUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bCheckStartedUnderwater")); }
+    BrzCampoPonteiro bClientBPNotifyInventoryItemChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bClientBPNotifyInventoryItemChanges")); }
+    BrzCampoPonteiro bContainerActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bContainerActivated")); }
+    BrzCampoPonteiro bCraftingSubstractConnectedWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bCraftingSubstractConnectedWater")); }
+    BrzCampoPonteiro bDestroyWhenAllItemsRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDestroyWhenAllItemsRemoved")); }
+    BrzCampoPonteiro bDestroyWhenAllItemsRemovedExceptDefaultsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDestroyWhenAllItemsRemovedExceptDefaults")); }
+    BrzCampoPonteiro bDisableActivationUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDisableActivationUnderwater")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDisplayActivationOnInventoryUI")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUISecondaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDisplayActivationOnInventoryUISecondary")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUITertiaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDisplayActivationOnInventoryUITertiary")); }
+    BrzCampoPonteiro bDrawFuelRemainingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDrawFuelRemaining")); }
+    BrzCampoPonteiro bDrinkingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDrinkingWater")); }
+    BrzCampoPonteiro bDropInventoryOnDestructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bDropInventoryOnDestruction")); }
+    BrzCampoPonteiro bForceNeverLockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bForceNeverLock")); }
+    BrzCampoPonteiro bForceNoPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bForceNoPinLocking")); }
+    BrzCampoPonteiro bForcePreventAutoActivateWhenConnectedToWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bForcePreventAutoActivateWhenConnectedToWater")); }
+    BrzCampoPonteiro bFuelAllowActivationWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bFuelAllowActivationWhenNoPower")); }
+    BrzCampoPonteiro bHasFuelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bHasFuel")); }
+    BrzCampoPonteiro bHideAutoActivateToggleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bHideAutoActivateToggle")); }
+    BrzCampoPonteiro bHidePowerJunctionConnectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bHidePowerJunctionConnection")); }
     bool& bHideUnusedParticleTypesOnRefreshActiveEffectsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalStructureItemContainer.bHideUnusedParticleTypesOnRefreshActiveEffects"); }
+    BrzCampoPonteiro bInventoryForcePreventItemAppendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bInventoryForcePreventItemAppends")); }
+    BrzCampoPonteiro bInventoryForcePreventRemoteAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bInventoryForcePreventRemoteAddItems")); }
+    BrzCampoPonteiro bIsAmmoContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bIsAmmoContainer")); }
+    BrzCampoPonteiro bIsLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bIsLocked")); }
+    BrzCampoPonteiro bIsPinLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bIsPinLocked")); }
+    BrzCampoPonteiro bIsPowerJunctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bIsPowerJunction")); }
+    BrzCampoPonteiro bIsPoweredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bIsPowered")); }
+    BrzCampoPonteiro bIsUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bIsUnderwater")); }
+    BrzCampoPonteiro bLastToggleActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bLastToggleActivated")); }
+    BrzCampoPonteiro bOnlyAllowTeamActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bOnlyAllowTeamActivation")); }
+    BrzCampoPonteiro bOnlyConsumeDurabilityOnEquipmentForEnemiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bOnlyConsumeDurabilityOnEquipmentForEnemies")); }
+    BrzCampoPonteiro bOnlyUseSpoilingMultipliersIfActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bOnlyUseSpoilingMultipliersIfActivated")); }
+    BrzCampoPonteiro bPoweredAllowBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredAllowBattery")); }
+    BrzCampoPonteiro bPoweredAllowBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredAllowBot")); }
+    BrzCampoPonteiro bPoweredAllowSolarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredAllowSolar")); }
+    BrzCampoPonteiro bPoweredHasBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredHasBattery")); }
+    BrzCampoPonteiro bPoweredHasBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredHasBot")); }
+    BrzCampoPonteiro bPoweredUsingBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredUsingBattery")); }
+    BrzCampoPonteiro bPoweredUsingBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredUsingBot")); }
+    BrzCampoPonteiro bPoweredUsingSolarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredUsingSolar")); }
+    BrzCampoPonteiro bPoweredWaterSourceWhenActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPoweredWaterSourceWhenActive")); }
+    BrzCampoPonteiro bPreventContainerPingTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPreventContainerPingType")); }
+    BrzCampoPonteiro bPreventLinkingToStorageInterfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPreventLinkingToStorageInterface")); }
+    BrzCampoPonteiro bPreventToggleActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPreventToggleActivation")); }
+    BrzCampoPonteiro bPreventUsingAsWirelessCraftingSourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bPreventUsingAsWirelessCraftingSource")); }
+    BrzCampoPonteiro bReplicateItemFuelClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bReplicateItemFuelClass")); }
+    BrzCampoPonteiro bReplicateLastActivatedTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bReplicateLastActivatedTime")); }
+    BrzCampoPonteiro bRequiresItemExactClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bRequiresItemExactClass")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bServerBPNotifyInventoryItemChanges")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesUseQuantityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bServerBPNotifyInventoryItemChangesUseQuantity")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesUseSwappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bServerBPNotifyInventoryItemChangesUseSwapped")); }
+    BrzCampoPonteiro bStartedUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bStartedUnderwater")); }
+    BrzCampoPonteiro bSupportsLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bSupportsLocking")); }
+    BrzCampoPonteiro bSupportsPinActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bSupportsPinActivation")); }
+    BrzCampoPonteiro bSupportsPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bSupportsPinLocking")); }
+    BrzCampoPonteiro bSupportsStorageInterfaceLinkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bSupportsStorageInterfaceLinking")); }
+    BrzCampoPonteiro bUseAmmoContainerBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseAmmoContainerBuff")); }
+    BrzCampoPonteiro bUseBPActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPActivated")); }
+    BrzCampoPonteiro bUseBPCanAddWirelessExchangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPCanAddWirelessExchange")); }
+    BrzCampoPonteiro bUseBPCanBeActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPCanBeActivated")); }
+    BrzCampoPonteiro bUseBPCanBeActivatedByPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPCanBeActivatedByPlayer")); }
+    BrzCampoPonteiro bUseBPGetFuelConsumptionMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPGetFuelConsumptionMultiplier")); }
+    BrzCampoPonteiro bUseBPGetQuantityOfItemWithoutCheckingInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPGetQuantityOfItemWithoutCheckingInventory")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessConsumerAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPNotifyWirelessConsumerAdded")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessConsumerRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPNotifyWirelessConsumerRemoved")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessSourceAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPNotifyWirelessSourceAdded")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessSourceRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPNotifyWirelessSourceRemoved")); }
+    BrzCampoPonteiro bUseBPSetPlayerConstructorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseBPSetPlayerConstructor")); }
+    BrzCampoPonteiro bUseCollisionCompsForFloatingDPSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseCollisionCompsForFloatingDPS")); }
+    BrzCampoPonteiro bUseColorRegionForEmitterColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseColorRegionForEmitterColor")); }
+    BrzCampoPonteiro bUseCooldownOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseCooldownOnTransferAll")); }
+    BrzCampoPonteiro bUseDeathCacheCharacterIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseDeathCacheCharacterID")); }
+    BrzCampoPonteiro bUseMeshOriginForInventoryAccessTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseMeshOriginForInventoryAccessTrace")); }
+    BrzCampoPonteiro bUseOpenSceneActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer.bUseOpenSceneAction")); }
     BitFieldValue<bool, unsigned __int32> bAdjustDamageAsPlayerWithEquipment()
     { return { (void*)this, "bAdjustDamageAsPlayerWithEquipment" }; }
     BitFieldValue<bool, unsigned __int32> bUseCollisionCompsForFloatingDPS()

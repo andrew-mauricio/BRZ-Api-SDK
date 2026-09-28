@@ -56,6 +56,13 @@ struct FPrimalImageDecorator
     //  a mesma, para quem ja' tem o ponteiro na mao
     BrzPonteiro Supports(void* a0, FString* a1) const
     { return Supports(a0, *a1); }
+
+    BrzCampoPonteiro MyNewStylesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalImageDecorator.MyNewStyles")); }
+    BrzCampoPonteiro OverrideStyleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalImageDecorator.OverrideStyle")); }
+    BrzCampoPonteiro RunNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalImageDecorator.RunName")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALIMAGEDECORATOR_H

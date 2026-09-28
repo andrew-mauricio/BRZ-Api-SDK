@@ -51,8 +51,8 @@ struct UGameplayCueNotify_Burst
     { return *GetNativePointerField<FName*>(this, "UGameplayCueNotify_Burst.GameplayCueName"); }
     BrzCampoPonteiro GameplayCueTagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_Burst.GameplayCueTag")); }
-    BitFieldValue<bool, unsigned __int32> IsOverride()
-    { return { (void*)this, "IsOverride" }; }
+    BrzCampoPonteiro IsOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_Burst.IsOverride")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UGAMEPLAYCUENOTIFY_BURST_H

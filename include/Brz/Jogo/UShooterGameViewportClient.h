@@ -203,7 +203,7 @@ struct UShooterGameViewportClient
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameViewportClient.GetViewportClient(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetViewportClient(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameViewportClient.GetViewportClient(UWorld*)", a0);
@@ -367,7 +367,7 @@ struct UShooterGameViewportClient
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameViewportClient.PreWorldTick(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreWorldTick(float a0) const
     {
         return NativeCall<void*, float>(this, "UShooterGameViewportClient.PreWorldTick(float)", a0);
@@ -431,7 +431,7 @@ struct UShooterGameViewportClient
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameViewportClient.ResetSpawnFlag()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetSpawnFlag() const
     {
         return NativeCall<void*>(this, "UShooterGameViewportClient.ResetSpawnFlag()");
@@ -495,7 +495,7 @@ struct UShooterGameViewportClient
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameViewportClient.Shutdown()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Shutdown() const
     {
         return NativeCall<void*>(this, "UShooterGameViewportClient.Shutdown()");
@@ -577,50 +577,52 @@ struct UShooterGameViewportClient
     BrzCampoPonteiro GameInstanceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.GameInstance")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatingModsUI` +12, medido na build 25090264
+    //  ancorado em `UpdatingModsUI` +12, medido na build 25535041
     //  (offset absoluto medido: 0x424; confianca alta)
     void*& IncrementedUpdatingModsField() const
     { return BrzCampoAncorado<void*>(this, "UpdatingModsUI", 12); }
     BrzCampoPonteiro InfoFontField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.InfoFont")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ViewPortWidgets` +16, medido na build 25090264
+    //  ancorado em `ViewPortWidgets` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3D0; confianca alta)
     void*& InputProcessorPtrField() const
     { return BrzCampoAncorado<void*>(this, "ViewPortWidgets", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +28, medido na build 25090264
+    //  ancorado em `InfoFont` +28, medido na build 25535041
     //  (offset absoluto medido: 0x404; confianca alta)
     void*& LastGarbageCollectionTimeField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +16, medido na build 25090264
+    //  ancorado em `InfoFont` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3F8; confianca alta)
     void*& LastTimeLocalPlayerRemovedField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 16); }
     BrzCampoPonteiro LoadingMusicField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.LoadingMusic")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +32, medido na build 25090264
+    //  ancorado em `InfoFont` +32, medido na build 25535041
     //  (offset absoluto medido: 0x408; confianca alta)
     void*& LoadingScreenWidgetField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 32); }
     int& MaxSplitscreenPlayersField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameViewportClient.MaxSplitscreenPlayers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +24, medido na build 25090264
+    //  ancorado em `InfoFont` +24, medido na build 25535041
     //  (offset absoluto medido: 0x400; confianca alta)
     void*& NumInventoryOpensWithoutGCField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 24); }
     int& NumReplaySecondsToStoreField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameViewportClient.NumReplaySecondsToStore"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatingModsUI` +8, medido na build 25090264
+    //  ancorado em `UpdatingModsUI` +8, medido na build 25535041
     //  (offset absoluto medido: 0x420; confianca alta)
     void*& UpdatingModsNumField() const
     { return BrzCampoAncorado<void*>(this, "UpdatingModsUI", 8); }
     BrzCampoPonteiro UpdatingModsUIField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.UpdatingModsUI")); }
+    BrzCampoPonteiro VideoReplayEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.VideoReplayEnabled")); }
     BrzCampoPonteiro ViewPortWidgetsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.ViewPortWidgets")); }
     BrzCampoPonteiro ViewportConsoleField() const
@@ -628,17 +630,17 @@ struct UShooterGameViewportClient
     BrzCampoPonteiro WorldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.World")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +9, medido na build 25090264
+    //  ancorado em `InfoFont` +9, medido na build 25535041
     //  (offset absoluto medido: 0x3F1; confianca alta)
     void*& bActiveScreenFadeField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +8, medido na build 25090264
+    //  ancorado em `InfoFont` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3F0; confianca alta)
     void*& bDisplayedStartupTutorialField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatingModsUI` +16, medido na build 25090264
+    //  ancorado em `UpdatingModsUI` +16, medido na build 25535041
     //  (offset absoluto medido: 0x428; confianca alta)
     void*& bSettingModsCounterField() const
     { return BrzCampoAncorado<void*>(this, "UpdatingModsUI", 16); }

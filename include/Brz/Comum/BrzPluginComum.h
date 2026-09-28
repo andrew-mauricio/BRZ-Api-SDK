@@ -239,54 +239,8 @@ inline void DizCor(const Contexto& c, void* pc, const Cor& cor, const char* fmt,
     c.api->MensagemDeServidorColorida(pc, t, cor.r, cor.g, cor.b, cor.a, 0);
 }
 
-// ── PARA ONDE O JOGADOR ESTA OLHANDO ────────────────────────────────────────
-//
-//  Dois plugins precisam disto, e os dois pelo mesmo motivo: o config deles fala
-//  em MIRAR. O `/pve` protege quem o admin esta olhando; o `/fill 1` enche o
-//  canteiro mirado. Pegar "o mais proximo" no lugar soa parecido e nao e': num
-//  monte de gente, ou num canteiro colado no outro, acerta o errado — e quem
-//  digitou so' descobre depois.
-//
-//  `AController.ControlRotation` e' um campo, e a reflexao o le'. A rotacao da
-//  Unreal e' `{Pitch, Yaw, Roll}` em GRAUS, tres doubles. O vetor unitario:
-//
-//      x = cos(pitch) * cos(yaw)
-//      y = cos(pitch) * sin(yaw)
-//      z = sin(pitch)
-//
-//  Devolve false quando o campo nao existe nesta build — e ai' quem chama tem de
-//  RECUSAR, e nao cair no mais proximo em silencio.
-inline bool DirecaoDoOlhar(const Contexto& c, void* pc, float& dx, float& dy, float& dz)
-{
-    if (!c.api || !pc) return false;
-    const int32_t off = c.api->OffsetDoMembro(pc, "ControlRotation");
-    if (off < 0) return false;
-    double rot[3] = {0,0,0};
-    if (!c.api->LerMembro(pc, uint32_t(off), rot, sizeof(rot))) return false;
-    const double kPi = 3.14159265358979323846;
-    const double p = rot[0] * kPi / 180.0, y = rot[1] * kPi / 180.0;
-    dx = float(std::cos(p) * std::cos(y));
-    dy = float(std::cos(p) * std::sin(y));
-    dz = float(std::sin(p));
-    return true;
-}
-
-//  O cosseno do angulo entre o olhar e a direcao de um ponto. Quanto MAIOR,
-//  mais alinhado. Devolve -2 quando nao da' para medir — um valor que nenhum
-//  cosseno assume, para nao se confundir com "esta' atras de mim" (-1).
-inline double CosDoOlharPara(const Contexto& c, void* pc, const BrzPosicao& alvo,
-                             double* distancia = nullptr)
-{
-    BrzPosicao minha{};
-    if (!c.api || !pc || !c.api->Posicao(pc, &minha)) return -2.0;
-    float dx = 0, dy = 0, dz = 0;
-    if (!DirecaoDoOlhar(c, pc, dx, dy, dz)) return -2.0;
-    const double vx = alvo.x - minha.x, vy = alvo.y - minha.y, vz = alvo.z - minha.z;
-    const double d = std::sqrt(vx*vx + vy*vy + vz*vz);
-    if (distancia) *distancia = d;
-    if (d <= 1.0) return -2.0;
-    return (vx*dx + vy*dy + vz*dz) / d;
-}
+//  (28/09/2026: `DirecaoDoOlhar`/`CosDoOlharPara`, que liam `ControlRotation`
+//  por nome, sairam — nenhum plugin as usava, e o que mira usa `GetAimedUseActor`.)
 
 // ── O EOS VAZIO, E POR QUE ELE PRECISA DE UMA REGRA SO' ────────────────────
 //
@@ -336,78 +290,14 @@ inline void NoTopo(const Contexto& c, void* pc, const char* fmt, ...)
     c.api->Notificacao(pc, t, 0.0f, 1.0f, 0.0f, 1.6f, 10.0f);
 }
 
+//  (28/09/2026: `Bit`/`EscreverBit`, que liam e escreviam bit POR NOME, sairam.
+//  Bit se le' e se escreve pelo acessor do header do jogo — `pc->bIsAdmin()()`,
+//  `d->bNeutered() = true` — e quem precisa saber se a escrita pegou le' de volta.)
+
 // ── argumentos do comando ───────────────────────────────────────────────────
 //
 // `linha` é o texto inteiro, com o gatilho na frente. Devolve os pedaços
 // separados por espaço, SEM o gatilho. Aspas agrupam.
-// ── ler e escrever um BIT sem chutar a máscara ──────────────────────────────
-//
-//  `api->LerBit(o, off, 1)` estava em SEIS plugins e no motor. A máscara `1`
-//  é o bit zero, e o dump diz onde os bits realmente moram:
-//
-//      APrimalDinoCharacter.bNeutered   bit 3   -> máscara 0x08
-//      APrimalCharacter.bIsDead         bit 5   -> máscara 0x20
-//
-//  Com máscara 1, castrar um dino liga o que estiver no bit 0 daquele byte, e
-//  "está morto?" responde por outra bandeira. Nenhuma das duas dá erro.
-//
-//  Estas duas perguntam a máscara à reflexão (`MascaraDoBit`, v12) e devolvem
-//  TRÊS respostas, como o resto da API:
-//
-//      1   o bit está ligado        (Bit)
-//      0   o bit está desligado
-//     -1   NÃO CONSEGUI SABER       — o campo não existe nesta build, ou o
-//          layout do bitfield não pôde ser medido
-//
-//  Escreva `Bit(...) > 0`, nunca `if (Bit(...))`: em C, −1 é verdadeiro.
-inline int Bit(const Contexto& c, void* obj, const char* campo)
-{
-    // `MascaraDoBit` entrou na v12. Um plugin que a use TEM de declarar
-    // `"MinApiVersion": 12` — e o carregador recusa quem nao declarar, porque
-    // ler alem do fim da tabela chama lixo. A conferencia aqui e' o cinto: se
-    // por qualquer caminho a entrada vier nula, -1 e' "nao sei", que e' a
-    // resposta certa. Chamar um ponteiro nulo derruba o servidor.
-    if (!c.api || !obj || !campo) return -1;
-
-    //  ── DESDE A v29 A API RESPONDE ISTO DIRETO ──────────────────────────
-    //
-    //  `LerBitPorNome` faz as duas metades dentro do motor: acha o byte e a
-    //  mascara pela reflexao viva e le'. A mascara deixou de existir na
-    //  interface, e com ela some a unica coisa que dava para errar aqui — todo
-    //  chamador desta arvore passava `1`, e `bNeutered` mora no bit 3.
-    //
-    //  Este helper existe para os NOSSOS plugins. Quem baixa a API e escreve o
-    //  proprio plugin nao tem este arquivo, e por isso a resposta teve de subir
-    //  para a tabela em vez de morar aqui.
-    if (c.api->versao >= 29 && c.api->LerBitPorNome)
-        return c.api->LerBitPorNome(obj, campo);
-
-    //  O caminho da v12 continua, para quem rodar sobre uma API mais velha.
-    if (!c.api->MascaraDoBit || !c.api->LerBit) return -1;
-    uint32_t off = 0;
-    uint8_t masc = 0;
-    if (!c.api->MascaraDoBit(obj, campo, &off, &masc)) return -1;
-    return c.api->LerBit(obj, off, masc);
-}
-
-// Devolve 1 se escreveu, 0 se não soube onde. Zero NÃO quer dizer "escrevi
-// zero" — quer dizer que não escrevi nada, e o chamador precisa saber disso
-// antes de dizer ao jogador que deu certo.
-inline int EscreverBit(const Contexto& c, void* obj, const char* campo, int valor)
-{
-    if (!c.api || !obj || !campo) return 0;
-
-    //  A v29 faz as duas metades no motor — ver a nota no `Bit` acima.
-    if (c.api->versao >= 29 && c.api->EscreverBitPorNome)
-        return c.api->EscreverBitPorNome(obj, campo, valor);
-
-    if (!c.api->MascaraDoBit || !c.api->EscreverBit) return 0;
-    uint32_t off = 0;
-    uint8_t masc = 0;
-    if (!c.api->MascaraDoBit(obj, campo, &off, &masc)) return 0;
-    return c.api->EscreverBit(obj, off, masc, valor);
-}
-
 inline std::vector<std::string> Args(const char* linha)
 {
     std::vector<std::string> v;

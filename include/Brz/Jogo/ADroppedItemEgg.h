@@ -51,7 +51,7 @@ struct ADroppedItemEgg : public ADroppedItem
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItemEgg.NetSpawnDinoEmitter_Implementation()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1636+bytes40+grafo=21/21]]
+    // endereco: casamento de bytes com a build de referencia
     void NetSpawnDinoEmitter_Implementation() const
     {
         NativeCall<void>(this, "ADroppedItemEgg.NetSpawnDinoEmitter_Implementation()");
@@ -85,6 +85,10 @@ struct ADroppedItemEgg : public ADroppedItem
     { return *GetNativePointerField<ABiomeZoneVolume**>(this, "ADroppedItemEgg.MyBiomeZone"); }
     BrzCampoPonteiro SpawnDinoEmitterField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItemEgg.SpawnDinoEmitter")); }
+    BrzCampoPonteiro bIsEggTooColdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItemEgg.bIsEggTooCold")); }
+    BrzCampoPonteiro bIsEggTooHotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItemEgg.bIsEggTooHot")); }
     BitFieldValue<bool, unsigned __int32> bIsEggTooHot()
     { return { (void*)this, "bIsEggTooHot" }; }
     BitFieldValue<bool, unsigned __int32> bIsEggTooCold()

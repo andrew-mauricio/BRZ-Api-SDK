@@ -35,6 +35,10 @@ struct FActorLastRenderTime
 
     double& LastRenderTimeField() const
     { return *GetNativePointerField<double*>(this, "FActorLastRenderTime.LastRenderTime"); }
+    BrzCampoPonteiro LastRenderTimeOnScreenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorLastRenderTime.LastRenderTimeOnScreen")); }
+    BrzCampoPonteiro NumAlwaysVisibleComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorLastRenderTime.NumAlwaysVisibleComponents")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORLASTRENDERTIME_H

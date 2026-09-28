@@ -132,7 +132,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.DebugCapsuleSweepCapture()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DebugCapsuleSweepCapture() const
     {
         NativeCall<void>(this, "UCheatManager.DebugCapsuleSweepCapture()");
@@ -140,7 +140,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UCheatManager.DebugCapsuleSweepChannel(ECollisionChannel)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DebugCapsuleSweepChannel(int a0) const
     {
         return NativeCall<void*, int>(this, "UCheatManager.DebugCapsuleSweepChannel(ECollisionChannel)", a0);
@@ -156,7 +156,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.DebugCapsuleSweepComplex(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DebugCapsuleSweepComplex(bool a0) const
     {
         NativeCall<void, bool>(this, "UCheatManager.DebugCapsuleSweepComplex(bool)", a0);
@@ -164,7 +164,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.DebugCapsuleSweepPawn()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DebugCapsuleSweepPawn() const
     {
         NativeCall<void>(this, "UCheatManager.DebugCapsuleSweepPawn()");
@@ -172,7 +172,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.DebugCapsuleSweepSize(float,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DebugCapsuleSweepSize(float a0, float a1) const
     {
         NativeCall<void, float, float>(this, "UCheatManager.DebugCapsuleSweepSize(float,float)", a0, a1);
@@ -188,7 +188,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.DestroyServerStatReplicator()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void DestroyServerStatReplicator() const
     {
         NativeCall<void>(this, "UCheatManager.DestroyServerStatReplicator()");
@@ -196,7 +196,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.DisableDebugCamera()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void DisableDebugCamera() const
     {
         NativeCall<void>(this, "UCheatManager.DisableDebugCamera()");
@@ -220,7 +220,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.FlushLog()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void FlushLog() const
     {
         NativeCall<void>(this, "UCheatManager.FlushLog()");
@@ -244,11 +244,10 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.GetWorld()
-    // classe: a funcao mora em AActor, e UCheatManager herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     UWorld* GetWorld() const
     {
-        return NativeCall<UWorld*>(this, "AActor.GetWorld()");
+        return NativeCall<UWorld*>(this, "UCheatManager.GetWorld()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -269,7 +268,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.InvertMouse()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=94]]
+    // endereco: casamento de bytes com a build de referencia
     void InvertMouse() const
     {
         NativeCall<void>(this, "UCheatManager.InvertMouse()");
@@ -293,7 +292,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.OnlyLoadLevel(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnlyLoadLevel(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "UCheatManager.OnlyLoadLevel(FName)", a0);
@@ -349,7 +348,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.SetMouseSensitivityToDefault()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetMouseSensitivityToDefault() const
     {
         NativeCall<void>(this, "UCheatManager.SetMouseSensitivityToDefault()");
@@ -365,7 +364,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.StreamLevelIn(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StreamLevelIn(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "UCheatManager.StreamLevelIn(FName)", a0);
@@ -373,7 +372,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.StreamLevelOut(FName)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StreamLevelOut(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "UCheatManager.StreamLevelOut(FName)", a0);
@@ -454,12 +453,12 @@ struct UCheatManager : public AShooterPlayerController
     TArray<void*>& CheatManagerExtensionsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UCheatManager.CheatManagerExtensions"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +64, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +64, medido na build 25535041
     //  (offset absoluto medido: 0x70; confianca media)
     int& CurrentTraceIndexField() const
     { return BrzCampoAncorado<int>(this, "DebugCameraControllerClass", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +68, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +68, medido na build 25535041
     //  (offset absoluto medido: 0x74; confianca media)
     int& CurrentTracePawnIndexField() const
     { return BrzCampoAncorado<int>(this, "DebugCameraControllerClass", 68); }
@@ -468,37 +467,37 @@ struct UCheatManager : public AShooterPlayerController
     BrzCampoPonteiro DebugCameraControllerRefField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatManager.DebugCameraControllerRef")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +16, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +16, medido na build 25535041
     //  (offset absoluto medido: 0x40; confianca alta)
     float& DebugCapsuleHalfHeightField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +20, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +20, medido na build 25535041
     //  (offset absoluto medido: 0x44; confianca alta)
     float& DebugCapsuleRadiusField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +28, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +28, medido na build 25535041
     //  (offset absoluto medido: 0x4C; confianca alta)
     void*& DebugTraceChannelField() const
     { return BrzCampoAncorado<void*>(this, "DebugCameraControllerClass", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +12, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +12, medido na build 25535041
     //  (offset absoluto medido: 0x3C; confianca alta)
     float& DebugTraceDistanceField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +24, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +24, medido na build 25535041
     //  (offset absoluto medido: 0x48; confianca alta)
     float& DebugTraceDrawNormalLengthField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +32, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +32, medido na build 25535041
     //  (offset absoluto medido: 0x50; confianca alta)
     void*& DebugTraceInfoListField() const
     { return BrzCampoAncorado<void*>(this, "DebugCameraControllerClass", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +48, medido na build 25090264
+    //  ancorado em `DebugCameraControllerClass` +48, medido na build 25535041
     //  (offset absoluto medido: 0x60; confianca media)
     void*& DebugTracePawnInfoListField() const
     { return BrzCampoAncorado<void*>(this, "DebugCameraControllerClass", 48); }

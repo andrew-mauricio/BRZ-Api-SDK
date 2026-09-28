@@ -37,16 +37,20 @@ struct FPrimalMovementFragment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FPrimalMovementFragment.StaticStruct()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo+string_aprovado]
-    static UScriptStruct* StaticStruct()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    UScriptStruct* StaticStruct() const
     {
-        return NativeCall<UScriptStruct*>(nullptr, "FPrimalMovementFragment.StaticStruct()");
+        return NativeCall<UScriptStruct*>(this, "FPrimalMovementFragment.StaticStruct()");
     }
 
     BrzCampoPonteiro AcceptanceRadiusField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.AcceptanceRadius")); }
     BrzCampoPonteiro AttackTimeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.AttackTime")); }
+    BrzCampoPonteiro AttackTimerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.AttackTimer")); }
+    BrzCampoPonteiro AvoidanceDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.AvoidanceData")); }
     float& AvoidanceLockTimerField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.AvoidanceLockTimer"); }
     BrzCampoPonteiro AvoidanceLockVelocityField() const
@@ -59,6 +63,8 @@ struct FPrimalMovementFragment
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.BrakingDecelerationWalking"); }
     float& BrakingFrictionField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.BrakingFriction"); }
+    BrzCampoPonteiro CapsuleCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.CapsuleCollision")); }
     BrzCampoPonteiro CollisionChannelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.CollisionChannel")); }
     BrzCampoPonteiro CollisionProfileField() const
@@ -67,26 +73,50 @@ struct FPrimalMovementFragment
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.CurrentDestination")); }
     BrzCampoPonteiro CurrentFloorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.CurrentFloor")); }
+    BrzCampoPonteiro DesiredAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.DesiredAnimationState")); }
+    BrzCampoPonteiro FindFloorRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.FindFloorRate")); }
+    BrzCampoPonteiro FindFloorTimerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.FindFloorTimer")); }
     BrzCampoPonteiro FrictionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.Friction")); }
     float& MaxAccelerationField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.MaxAcceleration"); }
+    BrzCampoPonteiro MaxRunSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.MaxRunSpeed")); }
+    BrzCampoPonteiro MaxSprintSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.MaxSprintSpeed")); }
     float& MaxStepHeightField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.MaxStepHeight"); }
     float& MaxSwimSpeedField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.MaxSwimSpeed"); }
     float& MaxWalkSpeedField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.MaxWalkSpeed"); }
+    BrzCampoPonteiro MoveSegmentEndIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.MoveSegmentEndIndex")); }
+    BrzCampoPonteiro MoveSegmentStartIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.MoveSegmentStartIndex")); }
+    BrzCampoPonteiro NotifyHitResultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.NotifyHitResult")); }
     BrzCampoPonteiro PathField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.Path")); }
-    BitFieldValue<bool, unsigned __int32> Velocity()
-    { return { (void*)this, "Velocity" }; }
+    BrzCampoPonteiro VelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.Velocity")); }
     float& WalkableFloorZField() const
     { return *GetNativePointerField<float*>(this, "FPrimalMovementFragment.WalkableFloorZ"); }
-    BitFieldValue<bool, unsigned __int32> bIsRunning()
-    { return { (void*)this, "bIsRunning" }; }
-    BitFieldValue<bool, unsigned __int32> bMaintainHorizontalGroundVelocity()
-    { return { (void*)this, "bMaintainHorizontalGroundVelocity" }; }
+    BrzCampoPonteiro bAnimationPreventsInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.bAnimationPreventsInput")); }
+    BrzCampoPonteiro bIsRunningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.bIsRunning")); }
+    BrzCampoPonteiro bIsSubmergedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.bIsSubmerged")); }
+    BrzCampoPonteiro bMaintainHorizontalGroundVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.bMaintainHorizontalGroundVelocity")); }
+    BrzCampoPonteiro bSkipSweepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.bSkipSweep")); }
+    BrzCampoPonteiro bUsesRVOField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMovementFragment.bUsesRVO")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALMOVEMENTFRAGMENT_H

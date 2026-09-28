@@ -63,6 +63,8 @@ struct FPrimalStructureSkinData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSkinData.Tag")); }
     TArray<void*>& VariantsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "FPrimalStructureSkinData.Variants"); }
+    BrzCampoPonteiro bUseMeshForPreviewOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSkinData.bUseMeshForPreviewOnly")); }
     BitFieldValue<bool, unsigned __int32> bUseMeshForPreviewOnly()
     { return { (void*)this, "bUseMeshForPreviewOnly" }; }
 

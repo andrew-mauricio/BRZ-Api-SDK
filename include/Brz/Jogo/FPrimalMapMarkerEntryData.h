@@ -37,6 +37,8 @@ struct FPrimalMapMarkerEntryData
     { return *GetNativePointerField<FString*>(this, "FPrimalMapMarkerEntryData.Name"); }
     BrzCampoPonteiro OverrideMarkerTextColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMapMarkerEntryData.OverrideMarkerTextColor")); }
+    BrzCampoPonteiro bOverrideMarkerTextColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalMapMarkerEntryData.bOverrideMarkerTextColor")); }
     int& coord1Field() const
     { return *GetNativePointerField<int*>(this, "FPrimalMapMarkerEntryData.coord1"); }
     float& coord1fField() const

@@ -35,12 +35,12 @@ struct UActorPartitionSubsystem
 
     BrzCampoPonteiro LevelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorPartitionSubsystem.Level")); }
-    BitFieldValue<bool, unsigned __int32> X()
-    { return { (void*)this, "X" }; }
-    BitFieldValue<bool, unsigned __int32> Y()
-    { return { (void*)this, "Y" }; }
-    BitFieldValue<bool, unsigned __int32> Z()
-    { return { (void*)this, "Z" }; }
+    BrzCampoPonteiro XField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorPartitionSubsystem.X")); }
+    BrzCampoPonteiro YField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorPartitionSubsystem.Y")); }
+    BrzCampoPonteiro ZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorPartitionSubsystem.Z")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UACTORPARTITIONSUBSYSTEM_H

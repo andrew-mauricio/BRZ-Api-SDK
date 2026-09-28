@@ -39,7 +39,7 @@ struct APrimalStructureSeaMine : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeaMine.ActivateSeaMine()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1439+grafo=15/17]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1439+grafo=16/16]]
     void ActivateSeaMine() const
     {
         NativeCall<void>(this, "APrimalStructureSeaMine.ActivateSeaMine()");
@@ -101,6 +101,10 @@ struct APrimalStructureSeaMine : public APrimalStructure
     { return *GetNativePointerField<USphereComponent**>(this, "APrimalStructureSeaMine.TriggerComponent"); }
     TArray<APrimalCharacter*>& TriggerOverlappingCharactersField() const
     { return *GetNativePointerField<TArray<APrimalCharacter*>*>(this, "APrimalStructureSeaMine.TriggerOverlappingCharacters"); }
+    BrzCampoPonteiro bActivatedSeaMineField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeaMine.bActivatedSeaMine")); }
+    BrzCampoPonteiro bDisableExplosionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeaMine.bDisableExplosion")); }
     BitFieldValue<bool, unsigned __int32> bActivatedSeaMine()
     { return { (void*)this, "bActivatedSeaMine" }; }
     BitFieldValue<bool, unsigned __int32> bDisableExplosion()

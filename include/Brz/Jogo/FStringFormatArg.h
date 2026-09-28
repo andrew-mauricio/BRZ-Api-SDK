@@ -37,7 +37,7 @@ struct FStringFormatArg
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringFormatArg.operator=(FStringFormatArg&&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro operator_(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FStringFormatArg.operator=(FStringFormatArg&&)", a0);
@@ -56,12 +56,22 @@ struct FStringFormatArg
 
     BrzCampoPonteiro DoubleValueField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.DoubleValue")); }
-    BitFieldValue<bool, unsigned __int32> IntValue()
-    { return { (void*)this, "IntValue" }; }
+    BrzCampoPonteiro IntValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.IntValue")); }
+    BrzCampoPonteiro StringLiteralANSIValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.StringLiteralANSIValue")); }
+    BrzCampoPonteiro StringLiteralUCS2ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.StringLiteralUCS2Value")); }
+    BrzCampoPonteiro StringLiteralUTF8ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.StringLiteralUTF8Value")); }
+    BrzCampoPonteiro StringLiteralWIDEValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.StringLiteralWIDEValue")); }
     BrzCampoPonteiro StringValueField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.StringValue")); }
     FName& TypeField() const
     { return *GetNativePointerField<FName*>(this, "FStringFormatArg.Type"); }
+    BrzCampoPonteiro UIntValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatArg.UIntValue")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGFORMATARG_H

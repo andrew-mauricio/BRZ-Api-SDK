@@ -48,7 +48,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.BecomeViewTarget(APlayerController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=222+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void BecomeViewTarget(void* a0) const
     {
         NativeCall<void, void*>(this, "APawn.BecomeViewTarget(APlayerController*)", a0);
@@ -72,7 +72,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.CreatePlayerInputComponent()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=400+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     UInputComponent* CreatePlayerInputComponent() const
     {
         return NativeCall<UInputComponent*>(this, "APawn.CreatePlayerInputComponent()");
@@ -80,7 +80,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.DestroyPlayerInputComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=49]]
+    // endereco: casamento de bytes com a build de referencia
     void DestroyPlayerInputComponent() const
     {
         NativeCall<void>(this, "APawn.DestroyPlayerInputComponent()");
@@ -88,7 +88,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APawn.Destroyed()");
@@ -96,7 +96,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.DetachFromControllerPendingDestroy()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void DetachFromControllerPendingDestroy() const
     {
         NativeCall<void>(this, "APawn.DetachFromControllerPendingDestroy()");
@@ -105,7 +105,7 @@ struct APawn : public AActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.DisableInput(APlayerController*)
     // classe: a funcao mora em AActor, e APawn herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=146]]
+    // endereco: casamento de bytes com a build de referencia
     void DisableInput(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.DisableInput(APlayerController*)", a0);
@@ -162,7 +162,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.GetDamageInstigator(AController*,UDamageType&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AController* GetDamageInstigator(void* a0, void* a1) const
     {
         return NativeCall<AController*, void*, void*>(this, "APawn.GetDamageInstigator(AController*,UDamageType&)", a0, a1);
@@ -210,7 +210,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.GetNavAgentPropertiesRef()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=55]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetNavAgentPropertiesRef() const
     {
         return NativeCall<void*>(this, "APawn.GetNavAgentPropertiesRef()");
@@ -218,7 +218,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.GetNetOwningPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=115]]
+    // endereco: casamento de bytes com a build de referencia
     UPlayer* GetNetOwningPlayer() const
     {
         return NativeCall<UPlayer*>(this, "APawn.GetNetOwningPlayer()");
@@ -226,7 +226,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.GetPawnViewLocation()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void GetPawnViewLocation(void* retorno) const
     {
         NativeCall<void, void*>(this, "APawn.GetPawnViewLocation()", retorno);
@@ -250,7 +250,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.InFreeCam()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=299+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     bool InFreeCam() const
     {
         return NativeCall<bool>(this, "APawn.InFreeCam()");
@@ -266,7 +266,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.IsBotControlled()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsBotControlled() const
     {
         return NativeCall<bool>(this, "APawn.IsBotControlled()");
@@ -290,7 +290,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.IsPlayerControlled()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPlayerControlled() const
     {
         return NativeCall<bool>(this, "APawn.IsPlayerControlled()");
@@ -298,7 +298,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.NotifyControllerChanged()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=262+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void NotifyControllerChanged() const
     {
         NativeCall<void>(this, "APawn.NotifyControllerChanged()");
@@ -314,7 +314,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.OnRep_Controller()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=25]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_Controller() const
     {
         NativeCall<void>(this, "APawn.OnRep_Controller()");
@@ -322,7 +322,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.OnRep_PlayerState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=175]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_PlayerState() const
     {
         NativeCall<void>(this, "APawn.OnRep_PlayerState()");
@@ -330,7 +330,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.OutsideWorldBounds()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void OutsideWorldBounds() const
     {
         NativeCall<void>(this, "APawn.OutsideWorldBounds()");
@@ -338,7 +338,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.PawnClientRestart()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=317]]
+    // endereco: casamento de bytes com a build de referencia
     void PawnClientRestart() const
     {
         NativeCall<void>(this, "APawn.PawnClientRestart()");
@@ -354,7 +354,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APawn.PostInitializeComponents()");
@@ -378,11 +378,10 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.PostRegisterAllComponents()
-    // classe: a funcao mora em AActor, e APawn herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void PostRegisterAllComponents() const
     {
-        NativeCall<void>(this, "AActor.PostRegisterAllComponents()");
+        NativeCall<void>(this, "APawn.PostRegisterAllComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -395,7 +394,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.PreReplication(IRepChangedPropertyTracker&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=108]]
+    // endereco: casamento de bytes com a build de referencia
     void PreReplication(void* a0) const
     {
         NativeCall<void, void*>(this, "APawn.PreReplication(IRepChangedPropertyTracker&)", a0);
@@ -403,7 +402,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.ReachedDesiredRotation()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool ReachedDesiredRotation() const
     {
         return NativeCall<bool>(this, "APawn.ReachedDesiredRotation()");
@@ -419,7 +418,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.Reset()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=73]]
+    // endereco: casamento de bytes com a build de referencia
     void Reset() const
     {
         NativeCall<void>(this, "APawn.Reset()");
@@ -427,7 +426,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.Restart()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=70]]
+    // endereco: casamento de bytes com a build de referencia
     void Restart() const
     {
         NativeCall<void>(this, "APawn.Restart()");
@@ -435,7 +434,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.SetCanAffectNavigationGeneration(bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetCanAffectNavigationGeneration(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "APawn.SetCanAffectNavigationGeneration(bool,bool)", a0, a1);
@@ -475,7 +474,7 @@ struct APawn : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APawn.TurnOff()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=104]]
+    // endereco: casamento de bytes com a build de referencia
     void TurnOff() const
     {
         NativeCall<void>(this, "APawn.TurnOff()");
@@ -500,7 +499,7 @@ struct APawn : public AActor
     BrzCampoPonteiro AIControllerClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.AIControllerClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreviousController` +8, medido na build 25090264
+    //  ancorado em `PreviousController` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4D0; confianca alta)
     float& AllowedYawErrorField() const
     { return BrzCampoAncorado<float>(this, "PreviousController", 8); }
@@ -511,7 +510,7 @@ struct APawn : public AActor
     float& BaseEyeHeightField() const
     { return *GetNativePointerField<float*>(this, "APawn.BaseEyeHeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewPitch` +2, medido na build 25090264
+    //  ancorado em `RemoteViewPitch` +2, medido na build 25535041
     //  (offset absoluto medido: 0x4A4; confianca alta)
     float& BlendedReplayViewPitchField() const
     { return BrzCampoAncorado<float>(this, "RemoteViewPitch", 2); }
@@ -537,6 +536,22 @@ struct APawn : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.ReceiveRestartedDelegate")); }
     BrzCampoPonteiro RemoteViewPitchField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.RemoteViewPitch")); }
+    BrzCampoPonteiro bCanAffectNavigationGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bCanAffectNavigationGeneration")); }
+    BrzCampoPonteiro bDisableControllerDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bDisableControllerDesiredRotation")); }
+    BrzCampoPonteiro bForceUseCustomCameraComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bForceUseCustomCameraComponent")); }
+    BrzCampoPonteiro bIsLocalViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bIsLocalViewTarget")); }
+    BrzCampoPonteiro bUseBPFaceRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bUseBPFaceRotation")); }
+    BrzCampoPonteiro bUseControllerRotationPitchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bUseControllerRotationPitch")); }
+    BrzCampoPonteiro bUseControllerRotationRollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bUseControllerRotationRoll")); }
+    BrzCampoPonteiro bUseControllerRotationYawField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.bUseControllerRotationYaw")); }
     BitFieldValue<bool, unsigned __int32> bUseControllerRotationPitch()
     { return { (void*)this, "bUseControllerRotationPitch" }; }
     BitFieldValue<bool, unsigned __int32> bUseControllerRotationYaw()

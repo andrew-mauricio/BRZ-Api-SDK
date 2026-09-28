@@ -38,14 +38,14 @@ struct FStringTableEngineBridge
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringTableEngineBridge.AddReferencedObjects(FReferenceCollector&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddReferencedObjects(void* a0)
+    BrzPonteiro AddReferencedObjects(void* a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "FStringTableEngineBridge.AddReferencedObjects(FReferenceCollector&)", a0);
+        return NativeCall<void*, void*>(this, "FStringTableEngineBridge.AddReferencedObjects(FReferenceCollector&)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringTableEngineBridge.CanFindOrLoadStringTableAssetImpl()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanFindOrLoadStringTableAssetImpl() const
     {
         return NativeCall<void*>(this, "FStringTableEngineBridge.CanFindOrLoadStringTableAssetImpl()");
@@ -65,7 +65,7 @@ struct FStringTableEngineBridge
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringTableEngineBridge.Get()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     UObject* Get() const
     {
         return NativeCall<UObject*>(this, "FStringTableEngineBridge.Get()");
@@ -93,7 +93,7 @@ struct FStringTableEngineBridge
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringTableEngineBridge.IsStringTableAssetBeingReplacedImpl(UStringTable*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsStringTableAssetBeingReplacedImpl(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FStringTableEngineBridge.IsStringTableAssetBeingReplacedImpl(UStringTable*)", a0);
@@ -118,6 +118,21 @@ struct FStringTableEngineBridge
     //  a mesma, para quem ja' tem o ponteiro na mao
     BrzPonteiro RedirectStringTableAssetImpl(FName* a0) const
     { return RedirectStringTableAssetImpl(*a0); }
+
+    BrzCampoPonteiro AsyncLoadingIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.AsyncLoadingId")); }
+    BrzCampoPonteiro AsyncLoadingStringTablesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.AsyncLoadingStringTables")); }
+    BrzCampoPonteiro AsyncLoadingStringTablesCSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.AsyncLoadingStringTablesCS")); }
+    BrzCampoPonteiro KeepAliveStringTablesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.KeepAliveStringTables")); }
+    BrzCampoPonteiro KeepAliveStringTablesCSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.KeepAliveStringTablesCS")); }
+    BrzCampoPonteiro LoadedCallbacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.LoadedCallbacks")); }
+    BrzCampoPonteiro RequestedTableIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEngineBridge.RequestedTableId")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGTABLEENGINEBRIDGE_H

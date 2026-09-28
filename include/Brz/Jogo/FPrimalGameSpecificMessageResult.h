@@ -35,6 +35,8 @@ struct FPrimalGameSpecificMessageResult
 
     BrzCampoPonteiro ContentsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalGameSpecificMessageResult.Contents")); }
+    BrzCampoPonteiro MessageIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalGameSpecificMessageResult.MessageID")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALGAMESPECIFICMESSAGERESULT_H

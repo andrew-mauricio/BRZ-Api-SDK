@@ -44,7 +44,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.GetGravityZ()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     float GetGravityZ() const
     {
         return NativeCall<float>(this, "UMovementComponent.GetGravityZ()");
@@ -52,7 +52,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.InitCollisionParams(FCollisionQueryParams&,FCollisionResponseParams&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitCollisionParams(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UMovementComponent.InitCollisionParams(FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1);
@@ -68,7 +68,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.IsExceedingMaxSpeed(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsExceedingMaxSpeed(float a0) const
     {
         return NativeCall<bool, float>(this, "UMovementComponent.IsExceedingMaxSpeed(float)", a0);
@@ -156,7 +156,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.SetPlaneConstraintEnabled(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetPlaneConstraintEnabled(bool a0) const
     {
         NativeCall<void, bool>(this, "UMovementComponent.SetPlaneConstraintEnabled(bool)", a0);
@@ -180,7 +180,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.SetPlaneConstraintOrigin(UE::Math::TVector<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetPlaneConstraintOrigin(void* a0) const
     {
         NativeCall<void, void*>(this, "UMovementComponent.SetPlaneConstraintOrigin(UE::Math::TVector<double>)", a0);
@@ -196,7 +196,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.ShouldSkipUpdate(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldSkipUpdate(float a0) const
     {
         return NativeCall<bool, float>(this, "UMovementComponent.ShouldSkipUpdate(float)", a0);
@@ -220,7 +220,7 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.StopMovementImmediately()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopMovementImmediately() const
     {
         NativeCall<void>(this, "UMovementComponent.StopMovementImmediately()");
@@ -244,14 +244,14 @@ struct UMovementComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UMovementComponent.UpdateComponentVelocity()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateComponentVelocity() const
     {
         NativeCall<void>(this, "UMovementComponent.UpdateComponentVelocity()");
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatedPrimitive` +8, medido na build 25090264
+    //  ancorado em `UpdatedPrimitive` +8, medido na build 25535041
     //  (offset absoluto medido: 0xE0; confianca alta)
     int& MoveComponentFlagsField() const
     { return BrzCampoAncorado<int>(this, "UpdatedPrimitive", 8); }
@@ -265,18 +265,34 @@ struct UMovementComponent : public UActorComponent
     { return *GetNativePointerField<TObjectPtr<USceneComponent>*>(this, "UMovementComponent.UpdatedComponent"); }
     TObjectPtr<UPrimitiveComponent>& UpdatedPrimitiveField() const
     { return *GetNativePointerField<TObjectPtr<UPrimitiveComponent>*>(this, "UMovementComponent.UpdatedPrimitive"); }
-    BitFieldValue<bool, unsigned __int32> Velocity()
-    { return { (void*)this, "Velocity" }; }
+    BrzCampoPonteiro VelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.Velocity")); }
+    BrzCampoPonteiro bAutoRegisterPhysicsVolumeUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bAutoRegisterPhysicsVolumeUpdates")); }
+    BrzCampoPonteiro bAutoRegisterUpdatedComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bAutoRegisterUpdatedComponent")); }
+    BrzCampoPonteiro bAutoUpdateTickRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bAutoUpdateTickRegistration")); }
+    BrzCampoPonteiro bComponentShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bComponentShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bConstrainToPlaneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bConstrainToPlane")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlaneConstraintOrigin` +26, medido na build 25090264
+    //  ancorado em `PlaneConstraintOrigin` +26, medido na build 25535041
     //  (offset absoluto medido: 0x132; confianca alta)
     bool& bInInitializeComponentField() const
     { return BrzCampoAncorado<bool>(this, "PlaneConstraintOrigin", 26); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlaneConstraintOrigin` +25, medido na build 25090264
+    //  ancorado em `PlaneConstraintOrigin` +25, medido na build 25535041
     //  (offset absoluto medido: 0x131; confianca alta)
     bool& bInOnRegisterField() const
     { return BrzCampoAncorado<bool>(this, "PlaneConstraintOrigin", 25); }
+    BrzCampoPonteiro bSnapToPlaneAtStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bSnapToPlaneAtStart")); }
+    BrzCampoPonteiro bTickBeforeOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bTickBeforeOwner")); }
+    BrzCampoPonteiro bUpdateOnlyIfRenderedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bUpdateOnlyIfRendered")); }
     BitFieldValue<bool, unsigned __int32> bUpdateOnlyIfRendered()
     { return { (void*)this, "bUpdateOnlyIfRendered" }; }
     BitFieldValue<bool, unsigned __int32> bAutoUpdateTickRegistration()

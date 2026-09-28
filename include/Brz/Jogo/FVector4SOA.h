@@ -35,12 +35,12 @@ struct FVector4SOA
 
     BrzCampoPonteiro WField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4SOA.W")); }
-    BitFieldValue<bool, unsigned __int32> X()
-    { return { (void*)this, "X" }; }
-    BitFieldValue<bool, unsigned __int32> Y()
-    { return { (void*)this, "Y" }; }
-    BitFieldValue<bool, unsigned __int32> Z()
-    { return { (void*)this, "Z" }; }
+    BrzCampoPonteiro XField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4SOA.X")); }
+    BrzCampoPonteiro YField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4SOA.Y")); }
+    BrzCampoPonteiro ZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4SOA.Z")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTOR4SOA_H

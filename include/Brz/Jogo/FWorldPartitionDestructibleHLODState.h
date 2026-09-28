@@ -43,7 +43,7 @@ struct FWorldPartitionDestructibleHLODState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FWorldPartitionDestructibleHLODState.PostReplicatedChange(TArrayView<int,int>&,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PostReplicatedChange(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "FWorldPartitionDestructibleHLODState.PostReplicatedChange(TArrayView<int,int>&,int)", a0, a1);

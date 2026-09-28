@@ -58,13 +58,13 @@ struct UPrimalLocalProfile : public UObject
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.AddCustomFolder(FString)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddCustomFolder(const FString& a0)
+    BrzPonteiro AddCustomFolder(const FString& a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "UPrimalLocalProfile.AddCustomFolder(FString)", const_cast<FString*>(&a0));
+        return NativeCall<void*, void*>(this, "UPrimalLocalProfile.AddCustomFolder(FString)", const_cast<FString*>(&a0));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static BrzPonteiro AddCustomFolder(FString* a0)
+    BrzPonteiro AddCustomFolder(FString* a0) const
     { return AddCustomFolder(*a0); }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -141,7 +141,7 @@ struct UPrimalLocalProfile : public UObject
 
     // dump_sobre_sdk_287a0
     //   UPrimalLocalProfile.GetArkTributeDinosData()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=345+bytes40+chamadores=4+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=345+bytes40+chamadores=2+grafo=3/3]]
     void GetArkTributeDinosData() const
     {
         NativeCall<void>(this, "UPrimalLocalProfile.GetArkTributeDinosData()");
@@ -165,7 +165,7 @@ struct UPrimalLocalProfile : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.GetArkTributePlayerData()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=347+bytes40+chamadores=7+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=347+bytes40+chamadores=5+grafo=3/3]]
     BrzPonteiro GetArkTributePlayerData() const
     {
         return NativeCall<void*>(this, "UPrimalLocalProfile.GetArkTributePlayerData()");
@@ -197,7 +197,7 @@ struct UPrimalLocalProfile : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.GetSpectatorPosition(int,UE::Math::TVector<double>&,UE::Math::TRotator<doubl
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSpectatorPosition(int a0, void* a1, void* a2) const
     {
         return NativeCall<void*, int, void*, void*>(this, "UPrimalLocalProfile.GetSpectatorPosition(int,UE::Math::TVector<double>&,UE::Math::TRotator<double>&)", a0, a1, a2);
@@ -213,7 +213,7 @@ struct UPrimalLocalProfile : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.HasReachedTributeItemsLimit(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasReachedTributeItemsLimit(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalLocalProfile.HasReachedTributeItemsLimit(int)", a0);
@@ -294,9 +294,9 @@ struct UPrimalLocalProfile : public UObject
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.MarkGen2IntroAsSeen()
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MarkGen2IntroAsSeen()
+    BrzPonteiro MarkGen2IntroAsSeen() const
     {
-        return NativeCall<void*>(nullptr, "UPrimalLocalProfile.MarkGen2IntroAsSeen()");
+        return NativeCall<void*>(this, "UPrimalLocalProfile.MarkGen2IntroAsSeen()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -406,13 +406,13 @@ struct UPrimalLocalProfile : public UObject
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.RemoveCustomFolder(FString)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro RemoveCustomFolder(const FString& a0)
+    BrzPonteiro RemoveCustomFolder(const FString& a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "UPrimalLocalProfile.RemoveCustomFolder(FString)", const_cast<FString*>(&a0));
+        return NativeCall<void*, void*>(this, "UPrimalLocalProfile.RemoveCustomFolder(FString)", const_cast<FString*>(&a0));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static BrzPonteiro RemoveCustomFolder(FString* a0)
+    BrzPonteiro RemoveCustomFolder(FString* a0) const
     { return RemoveCustomFolder(*a0); }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -465,7 +465,7 @@ struct UPrimalLocalProfile : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalLocalProfile.SaveProfile(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SaveProfile(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimalLocalProfile.SaveProfile(bool)", a0);
@@ -580,6 +580,54 @@ struct UPrimalLocalProfile : public UObject
 
     BrzCampoPonteiro AchievementItemsCollectedListField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.AchievementItemsCollectedList")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstExoSuitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstExoSuit")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstFishingNetCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstFishingNetCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstGen2DispatcherEncounteredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstGen2DispatcherEncountered")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstGen2ExplorerNoteFoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstGen2ExplorerNoteFound")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstHoverSkiffCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstHoverSkiffCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstHoversailField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstHoversail")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstJumpPadCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstJumpPadCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstLaserTripWireCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstLaserTripWireCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstMiningDrillCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstMiningDrillCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstOceanPlatformCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstOceanPlatformCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstPlantSpeciesRField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstPlantSpeciesR")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstPressurePlateCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstPressurePlateCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstShapeshifterBloodlustField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstShapeshifterBloodlust")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstShapeshifterRevertField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstShapeshifterRevert")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstShapeshifterTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstShapeshifterTransform")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstShoulderCannonCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstShoulderCannonCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstTekBowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstTekBow")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstTekClawsCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstTekClawsCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstTekCropPlotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstTekCropPlot")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstTekCruiseMissileCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstTekCruiseMissileCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstTekGrenadeLauncherCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstTekGrenadeLauncherCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstTekPistolField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstTekPistol")); }
+    BrzCampoPonteiro CompanionHasReactedToFirstThatchCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToFirstThatchCraft")); }
+    BrzCampoPonteiro CompanionHasReactedToGen2BossBattleAvailableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CompanionHasReactedToGen2BossBattleAvailable")); }
     BrzCampoPonteiro CustomFoldersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalLocalProfile.CustomFolders")); }
     BrzCampoPonteiro DisplayedTutorialsField() const

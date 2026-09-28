@@ -35,16 +35,22 @@ struct FActorCreationParams
 
     BrzCampoPonteiro DebugNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.DebugName")); }
+    BrzCampoPonteiro InitialTMField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.InitialTM")); }
     BrzCampoPonteiro SceneField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.Scene")); }
-    BitFieldValue<bool, unsigned __int32> bEnableGravity()
-    { return { (void*)this, "bEnableGravity" }; }
-    BitFieldValue<bool, unsigned __int32> bSimulatePhysics()
-    { return { (void*)this, "bSimulatePhysics" }; }
-    BitFieldValue<bool, unsigned __int32> bStartAwake()
-    { return { (void*)this, "bStartAwake" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateKinematicFromSimulation()
-    { return { (void*)this, "bUpdateKinematicFromSimulation" }; }
+    BrzCampoPonteiro bEnableGravityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.bEnableGravity")); }
+    BrzCampoPonteiro bQueryOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.bQueryOnly")); }
+    BrzCampoPonteiro bSimulatePhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.bSimulatePhysics")); }
+    BrzCampoPonteiro bStartAwakeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.bStartAwake")); }
+    BrzCampoPonteiro bStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.bStatic")); }
+    BrzCampoPonteiro bUpdateKinematicFromSimulationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorCreationParams.bUpdateKinematicFromSimulation")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORCREATIONPARAMS_H

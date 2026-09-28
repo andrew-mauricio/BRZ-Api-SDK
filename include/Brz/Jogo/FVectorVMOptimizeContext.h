@@ -32,10 +32,55 @@ struct FVectorVMOptimizeContext
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ConstRemapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.ConstRemap")); }
+    BrzCampoPonteiro ExtFnTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.ExtFnTable")); }
     BrzCampoPonteiro FlagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.Flags")); }
+    BrzCampoPonteiro HashIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.HashId")); }
+    BrzCampoPonteiro InputDataSetOffsetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.InputDataSetOffsets")); }
+    BrzCampoPonteiro InputRemapTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.InputRemapTable")); }
+    BrzCampoPonteiro MaxExtFnRegistersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.MaxExtFnRegisters")); }
+    BrzCampoPonteiro MaxExtFnUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.MaxExtFnUsed")); }
+    BrzCampoPonteiro MaxOutputDataSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.MaxOutputDataSet")); }
+    BrzCampoPonteiro NumBytecodeBytesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumBytecodeBytes")); }
+    BrzCampoPonteiro NumConstsAllocedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumConstsAlloced")); }
+    BrzCampoPonteiro NumConstsRemappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumConstsRemapped")); }
+    BrzCampoPonteiro NumDummyRegsReqField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumDummyRegsReq")); }
+    BrzCampoPonteiro NumExtFnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumExtFns")); }
+    BrzCampoPonteiro NumInputDataSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumInputDataSets")); }
+    BrzCampoPonteiro NumInputsRemappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumInputsRemapped")); }
+    BrzCampoPonteiro NumNoAdvanceInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumNoAdvanceInputs")); }
+    BrzCampoPonteiro NumOutputInstructionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumOutputInstructions")); }
+    BrzCampoPonteiro NumOutputsRemappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumOutputsRemapped")); }
     BrzCampoPonteiro NumTempRegistersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.NumTempRegisters")); }
+    BrzCampoPonteiro OutputBytecodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.OutputBytecode")); }
+    BrzCampoPonteiro OutputRemapDataSetIdxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.OutputRemapDataSetIdx")); }
+    BrzCampoPonteiro OutputRemapDataTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.OutputRemapDataType")); }
+    BrzCampoPonteiro OutputRemapDstField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMOptimizeContext.OutputRemapDst")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMOPTIMIZECONTEXT_H

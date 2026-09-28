@@ -41,7 +41,7 @@ struct ACustomGameMode : public AShooterGameMode
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameMode.AllowAddToTribe(AShooterPlayerState*,FTribeData&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool AllowAddToTribe(void* a0, void* a1)
     {
         return NativeCall<bool, void*, void*>(nullptr, "ACustomGameMode.AllowAddToTribe(AShooterPlayerState*,FTribeData&)", a0, a1);
@@ -49,7 +49,7 @@ struct ACustomGameMode : public AShooterGameMode
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameMode.AllowModifyStatusValue(UPrimalCharacterStatusComponent*,EPrimalCharacterStatusVa
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool AllowModifyStatusValue(void* a0, int a1, float a2)
     {
         return NativeCall<bool, void*, int, float>(nullptr, "ACustomGameMode.AllowModifyStatusValue(UPrimalCharacterStatusComponent*,EPrimalCharacterStatusValue::Type,float)", a0, a1, a2);

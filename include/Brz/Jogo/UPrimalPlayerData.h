@@ -45,7 +45,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalPlayerData.AddSigilCount_Abb(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddSigilCount_Abb(int a0) const
     {
         NativeCall<void, int>(this, "UPrimalPlayerData.AddSigilCount_Abb(int)", a0);
@@ -53,7 +53,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalPlayerData.AddSigilCount_Crimson(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddSigilCount_Crimson(int a0) const
     {
         NativeCall<void, int>(this, "UPrimalPlayerData.AddSigilCount_Crimson(int)", a0);
@@ -61,7 +61,7 @@ struct UPrimalPlayerData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalPlayerData.ApplyAssetReferencesToPlayerCharacter(AShooterCharacter*,FPrimalPlayerCharacte
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ApplyAssetReferencesToPlayerCharacter(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "UPrimalPlayerData.ApplyAssetReferencesToPlayerCharacter(AShooterCharacter*,FPrimalPlayerCharacterConfigStruct&,bool)", a0, a1, a2);
@@ -77,7 +77,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalPlayerData.ApplyToPlayerCharacter(AShooterPlayerState*,AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=27]]
+    // endereco: casamento de bytes com a build de referencia
     void ApplyToPlayerCharacter(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UPrimalPlayerData.ApplyToPlayerCharacter(AShooterPlayerState*,AShooterCharacter*)", a0, a1);
@@ -101,7 +101,7 @@ struct UPrimalPlayerData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalPlayerData.CreateBuffsFromPersistentDatas(AShooterCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1519+bytes40+grafo=15/15]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1519+bytes40+grafo=14/14]]
     BrzPonteiro CreateBuffsFromPersistentDatas(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalPlayerData.CreateBuffsFromPersistentDatas(AShooterCharacter*)", a0);
@@ -149,7 +149,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalPlayerData.GetSigilCount_Abb()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetSigilCount_Abb() const
     {
         return NativeCall<int>(this, "UPrimalPlayerData.GetSigilCount_Abb()");
@@ -157,7 +157,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalPlayerData.GetSigilCount_Crimson()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetSigilCount_Crimson() const
     {
         return NativeCall<int>(this, "UPrimalPlayerData.GetSigilCount_Crimson()");
@@ -213,7 +213,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalPlayerData.HasUnlockedAllBobsTallTalesExplorerNotes(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasUnlockedAllBobsTallTalesExplorerNotes(int a0) const
     {
         return NativeCall<bool, int>(this, "UPrimalPlayerData.HasUnlockedAllBobsTallTalesExplorerNotes(int)", a0);
@@ -221,7 +221,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalPlayerData.HasUnlockedAllExplorerNotes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasUnlockedAllExplorerNotes() const
     {
         return NativeCall<bool>(this, "UPrimalPlayerData.HasUnlockedAllExplorerNotes()");
@@ -285,7 +285,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalPlayerData.SetPlayerHexagonCount(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=138+chamadores=3]]
     bool SetPlayerHexagonCount(int a0) const
     {
         return NativeCall<bool, int>(this, "UPrimalPlayerData.SetPlayerHexagonCount(int)", a0);
@@ -314,17 +314,17 @@ struct UPrimalPlayerData : public UObject
     BrzCampoPonteiro BossEngramReferenceMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalPlayerData.BossEngramReferenceMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +24, medido na build 25090264
+    //  ancorado em `MyPersistentBuffDatas` +24, medido na build 25535041
     //  (offset absoluto medido: 0x700; confianca alta)
     float& LastXPWritePercentField() const
     { return BrzCampoAncorado<float>(this, "MyPersistentBuffDatas", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +20, medido na build 25090264
+    //  ancorado em `MyPersistentBuffDatas` +20, medido na build 25535041
     //  (offset absoluto medido: 0x6FC; confianca alta)
     int& LocalPlayerIndexField() const
     { return BrzCampoAncorado<int>(this, "MyPersistentBuffDatas", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +32, medido na build 25090264
+    //  ancorado em `MyPersistentBuffDatas` +32, medido na build 25535041
     //  (offset absoluto medido: 0x708; confianca alta)
     void*& MissionTagToLatestMissionScoreField() const
     { return BrzCampoAncorado<void*>(this, "MyPersistentBuffDatas", 32); }
@@ -339,7 +339,7 @@ struct UPrimalPlayerData : public UObject
     bool& bAllowArkSeasonPassItemsField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalPlayerData.bAllowArkSeasonPassItems"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +16, medido na build 25090264
+    //  ancorado em `MyPersistentBuffDatas` +16, medido na build 25535041
     //  (offset absoluto medido: 0x6F8; confianca alta)
     bool& bIsLocalPlayerField() const
     { return BrzCampoAncorado<bool>(this, "MyPersistentBuffDatas", 16); }

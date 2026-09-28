@@ -40,7 +40,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.ApplyAsyncOutput(FCharacterAsyncOutput&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ApplyAsyncOutput(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ACharacter.ApplyAsyncOutput(FCharacterAsyncOutput&)", a0);
@@ -81,7 +81,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.CanCrouch()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanCrouch() const
     {
         return NativeCall<bool>(this, "ACharacter.CanCrouch()");
@@ -97,7 +97,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.CanJumpInternal_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanJumpInternal_Implementation() const
     {
         return NativeCall<bool>(this, "ACharacter.CanJumpInternal_Implementation()");
@@ -105,7 +105,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.CheckJumpInput(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: casamento de bytes com a build de referencia
     void CheckJumpInput(float a0) const
     {
         NativeCall<void, float>(this, "ACharacter.CheckJumpInput(float)", a0);
@@ -113,7 +113,7 @@ struct ACharacter : public APrimalPawn
 
     // dump_sobre_sdk_287a0
     //   ACharacter.ClearCrossLevelReferences()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=21]]
+    // endereco: casamento de bytes com a build de referencia
     void ClearCrossLevelReferences() const
     {
         NativeCall<void>(this, "ACharacter.ClearCrossLevelReferences()");
@@ -121,7 +121,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.ClearJumpInput(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=88]]
+    // endereco: casamento de bytes com a build de referencia
     void ClearJumpInput(float a0) const
     {
         NativeCall<void, float>(this, "ACharacter.ClearJumpInput(float)", a0);
@@ -145,7 +145,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.ClientCheatFly_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ClientCheatFly_Implementation() const
     {
         NativeCall<void>(this, "ACharacter.ClientCheatFly_Implementation()");
@@ -153,7 +153,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.ClientCheatGhost_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=70]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientCheatGhost_Implementation() const
     {
         NativeCall<void>(this, "ACharacter.ClientCheatGhost_Implementation()");
@@ -169,7 +169,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.ClientForceUpdateMovement(UE::Math::TVector<double>,UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientForceUpdateMovement(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "ACharacter.ClientForceUpdateMovement(UE::Math::TVector<double>,UE::Math::TVector<double>)", a0, a1);
@@ -209,7 +209,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.FillAsyncInput(FCharacterAsyncInput&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=176]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FillAsyncInput(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ACharacter.FillAsyncInput(FCharacterAsyncInput&)", a0);
@@ -217,7 +217,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.FindComponentByClass(TSubclassOf<UActorComponent>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=267]]
+    // endereco: casamento de bytes com a build de referencia
     UActorComponent* FindComponentByClass(void* a0) const
     {
         return NativeCall<UActorComponent*, void*>(this, "ACharacter.FindComponentByClass(TSubclassOf<UActorComponent>)", a0);
@@ -233,7 +233,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GatherCurrentMovement()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GatherCurrentMovement() const
     {
         return NativeCall<void*>(this, "ACharacter.GatherCurrentMovement()");
@@ -241,7 +241,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GetAnimRootMotionTranslationScale()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAnimRootMotionTranslationScale() const
     {
         return NativeCall<void*>(this, "ACharacter.GetAnimRootMotionTranslationScale()");
@@ -249,7 +249,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GetBaseRotationOffset()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBaseRotationOffset() const
     {
         return NativeCall<void*>(this, "ACharacter.GetBaseRotationOffset()");
@@ -257,7 +257,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GetCurrentMontage()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: casamento de bytes com a build de referencia
     UAnimMontage* GetCurrentMontage() const
     {
         return NativeCall<UAnimMontage*>(this, "ACharacter.GetCurrentMontage()");
@@ -273,7 +273,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GetGravityDirection()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetGravityDirection() const
     {
         return NativeCall<void*>(this, "ACharacter.GetGravityDirection()");
@@ -281,7 +281,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GetGravityTransform()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetGravityTransform() const
     {
         return NativeCall<void*>(this, "ACharacter.GetGravityTransform()");
@@ -289,7 +289,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.GetJumpMaxHoldTime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetJumpMaxHoldTime() const
     {
         return NativeCall<float>(this, "ACharacter.GetJumpMaxHoldTime()");
@@ -329,7 +329,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.GetReplicatedGravityDirection()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetReplicatedGravityDirection() const
     {
         return NativeCall<void*>(this, "ACharacter.GetReplicatedGravityDirection()");
@@ -361,7 +361,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.IsJumpProvidingForce()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsJumpProvidingForce() const
     {
         return NativeCall<bool>(this, "ACharacter.IsJumpProvidingForce()");
@@ -369,7 +369,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.IsPlayingNetworkedRootMotionMontage()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsPlayingNetworkedRootMotionMontage() const
     {
         return NativeCall<void*>(this, "ACharacter.IsPlayingNetworkedRootMotionMontage()");
@@ -377,7 +377,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.IsPlayingRootMotion()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsPlayingRootMotion() const
     {
         return NativeCall<void*>(this, "ACharacter.IsPlayingRootMotion()");
@@ -385,7 +385,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.Jump()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Jump() const
     {
         NativeCall<void>(this, "ACharacter.Jump()");
@@ -417,7 +417,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.NotifyJumpApex()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyJumpApex() const
     {
         NativeCall<void>(this, "ACharacter.NotifyJumpApex()");
@@ -433,7 +433,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.OnJumped()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void OnJumped() const
     {
         NativeCall<void>(this, "ACharacter.OnJumped()");
@@ -449,7 +449,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.OnMovementModeChanged(EMovementMode,unsignedchar)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=269]]
+    // endereco: casamento de bytes com a build de referencia
     void OnMovementModeChanged(int a0, unsigned char a1) const
     {
         NativeCall<void, int, unsigned char>(this, "ACharacter.OnMovementModeChanged(EMovementMode,unsignedchar)", a0, a1);
@@ -457,7 +457,7 @@ struct ACharacter : public APrimalPawn
 
     // jogo_confirmou_dump
     //   ACharacter.OnRep_IsCrouched()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=102]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_IsCrouched() const
     {
         NativeCall<void>(this, "ACharacter.OnRep_IsCrouched()");
@@ -539,7 +539,7 @@ struct ACharacter : public APrimalPawn
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.PostLoad()
     // classe: a funcao mora em AActor, e ACharacter herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro PostLoad() const
     {
         return NativeCall<void*>(this, "AActor.PostLoad()");
@@ -547,7 +547,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.PostNetReceive()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=273]]
+    // endereco: casamento de bytes com a build de referencia
     void PostNetReceive() const
     {
         NativeCall<void>(this, "ACharacter.PostNetReceive()");
@@ -555,7 +555,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.PostNetReceiveLocationAndRotation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void PostNetReceiveLocationAndRotation() const
     {
         NativeCall<void>(this, "ACharacter.PostNetReceiveLocationAndRotation()");
@@ -563,7 +563,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.PreNetReceive()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PreNetReceive() const
     {
         NativeCall<void>(this, "ACharacter.PreNetReceive()");
@@ -604,7 +604,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.ResetJumpState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: casamento de bytes com a build de referencia
     void ResetJumpState() const
     {
         NativeCall<void>(this, "ACharacter.ResetJumpState()");
@@ -612,7 +612,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.Restart()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=99]]
+    // endereco: casamento de bytes com a build de referencia
     void Restart() const
     {
         NativeCall<void>(this, "ACharacter.Restart()");
@@ -628,7 +628,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.SaveRelativeBasedMovement(UE::Math::TVector<double>&,UE::Math::TRotator<double>&,bool
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SaveRelativeBasedMovement(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "ACharacter.SaveRelativeBasedMovement(UE::Math::TVector<double>&,UE::Math::TRotator<double>&,bool)", a0, a1, a2);
@@ -636,7 +636,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.ServerMovePacked(FCharacterServerMovePackedBits&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=177+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=177+grafo=3/3]]
     BrzPonteiro ServerMovePacked(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ACharacter.ServerMovePacked(FCharacterServerMovePackedBits&)", a0);
@@ -644,7 +644,7 @@ struct ACharacter : public APrimalPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ACharacter.SetAnimRootMotionTranslationScale(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetAnimRootMotionTranslationScale(float a0) const
     {
         return NativeCall<void*, float>(this, "ACharacter.SetAnimRootMotionTranslationScale(float)", a0);
@@ -668,7 +668,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.ShouldNotifyLanded(FHitResult&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldNotifyLanded(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ACharacter.ShouldNotifyLanded(FHitResult&)", a0);
@@ -692,7 +692,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.StopJumping()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopJumping() const
     {
         NativeCall<void>(this, "ACharacter.StopJumping()");
@@ -700,7 +700,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.TurnOff()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=216]]
+    // endereco: casamento de bytes com a build de referencia
     void TurnOff() const
     {
         NativeCall<void>(this, "ACharacter.TurnOff()");
@@ -708,7 +708,7 @@ struct ACharacter : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACharacter.UnCrouch(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UnCrouch(bool a0) const
     {
         NativeCall<void, bool>(this, "ACharacter.UnCrouch(bool)", a0);
@@ -759,7 +759,7 @@ struct ACharacter : public APrimalPawn
     BrzCampoPonteiro MovementModeChangedDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.MovementModeChangedDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `JumpCurrentCountPreJump` +4, medido na build 25090264
+    //  ancorado em `JumpCurrentCountPreJump` +4, medido na build 25535041
     //  (offset absoluto medido: 0x6AC; confianca alta)
     void*& NumActorOverlapEventsCounterField() const
     { return BrzCampoAncorado<void*>(this, "JumpCurrentCountPreJump", 4); }
@@ -768,7 +768,7 @@ struct ACharacter : public APrimalPawn
     BrzCampoPonteiro OnReachedJumpApexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.OnReachedJumpApex")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedGravityDirection` +24, medido na build 25090264
+    //  ancorado em `ReplicatedGravityDirection` +24, medido na build 25535041
     //  (offset absoluto medido: 0x660; confianca alta)
     void*& PreNetReceivedGravityDirectionField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedGravityDirection", 24); }
@@ -790,8 +790,30 @@ struct ACharacter : public APrimalPawn
     { return *GetNativePointerField<TArray<void*>*>(this, "ACharacter.RootMotionRepMoves"); }
     BrzCampoPonteiro SavedRootMotionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.SavedRootMotion")); }
+    BrzCampoPonteiro bClientCheckEncroachmentOnNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bClientCheckEncroachmentOnNetUpdate")); }
+    BrzCampoPonteiro bClientResimulateRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bClientResimulateRootMotion")); }
+    BrzCampoPonteiro bClientResimulateRootMotionSourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bClientResimulateRootMotionSources")); }
+    BrzCampoPonteiro bClientUpdatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bClientUpdating")); }
+    BrzCampoPonteiro bClientWasFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bClientWasFalling")); }
     bool& bInBaseReplicationField() const
     { return *GetNativePointerField<bool*>(this, "ACharacter.bInBaseReplication"); }
+    BrzCampoPonteiro bIsCrouchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bIsCrouched")); }
+    BrzCampoPonteiro bPressedJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bPressedJump")); }
+    BrzCampoPonteiro bProxyIsJumpForceAppliedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bProxyIsJumpForceApplied")); }
+    BrzCampoPonteiro bServerMoveIgnoreRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bServerMoveIgnoreRootMotion")); }
+    BrzCampoPonteiro bSimGravityDisabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bSimGravityDisabled")); }
+    BrzCampoPonteiro bWasJumpingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.bWasJumping")); }
     BitFieldValue<bool, unsigned __int32> bIsCrouched()
     { return { (void*)this, "bIsCrouched" }; }
     BitFieldValue<bool, unsigned __int32> bProxyIsJumpForceApplied()

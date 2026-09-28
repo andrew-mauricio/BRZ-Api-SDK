@@ -51,7 +51,7 @@ struct UShooterDiscordUISubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterDiscordUISubsystem.GetDiscordClient()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDiscordClient() const
     {
         return NativeCall<void*>(this, "UShooterDiscordUISubsystem.GetDiscordClient()");
@@ -127,7 +127,7 @@ struct UShooterDiscordUISubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterDiscordUISubsystem.SetFriendRequestTrackingEnabled(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetFriendRequestTrackingEnabled(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterDiscordUISubsystem.SetFriendRequestTrackingEnabled(bool)", a0);
@@ -142,7 +142,7 @@ struct UShooterDiscordUISubsystem
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +248, medido na build 25090264
+    //  ancorado em `BackendSubsystem` +248, medido na build 25535041
     //  (offset absoluto medido: 0x1D8; confianca baixa)
     void*& ActiveDiscordConversationUserIdField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 248); }
@@ -151,12 +151,12 @@ struct UShooterDiscordUISubsystem
     BrzCampoPonteiro DiscordUISessionActivityInvitesByMessageIdField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDiscordUISubsystem.DiscordUISessionActivityInvitesByMessageId")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +88, medido na build 25090264
+    //  ancorado em `BackendSubsystem` +88, medido na build 25535041
     //  (offset absoluto medido: 0x138; confianca media)
     void*& DiscordUIUnreadConversationUserIdByMessageIdField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +8, medido na build 25090264
+    //  ancorado em `BackendSubsystem` +8, medido na build 25535041
     //  (offset absoluto medido: 0xE8; confianca media)
     void*& DiscordUIUnreadCountsField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 8); }
@@ -183,7 +183,7 @@ struct UShooterDiscordUISubsystem
     BrzCampoPonteiro OnUserUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDiscordUISubsystem.OnUserUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +168, medido na build 25090264
+    //  ancorado em `BackendSubsystem` +168, medido na build 25535041
     //  (offset absoluto medido: 0x188; confianca baixa)
     void*& PendingDiscordUIUnreadSuppressedConversationUserIdByMessageIdField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 168); }

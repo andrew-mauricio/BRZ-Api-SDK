@@ -41,10 +41,10 @@ struct UShooterOnlineSessionClient
         return NativeCall<void*, int, void*>(nullptr, "UShooterOnlineSessionClient.ShouldAcceptInvite(int,FOnlineSessionSearchResult&)", a0, a1);
     }
 
-    BitFieldValue<bool, unsigned __int32> bHandlingDisconnect()
-    { return { (void*)this, "bHandlingDisconnect" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromInvite()
-    { return { (void*)this, "bIsFromInvite" }; }
+    BrzCampoPonteiro bHandlingDisconnectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterOnlineSessionClient.bHandlingDisconnect")); }
+    BrzCampoPonteiro bIsFromInviteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterOnlineSessionClient.bIsFromInvite")); }
 };
 
 #endif  // BRZ_SDK_JOGO_USHOOTERONLINESESSIONCLIENT_H

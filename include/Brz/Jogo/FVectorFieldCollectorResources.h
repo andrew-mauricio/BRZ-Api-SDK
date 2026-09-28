@@ -32,6 +32,9 @@ struct FVectorFieldCollectorResources
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro VisualizationVertexFactoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldCollectorResources.VisualizationVertexFactory")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDCOLLECTORRESOURCES_H

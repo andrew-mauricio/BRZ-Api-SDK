@@ -32,6 +32,11 @@ struct FHitData
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro HitPercentageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitData.HitPercentage")); }
+    BrzCampoPonteiro HitTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitData.HitTime")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITDATA_H

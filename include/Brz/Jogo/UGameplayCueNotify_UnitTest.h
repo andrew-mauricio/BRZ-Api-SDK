@@ -35,7 +35,7 @@ struct UGameplayCueNotify_UnitTest
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueNotify_UnitTest.OnActive_Implementation(AActor*,FGameplayCueParameters&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnActive_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UGameplayCueNotify_UnitTest.OnActive_Implementation(AActor*,FGameplayCueParameters&)", a0, a1);
@@ -43,7 +43,7 @@ struct UGameplayCueNotify_UnitTest
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueNotify_UnitTest.OnExecute_Implementation(AActor*,FGameplayCueParameters&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnExecute_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UGameplayCueNotify_UnitTest.OnExecute_Implementation(AActor*,FGameplayCueParameters&)", a0, a1);
@@ -51,7 +51,7 @@ struct UGameplayCueNotify_UnitTest
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueNotify_UnitTest.OnRemove_Implementation(AActor*,FGameplayCueParameters&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRemove_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UGameplayCueNotify_UnitTest.OnRemove_Implementation(AActor*,FGameplayCueParameters&)", a0, a1);
@@ -67,7 +67,7 @@ struct UGameplayCueNotify_UnitTest
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueNotify_UnitTest.WhileActive_Implementation(AActor*,FGameplayCueParameters&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro WhileActive_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UGameplayCueNotify_UnitTest.WhileActive_Implementation(AActor*,FGameplayCueParameters&)", a0, a1);
@@ -77,8 +77,8 @@ struct UGameplayCueNotify_UnitTest
     { return *GetNativePointerField<FName*>(this, "UGameplayCueNotify_UnitTest.GameplayCueName"); }
     BrzCampoPonteiro GameplayCueTagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_UnitTest.GameplayCueTag")); }
-    BitFieldValue<bool, unsigned __int32> IsOverride()
-    { return { (void*)this, "IsOverride" }; }
+    BrzCampoPonteiro IsOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_UnitTest.IsOverride")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UGAMEPLAYCUENOTIFY_UNITTEST_H

@@ -33,8 +33,8 @@ struct FTransform3dCameraRigParameterOverride
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransform3dCameraRigParameterOverride.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FTRANSFORM3DCAMERARIGPARAMETEROVERRIDE_H

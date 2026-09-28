@@ -32,6 +32,63 @@ struct FTransformGizmoDataBinder
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ActualToBoundConversionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.ActualToBoundConversion")); }
+    BrzCampoPonteiro BoundEulerAnglesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.BoundEulerAngles")); }
+    BrzCampoPonteiro BoundGizmosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.BoundGizmos")); }
+    BrzCampoPonteiro BoundScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.BoundScale")); }
+    BrzCampoPonteiro BoundToActualConversionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.BoundToActualConversion")); }
+    BrzCampoPonteiro BoundTranslationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.BoundTranslation")); }
+    BrzCampoPonteiro ContextObjectsToUnregisterWithField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.ContextObjectsToUnregisterWith")); }
+    BrzCampoPonteiro CurrentCustomLocalReferenceTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.CurrentCustomLocalReferenceTransform")); }
+    BrzCampoPonteiro CurrentlyTrackedGizmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.CurrentlyTrackedGizmo")); }
+    BrzCampoPonteiro DefaultCustomLocalReferenceTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.DefaultCustomLocalReferenceTransform")); }
+    BrzCampoPonteiro DeltaStartTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.DeltaStartTransform")); }
+    BrzCampoPonteiro LastCoordinateSystemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.LastCoordinateSystem")); }
+    BrzCampoPonteiro LastEulerAnglesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.LastEulerAngles")); }
+    BrzCampoPonteiro LastScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.LastScale")); }
+    BrzCampoPonteiro LastTranslationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.LastTranslation")); }
+    BrzCampoPonteiro OnTrackedGizmoChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.OnTrackedGizmoChanged")); }
+    BrzCampoPonteiro ProportionalDragInitialVectorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.ProportionalDragInitialVector")); }
+    BrzCampoPonteiro VectorsToUseIfUnboundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.VectorsToUseIfUnbound")); }
+    BrzCampoPonteiro bAvoidDestinationModeWhenUnsafeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bAvoidDestinationModeWhenUnsafe")); }
+    BrzCampoPonteiro bChangeDisplayedGizmoOnDragField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bChangeDisplayedGizmoOnDrag")); }
+    BrzCampoPonteiro bCurrentGizmoLacksDegreeOfFreedomField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bCurrentGizmoLacksDegreeOfFreedom")); }
+    BrzCampoPonteiro bCurrentGizmoOnlyHasUniformScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bCurrentGizmoOnlyHasUniformScale")); }
+    BrzCampoPonteiro bEnforceUniformScaleConstraintsIfPresentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bEnforceUniformScaleConstraintsIfPresent")); }
+    BrzCampoPonteiro bGizmoIsBeingDraggedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bGizmoIsBeingDragged")); }
+    BrzCampoPonteiro bIgnoreCallbackForDebouncingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bIgnoreCallbackForDebouncing")); }
+    BrzCampoPonteiro bInDataEditSequenceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bInDataEditSequence")); }
+    BrzCampoPonteiro bTriggerSequenceBookendsForNonSequenceUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bTriggerSequenceBookendsForNonSequenceUpdates")); }
+    BrzCampoPonteiro bUsingDeltaModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformGizmoDataBinder.bUsingDeltaMode")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FTRANSFORMGIZMODATABINDER_H

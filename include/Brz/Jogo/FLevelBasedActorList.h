@@ -56,6 +56,11 @@ struct FLevelBasedActorList
     {
         return NativeCall<void*, void*>(this, "FLevelBasedActorList.RemoveNetworkActor(FNewReplicatedActorInfo&)", a0);
     }
+
+    BrzCampoPonteiro PermanentLevelActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelBasedActorList.PermanentLevelActors")); }
+    BrzCampoPonteiro StreamingLevelActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelBasedActorList.StreamingLevelActors")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELBASEDACTORLIST_H

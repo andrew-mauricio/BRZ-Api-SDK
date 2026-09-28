@@ -43,7 +43,7 @@ struct UGameplayEffect
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayEffect.GetOwnedGameplayTags(FGameplayTagContainer&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetOwnedGameplayTags(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UGameplayEffect.GetOwnedGameplayTags(FGameplayTagContainer&)", a0);
@@ -51,7 +51,7 @@ struct UGameplayEffect
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayEffect.GetStackLimitCount()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetStackLimitCount() const
     {
         return NativeCall<void*>(this, "UGameplayEffect.GetStackLimitCount()");
@@ -90,17 +90,17 @@ struct UGameplayEffect
     BrzCampoPonteiro ApplicationTagRequirementsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.ApplicationTagRequirements")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedAbilities` +16, medido na build 25090264
+    //  ancorado em `GrantedAbilities` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA00; confianca alta)
     void*& CachedAssetTagsField() const
     { return BrzCampoAncorado<void*>(this, "GrantedAbilities", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedAbilities` +80, medido na build 25090264
+    //  ancorado em `GrantedAbilities` +80, medido na build 25535041
     //  (offset absoluto medido: 0xA40; confianca media)
     void*& CachedBlockedAbilityTagsField() const
     { return BrzCampoAncorado<void*>(this, "GrantedAbilities", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedAbilities` +48, medido na build 25090264
+    //  ancorado em `GrantedAbilities` +48, medido na build 25535041
     //  (offset absoluto medido: 0xA20; confianca media)
     void*& CachedGrantedTagsField() const
     { return BrzCampoAncorado<void*>(this, "GrantedAbilities", 48); }
@@ -129,12 +129,12 @@ struct UGameplayEffect
     BrzCampoPonteiro GrantedApplicationImmunityTagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.GrantedApplicationImmunityTags")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedApplicationImmunityQuery` +408, medido na build 25090264
+    //  ancorado em `GrantedApplicationImmunityQuery` +408, medido na build 25535041
     //  (offset absoluto medido: 0x840; confianca baixa)
     void*& HasGrantedApplicationImmunityQueryField() const
     { return BrzCampoAncorado<void*>(this, "GrantedApplicationImmunityQuery", 408); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoveGameplayEffectQuery` +408, medido na build 25090264
+    //  ancorado em `RemoveGameplayEffectQuery` +408, medido na build 25535041
     //  (offset absoluto medido: 0x9E0; confianca baixa)
     void*& HasRemoveGameplayEffectsQueryField() const
     { return BrzCampoAncorado<void*>(this, "RemoveGameplayEffectQuery", 408); }
@@ -176,6 +176,16 @@ struct UGameplayEffect
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.StackingType")); }
     BrzCampoPonteiro UIDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.UIData")); }
+    BrzCampoPonteiro bClearStackOnOverflowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.bClearStackOnOverflow")); }
+    BrzCampoPonteiro bDenyOverflowApplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.bDenyOverflowApplication")); }
+    BrzCampoPonteiro bExecutePeriodicEffectOnApplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.bExecutePeriodicEffectOnApplication")); }
+    BrzCampoPonteiro bRequireModifierSuccessToTriggerCuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.bRequireModifierSuccessToTriggerCues")); }
+    BrzCampoPonteiro bSuppressStackingCuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.bSuppressStackingCues")); }
     BitFieldValue<bool, unsigned __int32> bClearStackOnOverflow()
     { return { (void*)this, "bClearStackOnOverflow" }; }
     BitFieldValue<bool, unsigned __int32> bDenyOverflowApplication()

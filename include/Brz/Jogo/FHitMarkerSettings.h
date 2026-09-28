@@ -39,8 +39,8 @@ struct FHitMarkerSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitMarkerSettings.DrawDuration")); }
     BrzCampoPonteiro HitSoundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitMarkerSettings.HitSound")); }
-    BitFieldValue<bool, unsigned __int32> Scale()
-    { return { (void*)this, "Scale" }; }
+    BrzCampoPonteiro ScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitMarkerSettings.Scale")); }
     BitFieldValue<bool, unsigned __int32> bIsVisible()
     { return { (void*)this, "bIsVisible" }; }
     BitFieldValue<bool, unsigned __int32> bPlayHitSound()

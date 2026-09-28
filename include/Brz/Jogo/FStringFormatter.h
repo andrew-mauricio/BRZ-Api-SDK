@@ -51,6 +51,15 @@ struct FStringFormatter
     //  Para chamar uma destas, use `NativeCall` direto com a chave:
     //    FStringFormatter.FormatInternal(wchar_t*,TMap<FString,FStringFormatArg,FDefaultSetAllocator,TDefaultMapHashabl
     //      (colide com FStringFormatter.FormatInternal(wchar_t*,TArray<FStringFormatArg,TSizedDefaultAllocator<32>>&,bo)
+
+    BrzCampoPonteiro NamedDefinitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatter.NamedDefinitions")); }
+    BrzCampoPonteiro OrderedDefinitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatter.OrderedDefinitions")); }
+    BrzCampoPonteiro StrictNamedDefinitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatter.StrictNamedDefinitions")); }
+    BrzCampoPonteiro StrictOrderedDefinitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringFormatter.StrictOrderedDefinitions")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGFORMATTER_H

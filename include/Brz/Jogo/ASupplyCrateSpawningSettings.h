@@ -57,6 +57,8 @@ struct ASupplyCrateSpawningSettings : public AActor
     { return *GetNativePointerField<float*>(this, "ASupplyCrateSpawningSettings.NoValidSpawnReCheckInterval"); }
     int& ZoneVolumeMaxNumberOfNPCBufferField() const
     { return *GetNativePointerField<int*>(this, "ASupplyCrateSpawningSettings.ZoneVolumeMaxNumberOfNPCBuffer"); }
+    BrzCampoPonteiro bUseSpawnPointWeightsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningSettings.bUseSpawnPointWeights")); }
     BitFieldValue<bool, unsigned __int32> bUseSpawnPointWeights()
     { return { (void*)this, "bUseSpawnPointWeights" }; }
 

@@ -43,7 +43,7 @@ struct UWorldPartitionHLODRuntimeSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionHLODRuntimeSubsystem.DoesSupportWorldType(EWorldType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesSupportWorldType(int a0) const
     {
         return NativeCall<void*, int>(this, "UWorldPartitionHLODRuntimeSubsystem.DoesSupportWorldType(EWorldType::Type)", a0);
@@ -75,7 +75,7 @@ struct UWorldPartitionHLODRuntimeSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionHLODRuntimeSubsystem.IsHLODEnabled()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsHLODEnabled() const
     {
         return NativeCall<void*>(this, "UWorldPartitionHLODRuntimeSubsystem.IsHLODEnabled()");
@@ -123,7 +123,7 @@ struct UWorldPartitionHLODRuntimeSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionHLODRuntimeSubsystem.ShouldPerformWarmup()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldPerformWarmup() const
     {
         return NativeCall<void*>(this, "UWorldPartitionHLODRuntimeSubsystem.ShouldPerformWarmup()");
@@ -147,6 +147,31 @@ struct UWorldPartitionHLODRuntimeSubsystem
     //  Para chamar uma destas, use `NativeCall` direto com a chave:
     //    UWorldPartitionHLODRuntimeSubsystem.GetCellData(UWorldPartitionRuntimeCell*)
     //      (colide com UWorldPartitionHLODRuntimeSubsystem.GetCellData(AWorldPartitionHLOD*))
+
+    BrzCampoPonteiro CellsDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.CellsData")); }
+    BrzCampoPonteiro HLODActorRegisteredEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.HLODActorRegisteredEvent")); }
+    BrzCampoPonteiro HLODActorUnregisteredEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.HLODActorUnregisteredEvent")); }
+    BrzCampoPonteiro HLODActorsToWarmupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.HLODActorsToWarmup")); }
+    BrzCampoPonteiro LoadedHLODsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.LoadedHLODs")); }
+    BrzCampoPonteiro SceneViewExtensionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.SceneViewExtension")); }
+    BrzCampoPonteiro WarmupBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.WarmupBounds")); }
+    BrzCampoPonteiro WarmupCallsUntilReadyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.WarmupCallsUntilReady")); }
+    BrzCampoPonteiro WarmupLastRequestedFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.WarmupLastRequestedFrame")); }
+    BrzCampoPonteiro WorldPartitionsHLODRuntimeDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.WorldPartitionsHLODRuntimeData")); }
+    BrzCampoPonteiro bCachedShouldPerformWarmupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.bCachedShouldPerformWarmup")); }
+    BrzCampoPonteiro bIsCellVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionHLODRuntimeSubsystem.bIsCellVisible")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UWORLDPARTITIONHLODRUNTIMESUBSYSTEM_H

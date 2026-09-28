@@ -64,6 +64,17 @@ struct UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems
     {
         return NativeCall<void*>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems.Finish()");
     }
+
+    BrzCampoPonteiro _currentIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems._currentIndex")); }
+    BrzCampoPonteiro _groupFrequencyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems._groupFrequency")); }
+    BrzCampoPonteiro _groupsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems._groups")); }
+    BrzCampoPonteiro _iconBlocksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems._iconBlocks")); }
+    BrzCampoPonteiro _textBlocksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicCraftRequirementItems._textBlocks")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALITEMINVENTORYTOOLTIPWIDGET_HELPERADDDYNAMICCRAFTREQUIREMENTITEMS_H

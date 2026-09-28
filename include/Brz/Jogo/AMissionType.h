@@ -297,8 +297,176 @@ struct AMissionType : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.TriggerKeys")); }
     BrzCampoPonteiro UnlockPrequisitesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.UnlockPrequisites")); }
+    BrzCampoPonteiro UseDynamicMissionStringsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.UseDynamicMissionStrings")); }
     BrzCampoPonteiro WidgetActiveMissionPosYField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.WidgetActiveMissionPosY")); }
+    BrzCampoPonteiro bAbsoluteForcePreventLeavingMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAbsoluteForcePreventLeavingMission")); }
+    BrzCampoPonteiro bAllowAddPlayersOnSeatingStructureToMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAllowAddPlayersOnSeatingStructureToMission")); }
+    BrzCampoPonteiro bAllowHarvestingMissionDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAllowHarvestingMissionDinos")); }
+    BrzCampoPonteiro bAllowMissionDinoKillXPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAllowMissionDinoKillXP")); }
+    BrzCampoPonteiro bAllowNegativeMissionStartNetworkTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAllowNegativeMissionStartNetworkTime")); }
+    BrzCampoPonteiro bAllowTargetingOtherMissionDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAllowTargetingOtherMissionDinos")); }
+    BrzCampoPonteiro bAlwaysCreateMissionInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAlwaysCreateMissionInventory")); }
+    BrzCampoPonteiro bAutoDeactivateMissionBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoDeactivateMissionBuff")); }
+    BrzCampoPonteiro bAutoDeactivateMissionWithNoPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoDeactivateMissionWithNoPlayers")); }
+    BrzCampoPonteiro bAutoProgressMilestonesOnMissionCompleteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoProgressMilestonesOnMissionComplete")); }
+    BrzCampoPonteiro bAutoRewardFromCustomItemSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoRewardFromCustomItemSets")); }
+    BrzCampoPonteiro bAutoRewardLootOnMissionCompleteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoRewardLootOnMissionComplete")); }
+    BrzCampoPonteiro bAutoRewardXPOnMissionCompleteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoRewardXPOnMissionComplete")); }
+    BrzCampoPonteiro bAutoSaveMissionCompleteStatusPerPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoSaveMissionCompleteStatusPerPlayer")); }
+    BrzCampoPonteiro bAutoSendMissionCompleteAlertField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoSendMissionCompleteAlert")); }
+    BrzCampoPonteiro bAutoSendMissionCompleteNotificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoSendMissionCompleteNotification")); }
+    BrzCampoPonteiro bAutoUpdateRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoUpdateRequirements")); }
+    BrzCampoPonteiro bAutoUpdateWorldIndicatorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bAutoUpdateWorldIndicators")); }
+    BrzCampoPonteiro bBPGetMissionTimerTextHideIfEmptyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bBPGetMissionTimerTextHideIfEmpty")); }
+    BrzCampoPonteiro bDebugWorldIndicatorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDebugWorldIndicators")); }
+    BrzCampoPonteiro bDestroyMissionDinosOnDeactivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDestroyMissionDinosOnDeactivate")); }
+    BrzCampoPonteiro bDisableLevelUpSoundDuringMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDisableLevelUpSoundDuringMission")); }
+    BrzCampoPonteiro bDisableTimeLimitSinglePlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDisableTimeLimitSinglePlayer")); }
+    BrzCampoPonteiro bDisabledOnPS4SinglePlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDisabledOnPS4SinglePlayer")); }
+    BrzCampoPonteiro bDisabledOnXboxSinglePlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDisabledOnXboxSinglePlayer")); }
+    BrzCampoPonteiro bDivideHexogonsOnCompletionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bDivideHexogonsOnCompletion")); }
+    BrzCampoPonteiro bEqualRewardsToAllParticipantsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bEqualRewardsToAllParticipants")); }
+    BrzCampoPonteiro bForceCompleteOnDeactivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bForceCompleteOnDeactivate")); }
+    BrzCampoPonteiro bHasActivatedSuccessFailureWorldBuffsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bHasActivatedSuccessFailureWorldBuffs")); }
+    BrzCampoPonteiro bHasRunSetupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bHasRunSetup")); }
+    BrzCampoPonteiro bListEntryOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bListEntryOnly")); }
+    BrzCampoPonteiro bMissionAbandonedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionAbandoned")); }
+    BrzCampoPonteiro bMissionPreventsCryoDeployField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionPreventsCryoDeploy")); }
+    BrzCampoPonteiro bMissionPreventsDinoSpawnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionPreventsDinoSpawner")); }
+    BrzCampoPonteiro bMissionPreventsFlyersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionPreventsFlyers")); }
+    BrzCampoPonteiro bMissionPreventsMekDeployField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionPreventsMekDeploy")); }
+    BrzCampoPonteiro bMissionPreventsVehicleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionPreventsVehicle")); }
+    BrzCampoPonteiro bMissionWeaponsHaveInfiniteAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bMissionWeaponsHaveInfiniteAmmo")); }
+    BrzCampoPonteiro bOnlyAllowMountsOnMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bOnlyAllowMountsOnMission")); }
+    BrzCampoPonteiro bOnlyReverseTeleportOnMissionDeactivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bOnlyReverseTeleportOnMissionDeactivation")); }
+    BrzCampoPonteiro bOverrideShipMusicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bOverrideShipMusic")); }
+    BrzCampoPonteiro bPersistentMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bPersistentMission")); }
+    BrzCampoPonteiro bPrepAreaAutoSendNotificationToIncludedPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bPrepAreaAutoSendNotificationToIncludedPlayers")); }
+    BrzCampoPonteiro bPrepUseTargetingTeamOfStartingPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bPrepUseTargetingTeamOfStartingPlayer")); }
+    BrzCampoPonteiro bPreventClearShoulderMountsForMissionTeleportField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bPreventClearShoulderMountsForMissionTeleport")); }
+    BrzCampoPonteiro bPreventShowingMissionTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bPreventShowingMissionTime")); }
+    BrzCampoPonteiro bRemovePlayerFromMissionOnDeathField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bRemovePlayerFromMissionOnDeath")); }
+    BrzCampoPonteiro bRepeatableMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bRepeatableMission")); }
+    BrzCampoPonteiro bRollExtraLootSetsPerPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bRollExtraLootSetsPerPlayer")); }
+    BrzCampoPonteiro bSaveMissionItemDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bSaveMissionItemData")); }
+    BrzCampoPonteiro bScaleMinDistanceToWaypointByRotationRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bScaleMinDistanceToWaypointByRotationRate")); }
+    BrzCampoPonteiro bSetPrepAreaEmitterLifespanToPrepDurationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bSetPrepAreaEmitterLifespanToPrepDuration")); }
+    BrzCampoPonteiro bSetsRandomWithoutReplacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bSetsRandomWithoutReplacement")); }
+    BrzCampoPonteiro bShowInUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bShowInUI")); }
+    BrzCampoPonteiro bSingletonMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bSingletonMission")); }
+    BrzCampoPonteiro bSupportsMissionTimeOfDayLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bSupportsMissionTimeOfDayLocking")); }
+    BrzCampoPonteiro bSuspendedDueToStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bSuspendedDueToStasis")); }
+    BrzCampoPonteiro bTreatPlayerLevelRangeAsHardCapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bTreatPlayerLevelRangeAsHardCap")); }
+    BrzCampoPonteiro bUseBPAdjustMissionDinoDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPAdjustMissionDinoDamage")); }
+    BrzCampoPonteiro bUseBPCanRideMissionDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPCanRideMissionDino")); }
+    BrzCampoPonteiro bUseBPGenerateAdditionalMissionRewardsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPGenerateAdditionalMissionRewards")); }
+    BrzCampoPonteiro bUseBPGenerateMissionRewardsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPGenerateMissionRewards")); }
+    BrzCampoPonteiro bUseBPGetExtraLocalMissionIndicatorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPGetExtraLocalMissionIndicators")); }
+    BrzCampoPonteiro bUseBPGetMissionTargetingDesireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPGetMissionTargetingDesire")); }
+    BrzCampoPonteiro bUseBPOverrideMissionIndicatorStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPOverrideMissionIndicatorString")); }
+    BrzCampoPonteiro bUseBPOverrideMissionTimerColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPOverrideMissionTimerColor")); }
+    BrzCampoPonteiro bUseBPOverrideRandomWanderLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPOverrideRandomWanderLocation")); }
+    BrzCampoPonteiro bUseBPStaticIsPlayerEligibleForMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPStaticIsPlayerEligibleForMission")); }
+    BrzCampoPonteiro bUseBPTryCompletePhaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseBPTryCompletePhase")); }
+    BrzCampoPonteiro bUseCustomMissionsUIRewardsLabelTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseCustomMissionsUIRewardsLabelText")); }
+    BrzCampoPonteiro bUseDinoEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseDinoEvents")); }
+    BrzCampoPonteiro bUseGen2TeleportBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseGen2TeleportBuff")); }
+    BrzCampoPonteiro bUseInventoryEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseInventoryEvents")); }
+    BrzCampoPonteiro bUseMissionTagAsStringIfLookupFailsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseMissionTagAsStringIfLookupFails")); }
+    BrzCampoPonteiro bUsePerPlayerPhaseRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUsePerPlayerPhaseRequirements")); }
+    BrzCampoPonteiro bUsePerPlayerWorldIndicatorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUsePerPlayerWorldIndicators")); }
+    BrzCampoPonteiro bUsePlayerEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUsePlayerEvents")); }
+    BrzCampoPonteiro bUseStructureEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseStructureEvents")); }
+    BrzCampoPonteiro bUseThrottledClientTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseThrottledClientTick")); }
+    BrzCampoPonteiro bUseThrottledServerTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseThrottledServerTick")); }
+    BrzCampoPonteiro bUseThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseThrottledTick")); }
+    BrzCampoPonteiro bUseTriggerEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUseTriggerEvents")); }
+    BrzCampoPonteiro bUsesFallbackSeedsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AMissionType.bUsesFallbackSeeds")); }
     BitFieldValue<bool, unsigned __int32> UseDynamicMissionStrings()
     { return { (void*)this, "UseDynamicMissionStrings" }; }
     BitFieldValue<bool, unsigned __int32> bAbsoluteForcePreventLeavingMission()

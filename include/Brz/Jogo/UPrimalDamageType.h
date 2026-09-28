@@ -57,14 +57,20 @@ struct UPrimalDamageType
     { return *GetNativePointerField<float*>(this, "UPrimalDamageType.PointDamageArmorEffectiveness"); }
     float& RadialPartiallyObstructedDamagePercentField() const
     { return *GetNativePointerField<float*>(this, "UPrimalDamageType.RadialPartiallyObstructedDamagePercent"); }
-    BitFieldValue<bool, unsigned __int32> bCausedByWorld()
-    { return { (void*)this, "bCausedByWorld" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPassiveDamage()
-    { return { (void*)this, "bIsPassiveDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bRadialDamageVelChange()
-    { return { (void*)this, "bRadialDamageVelChange" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleMomentumByMass()
-    { return { (void*)this, "bScaleMomentumByMass" }; }
+    BrzCampoPonteiro bAllowPerBoneDamageAdjustmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bAllowPerBoneDamageAdjustment")); }
+    BrzCampoPonteiro bCausedByWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bCausedByWorld")); }
+    BrzCampoPonteiro bImpulseAffectsLivePawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bImpulseAffectsLivePawns")); }
+    BrzCampoPonteiro bIsPassiveDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bIsPassiveDamage")); }
+    BrzCampoPonteiro bIsPhysicalDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bIsPhysicalDamage")); }
+    BrzCampoPonteiro bRadialDamageVelChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bRadialDamageVelChange")); }
+    BrzCampoPonteiro bScaleMomentumByMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDamageType.bScaleMomentumByMass")); }
     BitFieldValue<bool, unsigned __int32> bAllowPerBoneDamageAdjustment()
     { return { (void*)this, "bAllowPerBoneDamageAdjustment" }; }
     BitFieldValue<bool, unsigned __int32> bImpulseAffectsLivePawns()

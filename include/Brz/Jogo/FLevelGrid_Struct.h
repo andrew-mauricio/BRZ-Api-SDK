@@ -32,6 +32,13 @@ struct FLevelGrid_Struct
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro Letter_9_866DD5B04B935362C3B5B49E72EC2D61Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelGrid_Struct.Letter_9_866DD5B04B935362C3B5B49E72EC2D61")); }
+    BrzCampoPonteiro Location_2_58B338E8426115C3CE0634A32ADA250FField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelGrid_Struct.Location_2_58B338E8426115C3CE0634A32ADA250F")); }
+    BrzCampoPonteiro Number_8_A11AF1634DB5B12D216F169265EC4424Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelGrid_Struct.Number_8_A11AF1634DB5B12D216F169265EC4424")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELGRID_STRUCT_H

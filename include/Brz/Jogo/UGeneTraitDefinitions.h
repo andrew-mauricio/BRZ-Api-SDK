@@ -261,7 +261,7 @@ struct UGeneTraitDefinitions : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UGeneTraitDefinitions.GeneTraits_GetMaxAllowedTraitsForThisCreature(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GeneTraits_GetMaxAllowedTraitsForThisCreature(void* a0) const
     {
         return NativeCall<int, void*>(this, "UGeneTraitDefinitions.GeneTraits_GetMaxAllowedTraitsForThisCreature(UObject*)", a0);
@@ -277,7 +277,7 @@ struct UGeneTraitDefinitions : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UGeneTraitDefinitions.GeneTraits_GetRandomNumberOfTraitsToBeAddedToThisCreatureOnSpawn(UObject*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GeneTraits_GetRandomNumberOfTraitsToBeAddedToThisCreatureOnSpawn(void* a0) const
     {
         return NativeCall<int, void*>(this, "UGeneTraitDefinitions.GeneTraits_GetRandomNumberOfTraitsToBeAddedToThisCreatureOnSpawn(UObject*)", a0);

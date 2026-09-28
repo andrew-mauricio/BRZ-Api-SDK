@@ -48,7 +48,7 @@ struct UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBase.AddRef()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddRef() const
     {
         return NativeCall<void*>(this, "UObjectBase.AddRef()");
@@ -56,7 +56,7 @@ struct UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBase.AtomicallyClearFlags(EObjectFlags)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AtomicallyClearFlags(int a0) const
     {
         return NativeCall<void*, int>(this, "UObjectBase.AtomicallyClearFlags(EObjectFlags)", a0);
@@ -64,7 +64,7 @@ struct UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBase.AtomicallySetFlags(EObjectFlags)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AtomicallySetFlags(int a0) const
     {
         return NativeCall<void*, int>(this, "UObjectBase.AtomicallySetFlags(EObjectFlags)", a0);
@@ -88,7 +88,7 @@ struct UObjectBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObjectBase.GetExternalPackageInternal()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPackage* GetExternalPackageInternal() const
     {
         return NativeCall<UPackage*>(this, "UObjectBase.GetExternalPackageInternal()");
@@ -96,7 +96,7 @@ struct UObjectBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObjectBase.IsValidLowLevel()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsValidLowLevel() const
     {
         return NativeCall<bool>(this, "UObjectBase.IsValidLowLevel()");
@@ -120,7 +120,7 @@ struct UObjectBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObjectBase.MarkAsReachable()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MarkAsReachable() const
     {
         NativeCall<void>(this, "UObjectBase.MarkAsReachable()");
@@ -136,7 +136,7 @@ struct UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBase.ReleaseRef()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ReleaseRef() const
     {
         return NativeCall<void*>(this, "UObjectBase.ReleaseRef()");
@@ -144,7 +144,7 @@ struct UObjectBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObjectBase.SetExternalPackage(UPackage*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetExternalPackage(void* a0) const
     {
         NativeCall<void, void*>(this, "UObjectBase.SetExternalPackage(UPackage*)", a0);
@@ -152,8 +152,18 @@ struct UObjectBase
 
     UClass*& ClassField() const
     { return *GetNativePointerField<UClass**>(this, "UObjectBase.Class"); }
+    UClass*& ClassPrivateField() const
+    { return *GetNativePointerField<UClass**>(this, "UObjectBase.ClassPrivate"); }
+    int& InternalIndexField() const
+    { return *GetNativePointerField<int*>(this, "UObjectBase.InternalIndex"); }
     FName& NameField() const
     { return *GetNativePointerField<FName*>(this, "UObjectBase.Name"); }
+    FName& NamePrivateField() const
+    { return *GetNativePointerField<FName*>(this, "UObjectBase.NamePrivate"); }
+    int& ObjectFlagsField() const
+    { return *GetNativePointerField<int*>(this, "UObjectBase.ObjectFlags"); }
+    UObject*& OuterPrivateField() const
+    { return *GetNativePointerField<UObject**>(this, "UObjectBase.OuterPrivate"); }
 };
 
 #endif  // BRZ_SDK_JOGO_UOBJECTBASE_H

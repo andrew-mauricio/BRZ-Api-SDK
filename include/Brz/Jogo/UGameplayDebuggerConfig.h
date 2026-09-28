@@ -91,8 +91,8 @@ struct UGameplayDebuggerConfig
 
     BrzCampoPonteiro ActivationKeyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerConfig.ActivationKey")); }
-    BitFieldValue<bool, unsigned __int32> Categories()
-    { return { (void*)this, "Categories" }; }
+    BrzCampoPonteiro CategoriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerConfig.Categories")); }
     BrzCampoPonteiro CategoryRowNextKeyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerConfig.CategoryRowNextKey")); }
     BrzCampoPonteiro CategoryRowPrevKeyField() const
@@ -127,6 +127,8 @@ struct UGameplayDebuggerConfig
     { return *GetNativePointerField<float*>(this, "UGameplayDebuggerConfig.DebugCanvasPaddingTop"); }
     BrzCampoPonteiro ExtensionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerConfig.Extensions")); }
+    BrzCampoPonteiro bDebugCanvasEnableTextShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayDebuggerConfig.bDebugCanvasEnableTextShadow")); }
     BitFieldValue<bool, unsigned __int32> bDebugCanvasEnableTextShadow()
     { return { (void*)this, "bDebugCanvasEnableTextShadow" }; }
 

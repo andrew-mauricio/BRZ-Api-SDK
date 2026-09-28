@@ -78,6 +78,8 @@ struct FPrimalStructureTemplateEntry
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureTemplateEntry.Structure")); }
     BrzCampoPonteiro VariantField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureTemplateEntry.Variant")); }
+    BrzCampoPonteiro bIsFlippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureTemplateEntry.bIsFlipped")); }
     BitFieldValue<bool, unsigned __int32> bIsFlipped()
     { return { (void*)this, "bIsFlipped" }; }
 

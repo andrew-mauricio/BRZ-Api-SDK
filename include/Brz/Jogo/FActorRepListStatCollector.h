@@ -59,15 +59,26 @@ struct FActorRepListStatCollector
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorRepListStatCollector.WasNodeVisited(UReplicationGraphNode*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro WasNodeVisited(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FActorRepListStatCollector.WasNodeVisited(UReplicationGraphNode*)", a0);
     }
+
+    BrzCampoPonteiro MaxListSizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.MaxListSize")); }
     BrzCampoPonteiro NumActorsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.NumActors")); }
     BrzCampoPonteiro NumBytesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.NumBytes")); }
+    BrzCampoPonteiro NumListsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.NumLists")); }
+    BrzCampoPonteiro NumSlackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.NumSlack")); }
+    BrzCampoPonteiro PerClassStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.PerClassStats")); }
+    BrzCampoPonteiro PerStreamingLevelStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.PerStreamingLevelStats")); }
     BrzCampoPonteiro VisitedNodesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListStatCollector.VisitedNodes")); }
 };

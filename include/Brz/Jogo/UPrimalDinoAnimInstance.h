@@ -51,7 +51,7 @@ struct UPrimalDinoAnimInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalDinoAnimInstance.UpdateAimSpace(APrimalDinoCharacter*,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=366+grafo=6/6]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateAimSpace(void* a0, float a1) const
     {
         return NativeCall<void*, void*, float>(this, "UPrimalDinoAnimInstance.UpdateAimSpace(APrimalDinoCharacter*,float)", a0, a1);
@@ -129,24 +129,32 @@ struct UPrimalDinoAnimInstance
     { return *GetNativePointerField<float*>(this, "UPrimalDinoAnimInstance.RootYawSpeed"); }
     BrzCampoPonteiro SlotGroupInertializationRequestDataMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.SlotGroupInertializationRequestDataMap")); }
-    BitFieldValue<bool, unsigned __int32> bCheatDisableIK()
-    { return { (void*)this, "bCheatDisableIK" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAnimationGroundConforming()
-    { return { (void*)this, "bEnableAnimationGroundConforming" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAnimSharingPaused()
-    { return { (void*)this, "bIsAnimSharingPaused" }; }
-    BitFieldValue<bool, unsigned __int32> bPropagateNotifiesToLinkedInstances()
-    { return { (void*)this, "bPropagateNotifiesToLinkedInstances" }; }
-    BitFieldValue<bool, unsigned __int32> bQueueMontageEvents()
-    { return { (void*)this, "bQueueMontageEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bReceiveNotifiesFromLinkedInstances()
-    { return { (void*)this, "bReceiveNotifiesFromLinkedInstances" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMainInstanceMontageEvaluationData()
-    { return { (void*)this, "bUseMainInstanceMontageEvaluationData" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMultiThreadedAnimationUpdate()
-    { return { (void*)this, "bUseMultiThreadedAnimationUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bUsingCopyPoseFromMesh()
-    { return { (void*)this, "bUsingCopyPoseFromMesh" }; }
+    BrzCampoPonteiro bCanSkipAnimGraphField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bCanSkipAnimGraph")); }
+    BrzCampoPonteiro bCheatDisableIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bCheatDisableIK")); }
+    BrzCampoPonteiro bDinoAnimIsMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bDinoAnimIsMoving")); }
+    BrzCampoPonteiro bEnableAnimationGroundConformingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bEnableAnimationGroundConforming")); }
+    BrzCampoPonteiro bIsAnimSharingPausedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bIsAnimSharingPaused")); }
+    BrzCampoPonteiro bPropagateNotifiesToLinkedInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bPropagateNotifiesToLinkedInstances")); }
+    BrzCampoPonteiro bQueueMontageEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bQueueMontageEvents")); }
+    BrzCampoPonteiro bReceiveNotifiesFromLinkedInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bReceiveNotifiesFromLinkedInstances")); }
+    BrzCampoPonteiro bRequestAimSpaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bRequestAimSpace")); }
+    BrzCampoPonteiro bResolveAimSpaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bResolveAimSpace")); }
+    BrzCampoPonteiro bUseMainInstanceMontageEvaluationDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bUseMainInstanceMontageEvaluationData")); }
+    BrzCampoPonteiro bUseMultiThreadedAnimationUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bUseMultiThreadedAnimationUpdate")); }
+    BrzCampoPonteiro bUsingCopyPoseFromMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoAnimInstance.bUsingCopyPoseFromMesh")); }
     BitFieldValue<bool, unsigned __int32> bCanSkipAnimGraph()
     { return { (void*)this, "bCanSkipAnimGraph" }; }
     BitFieldValue<bool, unsigned __int32> bDinoAnimIsMoving()

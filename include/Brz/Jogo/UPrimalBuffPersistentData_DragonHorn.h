@@ -61,7 +61,7 @@ struct UPrimalBuffPersistentData_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalBuffPersistentData_DragonHorn.HasLinkedDinoID()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasLinkedDinoID() const
     {
         return NativeCall<void*>(this, "UPrimalBuffPersistentData_DragonHorn.HasLinkedDinoID()");
@@ -109,12 +109,12 @@ struct UPrimalBuffPersistentData_DragonHorn
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_DragonHorn.StoredDinoCustomData")); }
     int& TargetingTeamField() const
     { return *GetNativePointerField<int*>(this, "UPrimalBuffPersistentData_DragonHorn.TargetingTeam"); }
-    BitFieldValue<bool, unsigned __int32> bPermanentlyPersist()
-    { return { (void*)this, "bPermanentlyPersist" }; }
-    BitFieldValue<bool, unsigned __int32> bSaveAndStopRefreshingOnDisconnect()
-    { return { (void*)this, "bSaveAndStopRefreshingOnDisconnect" }; }
-    BitFieldValue<bool, unsigned __int32> bSerializeAndStopRefreshingIfDead()
-    { return { (void*)this, "bSerializeAndStopRefreshingIfDead" }; }
+    BrzCampoPonteiro bPermanentlyPersistField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_DragonHorn.bPermanentlyPersist")); }
+    BrzCampoPonteiro bSaveAndStopRefreshingOnDisconnectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_DragonHorn.bSaveAndStopRefreshingOnDisconnect")); }
+    BrzCampoPonteiro bSerializeAndStopRefreshingIfDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_DragonHorn.bSerializeAndStopRefreshingIfDead")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALBUFFPERSISTENTDATA_DRAGONHORN_H

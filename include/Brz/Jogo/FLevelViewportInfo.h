@@ -39,6 +39,8 @@ struct FLevelViewportInfo
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelViewportInfo.CamPosition")); }
     BrzCampoPonteiro CamRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelViewportInfo.CamRotation")); }
+    BrzCampoPonteiro CamUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelViewportInfo.CamUpdated")); }
     BitFieldValue<bool, unsigned __int32> CamUpdated()
     { return { (void*)this, "CamUpdated" }; }
 

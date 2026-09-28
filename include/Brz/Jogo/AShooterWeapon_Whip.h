@@ -33,7 +33,7 @@ struct AShooterWeapon_Whip : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Whip.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnim
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=105+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void AnimNotifyCustomEvent(unsigned long long a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, unsigned long long, void*, void*, void*>(this, "AShooterWeapon_Whip.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNotify*)", a0, a1, a2, a3);
@@ -41,7 +41,7 @@ struct AShooterWeapon_Whip : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Whip.CanHerdDino(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanHerdDino(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AShooterWeapon_Whip.CanHerdDino(APrimalDinoCharacter*)", a0);
@@ -49,7 +49,7 @@ struct AShooterWeapon_Whip : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Whip.CanStunDino(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanStunDino(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AShooterWeapon_Whip.CanStunDino(APrimalDinoCharacter*)", a0);
@@ -73,7 +73,7 @@ struct AShooterWeapon_Whip : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Whip.HarvestWhipExtended()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=585+bytes40+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void HarvestWhipExtended() const
     {
         NativeCall<void>(this, "AShooterWeapon_Whip.HarvestWhipExtended()");

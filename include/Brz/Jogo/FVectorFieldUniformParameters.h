@@ -35,6 +35,18 @@ struct FVectorFieldUniformParameters
 
     BrzCampoPonteiro CountField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.Count")); }
+    BrzCampoPonteiro IntensityAndTightnessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.IntensityAndTightness")); }
+    BrzCampoPonteiro TilingAxesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.TilingAxes")); }
+    BrzCampoPonteiro VolumeSizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.VolumeSize")); }
+    BrzCampoPonteiro VolumeToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.VolumeToWorld")); }
+    BrzCampoPonteiro WorldToVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.WorldToVolume")); }
+    BrzCampoPonteiro WorldToVolumeTileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldUniformParameters.WorldToVolumeTile")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDUNIFORMPARAMETERS_H

@@ -32,6 +32,9 @@ struct FActorThreadContext
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro TestRegisterTickFunctionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorThreadContext.TestRegisterTickFunctions")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORTHREADCONTEXT_H

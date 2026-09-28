@@ -53,8 +53,12 @@ struct FItemCount
     { return *GetNativePointerField<int*>(this, "FItemCount.Slot"); }
     int& StackSizeField() const
     { return *GetNativePointerField<int*>(this, "FItemCount.StackSize"); }
-    BitFieldValue<bool, unsigned __int32> bAutoEquip()
-    { return { (void*)this, "bAutoEquip" }; }
+    FString& StringRefField() const
+    { return *GetNativePointerField<FString*>(this, "FItemCount.StringRef"); }
+    BrzCampoPonteiro bAutoEquipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemCount.bAutoEquip")); }
+    bool& bAutoSlotField() const
+    { return *GetNativePointerField<bool*>(this, "FItemCount.bAutoSlot"); }
 };
 
 #endif  // BRZ_SDK_JOGO_FITEMCOUNT_H

@@ -35,6 +35,8 @@ struct FWorldAsyncTraceState
 
     BrzCampoPonteiro CurrentFrameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldAsyncTraceState.CurrentFrame")); }
+    TArray<void*>& DataBufferField() const
+    { return *GetNativePointerField<TArray<void*>*>(this, "FWorldAsyncTraceState.DataBuffer"); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDASYNCTRACESTATE_H

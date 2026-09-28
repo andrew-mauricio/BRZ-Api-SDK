@@ -75,10 +75,10 @@ struct UPrimalAIStateBotRangedState
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateBotRangedState.ConeHalfAngle"); }
     float& ConeHalfAngleRandRangeField() const
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateBotRangedState.ConeHalfAngleRandRange"); }
-    BitFieldValue<bool, unsigned __int32> IsInAnimationState()
-    { return { (void*)this, "IsInAnimationState" }; }
-    BitFieldValue<bool, unsigned __int32> IsInAttackState()
-    { return { (void*)this, "IsInAttackState" }; }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.IsInAttackState")); }
     BrzCampoPonteiro ParentStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.ParentState")); }
     TObjectPtr<APawn>& PawnField() const
@@ -89,36 +89,38 @@ struct UPrimalAIStateBotRangedState
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateBotRangedState.SpreadOffset"); }
     BrzCampoPonteiro WorldGeometryTargetLocOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.WorldGeometryTargetLocOffset")); }
-    BitFieldValue<bool, unsigned __int32> bBPCanUseState()
-    { return { (void*)this, "bBPCanUseState" }; }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bBPCanUseState")); }
     bool& bDrawDebugField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalAIStateBotRangedState.bDrawDebug"); }
-    BitFieldValue<bool, unsigned __int32> bGetTargetDirection()
-    { return { (void*)this, "bGetTargetDirection" }; }
-    BitFieldValue<bool, unsigned __int32> bLeadTarget()
-    { return { (void*)this, "bLeadTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleProjDamageByDinoDamage()
-    { return { (void*)this, "bScaleProjDamageByDinoDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldResetInLosingTarget()
-    { return { (void*)this, "bShouldResetInLosingTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAimSocket()
-    { return { (void*)this, "bUseAimSocket" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAttack()
-    { return { (void*)this, "bUseBPCanAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanInterrupt()
-    { return { (void*)this, "bUseBPCanInterrupt" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAttackWeight()
-    { return { (void*)this, "bUseBPOverrideAttackWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRangedAttack()
-    { return { (void*)this, "bUseBPRangedAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRangedAttackOnBegin()
-    { return { (void*)this, "bUseBPRangedAttackOnBegin" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipIntervalCheck()
-    { return { (void*)this, "bUseBPSkipIntervalCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipRangeCheck()
-    { return { (void*)this, "bUseBPSkipRangeCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRangedSockets()
-    { return { (void*)this, "bUseRangedSockets" }; }
+    BrzCampoPonteiro bGetTargetDirectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bGetTargetDirection")); }
+    BrzCampoPonteiro bLeadTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bLeadTarget")); }
+    BrzCampoPonteiro bScaleProjDamageByDinoDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bScaleProjDamageByDinoDamage")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseAimSocketField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseAimSocket")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPGetSocketLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPGetSocketLocation")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPRangedAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPRangedAttack")); }
+    BrzCampoPonteiro bUseBPRangedAttackOnBeginField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPRangedAttackOnBegin")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseBPSkipRangeCheck")); }
+    BrzCampoPonteiro bUseRangedSocketsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBotRangedState.bUseRangedSockets")); }
     BitFieldValue<bool, unsigned __int32> bDrawDebug()
     { return { (void*)this, "bDrawDebug" }; }
     BitFieldValue<bool, unsigned __int32> bUseBPGetSocketLocation()

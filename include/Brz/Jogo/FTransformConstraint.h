@@ -41,6 +41,8 @@ struct FTransformConstraint
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformConstraint.TargetNode")); }
     float& WeightField() const
     { return *GetNativePointerField<float*>(this, "FTransformConstraint.Weight"); }
+    BrzCampoPonteiro bMaintainOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformConstraint.bMaintainOffset")); }
     BitFieldValue<bool, unsigned __int32> bMaintainOffset()
     { return { (void*)this, "bMaintainOffset" }; }
 

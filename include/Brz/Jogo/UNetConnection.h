@@ -118,7 +118,7 @@ struct UNetConnection : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UNetConnection.DestroyIgnoredActor(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DestroyIgnoredActor(void* a0) const
     {
         NativeCall<void, void*>(this, "UNetConnection.DestroyIgnoredActor(AActor*)", a0);
@@ -182,7 +182,7 @@ struct UNetConnection : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UNetConnection.GetAddrPort()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetAddrPort() const
     {
         return NativeCall<int>(this, "UNetConnection.GetAddrPort()");
@@ -210,7 +210,7 @@ struct UNetConnection : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UNetConnection.GetWorld()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UNetConnection.GetWorld()");
@@ -290,7 +290,7 @@ struct UNetConnection : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UNetConnection.PreTickDispatch()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     void PreTickDispatch() const
     {
         NativeCall<void>(this, "UNetConnection.PreTickDispatch()");
@@ -378,7 +378,7 @@ struct UNetConnection : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UNetConnection.ShouldReplicateVoicePacketFrom(FUniqueNetId&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldReplicateVoicePacketFrom(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UNetConnection.ShouldReplicateVoicePacketFrom(FUniqueNetId&)", a0);
@@ -422,14 +422,14 @@ struct UNetConnection : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UNetConnection.ValidateSendBuffer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void ValidateSendBuffer() const
     {
         NativeCall<void>(this, "UNetConnection.ValidateSendBuffer()");
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +56, medido na build 25090264
+    //  ancorado em `PlayerID` +56, medido na build 25535041
     //  (offset absoluto medido: 0x1A0; confianca media)
     FString& ChallengeField() const
     { return BrzCampoAncorado<FString>(this, "PlayerID", 56); }
@@ -438,31 +438,33 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro ChildrenField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.Children")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +108, medido na build 25090264
+    //  ancorado em `PlayerID` +108, medido na build 25535041
     //  (offset absoluto medido: 0x1D4; confianca media)
     int& ClientLoginStateField() const
     { return BrzCampoAncorado<int>(this, "PlayerID", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultMaxChannelSize` +368, medido na build 25090264
+    //  ancorado em `DefaultMaxChannelSize` +368, medido na build 25535041
     //  (offset absoluto medido: 0x1570; confianca baixa)
     void*& ClientMakingVisibleLevelNamesField() const
     { return BrzCampoAncorado<void*>(this, "DefaultMaxChannelSize", 368); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +72, medido na build 25090264
+    //  ancorado em `PlayerID` +72, medido na build 25535041
     //  (offset absoluto medido: 0x1B0; confianca media)
     FString& ClientResponseField() const
     { return BrzCampoAncorado<FString>(this, "PlayerID", 72); }
     int& DefaultMaxChannelSizeField() const
     { return *GetNativePointerField<int*>(this, "UNetConnection.DefaultMaxChannelSize"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultMaxChannelSize` +288, medido na build 25090264
+    //  ancorado em `DefaultMaxChannelSize` +288, medido na build 25535041
     //  (offset absoluto medido: 0x1520; confianca baixa)
     void*& DestroyedStartupOrDormantActorGUIDsField() const
     { return BrzCampoAncorado<void*>(this, "DefaultMaxChannelSize", 288); }
     TObjectPtr<UNetDriver>& DriverField() const
     { return *GetNativePointerField<TObjectPtr<UNetDriver>*>(this, "UNetConnection.Driver"); }
+    BrzCampoPonteiro InternalAckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.InternalAck")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultMaxChannelSize` +448, medido na build 25090264
+    //  ancorado em `DefaultMaxChannelSize` +448, medido na build 25535041
     //  (offset absoluto medido: 0x15C0; confianca baixa)
     void*& KeepProcessingActorChannelBunchesMapField() const
     { return BrzCampoAncorado<void*>(this, "DefaultMaxChannelSize", 448); }
@@ -471,27 +473,27 @@ struct UNetConnection : public UObject
     int& MaxPacketField() const
     { return *GetNativePointerField<int*>(this, "UNetConnection.MaxPacket"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +144, medido na build 25090264
+    //  ancorado em `MaxPacket` +144, medido na build 25535041
     //  (offset absoluto medido: 0x138; confianca baixa)
     int& MaxPacketHandlerBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +136, medido na build 25090264
+    //  ancorado em `MaxPacket` +136, medido na build 25535041
     //  (offset absoluto medido: 0x130; confianca baixa)
     int& NumAckBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +132, medido na build 25090264
+    //  ancorado em `MaxPacket` +132, medido na build 25535041
     //  (offset absoluto medido: 0x12C; confianca baixa)
     int& NumBunchBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 132); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +128, medido na build 25090264
+    //  ancorado em `MaxPacket` +128, medido na build 25535041
     //  (offset absoluto medido: 0x128; confianca media)
     int& NumPacketIdBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +140, medido na build 25090264
+    //  ancorado em `MaxPacket` +140, medido na build 25535041
     //  (offset absoluto medido: 0x134; confianca baixa)
     int& NumPaddingBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 140); }
@@ -504,7 +506,7 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro PackageMapClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.PackageMapClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +48, medido na build 25090264
+    //  ancorado em `PlayerID` +48, medido na build 25535041
     //  (offset absoluto medido: 0x198; confianca media)
     int& PacketOverheadField() const
     { return BrzCampoAncorado<int>(this, "PlayerID", 48); }
@@ -513,24 +515,26 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro PlayerIdField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.PlayerID")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +88, medido na build 25090264
+    //  ancorado em `PlayerID` +88, medido na build 25535041
     //  (offset absoluto medido: 0x1C0; confianca media)
     FString& RequestURLField() const
     { return BrzCampoAncorado<FString>(this, "PlayerID", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +104, medido na build 25090264
+    //  ancorado em `PlayerID` +104, medido na build 25535041
     //  (offset absoluto medido: 0x1D0; confianca media)
     int& ResponseIdField() const
     { return BrzCampoAncorado<int>(this, "PlayerID", 104); }
     TArray<void*>& SentTemporariesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UNetConnection.SentTemporaries"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +148, medido na build 25090264
+    //  ancorado em `MaxPacket` +148, medido na build 25535041
     //  (offset absoluto medido: 0x13C; confianca baixa)
     int& StateField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 148); }
     TObjectPtr<AActor>& ViewTargetField() const
     { return *GetNativePointerField<TObjectPtr<AActor>*>(this, "UNetConnection.ViewTarget"); }
+    BrzCampoPonteiro bHasArkLoginLockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.bHasArkLoginLock")); }
     BitFieldValue<bool, unsigned __int32> InternalAck()
     { return { (void*)this, "InternalAck" }; }
     BitFieldValue<bool, unsigned __int32> bInternalAck()

@@ -65,8 +65,8 @@ struct UGameplayAbility_CharacterJump
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility_CharacterJump.NetExecutionPolicy"); }
     unsigned char& NetSecurityPolicyField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility_CharacterJump.NetSecurityPolicy"); }
-    BitFieldValue<bool, unsigned __int32> RemoteInstanceEnded()
-    { return { (void*)this, "RemoteInstanceEnded" }; }
+    BrzCampoPonteiro RemoteInstanceEndedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.RemoteInstanceEnded")); }
     unsigned char& ReplicationPolicyField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility_CharacterJump.ReplicationPolicy"); }
     BrzCampoPonteiro SourceBlockedTagsField() const
@@ -77,22 +77,22 @@ struct UGameplayAbility_CharacterJump
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.TargetBlockedTags")); }
     BrzCampoPonteiro TargetRequiredTagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.TargetRequiredTags")); }
-    BitFieldValue<bool, unsigned __int32> bIsAbilityEnding()
-    { return { (void*)this, "bIsAbilityEnding" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBlockingOtherAbilities()
-    { return { (void*)this, "bIsBlockingOtherAbilities" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCancelable()
-    { return { (void*)this, "bIsCancelable" }; }
-    BitFieldValue<bool, unsigned __int32> bMarkPendingKillOnAbilityEnd()
-    { return { (void*)this, "bMarkPendingKillOnAbilityEnd" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateInputDirectly()
-    { return { (void*)this, "bReplicateInputDirectly" }; }
-    BitFieldValue<bool, unsigned __int32> bRetriggerInstancedAbility()
-    { return { (void*)this, "bRetriggerInstancedAbility" }; }
-    BitFieldValue<bool, unsigned __int32> bServerRespectsRemoteAbilityCancellation()
-    { return { (void*)this, "bServerRespectsRemoteAbilityCancellation" }; }
+    BrzCampoPonteiro bIsAbilityEndingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bIsAbilityEnding")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bIsActive")); }
+    BrzCampoPonteiro bIsBlockingOtherAbilitiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bIsBlockingOtherAbilities")); }
+    BrzCampoPonteiro bIsCancelableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bIsCancelable")); }
+    BrzCampoPonteiro bMarkPendingKillOnAbilityEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bMarkPendingKillOnAbilityEnd")); }
+    BrzCampoPonteiro bReplicateInputDirectlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bReplicateInputDirectly")); }
+    BrzCampoPonteiro bRetriggerInstancedAbilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bRetriggerInstancedAbility")); }
+    BrzCampoPonteiro bServerRespectsRemoteAbilityCancellationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility_CharacterJump.bServerRespectsRemoteAbilityCancellation")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UGAMEPLAYABILITY_CHARACTERJUMP_H

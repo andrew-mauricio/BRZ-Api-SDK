@@ -70,7 +70,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.BlockTillLevelStreamingCompleted(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BlockTillLevelStreamingCompleted(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.BlockTillLevelStreamingCompleted(UWorld*)", a0);
@@ -254,7 +254,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.DelayGarbageCollection()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DelayGarbageCollection() const
     {
         return NativeCall<void*>(this, "UEngine.DelayGarbageCollection()");
@@ -302,7 +302,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.FCopyPropertiesForUnrelatedObjectsParams.FCopyPropertiesForUnrelatedObjectsParams()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FCopyPropertiesForUnrelatedObjectsParams_FCopyPropertiesForUnrelatedObjectsParams() const
     {
         return NativeCall<void*>(this, "UEngine.FCopyPropertiesForUnrelatedObjectsParams.FCopyPropertiesForUnrelatedObjectsParams()");
@@ -310,7 +310,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.FCopyPropertiesForUnrelatedObjectsParams.FCopyPropertiesForUnrelatedObjectsParams(UEngin
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FCopyPropertiesForUnrelatedObjectsParams_FCopyPropertiesForUnrelatedObjectsParams(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.FCopyPropertiesForUnrelatedObjectsParams.FCopyPropertiesForUnrelatedObjectsParams(UEngine::FCopyPropertiesForUnrelatedObjectsParams&)", a0);
@@ -326,7 +326,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.FEngineStatFuncs.~FEngineStatFuncs()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=179+bytes40+grafo=3/3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=179+bytes40+chamadores=13+grafo=3/3]]
     BrzPonteiro FEngineStatFuncs__FEngineStatFuncs() const
     {
         return NativeCall<void*>(this, "UEngine.FEngineStatFuncs.~FEngineStatFuncs()");
@@ -375,14 +375,14 @@ struct UEngine : public UObject
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.GetAllLocalPlayerControllers(TArray<APlayerController*,TSizedDefaultAllocator<32>>&)
     // endereco: casamento de bytes com a build de referencia
-    static void GetAllLocalPlayerControllers(void* retorno, void* a0)
+    void GetAllLocalPlayerControllers(void* retorno, void* a0) const
     {
-        NativeCall<void, void*, void*>(nullptr, "UEngine.GetAllLocalPlayerControllers(TArray<APlayerController*,TSizedDefaultAllocator<32>>&)", retorno, a0);
+        NativeCall<void, void*, void*>(this, "UEngine.GetAllLocalPlayerControllers(TArray<APlayerController*,TSizedDefaultAllocator<32>>&)", retorno, a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetAudioDeviceManager()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAudioDeviceManager() const
     {
         return NativeCall<void*>(this, "UEngine.GetAudioDeviceManager()");
@@ -414,7 +414,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetEngineSubsystem<UCFCoreSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=5]]
     BrzPonteiro GetEngineSubsystem_UCFCoreSubsystem_() const
     {
         return NativeCall<void*>(this, "UEngine.GetEngineSubsystem<UCFCoreSubsystem>()");
@@ -422,7 +422,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetEngineSubsystem<UContentBundleEngineSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetEngineSubsystem_UContentBundleEngineSubsystem_() const
     {
         return NativeCall<void*>(this, "UEngine.GetEngineSubsystem<UContentBundleEngineSubsystem>()");
@@ -430,7 +430,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetEngineSubsystem<USentrySubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=113]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEngineSubsystem_USentrySubsystem_() const
     {
         return NativeCall<void*>(this, "UEngine.GetEngineSubsystem<USentrySubsystem>()");
@@ -438,7 +438,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetEngineSubsystem<USteelShieldSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEngineSubsystem_USteelShieldSubsystem_() const
     {
         return NativeCall<void*>(this, "UEngine.GetEngineSubsystem<USteelShieldSubsystem>()");
@@ -446,7 +446,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.GetEngineSubsystem<UThreadNodeSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=3]]
     BrzPonteiro GetEngineSubsystem_UThreadNodeSubsystem_() const
     {
         return NativeCall<void*>(this, "UEngine.GetEngineSubsystem<UThreadNodeSubsystem>()");
@@ -486,7 +486,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.GetGlobalFunctionCallspace(UFunction*,UObject*,FFrame*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetGlobalFunctionCallspace(void* a0, void* a1, void* a2) const
     {
         return NativeCall<int, void*, void*, void*>(this, "UEngine.GetGlobalFunctionCallspace(UFunction*,UObject*,FFrame*)", a0, a1, a2);
@@ -502,7 +502,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetLargeFont()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLargeFont() const
     {
         return NativeCall<void*>(this, "UEngine.GetLargeFont()");
@@ -534,7 +534,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetMainAudioDeviceID()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMainAudioDeviceID() const
     {
         return NativeCall<void*>(this, "UEngine.GetMainAudioDeviceID()");
@@ -558,7 +558,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetMediumFont()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMediumFont() const
     {
         return NativeCall<void*>(this, "UEngine.GetMediumFont()");
@@ -566,7 +566,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetNetMode(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNetMode(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.GetNetMode(UWorld*)", a0);
@@ -590,7 +590,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetServerPlatforms()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetServerPlatforms() const
     {
         return NativeCall<void*>(this, "UEngine.GetServerPlatforms()");
@@ -598,7 +598,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetSubtitleFont()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubtitleFont() const
     {
         return NativeCall<void*>(this, "UEngine.GetSubtitleFont()");
@@ -606,7 +606,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.GetTimeBetweenGarbageCollectionPasses()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetTimeBetweenGarbageCollectionPasses() const
     {
         return NativeCall<float>(this, "UEngine.GetTimeBetweenGarbageCollectionPasses()");
@@ -622,7 +622,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetTinyFont()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTinyFont() const
     {
         return NativeCall<void*>(this, "UEngine.GetTinyFont()");
@@ -630,7 +630,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetWorldContextFromGameViewportChecked(UGameViewportClient*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromGameViewportChecked(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.GetWorldContextFromGameViewportChecked(UGameViewportClient*)", a0);
@@ -638,7 +638,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetWorldContextFromHandle(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromHandle(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UEngine.GetWorldContextFromHandle(FName)", a0);
@@ -646,7 +646,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetWorldContextFromHandleChecked(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromHandleChecked(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UEngine.GetWorldContextFromHandleChecked(FName)", a0);
@@ -654,7 +654,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetWorldContextFromPendingNetGame(UPendingNetGame*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromPendingNetGame(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.GetWorldContextFromPendingNetGame(UPendingNetGame*)", a0);
@@ -662,7 +662,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GetWorldContextFromPendingNetGameNetDriver(UNetDriver*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromPendingNetGameNetDriver(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.GetWorldContextFromPendingNetGameNetDriver(UNetDriver*)", a0);
@@ -670,7 +670,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.GetWorldContextFromWorld(UWorld*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromWorld(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.GetWorldContextFromWorld(UWorld*)", a0);
@@ -678,7 +678,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.GetWorldContextFromWorldChecked(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldContextFromWorldChecked(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.GetWorldContextFromWorldChecked(UWorld*)", a0);
@@ -694,7 +694,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.GuardedHTTPResponse(TSharedPtr<IHttpRequest,1>,TSharedPtr<IHttpResponse,1>,bool,UObject*
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=160+bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GuardedHTTPResponse(void* a0, void* a1, bool a2, void* a3, long long a4, const FString& a5) const
     {
         return NativeCall<void*, void*, void*, bool, void*, long long, void*>(this, "UEngine.GuardedHTTPResponse(TSharedPtr<IHttpRequest,1>,TSharedPtr<IHttpResponse,1>,bool,UObject*,__int64,FString)", a0, a1, a2, a3, a4, const_cast<FString*>(&a5));
@@ -778,7 +778,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.HandleOpenCommand(wchar_t*,FOutputDevice&,UWorld*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=339+bytes40+grafo=12/12]]
+    // endereco: casamento de bytes com a build de referencia
     bool HandleOpenCommand(void* a0, void* a1, void* a2) const
     {
         return NativeCall<bool, void*, void*, void*>(this, "UEngine.HandleOpenCommand(wchar_t*,FOutputDevice&,UWorld*)", a0, a1, a2);
@@ -810,7 +810,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.HandleTravelCommand(wchar_t*,FOutputDevice&,UWorld*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=345+bytes40+grafo=12/12]]
+    // endereco: casamento de bytes com a build de referencia
     bool HandleTravelCommand(void* a0, void* a1, void* a2) const
     {
         return NativeCall<bool, void*, void*, void*>(this, "UEngine.HandleTravelCommand(wchar_t*,FOutputDevice&,UWorld*)", a0, a1, a2);
@@ -830,7 +830,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.HandleTravelFailure_NotifyGameInstance(UWorld*,ETravelFailure::Type)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void HandleTravelFailure_NotifyGameInstance(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "UEngine.HandleTravelFailure_NotifyGameInstance(UWorld*,ETravelFailure::Type)", a0, a1);
@@ -854,7 +854,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.InitializeAudioDeviceManager()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitializeAudioDeviceManager() const
     {
         NativeCall<void>(this, "UEngine.InitializeAudioDeviceManager()");
@@ -870,7 +870,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.InitializeHMDDevice()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool InitializeHMDDevice() const
     {
         return NativeCall<bool>(this, "UEngine.InitializeHMDDevice()");
@@ -894,7 +894,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.InitializeRunningAverageDeltaTime()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitializeRunningAverageDeltaTime() const
     {
         NativeCall<void>(this, "UEngine.InitializeRunningAverageDeltaTime()");
@@ -902,7 +902,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.IsInitialized()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsInitialized() const
     {
         return NativeCall<bool>(this, "UEngine.IsInitialized()");
@@ -994,7 +994,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.LoadMapRedrawViewports()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void LoadMapRedrawViewports() const
     {
         NativeCall<void>(this, "UEngine.LoadMapRedrawViewports()");
@@ -1042,7 +1042,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.OnExternalUIChange(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnExternalUIChange(bool a0) const
     {
         NativeCall<void, bool>(this, "UEngine.OnExternalUIChange(bool)", a0);
@@ -1114,7 +1114,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.RegisterBeginStreamingPauseRenderingDelegate(TDelegate<void__cdecl(FViewport*)>*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RegisterBeginStreamingPauseRenderingDelegate(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.RegisterBeginStreamingPauseRenderingDelegate(TDelegate<void__cdecl(FViewport*)>*)", a0);
@@ -1122,7 +1122,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.RegisterEndStreamingPauseRenderingDelegate(TDelegate<void__cdecl(void)>*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RegisterEndStreamingPauseRenderingDelegate(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.RegisterEndStreamingPauseRenderingDelegate(TDelegate<void__cdecl(void)>*)", a0);
@@ -1278,7 +1278,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.SetFlashIndicatorLatencyMarker(unsigned__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetFlashIndicatorLatencyMarker(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UEngine.SetFlashIndicatorLatencyMarker(unsigned__int64)", a0);
@@ -1286,7 +1286,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.SetInputSampleLatencyMarker(unsigned__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=230+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetInputSampleLatencyMarker(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UEngine.SetInputSampleLatencyMarker(unsigned__int64)", a0);
@@ -1310,7 +1310,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.SetSimulationLatencyMarkerEnd(unsigned__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=230+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSimulationLatencyMarkerEnd(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UEngine.SetSimulationLatencyMarkerEnd(unsigned__int64)", a0);
@@ -1318,7 +1318,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.SetSimulationLatencyMarkerStart(unsigned__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=230+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSimulationLatencyMarkerStart(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UEngine.SetSimulationLatencyMarkerStart(unsigned__int64)", a0);
@@ -1334,7 +1334,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.ShouldCommitPendingMapChange(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldCommitPendingMapChange(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UEngine.ShouldCommitPendingMapChange(UWorld*)", a0);
@@ -1470,7 +1470,7 @@ struct UEngine : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UEngine.TrimMemory()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TrimMemory() const
     {
         return NativeCall<void*>(this, "UEngine.TrimMemory()");
@@ -1510,7 +1510,7 @@ struct UEngine : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UEngine.UseSound()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool UseSound() const
     {
         return NativeCall<bool>(this, "UEngine.UseSound()");
@@ -1580,7 +1580,7 @@ struct UEngine : public UObject
     BrzCampoPonteiro AssetManagerClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.AssetManagerClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +240, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +240, medido na build 25535041
     //  (offset absoluto medido: 0xEE8; confianca baixa)
     void*& AudioDeviceManagerField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 240); }
@@ -1651,7 +1651,7 @@ struct UEngine : public UObject
     BrzCampoPonteiro CustomTimeStepField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.CustomTimeStep")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomTimeStep` +8, medido na build 25090264
+    //  ancorado em `CustomTimeStep` +8, medido na build 25535041
     //  (offset absoluto medido: 0xC28; confianca alta)
     void*& CustomTimeStepChangedEventField() const
     { return BrzCampoAncorado<void*>(this, "CustomTimeStep", 8); }
@@ -1712,27 +1712,27 @@ struct UEngine : public UObject
     BrzCampoPonteiro EmissiveMeshMaterialNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.EmissiveMeshMaterialName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightMapDensityTextureName` +32, medido na build 25090264
+    //  ancorado em `LightMapDensityTextureName` +32, medido na build 25535041
     //  (offset absoluto medido: 0xBD8; confianca alta)
     void*& EngineLoopField() const
     { return BrzCampoAncorado<void*>(this, "LightMapDensityTextureName", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +200, medido na build 25090264
+    //  ancorado em `NextWorldContextHandle` +200, medido na build 25535041
     //  (offset absoluto medido: 0x11B8; confianca baixa)
     void*& EngineStatsField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +8, medido na build 25090264
+    //  ancorado em `NextWorldContextHandle` +8, medido na build 25535041
     //  (offset absoluto medido: 0x10F8; confianca media)
     void*& EngineSubsystemCollectionField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +216, medido na build 25090264
+    //  ancorado em `NextWorldContextHandle` +216, medido na build 25535041
     //  (offset absoluto medido: 0x11C8; confianca baixa)
     void*& ErrorsAndWarningsCollectorField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +416, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +416, medido na build 25535041
     //  (offset absoluto medido: 0xF98; confianca baixa)
     void*& EyeTrackingDeviceField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 416); }
@@ -1809,7 +1809,7 @@ struct UEngine : public UObject
     TArray<void*>& HLODColorationColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.HLODColorationColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +224, medido na build 25090264
+    //  ancorado em `NextWorldContextHandle` +224, medido na build 25535041
     //  (offset absoluto medido: 0x11D0; confianca baixa)
     void*& HandleScreenshotCapturedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 224); }
@@ -1832,12 +1832,12 @@ struct UEngine : public UObject
     BrzCampoPonteiro LargeFontNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.LargeFontName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +224, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +224, medido na build 25535041
     //  (offset absoluto medido: 0xED8; confianca baixa)
     unsigned long long& LastGCFrameField() const
     { return BrzCampoAncorado<unsigned long long>(this, "SelectionHighlightIntensityBillboards", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +232, medido na build 25090264
+    //  ancorado em `NextWorldContextHandle` +232, medido na build 25535041
     //  (offset absoluto medido: 0x11D8; confianca baixa)
     FString& LastModDownloadTextField() const
     { return BrzCampoAncorado<FString>(this, "NextWorldContextHandle", 232); }
@@ -1874,7 +1874,7 @@ struct UEngine : public UObject
     BrzCampoPonteiro LocalPlayerClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.LocalPlayerClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +248, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +248, medido na build 25535041
     //  (offset absoluto medido: 0xEF0; confianca baixa)
     void*& MainAudioDeviceHandleField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 248); }
@@ -1929,17 +1929,17 @@ struct UEngine : public UObject
     float& NetErrorLogIntervalField() const
     { return *GetNativePointerField<float*>(this, "UEngine.NetErrorLogInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +192, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +192, medido na build 25535041
     //  (offset absoluto medido: 0xEB8; confianca baixa)
     void*& NetworkDDoSEscalationEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +144, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +144, medido na build 25535041
     //  (offset absoluto medido: 0xE88; confianca baixa)
     void*& NetworkFailureEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +168, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +168, medido na build 25535041
     //  (offset absoluto medido: 0xEA0; confianca baixa)
     void*& NetworkLagStateChangedEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 168); }
@@ -1952,17 +1952,17 @@ struct UEngine : public UObject
     int& NumPawnsAllowedToBeSpawnedInAFrameField() const
     { return *GetNativePointerField<int*>(this, "UEngine.NumPawnsAllowedToBeSpawnedInAFrame"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +432, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +432, medido na build 25535041
     //  (offset absoluto medido: 0xFA8; confianca baixa)
     void*& OnHitchDetectedDelegateField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 432); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +16, medido na build 25090264
+    //  ancorado em `NetErrorLogInterval` +16, medido na build 25535041
     //  (offset absoluto medido: 0x10C0; confianca alta)
     void*& OnOverrideBrowseURLField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +32, medido na build 25090264
+    //  ancorado em `NetErrorLogInterval` +32, medido na build 25535041
     //  (offset absoluto medido: 0x10D0; confianca alta)
     void*& OnOverridePendingNetGameUpdateField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 32); }
@@ -1975,12 +1975,12 @@ struct UEngine : public UObject
     BrzCampoPonteiro PhysicsCollisionHandlerClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.PhysicsCollisionHandlerClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +456, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +456, medido na build 25535041
     //  (offset absoluto medido: 0xFC0; confianca baixa)
     void*& PortalRpcClientField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 456); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +472, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +472, medido na build 25535041
     //  (offset absoluto medido: 0xFD0; confianca baixa)
     void*& PortalRpcLocatorField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 472); }
@@ -1995,7 +1995,7 @@ struct UEngine : public UObject
     float& PrimitiveProbablyVisibleTimeField() const
     { return *GetNativePointerField<float*>(this, "UEngine.PrimitiveProbablyVisibleTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +272, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +272, medido na build 25535041
     //  (offset absoluto medido: 0xF08; confianca baixa)
     TArray<void*>& PriorityScreenMessagesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "SelectionHighlightIntensityBillboards", 272); }
@@ -2016,7 +2016,7 @@ struct UEngine : public UObject
     TArray<void*>& RuntimeServerActorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.RuntimeServerActors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +288, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +288, medido na build 25535041
     //  (offset absoluto medido: 0xF18; confianca baixa)
     void*& ScreenMessagesField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 288); }
@@ -2035,12 +2035,12 @@ struct UEngine : public UObject
     TArray<void*>& ServerActorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.ServerActors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +488, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +488, medido na build 25535041
     //  (offset absoluto medido: 0xFE0; confianca baixa)
     void*& ServiceDependenciesField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 488); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +504, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +504, medido na build 25535041
     //  (offset absoluto medido: 0xFF0; confianca baixa)
     void*& ServiceLocatorField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 504); }
@@ -2083,14 +2083,14 @@ struct UEngine : public UObject
     TArray<void*>& StationaryLightOverlapColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.StationaryLightOverlapColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +368, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +368, medido na build 25535041
     //  (offset absoluto medido: 0xF68; confianca baixa)
     void*& StereoRenderingDeviceField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 368); }
     TArray<void*>& StreamingAccuracyColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.StreamingAccuracyColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `C_BrushShape` +4, medido na build 25090264
+    //  ancorado em `C_BrushShape` +4, medido na build 25535041
     //  (offset absoluto medido: 0xD00; confianca alta)
     float& StreamingDistanceFactorField() const
     { return BrzCampoAncorado<float>(this, "C_BrushShape", 4); }
@@ -2109,14 +2109,14 @@ struct UEngine : public UObject
     BrzCampoPonteiro TickerHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.LargeFontName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +232, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +232, medido na build 25535041
     //  (offset absoluto medido: 0xEE0; confianca baixa)
     float& TimeSinceLastPendingKillPurgeField() const
     { return BrzCampoAncorado<float>(this, "SelectionHighlightIntensityBillboards", 232); }
     BrzCampoPonteiro TimecodeProviderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.TimecodeProvider")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimecodeProvider` +8, medido na build 25090264
+    //  ancorado em `TimecodeProvider` +8, medido na build 25535041
     //  (offset absoluto medido: 0xC70; confianca alta)
     void*& TimecodeProviderChangedEventField() const
     { return BrzCampoAncorado<void*>(this, "TimecodeProvider", 8); }
@@ -2133,12 +2133,18 @@ struct UEngine : public UObject
     BrzCampoPonteiro TransitionTypeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.TransitionType")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +120, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +120, medido na build 25535041
     //  (offset absoluto medido: 0xE70; confianca baixa)
     void*& TravelFailureEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 120); }
+    BrzCampoPonteiro UseClothAssetMinLODPerQualityLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.UseClothAssetMinLODPerQualityLevels")); }
+    BrzCampoPonteiro UseGrassVarityPerQualityLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.UseGrassVarityPerQualityLevels")); }
     bool& UseSkeletalMeshMinLODPerQualityLevelsField() const
     { return *GetNativePointerField<bool*>(this, "UEngine.UseSkeletalMeshMinLODPerQualityLevels"); }
+    BrzCampoPonteiro UseStaticMeshMinLODPerQualityLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.UseStaticMeshMinLODPerQualityLevels")); }
     TObjectPtr<UMaterial>& VertexColorMaterialField() const
     { return *GetNativePointerField<TObjectPtr<UMaterial>*>(this, "UEngine.VertexColorMaterial"); }
     FString& VertexColorMaterialNameField() const
@@ -2164,7 +2170,7 @@ struct UEngine : public UObject
     TObjectPtr<UMaterial>& VertexColorViewModeMaterial_RedOnlyField() const
     { return *GetNativePointerField<TObjectPtr<UMaterial>*>(this, "UEngine.VertexColorViewModeMaterial_RedOnly"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +400, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +400, medido na build 25535041
     //  (offset absoluto medido: 0xF88; confianca baixa)
     void*& ViewExtensionsField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 400); }
@@ -2181,7 +2187,7 @@ struct UEngine : public UObject
     FString& WireframeMaterialNameField() const
     { return *GetNativePointerField<FString*>(this, "UEngine.WireframeMaterialName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +48, medido na build 25090264
+    //  ancorado em `NetErrorLogInterval` +48, medido na build 25535041
     //  (offset absoluto medido: 0x10E0; confianca media)
     void*& WorldListField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 48); }
@@ -2190,42 +2196,84 @@ struct UEngine : public UObject
     BrzCampoPonteiro WorldSettingsClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.WorldSettingsClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +384, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +384, medido na build 25535041
     //  (offset absoluto medido: 0xF78; confianca baixa)
     void*& XRSystemField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 384); }
+    BrzCampoPonteiro bAllowMatureLanguageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bAllowMatureLanguage")); }
+    BrzCampoPonteiro bAllowMultiThreadedAnimationUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bAllowMultiThreadedAnimationUpdate")); }
+    BrzCampoPonteiro bCanBlueprintsTickByDefaultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bCanBlueprintsTickByDefault")); }
+    BrzCampoPonteiro bCheckForMultiplePawnsSpawnedInAFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bCheckForMultiplePawnsSpawnedInAFrame")); }
+    BrzCampoPonteiro bDisableAILoggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bDisableAILogging")); }
+    BrzCampoPonteiro bEnableEditorPSysRealtimeLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bEnableEditorPSysRealtimeLOD")); }
+    BrzCampoPonteiro bEnableOnScreenDebugMessagesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bEnableOnScreenDebugMessages")); }
+    BrzCampoPonteiro bEnableOnScreenDebugMessagesDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bEnableOnScreenDebugMessagesDisplay")); }
     unsigned int& bEnableVisualLogRecordingOnStartField() const
     { return *GetNativePointerField<unsigned int*>(this, "UEngine.bEnableVisualLogRecordingOnStart"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +236, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +236, medido na build 25535041
     //  (offset absoluto medido: 0xEE4; confianca baixa)
     void*& bFullPurgeTriggeredField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 236); }
+    BrzCampoPonteiro bGenerateDefaultTimecodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bGenerateDefaultTimecode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomTimeStep` +32, medido na build 25090264
+    //  ancorado em `CustomTimeStep` +32, medido na build 25535041
     //  (offset absoluto medido: 0xC40; confianca alta)
     void*& bIsCurrentCustomTimeStepInitializedField() const
     { return BrzCampoAncorado<void*>(this, "CustomTimeStep", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimecodeProvider` +32, medido na build 25090264
+    //  ancorado em `TimecodeProvider` +32, medido na build 25535041
     //  (offset absoluto medido: 0xC88; confianca alta)
     void*& bIsCurrentTimecodeProviderInitializedField() const
     { return BrzCampoAncorado<void*>(this, "TimecodeProvider", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +216, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +216, medido na build 25535041
     //  (offset absoluto medido: 0xED0; confianca baixa)
     void*& bIsInitializedField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 216); }
+    BrzCampoPonteiro bIsOverridingSelectedColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bIsOverridingSelectedColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +8, medido na build 25090264
+    //  ancorado em `NetErrorLogInterval` +8, medido na build 25535041
     //  (offset absoluto medido: 0x10B8; confianca alta)
     void*& bIsVanillaProductField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 8); }
+    BrzCampoPonteiro bLockReadOnlyLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bLockReadOnlyLevels")); }
+    BrzCampoPonteiro bOptimizeAnimBlueprintMemberVariableAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bOptimizeAnimBlueprintMemberVariableAccess")); }
+    BrzCampoPonteiro bPauseOnLossOfFocusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bPauseOnLossOfFocus")); }
+    BrzCampoPonteiro bRenderLightMapDensityGrayscaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bRenderLightMapDensityGrayscale")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +237, medido na build 25090264
+    //  ancorado em `SelectionHighlightIntensityBillboards` +237, medido na build 25535041
     //  (offset absoluto medido: 0xEE5; confianca baixa)
     bool& bShouldDelayGarbageCollectField() const
     { return BrzCampoAncorado<bool>(this, "SelectionHighlightIntensityBillboards", 237); }
+    BrzCampoPonteiro bShouldGenerateLowQualityLightmapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bShouldGenerateLowQualityLightmaps")); }
+    BrzCampoPonteiro bSmoothFrameRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bSmoothFrameRate")); }
+    BrzCampoPonteiro bStartedLoadMapMovieField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bStartedLoadMapMovie")); }
+    BrzCampoPonteiro bSubtitlesEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bSubtitlesEnabled")); }
+    BrzCampoPonteiro bSubtitlesForcedOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bSubtitlesForcedOff")); }
+    BrzCampoPonteiro bSuppressMapWarningsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bSuppressMapWarnings")); }
+    BrzCampoPonteiro bUseFixedFrameRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bUseFixedFrameRate")); }
     BitFieldValue<bool, unsigned __int32> bRenderLightMapDensityGrayscale()
     { return { (void*)this, "bRenderLightMapDensityGrayscale" }; }
     BitFieldValue<bool, unsigned __int32> bSubtitlesEnabled()

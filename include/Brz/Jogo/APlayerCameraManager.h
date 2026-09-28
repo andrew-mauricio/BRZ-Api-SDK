@@ -43,7 +43,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.AddCachedPPBlend(FPostProcessSettings&,float,EViewTargetBlendOrder)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AddCachedPPBlend(void* a0, float a1, int a2) const
     {
         return NativeCall<void*, void*, float, int>(this, "APlayerCameraManager.AddCachedPPBlend(FPostProcessSettings&,float,EViewTargetBlendOrder)", a0, a1, a2);
@@ -75,7 +75,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.ApplyAudioFade()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=86]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ApplyAudioFade() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.ApplyAudioFade()");
@@ -83,7 +83,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.ApplyCameraModifiers(float,FMinimalViewInfo&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=24]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ApplyCameraModifiers(float a0, void* a1, bool a2) const
     {
         return NativeCall<void*, float, void*, bool>(this, "APlayerCameraManager.ApplyCameraModifiers(float,FMinimalViewInfo&,bool)", a0, a1, a2);
@@ -99,7 +99,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.AssignViewTarget(AActor*,FTViewTarget&,FViewTargetTransitionParams)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AssignViewTarget(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APlayerCameraManager.AssignViewTarget(AActor*,FTViewTarget&,FViewTargetTransitionParams)", a0, a1, a2);
@@ -123,7 +123,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.ClearCachedPPBlends()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=129]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClearCachedPPBlends() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.ClearCachedPPBlends()");
@@ -131,7 +131,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.ClearCameraLensEffects()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClearCameraLensEffects() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.ClearCameraLensEffects()");
@@ -139,7 +139,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=33]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Destroyed() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.Destroyed()");
@@ -163,7 +163,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=106]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "APlayerCameraManager.EndPlay(EEndPlayReason::Type)", a0);
@@ -171,7 +171,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.FindCameraModifierByClass(TSubclassOf<UCameraModifier>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=155]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FindCameraModifierByClass(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APlayerCameraManager.FindCameraModifierByClass(TSubclassOf<UCameraModifier>)", a0);
@@ -187,7 +187,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetCachedPostProcessBlends(TArray<FPostProcessSettings,TSizedDefaultAllocat
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCachedPostProcessBlends(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APlayerCameraManager.GetCachedPostProcessBlends(TArray<FPostProcessSettings,TSizedDefaultAllocator<32>>*&,TArray<float,TSizedDefaultAllocator<32>>*&)", a0, a1);
@@ -195,7 +195,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetCachedPostProcessBlends(TArray<FPostProcessSettings,TSizedDefaultAllocat
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCachedPostProcessBlends(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APlayerCameraManager.GetCachedPostProcessBlends(TArray<FPostProcessSettings,TSizedDefaultAllocator<32>>*&,TArray<float,TSizedDefaultAllocator<32>>*&,TArray<EViewTargetBlendOrder,TSizedDefaultAllocator<32>>*&)", a0, a1, a2);
@@ -203,7 +203,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetCameraCachePOV()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=38]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetCameraCachePOV() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.GetCameraCachePOV()");
@@ -211,7 +211,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetCameraCacheView()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCameraCacheView() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.GetCameraCacheView()");
@@ -259,7 +259,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetLastFrameCameraCacheView()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLastFrameCameraCacheView() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.GetLastFrameCameraCacheView()");
@@ -267,7 +267,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetOrthoWidth()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetOrthoWidth() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.GetOrthoWidth()");
@@ -275,7 +275,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetViewTarget()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     AActor* GetViewTarget() const
     {
         return NativeCall<AActor*>(this, "APlayerCameraManager.GetViewTarget()");
@@ -283,7 +283,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.GetViewTargetPawn()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetViewTargetPawn() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.GetViewTargetPawn()");
@@ -299,7 +299,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.IsOrthographic()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsOrthographic() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.IsOrthographic()");
@@ -323,7 +323,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.PlayCameraAnim(UCameraAnim*,float,float,float,float,bool,bool,float,ECamera
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=136]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro PlayCameraAnim(void* a0, float a1, float a2, float a3, float a4, bool a5, bool a6, float a7, int a8, void* a9) const
     {
         return NativeCall<void*, void*, float, float, float, float, bool, bool, float, int, void*>(this, "APlayerCameraManager.PlayCameraAnim(UCameraAnim*,float,float,float,float,bool,bool,float,ECameraShakePlaySpace,UE::Math::TRotator<double>)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
@@ -371,7 +371,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SetDesiredColorScale(UE::Math::TVector<double>,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=199]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetDesiredColorScale(void* a0, float a1) const
     {
         return NativeCall<void*, void*, float>(this, "APlayerCameraManager.SetDesiredColorScale(UE::Math::TVector<double>,float)", a0, a1);
@@ -379,7 +379,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SetFOV(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetFOV(float a0) const
     {
         return NativeCall<void*, float>(this, "APlayerCameraManager.SetFOV(float)", a0);
@@ -387,7 +387,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SetGameCameraCutThisFrame()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetGameCameraCutThisFrame() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.SetGameCameraCutThisFrame()");
@@ -395,7 +395,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SetLastFrameCameraCachePOV(FMinimalViewInfo&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetLastFrameCameraCachePOV(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APlayerCameraManager.SetLastFrameCameraCachePOV(FMinimalViewInfo&)", a0);
@@ -403,7 +403,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SetManualCameraFade(float,FLinearColor,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=84]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetManualCameraFade(float a0, void* a1, bool a2) const
     {
         return NativeCall<void*, float, void*, bool>(this, "APlayerCameraManager.SetManualCameraFade(float,FLinearColor,bool)", a0, a1, a2);
@@ -411,7 +411,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SetOrthoWidth(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetOrthoWidth(float a0) const
     {
         return NativeCall<void*, float>(this, "APlayerCameraManager.SetOrthoWidth(float)", a0);
@@ -427,7 +427,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.ShouldTickIfViewportsOnly()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldTickIfViewportsOnly() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.ShouldTickIfViewportsOnly()");
@@ -435,7 +435,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StartCameraFade(float,float,float,FLinearColor,bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=202]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StartCameraFade(float a0, float a1, float a2, void* a3, bool a4, bool a5) const
     {
         return NativeCall<void*, float, float, float, void*, bool, bool>(this, "APlayerCameraManager.StartCameraFade(float,float,float,FLinearColor,bool,bool)", a0, a1, a2, a3, a4, a5);
@@ -483,7 +483,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopAllCameraShakes(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StopAllCameraShakes(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APlayerCameraManager.StopAllCameraShakes(bool)", a0);
@@ -491,7 +491,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopAllCameraShakesFromSource(UCameraShakeSourceComponent*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StopAllCameraShakesFromSource(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APlayerCameraManager.StopAllCameraShakesFromSource(UCameraShakeSourceComponent*,bool)", a0, a1);
@@ -499,7 +499,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopAllInstancesOfCameraAnim(UCameraAnim*,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StopAllInstancesOfCameraAnim(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APlayerCameraManager.StopAllInstancesOfCameraAnim(UCameraAnim*,bool)", a0, a1);
@@ -523,7 +523,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopAudioFade()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=92]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StopAudioFade() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.StopAudioFade()");
@@ -531,7 +531,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopCameraAnimInst(UCameraAnimInst*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StopCameraAnimInst(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APlayerCameraManager.StopCameraAnimInst(UCameraAnimInst*,bool)", a0, a1);
@@ -539,7 +539,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopCameraFade()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StopCameraFade() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.StopCameraFade()");
@@ -547,7 +547,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.StopCameraShake(UCameraShakeBase*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StopCameraShake(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APlayerCameraManager.StopCameraShake(UCameraShakeBase*,bool)", a0, a1);
@@ -555,7 +555,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.SwapPendingViewTargetWhenUsingClientSideCameraUpdates()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=64]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SwapPendingViewTargetWhenUsingClientSideCameraUpdates() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.SwapPendingViewTargetWhenUsingClientSideCameraUpdates()");
@@ -563,7 +563,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.UnlockFOV()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UnlockFOV() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.UnlockFOV()");
@@ -571,7 +571,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.UnlockOrthoWidth()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UnlockOrthoWidth() const
     {
         return NativeCall<void*>(this, "APlayerCameraManager.UnlockOrthoWidth()");
@@ -579,7 +579,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.UpdateCamera(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=151]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateCamera(float a0) const
     {
         return NativeCall<void*, float>(this, "APlayerCameraManager.UpdateCamera(float)", a0);
@@ -587,7 +587,7 @@ struct APlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerCameraManager.UpdateCameraLensEffects(FTViewTarget&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateCameraLensEffects(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APlayerCameraManager.UpdateCameraLensEffects(FTViewTarget&)", a0);
@@ -648,7 +648,7 @@ struct APlayerCameraManager
     BrzCampoPonteiro CameraLensEffectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.CameraLensEffects")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TransformComponent` +8, medido na build 25090264
+    //  ancorado em `TransformComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4A0; confianca alta)
     void*& CameraStyleField() const
     { return BrzCampoAncorado<void*>(this, "TransformComponent", 8); }
@@ -687,17 +687,17 @@ struct APlayerCameraManager
     unsigned char& DesiredRepGraphBehaviorField() const
     { return *GetNativePointerField<unsigned char*>(this, "APlayerCameraManager.DesiredRepGraphBehavior"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAudioFadeChangeEvent` +16, medido na build 25090264
+    //  ancorado em `OnAudioFadeChangeEvent` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2BA8; confianca alta)
     void*& FadeAlphaField() const
     { return BrzCampoAncorado<void*>(this, "OnAudioFadeChangeEvent", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAudioFadeChangeEvent` +32, medido na build 25090264
+    //  ancorado em `OnAudioFadeChangeEvent` +32, medido na build 25535041
     //  (offset absoluto medido: 0x2BB8; confianca alta)
     void*& FadeTimeField() const
     { return BrzCampoAncorado<void*>(this, "OnAudioFadeChangeEvent", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAudioFadeChangeEvent` +36, medido na build 25090264
+    //  ancorado em `OnAudioFadeChangeEvent` +36, medido na build 25535041
     //  (offset absoluto medido: 0x2BBC; confianca media)
     void*& FadeTimeRemainingField() const
     { return BrzCampoAncorado<void*>(this, "OnAudioFadeChangeEvent", 36); }
@@ -738,12 +738,12 @@ struct APlayerCameraManager
     TArray<void*>& LayersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APlayerCameraManager.Layers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultFOV` +4, medido na build 25090264
+    //  ancorado em `DefaultFOV` +4, medido na build 25535041
     //  (offset absoluto medido: 0x4AC; confianca alta)
     void*& LockedFOVField() const
     { return BrzCampoAncorado<void*>(this, "DefaultFOV", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultOrthoWidth` +4, medido na build 25090264
+    //  ancorado em `DefaultOrthoWidth` +4, medido na build 25535041
     //  (offset absoluto medido: 0x4B4; confianca alta)
     void*& LockedOrthoWidthField() const
     { return BrzCampoAncorado<void*>(this, "DefaultOrthoWidth", 4); }
@@ -820,12 +820,12 @@ struct APlayerCameraManager
     BrzCampoPonteiro PostProcessBlendCacheField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.PostProcessBlendCache")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostProcessBlendCache` +32, medido na build 25090264
+    //  ancorado em `PostProcessBlendCache` +32, medido na build 25535041
     //  (offset absoluto medido: 0x2C38; confianca alta)
     void*& PostProcessBlendCacheOrdersField() const
     { return BrzCampoAncorado<void*>(this, "PostProcessBlendCache", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostProcessBlendCache` +16, medido na build 25090264
+    //  ancorado em `PostProcessBlendCache` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2C28; confianca alta)
     void*& PostProcessBlendCacheWeightsField() const
     { return BrzCampoAncorado<void*>(this, "PostProcessBlendCache", 16); }
@@ -854,7 +854,7 @@ struct APlayerCameraManager
     TArray<TWeakObjectPtr<void>>& StasisUnRegisteredComponentsField() const
     { return *GetNativePointerField<TArray<TWeakObjectPtr<void>>*>(this, "APlayerCameraManager.StasisUnRegisteredComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerUpdateCameraTimeout` +8, medido na build 25090264
+    //  ancorado em `ServerUpdateCameraTimeout` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2CA0; confianca alta)
     void*& SwapPendingViewTargetWhenUsingClientSideCameraUpdatesTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "ServerUpdateCameraTimeout", 8); }
@@ -867,7 +867,7 @@ struct APlayerCameraManager
     int& TargetingTeamField() const
     { return *GetNativePointerField<int*>(this, "APlayerCameraManager.TargetingTeam"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ViewRollMax` +4, medido na build 25090264
+    //  ancorado em `ViewRollMax` +4, medido na build 25535041
     //  (offset absoluto medido: 0x2C94; confianca alta)
     void*& TimeSinceLastServerUpdateCameraField() const
     { return BrzCampoAncorado<void*>(this, "ViewRollMax", 4); }
@@ -893,236 +893,252 @@ struct APlayerCameraManager
     { return *GetNativePointerField<float*>(this, "APlayerCameraManager.ViewYawMax"); }
     float& ViewYawMinField() const
     { return *GetNativePointerField<float*>(this, "APlayerCameraManager.ViewYawMin"); }
-    BitFieldValue<bool, unsigned __int32> bActorEnableCollision()
-    { return { (void*)this, "bActorEnableCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bActorIsBeingDestroyed()
-    { return { (void*)this, "bActorIsBeingDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bActorPreventPhysicsSceneRegistration()
-    { return { (void*)this, "bActorPreventPhysicsSceneRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowReceiveTickEventOnDedicatedServer()
-    { return { (void*)this, "bAllowReceiveTickEventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTickBeforeBeginPlay()
-    { return { (void*)this, "bAllowTickBeforeBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevant()
-    { return { (void*)this, "bAlwaysRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevantPrimalStructure()
-    { return { (void*)this, "bAlwaysRelevantPrimalStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bAsyncPhysicsTickEnabled()
-    { return { (void*)this, "bAsyncPhysicsTickEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachmentReplicationUseNetworkParent()
-    { return { (void*)this, "bAttachmentReplicationUseNetworkParent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDestroyWhenFinished()
-    { return { (void*)this, "bAutoDestroyWhenFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoStasis()
-    { return { (void*)this, "bAutoStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryItemUsedHandlesDurability()
-    { return { (void*)this, "bBPInventoryItemUsedHandlesDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPostInitializeComponents()
-    { return { (void*)this, "bBPPostInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPreInitializeComponents()
-    { return { (void*)this, "bBPPreInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBlockInput()
-    { return { (void*)this, "bBlockInput" }; }
-    BitFieldValue<bool, unsigned __int32> bBlueprintMultiUseEntries()
-    { return { (void*)this, "bBlueprintMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplication()
-    { return { (void*)this, "bCallPreReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplicationForReplay()
-    { return { (void*)this, "bCallPreReplicationForReplay" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDamaged()
-    { return { (void*)this, "bCanBeDamaged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeInCluster()
-    { return { (void*)this, "bCanBeInCluster" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWhenPlacing()
-    { return { (void*)this, "bCollideWhenPlacing" }; }
-    BitFieldValue<bool, unsigned __int32> bDesiredRepGraphBehaviorHasBeenSet()
-    { return { (void*)this, "bDesiredRepGraphBehaviorHasBeenSet" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyDontClearNetworkChildren()
-    { return { (void*)this, "bDestroyDontClearNetworkChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNodes()
-    { return { (void*)this, "bDisableRigidBodyAnimNodes" }; }
-    BitFieldValue<bool, unsigned __int32> bEditorOnlyActorShowInPIE()
-    { return { (void*)this, "bEditorOnlyActorShowInPIE" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiUse()
-    { return { (void*)this, "bEnableMultiUse" }; }
-    BitFieldValue<bool, unsigned __int32> bExchangedRoles()
-    { return { (void*)this, "bExchangedRoles" }; }
-    BitFieldValue<bool, unsigned __int32> bFindCameraComponentWhenViewTarget()
-    { return { (void*)this, "bFindCameraComponentWhenViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowNetMulticast()
-    { return { (void*)this, "bForceAllowNetMulticast" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHiddenReplication()
-    { return { (void*)this, "bForceHiddenReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHighQualityViewerReplication()
-    { return { (void*)this, "bForceHighQualityViewerReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInfiniteDrawDistance()
-    { return { (void*)this, "bForceInfiniteDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetAddressable()
-    { return { (void*)this, "bForceNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetworkSpatialization()
-    { return { (void*)this, "bForceNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNonBlockingHits()
-    { return { (void*)this, "bForceNonBlockingHits" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventSeamlessTravel()
-    { return { (void*)this, "bForcePreventSeamlessTravel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceReplicateDormantChildrenWithoutSpatialRelevancy()
-    { return { (void*)this, "bForceReplicateDormantChildrenWithoutSpatialRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bForcedHudDrawingRequiresSameTeam()
-    { return { (void*)this, "bForcedHudDrawingRequiresSameTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEventsDuringLevelStreaming()
-    { return { (void*)this, "bGenerateOverlapEventsDuringLevelStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bHasHighVolumeRPCs()
-    { return { (void*)this, "bHasHighVolumeRPCs" }; }
-    BitFieldValue<bool, unsigned __int32> bHibernateChange()
-    { return { (void*)this, "bHibernateChange" }; }
-    BitFieldValue<bool, unsigned __int32> bHidden()
-    { return { (void*)this, "bHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNetworkRangeScaling()
-    { return { (void*)this, "bIgnoreNetworkRangeScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoresOriginShifting()
-    { return { (void*)this, "bIgnoresOriginShifting" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyedFromChildActorComponent()
-    { return { (void*)this, "bIsDestroyedFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnlyActor()
-    { return { (void*)this, "bIsEditorOnlyActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromChildActorComponent()
-    { return { (void*)this, "bIsFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInvincible()
-    { return { (void*)this, "bIsInvincible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMapActor()
-    { return { (void*)this, "bIsMapActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidUnstasisCaster()
-    { return { (void*)this, "bIsValidUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bLoadedFromSaveGame()
-    { return { (void*)this, "bLoadedFromSaveGame" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiUseCenterHUD()
-    { return { (void*)this, "bMultiUseCenterHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bNetCritical()
-    { return { (void*)this, "bNetCritical" }; }
-    BitFieldValue<bool, unsigned __int32> bNetLoadOnClient()
-    { return { (void*)this, "bNetLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bNetTemporary()
-    { return { (void*)this, "bNetTemporary" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseClientRelevancy()
-    { return { (void*)this, "bNetUseClientRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseOwnerRelevancy()
-    { return { (void*)this, "bNetUseOwnerRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSpatializationForceRelevancyCheck()
-    { return { (void*)this, "bNetworkSpatializationForceRelevancyCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyReplicateOnNetForcedUpdate()
-    { return { (void*)this, "bOnlyReplicateOnNetForcedUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventActorStasis()
-    { return { (void*)this, "bPreventActorStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasingAllowSteppingUp()
-    { return { (void*)this, "bPreventCharacterBasingAllowSteppingUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCliffPlatforms()
-    { return { (void*)this, "bPreventCliffPlatforms" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLevelBoundsRelevant()
-    { return { (void*)this, "bPreventLevelBoundsRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNPCSpawnFloor()
-    { return { (void*)this, "bPreventNPCSpawnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularForceNetUpdate()
-    { return { (void*)this, "bPreventRegularForceNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSaving()
-    { return { (void*)this, "bPreventSaving" }; }
-    BitFieldValue<bool, unsigned __int32> bRealtimeThrottledTickUseNativeTick()
-    { return { (void*)this, "bRealtimeThrottledTickUseNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForLevelBounds()
-    { return { (void*)this, "bRelevantForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForNetworkReplays()
-    { return { (void*)this, "bRelevantForNetworkReplays" }; }
-    BitFieldValue<bool, unsigned __int32> bReplayRewindable()
-    { return { (void*)this, "bReplayRewindable" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateHidden()
-    { return { (void*)this, "bReplicateHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateMovement()
-    { return { (void*)this, "bReplicateMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bSavedWhenStasised()
-    { return { (void*)this, "bSavedWhenStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisComponentRadiusForceDistanceCheck()
-    { return { (void*)this, "bStasisComponentRadiusForceDistanceCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bStasised()
-    { return { (void*)this, "bStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bTearOff()
-    { return { (void*)this, "bTearOff" }; }
-    BitFieldValue<bool, unsigned __int32> bUnstreamComponentsUseEndOverlap()
-    { return { (void*)this, "bUnstreamComponentsUseEndOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bUseActorNotifyCustomEventBP()
-    { return { (void*)this, "bUseActorNotifyCustomEventBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachmentReplication()
-    { return { (void*)this, "bUseAttachmentReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowActorSpawn()
-    { return { (void*)this, "bUseBPAllowActorSpawn" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPChangedActorTeam()
-    { return { (void*)this, "bUseBPChangedActorTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckForErrors()
-    { return { (void*)this, "bUseBPCheckForErrors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomIsRelevantForClient()
-    { return { (void*)this, "bUseBPCustomIsRelevantForClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawEntry()
-    { return { (void*)this, "bUseBPDrawEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFilterMultiUseEntries()
-    { return { (void*)this, "bUseBPFilterMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowsInventoryUse()
-    { return { (void*)this, "bUseBPForceAllowsInventoryUse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetBonesToHideOnAllocation()
-    { return { (void*)this, "bUseBPGetBonesToHideOnAllocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetCameraCollisionIgnoreActors()
-    { return { (void*)this, "bUseBPGetCameraCollisionIgnoreActors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetHUDDrawLocationOffset()
-    { return { (void*)this, "bUseBPGetHUDDrawLocationOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterText()
-    { return { (void*)this, "bUseBPGetMultiUseCenterText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterTextWithName()
-    { return { (void*)this, "bUseBPGetMultiUseCenterTextWithName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOrbitCamTargetLocation()
-    { return { (void*)this, "bUseBPGetOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetShowDebugAnimationComponents()
-    { return { (void*)this, "bUseBPGetShowDebugAnimationComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemDropped()
-    { return { (void*)this, "bUseBPInventoryItemDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemUsed()
-    { return { (void*)this, "bUseBPInventoryItemUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTargetingLocation()
-    { return { (void*)this, "bUseBPOverrideTargetingLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideUILocation()
-    { return { (void*)this, "bUseBPOverrideUILocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventAttachments()
-    { return { (void*)this, "bUseBPPreventAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCanMoveThroughActor()
-    { return { (void*)this, "bUseCanMoveThroughActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNetworkSpatialization()
-    { return { (void*)this, "bUseNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnlyPointForLevelBounds()
-    { return { (void*)this, "bUseOnlyPointForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStasisGrid()
-    { return { (void*)this, "bUseStasisGrid" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPerformanceThrottledTick()
-    { return { (void*)this, "bWantsPerformanceThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsRealtimeThrottledTick()
-    { return { (void*)this, "bWantsRealtimeThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsServerThrottledTick()
-    { return { (void*)this, "bWantsServerThrottledTick" }; }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAutoCalculateOrthoPlanesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAutoCalculateOrthoPlanes")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAutoDestroyWhenFinished")); }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bAutoStasis")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bBlockInput")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bCanBeInCluster")); }
+    BrzCampoPonteiro bClientSimulatingViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bClientSimulatingViewTarget")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bClimbable")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bDefaultConstrainAspectRatioField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bDefaultConstrainAspectRatio")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bEditorOnlyActorShowInPIE")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bEnableMultiUse")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bExchangedRoles")); }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceAllowNetMulticast")); }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceNetAddressable")); }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bForcedHudDrawingRequiresSameTeam")); }
+    BrzCampoPonteiro bGameCameraCutThisFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bGameCameraCutThisFrame")); }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bHibernateChange")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bHidden")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIgnoresOriginShifting")); }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsInvincible")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsMapActor")); }
+    BrzCampoPonteiro bIsOrthographicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsOrthographic")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bIsValidUnstasisCaster")); }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bNetCritical")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bPreventSaving")); }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bRelevantForNetworkReplays")); }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bReplicateHidden")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bReplicates")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bSavedWhenStasised")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bStasised")); }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bTearOff")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUpdateOrthoPlanesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUpdateOrthoPlanes")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseCameraHeightAsViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseCameraHeightAsViewTarget")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseClientSideCameraUpdatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseClientSideCameraUpdates")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bUseStasisGrid")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.bWantsServerThrottledTick")); }
     BitFieldValue<bool, unsigned __int32> bAutoCalculateOrthoPlanes()
     { return { (void*)this, "bAutoCalculateOrthoPlanes" }; }
     BitFieldValue<bool, unsigned __int32> bClientSimulatingViewTarget()

@@ -135,10 +135,10 @@ struct UPrimalEggToolTipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.GenderIcon_Male")); }
     BrzCampoPonteiro GenderIcon_UnknownField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.GenderIcon_Unknown")); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.HandleVisibilityWithInput")); }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.Highlightable")); }
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UPrimalEggToolTipWidget.InputComponent"); }
     BrzCampoPonteiro NamedSlotBindingsField() const
@@ -201,8 +201,8 @@ struct UPrimalEggToolTipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.ToolTipWidgetDelegate")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UPrimalEggToolTipWidget.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -215,44 +215,44 @@ struct UPrimalEggToolTipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.WidgetTree")); }
     int& WidgetWidthField() const
     { return *GetNativePointerField<int*>(this, "UPrimalEggToolTipWidget.WidgetWidth"); }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoOverlayFade()
-    { return { (void*)this, "bDoOverlayFade" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoOverlayFadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bDoOverlayFade")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bDontRenderHighlight")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitToolTip()
-    { return { (void*)this, "bUseBPInitToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPUpdateToolTip()
-    { return { (void*)this, "bUseBPUpdateToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bIsFocusable")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bIsVolatile")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bUseBPInitToolTip")); }
+    BrzCampoPonteiro bUseBPUpdateToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bUseBPUpdateToolTip")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEggToolTipWidget.bUseWindowClippingForHighlight")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALEGGTOOLTIPWIDGET_H

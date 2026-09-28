@@ -45,20 +45,22 @@ struct FTransformMeshDataflowNode
 
     TObjectPtr<USkeletalMeshComponent>& MeshField() const
     { return *GetNativePointerField<TObjectPtr<USkeletalMeshComponent>*>(this, "FTransformMeshDataflowNode.Mesh"); }
-    BitFieldValue<bool, unsigned __int32> Rotate()
-    { return { (void*)this, "Rotate" }; }
+    BrzCampoPonteiro RotateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.Rotate")); }
     BrzCampoPonteiro RotatePivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.RotatePivot")); }
     BrzCampoPonteiro RotationOrderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.RotationOrder")); }
-    BitFieldValue<bool, unsigned __int32> Scale()
-    { return { (void*)this, "Scale" }; }
+    BrzCampoPonteiro ScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.Scale")); }
     BrzCampoPonteiro ScalePivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.ScalePivot")); }
     BrzCampoPonteiro TranslateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.Translate")); }
     BrzCampoPonteiro UniformScaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.UniformScale")); }
+    BrzCampoPonteiro bInvertTransformationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformMeshDataflowNode.bInvertTransformation")); }
     BitFieldValue<bool, unsigned __int32> bInvertTransformation()
     { return { (void*)this, "bInvertTransformation" }; }
 

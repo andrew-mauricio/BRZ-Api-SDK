@@ -57,7 +57,7 @@ struct AStructurePreventionZoneVolume : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AStructurePreventionZoneVolume.InitAddToActorList()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=174+grafo=11/11]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InitAddToActorList() const
     {
         return NativeCall<void*>(this, "AStructurePreventionZoneVolume.InitAddToActorList()");
@@ -105,6 +105,36 @@ struct AStructurePreventionZoneVolume : public AActor
     { return *GetNativePointerField<TArray<void*>*>(this, "AStructurePreventionZoneVolume.PreventUsingWeapons"); }
     float& StructureDamageMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AStructurePreventionZoneVolume.StructureDamageMultiplier"); }
+    BrzCampoPonteiro bDisabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bDisabled")); }
+    BrzCampoPonteiro bForceAllowUndergroundCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bForceAllowUndergroundCheck")); }
+    BrzCampoPonteiro bForceEnabledWhenAllowCaveBuildingPVPIsFalseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bForceEnabledWhenAllowCaveBuildingPVPIsFalse")); }
+    BrzCampoPonteiro bForceOnGenesisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bForceOnGenesis")); }
+    BrzCampoPonteiro bIsMissionZoneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bIsMissionZone")); }
+    BrzCampoPonteiro bOnlyPreventInDedicatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bOnlyPreventInDedicated")); }
+    BrzCampoPonteiro bOnlyPreventInPvEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bOnlyPreventInPvE")); }
+    BrzCampoPonteiro bOptionallyEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bOptionallyEnabled")); }
+    BrzCampoPonteiro bPreventAllStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bPreventAllStructures")); }
+    BrzCampoPonteiro bPreventStructureDamageIncreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bPreventStructureDamageIncrease")); }
+    BrzCampoPonteiro bPreventionVolumeForceAllowFlyersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bPreventionVolumeForceAllowFlyers")); }
+    BrzCampoPonteiro bPreventionVolumeForcePreventFlyersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bPreventionVolumeForcePreventFlyers")); }
+    BrzCampoPonteiro bPreventionVolumePreventsFlyersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bPreventionVolumePreventsFlyers")); }
+    BrzCampoPonteiro bStructurePreventionOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bStructurePreventionOnly")); }
+    BrzCampoPonteiro bUseAlternativeInsideCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AStructurePreventionZoneVolume.bUseAlternativeInsideCheck")); }
     BitFieldValue<bool, unsigned __int32> bOnlyPreventInPvE()
     { return { (void*)this, "bOnlyPreventInPvE" }; }
     BitFieldValue<bool, unsigned __int32> bOnlyPreventInDedicated()

@@ -35,12 +35,12 @@ struct FVector4
 
     BrzCampoPonteiro WField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4.W")); }
-    BitFieldValue<bool, unsigned __int32> X()
-    { return { (void*)this, "X" }; }
-    BitFieldValue<bool, unsigned __int32> Y()
-    { return { (void*)this, "Y" }; }
-    BitFieldValue<bool, unsigned __int32> Z()
-    { return { (void*)this, "Z" }; }
+    BrzCampoPonteiro XField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4.X")); }
+    BrzCampoPonteiro YField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4.Y")); }
+    BrzCampoPonteiro ZField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector4.Z")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTOR4_H

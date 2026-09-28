@@ -170,7 +170,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.AquireLoot(APrimalShipLootCrate*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AquireLoot(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.AquireLoot(APrimalShipLootCrate*)", a0);
@@ -178,7 +178,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.AreAllMannedSailsClosing()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AreAllMannedSailsClosing() const
     {
         return NativeCall<void*>(this, "APrimalShip.AreAllMannedSailsClosing()");
@@ -186,7 +186,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.AreAllMannedSailsOpening()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AreAllMannedSailsOpening() const
     {
         return NativeCall<void*>(this, "APrimalShip.AreAllMannedSailsOpening()");
@@ -210,7 +210,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BPApplyShipSkillBuff(FName,APrimalCharacter*,AActor*)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BPApplyShipSkillBuff(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, void*, void*>(this, "APrimalShip.BPApplyShipSkillBuff(FName,APrimalCharacter*,AActor*)", a0, a1, a2);
@@ -226,7 +226,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BPGetCameraCollisionIgnoreActors_Implementation(TArray<AActor*,TSizedDefaultAllocato
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BPGetCameraCollisionIgnoreActors_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.BPGetCameraCollisionIgnoreActors_Implementation(TArray<AActor*,TSizedDefaultAllocator<32>>&)", a0);
@@ -290,7 +290,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BaseIgnoreWaveLocking(APrimalCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BaseIgnoreWaveLocking(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.BaseIgnoreWaveLocking(APrimalCharacter*)", a0);
@@ -298,7 +298,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BeginDestroy()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BeginDestroy() const
     {
         return NativeCall<void*>(this, "APrimalShip.BeginDestroy()");
@@ -322,7 +322,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CalculateSteeringVelocity()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CalculateSteeringVelocity() const
     {
         return NativeCall<void*>(this, "APrimalShip.CalculateSteeringVelocity()");
@@ -330,7 +330,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CalculateThrottleForce()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CalculateThrottleForce() const
     {
         return NativeCall<void*>(this, "APrimalShip.CalculateThrottleForce()");
@@ -338,7 +338,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanDoAnchoringInternal()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=641+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanDoAnchoringInternal() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanDoAnchoringInternal()");
@@ -346,7 +346,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanDoAnchoring_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanDoAnchoring_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanDoAnchoring_Implementation()");
@@ -362,7 +362,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanDoDockingInternal()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanDoDockingInternal() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanDoDockingInternal()");
@@ -370,7 +370,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanDoDocking_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanDoDocking_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanDoDocking_Implementation()");
@@ -378,7 +378,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanFireCannons()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=159]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanFireCannons() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanFireCannons()");
@@ -386,7 +386,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanPlayerEditShipSkills(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=44]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanPlayerEditShipSkills(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.CanPlayerEditShipSkills(AShooterPlayerController*)", a0);
@@ -410,7 +410,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ClientMultiUse(APlayerController*,int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientMultiUse(void* a0, int a1, int a2) const
     {
         return NativeCall<void*, void*, int, int>(this, "APrimalShip.ClientMultiUse(APlayerController*,int,int)", a0, a1, a2);
@@ -418,7 +418,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ClientSetAttachedSeat_Implementation(APrimalStructureSeating_DriverSeat*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientSetAttachedSeat_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.ClientSetAttachedSeat_Implementation(APrimalStructureSeating_DriverSeat*)", a0);
@@ -434,7 +434,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.DelayedFullyAnchor()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=371+grafo=6/6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=371+grafo=5/5]]
     BrzPonteiro DelayedFullyAnchor() const
     {
         return NativeCall<void*>(this, "APrimalShip.DelayedFullyAnchor()");
@@ -450,7 +450,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.DoImpactDamageToShipStructures(UE::Math::TVector<double>,float,float,AActor*)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro DoImpactDamageToShipStructures(void* a0, float a1, float a2, void* a3) const
     {
         return NativeCall<void*, void*, float, float, void*>(this, "APrimalShip.DoImpactDamageToShipStructures(UE::Math::TVector<double>,float,float,AActor*)", a0, a1, a2, a3);
@@ -458,7 +458,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.DoesShipHaveBasedPawns(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesShipHaveBasedPawns(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalShip.DoesShipHaveBasedPawns(bool)", a0);
@@ -466,7 +466,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.EndPlay(EEndPlayReason::Type)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalShip.EndPlay(EEndPlayReason::Type)", a0);
@@ -498,7 +498,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ForceUnanchored()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ForceUnanchored() const
     {
         return NativeCall<void*>(this, "APrimalShip.ForceUnanchored()");
@@ -514,7 +514,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetAcceleratedScalar(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetAcceleratedScalar(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalShip.GetAcceleratedScalar(bool)", a0);
@@ -530,7 +530,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetAnchorAttachMesh()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAnchorAttachMesh() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetAnchorAttachMesh()");
@@ -538,7 +538,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetAnchorSetPercent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAnchorSetPercent() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetAnchorSetPercent()");
@@ -554,7 +554,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetAutoPilotHeading()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAutoPilotHeading() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetAutoPilotHeading()");
@@ -578,7 +578,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetCannonForCharacter(AShooterCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetCannonForCharacter(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.GetCannonForCharacter(AShooterCharacter*)", a0);
@@ -586,7 +586,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetCannonballSpeedMultiplier()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=296+grafo=5/5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=296+grafo=4/4]]
     BrzPonteiro GetCannonballSpeedMultiplier() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetCannonballSpeedMultiplier()");
@@ -594,7 +594,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetCannonsCooldownForSide(EShipFiringSide,float&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCannonsCooldownForSide(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "APrimalShip.GetCannonsCooldownForSide(EShipFiringSide,float&)", a0, a1);
@@ -642,7 +642,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetDriver()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=46]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetDriver() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetDriver()");
@@ -650,7 +650,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetEntryDescription()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEntryDescription() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetEntryDescription()");
@@ -658,7 +658,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetEntryIcon(UObject*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UTexture2D* GetEntryIcon(void* a0, bool a1) const
     {
         return NativeCall<UTexture2D*, void*, bool>(this, "APrimalShip.GetEntryIcon(UObject*,bool)", a0, a1);
@@ -682,7 +682,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetLastRowTime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLastRowTime() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetLastRowTime()");
@@ -690,7 +690,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2509+grafo=97/97]]
     BrzPonteiro GetLifetimeReplicatedProps(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -698,7 +698,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetMainDriverSeat()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMainDriverSeat() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetMainDriverSeat()");
@@ -714,7 +714,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetMannedSailsCount()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetMannedSailsCount() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetMannedSailsCount()");
@@ -722,7 +722,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetMaxMovementWeight()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMaxMovementWeight() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetMaxMovementWeight()");
@@ -746,7 +746,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetMaximumAnchorLength()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=443+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetMaximumAnchorLength() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetMaximumAnchorLength()");
@@ -754,7 +754,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetNextCombatMusicTrack(APrimalCharacter*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetNextCombatMusicTrack(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalShip.GetNextCombatMusicTrack(APrimalCharacter*,bool)", a0, a1);
@@ -778,7 +778,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetParticleSystemClampingVelocity()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetParticleSystemClampingVelocity() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetParticleSystemClampingVelocity()");
@@ -794,7 +794,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderCurrentSkillCooldownDuration_Implementation(FName)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetProviderCurrentSkillCooldownDuration_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetProviderCurrentSkillCooldownDuration_Implementation(FName)", a0);
@@ -818,7 +818,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillBuffTargets_Implementation(ESkillBuffAplicationType,AShooterPlayerCo
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetProviderSkillBuffTargets_Implementation(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "APrimalShip.GetProviderSkillBuffTargets_Implementation(ESkillBuffAplicationType,AShooterPlayerController*)", a0, a1);
@@ -834,7 +834,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillCooldown_Implementation(FName,FSkillCooldown&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillCooldown_Implementation(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "APrimalShip.GetProviderSkillCooldown_Implementation(FName,FSkillCooldown&)", a0, a1);
@@ -842,7 +842,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillData(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillData(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetProviderSkillData(FName)", a0);
@@ -850,7 +850,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillModifier_Implementation(FName,FName,float&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillModifier_Implementation(unsigned long long a0, unsigned long long a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, unsigned long long, void*>(this, "APrimalShip.GetProviderSkillModifier_Implementation(FName,FName,float&)", a0, a1, a2);
@@ -858,7 +858,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillPointsSpent_Implementation(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillPointsSpent_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetProviderSkillPointsSpent_Implementation(FName)", a0);
@@ -866,7 +866,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillRank_Implementation(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillRank_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetProviderSkillRank_Implementation(FName)", a0);
@@ -874,7 +874,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillTreeForSkillData_Implementation(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillTreeForSkillData_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetProviderSkillTreeForSkillData_Implementation(FName)", a0);
@@ -882,7 +882,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderUnlockedSkillsAndRanks_Implementation(TArray<FName,TSizedDefaultAllocator
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderUnlockedSkillsAndRanks_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalShip.GetProviderUnlockedSkillsAndRanks_Implementation(TArray<FName,TSizedDefaultAllocator<32>>&,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -898,7 +898,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetRider()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRider() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetRider()");
@@ -906,7 +906,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetRotationRateWithAcceleration11(float,float,float,float,float,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRotationRateWithAcceleration11(float a0, float a1, float a2, float a3, float a4, float a5) const
     {
         return NativeCall<void*, float, float, float, float, float, float>(this, "APrimalShip.GetRotationRateWithAcceleration11(float,float,float,float,float,float)", a0, a1, a2, a3, a4, a5);
@@ -914,7 +914,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetRowingInterval()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRowingInterval() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetRowingInterval()");
@@ -922,7 +922,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetRudderAngle()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRudderAngle() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetRudderAngle()");
@@ -930,7 +930,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetSailRotation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSailRotation() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetSailRotation()");
@@ -962,7 +962,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetSailUnitsMax()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSailUnitsMax() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetSailUnitsMax()");
@@ -1002,7 +1002,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipHeadwindPenaltyMultiplier()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=408+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetShipHeadwindPenaltyMultiplier() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipHeadwindPenaltyMultiplier()");
@@ -1026,7 +1026,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipRightVector()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=89]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=89+chamadores=2]]
     BrzPonteiro GetShipRightVector() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipRightVector()");
@@ -1042,7 +1042,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipRowingInput()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetShipRowingInput() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipRowingInput()");
@@ -1050,7 +1050,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipRowingSeatCount()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetShipRowingSeatCount() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipRowingSeatCount()");
@@ -1058,7 +1058,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipSailCount()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetShipSailCount() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipSailCount()");
@@ -1082,7 +1082,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipSkillData(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetShipSkillData(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetShipSkillData(FName)", a0);
@@ -1106,7 +1106,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipSkillRank(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetShipSkillRank(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetShipSkillRank(FName)", a0);
@@ -1122,7 +1122,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipStructures()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetShipStructures() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipStructures()");
@@ -1130,7 +1130,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipTargetThrottleRatio()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetShipTargetThrottleRatio() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetShipTargetThrottleRatio()");
@@ -1162,7 +1162,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetSteeringForce()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSteeringForce() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetSteeringForce()");
@@ -1170,7 +1170,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetStructureDemolishTime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetStructureDemolishTime() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetStructureDemolishTime()");
@@ -1186,7 +1186,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetTargetingDesirability(ITargetableInterface*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetTargetingDesirability(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.GetTargetingDesirability(ITargetableInterface*)", a0);
@@ -1194,7 +1194,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetThrottleForceMultiplier()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetThrottleForceMultiplier() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetThrottleForceMultiplier()");
@@ -1202,7 +1202,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetThrottleRatioInterpSpeed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=48]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetThrottleRatioInterpSpeed() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetThrottleRatioInterpSpeed()");
@@ -1218,7 +1218,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetTimeToResetRudderAngle(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=138]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetTimeToResetRudderAngle(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.GetTimeToResetRudderAngle(float)", a0);
@@ -1242,7 +1242,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GiveProviderHotbarReplacerBuff_Implementation(AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GiveProviderHotbarReplacerBuff_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.GiveProviderHotbarReplacerBuff_Implementation(AShooterPlayerController*)", a0);
@@ -1250,7 +1250,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.HandleAnchorMovement(float)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=22]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HandleAnchorMovement(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.HandleAnchorMovement(float)", a0);
@@ -1258,7 +1258,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.HandleStowedAnchor()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=147]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HandleStowedAnchor() const
     {
         return NativeCall<void*>(this, "APrimalShip.HandleStowedAnchor()");
@@ -1266,7 +1266,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.HasOpenSails()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasOpenSails() const
     {
         return NativeCall<void*>(this, "APrimalShip.HasOpenSails()");
@@ -1290,7 +1290,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.Internal_FullyDock(UE::Math::TVector<double>,UE::Math::TRotator<double>,int)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Internal_FullyDock(void* a0, void* a1, int a2) const
     {
         return NativeCall<void*, void*, void*, int>(this, "APrimalShip.Internal_FullyDock(UE::Math::TVector<double>,UE::Math::TRotator<double>,int)", a0, a1, a2);
@@ -1306,7 +1306,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.InterpThrottleAndInputs(float,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro InterpThrottleAndInputs(float a0, float a1) const
     {
         return NativeCall<void*, float, float>(this, "APrimalShip.InterpThrottleAndInputs(float,float)", a0, a1);
@@ -1314,7 +1314,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsCharacterInCannon()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=107]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsCharacterInCannon() const
     {
         return NativeCall<void*>(this, "APrimalShip.IsCharacterInCannon()");
@@ -1322,7 +1322,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsCheatWind()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsCheatWind() const
     {
         return NativeCall<void*>(this, "APrimalShip.IsCheatWind()");
@@ -1330,7 +1330,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsDocked()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsDocked() const
     {
         return NativeCall<void*>(this, "APrimalShip.IsDocked()");
@@ -1346,7 +1346,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsInOceanVolume(APhysicsVolume**)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsInOceanVolume(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.IsInOceanVolume(APhysicsVolume**)", a0);
@@ -1354,7 +1354,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsLargeRaft()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsLargeRaft() const
     {
         return NativeCall<void*>(this, "APrimalShip.IsLargeRaft()");
@@ -1362,7 +1362,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsPointInsideThisRaft(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=133]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsPointInsideThisRaft(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.IsPointInsideThisRaft(UE::Math::TVector<double>&)", a0);
@@ -1370,7 +1370,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsProviderSkillReadyToUse_Implementation(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsProviderSkillReadyToUse_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.IsProviderSkillReadyToUse_Implementation(FName)", a0);
@@ -1378,7 +1378,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsProviderSkillUnlocked_Implementation(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsProviderSkillUnlocked_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.IsProviderSkillUnlocked_Implementation(FName)", a0);
@@ -1394,7 +1394,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsShipCheckingForRowing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsShipCheckingForRowing() const
     {
         return NativeCall<void*>(this, "APrimalShip.IsShipCheckingForRowing()");
@@ -1402,7 +1402,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsShipSkillReadyToUse(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsShipSkillReadyToUse(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.IsShipSkillReadyToUse(FName)", a0);
@@ -1410,7 +1410,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsShipSkillUnlocked(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsShipSkillUnlocked(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.IsShipSkillUnlocked(FName)", a0);
@@ -1434,7 +1434,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.MultiToggleTorches_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MultiToggleTorches_Implementation(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalShip.MultiToggleTorches_Implementation(bool)", a0);
@@ -1450,7 +1450,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.Multi_FullyAnchor_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Multi_FullyAnchor_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalShip.Multi_FullyAnchor_Implementation()");
@@ -1458,7 +1458,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.Multi_FullyUnanchor()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Multi_FullyUnanchor() const
     {
         return NativeCall<void*>(this, "APrimalShip.Multi_FullyUnanchor()");
@@ -1506,7 +1506,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.MulticastUpdateWheelLocation_Implementation(UE::Math::TVector<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MulticastUpdateWheelLocation_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.MulticastUpdateWheelLocation_Implementation(UE::Math::TVector<double>)", a0);
@@ -1514,7 +1514,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.NetClientInterpolateTo_Implementation(UE::Math::TVector<double>,UE::Math::TRotator<d
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NetClientInterpolateTo_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalShip.NetClientInterpolateTo_Implementation(UE::Math::TVector<double>,UE::Math::TRotator<double>)", a0, a1);
@@ -1522,7 +1522,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.NetForceSyncTransform_Implementation(UE::Math::TVector<double>,UE::Math::TRotator<do
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NetForceSyncTransform_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalShip.NetForceSyncTransform_Implementation(UE::Math::TVector<double>,UE::Math::TRotator<double>)", a0, a1);
@@ -1546,7 +1546,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnInventoryItemRemoved(UPrimalInventoryComponent*,UPrimalItem*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnInventoryItemRemoved(void* a0, void* a1, int a2) const
     {
         return NativeCall<void*, void*, void*, int>(this, "APrimalShip.OnInventoryItemRemoved(UPrimalInventoryComponent*,UPrimalItem*,int)", a0, a1, a2);
@@ -1570,7 +1570,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnRep_IsAnchoring()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_IsAnchoring() const
     {
         return NativeCall<void*>(this, "APrimalShip.OnRep_IsAnchoring()");
@@ -1586,7 +1586,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnRep_ReplicatedAnchorState()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_ReplicatedAnchorState() const
     {
         return NativeCall<void*>(this, "APrimalShip.OnRep_ReplicatedAnchorState()");
@@ -1594,7 +1594,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnShipRowingStart()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnShipRowingStart() const
     {
         return NativeCall<void*>(this, "APrimalShip.OnShipRowingStart()");
@@ -1602,7 +1602,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnShipRowingStop()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnShipRowingStop() const
     {
         return NativeCall<void*>(this, "APrimalShip.OnShipRowingStop()");
@@ -1610,7 +1610,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnStartSinking()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStartSinking() const
     {
         return NativeCall<void*>(this, "APrimalShip.OnStartSinking()");
@@ -1618,7 +1618,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.OnStructurePlacedOnShip(APrimalStructure*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStructurePlacedOnShip(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.OnStructurePlacedOnShip(APrimalStructure*)", a0);
@@ -1642,7 +1642,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.PlayDying(float,FDamageEvent&,APawn*,AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayDying(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalShip.PlayDying(float,FDamageEvent&,APawn*,AActor*)", a0, a1, a2, a3);
@@ -1650,7 +1650,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.PostInitializeComponents()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PostInitializeComponents() const
     {
         return NativeCall<void*>(this, "APrimalShip.PostInitializeComponents()");
@@ -1658,7 +1658,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.PreReplication(IRepChangedPropertyTracker&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreReplication(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.PreReplication(IRepChangedPropertyTracker&)", a0);
@@ -1666,7 +1666,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.PreventCharacterBasing(AActor*,UPrimitiveComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreventCharacterBasing(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalShip.PreventCharacterBasing(AActor*,UPrimitiveComponent*)", a0, a1);
@@ -1686,7 +1686,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ProviderSkillAddedToSlot_Implementation(FName,int,AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=57]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ProviderSkillAddedToSlot_Implementation(unsigned long long a0, int a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, int, void*>(this, "APrimalShip.ProviderSkillAddedToSlot_Implementation(FName,int,AShooterPlayerController*)", a0, a1, a2);
@@ -1718,7 +1718,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RefreshColorizationHelper(UMeshComponent*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RefreshColorizationHelper(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.RefreshColorizationHelper(UMeshComponent*)", a0);
@@ -1726,7 +1726,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RefreshLongRangeStasis()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RefreshLongRangeStasis() const
     {
         return NativeCall<void*>(this, "APrimalShip.RefreshLongRangeStasis()");
@@ -1742,7 +1742,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RefreshSaddledStructureSceneState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=25]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RefreshSaddledStructureSceneState() const
     {
         return NativeCall<void*>(this, "APrimalShip.RefreshSaddledStructureSceneState()");
@@ -1750,7 +1750,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RefreshVesselDynamicsState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=32]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RefreshVesselDynamicsState() const
     {
         return NativeCall<void*>(this, "APrimalShip.RefreshVesselDynamicsState()");
@@ -1758,7 +1758,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RemoveHotbarSkills(AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveHotbarSkills(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.RemoveHotbarSkills(AShooterPlayerController*)", a0);
@@ -1766,7 +1766,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RemoveProviderHotbarReplacerBuff_Implementation(AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveProviderHotbarReplacerBuff_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.RemoveProviderHotbarReplacerBuff_Implementation(AShooterPlayerController*)", a0);
@@ -1782,7 +1782,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ResetSailingInputs()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetSailingInputs() const
     {
         return NativeCall<void*>(this, "APrimalShip.ResetSailingInputs()");
@@ -1806,7 +1806,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetCharacterStatusTameable(bool,bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=121]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetCharacterStatusTameable(bool a0, bool a1, bool a2) const
     {
         return NativeCall<void*, bool, bool, bool>(this, "APrimalShip.SetCharacterStatusTameable(bool,bool,bool)", a0, a1, a2);
@@ -1814,7 +1814,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetDeath(bool,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetDeath(bool a0, bool a1) const
     {
         return NativeCall<void*, bool, bool>(this, "APrimalShip.SetDeath(bool,bool)", a0, a1);
@@ -1822,7 +1822,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetHullMesh(UStaticMeshComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetHullMesh(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.SetHullMesh(UStaticMeshComponent*)", a0);
@@ -1830,7 +1830,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetSaddleContainerInventoryViewers(AShooterPlayerController*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSaddleContainerInventoryViewers(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalShip.SetSaddleContainerInventoryViewers(AShooterPlayerController*,bool)", a0, a1);
@@ -1838,7 +1838,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetShipDriver(AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetShipDriver(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.SetShipDriver(AShooterCharacter*)", a0);
@@ -1846,7 +1846,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetSteeringInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSteeringInput(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.SetSteeringInput(float)", a0);
@@ -1854,7 +1854,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetThrottleForceMultiplier(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetThrottleForceMultiplier(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.SetThrottleForceMultiplier(float)", a0);
@@ -1862,7 +1862,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SetThrottleInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetThrottleInput(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.SetThrottleInput(float)", a0);
@@ -1902,7 +1902,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ShouldApplyReplicatedVesselState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=75]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShouldApplyReplicatedVesselState() const
     {
         return NativeCall<void*>(this, "APrimalShip.ShouldApplyReplicatedVesselState()");
@@ -1910,7 +1910,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SimulatePhysics(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SimulatePhysics(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.SimulatePhysics(float)", a0);
@@ -1918,7 +1918,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SpawnAnchor()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=554+grafo=5/6]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SpawnAnchor() const
     {
         return NativeCall<void*>(this, "APrimalShip.SpawnAnchor()");
@@ -1934,7 +1934,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SpawnInitialStructures()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SpawnInitialStructures() const
     {
         return NativeCall<void*>(this, "APrimalShip.SpawnInitialStructures()");
@@ -2030,7 +2030,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.TickRowing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TickRowing() const
     {
         return NativeCall<void*>(this, "APrimalShip.TickRowing()");
@@ -2062,7 +2062,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.TryUnlockProviderSkill_Implementation(FName,AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TryUnlockProviderSkill_Implementation(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "APrimalShip.TryUnlockProviderSkill_Implementation(FName,AShooterPlayerController*)", a0, a1);
@@ -2086,7 +2086,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UnlockAllShipSkills(AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UnlockAllShipSkills(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.UnlockAllShipSkills(AShooterPlayerController*)", a0);
@@ -2094,7 +2094,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UnweldAllStructuresFromShipHull()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UnweldAllStructuresFromShipHull() const
     {
         return NativeCall<void*>(this, "APrimalShip.UnweldAllStructuresFromShipHull()");
@@ -2102,7 +2102,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateDockedShipVisibility()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateDockedShipVisibility() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateDockedShipVisibility()");
@@ -2118,7 +2118,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateFinalAnchorLengthState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=70]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateFinalAnchorLengthState() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateFinalAnchorLengthState()");
@@ -2142,7 +2142,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateNetworkAndStasisRangeMultiplier()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=22]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateNetworkAndStasisRangeMultiplier() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateNetworkAndStasisRangeMultiplier()");
@@ -2150,7 +2150,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateRaftRelevant()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateRaftRelevant() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateRaftRelevant()");
@@ -2158,7 +2158,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateRowingVars()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateRowingVars() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateRowingVars()");
@@ -2166,7 +2166,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateSailingVars()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateSailingVars() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateSailingVars()");
@@ -2182,7 +2182,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UpdateTorches()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateTorches() const
     {
         return NativeCall<void*>(this, "APrimalShip.UpdateTorches()");
@@ -2190,7 +2190,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.VesselDynamicsOnHit(AActor*,UPrimitiveComponent*,UE::Math::TVector<double>,FHitResul
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro VesselDynamicsOnHit(void* a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, void*, void*, void*, void*>(this, "APrimalShip.VesselDynamicsOnHit(AActor*,UPrimitiveComponent*,UE::Math::TVector<double>,FHitResult&)", a0, a1, a2, a3);
@@ -2198,7 +2198,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.WantsLongRangeStasis()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro WantsLongRangeStasis() const
     {
         return NativeCall<void*>(this, "APrimalShip.WantsLongRangeStasis()");
@@ -2244,8 +2244,8 @@ struct APrimalShip
     { return { (void*)this, "APrimalShip.AllowPaintingColorRegions" }; }
     float& AllowRidingMaxDistanceField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.AllowRidingMaxDistance"); }
-    BitFieldValue<bool, unsigned __int32> AllowWildBabyTaming()
-    { return { (void*)this, "AllowWildBabyTaming" }; }
+    BrzCampoPonteiro AllowWildBabyTamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.AllowWildBabyTaming")); }
     BrzCampoPonteiro AnchorActorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.AnchorActor")); }
     BrzCampoPonteiro AnchorActorClassField() const
@@ -2298,6 +2298,8 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.AnimSharingState")); }
     TArray<void*>& AnimationsPreventInputField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalShip.AnimationsPreventInput"); }
+    BrzCampoPonteiro AreTorchesLitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.AreTorchesLit")); }
     float& ArrivalDistanceField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ArrivalDistance"); }
     BrzCampoPonteiro AttachedCaptiansOrderSeatsField() const
@@ -2352,8 +2354,8 @@ struct APrimalShip
     { return *GetNativePointerField<unsigned char*>(this, "APrimalShip.AutoPossessPlayer"); }
     unsigned char& AutoReceiveInputField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalShip.AutoReceiveInput"); }
-    BitFieldValue<bool, unsigned __int32> AutoStopReplicationWhenSleeping()
-    { return { (void*)this, "AutoStopReplicationWhenSleeping" }; }
+    BrzCampoPonteiro AutoStopReplicationWhenSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.AutoStopReplicationWhenSleeping")); }
     BrzCampoPonteiro AutoThrottleIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.AutoThrottleIcon")); }
     float& BPTimerNonDedicatedMaxField() const
@@ -2442,8 +2444,10 @@ struct APrimalShip
     { return *GetNativePointerField<FName*>(this, "APrimalShip.CameraProfileIdOverride"); }
     int& CameraZoomLevelToIgnoreDeckField() const
     { return *GetNativePointerField<int*>(this, "APrimalShip.CameraZoomLevelToIgnoreDeck"); }
-    BitFieldValue<bool, unsigned __int32> CanElevate()
-    { return { (void*)this, "CanElevate" }; }
+    BrzCampoPonteiro CanAnchorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.CanAnchor")); }
+    BrzCampoPonteiro CanElevateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.CanElevate")); }
     BrzCampoPonteiro CannonControlField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.CannonControl")); }
     BrzCampoPonteiro CannonControlIconField() const
@@ -2487,12 +2491,12 @@ struct APrimalShip
     float& ClientPositionErrorToleranceSquaredField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ClientPositionErrorToleranceSquared"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WetDockOceanZOffset` +4, medido na build 25090264
+    //  ancorado em `WetDockOceanZOffset` +4, medido na build 25535041
     //  (offset absoluto medido: 0x2DE0; confianca alta)
     void*& ClientRaftInterpLocField() const
     { return BrzCampoAncorado<void*>(this, "WetDockOceanZOffset", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WetDockOceanZOffset` +28, medido na build 25090264
+    //  ancorado em `WetDockOceanZOffset` +28, medido na build 25535041
     //  (offset absoluto medido: 0x2DF8; confianca alta)
     void*& ClientRaftInterpRotField() const
     { return BrzCampoAncorado<void*>(this, "WetDockOceanZOffset", 28); }
@@ -2503,7 +2507,7 @@ struct APrimalShip
     float& ClientRotationInterpSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ClientRotationInterpSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPilot_ForceMinAngularVelocity_MAX` +4, medido na build 25090264
+    //  ancorado em `AutoPilot_ForceMinAngularVelocity_MAX` +4, medido na build 25535041
     //  (offset absoluto medido: 0x34E8; confianca alta)
     void*& ClientStartedInterpolationAtTimeField() const
     { return BrzCampoAncorado<void*>(this, "AutoPilot_ForceMinAngularVelocity_MAX", 4); }
@@ -2592,7 +2596,7 @@ struct APrimalShip
     float& CurrentAnchorLengthField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.CurrentAnchorLength"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastExtensionZScale` +4, medido na build 25090264
+    //  ancorado em `MastExtensionZScale` +4, medido na build 25535041
     //  (offset absoluto medido: 0x2FB4; confianca alta)
     void*& CurrentAngularDampingField() const
     { return BrzCampoAncorado<void*>(this, "MastExtensionZScale", 4); }
@@ -2603,7 +2607,7 @@ struct APrimalShip
     BrzCampoPonteiro CurrentIdleFidgetMontageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.CurrentIdleFidgetMontage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastExtensionZScale` +8, medido na build 25090264
+    //  ancorado em `MastExtensionZScale` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2FB8; confianca alta)
     void*& CurrentLinearDampingField() const
     { return BrzCampoAncorado<void*>(this, "MastExtensionZScale", 8); }
@@ -2635,6 +2639,8 @@ struct APrimalShip
     { return *GetNativePointerField<float*>(this, "APrimalShip.CustomTimeDilation"); }
     UToolTipWidget*& CustomTooltipWidgetField() const
     { return *GetNativePointerField<UToolTipWidget**>(this, "APrimalShip.CustomTooltipWidget"); }
+    float& DamageMultiplierInRamSocketRadiusField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.DamageMultiplierInRamSocketRadius"); }
     float& DamageNotifyTeamAggroRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.DamageNotifyTeamAggroRange"); }
     TArray<void*>& DamageTypeAdjustersField() const
@@ -2700,7 +2706,7 @@ struct APrimalShip
     float& DestroyIfNoTargetUnderShoreDistanceAmountField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.DestroyIfNoTargetUnderShoreDistanceAmount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +4, medido na build 25090264
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +4, medido na build 25535041
     //  (offset absoluto medido: 0x3534; confianca alta)
     void*& DestroyIfNoTargetUnderShoreDistanceCounterField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 4); }
@@ -2734,8 +2740,8 @@ struct APrimalShip
     { return *GetNativePointerField<UAnimMontage**>(this, "APrimalShip.DinoWithPassengerAnim"); }
     ANPCZoneManager*& DirectLinkNPCZoneManagerField() const
     { return *GetNativePointerField<ANPCZoneManager**>(this, "APrimalShip.DirectLinkNPCZoneManager"); }
-    BitFieldValue<bool, unsigned __int32> DisableCameraShakes()
-    { return { (void*)this, "DisableCameraShakes" }; }
+    BrzCampoPonteiro DisableCameraShakesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.DisableCameraShakes")); }
     BrzCampoPonteiro DockIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.DockIcon")); }
     FName& DragBoneNameField() const
@@ -2840,8 +2846,8 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.FlyerTakeOffAdditionalVelocity")); }
     float& FlyingForceRotationRateModifierField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.FlyingForceRotationRateModifier"); }
-    BitFieldValue<bool, unsigned __int32> FlyingMovementModeUseFlyingRunSpeedModifier()
-    { return { (void*)this, "FlyingMovementModeUseFlyingRunSpeedModifier" }; }
+    BrzCampoPonteiro FlyingMovementModeUseFlyingRunSpeedModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.FlyingMovementModeUseFlyingRunSpeedModifier")); }
     float& FlyingRunSpeedModifierField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.FlyingRunSpeedModifier"); }
     unsigned char& FollowStoppingDistanceField() const
@@ -2861,7 +2867,7 @@ struct APrimalShip
     TWeakObjectPtr<void>& ForcedMasterTargetField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalShip.ForcedMasterTarget"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +20, medido na build 25090264
+    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +20, medido na build 25535041
     //  (offset absoluto medido: 0x3498; confianca alta)
     void*& ForcedMovementDirectionField() const
     { return BrzCampoAncorado<void*>(this, "Teleport_AllowedBelowTopDeckDist", 20); }
@@ -2870,7 +2876,7 @@ struct APrimalShip
     float& ForcesToApplyScaleField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ForcesToApplyScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VesselDynamicsComponent` +16, medido na build 25090264
+    //  ancorado em `VesselDynamicsComponent` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2AA8; confianca alta)
     void*& ForcestoApplyField() const
     { return BrzCampoAncorado<void*>(this, "VesselDynamicsComponent", 16); }
@@ -2921,12 +2927,12 @@ struct APrimalShip
     float& HUDTextScaleMultiplierField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.HUDTextScaleMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +8, medido na build 25090264
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3538; confianca alta)
     void*& HackCheckingForInvalidPhysXLocationField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +32, medido na build 25090264
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +32, medido na build 25535041
     //  (offset absoluto medido: 0x3550; confianca alta)
     void*& HackCheckingForInvalidPhysXTimeStopField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 32); }
@@ -2946,8 +2952,8 @@ struct APrimalShip
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalShip.HideBoneNames"); }
     BrzCampoPonteiro HideSpankerIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.HideSpankerIcon")); }
-    BitFieldValue<bool, unsigned __int32> Hotfix_AreGeneTraitsEnabled()
-    { return { (void*)this, "Hotfix_AreGeneTraitsEnabled" }; }
+    BrzCampoPonteiro Hotfix_AreGeneTraitsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.Hotfix_AreGeneTraitsEnabled")); }
     BrzCampoPonteiro HullColorSetIndicesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.HullColorSetIndices")); }
     TWeakObjectPtr<void>& HullMeshField() const
@@ -2996,6 +3002,10 @@ struct APrimalShip
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalShip.InstanceComponents"); }
     TObjectPtr<APawn>& InstigatorField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "APrimalShip.Instigator"); }
+    BrzCampoPonteiro IsAnchoredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.IsAnchored")); }
+    BrzCampoPonteiro IsAnchoringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.IsAnchoring")); }
     UAnimMontage*& JumpAnimField() const
     { return *GetNativePointerField<UAnimMontage**>(this, "APrimalShip.JumpAnim"); }
     int& JumpCurrentCountField() const
@@ -3049,7 +3059,7 @@ struct APrimalShip
     double& LastClientCameraRotationServerUpdateField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastClientCameraRotationServerUpdate"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CollisionImpactMinInterval` +8, medido na build 25090264
+    //  ancorado em `CollisionImpactMinInterval` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3370; confianca alta)
     void*& LastCollisionImpactTimeField() const
     { return BrzCampoAncorado<void*>(this, "CollisionImpactMinInterval", 8); }
@@ -3072,7 +3082,7 @@ struct APrimalShip
     double& LastForceAimedCharactersTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastForceAimedCharactersTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CombatMusicTracks` +16, medido na build 25090264
+    //  ancorado em `CombatMusicTracks` +16, medido na build 25535041
     //  (offset absoluto medido: 0x32D8; confianca alta)
     void*& LastFrameDisabledForcedVelocityDirectionField() const
     { return BrzCampoAncorado<void*>(this, "CombatMusicTracks", 16); }
@@ -3104,20 +3114,24 @@ struct APrimalShip
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastInAllyRangeSerialized"); }
     double& LastInAllyRangeTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastInAllyRangeTime"); }
+    BrzCampoPonteiro LastInWaterVolumeLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastInWaterVolumeLocation")); }
+    BrzCampoPonteiro LastInWaterVolumeRecoveryDirField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastInWaterVolumeRecoveryDir")); }
     float& LastIncomingDamagePreArmorField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.LastIncomingDamagePreArmor"); }
-    BitFieldValue<bool, unsigned __int32> LastIsInsideInActiveReverseVaccumSealedCube()
-    { return { (void*)this, "LastIsInsideInActiveReverseVaccumSealedCube" }; }
-    BitFieldValue<bool, unsigned __int32> LastIsInsideInActiveReverseVaccumSealedCubeOnDino()
-    { return { (void*)this, "LastIsInsideInActiveReverseVaccumSealedCubeOnDino" }; }
-    BitFieldValue<bool, unsigned __int32> LastIsInsideReverseVaccumSealedCube()
-    { return { (void*)this, "LastIsInsideReverseVaccumSealedCube" }; }
-    BitFieldValue<bool, unsigned __int32> LastIsInsideReverseVaccumSealedCubeOnDino()
-    { return { (void*)this, "LastIsInsideReverseVaccumSealedCubeOnDino" }; }
-    BitFieldValue<bool, unsigned __int32> LastIsInsideVaccumSealedCube()
-    { return { (void*)this, "LastIsInsideVaccumSealedCube" }; }
-    BitFieldValue<bool, unsigned __int32> LastIsInsideVaccumSealedCubeOnDino()
-    { return { (void*)this, "LastIsInsideVaccumSealedCubeOnDino" }; }
+    BrzCampoPonteiro LastIsInsideInActiveReverseVaccumSealedCubeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastIsInsideInActiveReverseVaccumSealedCube")); }
+    BrzCampoPonteiro LastIsInsideInActiveReverseVaccumSealedCubeOnDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastIsInsideInActiveReverseVaccumSealedCubeOnDino")); }
+    BrzCampoPonteiro LastIsInsideReverseVaccumSealedCubeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastIsInsideReverseVaccumSealedCube")); }
+    BrzCampoPonteiro LastIsInsideReverseVaccumSealedCubeOnDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastIsInsideReverseVaccumSealedCubeOnDino")); }
+    BrzCampoPonteiro LastIsInsideVaccumSealedCubeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastIsInsideVaccumSealedCube")); }
+    BrzCampoPonteiro LastIsInsideVaccumSealedCubeOnDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.LastIsInsideVaccumSealedCubeOnDino")); }
     int& LastMarkedFrameCountField() const
     { return *GetNativePointerField<int*>(this, "APrimalShip.LastMarkedFrameCount"); }
     double& LastMatingNotificationTimeField() const
@@ -3129,7 +3143,7 @@ struct APrimalShip
     int& LastPlayedAttackAnimationField() const
     { return *GetNativePointerField<int*>(this, "APrimalShip.LastPlayedAttackAnimation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +8, medido na build 25090264
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +8, medido na build 25535041
     //  (offset absoluto medido: 0x33F0; confianca alta)
     void*& LastPositionField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 8); }
@@ -3148,27 +3162,27 @@ struct APrimalShip
     FString& LastSelectedWindSourceComponentNameField() const
     { return *GetNativePointerField<FString*>(this, "APrimalShip.LastSelectedWindSourceComponentName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +8, medido na build 25090264
+    //  ancorado em `LastFrameMarkedTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3460; confianca alta)
     void*& LastSentSailRotationToServerTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +16, medido na build 25090264
+    //  ancorado em `LastFrameMarkedTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3468; confianca alta)
     void*& LastSentSailRotationToServerValueField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +36, medido na build 25090264
+    //  ancorado em `LastFrameMarkedTime` +36, medido na build 25535041
     //  (offset absoluto medido: 0x347C; confianca media)
     void*& LastSentSteeringInputToServerValueField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +24, medido na build 25090264
+    //  ancorado em `LastFrameMarkedTime` +24, medido na build 25535041
     //  (offset absoluto medido: 0x3470; confianca alta)
     void*& LastSentThrottleTargetToServerTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +32, medido na build 25090264
+    //  ancorado em `LastFrameMarkedTime` +32, medido na build 25535041
     //  (offset absoluto medido: 0x3478; confianca alta)
     void*& LastSentThrottleTargetToServerValueField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 32); }
@@ -3211,7 +3225,7 @@ struct APrimalShip
     double& LastWalkingTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastWalkingTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +12, medido na build 25090264
+    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +12, medido na build 25535041
     //  (offset absoluto medido: 0x3490; confianca alta)
     void*& LastWantsForcedMovementTimeField() const
     { return BrzCampoAncorado<void*>(this, "Teleport_AllowedBelowTopDeckDist", 12); }
@@ -3248,7 +3262,7 @@ struct APrimalShip
     TWeakObjectPtr<void>& LocalCaptainControllerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalShip.LocalCaptainController"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedCurrentWetDockStructureID` +12, medido na build 25090264
+    //  ancorado em `ReplicatedCurrentWetDockStructureID` +12, medido na build 25535041
     //  (offset absoluto medido: 0x33A0; confianca alta)
     void*& LongRangeStasisComponentField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedCurrentWetDockStructureID", 12); }
@@ -3324,6 +3338,8 @@ struct APrimalShip
     { return *GetNativePointerField<float*>(this, "APrimalShip.MinNetUpdateFrequency"); }
     int& MinPlayerLevelForWakingTameField() const
     { return *GetNativePointerField<int*>(this, "APrimalShip.MinPlayerLevelForWakingTame"); }
+    float& MinRammingDirectionDamageMultiplierField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.MinRammingDirectionDamageMultiplier"); }
     BrzCampoPonteiro MirroredUPaintingIndicesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.MirroredUPaintingIndices")); }
     TWeakObjectPtr<void>& MountCharacterField() const
@@ -3352,8 +3368,8 @@ struct APrimalShip
     { return *GetNativePointerField<UAudioComponent**>(this, "APrimalShip.MovingSoundComponent"); }
     USoundBase*& MovingSoundCueField() const
     { return *GetNativePointerField<USoundBase**>(this, "APrimalShip.MovingSoundCue"); }
-    BitFieldValue<bool, unsigned __int32> MutagenApplied()
-    { return { (void*)this, "MutagenApplied" }; }
+    BrzCampoPonteiro MutagenAppliedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.MutagenApplied")); }
     TArray<void*>& MyBabyCuddleFoodTypesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalShip.MyBabyCuddleFoodTypes"); }
     UPrimalCharacterStatusComponent*& MyCharacterStatusComponentField() const
@@ -3367,7 +3383,7 @@ struct APrimalShip
     UPrimalInventoryComponent*& MyInventoryComponentField() const
     { return *GetNativePointerField<UPrimalInventoryComponent**>(this, "APrimalShip.MyInventoryComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +40, medido na build 25090264
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +40, medido na build 25535041
     //  (offset absoluto medido: 0x3410; confianca media)
     void*& NamePlateTextField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 40); }
@@ -3635,6 +3651,12 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.RaftSpawnEffect")); }
     float& RagdollReplicationIntervalField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.RagdollReplicationInterval"); }
+    float& RamSocketRadiusField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.RamSocketRadius"); }
+    float& RammingExtraImpulseMultiplierInRamSocketRadiusField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.RammingExtraImpulseMultiplierInRamSocketRadius"); }
+    float& RammingImpulseMitigationMultiplierInRamSocketRadiusField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.RammingImpulseMitigationMultiplierInRamSocketRadius"); }
     BrzCampoPonteiro RandomColorSetsFemaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.RandomColorSetsFemale")); }
     BrzCampoPonteiro RandomColorSetsMaleField() const
@@ -3679,8 +3701,10 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.RepRootMotion")); }
     float& ReplayLastTransformUpdateTimeStampField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ReplayLastTransformUpdateTimeStamp"); }
-    BitFieldValue<bool, unsigned __int32> ReplicateAllBones()
-    { return { (void*)this, "ReplicateAllBones" }; }
+    BrzCampoPonteiro ReplicateAllBonesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ReplicateAllBones")); }
+    BrzCampoPonteiro ReplicatedAvailableShipRepairResourceQuantitiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ReplicatedAvailableShipRepairResourceQuantities")); }
     BrzCampoPonteiro ReplicatedBasedMovementField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ReplicatedBasedMovement")); }
     float& ReplicatedCurrentHealthField() const
@@ -3867,6 +3891,12 @@ struct APrimalShip
     { return *GetNativePointerField<float*>(this, "APrimalShip.ScaleExtraRunningSpeedModifierMin"); }
     float& ScaleExtraRunningSpeedModifierSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ScaleExtraRunningSpeedModifierSpeed"); }
+    float& ScrapeVFXSpawnDistanceField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.ScrapeVFXSpawnDistance"); }
+    float& ScrapeVFXSpawnDurationAfterHitField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.ScrapeVFXSpawnDurationAfterHit"); }
+    float& ScrapeVFXSpawnIntervalField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.ScrapeVFXSpawnInterval"); }
     UPrimalInventoryComponent*& SecondaryInventoryComponentField() const
     { return *GetNativePointerField<UPrimalInventoryComponent**>(this, "APrimalShip.SecondaryInventoryComponent"); }
     TWeakObjectPtr<void>& SecondaryMountedDinoField() const
@@ -3876,7 +3906,7 @@ struct APrimalShip
     float& ServerTargetCarriedYawField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ServerTargetCarriedYaw"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SailClassesForceMultipliers` +16, medido na build 25090264
+    //  ancorado em `SailClassesForceMultipliers` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3448; confianca alta)
     void*& ShipBeachedStartTimeField() const
     { return BrzCampoAncorado<void*>(this, "SailClassesForceMultipliers", 16); }
@@ -3888,10 +3918,14 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ShipDyingNiagaraFX")); }
     float& ShipHullSinkMovementForceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ShipHullSinkMovementForceMultiplier"); }
+    FName& ShipRamSocketNameField() const
+    { return *GetNativePointerField<FName*>(this, "APrimalShip.ShipRamSocketName"); }
     BrzCampoPonteiro ShipRammingNSField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ShipRammingNS")); }
     BrzCampoPonteiro ShipRammingSoundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ShipRammingSound")); }
+    BrzCampoPonteiro ShipScrapeNSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ShipScrapeNS")); }
     BrzCampoPonteiro ShipSinkingNiagaraFXField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ShipSinkingNiagaraFX")); }
     BrzCampoPonteiro ShipSkillCooldownsField() const
@@ -3905,7 +3939,7 @@ struct APrimalShip
     unsigned char& ShipTypeField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalShip.ShipType"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchorMaximumDistanceFromShore` +8, medido na build 25090264
+    //  ancorado em `AnchorMaximumDistanceFromShore` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3570; confianca alta)
     void*& ShipVelocityLastTickField() const
     { return BrzCampoAncorado<void*>(this, "AnchorMaximumDistanceFromShore", 8); }
@@ -3935,6 +3969,10 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.SpawnerColorSets")); }
     float& SpeedMultiplierWhenFacingHeadwindField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.SpeedMultiplierWhenFacingHeadwind"); }
+    float& SpeedScalarThresholdForRammingField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.SpeedScalarThresholdForRamming"); }
+    float& SpeedToConsiderMaxForRammingField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.SpeedToConsiderMaxForRamming"); }
     BrzCampoPonteiro StartChargingShakeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.StartChargingShake")); }
     float& StartWaveLockingThresholdField() const
@@ -3947,6 +3985,14 @@ struct APrimalShip
     { return *GetNativePointerField<float*>(this, "APrimalShip.StasisConsumerRangeMultiplier"); }
     TArray<TWeakObjectPtr<void>>& StasisUnRegisteredComponentsField() const
     { return *GetNativePointerField<TArray<TWeakObjectPtr<void>>*>(this, "APrimalShip.StasisUnRegisteredComponents"); }
+    float& StationaryTurnBackwardsMultiplierField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.StationaryTurnBackwardsMultiplier"); }
+    float& StationaryTurnMultiplierField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.StationaryTurnMultiplier"); }
+    float& StationaryTurnVelocityThresholdField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.StationaryTurnVelocityThreshold"); }
+    float& SteeringForceStandBoostThresholdField() const
+    { return *GetNativePointerField<float*>(this, "APrimalShip.SteeringForceStandBoostThreshold"); }
     float& SteeringForce_MaxAllowedField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.SteeringForce_MaxAllowed"); }
     float& SteeringForce_MinAllowedField() const
@@ -4066,7 +4112,7 @@ struct APrimalShip
     BrzCampoPonteiro ThrottleForceLocation_OffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ThrottleForceLocation_Offset")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +48, medido na build 25090264
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +48, medido na build 25535041
     //  (offset absoluto medido: 0x3418; confianca media)
     void*& ThrottleForceMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 48); }
@@ -4081,7 +4127,7 @@ struct APrimalShip
     float& TimeBetweenTamedWakingEatAnimationsField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.TimeBetweenTamedWakingEatAnimations"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MovingSoundCue` +8, medido na build 25090264
+    //  ancorado em `MovingSoundCue` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2AE8; confianca alta)
     double& TimeSinceLastFadeOutField() const
     { return BrzCampoAncorado<double>(this, "MovingSoundCue", 8); }
@@ -4098,7 +4144,7 @@ struct APrimalShip
     float& TorquesToApplyScaleField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.TorquesToApplyScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VesselDynamicsComponent` +32, medido na build 25090264
+    //  ancorado em `VesselDynamicsComponent` +32, medido na build 25535041
     //  (offset absoluto medido: 0x2AB8; confianca alta)
     void*& TorquestoApplyField() const
     { return BrzCampoAncorado<void*>(this, "VesselDynamicsComponent", 32); }
@@ -4115,7 +4161,7 @@ struct APrimalShip
     float& UnAnchoredAutoDestroyTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.UnAnchoredAutoDestroyTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VesselDynamicsComponent` +48, medido na build 25090264
+    //  ancorado em `VesselDynamicsComponent` +48, medido na build 25535041
     //  (offset absoluto medido: 0x2AC8; confianca media)
     void*& UnAnchoredNetworkAndStasisRangeMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "VesselDynamicsComponent", 48); }
@@ -4141,8 +4187,8 @@ struct APrimalShip
     { return *GetNativePointerField<double*>(this, "APrimalShip.UploadEarliestValidTime"); }
     FString& UploadedFromServerNameField() const
     { return *GetNativePointerField<FString*>(this, "APrimalShip.UploadedFromServerName"); }
-    BitFieldValue<bool, unsigned __int32> UseBPGetWiegthedAttackOverride()
-    { return { (void*)this, "UseBPGetWiegthedAttackOverride" }; }
+    BrzCampoPonteiro UseBPGetWiegthedAttackOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.UseBPGetWiegthedAttackOverride")); }
     BrzCampoPonteiro VelocityBasedEnteredSwimmingSoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.VelocityBasedEnteredSwimmingSounds")); }
     BrzCampoPonteiro VelocityBasedLandedSoundsField() const
@@ -4176,7 +4222,7 @@ struct APrimalShip
     float& WaterSubmergedDepthThresholdField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.WaterSubmergedDepthThreshold"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CollisionImpactMinImpulseForDamage` +4, medido na build 25090264
+    //  ancorado em `CollisionImpactMinImpulseForDamage` +4, medido na build 25535041
     //  (offset absoluto medido: 0x337C; confianca alta)
     void*& WeldSweepIndexField() const
     { return BrzCampoAncorado<void*>(this, "CollisionImpactMinImpulseForDamage", 4); }
@@ -4208,1180 +4254,1300 @@ struct APrimalShip
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.WoodColorOptions")); }
     float& YawInterpSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.YawInterpSpeed"); }
-    BitFieldValue<bool, unsigned __int32> bAccurateOceanVolumeOverlaps()
-    { return { (void*)this, "bAccurateOceanVolumeOverlaps" }; }
-    BitFieldValue<bool, unsigned __int32> bActiveRunToggle()
-    { return { (void*)this, "bActiveRunToggle" }; }
-    BitFieldValue<bool, unsigned __int32> bActorEnableCollision()
-    { return { (void*)this, "bActorEnableCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bActorIsBeingDestroyed()
-    { return { (void*)this, "bActorIsBeingDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bActorPreventPhysicsSceneRegistration()
-    { return { (void*)this, "bActorPreventPhysicsSceneRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowASACamera()
-    { return { (void*)this, "bAllowASACamera" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowBPNewDoorInteractionDrawHUD()
-    { return { (void*)this, "bAllowBPNewDoorInteractionDrawHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCarryCharacterWithoutRider()
-    { return { (void*)this, "bAllowCarryCharacterWithoutRider" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCarryFlyerDinos()
-    { return { (void*)this, "bAllowCarryFlyerDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCorpseDestructionWithPreventSaving()
-    { return { (void*)this, "bAllowCorpseDestructionWithPreventSaving" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowDamageSameTeamAndClass()
-    { return { (void*)this, "bAllowDamageSameTeamAndClass" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowDinoAutoConsumeInventoryFood()
-    { return { (void*)this, "bAllowDinoAutoConsumeInventoryFood" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowMountedWeaponry()
-    { return { (void*)this, "bAllowMountedWeaponry" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowMountedWeaponryPVE()
-    { return { (void*)this, "bAllowMountedWeaponryPVE" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowMultiUseByRemoteDino()
-    { return { (void*)this, "bAllowMultiUseByRemoteDino" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowPublicSeating()
-    { return { (void*)this, "bAllowPublicSeating" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowReceiveTickEventOnDedicatedServer()
-    { return { (void*)this, "bAllowReceiveTickEventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRiding()
-    { return { (void*)this, "bAllowRiding" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRidingInTurretMode()
-    { return { (void*)this, "bAllowRidingInTurretMode" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRidingInWater()
-    { return { (void*)this, "bAllowRidingInWater" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRunningWhileSwimming()
-    { return { (void*)this, "bAllowRunningWhileSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTargetingCorpses()
-    { return { (void*)this, "bAllowTargetingCorpses" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTickBeforeBeginPlay()
-    { return { (void*)this, "bAllowTickBeforeBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTrapping()
-    { return { (void*)this, "bAllowTrapping" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTreadWater()
-    { return { (void*)this, "bAllowTreadWater" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTurretTargetOverrideLocations()
-    { return { (void*)this, "bAllowTurretTargetOverrideLocations" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWanderAroundActorWildTameMix()
-    { return { (void*)this, "bAllowWanderAroundActorWildTameMix" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWhistleThroughRemoteDino()
-    { return { (void*)this, "bAllowWhistleThroughRemoteDino" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWildDinoEquipment()
-    { return { (void*)this, "bAllowWildDinoEquipment" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWildRunningWithoutTarget()
-    { return { (void*)this, "bAllowWildRunningWithoutTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowsTurretMode()
-    { return { (void*)this, "bAllowsTurretMode" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysAllowStrafing()
-    { return { (void*)this, "bAlwaysAllowStrafing" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevant()
-    { return { (void*)this, "bAlwaysRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevantPrimalStructure()
-    { return { (void*)this, "bAlwaysRelevantPrimalStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysUpdateDinoLimbWallAvoidance()
-    { return { (void*)this, "bAlwaysUpdateDinoLimbWallAvoidance" }; }
-    BitFieldValue<bool, unsigned __int32> bAnimIsMoving()
-    { return { (void*)this, "bAnimIsMoving" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyDamageEffectToChildComponents()
-    { return { (void*)this, "bApplyDamageEffectToChildComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bAsyncPhysicsTickEnabled()
-    { return { (void*)this, "bAsyncPhysicsTickEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachmentReplicationUseNetworkParent()
-    { return { (void*)this, "bAttachmentReplicationUseNetworkParent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDestroyWhenFinished()
-    { return { (void*)this, "bAutoDestroyWhenFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoStasis()
-    { return { (void*)this, "bAutoStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bBPCameraRotationFinal()
-    { return { (void*)this, "bBPCameraRotationFinal" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryItemUsedHandlesDurability()
-    { return { (void*)this, "bBPInventoryItemUsedHandlesDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bBPLimitPlayerRotation()
-    { return { (void*)this, "bBPLimitPlayerRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bBPManagedFPVViewLocation()
-    { return { (void*)this, "bBPManagedFPVViewLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bBPManagedFPVViewLocationNoRider()
-    { return { (void*)this, "bBPManagedFPVViewLocationNoRider" }; }
-    BitFieldValue<bool, unsigned __int32> bBPModifyAimOffsetNoTarget()
-    { return { (void*)this, "bBPModifyAimOffsetNoTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bBPModifyAllowedViewHitDir()
-    { return { (void*)this, "bBPModifyAllowedViewHitDir" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPostInitializeComponents()
-    { return { (void*)this, "bBPPostInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPreInitializeComponents()
-    { return { (void*)this, "bBPPreInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBabyInitiallyUnclaimed()
-    { return { (void*)this, "bBabyInitiallyUnclaimed" }; }
-    BitFieldValue<bool, unsigned __int32> bBabyPreventExitingWater()
-    { return { (void*)this, "bBabyPreventExitingWater" }; }
+    BrzCampoPonteiro bAccurateOceanVolumeOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAccurateOceanVolumeOverlaps")); }
+    BrzCampoPonteiro bActiveRunToggleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bActiveRunToggle")); }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAllowASACameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowASACamera")); }
+    BrzCampoPonteiro bAllowAutoPilotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowAutoPilot")); }
+    BrzCampoPonteiro bAllowBPNewDoorInteractionDrawHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowBPNewDoorInteractionDrawHUD")); }
+    BrzCampoPonteiro bAllowBasedCharactersAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowBasedCharactersAttacks")); }
+    BrzCampoPonteiro bAllowCarryCharacterWithoutRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowCarryCharacterWithoutRider")); }
+    BrzCampoPonteiro bAllowCarryFlyerDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowCarryFlyerDinos")); }
+    BrzCampoPonteiro bAllowCorpseDestructionWithPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowCorpseDestructionWithPreventSaving")); }
+    BrzCampoPonteiro bAllowDamageSameTeamAndClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowDamageSameTeamAndClass")); }
+    BrzCampoPonteiro bAllowDinoAutoConsumeInventoryFoodField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowDinoAutoConsumeInventoryFood")); }
+    BrzCampoPonteiro bAllowDriverSeatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowDriverSeats")); }
+    BrzCampoPonteiro bAllowMountedWeaponryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowMountedWeaponry")); }
+    BrzCampoPonteiro bAllowMountedWeaponryPVEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowMountedWeaponryPVE")); }
+    BrzCampoPonteiro bAllowMultiUseByRemoteDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowMultiUseByRemoteDino")); }
+    BrzCampoPonteiro bAllowPublicSeatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowPublicSeating")); }
+    BrzCampoPonteiro bAllowRaftAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRaftAttacks")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRiding")); }
+    BrzCampoPonteiro bAllowRidingInTurretModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRidingInTurretMode")); }
+    BrzCampoPonteiro bAllowRidingInWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRidingInWater")); }
+    BrzCampoPonteiro bAllowRowingSeatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRowingSeats")); }
+    BrzCampoPonteiro bAllowRudderAngleSpeedModificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRudderAngleSpeedModification")); }
+    BrzCampoPonteiro bAllowRunningWhileSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowRunningWhileSwimming")); }
+    BrzCampoPonteiro bAllowSailsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowSails")); }
+    BrzCampoPonteiro bAllowShipForcedMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowShipForcedMovement")); }
+    BrzCampoPonteiro bAllowSteeringForceModificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowSteeringForceModification")); }
+    BrzCampoPonteiro bAllowTargetingCorpsesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowTargetingCorpses")); }
+    BrzCampoPonteiro bAllowTeleportMeshInterpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowTeleportMeshInterp")); }
+    BrzCampoPonteiro bAllowThrottleRatioInterpSpeedModificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowThrottleRatioInterpSpeedModification")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAllowTrappingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowTrapping")); }
+    BrzCampoPonteiro bAllowTreadWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowTreadWater")); }
+    BrzCampoPonteiro bAllowTurretTargetOverrideLocationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowTurretTargetOverrideLocations")); }
+    BrzCampoPonteiro bAllowWanderAroundActorWildTameMixField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowWanderAroundActorWildTameMix")); }
+    BrzCampoPonteiro bAllowWhistleThroughRemoteDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowWhistleThroughRemoteDino")); }
+    BrzCampoPonteiro bAllowWildDinoEquipmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowWildDinoEquipment")); }
+    BrzCampoPonteiro bAllowWildRunningWithoutTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowWildRunningWithoutTarget")); }
+    BrzCampoPonteiro bAllowsTurretModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAllowsTurretMode")); }
+    BrzCampoPonteiro bAlwaysAllowStrafingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAlwaysAllowStrafing")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bAlwaysUpdateDinoLimbWallAvoidanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAlwaysUpdateDinoLimbWallAvoidance")); }
+    BrzCampoPonteiro bAnchoredSetToOceanHeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAnchoredSetToOceanHeight")); }
+    BrzCampoPonteiro bAnimIsMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAnimIsMoving")); }
+    BrzCampoPonteiro bApplyDamageEffectToChildComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bApplyDamageEffectToChildComponents")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAttemptAnchoringNextFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAttemptAnchoringNextFrame")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAutoDestroyWhenFinished")); }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAutoStasis")); }
+    BrzCampoPonteiro bAutoThrottleActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bAutoThrottleActive")); }
+    BrzCampoPonteiro bBPCameraRotationFinalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPCameraRotationFinal")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPLimitPlayerRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPLimitPlayerRotation")); }
+    BrzCampoPonteiro bBPManagedFPVViewLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPManagedFPVViewLocation")); }
+    BrzCampoPonteiro bBPManagedFPVViewLocationNoRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPManagedFPVViewLocationNoRider")); }
+    BrzCampoPonteiro bBPModifyAimOffsetNoTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPModifyAimOffsetNoTarget")); }
+    BrzCampoPonteiro bBPModifyAllowedViewHitDirField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPModifyAllowedViewHitDir")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBabyInitiallyUnclaimedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBabyInitiallyUnclaimed")); }
+    BrzCampoPonteiro bBabyPreventExitingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBabyPreventExitingWater")); }
+    BrzCampoPonteiro bBasedCharactersForceDisableCollisionCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBasedCharactersForceDisableCollisionCheck")); }
+    BrzCampoPonteiro bBasingRequiresInteriorPositionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBasingRequiresInteriorPosition")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedCurrentWetDockStructureID` +4, medido na build 25090264
+    //  ancorado em `ReplicatedCurrentWetDockStructureID` +4, medido na build 25535041
     //  (offset absoluto medido: 0x3398; confianca alta)
     void*& bBeganPlayField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedCurrentWetDockStructureID", 4); }
-    BitFieldValue<bool, unsigned __int32> bBlockInput()
-    { return { (void*)this, "bBlockInput" }; }
-    BitFieldValue<bool, unsigned __int32> bBlueprintMultiUseEntries()
-    { return { (void*)this, "bBlueprintMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bBonesHidden()
-    { return { (void*)this, "bBonesHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplication()
-    { return { (void*)this, "bCallPreReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplicationForReplay()
-    { return { (void*)this, "bCallPreReplicationForReplay" }; }
-    BitFieldValue<bool, unsigned __int32> bCallRiderChangeWeaponsOnClient()
-    { return { (void*)this, "bCallRiderChangeWeaponsOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bCanAffectNavigationGeneration()
-    { return { (void*)this, "bCanAffectNavigationGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeCarried()
-    { return { (void*)this, "bCanBeCarried" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDamaged()
-    { return { (void*)this, "bCanBeDamaged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDragged()
-    { return { (void*)this, "bCanBeDragged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeInCluster()
-    { return { (void*)this, "bCanBeInCluster" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeOrdered()
-    { return { (void*)this, "bCanBeOrdered" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBePushed()
-    { return { (void*)this, "bCanBePushed" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeTamed()
-    { return { (void*)this, "bCanBeTamed" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeTorpid()
-    { return { (void*)this, "bCanBeTorpid" }; }
-    BitFieldValue<bool, unsigned __int32> bCanDrag()
-    { return { (void*)this, "bCanDrag" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverCrouch()
-    { return { (void*)this, "bCanEverCrouch" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverProne()
-    { return { (void*)this, "bCanEverProne" }; }
-    BitFieldValue<bool, unsigned __int32> bCanHaveBaby()
-    { return { (void*)this, "bCanHaveBaby" }; }
-    BitFieldValue<bool, unsigned __int32> bCanIgnoreWater()
-    { return { (void*)this, "bCanIgnoreWater" }; }
-    BitFieldValue<bool, unsigned __int32> bCanMountOnHumans()
-    { return { (void*)this, "bCanMountOnHumans" }; }
-    BitFieldValue<bool, unsigned __int32> bCanPlayLandingAnim()
-    { return { (void*)this, "bCanPlayLandingAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bCanPushOthers()
-    { return { (void*)this, "bCanPushOthers" }; }
-    BitFieldValue<bool, unsigned __int32> bCanRun()
-    { return { (void*)this, "bCanRun" }; }
-    BitFieldValue<bool, unsigned __int32> bCanSecondaryMountOnHumans()
-    { return { (void*)this, "bCanSecondaryMountOnHumans" }; }
-    BitFieldValue<bool, unsigned __int32> bCanTargetVehicles()
-    { return { (void*)this, "bCanTargetVehicles" }; }
-    BitFieldValue<bool, unsigned __int32> bCanUnclaimTame()
-    { return { (void*)this, "bCanUnclaimTame" }; }
-    BitFieldValue<bool, unsigned __int32> bCancelInterpolation()
-    { return { (void*)this, "bCancelInterpolation" }; }
-    BitFieldValue<bool, unsigned __int32> bCenterOffscreenFloatingHUDWidgets()
-    { return { (void*)this, "bCenterOffscreenFloatingHUDWidgets" }; }
-    BitFieldValue<bool, unsigned __int32> bCheatForceTameRide()
-    { return { (void*)this, "bCheatForceTameRide" }; }
-    BitFieldValue<bool, unsigned __int32> bCheatPossessed()
-    { return { (void*)this, "bCheatPossessed" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckBuffModifyAimOffsetNoTarget()
-    { return { (void*)this, "bCheckBuffModifyAimOffsetNoTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bClampOffscreenFloatingHUDWidgets()
-    { return { (void*)this, "bClampOffscreenFloatingHUDWidgets" }; }
-    BitFieldValue<bool, unsigned __int32> bClearOnConsume()
-    { return { (void*)this, "bClearOnConsume" }; }
-    BitFieldValue<bool, unsigned __int32> bClearRiderOnDinoImmobilized()
-    { return { (void*)this, "bClearRiderOnDinoImmobilized" }; }
-    BitFieldValue<bool, unsigned __int32> bClientCheckEncroachmentOnNetUpdate()
-    { return { (void*)this, "bClientCheckEncroachmentOnNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bClientInterpLocationInCustomMovemode()
-    { return { (void*)this, "bClientInterpLocationInCustomMovemode" }; }
-    BitFieldValue<bool, unsigned __int32> bClientResimulateRootMotion()
-    { return { (void*)this, "bClientResimulateRootMotion" }; }
-    BitFieldValue<bool, unsigned __int32> bClientResimulateRootMotionSources()
-    { return { (void*)this, "bClientResimulateRootMotionSources" }; }
-    BitFieldValue<bool, unsigned __int32> bClientUpdating()
-    { return { (void*)this, "bClientUpdating" }; }
-    BitFieldValue<bool, unsigned __int32> bClientWasFalling()
-    { return { (void*)this, "bClientWasFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollectVictimItems()
-    { return { (void*)this, "bCollectVictimItems" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWhenPlacing()
-    { return { (void*)this, "bCollideWhenPlacing" }; }
-    BitFieldValue<bool, unsigned __int32> bConsumeZoomInput()
-    { return { (void*)this, "bConsumeZoomInput" }; }
-    BitFieldValue<bool, unsigned __int32> bControlledDinoPreventsPlayerInventory()
-    { return { (void*)this, "bControlledDinoPreventsPlayerInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatureIsImmuneToServerSoftTameLimitDestruction()
-    { return { (void*)this, "bCreatureIsImmuneToServerSoftTameLimitDestruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCuddleRequestRefreshed()
-    { return { (void*)this, "bCuddleRequestRefreshed" }; }
-    BitFieldValue<bool, unsigned __int32> bDamageNotifyTeamAggroAI()
-    { return { (void*)this, "bDamageNotifyTeamAggroAI" }; }
-    BitFieldValue<bool, unsigned __int32> bDeathUseRagdoll()
-    { return { (void*)this, "bDeathUseRagdoll" }; }
-    BitFieldValue<bool, unsigned __int32> bDebugBaby()
-    { return { (void*)this, "bDebugBaby" }; }
-    BitFieldValue<bool, unsigned __int32> bDebugIK()
-    { return { (void*)this, "bDebugIK" }; }
-    BitFieldValue<bool, unsigned __int32> bDebugIK_ShowTraceNames()
-    { return { (void*)this, "bDebugIK_ShowTraceNames" }; }
-    BitFieldValue<bool, unsigned __int32> bDebugMeleeAttacks()
-    { return { (void*)this, "bDebugMeleeAttacks" }; }
-    BitFieldValue<bool, unsigned __int32> bDediServerAutoUnregisterSkeletalMeshWhenNotRelevant()
-    { return { (void*)this, "bDediServerAutoUnregisterSkeletalMeshWhenNotRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bDesiredRepGraphBehaviorHasBeenSet()
-    { return { (void*)this, "bDesiredRepGraphBehaviorHasBeenSet" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyDontClearNetworkChildren()
-    { return { (void*)this, "bDestroyDontClearNetworkChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyOnStasis()
-    { return { (void*)this, "bDestroyOnStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bDieIfLeftWater()
-    { return { (void*)this, "bDieIfLeftWater" }; }
-    BitFieldValue<bool, unsigned __int32> bDinoHasBonded()
-    { return { (void*)this, "bDinoHasBonded" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAutoMatingWhileTamedWandering()
-    { return { (void*)this, "bDisableAutoMatingWhileTamedWandering" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableCameraShakeOnNotifyHit()
-    { return { (void*)this, "bDisableCameraShakeOnNotifyHit" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableControllerDesiredRotation()
-    { return { (void*)this, "bDisableControllerDesiredRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableDefaultDinoTaming()
-    { return { (void*)this, "bDisableDefaultDinoTaming" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableFPV()
-    { return { (void*)this, "bDisableFPV" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableHarvestHealthGain()
-    { return { (void*)this, "bDisableHarvestHealthGain" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableHarvesting()
-    { return { (void*)this, "bDisableHarvesting" }; }
-    BitFieldValue<bool, unsigned __int32> bDisablePathfinding()
-    { return { (void*)this, "bDisablePathfinding" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNodes()
-    { return { (void*)this, "bDisableRigidBodyAnimNodes" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableSpawnDefaultController()
-    { return { (void*)this, "bDisableSpawnDefaultController" }; }
-    BitFieldValue<bool, unsigned __int32> bDisabledFromAscension()
-    { return { (void*)this, "bDisabledFromAscension" }; }
-    BitFieldValue<bool, unsigned __int32> bDisallowPostNetReplication()
-    { return { (void*)this, "bDisallowPostNetReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bDoStepDamage()
-    { return { (void*)this, "bDoStepDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bDontActuallyEmitPoop()
-    { return { (void*)this, "bDontActuallyEmitPoop" }; }
-    BitFieldValue<bool, unsigned __int32> bDontForceUpdateRateOptimizations()
-    { return { (void*)this, "bDontForceUpdateRateOptimizations" }; }
-    BitFieldValue<bool, unsigned __int32> bDontOverrideToNavMeshStepHeight()
-    { return { (void*)this, "bDontOverrideToNavMeshStepHeight" }; }
-    BitFieldValue<bool, unsigned __int32> bDontWander()
-    { return { (void*)this, "bDontWander" }; }
-    BitFieldValue<bool, unsigned __int32> bDraggedFromExtremitiesOnly()
-    { return { (void*)this, "bDraggedFromExtremitiesOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bDrawHealthBar()
-    { return { (void*)this, "bDrawHealthBar" }; }
-    BitFieldValue<bool, unsigned __int32> bDropWildEggsWithoutMateBoost()
-    { return { (void*)this, "bDropWildEggsWithoutMateBoost" }; }
-    BitFieldValue<bool, unsigned __int32> bEditorOnlyActorShowInPIE()
-    { return { (void*)this, "bEditorOnlyActorShowInPIE" }; }
-    BitFieldValue<bool, unsigned __int32> bEggBoosted()
-    { return { (void*)this, "bEggBoosted" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAnimationGroundConforming()
-    { return { (void*)this, "bEnableAnimationGroundConforming" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableIK()
-    { return { (void*)this, "bEnableIK" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMouthFlapAnimations()
-    { return { (void*)this, "bEnableMouthFlapAnimations" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiUse()
-    { return { (void*)this, "bEnableMultiUse" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableTamedMating()
-    { return { (void*)this, "bEnableTamedMating" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableTamedWandering()
-    { return { (void*)this, "bEnableTamedWandering" }; }
-    BitFieldValue<bool, unsigned __int32> bExchangedRoles()
-    { return { (void*)this, "bExchangedRoles" }; }
-    BitFieldValue<bool, unsigned __int32> bFindCameraComponentWhenViewTarget()
-    { return { (void*)this, "bFindCameraComponentWhenViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bFlyerDinoAllowBackwardsFlight()
-    { return { (void*)this, "bFlyerDinoAllowBackwardsFlight" }; }
-    BitFieldValue<bool, unsigned __int32> bFlyerDinoAllowStrafing()
-    { return { (void*)this, "bFlyerDinoAllowStrafing" }; }
-    BitFieldValue<bool, unsigned __int32> bFlyerDontGainImpulseOnSubmerged()
-    { return { (void*)this, "bFlyerDontGainImpulseOnSubmerged" }; }
-    BitFieldValue<bool, unsigned __int32> bFlyerForceLimitPitch()
-    { return { (void*)this, "bFlyerForceLimitPitch" }; }
-    BitFieldValue<bool, unsigned __int32> bFlyerForceNoPitch()
-    { return { (void*)this, "bFlyerForceNoPitch" }; }
-    BitFieldValue<bool, unsigned __int32> bFlyerPrioritizeAllyMountToCarry()
-    { return { (void*)this, "bFlyerPrioritizeAllyMountToCarry" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowBackwardsMovement()
-    { return { (void*)this, "bForceAllowBackwardsMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowDediServerGroundConformInterpolate()
-    { return { (void*)this, "bForceAllowDediServerGroundConformInterpolate" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowMountedAimOffset()
-    { return { (void*)this, "bForceAllowMountedAimOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowNetMulticast()
-    { return { (void*)this, "bForceAllowNetMulticast" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowTamedTickEggLay()
-    { return { (void*)this, "bForceAllowTamedTickEggLay" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAlwaysAllowBasing()
-    { return { (void*)this, "bForceAlwaysAllowBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAlwaysUpdateMesh()
-    { return { (void*)this, "bForceAlwaysUpdateMesh" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAutoTame()
-    { return { (void*)this, "bForceAutoTame" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisableClientGravitySim()
-    { return { (void*)this, "bForceDisableClientGravitySim" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisablingTaming()
-    { return { (void*)this, "bForceDisablingTaming" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDrawHUD()
-    { return { (void*)this, "bForceDrawHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDrawHUDWithoutRecentlyRendered()
-    { return { (void*)this, "bForceDrawHUDWithoutRecentlyRendered" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHiddenReplication()
-    { return { (void*)this, "bForceHiddenReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHideSaddle()
-    { return { (void*)this, "bForceHideSaddle" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHighQualityViewerReplication()
-    { return { (void*)this, "bForceHighQualityViewerReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceIKOnDedicatedServer()
-    { return { (void*)this, "bForceIKOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInfiniteDrawDistance()
-    { return { (void*)this, "bForceInfiniteDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetAddressable()
-    { return { (void*)this, "bForceNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetworkSpatialization()
-    { return { (void*)this, "bForceNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNoCharacterStatusComponentTick()
-    { return { (void*)this, "bForceNoCharacterStatusComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNonBlockingHits()
-    { return { (void*)this, "bForceNonBlockingHits" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePerFrameTicking()
-    { return { (void*)this, "bForcePerFrameTicking" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventAllInput()
-    { return { (void*)this, "bForcePreventAllInput" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventExitingWater()
-    { return { (void*)this, "bForcePreventExitingWater" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventInventoryAccess()
-    { return { (void*)this, "bForcePreventInventoryAccess" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventSeamlessTravel()
-    { return { (void*)this, "bForcePreventSeamlessTravel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceReplicateDormantChildrenWithoutSpatialRelevancy()
-    { return { (void*)this, "bForceReplicateDormantChildrenWithoutSpatialRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bForceRiderDrawCrosshair()
-    { return { (void*)this, "bForceRiderDrawCrosshair" }; }
-    BitFieldValue<bool, unsigned __int32> bForceSimpleTeleportFade()
-    { return { (void*)this, "bForceSimpleTeleportFade" }; }
-    BitFieldValue<bool, unsigned __int32> bForceTickingBehaviorTreeEveryFrame()
-    { return { (void*)this, "bForceTickingBehaviorTreeEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bForceUseAltAimSocketsForTurrets()
-    { return { (void*)this, "bForceUseAltAimSocketsForTurrets" }; }
-    BitFieldValue<bool, unsigned __int32> bForceUseCustomCameraComponent()
-    { return { (void*)this, "bForceUseCustomCameraComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bForceValidUnstasisCaster()
-    { return { (void*)this, "bForceValidUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bForceWildEncumberBasedOnTamedDino()
-    { return { (void*)this, "bForceWildEncumberBasedOnTamedDino" }; }
-    BitFieldValue<bool, unsigned __int32> bForceWildMeleeSwingTraceAll()
-    { return { (void*)this, "bForceWildMeleeSwingTraceAll" }; }
-    BitFieldValue<bool, unsigned __int32> bForcedHudDrawingRequiresSameTeam()
-    { return { (void*)this, "bForcedHudDrawingRequiresSameTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEventsDuringLevelStreaming()
-    { return { (void*)this, "bGenerateOverlapEventsDuringLevelStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bGlideWhenFalling()
-    { return { (void*)this, "bGlideWhenFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bGlideWhenMounted()
-    { return { (void*)this, "bGlideWhenMounted" }; }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBlockInput")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bBonesHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBonesHidden")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCallRiderChangeWeaponsOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCallRiderChangeWeaponsOnClient")); }
+    BrzCampoPonteiro bCanAffectNavigationGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanAffectNavigationGeneration")); }
+    BrzCampoPonteiro bCanBeCarriedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeCarried")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeDraggedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeDragged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeInCluster")); }
+    BrzCampoPonteiro bCanBeOrderedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeOrdered")); }
+    BrzCampoPonteiro bCanBePushedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBePushed")); }
+    BrzCampoPonteiro bCanBeRepairedInOpenWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeRepairedInOpenWater")); }
+    BrzCampoPonteiro bCanBeTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeTamed")); }
+    BrzCampoPonteiro bCanBeTorpidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanBeTorpid")); }
+    BrzCampoPonteiro bCanDragField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanDrag")); }
+    BrzCampoPonteiro bCanEverCrouchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanEverCrouch")); }
+    BrzCampoPonteiro bCanEverProneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanEverProne")); }
+    BrzCampoPonteiro bCanHaveBabyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanHaveBaby")); }
+    BrzCampoPonteiro bCanHideSpankerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanHideSpanker")); }
+    BrzCampoPonteiro bCanIgnoreWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanIgnoreWater")); }
+    BrzCampoPonteiro bCanMountOnHumansField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanMountOnHumans")); }
+    BrzCampoPonteiro bCanMoveWithoutRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanMoveWithoutRider")); }
+    BrzCampoPonteiro bCanPlayLandingAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanPlayLandingAnim")); }
+    BrzCampoPonteiro bCanPushOthersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanPushOthers")); }
+    BrzCampoPonteiro bCanRunField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanRun")); }
+    BrzCampoPonteiro bCanSecondaryMountOnHumansField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanSecondaryMountOnHumans")); }
+    BrzCampoPonteiro bCanTargetVehiclesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanTargetVehicles")); }
+    BrzCampoPonteiro bCanUnclaimTameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCanUnclaimTame")); }
+    BrzCampoPonteiro bCancelInterpolationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCancelInterpolation")); }
+    BrzCampoPonteiro bCenterOffscreenFloatingHUDWidgetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCenterOffscreenFloatingHUDWidgets")); }
+    BrzCampoPonteiro bCheatForceTameRideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCheatForceTameRide")); }
+    BrzCampoPonteiro bCheatPossessedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCheatPossessed")); }
+    BrzCampoPonteiro bCheckBuffModifyAimOffsetNoTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCheckBuffModifyAimOffsetNoTarget")); }
+    BrzCampoPonteiro bClampOffscreenFloatingHUDWidgetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClampOffscreenFloatingHUDWidgets")); }
+    BrzCampoPonteiro bClearOnConsumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClearOnConsume")); }
+    BrzCampoPonteiro bClearRiderOnDinoImmobilizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClearRiderOnDinoImmobilized")); }
+    BrzCampoPonteiro bClientCheckEncroachmentOnNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientCheckEncroachmentOnNetUpdate")); }
+    BrzCampoPonteiro bClientInterpLocationInCustomMovemodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientInterpLocationInCustomMovemode")); }
+    BrzCampoPonteiro bClientResimulateRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientResimulateRootMotion")); }
+    BrzCampoPonteiro bClientResimulateRootMotionSourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientResimulateRootMotionSources")); }
+    BrzCampoPonteiro bClientSideSailingForcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientSideSailingForces")); }
+    BrzCampoPonteiro bClientUpdatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientUpdating")); }
+    BrzCampoPonteiro bClientWasFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClientWasFalling")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bClimbable")); }
+    BrzCampoPonteiro bCollectVictimItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCollectVictimItems")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bConsumeZoomInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bConsumeZoomInput")); }
+    BrzCampoPonteiro bControlledDinoPreventsPlayerInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bControlledDinoPreventsPlayerInventory")); }
+    BrzCampoPonteiro bCreatureIsImmuneToServerSoftTameLimitDestructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCreatureIsImmuneToServerSoftTameLimitDestruction")); }
+    BrzCampoPonteiro bCuddleRequestRefreshedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bCuddleRequestRefreshed")); }
+    BrzCampoPonteiro bDamageNotifyTeamAggroAIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDamageNotifyTeamAggroAI")); }
+    BrzCampoPonteiro bDeathUseRagdollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDeathUseRagdoll")); }
+    BrzCampoPonteiro bDebugBabyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugBaby")); }
+    BrzCampoPonteiro bDebugIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugIK")); }
+    BrzCampoPonteiro bDebugIK_ShowTraceNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugIK_ShowTraceNames")); }
+    BrzCampoPonteiro bDebugMeleeAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugMeleeAttacks")); }
+    BrzCampoPonteiro bDebugRowingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugRowing")); }
+    BrzCampoPonteiro bDebugRowing_ForceAllSeatsRowSyncField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugRowing_ForceAllSeatsRowSync")); }
+    BrzCampoPonteiro bDebugSailingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugSailing")); }
+    BrzCampoPonteiro bDebugSteeringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugSteering")); }
+    BrzCampoPonteiro bDebugStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDebugStructures")); }
+    BrzCampoPonteiro bDediServerAutoUnregisterSkeletalMeshWhenNotRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDediServerAutoUnregisterSkeletalMeshWhenNotRelevant")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bDestroyOnStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDestroyOnStasis")); }
+    BrzCampoPonteiro bDieIfLeftWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDieIfLeftWater")); }
+    BrzCampoPonteiro bDinoHasBondedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDinoHasBonded")); }
+    BrzCampoPonteiro bDisableAutoMatingWhileTamedWanderingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableAutoMatingWhileTamedWandering")); }
+    BrzCampoPonteiro bDisableCameraShakeOnNotifyHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableCameraShakeOnNotifyHit")); }
+    BrzCampoPonteiro bDisableControllerDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableControllerDesiredRotation")); }
+    BrzCampoPonteiro bDisableDefaultDinoTamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableDefaultDinoTaming")); }
+    BrzCampoPonteiro bDisableFPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableFPV")); }
+    BrzCampoPonteiro bDisableHarvestHealthGainField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableHarvestHealthGain")); }
+    BrzCampoPonteiro bDisableHarvestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableHarvesting")); }
+    BrzCampoPonteiro bDisablePathfindingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisablePathfinding")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bDisableShipHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableShipHUD")); }
+    BrzCampoPonteiro bDisableSpawnDefaultControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisableSpawnDefaultController")); }
+    BrzCampoPonteiro bDisabledFromAscensionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisabledFromAscension")); }
+    BrzCampoPonteiro bDisallowPostNetReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDisallowPostNetReplication")); }
+    BrzCampoPonteiro bDoStepDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDoStepDamage")); }
+    BrzCampoPonteiro bDontActuallyEmitPoopField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDontActuallyEmitPoop")); }
+    BrzCampoPonteiro bDontForceUpdateRateOptimizationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDontForceUpdateRateOptimizations")); }
+    BrzCampoPonteiro bDontOverrideToNavMeshStepHeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDontOverrideToNavMeshStepHeight")); }
+    BrzCampoPonteiro bDontWanderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDontWander")); }
+    BrzCampoPonteiro bDraggedFromExtremitiesOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDraggedFromExtremitiesOnly")); }
+    BrzCampoPonteiro bDrawHealthBarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDrawHealthBar")); }
+    BrzCampoPonteiro bDropWildEggsWithoutMateBoostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bDropWildEggsWithoutMateBoost")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEditorOnlyActorShowInPIE")); }
+    BrzCampoPonteiro bEggBoostedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEggBoosted")); }
+    BrzCampoPonteiro bEnableAnimationGroundConformingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableAnimationGroundConforming")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableIK")); }
+    BrzCampoPonteiro bEnableMouthFlapAnimationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableMouthFlapAnimations")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableMultiUse")); }
+    BrzCampoPonteiro bEnableTamedMatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableTamedMating")); }
+    BrzCampoPonteiro bEnableTamedWanderingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bEnableTamedWandering")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bExchangedRoles")); }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bFlyerDinoAllowBackwardsFlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFlyerDinoAllowBackwardsFlight")); }
+    BrzCampoPonteiro bFlyerDinoAllowStrafingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFlyerDinoAllowStrafing")); }
+    BrzCampoPonteiro bFlyerDontGainImpulseOnSubmergedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFlyerDontGainImpulseOnSubmerged")); }
+    BrzCampoPonteiro bFlyerForceLimitPitchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFlyerForceLimitPitch")); }
+    BrzCampoPonteiro bFlyerForceNoPitchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFlyerForceNoPitch")); }
+    BrzCampoPonteiro bFlyerPrioritizeAllyMountToCarryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bFlyerPrioritizeAllyMountToCarry")); }
+    BrzCampoPonteiro bForceAllowBackwardsMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAllowBackwardsMovement")); }
+    BrzCampoPonteiro bForceAllowDediServerGroundConformInterpolateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAllowDediServerGroundConformInterpolate")); }
+    BrzCampoPonteiro bForceAllowMountedAimOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAllowMountedAimOffset")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAllowNetMulticast")); }
+    BrzCampoPonteiro bForceAllowSalvagingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAllowSalvaging")); }
+    BrzCampoPonteiro bForceAllowTamedTickEggLayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAllowTamedTickEggLay")); }
+    BrzCampoPonteiro bForceAlwaysAllowBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAlwaysAllowBasing")); }
+    BrzCampoPonteiro bForceAlwaysUpdateMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAlwaysUpdateMesh")); }
+    BrzCampoPonteiro bForceAutoTameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceAutoTame")); }
+    BrzCampoPonteiro bForceDisableClientGravitySimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceDisableClientGravitySim")); }
+    BrzCampoPonteiro bForceDisablingTamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceDisablingTaming")); }
+    BrzCampoPonteiro bForceDrawHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceDrawHUD")); }
+    BrzCampoPonteiro bForceDrawHUDWithoutRecentlyRenderedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceDrawHUDWithoutRecentlyRendered")); }
+    BrzCampoPonteiro bForceFirstPersonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceFirstPerson")); }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceHideSaddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceHideSaddle")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceIKOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceIKOnDedicatedServer")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceNetAddressable")); }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNoCharacterStatusComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceNoCharacterStatusComponentTick")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePerFrameTickingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcePerFrameTicking")); }
+    BrzCampoPonteiro bForcePreventAllInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcePreventAllInput")); }
+    BrzCampoPonteiro bForcePreventExitingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcePreventExitingWater")); }
+    BrzCampoPonteiro bForcePreventInventoryAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcePreventInventoryAccess")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForcePvEAllowNonAlignedShipBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcePvEAllowNonAlignedShipBasing")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForceRiderDrawCrosshairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceRiderDrawCrosshair")); }
+    BrzCampoPonteiro bForceSimpleTeleportFadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceSimpleTeleportFade")); }
+    BrzCampoPonteiro bForceTickingBehaviorTreeEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceTickingBehaviorTreeEveryFrame")); }
+    BrzCampoPonteiro bForceUseAltAimSocketsForTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceUseAltAimSocketsForTurrets")); }
+    BrzCampoPonteiro bForceUseCustomCameraComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceUseCustomCameraComponent")); }
+    BrzCampoPonteiro bForceValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceValidUnstasisCaster")); }
+    BrzCampoPonteiro bForceWildEncumberBasedOnTamedDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceWildEncumberBasedOnTamedDino")); }
+    BrzCampoPonteiro bForceWildMeleeSwingTraceAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForceWildMeleeSwingTraceAll")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bForcedHudDrawingRequiresSameTeam")); }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bGlideWhenFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bGlideWhenFalling")); }
+    BrzCampoPonteiro bGlideWhenMountedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bGlideWhenMounted")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +40, medido na build 25090264
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +40, medido na build 25535041
     //  (offset absoluto medido: 0x3558; confianca media)
     void*& bHackCheckingForInvalidPhysXField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 40); }
-    BitFieldValue<bool, unsigned __int32> bHadLinkedSupplyCrate()
-    { return { (void*)this, "bHadLinkedSupplyCrate" }; }
-    BitFieldValue<bool, unsigned __int32> bHadStaticBase()
-    { return { (void*)this, "bHadStaticBase" }; }
-    BitFieldValue<bool, unsigned __int32> bHadStaticMapActorBase()
-    { return { (void*)this, "bHadStaticMapActorBase" }; }
-    BitFieldValue<bool, unsigned __int32> bHasBotRider()
-    { return { (void*)this, "bHasBotRider" }; }
-    BitFieldValue<bool, unsigned __int32> bHasBuffPreSerializeForInstigator()
-    { return { (void*)this, "bHasBuffPreSerializeForInstigator" }; }
-    BitFieldValue<bool, unsigned __int32> bHasBuffPreventingUploading()
-    { return { (void*)this, "bHasBuffPreventingUploading" }; }
-    BitFieldValue<bool, unsigned __int32> bHasDynamicBase()
-    { return { (void*)this, "bHasDynamicBase" }; }
-    BitFieldValue<bool, unsigned __int32> bHasHighVolumeRPCs()
-    { return { (void*)this, "bHasHighVolumeRPCs" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMateBoost()
-    { return { (void*)this, "bHasMateBoost" }; }
-    BitFieldValue<bool, unsigned __int32> bHasPlayerController()
-    { return { (void*)this, "bHasPlayerController" }; }
-    BitFieldValue<bool, unsigned __int32> bHasRider()
-    { return { (void*)this, "bHasRider" }; }
-    BitFieldValue<bool, unsigned __int32> bHibernateChange()
-    { return { (void*)this, "bHibernateChange" }; }
-    BitFieldValue<bool, unsigned __int32> bHidden()
-    { return { (void*)this, "bHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenForLocalPassenger()
-    { return { (void*)this, "bHiddenForLocalPassenger" }; }
-    BitFieldValue<bool, unsigned __int32> bHideFloatingHUD()
-    { return { (void*)this, "bHideFloatingHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bHideFloatingName()
-    { return { (void*)this, "bHideFloatingName" }; }
-    BitFieldValue<bool, unsigned __int32> bHideFromScans()
-    { return { (void*)this, "bHideFromScans" }; }
-    BitFieldValue<bool, unsigned __int32> bIKEnabled()
-    { return { (void*)this, "bIKEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bIfAmphibiousCountAsLandDinoForNPCVolumes()
-    { return { (void*)this, "bIfAmphibiousCountAsLandDinoForNPCVolumes" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreAllImmobilizationTraps()
-    { return { (void*)this, "bIgnoreAllImmobilizationTraps" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreAllWhistles()
-    { return { (void*)this, "bIgnoreAllWhistles" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreAllyLook()
-    { return { (void*)this, "bIgnoreAllyLook" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreCorpseDecompositionMultipliers()
-    { return { (void*)this, "bIgnoreCorpseDecompositionMultipliers" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDestroyOnRapidDeath()
-    { return { (void*)this, "bIgnoreDestroyOnRapidDeath" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreFlierRidingRestrictions()
-    { return { (void*)this, "bIgnoreFlierRidingRestrictions" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreLowGravityDisorientation()
-    { return { (void*)this, "bIgnoreLowGravityDisorientation" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNPCCountVolumes()
-    { return { (void*)this, "bIgnoreNPCCountVolumes" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNetworkRangeScaling()
-    { return { (void*)this, "bIgnoreNetworkRangeScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreOnDeathNotifyNearbyCharacters()
-    { return { (void*)this, "bIgnoreOnDeathNotifyNearbyCharacters" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreWeightWhenUsingExtraMaxSpeedModifier()
-    { return { (void*)this, "bIgnoreWeightWhenUsingExtraMaxSpeedModifier" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoresOriginShifting()
-    { return { (void*)this, "bIgnoresOriginShifting" }; }
+    BrzCampoPonteiro bHackForcesToApplyCheckForInvalidPhysxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHackForcesToApplyCheckForInvalidPhysx")); }
+    BrzCampoPonteiro bHadLinkedSupplyCrateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHadLinkedSupplyCrate")); }
+    BrzCampoPonteiro bHadStaticBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHadStaticBase")); }
+    BrzCampoPonteiro bHadStaticMapActorBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHadStaticMapActorBase")); }
+    BrzCampoPonteiro bHasBotRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasBotRider")); }
+    BrzCampoPonteiro bHasBuffPreSerializeForInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasBuffPreSerializeForInstigator")); }
+    BrzCampoPonteiro bHasBuffPreventingUploadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasBuffPreventingUploading")); }
+    BrzCampoPonteiro bHasDynamicBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasDynamicBase")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHasMateBoostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasMateBoost")); }
+    BrzCampoPonteiro bHasPlayerControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasPlayerController")); }
+    BrzCampoPonteiro bHasRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHasRider")); }
+    BrzCampoPonteiro bHealthPercentageUseHullHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHealthPercentageUseHullHealth")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHibernateChange")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHidden")); }
+    BrzCampoPonteiro bHiddenForLocalPassengerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHiddenForLocalPassenger")); }
+    BrzCampoPonteiro bHideFloatingHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHideFloatingHUD")); }
+    BrzCampoPonteiro bHideFloatingNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHideFloatingName")); }
+    BrzCampoPonteiro bHideFromScansField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bHideFromScans")); }
+    BrzCampoPonteiro bIKEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIKEnabled")); }
+    BrzCampoPonteiro bIfAmphibiousCountAsLandDinoForNPCVolumesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIfAmphibiousCountAsLandDinoForNPCVolumes")); }
+    BrzCampoPonteiro bIgnoreAllImmobilizationTrapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreAllImmobilizationTraps")); }
+    BrzCampoPonteiro bIgnoreAllWhistlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreAllWhistles")); }
+    BrzCampoPonteiro bIgnoreAllyLookField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreAllyLook")); }
+    BrzCampoPonteiro bIgnoreBasedDinosWhenTeleportingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreBasedDinosWhenTeleporting")); }
+    BrzCampoPonteiro bIgnoreCorpseDecompositionMultipliersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreCorpseDecompositionMultipliers")); }
+    BrzCampoPonteiro bIgnoreDestroyOnRapidDeathField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreDestroyOnRapidDeath")); }
+    BrzCampoPonteiro bIgnoreFlierRidingRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreFlierRidingRestrictions")); }
+    BrzCampoPonteiro bIgnoreLowGravityDisorientationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreLowGravityDisorientation")); }
+    BrzCampoPonteiro bIgnoreNPCCountVolumesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreNPCCountVolumes")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoreOnDeathNotifyNearbyCharactersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreOnDeathNotifyNearbyCharacters")); }
+    BrzCampoPonteiro bIgnoreWeightWhenUsingExtraMaxSpeedModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreWeightWhenUsingExtraMaxSpeedModifier")); }
+    BrzCampoPonteiro bIgnoreWindEffectivenessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoreWindEffectiveness")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIgnoresOriginShifting")); }
     bool& bInBaseReplicationField() const
     { return *GetNativePointerField<bool*>(this, "APrimalShip.bInBaseReplication"); }
-    BitFieldValue<bool, unsigned __int32> bInRagdoll()
-    { return { (void*)this, "bInRagdoll" }; }
-    BitFieldValue<bool, unsigned __int32> bIncludePreventManualInPassengerCount()
-    { return { (void*)this, "bIncludePreventManualInPassengerCount" }; }
-    BitFieldValue<bool, unsigned __int32> bIncrementedZoneManagerDirectLink()
-    { return { (void*)this, "bIncrementedZoneManagerDirectLink" }; }
-    BitFieldValue<bool, unsigned __int32> bInterceptPlayerEmotes()
-    { return { (void*)this, "bInterceptPlayerEmotes" }; }
-    BitFieldValue<bool, unsigned __int32> bInterpHealthDamageMaterialOverlayAlpha()
-    { return { (void*)this, "bInterpHealthDamageMaterialOverlayAlpha" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAWildFollowerKnownServerside()
-    { return { (void*)this, "bIsAWildFollowerKnownServerside" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAmphibious()
-    { return { (void*)this, "bIsAmphibious" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAnimSharing()
-    { return { (void*)this, "bIsAnimSharing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAtMaxInventoryItems()
-    { return { (void*)this, "bIsAtMaxInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAttachedOtherCharacter()
-    { return { (void*)this, "bIsAttachedOtherCharacter" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBaby()
-    { return { (void*)this, "bIsBaby" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBed()
-    { return { (void*)this, "bIsBed" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBeingDragged()
-    { return { (void*)this, "bIsBeingDragged" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBlinking()
-    { return { (void*)this, "bIsBlinking" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBossDino()
-    { return { (void*)this, "bIsBossDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBuffed()
-    { return { (void*)this, "bIsBuffed" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCarnivore()
-    { return { (void*)this, "bIsCarnivore" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCarried()
-    { return { (void*)this, "bIsCarried" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCarriedAsPassenger()
-    { return { (void*)this, "bIsCarriedAsPassenger" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCarryingCharacter()
-    { return { (void*)this, "bIsCarryingCharacter" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCarryingPassenger()
-    { return { (void*)this, "bIsCarryingPassenger" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCharging()
-    { return { (void*)this, "bIsCharging" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCloneDino()
-    { return { (void*)this, "bIsCloneDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCorrupted()
-    { return { (void*)this, "bIsCorrupted" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCrouched()
-    { return { (void*)this, "bIsCrouched" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDead()
-    { return { (void*)this, "bIsDead" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyedFromChildActorComponent()
-    { return { (void*)this, "bIsDestroyedFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyingDino()
-    { return { (void*)this, "bIsDestroyingDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDoingDraggedInterp()
-    { return { (void*)this, "bIsDoingDraggedInterp" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDragging()
-    { return { (void*)this, "bIsDragging" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDraggingWithGrapHook()
-    { return { (void*)this, "bIsDraggingWithGrapHook" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnlyActor()
-    { return { (void*)this, "bIsEditorOnlyActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnforcer()
-    { return { (void*)this, "bIsEnforcer" }; }
-    BitFieldValue<bool, unsigned __int32> bIsExtinctionTitan()
-    { return { (void*)this, "bIsExtinctionTitan" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFemale()
-    { return { (void*)this, "bIsFemale" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFlying()
-    { return { (void*)this, "bIsFlying" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromChildActorComponent()
-    { return { (void*)this, "bIsFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsHeldJumpSlowFalling()
-    { return { (void*)this, "bIsHeldJumpSlowFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bIsHordeDino()
-    { return { (void*)this, "bIsHordeDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsHost()
-    { return { (void*)this, "bIsHost" }; }
-    BitFieldValue<bool, unsigned __int32> bIsImmobilized()
-    { return { (void*)this, "bIsImmobilized" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInTurretMode()
-    { return { (void*)this, "bIsInTurretMode" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInvincible()
-    { return { (void*)this, "bIsInvincible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLanding()
-    { return { (void*)this, "bIsLanding" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLatched()
-    { return { (void*)this, "bIsLatched" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLatchedDownward()
-    { return { (void*)this, "bIsLatchedDownward" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLatching()
-    { return { (void*)this, "bIsLatching" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLocalViewTarget()
-    { return { (void*)this, "bIsLocalViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMapActor()
-    { return { (void*)this, "bIsMapActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMassMoving()
-    { return { (void*)this, "bIsMassMoving" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMek()
-    { return { (void*)this, "bIsMek" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMounted()
-    { return { (void*)this, "bIsMounted" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNursing()
-    { return { (void*)this, "bIsNursing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNursingDino()
-    { return { (void*)this, "bIsNursingDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsOceanManagerDino()
-    { return { (void*)this, "bIsOceanManagerDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsOverridingClientPositionErrorTolerance()
-    { return { (void*)this, "bIsOverridingClientPositionErrorTolerance" }; }
-    BitFieldValue<bool, unsigned __int32> bIsParentWildDino()
-    { return { (void*)this, "bIsParentWildDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPlayingLowHealthAnim()
-    { return { (void*)this, "bIsPlayingLowHealthAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPlayingTurningAnim()
-    { return { (void*)this, "bIsPlayingTurningAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bIsProne()
-    { return { (void*)this, "bIsProne" }; }
-    BitFieldValue<bool, unsigned __int32> bIsRaidDino()
-    { return { (void*)this, "bIsRaidDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsRepairing()
-    { return { (void*)this, "bIsRepairing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsSaveProfilingDino()
-    { return { (void*)this, "bIsSaveProfilingDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsScout()
-    { return { (void*)this, "bIsScout" }; }
-    BitFieldValue<bool, unsigned __int32> bIsSecondaryMounted()
-    { return { (void*)this, "bIsSecondaryMounted" }; }
-    BitFieldValue<bool, unsigned __int32> bIsSkinned()
-    { return { (void*)this, "bIsSkinned" }; }
-    BitFieldValue<bool, unsigned __int32> bIsSleeping()
-    { return { (void*)this, "bIsSleeping" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTemporaryMissionDino()
-    { return { (void*)this, "bIsTemporaryMissionDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidUnstasisCaster()
-    { return { (void*)this, "bIsValidUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVoiceTalking()
-    { return { (void*)this, "bIsVoiceTalking" }; }
-    BitFieldValue<bool, unsigned __int32> bIsWakingTame()
-    { return { (void*)this, "bIsWakingTame" }; }
-    BitFieldValue<bool, unsigned __int32> bIsWandering()
-    { return { (void*)this, "bIsWandering" }; }
-    BitFieldValue<bool, unsigned __int32> bJumpOnRelease()
-    { return { (void*)this, "bJumpOnRelease" }; }
-    BitFieldValue<bool, unsigned __int32> bKeepAffinityOnDamageRecievedWakingTame()
-    { return { (void*)this, "bKeepAffinityOnDamageRecievedWakingTame" }; }
-    BitFieldValue<bool, unsigned __int32> bLimitRiderYawOnLatched()
-    { return { (void*)this, "bLimitRiderYawOnLatched" }; }
-    BitFieldValue<bool, unsigned __int32> bLoadedFromSaveGame()
-    { return { (void*)this, "bLoadedFromSaveGame" }; }
-    BitFieldValue<bool, unsigned __int32> bLocalIsDragging()
-    { return { (void*)this, "bLocalIsDragging" }; }
-    BitFieldValue<bool, unsigned __int32> bMeleeSwingDamageBlockedByStrutures()
-    { return { (void*)this, "bMeleeSwingDamageBlockedByStrutures" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiUseCenterHUD()
-    { return { (void*)this, "bMultiUseCenterHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bNetCritical()
-    { return { (void*)this, "bNetCritical" }; }
-    BitFieldValue<bool, unsigned __int32> bNetLoadOnClient()
-    { return { (void*)this, "bNetLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bNetTemporary()
-    { return { (void*)this, "bNetTemporary" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseClientRelevancy()
-    { return { (void*)this, "bNetUseClientRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseOwnerRelevancy()
-    { return { (void*)this, "bNetUseOwnerRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSpatializationForceRelevancyCheck()
-    { return { (void*)this, "bNetworkSpatializationForceRelevancyCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bNeutered()
-    { return { (void*)this, "bNeutered" }; }
-    BitFieldValue<bool, unsigned __int32> bNoDamageImpulse()
-    { return { (void*)this, "bNoDamageImpulse" }; }
-    BitFieldValue<bool, unsigned __int32> bNoKillXP()
-    { return { (void*)this, "bNoKillXP" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyReplicateOnNetForcedUpdate()
-    { return { (void*)this, "bOnlyReplicateOnNetForcedUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyTargetConscious()
-    { return { (void*)this, "bOnlyTargetConscious" }; }
-    BitFieldValue<bool, unsigned __int32> bOrbitCamera()
-    { return { (void*)this, "bOrbitCamera" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideBlendSpaceSmoothType()
-    { return { (void*)this, "bOverrideBlendSpaceSmoothType" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideCrosshairAlpha()
-    { return { (void*)this, "bOverrideCrosshairAlpha" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideCrosshairColor()
-    { return { (void*)this, "bOverrideCrosshairColor" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideFlyingVelocity()
-    { return { (void*)this, "bOverrideFlyingVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideNewFallVelocity()
-    { return { (void*)this, "bOverrideNewFallVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideSwimmingAcceleration()
-    { return { (void*)this, "bOverrideSwimmingAcceleration" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideSwimmingVelocity()
-    { return { (void*)this, "bOverrideSwimmingVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideWalkingVelocity()
-    { return { (void*)this, "bOverrideWalkingVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bPaintingSupportSkins()
-    { return { (void*)this, "bPaintingSupportSkins" }; }
-    BitFieldValue<bool, unsigned __int32> bPassiveFlee()
-    { return { (void*)this, "bPassiveFlee" }; }
-    BitFieldValue<bool, unsigned __int32> bPressedJump()
-    { return { (void*)this, "bPressedJump" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventActorStasis()
-    { return { (void*)this, "bPreventActorStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventAllBuffs()
-    { return { (void*)this, "bPreventAllBuffs" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventAllRiderWeapons()
-    { return { (void*)this, "bPreventAllRiderWeapons" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventAnimationUpdateRateOptimizations()
-    { return { (void*)this, "bPreventAnimationUpdateRateOptimizations" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasingAllowSteppingUp()
-    { return { (void*)this, "bPreventCharacterBasingAllowSteppingUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventClearShoulderMountOfDiffTeam()
-    { return { (void*)this, "bPreventClearShoulderMountOfDiffTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCliffPlatforms()
-    { return { (void*)this, "bPreventCliffPlatforms" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCloning()
-    { return { (void*)this, "bPreventCloning" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDinoResetAffinityOnUnsleep()
-    { return { (void*)this, "bPreventDinoResetAffinityOnUnsleep" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDynamicMusic()
-    { return { (void*)this, "bPreventDynamicMusic" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventExportDino()
-    { return { (void*)this, "bPreventExportDino" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventFallingBumpCheck()
-    { return { (void*)this, "bPreventFallingBumpCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventFlyerLanding()
-    { return { (void*)this, "bPreventFlyerLanding" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventForceBabyFlyerLand()
-    { return { (void*)this, "bPreventForceBabyFlyerLand" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventHUDInitialization()
-    { return { (void*)this, "bPreventHUDInitialization" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventHibernation()
-    { return { (void*)this, "bPreventHibernation" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventHurtAnim()
-    { return { (void*)this, "bPreventHurtAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventIKWhenNotWalking()
-    { return { (void*)this, "bPreventIKWhenNotWalking" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventInventoryAccess()
-    { return { (void*)this, "bPreventInventoryAccess" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventJump()
-    { return { (void*)this, "bPreventJump" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLevelBoundsRelevant()
-    { return { (void*)this, "bPreventLevelBoundsRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLiveBlinking()
-    { return { (void*)this, "bPreventLiveBlinking" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventMating()
-    { return { (void*)this, "bPreventMating" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventMoveUp()
-    { return { (void*)this, "bPreventMoveUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventMovement()
-    { return { (void*)this, "bPreventMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNPCSpawnFloor()
-    { return { (void*)this, "bPreventNPCSpawnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventPassengerFPV()
-    { return { (void*)this, "bPreventPassengerFPV" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventPerPixelPainting()
-    { return { (void*)this, "bPreventPerPixelPainting" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularForceNetUpdate()
-    { return { (void*)this, "bPreventRegularForceNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRotationRateModifier()
-    { return { (void*)this, "bPreventRotationRateModifier" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSaving()
-    { return { (void*)this, "bPreventSaving" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventStasis()
-    { return { (void*)this, "bPreventStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventTargetingAndMovement()
-    { return { (void*)this, "bPreventTargetingAndMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUntamedRun()
-    { return { (void*)this, "bPreventUntamedRun" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUploading()
-    { return { (void*)this, "bPreventUploading" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventWakingTameFeeding()
-    { return { (void*)this, "bPreventWakingTameFeeding" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventWanderingUnderWater()
-    { return { (void*)this, "bPreventWanderingUnderWater" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventWaterHopCorrectionVelChange()
-    { return { (void*)this, "bPreventWaterHopCorrectionVelChange" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventWildTrapping()
-    { return { (void*)this, "bPreventWildTrapping" }; }
-    BitFieldValue<bool, unsigned __int32> bProxyIsJumpForceApplied()
-    { return { (void*)this, "bProxyIsJumpForceApplied" }; }
-    BitFieldValue<bool, unsigned __int32> bRagdollIgnoresPawnCapsules()
-    { return { (void*)this, "bRagdollIgnoresPawnCapsules" }; }
-    BitFieldValue<bool, unsigned __int32> bReachedMaxStructures()
-    { return { (void*)this, "bReachedMaxStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bReadyToPoop()
-    { return { (void*)this, "bReadyToPoop" }; }
-    BitFieldValue<bool, unsigned __int32> bRealtimeThrottledTickUseNativeTick()
-    { return { (void*)this, "bRealtimeThrottledTickUseNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bRecentlyUpdateIk()
-    { return { (void*)this, "bRecentlyUpdateIk" }; }
-    BitFieldValue<bool, unsigned __int32> bRefreshedColorization()
-    { return { (void*)this, "bRefreshedColorization" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForLevelBounds()
-    { return { (void*)this, "bRelevantForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForNetworkReplays()
-    { return { (void*)this, "bRelevantForNetworkReplays" }; }
-    BitFieldValue<bool, unsigned __int32> bRemainLatchedOnClearRider()
-    { return { (void*)this, "bRemainLatchedOnClearRider" }; }
-    BitFieldValue<bool, unsigned __int32> bRemoteRunning()
-    { return { (void*)this, "bRemoteRunning" }; }
-    BitFieldValue<bool, unsigned __int32> bReplayRewindable()
-    { return { (void*)this, "bReplayRewindable" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateDesiredRotation()
-    { return { (void*)this, "bReplicateDesiredRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateHidden()
-    { return { (void*)this, "bReplicateHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateMovement()
-    { return { (void*)this, "bReplicateMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicatePassengerTPVAim()
-    { return { (void*)this, "bReplicatePassengerTPVAim" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicatePitchWhileSwimming()
-    { return { (void*)this, "bReplicatePitchWhileSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicatedIsSubmerged()
-    { return { (void*)this, "bReplicatedIsSubmerged" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bRiderDontRequireSaddle()
-    { return { (void*)this, "bRiderDontRequireSaddle" }; }
-    BitFieldValue<bool, unsigned __int32> bRiderJumpTogglesFlight()
-    { return { (void*)this, "bRiderJumpTogglesFlight" }; }
-    BitFieldValue<bool, unsigned __int32> bRiderMovementLocked()
-    { return { (void*)this, "bRiderMovementLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bRidingIsSeperateUnstasisCaster()
-    { return { (void*)this, "bRidingIsSeperateUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bRidingRequiresTamed()
-    { return { (void*)this, "bRidingRequiresTamed" }; }
+    BrzCampoPonteiro bInRagdollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bInRagdoll")); }
+    BrzCampoPonteiro bIncludePreventManualInPassengerCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIncludePreventManualInPassengerCount")); }
+    BrzCampoPonteiro bIncrementedZoneManagerDirectLinkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIncrementedZoneManagerDirectLink")); }
+    BrzCampoPonteiro bInterceptPlayerEmotesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bInterceptPlayerEmotes")); }
+    BrzCampoPonteiro bInterpHealthDamageMaterialOverlayAlphaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bInterpHealthDamageMaterialOverlayAlpha")); }
+    BrzCampoPonteiro bIsAWildFollowerKnownServersideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsAWildFollowerKnownServerside")); }
+    BrzCampoPonteiro bIsAmphibiousField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsAmphibious")); }
+    BrzCampoPonteiro bIsAnimSharingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsAnimSharing")); }
+    BrzCampoPonteiro bIsAtMaxInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsAtMaxInventoryItems")); }
+    BrzCampoPonteiro bIsAttachedOtherCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsAttachedOtherCharacter")); }
+    BrzCampoPonteiro bIsBabyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsBaby")); }
+    BrzCampoPonteiro bIsBedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsBed")); }
+    BrzCampoPonteiro bIsBeingDraggedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsBeingDragged")); }
+    BrzCampoPonteiro bIsBlinkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsBlinking")); }
+    BrzCampoPonteiro bIsBossDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsBossDino")); }
+    BrzCampoPonteiro bIsBuffedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsBuffed")); }
+    BrzCampoPonteiro bIsCarnivoreField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCarnivore")); }
+    BrzCampoPonteiro bIsCarriedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCarried")); }
+    BrzCampoPonteiro bIsCarriedAsPassengerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCarriedAsPassenger")); }
+    BrzCampoPonteiro bIsCarryingCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCarryingCharacter")); }
+    BrzCampoPonteiro bIsCarryingPassengerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCarryingPassenger")); }
+    BrzCampoPonteiro bIsChargingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCharging")); }
+    BrzCampoPonteiro bIsCheckingThrottleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCheckingThrottle")); }
+    BrzCampoPonteiro bIsCloneDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCloneDino")); }
+    BrzCampoPonteiro bIsCorruptedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCorrupted")); }
+    BrzCampoPonteiro bIsCrouchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsCrouched")); }
+    BrzCampoPonteiro bIsDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsDead")); }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsDestroyingDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsDestroyingDino")); }
+    BrzCampoPonteiro bIsDoingDraggedInterpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsDoingDraggedInterp")); }
+    BrzCampoPonteiro bIsDraggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsDragging")); }
+    BrzCampoPonteiro bIsDraggingWithGrapHookField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsDraggingWithGrapHook")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsEnforcerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsEnforcer")); }
+    BrzCampoPonteiro bIsExtinctionTitanField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsExtinctionTitan")); }
+    BrzCampoPonteiro bIsFemaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsFemale")); }
+    BrzCampoPonteiro bIsFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsFlying")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsHeldJumpSlowFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsHeldJumpSlowFalling")); }
+    BrzCampoPonteiro bIsHordeDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsHordeDino")); }
+    BrzCampoPonteiro bIsHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsHost")); }
+    BrzCampoPonteiro bIsImmobilizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsImmobilized")); }
+    BrzCampoPonteiro bIsInTurretModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsInTurretMode")); }
+    BrzCampoPonteiro bIsInWetDockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsInWetDock")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsInvincible")); }
+    BrzCampoPonteiro bIsLandingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsLanding")); }
+    BrzCampoPonteiro bIsLatchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsLatched")); }
+    BrzCampoPonteiro bIsLatchedDownwardField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsLatchedDownward")); }
+    BrzCampoPonteiro bIsLatchingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsLatching")); }
+    BrzCampoPonteiro bIsLocalViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsLocalViewTarget")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsMapActor")); }
+    BrzCampoPonteiro bIsMassMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsMassMoving")); }
+    BrzCampoPonteiro bIsMekField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsMek")); }
+    BrzCampoPonteiro bIsMetalHullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsMetalHull")); }
+    BrzCampoPonteiro bIsMountedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsMounted")); }
+    BrzCampoPonteiro bIsNPCShipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsNPCShip")); }
+    BrzCampoPonteiro bIsNursingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsNursing")); }
+    BrzCampoPonteiro bIsNursingDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsNursingDino")); }
+    BrzCampoPonteiro bIsOceanManagerDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsOceanManagerDino")); }
+    BrzCampoPonteiro bIsOverridingClientPositionErrorToleranceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsOverridingClientPositionErrorTolerance")); }
+    BrzCampoPonteiro bIsParentWildDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsParentWildDino")); }
+    BrzCampoPonteiro bIsPlayingLowHealthAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsPlayingLowHealthAnim")); }
+    BrzCampoPonteiro bIsPlayingTurningAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsPlayingTurningAnim")); }
+    BrzCampoPonteiro bIsProneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsProne")); }
+    BrzCampoPonteiro bIsRaidDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsRaidDino")); }
+    BrzCampoPonteiro bIsRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsRepairing")); }
+    BrzCampoPonteiro bIsSaveProfilingDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsSaveProfilingDino")); }
+    BrzCampoPonteiro bIsScoutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsScout")); }
+    BrzCampoPonteiro bIsSecondaryMountedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsSecondaryMounted")); }
+    BrzCampoPonteiro bIsSkinnedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsSkinned")); }
+    BrzCampoPonteiro bIsSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsSleeping")); }
+    BrzCampoPonteiro bIsSmallRaftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsSmallRaft")); }
+    BrzCampoPonteiro bIsTemporaryMissionDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsTemporaryMissionDino")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsValidUnstasisCaster")); }
+    BrzCampoPonteiro bIsVoiceTalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsVoiceTalking")); }
+    BrzCampoPonteiro bIsWakingTameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsWakingTame")); }
+    BrzCampoPonteiro bIsWanderingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bIsWandering")); }
+    BrzCampoPonteiro bJumpOnReleaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bJumpOnRelease")); }
+    BrzCampoPonteiro bKeepAffinityOnDamageRecievedWakingTameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bKeepAffinityOnDamageRecievedWakingTame")); }
+    BrzCampoPonteiro bKillingThrottleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bKillingThrottle")); }
+    BrzCampoPonteiro bLimitRiderYawOnLatchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bLimitRiderYawOnLatched")); }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bLocalIsDraggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bLocalIsDragging")); }
+    BrzCampoPonteiro bMaidenVoyagePlayedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bMaidenVoyagePlayed")); }
+    BrzCampoPonteiro bMeleeSwingDamageBlockedByStruturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bMeleeSwingDamageBlockedByStrutures")); }
+    BrzCampoPonteiro bMotionWantsMusicOnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bMotionWantsMusicOn")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bMusicFadedInField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bMusicFadedIn")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNetCritical")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bNeuteredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNeutered")); }
+    BrzCampoPonteiro bNoDamageImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNoDamageImpulse")); }
+    BrzCampoPonteiro bNoKillXPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bNoKillXP")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bOnlyTargetConsciousField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOnlyTargetConscious")); }
+    BrzCampoPonteiro bOnlyUseBPSimulatePhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOnlyUseBPSimulatePhysics")); }
+    BrzCampoPonteiro bOrbitCameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOrbitCamera")); }
+    BrzCampoPonteiro bOverrideBlendSpaceSmoothTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideBlendSpaceSmoothType")); }
+    BrzCampoPonteiro bOverrideCrosshairAlphaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideCrosshairAlpha")); }
+    BrzCampoPonteiro bOverrideCrosshairColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideCrosshairColor")); }
+    BrzCampoPonteiro bOverrideFlyingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideFlyingVelocity")); }
+    BrzCampoPonteiro bOverrideNewFallVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideNewFallVelocity")); }
+    BrzCampoPonteiro bOverrideSwimmingAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideSwimmingAcceleration")); }
+    BrzCampoPonteiro bOverrideSwimmingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideSwimmingVelocity")); }
+    BrzCampoPonteiro bOverrideWalkingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bOverrideWalkingVelocity")); }
+    BrzCampoPonteiro bPaintingSupportSkinsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPaintingSupportSkins")); }
+    BrzCampoPonteiro bPassiveFleeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPassiveFlee")); }
+    BrzCampoPonteiro bPressedJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPressedJump")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventAllBuffsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventAllBuffs")); }
+    BrzCampoPonteiro bPreventAllRiderWeaponsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventAllRiderWeapons")); }
+    BrzCampoPonteiro bPreventAnimationUpdateRateOptimizationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventAnimationUpdateRateOptimizations")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventClearShoulderMountOfDiffTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventClearShoulderMountOfDiffTeam")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventCloningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventCloning")); }
+    BrzCampoPonteiro bPreventDinoResetAffinityOnUnsleepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventDinoResetAffinityOnUnsleep")); }
+    BrzCampoPonteiro bPreventDynamicMusicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventDynamicMusic")); }
+    BrzCampoPonteiro bPreventExportDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventExportDino")); }
+    BrzCampoPonteiro bPreventFallingBumpCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventFallingBumpCheck")); }
+    BrzCampoPonteiro bPreventFlyerLandingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventFlyerLanding")); }
+    BrzCampoPonteiro bPreventForceBabyFlyerLandField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventForceBabyFlyerLand")); }
+    BrzCampoPonteiro bPreventHUDInitializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventHUDInitialization")); }
+    BrzCampoPonteiro bPreventHibernationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventHibernation")); }
+    BrzCampoPonteiro bPreventHurtAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventHurtAnim")); }
+    BrzCampoPonteiro bPreventIKWhenNotWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventIKWhenNotWalking")); }
+    BrzCampoPonteiro bPreventInventoryAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventInventoryAccess")); }
+    BrzCampoPonteiro bPreventJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventJump")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventLiveBlinkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventLiveBlinking")); }
+    BrzCampoPonteiro bPreventMatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventMating")); }
+    BrzCampoPonteiro bPreventMoveUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventMoveUp")); }
+    BrzCampoPonteiro bPreventMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventMovement")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventPassengerFPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventPassengerFPV")); }
+    BrzCampoPonteiro bPreventPerPixelPaintingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventPerPixelPainting")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventRotationRateModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventRotationRateModifier")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventSaving")); }
+    BrzCampoPonteiro bPreventStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventStasis")); }
+    BrzCampoPonteiro bPreventTargetingAndMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventTargetingAndMovement")); }
+    BrzCampoPonteiro bPreventUntamedRunField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventUntamedRun")); }
+    BrzCampoPonteiro bPreventUploadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventUploading")); }
+    BrzCampoPonteiro bPreventWakingTameFeedingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventWakingTameFeeding")); }
+    BrzCampoPonteiro bPreventWanderingUnderWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventWanderingUnderWater")); }
+    BrzCampoPonteiro bPreventWaterHopCorrectionVelChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventWaterHopCorrectionVelChange")); }
+    BrzCampoPonteiro bPreventWildTrappingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventWildTrapping")); }
+    BrzCampoPonteiro bPreventsDinosWithStructureSupportingSaddlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bPreventsDinosWithStructureSupportingSaddles")); }
+    BrzCampoPonteiro bProxyIsJumpForceAppliedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bProxyIsJumpForceApplied")); }
+    BrzCampoPonteiro bRagdollIgnoresPawnCapsulesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRagdollIgnoresPawnCapsules")); }
+    BrzCampoPonteiro bReachedMaxStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReachedMaxStructures")); }
+    BrzCampoPonteiro bReadyToPoopField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReadyToPoop")); }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bRecentlyUpdateIkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRecentlyUpdateIk")); }
+    BrzCampoPonteiro bRefreshedColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRefreshedColorization")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRelevantForNetworkReplays")); }
+    BrzCampoPonteiro bRemainLatchedOnClearRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRemainLatchedOnClearRider")); }
+    BrzCampoPonteiro bRemoteRunningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRemoteRunning")); }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateCurrentSailRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicateCurrentSailRotation")); }
+    BrzCampoPonteiro bReplicateDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicateDesiredRotation")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicateHidden")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicatePassengerTPVAimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicatePassengerTPVAim")); }
+    BrzCampoPonteiro bReplicatePitchWhileSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicatePitchWhileSwimming")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatedIsSubmergedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicatedIsSubmerged")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bReplicates")); }
+    BrzCampoPonteiro bRiderDontRequireSaddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRiderDontRequireSaddle")); }
+    BrzCampoPonteiro bRiderJumpTogglesFlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRiderJumpTogglesFlight")); }
+    BrzCampoPonteiro bRiderMovementLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRiderMovementLocked")); }
+    BrzCampoPonteiro bRidingIsSeperateUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRidingIsSeperateUnstasisCaster")); }
+    BrzCampoPonteiro bRidingRequiresTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRidingRequiresTamed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SailsPivotingSoundinfo` +40, medido na build 25090264
+    //  ancorado em `SailsPivotingSoundinfo` +40, medido na build 25535041
     //  (offset absoluto medido: 0x2CD0; confianca media)
     void*& bRopeReachedEndOfTravelField() const
     { return BrzCampoAncorado<void*>(this, "SailsPivotingSoundinfo", 40); }
-    BitFieldValue<bool, unsigned __int32> bRotateToFaceLatchingObject()
-    { return { (void*)this, "bRotateToFaceLatchingObject" }; }
-    BitFieldValue<bool, unsigned __int32> bRotatingUpdatesDinoIK()
-    { return { (void*)this, "bRotatingUpdatesDinoIK" }; }
-    BitFieldValue<bool, unsigned __int32> bSavedWhenStasised()
-    { return { (void*)this, "bSavedWhenStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bServerForceUpdateDinoGameplayMeshNearPlayer()
-    { return { (void*)this, "bServerForceUpdateDinoGameplayMeshNearPlayer" }; }
-    BitFieldValue<bool, unsigned __int32> bServerInitializedDino()
-    { return { (void*)this, "bServerInitializedDino" }; }
-    BitFieldValue<bool, unsigned __int32> bServerMoveIgnoreRootMotion()
-    { return { (void*)this, "bServerMoveIgnoreRootMotion" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeInGodMode()
-    { return { (void*)this, "bShouldBeInGodMode" }; }
-    BitFieldValue<bool, unsigned __int32> bSimGravityDisabled()
-    { return { (void*)this, "bSimGravityDisabled" }; }
-    BitFieldValue<bool, unsigned __int32> bSimulateRootMotion()
-    { return { (void*)this, "bSimulateRootMotion" }; }
-    BitFieldValue<bool, unsigned __int32> bSingleplayerFreezePhysicsWhenNoTarget()
-    { return { (void*)this, "bSingleplayerFreezePhysicsWhenNoTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bSkipProcessRootRotAndLocInAimOffset()
-    { return { (void*)this, "bSkipProcessRootRotAndLocInAimOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bSleepedWaterRagdoll()
-    { return { (void*)this, "bSleepedWaterRagdoll" }; }
-    BitFieldValue<bool, unsigned __int32> bSleepingDisableRagdoll()
-    { return { (void*)this, "bSleepingDisableRagdoll" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisComponentRadiusForceDistanceCheck()
-    { return { (void*)this, "bStasisComponentRadiusForceDistanceCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bStasised()
-    { return { (void*)this, "bStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bStepDamageFoliageOnly()
-    { return { (void*)this, "bStepDamageFoliageOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportWakingTame()
-    { return { (void*)this, "bSupportWakingTame" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsPassengerSeats()
-    { return { (void*)this, "bSupportsPassengerSeats" }; }
-    BitFieldValue<bool, unsigned __int32> bSuppressDeathNotification()
-    { return { (void*)this, "bSuppressDeathNotification" }; }
-    BitFieldValue<bool, unsigned __int32> bSuppressPlayerKillNotification()
-    { return { (void*)this, "bSuppressPlayerKillNotification" }; }
-    BitFieldValue<bool, unsigned __int32> bSuppressWakingTameMessage()
-    { return { (void*)this, "bSuppressWakingTameMessage" }; }
-    BitFieldValue<bool, unsigned __int32> bSwimmingWaterDinoMoveLikeFlying()
-    { return { (void*)this, "bSwimmingWaterDinoMoveLikeFlying" }; }
-    BitFieldValue<bool, unsigned __int32> bTakingOff()
-    { return { (void*)this, "bTakingOff" }; }
-    BitFieldValue<bool, unsigned __int32> bTamedAIAllowSpecialAttacks()
-    { return { (void*)this, "bTamedAIAllowSpecialAttacks" }; }
-    BitFieldValue<bool, unsigned __int32> bTamedAlwaysUseTamedUnsleepAnim()
-    { return { (void*)this, "bTamedAlwaysUseTamedUnsleepAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bTamingHasFood()
-    { return { (void*)this, "bTamingHasFood" }; }
-    BitFieldValue<bool, unsigned __int32> bTargetEverything()
-    { return { (void*)this, "bTargetEverything" }; }
-    BitFieldValue<bool, unsigned __int32> bTargetingIgnoreWildDinos()
-    { return { (void*)this, "bTargetingIgnoreWildDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bTargetingIgnoredByWildDinos()
-    { return { (void*)this, "bTargetingIgnoredByWildDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bTearOff()
-    { return { (void*)this, "bTearOff" }; }
-    BitFieldValue<bool, unsigned __int32> bTriggerBPStasis()
-    { return { (void*)this, "bTriggerBPStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bUniqueDino()
-    { return { (void*)this, "bUniqueDino" }; }
-    BitFieldValue<bool, unsigned __int32> bUnstreamComponentsUseEndOverlap()
-    { return { (void*)this, "bUnstreamComponentsUseEndOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateDinoLimbWallAvoidance()
-    { return { (void*)this, "bUpdateDinoLimbWallAvoidance" }; }
-    BitFieldValue<bool, unsigned __int32> bUseActorNotifyCustomEventBP()
-    { return { (void*)this, "bUseActorNotifyCustomEventBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAdvancedAnimLerp()
-    { return { (void*)this, "bUseAdvancedAnimLerp" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAmphibiousTargeting()
-    { return { (void*)this, "bUseAmphibiousTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachmentReplication()
-    { return { (void*)this, "bUseAttachmentReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAdjustAttackIndex()
-    { return { (void*)this, "bUseBPAdjustAttackIndex" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAdjustDamage()
-    { return { (void*)this, "bUseBPAdjustDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowActorSpawn()
-    { return { (void*)this, "bUseBPAllowActorSpawn" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowPlayMontage()
-    { return { (void*)this, "bUseBPAllowPlayMontage" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowRunningWhileFalling()
-    { return { (void*)this, "bUseBPAllowRunningWhileFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowTeamToTrackTamingDino()
-    { return { (void*)this, "bUseBPAllowTeamToTrackTamingDino" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanCombineMoves()
-    { return { (void*)this, "bUseBPCanCombineMoves" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanTargetCorpse()
-    { return { (void*)this, "bUseBPCanTargetCorpse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPChangedActorTeam()
-    { return { (void*)this, "bUseBPChangedActorTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckCanSpawnFromLocation()
-    { return { (void*)this, "bUseBPCheckCanSpawnFromLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckForErrors()
-    { return { (void*)this, "bUseBPCheckForErrors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomIsRelevantForClient()
-    { return { (void*)this, "bUseBPCustomIsRelevantForClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDinoFaceRotation()
-    { return { (void*)this, "bUseBPDinoFaceRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDinoTooltipCustomProgressBar()
-    { return { (void*)this, "bUseBPDinoTooltipCustomProgressBar" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawEntry()
-    { return { (void*)this, "bUseBPDrawEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFaceRotation()
-    { return { (void*)this, "bUseBPFaceRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFilterMultiUseEntries()
-    { return { (void*)this, "bUseBPFilterMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowsInventoryUse()
-    { return { (void*)this, "bUseBPForceAllowsInventoryUse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceCameraStyle()
-    { return { (void*)this, "bUseBPForceCameraStyle" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceKeepBasedOnDino()
-    { return { (void*)this, "bUseBPForceKeepBasedOnDino" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetArmorDurabilityDecreaseMultiplier()
-    { return { (void*)this, "bUseBPGetArmorDurabilityDecreaseMultiplier" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetBonesToHideOnAllocation()
-    { return { (void*)this, "bUseBPGetBonesToHideOnAllocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetCameraCollisionIgnoreActors()
-    { return { (void*)this, "bUseBPGetCameraCollisionIgnoreActors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetFinalMaxSpeed()
-    { return { (void*)this, "bUseBPGetFinalMaxSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetGravity()
-    { return { (void*)this, "bUseBPGetGravity" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetHUDDrawLocationOffset()
-    { return { (void*)this, "bUseBPGetHUDDrawLocationOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterText()
-    { return { (void*)this, "bUseBPGetMultiUseCenterText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterTextWithName()
-    { return { (void*)this, "bUseBPGetMultiUseCenterTextWithName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOrbitCamTargetLocation()
-    { return { (void*)this, "bUseBPGetOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOtherActorToIgnore()
-    { return { (void*)this, "bUseBPGetOtherActorToIgnore" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOverrideCameraInterpSpeed()
-    { return { (void*)this, "bUseBPGetOverrideCameraInterpSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetShowDebugAnimationComponents()
-    { return { (void*)this, "bUseBPGetShowDebugAnimationComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetTamedFollowTarget()
-    { return { (void*)this, "bUseBPGetTamedFollowTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetTargetingDesirability()
-    { return { (void*)this, "bUseBPGetTargetingDesirability" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetTargetingDesirabilityForTurrets()
-    { return { (void*)this, "bUseBPGetTargetingDesirabilityForTurrets" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInterceptMoveInputEvents()
-    { return { (void*)this, "bUseBPInterceptMoveInputEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInterceptMoveInputEventsEvenIfZero()
-    { return { (void*)this, "bUseBPInterceptMoveInputEventsEvenIfZero" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInterceptTurnInputEvents()
-    { return { (void*)this, "bUseBPInterceptTurnInputEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemDropped()
-    { return { (void*)this, "bUseBPInventoryItemDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemUsed()
-    { return { (void*)this, "bUseBPInventoryItemUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPItemSlotOverrides()
-    { return { (void*)this, "bUseBPItemSlotOverrides" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPModifyDesiredRotation()
-    { return { (void*)this, "bUseBPModifyDesiredRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPModifyWanderAroundActorLocation()
-    { return { (void*)this, "bUseBPModifyWanderAroundActorLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPModifyXPMultiplier()
-    { return { (void*)this, "bUseBPModifyXPMultiplier" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyOnBuffAdded()
-    { return { (void*)this, "bUseBPNotifyOnBuffAdded" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyOnBuffAddedToMountChar()
-    { return { (void*)this, "bUseBPNotifyOnBuffAddedToMountChar" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnCarryCharacter()
-    { return { (void*)this, "bUseBPOnCarryCharacter" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnEndCharging()
-    { return { (void*)this, "bUseBPOnEndCharging" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnImmobilize()
-    { return { (void*)this, "bUseBPOnImmobilize" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnLethalDamage()
-    { return { (void*)this, "bUseBPOnLethalDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnSimulatedTick()
-    { return { (void*)this, "bUseBPOnSimulatedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAccessInventoryInput()
-    { return { (void*)this, "bUseBPOverrideAccessInventoryInput" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideBasedPlayerAimOffsetYaw()
-    { return { (void*)this, "bUseBPOverrideBasedPlayerAimOffsetYaw" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideCameraViewTarget()
-    { return { (void*)this, "bUseBPOverrideCameraViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideCharacterNewFallVelocity()
-    { return { (void*)this, "bUseBPOverrideCharacterNewFallVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideCharacterNewSwimVelocity()
-    { return { (void*)this, "bUseBPOverrideCharacterNewSwimVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideCharacterParticle()
-    { return { (void*)this, "bUseBPOverrideCharacterParticle" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideCharacterSound()
-    { return { (void*)this, "bUseBPOverrideCharacterSound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideDamageCauserHitMarker()
-    { return { (void*)this, "bUseBPOverrideDamageCauserHitMarker" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideFloatingHUDLocation()
-    { return { (void*)this, "bUseBPOverrideFloatingHUDLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideIsSubmergedForWaterTargeting()
-    { return { (void*)this, "bUseBPOverrideIsSubmergedForWaterTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideJumpZModifier()
-    { return { (void*)this, "bUseBPOverrideJumpZModifier" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverridePassengerAdditiveAnim()
-    { return { (void*)this, "bUseBPOverridePassengerAdditiveAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverridePhysicsImpulses()
-    { return { (void*)this, "bUseBPOverridePhysicsImpulses" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverridePlayAnimExMontage()
-    { return { (void*)this, "bUseBPOverridePlayAnimExMontage" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideRiderAccessInventoryInput()
-    { return { (void*)this, "bUseBPOverrideRiderAccessInventoryInput" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideRiderIndoorsCheckLocation()
-    { return { (void*)this, "bUseBPOverrideRiderIndoorsCheckLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideStencilAllianceForTarget()
-    { return { (void*)this, "bUseBPOverrideStencilAllianceForTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTamingDescriptionLabel()
-    { return { (void*)this, "bUseBPOverrideTamingDescriptionLabel" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTargetingLocation()
-    { return { (void*)this, "bUseBPOverrideTargetingLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideUILocation()
-    { return { (void*)this, "bUseBPOverrideUILocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPlayHitEffect()
-    { return { (void*)this, "bUseBPPlayHitEffect" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventAttachments()
-    { return { (void*)this, "bUseBPPreventAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventMovementMode()
-    { return { (void*)this, "bUseBPPreventMovementMode" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSetCharacterMeshseMaterialScalarParamValue()
-    { return { (void*)this, "bUseBPSetCharacterMeshseMaterialScalarParamValue" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSetTamedFollowTarget()
-    { return { (void*)this, "bUseBPSetTamedFollowTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPShieldBlock()
-    { return { (void*)this, "bUseBPShieldBlock" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPShouldUseLongFallCameraPivotZValues()
-    { return { (void*)this, "bUseBPShouldUseLongFallCameraPivotZValues" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipTerrainTraceForCarriedCharacter()
-    { return { (void*)this, "bUseBPSkipTerrainTraceForCarriedCharacter" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPTimerNonDedicated()
-    { return { (void*)this, "bUseBPTimerNonDedicated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPTimerServer()
-    { return { (void*)this, "bUseBPTimerServer" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_CanFly()
-    { return { (void*)this, "bUseBP_CanFly" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_CustomModifier_MaxSpeed()
-    { return { (void*)this, "bUseBP_CustomModifier_MaxSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_ForceAllowBuffClasses()
-    { return { (void*)this, "bUseBP_ForceAllowBuffClasses" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_ModifyInputAcceleration()
-    { return { (void*)this, "bUseBP_ModifyInputAcceleration" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OnBasedPawnNotifies()
-    { return { (void*)this, "bUseBP_OnBasedPawnNotifies" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OnBasedPawnSetNotifies()
-    { return { (void*)this, "bUseBP_OnBasedPawnSetNotifies" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OnPostNetReplication()
-    { return { (void*)this, "bUseBP_OnPostNetReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OverrideBasedCharactersCameraInterpSpeed()
-    { return { (void*)this, "bUseBP_OverrideBasedCharactersCameraInterpSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OverrideCarriedCharacterTransform()
-    { return { (void*)this, "bUseBP_OverrideCarriedCharacterTransform" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OverrideDinoName()
-    { return { (void*)this, "bUseBP_OverrideDinoName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OverrideRiderCameraCollisionSweep()
-    { return { (void*)this, "bUseBP_OverrideRiderCameraCollisionSweep" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_OverrideTerminalVelocity()
-    { return { (void*)this, "bUseBP_OverrideTerminalVelocity" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBP_ShouldPreventBasedCharactersCameraInterpolation()
-    { return { (void*)this, "bUseBP_ShouldPreventBasedCharactersCameraInterpolation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBlueprintExtraBabyScale()
-    { return { (void*)this, "bUseBlueprintExtraBabyScale" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBlueprintJumpInputEvents()
-    { return { (void*)this, "bUseBlueprintJumpInputEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCanMoveThroughActor()
-    { return { (void*)this, "bUseCanMoveThroughActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseColorization()
-    { return { (void*)this, "bUseColorization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseControllerRotationPitch()
-    { return { (void*)this, "bUseControllerRotationPitch" }; }
-    BitFieldValue<bool, unsigned __int32> bUseControllerRotationRoll()
-    { return { (void*)this, "bUseControllerRotationRoll" }; }
-    BitFieldValue<bool, unsigned __int32> bUseControllerRotationYaw()
-    { return { (void*)this, "bUseControllerRotationYaw" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDeferredMovement()
-    { return { (void*)this, "bUseDeferredMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDescriptiveNameGenderOverrides()
-    { return { (void*)this, "bUseDescriptiveNameGenderOverrides" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDinoLimbWallAvoidance()
-    { return { (void*)this, "bUseDinoLimbWallAvoidance" }; }
-    BitFieldValue<bool, unsigned __int32> bUseFixedSpawnLevel()
-    { return { (void*)this, "bUseFixedSpawnLevel" }; }
-    BitFieldValue<bool, unsigned __int32> bUseGang()
-    { return { (void*)this, "bUseGang" }; }
-    BitFieldValue<bool, unsigned __int32> bUseGetOverrideSocket()
-    { return { (void*)this, "bUseGetOverrideSocket" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMountCharacterProneOffset()
-    { return { (void*)this, "bUseMountCharacterProneOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMyBabyCuddleFoodTypesAsAdditional()
-    { return { (void*)this, "bUseMyBabyCuddleFoodTypesAsAdditional" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNetworkSpatialization()
-    { return { (void*)this, "bUseNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnCharacterSteppedNotify()
-    { return { (void*)this, "bUseOnCharacterSteppedNotify" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnStartedAllyTargetLooking()
-    { return { (void*)this, "bUseOnStartedAllyTargetLooking" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnUpdateMountedDinoMeshHiding()
-    { return { (void*)this, "bUseOnUpdateMountedDinoMeshHiding" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnlyPointForLevelBounds()
-    { return { (void*)this, "bUseOnlyPointForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bUsePlayerMountedCarryingDinoAnimation()
-    { return { (void*)this, "bUsePlayerMountedCarryingDinoAnimation" }; }
-    BitFieldValue<bool, unsigned __int32> bUsePoopAnimationNotify()
-    { return { (void*)this, "bUsePoopAnimationNotify" }; }
-    BitFieldValue<bool, unsigned __int32> bUsePreciseLaunching()
-    { return { (void*)this, "bUsePreciseLaunching" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRandomLookAtTarget()
-    { return { (void*)this, "bUseRandomLookAtTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRootLocSwimOffset()
-    { return { (void*)this, "bUseRootLocSwimOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseShoulderMountedLaunch()
-    { return { (void*)this, "bUseShoulderMountedLaunch" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStasisGrid()
-    { return { (void*)this, "bUseStasisGrid" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWildRandomScale()
-    { return { (void*)this, "bUseWildRandomScale" }; }
-    BitFieldValue<bool, unsigned __int32> bUseZeroGravityWander()
-    { return { (void*)this, "bUseZeroGravityWander" }; }
-    BitFieldValue<bool, unsigned __int32> bUse_ModifySavedMoveAcceleration_PostRep()
-    { return { (void*)this, "bUse_ModifySavedMoveAcceleration_PostRep" }; }
-    BitFieldValue<bool, unsigned __int32> bUse_ModifySavedMoveAcceleration_PreRep()
-    { return { (void*)this, "bUse_ModifySavedMoveAcceleration_PreRep" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesGender()
-    { return { (void*)this, "bUsesGender" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesRunningAnimation()
-    { return { (void*)this, "bUsesRunningAnimation" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesWaterWalking()
-    { return { (void*)this, "bUsesWaterWalking" }; }
+    BrzCampoPonteiro bRotateToFaceLatchingObjectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRotateToFaceLatchingObject")); }
+    BrzCampoPonteiro bRotatingUpdatesDinoIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRotatingUpdatesDinoIK")); }
+    BrzCampoPonteiro bSailsAffectThrottleLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSailsAffectThrottleLocation")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSavedWhenStasised")); }
+    BrzCampoPonteiro bServerForceUpdateDinoGameplayMeshNearPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bServerForceUpdateDinoGameplayMeshNearPlayer")); }
+    BrzCampoPonteiro bServerInitializedDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bServerInitializedDino")); }
+    BrzCampoPonteiro bServerMoveIgnoreRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bServerMoveIgnoreRootMotion")); }
+    BrzCampoPonteiro bShipHasSpecialAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bShipHasSpecialAttack")); }
+    BrzCampoPonteiro bShouldBeInGodModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bShouldBeInGodMode")); }
+    BrzCampoPonteiro bShouldHaveCargoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bShouldHaveCargo")); }
+    BrzCampoPonteiro bSimGravityDisabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSimGravityDisabled")); }
+    BrzCampoPonteiro bSimulateRootMotionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSimulateRootMotion")); }
+    BrzCampoPonteiro bSingleplayerFreezePhysicsWhenNoTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSingleplayerFreezePhysicsWhenNoTarget")); }
+    BrzCampoPonteiro bSkipProcessRootRotAndLocInAimOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSkipProcessRootRotAndLocInAimOffset")); }
+    BrzCampoPonteiro bSkipRamDamageWhenNPCField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSkipRamDamageWhenNPC")); }
+    BrzCampoPonteiro bSleepedWaterRagdollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSleepedWaterRagdoll")); }
+    BrzCampoPonteiro bSleepingDisableRagdollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSleepingDisableRagdoll")); }
+    BrzCampoPonteiro bSmallRaftPushAwayPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSmallRaftPushAwayPlayers")); }
+    BrzCampoPonteiro bSpankerVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSpankerVisible")); }
+    BrzCampoPonteiro bSpawnScrapeVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSpawnScrapeVFX")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bStasised")); }
+    BrzCampoPonteiro bStepDamageFoliageOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bStepDamageFoliageOnly")); }
+    BrzCampoPonteiro bSupportWakingTameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSupportWakingTame")); }
+    BrzCampoPonteiro bSupportsPassengerSeatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSupportsPassengerSeats")); }
+    BrzCampoPonteiro bSuppressDeathNotificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSuppressDeathNotification")); }
+    BrzCampoPonteiro bSuppressPlayerKillNotificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSuppressPlayerKillNotification")); }
+    BrzCampoPonteiro bSuppressWakingTameMessageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSuppressWakingTameMessage")); }
+    BrzCampoPonteiro bSwimmingWaterDinoMoveLikeFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bSwimmingWaterDinoMoveLikeFlying")); }
+    BrzCampoPonteiro bTakingOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTakingOff")); }
+    BrzCampoPonteiro bTamedAIAllowSpecialAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTamedAIAllowSpecialAttacks")); }
+    BrzCampoPonteiro bTamedAlwaysUseTamedUnsleepAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTamedAlwaysUseTamedUnsleepAnim")); }
+    BrzCampoPonteiro bTamingHasFoodField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTamingHasFood")); }
+    BrzCampoPonteiro bTargetEverythingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTargetEverything")); }
+    BrzCampoPonteiro bTargetingIgnoreWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTargetingIgnoreWildDinos")); }
+    BrzCampoPonteiro bTargetingIgnoredByWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTargetingIgnoredByWildDinos")); }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTearOff")); }
+    BrzCampoPonteiro bTickRowingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTickRowing")); }
+    BrzCampoPonteiro bTriggerBPStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bTriggerBPStasis")); }
+    BrzCampoPonteiro bUniqueDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUniqueDino")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUpdateDinoLimbWallAvoidanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUpdateDinoLimbWallAvoidance")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAdvancedAnimLerpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseAdvancedAnimLerp")); }
+    BrzCampoPonteiro bUseAmphibiousTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseAmphibiousTargeting")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPAdjustAttackIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPAdjustAttackIndex")); }
+    BrzCampoPonteiro bUseBPAdjustDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPAdjustDamage")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPAllowPlayMontageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPAllowPlayMontage")); }
+    BrzCampoPonteiro bUseBPAllowRunningWhileFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPAllowRunningWhileFalling")); }
+    BrzCampoPonteiro bUseBPAllowTeamToTrackTamingDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPAllowTeamToTrackTamingDino")); }
+    BrzCampoPonteiro bUseBPCanAnchorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPCanAnchor")); }
+    BrzCampoPonteiro bUseBPCanCombineMovesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPCanCombineMoves")); }
+    BrzCampoPonteiro bUseBPCanTargetCorpseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPCanTargetCorpse")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckCanSpawnFromLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPCheckCanSpawnFromLocation")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDinoFaceRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPDinoFaceRotation")); }
+    BrzCampoPonteiro bUseBPDinoTooltipCustomProgressBarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPDinoTooltipCustomProgressBar")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFaceRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPFaceRotation")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPForceCameraStyleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPForceCameraStyle")); }
+    BrzCampoPonteiro bUseBPForceKeepBasedOnDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPForceKeepBasedOnDino")); }
+    BrzCampoPonteiro bUseBPGetArmorDurabilityDecreaseMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetArmorDurabilityDecreaseMultiplier")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetFinalMaxSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetFinalMaxSpeed")); }
+    BrzCampoPonteiro bUseBPGetGravityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetGravity")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetOtherActorToIgnoreField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetOtherActorToIgnore")); }
+    BrzCampoPonteiro bUseBPGetOverrideCameraInterpSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetOverrideCameraInterpSpeed")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPGetTamedFollowTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetTamedFollowTarget")); }
+    BrzCampoPonteiro bUseBPGetTargetingDesirabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetTargetingDesirability")); }
+    BrzCampoPonteiro bUseBPGetTargetingDesirabilityForTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPGetTargetingDesirabilityForTurrets")); }
+    BrzCampoPonteiro bUseBPInterceptMoveInputEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPInterceptMoveInputEvents")); }
+    BrzCampoPonteiro bUseBPInterceptMoveInputEventsEvenIfZeroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPInterceptMoveInputEventsEvenIfZero")); }
+    BrzCampoPonteiro bUseBPInterceptTurnInputEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPInterceptTurnInputEvents")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPItemSlotOverridesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPItemSlotOverrides")); }
+    BrzCampoPonteiro bUseBPModifyDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPModifyDesiredRotation")); }
+    BrzCampoPonteiro bUseBPModifyWanderAroundActorLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPModifyWanderAroundActorLocation")); }
+    BrzCampoPonteiro bUseBPModifyXPMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPModifyXPMultiplier")); }
+    BrzCampoPonteiro bUseBPNotifyOnBuffAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPNotifyOnBuffAdded")); }
+    BrzCampoPonteiro bUseBPNotifyOnBuffAddedToMountCharField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPNotifyOnBuffAddedToMountChar")); }
+    BrzCampoPonteiro bUseBPOnCarryCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOnCarryCharacter")); }
+    BrzCampoPonteiro bUseBPOnEndChargingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOnEndCharging")); }
+    BrzCampoPonteiro bUseBPOnImmobilizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOnImmobilize")); }
+    BrzCampoPonteiro bUseBPOnLethalDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOnLethalDamage")); }
+    BrzCampoPonteiro bUseBPOnSimulatedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOnSimulatedTick")); }
+    BrzCampoPonteiro bUseBPOverrideAccessInventoryInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideAccessInventoryInput")); }
+    BrzCampoPonteiro bUseBPOverrideBasedPlayerAimOffsetYawField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideBasedPlayerAimOffsetYaw")); }
+    BrzCampoPonteiro bUseBPOverrideCameraViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideCameraViewTarget")); }
+    BrzCampoPonteiro bUseBPOverrideCharacterNewFallVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideCharacterNewFallVelocity")); }
+    BrzCampoPonteiro bUseBPOverrideCharacterNewSwimVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideCharacterNewSwimVelocity")); }
+    BrzCampoPonteiro bUseBPOverrideCharacterParticleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideCharacterParticle")); }
+    BrzCampoPonteiro bUseBPOverrideCharacterSoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideCharacterSound")); }
+    BrzCampoPonteiro bUseBPOverrideDamageCauserHitMarkerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideDamageCauserHitMarker")); }
+    BrzCampoPonteiro bUseBPOverrideFloatingHUDLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideFloatingHUDLocation")); }
+    BrzCampoPonteiro bUseBPOverrideIsSubmergedForWaterTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideIsSubmergedForWaterTargeting")); }
+    BrzCampoPonteiro bUseBPOverrideJumpZModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideJumpZModifier")); }
+    BrzCampoPonteiro bUseBPOverridePassengerAdditiveAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverridePassengerAdditiveAnim")); }
+    BrzCampoPonteiro bUseBPOverridePhysicsImpulsesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverridePhysicsImpulses")); }
+    BrzCampoPonteiro bUseBPOverridePlayAnimExMontageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverridePlayAnimExMontage")); }
+    BrzCampoPonteiro bUseBPOverrideRiderAccessInventoryInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideRiderAccessInventoryInput")); }
+    BrzCampoPonteiro bUseBPOverrideRiderIndoorsCheckLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideRiderIndoorsCheckLocation")); }
+    BrzCampoPonteiro bUseBPOverrideStencilAllianceForTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideStencilAllianceForTarget")); }
+    BrzCampoPonteiro bUseBPOverrideTamingDescriptionLabelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideTamingDescriptionLabel")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPlayHitEffectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPPlayHitEffect")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseBPPreventMovementModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPPreventMovementMode")); }
+    BrzCampoPonteiro bUseBPSetCharacterMeshseMaterialScalarParamValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPSetCharacterMeshseMaterialScalarParamValue")); }
+    BrzCampoPonteiro bUseBPSetTamedFollowTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPSetTamedFollowTarget")); }
+    BrzCampoPonteiro bUseBPSetThrottleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPSetThrottle")); }
+    BrzCampoPonteiro bUseBPShieldBlockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPShieldBlock")); }
+    BrzCampoPonteiro bUseBPShouldUseLongFallCameraPivotZValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPShouldUseLongFallCameraPivotZValues")); }
+    BrzCampoPonteiro bUseBPSimulatePhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPSimulatePhysics")); }
+    BrzCampoPonteiro bUseBPSkipTerrainTraceForCarriedCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPSkipTerrainTraceForCarriedCharacter")); }
+    BrzCampoPonteiro bUseBPTimerNonDedicatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPTimerNonDedicated")); }
+    BrzCampoPonteiro bUseBPTimerServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBPTimerServer")); }
+    BrzCampoPonteiro bUseBP_AdjustRowingImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_AdjustRowingImpulse")); }
+    BrzCampoPonteiro bUseBP_CanFlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_CanFly")); }
+    BrzCampoPonteiro bUseBP_CustomModifier_MaxSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_CustomModifier_MaxSpeed")); }
+    BrzCampoPonteiro bUseBP_ForceAllowBuffClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_ForceAllowBuffClasses")); }
+    BrzCampoPonteiro bUseBP_ModifyInputAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_ModifyInputAcceleration")); }
+    BrzCampoPonteiro bUseBP_OnBasedPawnNotifiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OnBasedPawnNotifies")); }
+    BrzCampoPonteiro bUseBP_OnBasedPawnSetNotifiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OnBasedPawnSetNotifies")); }
+    BrzCampoPonteiro bUseBP_OnPostNetReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OnPostNetReplication")); }
+    BrzCampoPonteiro bUseBP_OverrideBasedCharactersCameraInterpSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OverrideBasedCharactersCameraInterpSpeed")); }
+    BrzCampoPonteiro bUseBP_OverrideCarriedCharacterTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OverrideCarriedCharacterTransform")); }
+    BrzCampoPonteiro bUseBP_OverrideDinoNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OverrideDinoName")); }
+    BrzCampoPonteiro bUseBP_OverrideRiderCameraCollisionSweepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OverrideRiderCameraCollisionSweep")); }
+    BrzCampoPonteiro bUseBP_OverrideTerminalVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_OverrideTerminalVelocity")); }
+    BrzCampoPonteiro bUseBP_ShouldPreventBasedCharactersCameraInterpolationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBP_ShouldPreventBasedCharactersCameraInterpolation")); }
+    BrzCampoPonteiro bUseBlueprintExtraBabyScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBlueprintExtraBabyScale")); }
+    BrzCampoPonteiro bUseBlueprintJumpInputEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseBlueprintJumpInputEvents")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseColorization")); }
+    BrzCampoPonteiro bUseControllerRotationPitchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseControllerRotationPitch")); }
+    BrzCampoPonteiro bUseControllerRotationRollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseControllerRotationRoll")); }
+    BrzCampoPonteiro bUseControllerRotationYawField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseControllerRotationYaw")); }
+    BrzCampoPonteiro bUseDeferredMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseDeferredMovement")); }
+    BrzCampoPonteiro bUseDescriptiveNameGenderOverridesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseDescriptiveNameGenderOverrides")); }
+    BrzCampoPonteiro bUseDinoLimbWallAvoidanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseDinoLimbWallAvoidance")); }
+    BrzCampoPonteiro bUseFixedSpawnLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseFixedSpawnLevel")); }
+    BrzCampoPonteiro bUseForcestoApplyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseForcestoApply")); }
+    BrzCampoPonteiro bUseGangField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseGang")); }
+    BrzCampoPonteiro bUseGetOverrideSocketField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseGetOverrideSocket")); }
+    BrzCampoPonteiro bUseMountCharacterProneOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseMountCharacterProneOffset")); }
+    BrzCampoPonteiro bUseMyBabyCuddleFoodTypesAsAdditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseMyBabyCuddleFoodTypesAsAdditional")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseOnCharacterSteppedNotifyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseOnCharacterSteppedNotify")); }
+    BrzCampoPonteiro bUseOnStartedAllyTargetLookingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseOnStartedAllyTargetLooking")); }
+    BrzCampoPonteiro bUseOnUpdateMountedDinoMeshHidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseOnUpdateMountedDinoMeshHiding")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUsePlayerMountedCarryingDinoAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsePlayerMountedCarryingDinoAnimation")); }
+    BrzCampoPonteiro bUsePoopAnimationNotifyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsePoopAnimationNotify")); }
+    BrzCampoPonteiro bUsePreciseLaunchingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsePreciseLaunching")); }
+    BrzCampoPonteiro bUseRaftBPTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseRaftBPTick")); }
+    BrzCampoPonteiro bUseRandomLookAtTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseRandomLookAtTarget")); }
+    BrzCampoPonteiro bUseRootLocSwimOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseRootLocSwimOffset")); }
+    BrzCampoPonteiro bUseShoulderMountedLaunchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseShoulderMountedLaunch")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseStasisGrid")); }
+    BrzCampoPonteiro bUseWildRandomScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseWildRandomScale")); }
+    BrzCampoPonteiro bUseZeroGravityWanderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUseZeroGravityWander")); }
+    BrzCampoPonteiro bUse_ModifySavedMoveAcceleration_PostRepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUse_ModifySavedMoveAcceleration_PostRep")); }
+    BrzCampoPonteiro bUse_ModifySavedMoveAcceleration_PreRepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUse_ModifySavedMoveAcceleration_PreRep")); }
+    BrzCampoPonteiro bUsesGenderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsesGender")); }
+    BrzCampoPonteiro bUsesRunningAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsesRunningAnimation")); }
+    BrzCampoPonteiro bUsesWaterWalkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsesWaterWalking")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedCurrentWetDockStructureID` +5, medido na build 25090264
+    //  ancorado em `ReplicatedCurrentWetDockStructureID` +5, medido na build 25535041
     //  (offset absoluto medido: 0x3399; confianca alta)
     void*& bUsingLongRangeStasisField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedCurrentWetDockStructureID", 5); }
-    BitFieldValue<bool, unsigned __int32> bVehicleAlwaysAllowTargetingByWildDinos()
-    { return { (void*)this, "bVehicleAlwaysAllowTargetingByWildDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bVehicleUpdatePPBlends()
-    { return { (void*)this, "bVehicleUpdatePPBlends" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPerformanceThrottledTick()
-    { return { (void*)this, "bWantsPerformanceThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsRealtimeThrottledTick()
-    { return { (void*)this, "bWantsRealtimeThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsServerThrottledTick()
-    { return { (void*)this, "bWantsServerThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsToRun()
-    { return { (void*)this, "bWantsToRun" }; }
+    BrzCampoPonteiro bVehicleAlwaysAllowTargetingByWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bVehicleAlwaysAllowTargetingByWildDinos")); }
+    BrzCampoPonteiro bVehicleUpdatePPBlendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bVehicleUpdatePPBlends")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWantsServerThrottledTick")); }
+    BrzCampoPonteiro bWantsToRunField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWantsToRun")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +32, medido na build 25090264
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +32, medido na build 25535041
     //  (offset absoluto medido: 0x3408; confianca alta)
     void*& bWasAnchoredOrDryDockedField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CreakMetalComponent` +8, medido na build 25090264
+    //  ancorado em `CreakMetalComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2DD8; confianca alta)
     void*& bWasAtFullSpeedField() const
     { return BrzCampoAncorado<void*>(this, "CreakMetalComponent", 8); }
-    BitFieldValue<bool, unsigned __int32> bWasBeingDragged()
-    { return { (void*)this, "bWasBeingDragged" }; }
-    BitFieldValue<bool, unsigned __int32> bWasJumping()
-    { return { (void*)this, "bWasJumping" }; }
-    BitFieldValue<bool, unsigned __int32> bWildAllowFollowTamedTarget()
-    { return { (void*)this, "bWildAllowFollowTamedTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bWildAllowTargetingNeutralStructures()
-    { return { (void*)this, "bWildAllowTargetingNeutralStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bWildIgnoredByAutoTurrets()
-    { return { (void*)this, "bWildIgnoredByAutoTurrets" }; }
+    BrzCampoPonteiro bWasBeingDraggedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWasBeingDragged")); }
+    BrzCampoPonteiro bWasInCombatLastTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWasInCombatLastTick")); }
+    BrzCampoPonteiro bWasJumpingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWasJumping")); }
+    BrzCampoPonteiro bWildAllowFollowTamedTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWildAllowFollowTamedTarget")); }
+    BrzCampoPonteiro bWildAllowTargetingNeutralStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWildAllowTargetingNeutralStructures")); }
+    BrzCampoPonteiro bWildIgnoredByAutoTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWildIgnoredByAutoTurrets")); }
     float& chargingRotationRateModifierField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.chargingRotationRateModifier"); }
     int& customBitFlagsField() const
     { return *GetNativePointerField<int*>(this, "APrimalShip.customBitFlags"); }
-    BitFieldValue<bool, unsigned __int32> hasAlreadySetGender()
-    { return { (void*)this, "hasAlreadySetGender" }; }
+    BrzCampoPonteiro hasAlreadySetGenderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.hasAlreadySetGender")); }
     float& maxRangeForWeaponTriggeredTooltipField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.maxRangeForWeaponTriggeredTooltip"); }
     BitFieldValue<bool, unsigned __int32> AreTorchesLit()

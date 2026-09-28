@@ -54,7 +54,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePlacer.CanDrawBuildingUI()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanDrawBuildingUI() const
     {
         return NativeCall<void*>(this, "APrimalStructurePlacer.CanDrawBuildingUI()");
@@ -62,7 +62,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructurePlacer.CanStartPlacingStructure()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanStartPlacingStructure() const
     {
         return NativeCall<bool>(this, "APrimalStructurePlacer.CanStartPlacingStructure()");
@@ -70,7 +70,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructurePlacer.CancelPlacingStructure(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void CancelPlacingStructure(int a0) const
     {
         NativeCall<void, int>(this, "APrimalStructurePlacer.CancelPlacingStructure(bool)", a0);
@@ -94,7 +94,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructurePlacer.CyclePlacingRotationMode()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CyclePlacingRotationMode() const
     {
         NativeCall<void>(this, "APrimalStructurePlacer.CyclePlacingRotationMode()");
@@ -110,7 +110,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructurePlacer.CycleYawIncrement()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CycleYawIncrement() const
     {
         NativeCall<void>(this, "APrimalStructurePlacer.CycleYawIncrement()");
@@ -118,7 +118,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructurePlacer.DrawHUD(AShooterHUD*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void DrawHUD(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructurePlacer.DrawHUD(AShooterHUD*)", a0);
@@ -150,7 +150,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePlacer.GetLastPlacementProperties(UE::Math::TVector<double>&,UE::Math::TRotator<
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLastPlacementProperties(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APrimalStructurePlacer.GetLastPlacementProperties(UE::Math::TVector<double>&,UE::Math::TRotator<double>&,UE::Math::TRotator<double>&)", a0, a1, a2);
@@ -182,7 +182,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructurePlacer.HandleOnUseActionTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=124]]
+    // endereco: casamento de bytes com a build de referencia
     void HandleOnUseActionTimer() const
     {
         NativeCall<void>(this, "APrimalStructurePlacer.HandleOnUseActionTimer()");
@@ -198,7 +198,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructurePlacer.HandleSnapCycleActionTimer()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void HandleSnapCycleActionTimer() const
     {
         NativeCall<void>(this, "APrimalStructurePlacer.HandleSnapCycleActionTimer()");
@@ -206,7 +206,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePlacer.HandleToggleCancelAction(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HandleToggleCancelAction(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalStructurePlacer.HandleToggleCancelAction(bool)", a0);
@@ -214,7 +214,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructurePlacer.HandleToggleCancelActionTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=172+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void HandleToggleCancelActionTimer() const
     {
         NativeCall<void>(this, "APrimalStructurePlacer.HandleToggleCancelActionTimer()");
@@ -222,7 +222,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePlacer.HandleToggleGhostAction(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=622+grafo=12/12]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HandleToggleGhostAction(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalStructurePlacer.HandleToggleGhostAction(bool)", a0);
@@ -230,7 +230,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructurePlacer.HandleToggleGhostActionTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void HandleToggleGhostActionTimer() const
     {
         NativeCall<void>(this, "APrimalStructurePlacer.HandleToggleGhostActionTimer()");
@@ -238,7 +238,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructurePlacer.IsPlacingActive()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPlacingActive() const
     {
         return NativeCall<bool>(this, "APrimalStructurePlacer.IsPlacingActive()");
@@ -246,7 +246,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructurePlacer.SetChoosingRotation(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=28]]
+    // endereco: casamento de bytes com a build de referencia
     void SetChoosingRotation(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructurePlacer.SetChoosingRotation(bool)", a0);
@@ -294,7 +294,7 @@ struct APrimalStructurePlacer : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePlacer.ToggleDebugStructures()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ToggleDebugStructures() const
     {
         return NativeCall<void*>(this, "APrimalStructurePlacer.ToggleDebugStructures()");
@@ -355,12 +355,12 @@ struct APrimalStructurePlacer : public AInfo
     FString& KeyUseStringField() const
     { return *GetNativePointerField<FString*>(this, "APrimalStructurePlacer.KeyUseString"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +24, medido na build 25090264
+    //  ancorado em `NumVariantsString` +24, medido na build 25535041
     //  (offset absoluto medido: 0x648; confianca alta)
     void*& LastExtendedRangeRequestTimeField() const
     { return BrzCampoAncorado<void*>(this, "NumVariantsString", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +40, medido na build 25090264
+    //  ancorado em `NumVariantsString` +40, medido na build 25535041
     //  (offset absoluto medido: 0x658; confianca media)
     void*& LastHitLocField() const
     { return BrzCampoAncorado<void*>(this, "NumVariantsString", 40); }
@@ -371,14 +371,14 @@ struct APrimalStructurePlacer : public AInfo
     float& PitchSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructurePlacer.PitchSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +32, medido na build 25090264
+    //  ancorado em `NumVariantsString` +32, medido na build 25535041
     //  (offset absoluto medido: 0x650; confianca alta)
     FItemNetID& PlaceUsingItemIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "NumVariantsString", 32); }
     TArray<void*>& PlaceableStructuresField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructurePlacer.PlaceableStructures"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +16, medido na build 25090264
+    //  ancorado em `NumVariantsString` +16, medido na build 25535041
     //  (offset absoluto medido: 0x640; confianca alta)
     float& PlacementAdjustHeightAmtField() const
     { return BrzCampoAncorado<float>(this, "NumVariantsString", 16); }
@@ -410,6 +410,22 @@ struct APrimalStructurePlacer : public AInfo
     { return *GetNativePointerField<float*>(this, "APrimalStructurePlacer.YawOffset"); }
     float& YawOffsetIncrementField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructurePlacer.YawOffsetIncrement"); }
+    BrzCampoPonteiro bDebugStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bDebugStructures")); }
+    BrzCampoPonteiro bForceDisplayMissionAreaStructureNoBuildZonesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bForceDisplayMissionAreaStructureNoBuildZones")); }
+    BrzCampoPonteiro bIgnoreOptionalSnapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bIgnoreOptionalSnaps")); }
+    BrzCampoPonteiro bIsPlacementFlippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bIsPlacementFlipped")); }
+    BrzCampoPonteiro bIsPlacingGhostStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bIsPlacingGhostStructures")); }
+    BrzCampoPonteiro bLastPlacementOnSaddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bLastPlacementOnSaddle")); }
+    BrzCampoPonteiro bLastPlacementWasSnappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bLastPlacementWasSnapped")); }
+    BrzCampoPonteiro bLockCameraDuringChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePlacer.bLockCameraDuringChooseRotation")); }
     BitFieldValue<bool, unsigned __int32> bDebugStructures()
     { return { (void*)this, "bDebugStructures" }; }
     BitFieldValue<bool, unsigned __int32> bForceDisplayMissionAreaStructureNoBuildZones()

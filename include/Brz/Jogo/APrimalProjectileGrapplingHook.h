@@ -77,6 +77,8 @@ struct APrimalProjectileGrapplingHook : public AShooterProjectile
     { return *GetNativePointerField<float*>(this, "APrimalProjectileGrapplingHook.ReleaseRopeSpeed"); }
     bool& bAllowPullFleeingField() const
     { return *GetNativePointerField<bool*>(this, "APrimalProjectileGrapplingHook.bAllowPullFleeing"); }
+    BrzCampoPonteiro bAllowPullSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalProjectileGrapplingHook.bAllowPullSleeping")); }
     BitFieldValue<bool, unsigned __int32> bAllowPullFleeing()
     { return { (void*)this, "bAllowPullFleeing" }; }
     BitFieldValue<bool, unsigned __int32> bAllowPullSleeping()

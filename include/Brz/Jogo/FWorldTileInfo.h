@@ -53,12 +53,18 @@ struct FWorldTileInfo
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.AbsolutePosition")); }
     BrzCampoPonteiro BoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.Bounds")); }
+    BrzCampoPonteiro LODListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.LODList")); }
     BrzCampoPonteiro LayerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.Layer")); }
+    BrzCampoPonteiro ParentTilePackageNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.ParentTilePackageName")); }
     BrzCampoPonteiro PositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.Position")); }
     BrzCampoPonteiro ZOrderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.ZOrder")); }
+    BrzCampoPonteiro bHideInTileViewField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileInfo.bHideInTileView")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDTILEINFO_H

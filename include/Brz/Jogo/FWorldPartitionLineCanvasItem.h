@@ -35,10 +35,10 @@ struct FWorldPartitionLineCanvasItem
 
     BrzCampoPonteiro ColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionLineCanvasItem.Color")); }
-    BitFieldValue<bool, unsigned __int32> End()
-    { return { (void*)this, "End" }; }
-    BitFieldValue<bool, unsigned __int32> Start()
-    { return { (void*)this, "Start" }; }
+    BrzCampoPonteiro EndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionLineCanvasItem.End")); }
+    BrzCampoPonteiro StartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionLineCanvasItem.Start")); }
     BrzCampoPonteiro ThicknessField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionLineCanvasItem.Thickness")); }
 };

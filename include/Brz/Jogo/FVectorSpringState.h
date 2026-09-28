@@ -32,8 +32,13 @@ struct FVectorSpringState
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
-    BitFieldValue<bool, unsigned __int32> Velocity()
-    { return { (void*)this, "Velocity" }; }
+
+    BrzCampoPonteiro PrevTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorSpringState.PrevTarget")); }
+    BrzCampoPonteiro VelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorSpringState.Velocity")); }
+    BrzCampoPonteiro bPrevTargetValidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorSpringState.bPrevTargetValid")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORSPRINGSTATE_H

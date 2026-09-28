@@ -62,7 +62,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=46]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BeginPlay() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.BeginPlay()");
@@ -78,7 +78,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.CanEnterCannons()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanEnterCannons() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.CanEnterCannons()");
@@ -94,7 +94,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_AimReleased()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Cannon_AimReleased() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_AimReleased()");
@@ -110,7 +110,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_CycleReleased()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Cannon_CycleReleased() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_CycleReleased()");
@@ -118,7 +118,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_FirePressed()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=493+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Cannon_FirePressed() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_FirePressed()");
@@ -126,7 +126,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_FireReleased()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Cannon_FireReleased() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_FireReleased()");
@@ -134,7 +134,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_OnGamepadPitchInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Cannon_OnGamepadPitchInput(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalShipCannonControlComponent.Cannon_OnGamepadPitchInput(float)", a0);
@@ -142,7 +142,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_OnGamepadYawInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Cannon_OnGamepadYawInput(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalShipCannonControlComponent.Cannon_OnGamepadYawInput(float)", a0);
@@ -150,7 +150,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_PumpAimDeltas()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Cannon_PumpAimDeltas() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_PumpAimDeltas()");
@@ -158,7 +158,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_PumpFire()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Cannon_PumpFire() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_PumpFire()");
@@ -166,7 +166,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.Cannon_UseReleaseClaim()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=38]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Cannon_UseReleaseClaim() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.Cannon_UseReleaseClaim()");
@@ -222,7 +222,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.ComputeMaxReachableYawForSide(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ComputeMaxReachableYawForSide(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.ComputeMaxReachableYawForSide(EShipFiringSide)", a0);
@@ -254,7 +254,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.EndAimLocal(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndAimLocal(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalShipCannonControlComponent.EndAimLocal(AShooterPlayerController*)", a0);
@@ -262,7 +262,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.EndPlay(EEndPlayReason::Type)", a0);
@@ -278,7 +278,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.FireCannonDeferred(int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FireCannonDeferred(int a0, int a1) const
     {
         return NativeCall<void*, int, int>(this, "UPrimalShipCannonControlComponent.FireCannonDeferred(int,int)", a0, a1);
@@ -286,7 +286,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.FireSideVolley(EShipFiringSide,int,AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FireSideVolley(int a0, int a1, void* a2) const
     {
         return NativeCall<void*, int, int, void*>(this, "UPrimalShipCannonControlComponent.FireSideVolley(EShipFiringSide,int,AShooterCharacter*)", a0, a1, a2);
@@ -294,7 +294,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetActiveAimYaw()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetActiveAimYaw() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.GetActiveAimYaw()");
@@ -302,7 +302,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetActiveBandRange()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetActiveBandRange() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.GetActiveBandRange()");
@@ -310,7 +310,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetAimYawForSide(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAimYawForSide(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.GetAimYawForSide(EShipFiringSide)", a0);
@@ -334,7 +334,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetBandRangeForSide(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBandRangeForSide(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.GetBandRangeForSide(EShipFiringSide)", a0);
@@ -350,7 +350,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetCannonsCooldownForSide(EShipFiringSide,float&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCannonsCooldownForSide(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalShipCannonControlComponent.GetCannonsCooldownForSide(EShipFiringSide,float&)", a0, a1);
@@ -366,7 +366,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetClaimedSideForCharacter(APrimalCharacter*,EShipFiringSide&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetClaimedSideForCharacter(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalShipCannonControlComponent.GetClaimedSideForCharacter(APrimalCharacter*,EShipFiringSide&)", a0, a1);
@@ -374,7 +374,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetEffectiveAimerForSide(EShipFiringSide)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=457]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetEffectiveAimerForSide(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.GetEffectiveAimerForSide(EShipFiringSide)", a0);
@@ -390,7 +390,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.GetSideCenterYawLocal(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSideCenterYawLocal(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.GetSideCenterYawLocal(EShipFiringSide)", a0);
@@ -414,7 +414,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.IsCannonAvailableForCharacter(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsCannonAvailableForCharacter(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.IsCannonAvailableForCharacter(EShipFiringSide)", a0);
@@ -422,7 +422,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.IsCannonBeingAimedForSide(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsCannonBeingAimedForSide(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.IsCannonBeingAimedForSide(EShipFiringSide)", a0);
@@ -430,7 +430,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.IsGunportMoving()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsGunportMoving() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.IsGunportMoving()");
@@ -446,7 +446,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.MulticastFireCharacterFromCannon_Implementation(AShooterCharac
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MulticastFireCharacterFromCannon_Implementation(void* a0, void* a1, void* a2, void* a3, void* a4) const
     {
         return NativeCall<void*, void*, void*, void*, void*, void*>(this, "UPrimalShipCannonControlComponent.MulticastFireCharacterFromCannon_Implementation(AShooterCharacter*,UE::Math::TVector<double>,UE::Math::TRotator<double>,UE::Math::TVector<double>,AActor*)", a0, a1, a2, a3, a4);
@@ -454,7 +454,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.MulticastLoadCharacterIntoCannon_Implementation(int,AShooterCh
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MulticastLoadCharacterIntoCannon_Implementation(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalShipCannonControlComponent.MulticastLoadCharacterIntoCannon_Implementation(int,AShooterCharacter*)", a0, a1);
@@ -486,7 +486,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.MulticastUnloadCharacterFromCannon(int,AShooterCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MulticastUnloadCharacterFromCannon(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalShipCannonControlComponent.MulticastUnloadCharacterFromCannon(int,AShooterCharacter*)", a0, a1);
@@ -494,7 +494,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.MulticastUnloadCharacterFromCannon_Implementation(int,AShooter
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MulticastUnloadCharacterFromCannon_Implementation(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalShipCannonControlComponent.MulticastUnloadCharacterFromCannon_Implementation(int,AShooterCharacter*)", a0, a1);
@@ -502,7 +502,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.OnRep_GunportsOpen()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_GunportsOpen() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.OnRep_GunportsOpen()");
@@ -534,7 +534,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.RegisterGunportMeshes(TArray<UStaticMeshComponent*,TSizedDefau
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=108]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RegisterGunportMeshes(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalShipCannonControlComponent.RegisterGunportMeshes(TArray<UStaticMeshComponent*,TSizedDefaultAllocator<32>>&)", a0);
@@ -542,7 +542,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.ReleaseAllSidesForCharacter(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ReleaseAllSidesForCharacter(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalShipCannonControlComponent.ReleaseAllSidesForCharacter(APrimalCharacter*)", a0);
@@ -550,7 +550,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.RemoveAmmoBox(APrimalStructureItemContainer*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=13]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro RemoveAmmoBox(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalShipCannonControlComponent.RemoveAmmoBox(APrimalStructureItemContainer*)", a0);
@@ -574,7 +574,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.SetCannonClaimLock(AShooterPlayerController*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetCannonClaimLock(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "UPrimalShipCannonControlComponent.SetCannonClaimLock(AShooterPlayerController*,bool)", a0, a1);
@@ -582,7 +582,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.SetCannonLoadedCharacter(int,AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetCannonLoadedCharacter(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalShipCannonControlComponent.SetCannonLoadedCharacter(int,AShooterCharacter*)", a0, a1);
@@ -590,7 +590,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.SetInputEnabledForPC(AShooterPlayerController*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetInputEnabledForPC(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "UPrimalShipCannonControlComponent.SetInputEnabledForPC(AShooterPlayerController*,bool)", a0, a1);
@@ -598,7 +598,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.SideHasCannons(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SideHasCannons(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.SideHasCannons(EShipFiringSide)", a0);
@@ -606,7 +606,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.SideRequiresGunports(EShipFiringSide)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SideRequiresGunports(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalShipCannonControlComponent.SideRequiresGunports(EShipFiringSide)", a0);
@@ -630,7 +630,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.TickComponent(float,ELevelTick,FActorComponentTickFunction*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TickComponent(float a0, int a1, void* a2) const
     {
         return NativeCall<void*, float, int, void*>(this, "UPrimalShipCannonControlComponent.TickComponent(float,ELevelTick,FActorComponentTickFunction*)", a0, a1, a2);
@@ -638,7 +638,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.TryApplyCannonAimDeltas(APrimalCharacter*,float,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TryApplyCannonAimDeltas(void* a0, float a1, float a2) const
     {
         return NativeCall<void*, void*, float, float>(this, "UPrimalShipCannonControlComponent.TryApplyCannonAimDeltas(APrimalCharacter*,float,float)", a0, a1, a2);
@@ -670,7 +670,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.TryEndCannonAim(APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TryEndCannonAim(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalShipCannonControlComponent.TryEndCannonAim(APrimalCharacter*)", a0);
@@ -774,6 +774,8 @@ struct UPrimalShipCannonControlComponent
     { return *GetNativePointerField<int*>(this, "UPrimalShipCannonControlComponent.CustomData"); }
     FName& CustomTagField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalShipCannonControlComponent.CustomTag"); }
+    BrzCampoPonteiro DefaultAimCameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.DefaultAimCamera")); }
     BrzCampoPonteiro DefaultMountSettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.DefaultMountSettings")); }
     float& GamepadCannonPitchRateField() const
@@ -796,6 +798,14 @@ struct UPrimalShipCannonControlComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.HitIndicatorColor")); }
     BrzCampoPonteiro HitIndicatorColorCooldownField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.HitIndicatorColorCooldown")); }
+    BrzCampoPonteiro LoadedAmmoVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.LoadedAmmoVFX")); }
+    BrzCampoPonteiro LoadedCharacterAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.LoadedCharacterAnim")); }
+    FName& LoadedCharacterAttachSocketField() const
+    { return *GetNativePointerField<FName*>(this, "UPrimalShipCannonControlComponent.LoadedCharacterAttachSocket"); }
+    BrzCampoPonteiro LoadedCharacterMontageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.LoadedCharacterMontage")); }
     BrzCampoPonteiro LocalAimSideField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.LocalAimSide")); }
     float& LocalAimYawOffsetField() const
@@ -821,7 +831,7 @@ struct UPrimalShipCannonControlComponent
     BrzCampoPonteiro OnGunportsChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.OnGunportsChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bGunportsOpen` +8, medido na build 25090264
+    //  ancorado em `bGunportsOpen` +8, medido na build 25535041
     //  (offset absoluto medido: 0x338; confianca alta)
     void*& PendingFireTimersField() const
     { return BrzCampoAncorado<void*>(this, "bGunportsOpen", 8); }
@@ -849,54 +859,68 @@ struct UPrimalShipCannonControlComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.SideClaimants")); }
     BrzCampoPonteiro SideVolleyStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.SideVolleyState")); }
+    BrzCampoPonteiro StationCamerasField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.StationCameras")); }
     BrzCampoPonteiro StationGatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.StationGates")); }
     int& UCSSerializationIndexField() const
     { return *GetNativePointerField<int*>(this, "UPrimalShipCannonControlComponent.UCSSerializationIndex"); }
+    BrzCampoPonteiro bAimActiveLocalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bAimActiveLocal")); }
     BrzCampoPonteiro bAimActivePerSideField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bAimActivePerSide")); }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
+    BrzCampoPonteiro bAimPitchLockActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bAimPitchLockActive")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bAutoActivate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCannonClaimLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bCannonClaimLocked")); }
+    BrzCampoPonteiro bCannonFiringHeldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bCannonFiringHeld")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bGunportsOpenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bGunportsOpen")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bProjectilesInheritShipVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bProjectilesInheritShipVelocity")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bReplicates")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.bUseBPOnComponentTick")); }
     BitFieldValue<bool, unsigned __int32> bAimActiveLocal()
     { return { (void*)this, "bAimActiveLocal" }; }
     BitFieldValue<bool, unsigned __int32> bAimPitchLockActive()

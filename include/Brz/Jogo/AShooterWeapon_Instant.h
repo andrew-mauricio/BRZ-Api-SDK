@@ -36,7 +36,7 @@ struct AShooterWeapon_Instant : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Instant.BPGetCurrentSpread()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=62]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float BPGetCurrentSpread() const
     {
         return NativeCall<float>(this, "AShooterWeapon_Instant.BPGetCurrentSpread()");
@@ -76,7 +76,7 @@ struct AShooterWeapon_Instant : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Instant.ComputeAmountOfHitsToProcess(TArray<FHitResult,TSizedDefaultAllocator<32>
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int ComputeAmountOfHitsToProcess(void* a0, void* a1) const
     {
         return NativeCall<int, void*, void*>(this, "AShooterWeapon_Instant.ComputeAmountOfHitsToProcess(TArray<FHitResult,TSizedDefaultAllocator<32>>*,TArray<FVector_NetQuantizeNormal,TSizedDefaultAllocator<32>>*)", a0, a1);
@@ -100,7 +100,7 @@ struct AShooterWeapon_Instant : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Instant.GetCurrentSpread()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=103]]
+    // endereco: casamento de bytes com a build de referencia
     float GetCurrentSpread() const
     {
         return NativeCall<float>(this, "AShooterWeapon_Instant.GetCurrentSpread()");
@@ -108,7 +108,7 @@ struct AShooterWeapon_Instant : public AShooterWeapon
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Instant.GetFireLocation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetFireLocation() const
     {
         return NativeCall<void*>(this, "AShooterWeapon_Instant.GetFireLocation()");
@@ -116,7 +116,7 @@ struct AShooterWeapon_Instant : public AShooterWeapon
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Instant.GetFireLocationAndDirection(UE::Math::TVector<double>&,UE::Math::TVector<
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=120]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetFireLocationAndDirection(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterWeapon_Instant.GetFireLocationAndDirection(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
@@ -156,7 +156,7 @@ struct AShooterWeapon_Instant : public AShooterWeapon
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Instant.ServerForceShot(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ServerForceShot(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "AShooterWeapon_Instant.ServerForceShot(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1, a2);
@@ -256,6 +256,34 @@ struct AShooterWeapon_Instant : public AShooterWeapon
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.TrailFX_Niagara")); }
     FName& TrailTargetParamField() const
     { return *GetNativePointerField<FName*>(this, "AShooterWeapon_Instant.TrailTargetParam"); }
+    BrzCampoPonteiro bAllowNativeWithSpawnedImpactsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bAllowNativeWithSpawnedImpacts")); }
+    BrzCampoPonteiro bAlwaysSpawnTrailAtMuzzleLocField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bAlwaysSpawnTrailAtMuzzleLoc")); }
+    BrzCampoPonteiro bAttachTrailFXToFirstPersonMuzzleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bAttachTrailFXToFirstPersonMuzzle")); }
+    BrzCampoPonteiro bClampTrailToMaxWeaponRangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bClampTrailToMaxWeaponRange")); }
+    BrzCampoPonteiro bExecSpreadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bExecSpread")); }
+    BrzCampoPonteiro bFireFromMuzzleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bFireFromMuzzle")); }
+    BrzCampoPonteiro bPerformObstructionCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bPerformObstructionCheck")); }
+    BrzCampoPonteiro bPlayFireSoundOnInstantHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bPlayFireSoundOnInstantHit")); }
+    BrzCampoPonteiro bPreventSimulatingMultipleShotsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bPreventSimulatingMultipleShots")); }
+    BrzCampoPonteiro bRotateTrailFXByFireDirectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bRotateTrailFXByFireDirection")); }
+    BrzCampoPonteiro bSpawnTrailToHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bSpawnTrailToHit")); }
+    BrzCampoPonteiro bUseBPGetCurrentSpreadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bUseBPGetCurrentSpread")); }
+    BrzCampoPonteiro bUseBPKillImpactEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bUseBPKillImpactEffects")); }
+    BrzCampoPonteiro bUseBPSpawnImpactEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Instant.bUseBPSpawnImpactEffects")); }
     BitFieldValue<bool, unsigned __int32> bPlayFireSoundOnInstantHit()
     { return { (void*)this, "bPlayFireSoundOnInstantHit" }; }
     BitFieldValue<bool, unsigned __int32> bExecSpread()

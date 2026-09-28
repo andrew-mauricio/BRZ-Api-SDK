@@ -67,6 +67,8 @@ struct AHordeCrateManager : public AActor
     { return *GetNativePointerField<float*>(this, "AHordeCrateManager.MinDistanceFromOtherEvent"); }
     float& MinEventCheckIntervalField() const
     { return *GetNativePointerField<float*>(this, "AHordeCrateManager.MinEventCheckInterval"); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHordeCrateManager.bIsEnabled")); }
     bool& bUseBPForceStartHordeField() const
     { return *GetNativePointerField<bool*>(this, "AHordeCrateManager.bUseBPForceStartHorde"); }
     BitFieldValue<bool, unsigned __int32> bIsEnabled()

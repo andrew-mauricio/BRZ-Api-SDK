@@ -43,7 +43,7 @@ struct FLevelUtils
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelUtils.FindStreamingLevel(ULevel*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindStreamingLevel(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FLevelUtils.FindStreamingLevel(ULevel*)", a0);
@@ -91,6 +91,8 @@ struct FLevelUtils
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelUtils.Level")); }
     BrzCampoPonteiro LevelTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelUtils.LevelTransform")); }
+    BrzCampoPonteiro bSetRelativeTransformDirectlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelUtils.bSetRelativeTransformDirectly")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELUTILS_H

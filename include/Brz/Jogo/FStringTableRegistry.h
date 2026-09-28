@@ -61,7 +61,7 @@ struct FStringTableRegistry
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringTableRegistry.Get()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=222+chamadores=11]]
     UObject* Get() const
     {
         return NativeCall<UObject*>(this, "FStringTableRegistry.Get()");
@@ -90,6 +90,15 @@ struct FStringTableRegistry
     {
         return NativeCall<void*, unsigned long long>(this, "FStringTableRegistry.UnregisterStringTable(FName)", a0);
     }
+
+    BrzCampoPonteiro LoggedMissingEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableRegistry.LoggedMissingEntries")); }
+    BrzCampoPonteiro LoggedMissingEntriesCSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableRegistry.LoggedMissingEntriesCS")); }
+    BrzCampoPonteiro RegisteredStringTablesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableRegistry.RegisteredStringTables")); }
+    BrzCampoPonteiro RegisteredStringTablesCSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableRegistry.RegisteredStringTablesCS")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGTABLEREGISTRY_H

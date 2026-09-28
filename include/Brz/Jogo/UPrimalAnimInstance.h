@@ -91,7 +91,7 @@ struct UPrimalAnimInstance
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAnimInstance.NativePostEvaluateAnimation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=135]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro NativePostEvaluateAnimation() const
     {
         return NativeCall<void*>(this, "UPrimalAnimInstance.NativePostEvaluateAnimation()");
@@ -171,20 +171,24 @@ struct UPrimalAnimInstance
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalAnimInstance.RootMotionMode"); }
     BrzCampoPonteiro SlotGroupInertializationRequestDataMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.SlotGroupInertializationRequestDataMap")); }
-    BitFieldValue<bool, unsigned __int32> bIsAnimSharingPaused()
-    { return { (void*)this, "bIsAnimSharingPaused" }; }
-    BitFieldValue<bool, unsigned __int32> bPropagateNotifiesToLinkedInstances()
-    { return { (void*)this, "bPropagateNotifiesToLinkedInstances" }; }
-    BitFieldValue<bool, unsigned __int32> bQueueMontageEvents()
-    { return { (void*)this, "bQueueMontageEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bReceiveNotifiesFromLinkedInstances()
-    { return { (void*)this, "bReceiveNotifiesFromLinkedInstances" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMainInstanceMontageEvaluationData()
-    { return { (void*)this, "bUseMainInstanceMontageEvaluationData" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMultiThreadedAnimationUpdate()
-    { return { (void*)this, "bUseMultiThreadedAnimationUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bUsingCopyPoseFromMesh()
-    { return { (void*)this, "bUsingCopyPoseFromMesh" }; }
+    BrzCampoPonteiro bCheatDisableIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bCheatDisableIK")); }
+    BrzCampoPonteiro bEnableAnimationGroundConformingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bEnableAnimationGroundConforming")); }
+    BrzCampoPonteiro bIsAnimSharingPausedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bIsAnimSharingPaused")); }
+    BrzCampoPonteiro bPropagateNotifiesToLinkedInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bPropagateNotifiesToLinkedInstances")); }
+    BrzCampoPonteiro bQueueMontageEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bQueueMontageEvents")); }
+    BrzCampoPonteiro bReceiveNotifiesFromLinkedInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bReceiveNotifiesFromLinkedInstances")); }
+    BrzCampoPonteiro bUseMainInstanceMontageEvaluationDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bUseMainInstanceMontageEvaluationData")); }
+    BrzCampoPonteiro bUseMultiThreadedAnimationUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bUseMultiThreadedAnimationUpdate")); }
+    BrzCampoPonteiro bUsingCopyPoseFromMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAnimInstance.bUsingCopyPoseFromMesh")); }
     BitFieldValue<bool, unsigned __int32> bCheatDisableIK()
     { return { (void*)this, "bCheatDisableIK" }; }
     BitFieldValue<bool, unsigned __int32> bEnableAnimationGroundConforming()

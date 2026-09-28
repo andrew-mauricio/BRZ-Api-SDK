@@ -55,6 +55,20 @@ struct FLevelSequenceAnimSequenceLinkItem
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.SkelTrackGuid")); }
     BrzCampoPonteiro WarmUpFramesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.WarmUpFrames")); }
+    BrzCampoPonteiro bEvaluateAllSkeletalMeshComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bEvaluateAllSkeletalMeshComponents")); }
+    BrzCampoPonteiro bExportAttributeCurvesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bExportAttributeCurves")); }
+    BrzCampoPonteiro bExportMaterialCurvesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bExportMaterialCurves")); }
+    BrzCampoPonteiro bExportMorphTargetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bExportMorphTargets")); }
+    BrzCampoPonteiro bExportTransformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bExportTransforms")); }
+    BrzCampoPonteiro bRecordInWorldSpaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bRecordInWorldSpace")); }
+    BrzCampoPonteiro bUseCustomTimeRangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceAnimSequenceLinkItem.bUseCustomTimeRange")); }
     BitFieldValue<bool, unsigned __int32> bEvaluateAllSkeletalMeshComponents()
     { return { (void*)this, "bEvaluateAllSkeletalMeshComponents" }; }
     BitFieldValue<bool, unsigned __int32> bExportAttributeCurves()

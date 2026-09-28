@@ -32,6 +32,13 @@ struct FVectorVMExternalFunctionContextProxy
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ExperimentalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextProxy.Experimental")); }
+    BrzCampoPonteiro LegacyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextProxy.Legacy")); }
+    BrzCampoPonteiro UsingExperimentalVMField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExternalFunctionContextProxy.UsingExperimentalVM")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMEXTERNALFUNCTIONCONTEXTPROXY_H

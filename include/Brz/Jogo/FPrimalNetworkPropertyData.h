@@ -32,8 +32,13 @@ struct FPrimalNetworkPropertyData
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
-    BitFieldValue<bool, unsigned __int32> bIsDynamic()
-    { return { (void*)this, "bIsDynamic" }; }
+
+    BrzCampoPonteiro FinalOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalNetworkPropertyData.FinalOffset")); }
+    BrzCampoPonteiro bIsDynamicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalNetworkPropertyData.bIsDynamic")); }
+    BrzCampoPonteiro pPropertyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalNetworkPropertyData.pProperty")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALNETWORKPROPERTYDATA_H

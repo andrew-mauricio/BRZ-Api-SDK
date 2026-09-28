@@ -43,7 +43,7 @@ struct UWorldMetricsActorTracker
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldMetricsActorTracker.GetAllocatedSize()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAllocatedSize() const
     {
         return NativeCall<void*>(this, "UWorldMetricsActorTracker.GetAllocatedSize()");
@@ -72,8 +72,15 @@ struct UWorldMetricsActorTracker
     {
         return NativeCall<void*, void*>(this, "UWorldMetricsActorTracker.OnRelease(UObject*)", a0);
     }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+
+    BrzCampoPonteiro ActorAddedToWorldHandleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldMetricsActorTracker.ActorAddedToWorldHandle")); }
+    BrzCampoPonteiro ActorRemovedFromWorldHandleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldMetricsActorTracker.ActorRemovedFromWorldHandle")); }
+    BrzCampoPonteiro SubscribersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldMetricsActorTracker.Subscribers")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldMetricsActorTracker.bIsEnabled")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UWORLDMETRICSACTORTRACKER_H

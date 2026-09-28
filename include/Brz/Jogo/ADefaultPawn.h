@@ -37,7 +37,7 @@ struct ADefaultPawn : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADefaultPawn.MoveForward(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void MoveForward(float a0) const
     {
         NativeCall<void, float>(this, "ADefaultPawn.MoveForward(float)", a0);
@@ -45,7 +45,7 @@ struct ADefaultPawn : public APrimalPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADefaultPawn.MoveRight(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void MoveRight(float a0) const
     {
         NativeCall<void, float>(this, "ADefaultPawn.MoveRight(float)", a0);
@@ -77,6 +77,8 @@ struct ADefaultPawn : public APrimalPawn
     { return *GetNativePointerField<TObjectPtr<UStaticMeshComponent>*>(this, "ADefaultPawn.MeshComponent"); }
     TObjectPtr<UPawnMovementComponent>& MovementComponentField() const
     { return *GetNativePointerField<TObjectPtr<UPawnMovementComponent>*>(this, "ADefaultPawn.MovementComponent"); }
+    BrzCampoPonteiro bAddDefaultMovementBindingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADefaultPawn.bAddDefaultMovementBindings")); }
     BitFieldValue<bool, unsigned __int32> bAddDefaultMovementBindings()
     { return { (void*)this, "bAddDefaultMovementBindings" }; }
 

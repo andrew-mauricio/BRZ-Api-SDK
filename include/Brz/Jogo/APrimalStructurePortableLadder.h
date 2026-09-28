@@ -62,7 +62,7 @@ struct APrimalStructurePortableLadder : public APrimalStructureLadder
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePortableLadder.ClearSkeletalMeshes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClearSkeletalMeshes() const
     {
         return NativeCall<void*>(this, "APrimalStructurePortableLadder.ClearSkeletalMeshes()");
@@ -126,7 +126,7 @@ struct APrimalStructurePortableLadder : public APrimalStructureLadder
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalStructurePortableLadder.UpdateBoxCollisionForRetraction(bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateBoxCollisionForRetraction(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructurePortableLadder.UpdateBoxCollisionForRetraction(bool)", a0);
@@ -188,6 +188,10 @@ struct APrimalStructurePortableLadder : public APrimalStructureLadder
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePortableLadder.MidAnimMontageExtendedBlueprint")); }
     TArray<USkeletalMeshComponent*>& SkeletalMeshsForAnimationField() const
     { return *GetNativePointerField<TArray<USkeletalMeshComponent*>*>(this, "APrimalStructurePortableLadder.SkeletalMeshsForAnimation"); }
+    BrzCampoPonteiro bIsPlayingAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePortableLadder.bIsPlayingAnimation")); }
+    BrzCampoPonteiro bisDonePlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructurePortableLadder.bisDonePlacing")); }
     BitFieldValue<bool, unsigned __int32> bisDonePlacing()
     { return { (void*)this, "bisDonePlacing" }; }
     BitFieldValue<bool, unsigned __int32> bIsPlayingAnimation()

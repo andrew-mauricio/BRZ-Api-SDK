@@ -43,7 +43,7 @@ struct ULevelStreamingProfilingSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreamingProfilingSubsystem.FLevelStats.operator=(ULevelStreamingProfilingSubsystem::FLeve
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FLevelStats_operator_(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ULevelStreamingProfilingSubsystem.FLevelStats.operator=(ULevelStreamingProfilingSubsystem::FLevelStats&)", a0);
@@ -139,7 +139,7 @@ struct ULevelStreamingProfilingSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreamingProfilingSubsystem.OnLevelUnqueuedForAddToWorld(UWorld*,ULevelStreaming*,ULevel*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnLevelUnqueuedForAddToWorld(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "ULevelStreamingProfilingSubsystem.OnLevelUnqueuedForAddToWorld(UWorld*,ULevelStreaming*,ULevel*)", a0, a1, a2);
@@ -147,7 +147,7 @@ struct ULevelStreamingProfilingSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreamingProfilingSubsystem.OnLevelUnqueuedForRemoveFromWorld(UWorld*,ULevelStreaming*,ULe
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnLevelUnqueuedForRemoveFromWorld(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "ULevelStreamingProfilingSubsystem.OnLevelUnqueuedForRemoveFromWorld(UWorld*,ULevelStreaming*,ULevel*)", a0, a1, a2);
@@ -168,16 +168,63 @@ struct ULevelStreamingProfilingSubsystem
     {
         return NativeCall<void*, void*>(this, "ULevelStreamingProfilingSubsystem.ShouldCreateSubsystem(UObject*)", a0);
     }
+
+    BrzCampoPonteiro ActiveLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.ActiveLevels")); }
     BrzCampoPonteiro CellBoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.CellBounds")); }
     BrzCampoPonteiro ContentBoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.ContentBounds")); }
+    BrzCampoPonteiro FinalStreamInDistance_CellField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.FinalStreamInDistance_Cell")); }
+    BrzCampoPonteiro FinalStreamInDistance_ContentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.FinalStreamInDistance_Content")); }
+    BrzCampoPonteiro FinalStreamInLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.FinalStreamInLocation")); }
+    BrzCampoPonteiro Handle_OnLevelBeginAddToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.Handle_OnLevelBeginAddToWorld")); }
+    BrzCampoPonteiro Handle_OnLevelBeginRemoveFromWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.Handle_OnLevelBeginRemoveFromWorld")); }
+    BrzCampoPonteiro Handle_OnLevelStreamingStateChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.Handle_OnLevelStreamingStateChanged")); }
+    BrzCampoPonteiro Handle_OnLevelStreamingTargetStateChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.Handle_OnLevelStreamingTargetStateChanged")); }
+    BrzCampoPonteiro LevelStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.LevelStats")); }
+    BrzCampoPonteiro PackageNameInMemoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.PackageNameInMemory")); }
+    BrzCampoPonteiro PackageNameOnDiskField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.PackageNameOnDisk")); }
+    BrzCampoPonteiro ReportWritingTaskField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.ReportWritingTask")); }
     int& StateField() const
     { return *GetNativePointerField<int*>(this, "ULevelStreamingProfilingSubsystem.State"); }
-    BitFieldValue<bool, unsigned __int32> bIsHLOD()
-    { return { (void*)this, "bIsHLOD" }; }
-    BitFieldValue<bool, unsigned __int32> bValid()
-    { return { (void*)this, "bValid" }; }
+    BrzCampoPonteiro StateStartTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.StateStartTime")); }
+    BrzCampoPonteiro StatsIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.StatsIndex")); }
+    BrzCampoPonteiro TimeAddedToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeAddedToWorld")); }
+    BrzCampoPonteiro TimeAddingToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeAddingToWorld")); }
+    BrzCampoPonteiro TimeInWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeInWorld")); }
+    BrzCampoPonteiro TimeLoadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeLoading")); }
+    BrzCampoPonteiro TimeQueuedForLoadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeQueuedForLoading")); }
+    BrzCampoPonteiro TimeQueuedForRemoveFromWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeQueuedForRemoveFromWorld")); }
+    BrzCampoPonteiro TimeQueueudForAddToWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeQueueudForAddToWorld")); }
+    BrzCampoPonteiro TimeRemovingFromWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.TimeRemovingFromWorld")); }
+    BrzCampoPonteiro bIsHLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.bIsHLOD")); }
+    BrzCampoPonteiro bIsTrackingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.bIsTracking")); }
+    BrzCampoPonteiro bValidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingProfilingSubsystem.bValid")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELSTREAMINGPROFILINGSUBSYSTEM_H

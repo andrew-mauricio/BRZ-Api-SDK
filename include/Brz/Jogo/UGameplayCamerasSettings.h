@@ -43,6 +43,10 @@ struct UGameplayCamerasSettings
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayCamerasSettings.DefaultIKAimingMaxIterations"); }
     double& DefaultIKAimingMinDistanceField() const
     { return *GetNativePointerField<double*>(this, "UGameplayCamerasSettings.DefaultIKAimingMinDistance"); }
+    BrzCampoPonteiro bAutoSpawnCameraSystemActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCamerasSettings.bAutoSpawnCameraSystemActor")); }
+    BrzCampoPonteiro bAutoSpawnCameraSystemActorSetsControlRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCamerasSettings.bAutoSpawnCameraSystemActorSetsControlRotation")); }
     BitFieldValue<bool, unsigned __int32> bAutoSpawnCameraSystemActor()
     { return { (void*)this, "bAutoSpawnCameraSystemActor" }; }
     BitFieldValue<bool, unsigned __int32> bAutoSpawnCameraSystemActorSetsControlRotation()

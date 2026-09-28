@@ -35,6 +35,8 @@ struct FVectorVMExtFunctionData
 
     BrzCampoPonteiro FunctionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExtFunctionData.Function")); }
+    BrzCampoPonteiro NumInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExtFunctionData.NumInputs")); }
     BrzCampoPonteiro NumOutputsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExtFunctionData.NumOutputs")); }
 };

@@ -36,7 +36,7 @@ struct APrimalStructureItemContainer_VisualItems : public APrimalStructureItemCo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_VisualItems.BPUpdateItemVisuals()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPUpdateItemVisuals() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_VisualItems.BPUpdateItemVisuals()");
@@ -53,7 +53,7 @@ struct APrimalStructureItemContainer_VisualItems : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_VisualItems.UpdateVisuals()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateVisuals() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_VisualItems.UpdateVisuals()");
@@ -67,8 +67,16 @@ struct APrimalStructureItemContainer_VisualItems : public APrimalStructureItemCo
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureItemContainer_VisualItems.ItemClassesToCheck"); }
     UStaticMeshComponent*& MyExtraStaticMeshField() const
     { return *GetNativePointerField<UStaticMeshComponent**>(this, "APrimalStructureItemContainer_VisualItems.MyExtraStaticMesh"); }
+    BrzCampoPonteiro bDoItemVisualsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_VisualItems.bDoItemVisuals")); }
+    BrzCampoPonteiro bHasItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_VisualItems.bHasItems")); }
+    BrzCampoPonteiro bIgnoreBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_VisualItems.bIgnoreBlueprints")); }
     bool& bIgnoreEngramsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalStructureItemContainer_VisualItems.bIgnoreEngrams"); }
+    BrzCampoPonteiro bPreviousHasItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_VisualItems.bPreviousHasItems")); }
     BitFieldValue<bool, unsigned __int32> bHasItems()
     { return { (void*)this, "bHasItems" }; }
     BitFieldValue<bool, unsigned __int32> bDoItemVisuals()

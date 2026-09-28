@@ -32,6 +32,17 @@ struct FWorldTileLODInfo
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro RelativeStreamingDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLODInfo.RelativeStreamingDistance")); }
+    BrzCampoPonteiro Reserved0Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLODInfo.Reserved0")); }
+    BrzCampoPonteiro Reserved1Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLODInfo.Reserved1")); }
+    BrzCampoPonteiro Reserved2Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLODInfo.Reserved2")); }
+    BrzCampoPonteiro Reserved3Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLODInfo.Reserved3")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDTILELODINFO_H

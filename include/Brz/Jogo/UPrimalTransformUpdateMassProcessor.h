@@ -55,10 +55,10 @@ struct UPrimalTransformUpdateMassProcessor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalTransformUpdateMassProcessor.ExecutionOrder")); }
     BrzCampoPonteiro ProcessingPhaseField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalTransformUpdateMassProcessor.ProcessingPhase")); }
-    BitFieldValue<bool, unsigned __int32> bAutoRegisterWithProcessingPhases()
-    { return { (void*)this, "bAutoRegisterWithProcessingPhases" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiresGameThreadExecution()
-    { return { (void*)this, "bRequiresGameThreadExecution" }; }
+    BrzCampoPonteiro bAutoRegisterWithProcessingPhasesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalTransformUpdateMassProcessor.bAutoRegisterWithProcessingPhases")); }
+    BrzCampoPonteiro bRequiresGameThreadExecutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalTransformUpdateMassProcessor.bRequiresGameThreadExecution")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALTRANSFORMUPDATEMASSPROCESSOR_H

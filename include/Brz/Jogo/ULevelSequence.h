@@ -51,7 +51,7 @@ struct ULevelSequence
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelSequence.CanRebindPossessable(FMovieScenePossessable&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanRebindPossessable(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ULevelSequence.CanRebindPossessable(FMovieScenePossessable&)", a0);
@@ -97,10 +97,10 @@ struct ULevelSequence
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequence.SequenceFlags")); }
     BrzCampoPonteiro SignatureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequence.Signature")); }
-    BitFieldValue<bool, unsigned __int32> bParentContextsAreSignificant()
-    { return { (void*)this, "bParentContextsAreSignificant" }; }
-    BitFieldValue<bool, unsigned __int32> bPlayableDirectly()
-    { return { (void*)this, "bPlayableDirectly" }; }
+    BrzCampoPonteiro bParentContextsAreSignificantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequence.bParentContextsAreSignificant")); }
+    BrzCampoPonteiro bPlayableDirectlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequence.bPlayableDirectly")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELSEQUENCE_H

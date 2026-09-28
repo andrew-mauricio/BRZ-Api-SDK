@@ -71,7 +71,7 @@ struct APrimalStructureTurretAOE
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretAOE.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=42]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BeginPlay() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretAOE.BeginPlay()");
@@ -87,7 +87,7 @@ struct APrimalStructureTurretAOE
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretAOE.ChangeAttackType(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ChangeAttackType(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureTurretAOE.ChangeAttackType(int)", a0);
@@ -175,7 +175,7 @@ struct APrimalStructureTurretAOE
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretAOE.OnRep_CurrAttackTypeIndex()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=149]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnRep_CurrAttackTypeIndex() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretAOE.OnRep_CurrAttackTypeIndex()");
@@ -183,7 +183,7 @@ struct APrimalStructureTurretAOE
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretAOE.ShouldForceTargetRidingDinoNotRider()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldForceTargetRidingDinoNotRider() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretAOE.ShouldForceTargetRidingDinoNotRider()");
@@ -243,8 +243,8 @@ struct APrimalStructureTurretAOE
     { return *GetNativePointerField<float*>(this, "APrimalStructureTurretAOE.AimSpread"); }
     BrzCampoPonteiro AimTargetLocOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.AimTargetLocOffset")); }
-    BitFieldValue<bool, unsigned __int32> AllowOverrideParticleLightColor()
-    { return { (void*)this, "AllowOverrideParticleLightColor" }; }
+    BrzCampoPonteiro AllowOverrideParticleLightColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.AllowOverrideParticleLightColor")); }
     FieldArray<unsigned char> AllowStructureColorSetsField() const
     { return { (void*)this, "APrimalStructureTurretAOE.AllowStructureColorSets" }; }
     TObjectPtr<UTexture2D>& AllowWirelessCraftingIconField() const
@@ -269,8 +269,8 @@ struct APrimalStructureTurretAOE
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.AttackTypes")); }
     unsigned char& AutoReceiveInputField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalStructureTurretAOE.AutoReceiveInput"); }
-    BitFieldValue<bool, unsigned __int32> BPOverrideDestroyedMeshTextures()
-    { return { (void*)this, "BPOverrideDestroyedMeshTextures" }; }
+    BrzCampoPonteiro BPOverrideDestroyedMeshTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.BPOverrideDestroyedMeshTextures")); }
     float& BasedCharacterDamageAmountField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureTurretAOE.BasedCharacterDamageAmount"); }
     float& BasedCharacterDamageIntervalField() const
@@ -290,7 +290,7 @@ struct APrimalStructureTurretAOE
     TArray<void*>& BoneDamageAdjustersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureTurretAOE.BoneDamageAdjusters"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +112, medido na build 25090264
+    //  ancorado em `ChangeAttackTypeIcon` +112, medido na build 25535041
     //  (offset absoluto medido: 0x16A8; confianca media)
     void*& BounceTargetsRelativeOffsetField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 112); }
@@ -329,7 +329,7 @@ struct APrimalStructureTurretAOE
     int& CurrAttackTypeIndexField() const
     { return *GetNativePointerField<int*>(this, "APrimalStructureTurretAOE.CurrAttackTypeIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +88, medido na build 25090264
+    //  ancorado em `ChangeAttackTypeIcon` +88, medido na build 25535041
     //  (offset absoluto medido: 0x1690; confianca media)
     void*& CurrBounceIndexField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 88); }
@@ -536,7 +536,7 @@ struct APrimalStructureTurretAOE
     double& LastPreReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalStructureTurretAOE.LastPreReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +136, medido na build 25090264
+    //  ancorado em `ChangeAttackTypeIcon` +136, medido na build 25535041
     //  (offset absoluto medido: 0x16C0; confianca baixa)
     void*& LastRelativeImpactPointField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 136); }
@@ -547,7 +547,7 @@ struct APrimalStructureTurretAOE
     double& LastSolarRefreshTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalStructureTurretAOE.LastSolarRefreshTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +128, medido na build 25090264
+    //  ancorado em `ChangeAttackTypeIcon` +128, medido na build 25535041
     //  (offset absoluto medido: 0x16B8; confianca media)
     void*& LastSpawnedTrailEffectField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 128); }
@@ -864,7 +864,7 @@ struct APrimalStructureTurretAOE
     BrzCampoPonteiro SpawnCollisionHandlingMethodField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.SpawnCollisionHandlingMethod")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +96, medido na build 25090264
+    //  ancorado em `ChangeAttackTypeIcon` +96, medido na build 25535041
     //  (offset absoluto medido: 0x1698; confianca media)
     void*& SpawnedBounceTrailEffectsField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 96); }
@@ -918,10 +918,10 @@ struct APrimalStructureTurretAOE
     { return *GetNativePointerField<double*>(this, "APrimalStructureTurretAOE.UnstasisLastInRangeTime"); }
     int& UpdateOverlapsMethodDuringLevelStreamingField() const
     { return *GetNativePointerField<int*>(this, "APrimalStructureTurretAOE.UpdateOverlapsMethodDuringLevelStreaming"); }
-    BitFieldValue<bool, unsigned __int32> UseBPApplyPinCode()
-    { return { (void*)this, "UseBPApplyPinCode" }; }
-    BitFieldValue<bool, unsigned __int32> UseBPOverrideTargetLocation()
-    { return { (void*)this, "UseBPOverrideTargetLocation" }; }
+    BrzCampoPonteiro UseBPApplyPinCodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.UseBPApplyPinCode")); }
+    BrzCampoPonteiro UseBPOverrideTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.UseBPOverrideTargetLocation")); }
     float& ValidCraftingResourceMaxDurabilityField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureTurretAOE.ValidCraftingResourceMaxDurability"); }
     TArray<TWeakObjectPtr<void>>& ValidatedByPinCodePlayerControllersField() const
@@ -942,576 +942,580 @@ struct APrimalStructureTurretAOE
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalStructureTurretAOE.WeakTarget"); }
     BrzCampoPonteiro WirelessExchangeRefsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.WirelessExchangeRefs")); }
-    BitFieldValue<bool, unsigned __int32> bActiveRequiresPower()
-    { return { (void*)this, "bActiveRequiresPower" }; }
-    BitFieldValue<bool, unsigned __int32> bActorEnableCollision()
-    { return { (void*)this, "bActorEnableCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bActorIsBeingDestroyed()
-    { return { (void*)this, "bActorIsBeingDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bActorPreventPhysicsSceneRegistration()
-    { return { (void*)this, "bActorPreventPhysicsSceneRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bAdjustDamageAsPlayerWithEquipment()
-    { return { (void*)this, "bAdjustDamageAsPlayerWithEquipment" }; }
-    BitFieldValue<bool, unsigned __int32> bAimIgnoreSockets()
-    { return { (void*)this, "bAimIgnoreSockets" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAttachToSaddle()
-    { return { (void*)this, "bAllowAttachToSaddle" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAutoActivateWhenNoPower()
-    { return { (void*)this, "bAllowAutoActivateWhenNoPower" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowChooseRotationWhenSnapped()
-    { return { (void*)this, "bAllowChooseRotationWhenSnapped" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCustomName()
-    { return { (void*)this, "bAllowCustomName" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowPickingUpStructureAfterPlacement()
-    { return { (void*)this, "bAllowPickingUpStructureAfterPlacement" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowReceiveTickEventOnDedicatedServer()
-    { return { (void*)this, "bAllowReceiveTickEventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowSnapRotation()
-    { return { (void*)this, "bAllowSnapRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowStructureSkinsWithoutTeamCheck()
-    { return { (void*)this, "bAllowStructureSkinsWithoutTeamCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTickBeforeBeginPlay()
-    { return { (void*)this, "bAllowTickBeforeBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWeldRoundRobin()
-    { return { (void*)this, "bAllowWeldRoundRobin" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWeldingToShips()
-    { return { (void*)this, "bAllowWeldingToShips" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevant()
-    { return { (void*)this, "bAlwaysRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevantPrimalStructure()
-    { return { (void*)this, "bAlwaysRelevantPrimalStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyNiagaraColorInBP()
-    { return { (void*)this, "bApplyNiagaraColorInBP" }; }
-    BitFieldValue<bool, unsigned __int32> bAsyncPhysicsTickEnabled()
-    { return { (void*)this, "bAsyncPhysicsTickEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachmentReplicationUseNetworkParent()
-    { return { (void*)this, "bAttachmentReplicationUseNetworkParent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateContainer()
-    { return { (void*)this, "bAutoActivateContainer" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateIfPowered()
-    { return { (void*)this, "bAutoActivateIfPowered" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateWhenFueled()
-    { return { (void*)this, "bAutoActivateWhenFueled" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateWhenNoPower()
-    { return { (void*)this, "bAutoActivateWhenNoPower" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDestroyWhenFinished()
-    { return { (void*)this, "bAutoDestroyWhenFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoStasis()
-    { return { (void*)this, "bAutoStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryItemUsedHandlesDurability()
-    { return { (void*)this, "bBPInventoryItemUsedHandlesDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bBPIsValidWaterSourceForPipe()
-    { return { (void*)this, "bBPIsValidWaterSourceForPipe" }; }
-    BitFieldValue<bool, unsigned __int32> bBPNotifyRemoteViewerChange()
-    { return { (void*)this, "bBPNotifyRemoteViewerChange" }; }
-    BitFieldValue<bool, unsigned __int32> bBPOnContainerActiveHealthDecrease()
-    { return { (void*)this, "bBPOnContainerActiveHealthDecrease" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPostInitializeComponents()
-    { return { (void*)this, "bBPPostInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPreInitializeComponents()
-    { return { (void*)this, "bBPPreInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBlockInput()
-    { return { (void*)this, "bBlockInput" }; }
-    BitFieldValue<bool, unsigned __int32> bBlueprintMultiUseEntries()
-    { return { (void*)this, "bBlueprintMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplication()
-    { return { (void*)this, "bCallPreReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplicationForReplay()
-    { return { (void*)this, "bCallPreReplicationForReplay" }; }
-    BitFieldValue<bool, unsigned __int32> bCanAttachToExosuit()
-    { return { (void*)this, "bCanAttachToExosuit" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDamaged()
-    { return { (void*)this, "bCanBeDamaged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeInCluster()
-    { return { (void*)this, "bCanBeInCluster" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeRepaired()
-    { return { (void*)this, "bCanBeRepaired" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeStoredByExosuit()
-    { return { (void*)this, "bCanBeStoredByExosuit" }; }
-    BitFieldValue<bool, unsigned __int32> bCanToggleActivation()
-    { return { (void*)this, "bCanToggleActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bCarriedByDino()
-    { return { (void*)this, "bCarriedByDino" }; }
-    BitFieldValue<bool, unsigned __int32> bCenterOffscreenFloatingHUDWidgets()
-    { return { (void*)this, "bCenterOffscreenFloatingHUDWidgets" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckStartedUnderwater()
-    { return { (void*)this, "bCheckStartedUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bClientBPNotifyInventoryItemChanges()
-    { return { (void*)this, "bClientBPNotifyInventoryItemChanges" }; }
-    BitFieldValue<bool, unsigned __int32> bClientFireProjectile()
-    { return { (void*)this, "bClientFireProjectile" }; }
-    BitFieldValue<bool, unsigned __int32> bClientReceivedStructuresPlacedOnFloor()
-    { return { (void*)this, "bClientReceivedStructuresPlacedOnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWhenPlacing()
-    { return { (void*)this, "bCollideWhenPlacing" }; }
-    BitFieldValue<bool, unsigned __int32> bContainerActivated()
-    { return { (void*)this, "bContainerActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bCraftingSubstractConnectedWater()
-    { return { (void*)this, "bCraftingSubstractConnectedWater" }; }
-    BitFieldValue<bool, unsigned __int32> bDebug()
-    { return { (void*)this, "bDebug" }; }
-    BitFieldValue<bool, unsigned __int32> bDemolishJustDestroy()
-    { return { (void*)this, "bDemolishJustDestroy" }; }
-    BitFieldValue<bool, unsigned __int32> bDesiredRepGraphBehaviorHasBeenSet()
-    { return { (void*)this, "bDesiredRepGraphBehaviorHasBeenSet" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyDontClearNetworkChildren()
-    { return { (void*)this, "bDestroyDontClearNetworkChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyWhenAllItemsRemoved()
-    { return { (void*)this, "bDestroyWhenAllItemsRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyWhenAllItemsRemovedExceptDefaults()
-    { return { (void*)this, "bDestroyWhenAllItemsRemovedExceptDefaults" }; }
-    BitFieldValue<bool, unsigned __int32> bDidSpawnEffects()
-    { return { (void*)this, "bDidSpawnEffects" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableActivationUnderwater()
-    { return { (void*)this, "bDisableActivationUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNodes()
-    { return { (void*)this, "bDisableRigidBodyAnimNodes" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableStructureOnElectricStorm()
-    { return { (void*)this, "bDisableStructureOnElectricStorm" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayActivationOnInventoryUI()
-    { return { (void*)this, "bDisplayActivationOnInventoryUI" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayActivationOnInventoryUISecondary()
-    { return { (void*)this, "bDisplayActivationOnInventoryUISecondary" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayActivationOnInventoryUITertiary()
-    { return { (void*)this, "bDisplayActivationOnInventoryUITertiary" }; }
-    BitFieldValue<bool, unsigned __int32> bDontResetPickupTimer()
-    { return { (void*)this, "bDontResetPickupTimer" }; }
-    BitFieldValue<bool, unsigned __int32> bDontSetDamageParameters()
-    { return { (void*)this, "bDontSetDamageParameters" }; }
-    BitFieldValue<bool, unsigned __int32> bDrawFuelRemaining()
-    { return { (void*)this, "bDrawFuelRemaining" }; }
-    BitFieldValue<bool, unsigned __int32> bDrinkingWater()
-    { return { (void*)this, "bDrinkingWater" }; }
-    BitFieldValue<bool, unsigned __int32> bDropInventoryOnDestruction()
-    { return { (void*)this, "bDropInventoryOnDestruction" }; }
-    BitFieldValue<bool, unsigned __int32> bEditorOnlyActorShowInPIE()
-    { return { (void*)this, "bEditorOnlyActorShowInPIE" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiUse()
-    { return { (void*)this, "bEnableMultiUse" }; }
-    BitFieldValue<bool, unsigned __int32> bExchangedRoles()
-    { return { (void*)this, "bExchangedRoles" }; }
-    BitFieldValue<bool, unsigned __int32> bFindCameraComponentWhenViewTarget()
-    { return { (void*)this, "bFindCameraComponentWhenViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bFireProjectiles()
-    { return { (void*)this, "bFireProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowNetMulticast()
-    { return { (void*)this, "bForceAllowNetMulticast" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFloatingDamageNumbers()
-    { return { (void*)this, "bForceFloatingDamageNumbers" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFloorCollisionGroup()
-    { return { (void*)this, "bForceFloorCollisionGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHiddenReplication()
-    { return { (void*)this, "bForceHiddenReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHighQualityViewerReplication()
-    { return { (void*)this, "bForceHighQualityViewerReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInfiniteDrawDistance()
-    { return { (void*)this, "bForceInfiniteDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetAddressable()
-    { return { (void*)this, "bForceNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetworkSpatialization()
-    { return { (void*)this, "bForceNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNeverLock()
-    { return { (void*)this, "bForceNeverLock" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNoPinLocking()
-    { return { (void*)this, "bForceNoPinLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNonBlockingHits()
-    { return { (void*)this, "bForceNonBlockingHits" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventAutoActivateWhenConnectedToWater()
-    { return { (void*)this, "bForcePreventAutoActivateWhenConnectedToWater" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventSeamlessTravel()
-    { return { (void*)this, "bForcePreventSeamlessTravel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceReplicateDormantChildrenWithoutSpatialRelevancy()
-    { return { (void*)this, "bForceReplicateDormantChildrenWithoutSpatialRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bForceSnappedStructureToGround()
-    { return { (void*)this, "bForceSnappedStructureToGround" }; }
-    BitFieldValue<bool, unsigned __int32> bForceZeroDamageProcessing()
-    { return { (void*)this, "bForceZeroDamageProcessing" }; }
-    BitFieldValue<bool, unsigned __int32> bForcedHudDrawingRequiresSameTeam()
-    { return { (void*)this, "bForcedHudDrawingRequiresSameTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bFuelAllowActivationWhenNoPower()
-    { return { (void*)this, "bFuelAllowActivationWhenNoPower" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEventsDuringLevelStreaming()
-    { return { (void*)this, "bGenerateOverlapEventsDuringLevelStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bHasAnyStructuresPlacedOnFloor()
-    { return { (void*)this, "bHasAnyStructuresPlacedOnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bHasFuel()
-    { return { (void*)this, "bHasFuel" }; }
-    BitFieldValue<bool, unsigned __int32> bHasHighVolumeRPCs()
-    { return { (void*)this, "bHasHighVolumeRPCs" }; }
-    BitFieldValue<bool, unsigned __int32> bHasOmniDirectionalFire()
-    { return { (void*)this, "bHasOmniDirectionalFire" }; }
-    BitFieldValue<bool, unsigned __int32> bHasResetDecayTime()
-    { return { (void*)this, "bHasResetDecayTime" }; }
-    BitFieldValue<bool, unsigned __int32> bHibernateChange()
-    { return { (void*)this, "bHibernateChange" }; }
-    BitFieldValue<bool, unsigned __int32> bHidden()
-    { return { (void*)this, "bHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bHideAutoActivateToggle()
-    { return { (void*)this, "bHideAutoActivateToggle" }; }
-    BitFieldValue<bool, unsigned __int32> bHidePowerJunctionConnection()
-    { return { (void*)this, "bHidePowerJunctionConnection" }; }
+    BrzCampoPonteiro bActiveRequiresPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bActiveRequiresPower")); }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAdjustDamageAsPlayerWithEquipmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAdjustDamageAsPlayerWithEquipment")); }
+    BrzCampoPonteiro bAimIgnoreSocketsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAimIgnoreSockets")); }
+    BrzCampoPonteiro bAllowAttachToSaddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowAttachToSaddle")); }
+    BrzCampoPonteiro bAllowAutoActivateWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowAutoActivateWhenNoPower")); }
+    BrzCampoPonteiro bAllowChooseRotationWhenSnappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowChooseRotationWhenSnapped")); }
+    BrzCampoPonteiro bAllowCustomNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowCustomName")); }
+    BrzCampoPonteiro bAllowPickingUpStructureAfterPlacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowPickingUpStructureAfterPlacement")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowSnapRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowSnapRotation")); }
+    BrzCampoPonteiro bAllowStructureSkinsWithoutTeamCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowStructureSkinsWithoutTeamCheck")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAllowWeldRoundRobinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowWeldRoundRobin")); }
+    BrzCampoPonteiro bAllowWeldingToShipsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAllowWeldingToShips")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bApplyNiagaraColorInBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bApplyNiagaraColorInBP")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAutoActivateContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAutoActivateContainer")); }
+    BrzCampoPonteiro bAutoActivateIfPoweredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAutoActivateIfPowered")); }
+    BrzCampoPonteiro bAutoActivateWhenFueledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAutoActivateWhenFueled")); }
+    BrzCampoPonteiro bAutoActivateWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAutoActivateWhenNoPower")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAutoDestroyWhenFinished")); }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bAutoStasis")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPIsValidWaterSourceForPipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBPIsValidWaterSourceForPipe")); }
+    BrzCampoPonteiro bBPNotifyRemoteViewerChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBPNotifyRemoteViewerChange")); }
+    BrzCampoPonteiro bBPOnContainerActiveHealthDecreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBPOnContainerActiveHealthDecrease")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBlockInput")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCanAttachToExosuitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCanAttachToExosuit")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCanBeInCluster")); }
+    BrzCampoPonteiro bCanBeRepairedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCanBeRepaired")); }
+    BrzCampoPonteiro bCanBeStoredByExosuitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCanBeStoredByExosuit")); }
+    BrzCampoPonteiro bCanToggleActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCanToggleActivation")); }
+    BrzCampoPonteiro bCarriedByDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCarriedByDino")); }
+    BrzCampoPonteiro bCenterOffscreenFloatingHUDWidgetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCenterOffscreenFloatingHUDWidgets")); }
+    BrzCampoPonteiro bCheckStartedUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCheckStartedUnderwater")); }
+    BrzCampoPonteiro bClientBPNotifyInventoryItemChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bClientBPNotifyInventoryItemChanges")); }
+    BrzCampoPonteiro bClientFireProjectileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bClientFireProjectile")); }
+    BrzCampoPonteiro bClientReceivedStructuresPlacedOnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bClientReceivedStructuresPlacedOnFloor")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bClimbable")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bContainerActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bContainerActivated")); }
+    BrzCampoPonteiro bCraftingSubstractConnectedWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bCraftingSubstractConnectedWater")); }
+    BrzCampoPonteiro bDebugField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDebug")); }
+    BrzCampoPonteiro bDemolishJustDestroyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDemolishJustDestroy")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bDestroyWhenAllItemsRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDestroyWhenAllItemsRemoved")); }
+    BrzCampoPonteiro bDestroyWhenAllItemsRemovedExceptDefaultsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDestroyWhenAllItemsRemovedExceptDefaults")); }
+    BrzCampoPonteiro bDidSpawnEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDidSpawnEffects")); }
+    BrzCampoPonteiro bDisableActivationUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDisableActivationUnderwater")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bDisableStructureOnElectricStormField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDisableStructureOnElectricStorm")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDisplayActivationOnInventoryUI")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUISecondaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDisplayActivationOnInventoryUISecondary")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUITertiaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDisplayActivationOnInventoryUITertiary")); }
+    BrzCampoPonteiro bDontResetPickupTimerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDontResetPickupTimer")); }
+    BrzCampoPonteiro bDontSetDamageParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDontSetDamageParameters")); }
+    BrzCampoPonteiro bDrawFuelRemainingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDrawFuelRemaining")); }
+    BrzCampoPonteiro bDrinkingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDrinkingWater")); }
+    BrzCampoPonteiro bDropInventoryOnDestructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bDropInventoryOnDestruction")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bEditorOnlyActorShowInPIE")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bEnableMultiUse")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bExchangedRoles")); }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bFireProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bFireProjectiles")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceAllowNetMulticast")); }
+    BrzCampoPonteiro bForceFloatingDamageNumbersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceFloatingDamageNumbers")); }
+    BrzCampoPonteiro bForceFloorCollisionGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceFloorCollisionGroup")); }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceNetAddressable")); }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNeverLockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceNeverLock")); }
+    BrzCampoPonteiro bForceNoPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceNoPinLocking")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePreventAutoActivateWhenConnectedToWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForcePreventAutoActivateWhenConnectedToWater")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForceSnappedStructureToGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceSnappedStructureToGround")); }
+    BrzCampoPonteiro bForceZeroDamageProcessingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForceZeroDamageProcessing")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bForcedHudDrawingRequiresSameTeam")); }
+    BrzCampoPonteiro bFuelAllowActivationWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bFuelAllowActivationWhenNoPower")); }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bHasAnyStructuresPlacedOnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHasAnyStructuresPlacedOnFloor")); }
+    BrzCampoPonteiro bHasFuelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHasFuel")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHasOmniDirectionalFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHasOmniDirectionalFire")); }
+    BrzCampoPonteiro bHasResetDecayTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHasResetDecayTime")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHibernateChange")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHidden")); }
+    BrzCampoPonteiro bHideAutoActivateToggleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHideAutoActivateToggle")); }
+    BrzCampoPonteiro bHidePowerJunctionConnectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bHidePowerJunctionConnection")); }
     bool& bHideUnusedParticleTypesOnRefreshActiveEffectsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalStructureTurretAOE.bHideUnusedParticleTypesOnRefreshActiveEffects"); }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDestructionEffects()
-    { return { (void*)this, "bIgnoreDestructionEffects" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDyingWhenDemolished()
-    { return { (void*)this, "bIgnoreDyingWhenDemolished" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNetworkRangeScaling()
-    { return { (void*)this, "bIgnoreNetworkRangeScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreSpawnEffects()
-    { return { (void*)this, "bIgnoreSpawnEffects" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByTargeting()
-    { return { (void*)this, "bIgnoredByTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoresOriginShifting()
-    { return { (void*)this, "bIgnoresOriginShifting" }; }
-    BitFieldValue<bool, unsigned __int32> bInWaterOnlyTargetWater()
-    { return { (void*)this, "bInWaterOnlyTargetWater" }; }
-    BitFieldValue<bool, unsigned __int32> bInventoryForcePreventItemAppends()
-    { return { (void*)this, "bInventoryForcePreventItemAppends" }; }
-    BitFieldValue<bool, unsigned __int32> bInventoryForcePreventRemoteAddItems()
-    { return { (void*)this, "bInventoryForcePreventRemoteAddItems" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAmmoContainer()
-    { return { (void*)this, "bIsAmmoContainer" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBed()
-    { return { (void*)this, "bIsBed" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDead()
-    { return { (void*)this, "bIsDead" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyedFromChildActorComponent()
-    { return { (void*)this, "bIsDestroyedFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDoorframe()
-    { return { (void*)this, "bIsDoorframe" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnlyActor()
-    { return { (void*)this, "bIsEditorOnlyActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFlipped()
-    { return { (void*)this, "bIsFlipped" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFloor()
-    { return { (void*)this, "bIsFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFoundation()
-    { return { (void*)this, "bIsFoundation" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromChildActorComponent()
-    { return { (void*)this, "bIsFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInvincible()
-    { return { (void*)this, "bIsInvincible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLocked()
-    { return { (void*)this, "bIsLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMapActor()
-    { return { (void*)this, "bIsMapActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPinLocked()
-    { return { (void*)this, "bIsPinLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPowerJunction()
-    { return { (void*)this, "bIsPowerJunction" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPowered()
-    { return { (void*)this, "bIsPowered" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPreviewStructure()
-    { return { (void*)this, "bIsPreviewStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bIsRepairing()
-    { return { (void*)this, "bIsRepairing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsStructureAttachmentBase()
-    { return { (void*)this, "bIsStructureAttachmentBase" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTargetListInclusion()
-    { return { (void*)this, "bIsTargetListInclusion" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTargeting()
-    { return { (void*)this, "bIsTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTeleporter()
-    { return { (void*)this, "bIsTeleporter" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTrapped()
-    { return { (void*)this, "bIsTrapped" }; }
-    BitFieldValue<bool, unsigned __int32> bIsUnderwater()
-    { return { (void*)this, "bIsUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidUnstasisCaster()
-    { return { (void*)this, "bIsValidUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bLastToggleActivated()
-    { return { (void*)this, "bLastToggleActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bLinkedStructureRemovalForceClientUpdate()
-    { return { (void*)this, "bLinkedStructureRemovalForceClientUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bLoadedFromSaveGame()
-    { return { (void*)this, "bLoadedFromSaveGame" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiUseCenterHUD()
-    { return { (void*)this, "bMultiUseCenterHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bNetCritical()
-    { return { (void*)this, "bNetCritical" }; }
-    BitFieldValue<bool, unsigned __int32> bNetLoadOnClient()
-    { return { (void*)this, "bNetLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bNetTemporary()
-    { return { (void*)this, "bNetTemporary" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseClientRelevancy()
-    { return { (void*)this, "bNetUseClientRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseOwnerRelevancy()
-    { return { (void*)this, "bNetUseOwnerRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSpatializationForceRelevancyCheck()
-    { return { (void*)this, "bNetworkSpatializationForceRelevancyCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bNoCollision()
-    { return { (void*)this, "bNoCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyAllowTeamActivation()
-    { return { (void*)this, "bOnlyAllowTeamActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyConsumeDurabilityOnEquipmentForEnemies()
-    { return { (void*)this, "bOnlyConsumeDurabilityOnEquipmentForEnemies" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyReplicateOnNetForcedUpdate()
-    { return { (void*)this, "bOnlyReplicateOnNetForcedUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyUseAmmoOnDamage()
-    { return { (void*)this, "bOnlyUseAmmoOnDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyUseSpoilingMultipliersIfActivated()
-    { return { (void*)this, "bOnlyUseSpoilingMultipliersIfActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideFoundationSupportDistance()
-    { return { (void*)this, "bOverrideFoundationSupportDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bPendingRemoval()
-    { return { (void*)this, "bPendingRemoval" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementAdjustHeight()
-    { return { (void*)this, "bPlacementAdjustHeight" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementChooseRotation()
-    { return { (void*)this, "bPlacementChooseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementIgnoreChooseRotation()
-    { return { (void*)this, "bPlacementIgnoreChooseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementPreventLockingCameraWhileChooseRotation()
-    { return { (void*)this, "bPlacementPreventLockingCameraWhileChooseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredAllowBattery()
-    { return { (void*)this, "bPoweredAllowBattery" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredAllowBot()
-    { return { (void*)this, "bPoweredAllowBot" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredAllowSolar()
-    { return { (void*)this, "bPoweredAllowSolar" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredHasBattery()
-    { return { (void*)this, "bPoweredHasBattery" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredHasBot()
-    { return { (void*)this, "bPoweredHasBot" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredUsingBattery()
-    { return { (void*)this, "bPoweredUsingBattery" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredUsingBot()
-    { return { (void*)this, "bPoweredUsingBot" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredUsingSolar()
-    { return { (void*)this, "bPoweredUsingSolar" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredWaterSourceWhenActive()
-    { return { (void*)this, "bPoweredWaterSourceWhenActive" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventActorStasis()
-    { return { (void*)this, "bPreventActorStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasingAllowSteppingUp()
-    { return { (void*)this, "bPreventCharacterBasingAllowSteppingUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCliffPlatforms()
-    { return { (void*)this, "bPreventCliffPlatforms" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventContainerPingType()
-    { return { (void*)this, "bPreventContainerPingType" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLevelBoundsRelevant()
-    { return { (void*)this, "bPreventLevelBoundsRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLinkingToStorageInterface()
-    { return { (void*)this, "bPreventLinkingToStorageInterface" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNPCSpawnFloor()
-    { return { (void*)this, "bPreventNPCSpawnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularForceNetUpdate()
-    { return { (void*)this, "bPreventRegularForceNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSaving()
-    { return { (void*)this, "bPreventSaving" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventStasis()
-    { return { (void*)this, "bPreventStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventToggleActivation()
-    { return { (void*)this, "bPreventToggleActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUsingAsWirelessCraftingSource()
-    { return { (void*)this, "bPreventUsingAsWirelessCraftingSource" }; }
-    BitFieldValue<bool, unsigned __int32> bPreviewApplyColorToChildComponents()
-    { return { (void*)this, "bPreviewApplyColorToChildComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bRealtimeThrottledTickUseNativeTick()
-    { return { (void*)this, "bRealtimeThrottledTickUseNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForLevelBounds()
-    { return { (void*)this, "bRelevantForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForNetworkReplays()
-    { return { (void*)this, "bRelevantForNetworkReplays" }; }
-    BitFieldValue<bool, unsigned __int32> bReplayRewindable()
-    { return { (void*)this, "bReplayRewindable" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateHidden()
-    { return { (void*)this, "bReplicateHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateItemFuelClass()
-    { return { (void*)this, "bReplicateItemFuelClass" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateLastActivatedTime()
-    { return { (void*)this, "bReplicateLastActivatedTime" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateMovement()
-    { return { (void*)this, "bReplicateMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiresItemExactClass()
-    { return { (void*)this, "bRequiresItemExactClass" }; }
-    BitFieldValue<bool, unsigned __int32> bSavedWhenStasised()
-    { return { (void*)this, "bSavedWhenStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bServerBPNotifyInventoryItemChanges()
-    { return { (void*)this, "bServerBPNotifyInventoryItemChanges" }; }
-    BitFieldValue<bool, unsigned __int32> bServerBPNotifyInventoryItemChangesUseQuantity()
-    { return { (void*)this, "bServerBPNotifyInventoryItemChangesUseQuantity" }; }
-    BitFieldValue<bool, unsigned __int32> bServerBPNotifyInventoryItemChangesUseSwapped()
-    { return { (void*)this, "bServerBPNotifyInventoryItemChangesUseSwapped" }; }
-    BitFieldValue<bool, unsigned __int32> bStartedUnderwater()
-    { return { (void*)this, "bStartedUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisComponentRadiusForceDistanceCheck()
-    { return { (void*)this, "bStasisComponentRadiusForceDistanceCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bStasised()
-    { return { (void*)this, "bStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bStationaryStructure()
-    { return { (void*)this, "bStationaryStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bStructureCosmeticOverrideStructureColorSets()
-    { return { (void*)this, "bStructureCosmeticOverrideStructureColorSets" }; }
-    BitFieldValue<bool, unsigned __int32> bStructureFiresProjectiles()
-    { return { (void*)this, "bStructureFiresProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bStructureIgnoreDying()
-    { return { (void*)this, "bStructureIgnoreDying" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsLocking()
-    { return { (void*)this, "bSupportsLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsPinActivation()
-    { return { (void*)this, "bSupportsPinActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsPinLocking()
-    { return { (void*)this, "bSupportsPinLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsStorageInterfaceLinking()
-    { return { (void*)this, "bSupportsStorageInterfaceLinking" }; }
-    BitFieldValue<bool, unsigned __int32> bTearOff()
-    { return { (void*)this, "bTearOff" }; }
-    BitFieldValue<bool, unsigned __int32> bTurretIgnoreProjectiles()
-    { return { (void*)this, "bTurretIgnoreProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bTurretIsDisabledTooManyNearbyTurrets()
-    { return { (void*)this, "bTurretIsDisabledTooManyNearbyTurrets" }; }
-    BitFieldValue<bool, unsigned __int32> bUnstreamComponentsUseEndOverlap()
-    { return { (void*)this, "bUnstreamComponentsUseEndOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bUseActorNotifyCustomEventBP()
-    { return { (void*)this, "bUseActorNotifyCustomEventBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAmmoContainerBuff()
-    { return { (void*)this, "bUseAmmoContainerBuff" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAmmoFromNearbyContainer()
-    { return { (void*)this, "bUseAmmoFromNearbyContainer" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachmentReplication()
-    { return { (void*)this, "bUseAttachmentReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPActivated()
-    { return { (void*)this, "bUseBPActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowActorSpawn()
-    { return { (void*)this, "bUseBPAllowActorSpawn" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAddWirelessExchange()
-    { return { (void*)this, "bUseBPCanAddWirelessExchange" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanBeActivated()
-    { return { (void*)this, "bUseBPCanBeActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanBeActivatedByPlayer()
-    { return { (void*)this, "bUseBPCanBeActivatedByPlayer" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPChangedActorTeam()
-    { return { (void*)this, "bUseBPChangedActorTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckForErrors()
-    { return { (void*)this, "bUseBPCheckForErrors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomIsRelevantForClient()
-    { return { (void*)this, "bUseBPCustomIsRelevantForClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawEntry()
-    { return { (void*)this, "bUseBPDrawEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFilterMultiUseEntries()
-    { return { (void*)this, "bUseBPFilterMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowsInventoryUse()
-    { return { (void*)this, "bUseBPForceAllowsInventoryUse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetBonesToHideOnAllocation()
-    { return { (void*)this, "bUseBPGetBonesToHideOnAllocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetCameraCollisionIgnoreActors()
-    { return { (void*)this, "bUseBPGetCameraCollisionIgnoreActors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetFuelConsumptionMultiplier()
-    { return { (void*)this, "bUseBPGetFuelConsumptionMultiplier" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetHUDDrawLocationOffset()
-    { return { (void*)this, "bUseBPGetHUDDrawLocationOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterText()
-    { return { (void*)this, "bUseBPGetMultiUseCenterText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterTextWithName()
-    { return { (void*)this, "bUseBPGetMultiUseCenterTextWithName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOrbitCamTargetLocation()
-    { return { (void*)this, "bUseBPGetOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetQuantityOfItemWithoutCheckingInventory()
-    { return { (void*)this, "bUseBPGetQuantityOfItemWithoutCheckingInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetShowDebugAnimationComponents()
-    { return { (void*)this, "bUseBPGetShowDebugAnimationComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemDropped()
-    { return { (void*)this, "bUseBPInventoryItemDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemUsed()
-    { return { (void*)this, "bUseBPInventoryItemUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessConsumerAdded()
-    { return { (void*)this, "bUseBPNotifyWirelessConsumerAdded" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessConsumerRemoved()
-    { return { (void*)this, "bUseBPNotifyWirelessConsumerRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessSourceAdded()
-    { return { (void*)this, "bUseBPNotifyWirelessSourceAdded" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessSourceRemoved()
-    { return { (void*)this, "bUseBPNotifyWirelessSourceRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnClientUpdatedLinkedStructures()
-    { return { (void*)this, "bUseBPOnClientUpdatedLinkedStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnServerUpdatedLinkedStructures()
-    { return { (void*)this, "bUseBPOnServerUpdatedLinkedStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTargetingLocation()
-    { return { (void*)this, "bUseBPOverrideTargetingLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideUILocation()
-    { return { (void*)this, "bUseBPOverrideUILocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPostPreviewStructureFlipped()
-    { return { (void*)this, "bUseBPPostPreviewStructureFlipped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventAttachments()
-    { return { (void*)this, "bUseBPPreventAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventCharacterBasing()
-    { return { (void*)this, "bUseBPPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventStasis()
-    { return { (void*)this, "bUseBPPreventStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSetPlayerConstructor()
-    { return { (void*)this, "bUseBPSetPlayerConstructor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPTurretPreventsTargeting()
-    { return { (void*)this, "bUseBPTurretPreventsTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCanMoveThroughActor()
-    { return { (void*)this, "bUseCanMoveThroughActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCollisionCompsForFloatingDPS()
-    { return { (void*)this, "bUseCollisionCompsForFloatingDPS" }; }
-    BitFieldValue<bool, unsigned __int32> bUseColorRegionForEmitterColor()
-    { return { (void*)this, "bUseColorRegionForEmitterColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCooldownOnTransferAll()
-    { return { (void*)this, "bUseCooldownOnTransferAll" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDeathCacheCharacterID()
-    { return { (void*)this, "bUseDeathCacheCharacterID" }; }
-    BitFieldValue<bool, unsigned __int32> bUseHarvestingComponent()
-    { return { (void*)this, "bUseHarvestingComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInclusionListTargeting()
-    { return { (void*)this, "bUseInclusionListTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseLevelLimitsForTargeting()
-    { return { (void*)this, "bUseLevelLimitsForTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMaxInventoryForAmmoContainerReload()
-    { return { (void*)this, "bUseMaxInventoryForAmmoContainerReload" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMeshOriginForInventoryAccessTrace()
-    { return { (void*)this, "bUseMeshOriginForInventoryAccessTrace" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNetworkSpatialization()
-    { return { (void*)this, "bUseNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNoAmmo()
-    { return { (void*)this, "bUseNoAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNoWarning()
-    { return { (void*)this, "bUseNoWarning" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnlyPointForLevelBounds()
-    { return { (void*)this, "bUseOnlyPointForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOpenSceneAction()
-    { return { (void*)this, "bUseOpenSceneAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStasisGrid()
-    { return { (void*)this, "bUseStasisGrid" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesHealth()
-    { return { (void*)this, "bUsesHealth" }; }
-    BitFieldValue<bool, unsigned __int32> bUsingStructureColors()
-    { return { (void*)this, "bUsingStructureColors" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPerformanceThrottledTick()
-    { return { (void*)this, "bWantsPerformanceThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsRealtimeThrottledTick()
-    { return { (void*)this, "bWantsRealtimeThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsServerThrottledTick()
-    { return { (void*)this, "bWantsServerThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWasAttachedToPawn()
-    { return { (void*)this, "bWasAttachedToPawn" }; }
-    BitFieldValue<bool, unsigned __int32> bWasPlacementSnapped()
-    { return { (void*)this, "bWasPlacementSnapped" }; }
-    BitFieldValue<bool, unsigned __int32> bWithinPreventionVolume()
-    { return { (void*)this, "bWithinPreventionVolume" }; }
+    BrzCampoPonteiro bIgnoreDestructionEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoreDestructionEffects")); }
+    BrzCampoPonteiro bIgnoreDyingWhenDemolishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoreDyingWhenDemolished")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoreSpawnEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoreSpawnEffects")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIgnoredByTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoredByTargeting")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIgnoresOriginShifting")); }
+    BrzCampoPonteiro bInWaterOnlyTargetWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bInWaterOnlyTargetWater")); }
+    BrzCampoPonteiro bInventoryForcePreventItemAppendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bInventoryForcePreventItemAppends")); }
+    BrzCampoPonteiro bInventoryForcePreventRemoteAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bInventoryForcePreventRemoteAddItems")); }
+    BrzCampoPonteiro bIsAmmoContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsAmmoContainer")); }
+    BrzCampoPonteiro bIsBedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsBed")); }
+    BrzCampoPonteiro bIsDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsDead")); }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsDoorframeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsDoorframe")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsFlippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsFlipped")); }
+    BrzCampoPonteiro bIsFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsFloor")); }
+    BrzCampoPonteiro bIsFoundationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsFoundation")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsInvincible")); }
+    BrzCampoPonteiro bIsLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsLocked")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsMapActor")); }
+    BrzCampoPonteiro bIsPinLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsPinLocked")); }
+    BrzCampoPonteiro bIsPowerJunctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsPowerJunction")); }
+    BrzCampoPonteiro bIsPoweredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsPowered")); }
+    BrzCampoPonteiro bIsPreviewStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsPreviewStructure")); }
+    BrzCampoPonteiro bIsRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsRepairing")); }
+    BrzCampoPonteiro bIsStructureAttachmentBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsStructureAttachmentBase")); }
+    BrzCampoPonteiro bIsTargetListInclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsTargetListInclusion")); }
+    BrzCampoPonteiro bIsTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsTargeting")); }
+    BrzCampoPonteiro bIsTeleporterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsTeleporter")); }
+    BrzCampoPonteiro bIsTrappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsTrapped")); }
+    BrzCampoPonteiro bIsUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsUnderwater")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bIsValidUnstasisCaster")); }
+    BrzCampoPonteiro bLastToggleActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bLastToggleActivated")); }
+    BrzCampoPonteiro bLinkedStructureRemovalForceClientUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bLinkedStructureRemovalForceClientUpdate")); }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNetCritical")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bNoCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bNoCollision")); }
+    BrzCampoPonteiro bOnlyAllowTeamActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyAllowTeamActivation")); }
+    BrzCampoPonteiro bOnlyConsumeDurabilityOnEquipmentForEnemiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyConsumeDurabilityOnEquipmentForEnemies")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bOnlyUseAmmoOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyUseAmmoOnDamage")); }
+    BrzCampoPonteiro bOnlyUseSpoilingMultipliersIfActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOnlyUseSpoilingMultipliersIfActivated")); }
+    BrzCampoPonteiro bOverrideFoundationSupportDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bOverrideFoundationSupportDistance")); }
+    BrzCampoPonteiro bPendingRemovalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPendingRemoval")); }
+    BrzCampoPonteiro bPlacementAdjustHeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPlacementAdjustHeight")); }
+    BrzCampoPonteiro bPlacementChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPlacementChooseRotation")); }
+    BrzCampoPonteiro bPlacementIgnoreChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPlacementIgnoreChooseRotation")); }
+    BrzCampoPonteiro bPlacementPreventLockingCameraWhileChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPlacementPreventLockingCameraWhileChooseRotation")); }
+    BrzCampoPonteiro bPoweredAllowBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredAllowBattery")); }
+    BrzCampoPonteiro bPoweredAllowBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredAllowBot")); }
+    BrzCampoPonteiro bPoweredAllowSolarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredAllowSolar")); }
+    BrzCampoPonteiro bPoweredHasBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredHasBattery")); }
+    BrzCampoPonteiro bPoweredHasBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredHasBot")); }
+    BrzCampoPonteiro bPoweredUsingBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredUsingBattery")); }
+    BrzCampoPonteiro bPoweredUsingBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredUsingBot")); }
+    BrzCampoPonteiro bPoweredUsingSolarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredUsingSolar")); }
+    BrzCampoPonteiro bPoweredWaterSourceWhenActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPoweredWaterSourceWhenActive")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventContainerPingTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventContainerPingType")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventLinkingToStorageInterfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventLinkingToStorageInterface")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventSaving")); }
+    BrzCampoPonteiro bPreventStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventStasis")); }
+    BrzCampoPonteiro bPreventStructureHibernationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventStructureHibernation")); }
+    BrzCampoPonteiro bPreventToggleActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventToggleActivation")); }
+    BrzCampoPonteiro bPreventUsingAsWirelessCraftingSourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreventUsingAsWirelessCraftingSource")); }
+    BrzCampoPonteiro bPreviewApplyColorToChildComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bPreviewApplyColorToChildComponents")); }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bRelevantForNetworkReplays")); }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplicateHidden")); }
+    BrzCampoPonteiro bReplicateItemFuelClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplicateItemFuelClass")); }
+    BrzCampoPonteiro bReplicateLastActivatedTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplicateLastActivatedTime")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bReplicates")); }
+    BrzCampoPonteiro bRequiresItemExactClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bRequiresItemExactClass")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bSavedWhenStasised")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bServerBPNotifyInventoryItemChanges")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesUseQuantityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bServerBPNotifyInventoryItemChangesUseQuantity")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesUseSwappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bServerBPNotifyInventoryItemChangesUseSwapped")); }
+    BrzCampoPonteiro bStartedUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStartedUnderwater")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStasised")); }
+    BrzCampoPonteiro bStationaryStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStationaryStructure")); }
+    BrzCampoPonteiro bStructureCosmeticOverrideStructureColorSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStructureCosmeticOverrideStructureColorSets")); }
+    BrzCampoPonteiro bStructureFiresProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStructureFiresProjectiles")); }
+    BrzCampoPonteiro bStructureIgnoreDyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bStructureIgnoreDying")); }
+    BrzCampoPonteiro bSupportsLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bSupportsLocking")); }
+    BrzCampoPonteiro bSupportsPinActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bSupportsPinActivation")); }
+    BrzCampoPonteiro bSupportsPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bSupportsPinLocking")); }
+    BrzCampoPonteiro bSupportsStorageInterfaceLinkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bSupportsStorageInterfaceLinking")); }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bTearOff")); }
+    BrzCampoPonteiro bTurretIgnoreProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bTurretIgnoreProjectiles")); }
+    BrzCampoPonteiro bTurretIsDisabledTooManyNearbyTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bTurretIsDisabledTooManyNearbyTurrets")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAmmoContainerBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseAmmoContainerBuff")); }
+    BrzCampoPonteiro bUseAmmoFromNearbyContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseAmmoFromNearbyContainer")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPActivated")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPCanAddWirelessExchangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPCanAddWirelessExchange")); }
+    BrzCampoPonteiro bUseBPCanBeActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPCanBeActivated")); }
+    BrzCampoPonteiro bUseBPCanBeActivatedByPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPCanBeActivatedByPlayer")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetFuelConsumptionMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetFuelConsumptionMultiplier")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetQuantityOfItemWithoutCheckingInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetQuantityOfItemWithoutCheckingInventory")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessConsumerAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPNotifyWirelessConsumerAdded")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessConsumerRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPNotifyWirelessConsumerRemoved")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessSourceAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPNotifyWirelessSourceAdded")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessSourceRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPNotifyWirelessSourceRemoved")); }
+    BrzCampoPonteiro bUseBPOnClientUpdatedLinkedStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPOnClientUpdatedLinkedStructures")); }
+    BrzCampoPonteiro bUseBPOnServerUpdatedLinkedStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPOnServerUpdatedLinkedStructures")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPostPreviewStructureFlippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPPostPreviewStructureFlipped")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseBPPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPPreventCharacterBasing")); }
+    BrzCampoPonteiro bUseBPPreventStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPPreventStasis")); }
+    BrzCampoPonteiro bUseBPSetPlayerConstructorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPSetPlayerConstructor")); }
+    BrzCampoPonteiro bUseBPTurretPreventsTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPTurretPreventsTargeting")); }
+    BrzCampoPonteiro bUseBPUpdateTrailEffectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseBPUpdateTrailEffect")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseCollisionCompsForFloatingDPSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseCollisionCompsForFloatingDPS")); }
+    BrzCampoPonteiro bUseColorRegionForEmitterColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseColorRegionForEmitterColor")); }
+    BrzCampoPonteiro bUseCooldownOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseCooldownOnTransferAll")); }
+    BrzCampoPonteiro bUseDeathCacheCharacterIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseDeathCacheCharacterID")); }
+    BrzCampoPonteiro bUseHarvestingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseHarvestingComponent")); }
+    BrzCampoPonteiro bUseInclusionListTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseInclusionListTargeting")); }
+    BrzCampoPonteiro bUseLevelLimitsForTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseLevelLimitsForTargeting")); }
+    BrzCampoPonteiro bUseMaxInventoryForAmmoContainerReloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseMaxInventoryForAmmoContainerReload")); }
+    BrzCampoPonteiro bUseMeshOriginForInventoryAccessTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseMeshOriginForInventoryAccessTrace")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseNoAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseNoAmmo")); }
+    BrzCampoPonteiro bUseNoWarningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseNoWarning")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUseOpenSceneActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseOpenSceneAction")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUseStasisGrid")); }
+    BrzCampoPonteiro bUsesHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUsesHealth")); }
+    BrzCampoPonteiro bUsingStructureColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bUsingStructureColors")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bWantsServerThrottledTick")); }
+    BrzCampoPonteiro bWasAttachedToPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bWasAttachedToPawn")); }
+    BrzCampoPonteiro bWasPlacementSnappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bWasPlacementSnapped")); }
+    BrzCampoPonteiro bWithinPreventionVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.bWithinPreventionVolume")); }
     BitFieldValue<bool, unsigned __int32> bUseBPUpdateTrailEffect()
     { return { (void*)this, "bUseBPUpdateTrailEffect" }; }
 

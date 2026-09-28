@@ -67,7 +67,7 @@ struct APrimalStructureSign : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSign.MultiUpdateSignTextScale_Implementation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MultiUpdateSignTextScale_Implementation(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalStructureSign.MultiUpdateSignTextScale_Implementation(float)", a0);
@@ -75,7 +75,7 @@ struct APrimalStructureSign : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSign.OnRep_SignText(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=77]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnRep_SignText(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureSign.OnRep_SignText(FString&)", const_cast<FString*>(&a0));
@@ -99,7 +99,7 @@ struct APrimalStructureSign : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSign.RefreshStructureColors(UMeshComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=315]]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshStructureColors(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureSign.RefreshStructureColors(UMeshComponent*)", a0);
@@ -139,6 +139,12 @@ struct APrimalStructureSign : public APrimalStructure
     { return *GetNativePointerField<float*>(this, "APrimalStructureSign.SignWidth"); }
     BrzCampoPonteiro TextRenderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSign.TextRender")); }
+    BrzCampoPonteiro bCanAdjustTextScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSign.bCanAdjustTextScale")); }
+    BrzCampoPonteiro bIgnoreMultipleLinesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSign.bIgnoreMultipleLines")); }
+    BrzCampoPonteiro bUseBPNotifyUpdatedSignTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSign.bUseBPNotifyUpdatedSignText")); }
     BitFieldValue<bool, unsigned __int32> bCanAdjustTextScale()
     { return { (void*)this, "bCanAdjustTextScale" }; }
     BitFieldValue<bool, unsigned __int32> bIgnoreMultipleLines()

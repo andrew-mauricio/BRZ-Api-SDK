@@ -35,8 +35,14 @@ struct FLevelInstanceGuid
 
     BrzCampoPonteiro LevelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceGuid.Level")); }
-    BitFieldValue<bool, unsigned __int32> bIsDefault()
-    { return { (void*)this, "bIsDefault" }; }
+    BrzCampoPonteiro LevelInstanceGuidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceGuid.LevelInstanceGuid")); }
+    BrzCampoPonteiro OwnerLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceGuid.OwnerLevel")); }
+    BrzCampoPonteiro ResolvedLevelInstanceGuidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceGuid.ResolvedLevelInstanceGuid")); }
+    BrzCampoPonteiro bIsDefaultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceGuid.bIsDefault")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELINSTANCEGUID_H

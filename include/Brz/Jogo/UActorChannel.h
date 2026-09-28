@@ -59,7 +59,7 @@ struct UActorChannel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorChannel.BecomeDormant()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BecomeDormant() const
     {
         return NativeCall<void*>(this, "UActorChannel.BecomeDormant()");
@@ -75,7 +75,7 @@ struct UActorChannel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorChannel.CanStopTicking()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanStopTicking() const
     {
         return NativeCall<void*>(this, "UActorChannel.CanStopTicking()");
@@ -179,7 +179,7 @@ struct UActorChannel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorChannel.IsActorReadyForReplication()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsActorReadyForReplication() const
     {
         return NativeCall<void*>(this, "UActorChannel.IsActorReadyForReplication()");
@@ -315,7 +315,7 @@ struct UActorChannel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorChannel.SetCurrentSubObjectOwner(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetCurrentSubObjectOwner(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UActorChannel.SetCurrentSubObjectOwner(AActor*)", a0);
@@ -383,17 +383,17 @@ struct UActorChannel
     BrzCampoPonteiro ActorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorChannel.Actor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +8, medido na build 25090264
+    //  ancorado em `Actor` +8, medido na build 25535041
     //  (offset absoluto medido: 0x78; confianca media)
     void*& ActorNetGUIDField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +48, medido na build 25090264
+    //  ancorado em `Actor` +48, medido na build 25535041
     //  (offset absoluto medido: 0xA0; confianca media)
     void*& ActorReplicatorField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +44, medido na build 25090264
+    //  ancorado em `Actor` +44, medido na build 25535041
     //  (offset absoluto medido: 0x9C; confianca media)
     void*& ChannelSubObjectDirtyCountField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 44); }
@@ -402,37 +402,37 @@ struct UActorChannel
     BrzCampoPonteiro CreateSubObjectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorChannel.CreateSubObjects")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +16, medido na build 25090264
+    //  ancorado em `Actor` +16, medido na build 25535041
     //  (offset absoluto medido: 0x80; confianca media)
     float& CustomTimeDilationField() const
     { return BrzCampoAncorado<float>(this, "Actor", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +32, medido na build 25090264
+    //  ancorado em `Actor` +32, medido na build 25535041
     //  (offset absoluto medido: 0x90; confianca media)
     double& LastUpdateTimeField() const
     { return BrzCampoAncorado<double>(this, "Actor", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +168, medido na build 25090264
+    //  ancorado em `Actor` +168, medido na build 25535041
     //  (offset absoluto medido: 0x118; confianca baixa)
     void*& PendingGuidResolvesField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +160, medido na build 25090264
+    //  ancorado em `Actor` +160, medido na build 25535041
     //  (offset absoluto medido: 0x110; confianca baixa)
     void*& QueuedBunchStartTimeField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +144, medido na build 25090264
+    //  ancorado em `Actor` +144, medido na build 25535041
     //  (offset absoluto medido: 0x100; confianca baixa)
     void*& QueuedBunchesField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +24, medido na build 25090264
+    //  ancorado em `Actor` +24, medido na build 25535041
     //  (offset absoluto medido: 0x88; confianca media)
     void*& RelevantTimeField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +64, medido na build 25090264
+    //  ancorado em `Actor` +64, medido na build 25535041
     //  (offset absoluto medido: 0xB0; confianca media)
     void*& ReplicationMapField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 64); }

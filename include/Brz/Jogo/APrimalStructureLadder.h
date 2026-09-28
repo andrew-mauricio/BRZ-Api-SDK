@@ -36,7 +36,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureLadder.BPAdjustLadderMountLocation(UE::Math::TVector<double>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPAdjustLadderMountLocation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureLadder.BPAdjustLadderMountLocation(UE::Math::TVector<double>&)", a0);
@@ -44,7 +44,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureLadder.BPUpdateRetraction()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPUpdateRetraction() const
     {
         NativeCall<void>(this, "APrimalStructureLadder.BPUpdateRetraction()");
@@ -84,7 +84,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureLadder.GetLadderClimbRotation(AShooterCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+bytes40+chamadores=3]]
     BrzPonteiro GetLadderClimbRotation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureLadder.GetLadderClimbRotation(AShooterCharacter*)", a0);
@@ -92,7 +92,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureLadder.GetLadderJumpVelocity(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=126]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetLadderJumpVelocity(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureLadder.GetLadderJumpVelocity(AShooterCharacter*)", a0);
@@ -124,7 +124,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureLadder.GetTopLadder()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTopLadder() const
     {
         return NativeCall<void*>(this, "APrimalStructureLadder.GetTopLadder()");
@@ -156,7 +156,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalStructureLadder.OnCharacterEndClimbingLadder(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnCharacterEndClimbingLadder(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureLadder.OnCharacterEndClimbingLadder(APrimalCharacter*)", a0);
@@ -250,6 +250,20 @@ struct APrimalStructureLadder : public APrimalStructure
     { return *GetNativePointerField<FString*>(this, "APrimalStructureLadder.RetractLadderString"); }
     float& RetractMultiuseDelayField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureLadder.RetractMultiuseDelay"); }
+    BrzCampoPonteiro bAllowPublicRetractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bAllowPublicRetraction")); }
+    BrzCampoPonteiro bCanRetractField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bCanRetract")); }
+    BrzCampoPonteiro bCanRetractFromBottomField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bCanRetractFromBottom")); }
+    BrzCampoPonteiro bHasLowerLaddersRetractedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bHasLowerLaddersRetracted")); }
+    BrzCampoPonteiro bIsRetractedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bIsRetracted")); }
+    BrzCampoPonteiro bUseBPAdjustLadderMountLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bUseBPAdjustLadderMountLocation")); }
+    BrzCampoPonteiro bUseBPUpdateRetractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureLadder.bUseBPUpdateRetraction")); }
     BitFieldValue<bool, unsigned __int32> bWasRetracted()
     { return { (void*)this, "bWasRetracted" }; }
     BitFieldValue<bool, unsigned __int32> bWasLowerLaddersRetracted()

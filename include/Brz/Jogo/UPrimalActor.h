@@ -41,7 +41,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.AddControllingMatineeActor(AMatineeActor&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=261]]
+    // endereco: casamento de bytes com a build de referencia
     void AddControllingMatineeActor(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalActor.AddControllingMatineeActor(AMatineeActor&)", a0);
@@ -49,7 +49,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.AllowGrappling()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool AllowGrappling() const
     {
         return NativeCall<bool>(this, "UPrimalActor.AllowGrappling()");
@@ -193,7 +193,7 @@ struct UPrimalActor : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalActor.BPFilterMultiUseEntries(APlayerController*,TArray<FMultiUseEntry,TSizedDefaultAlloc
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=312+bytes40+chamadores=2+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=312+bytes40+chamadores=3]]
     BrzPonteiro BPFilterMultiUseEntries(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalActor.BPFilterMultiUseEntries(APlayerController*,TArray<FMultiUseEntry,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -253,7 +253,7 @@ struct UPrimalActor : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalActor.BPGetMultiUseEntries(APlayerController*,TArray<FMultiUseEntry,TSizedDefaultAllocato
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=312+bytes40+grafo=4/4]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro BPGetMultiUseEntries(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalActor.BPGetMultiUseEntries(APlayerController*,TArray<FMultiUseEntry,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -277,7 +277,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPGetVehicleRotationAngularVelocityForWheel(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float BPGetVehicleRotationAngularVelocityForWheel(int a0) const
     {
         return NativeCall<float, int>(this, "UPrimalActor.BPGetVehicleRotationAngularVelocityForWheel(int)", a0);
@@ -285,7 +285,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPGetVehicleSteerAngleForWheel(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float BPGetVehicleSteerAngleForWheel(int a0) const
     {
         return NativeCall<float, int>(this, "UPrimalActor.BPGetVehicleSteerAngleForWheel(int)", a0);
@@ -301,7 +301,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPIgnoreAttachedSoundMultipliers(USoundBase*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=7]]
     bool BPIgnoreAttachedSoundMultipliers(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalActor.BPIgnoreAttachedSoundMultipliers(USoundBase*)", a0);
@@ -325,7 +325,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPOverrideUILocation(APlayerController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=101+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=101+chamadores=4]]
     BrzPonteiro BPOverrideUILocation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalActor.BPOverrideUILocation(APlayerController*)", a0);
@@ -357,7 +357,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPSetNetworkAndStasisRangeMultiplier(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPSetNetworkAndStasisRangeMultiplier(float a0) const
     {
         NativeCall<void, float>(this, "UPrimalActor.BPSetNetworkAndStasisRangeMultiplier(float)", a0);
@@ -365,7 +365,7 @@ struct UPrimalActor : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalActor.BPShouldAddUI_Implementation(TSubclassOf<UUserWidget>,AActor*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPShouldAddUI_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalActor.BPShouldAddUI_Implementation(TSubclassOf<UUserWidget>,AActor*)", a0, a1);
@@ -381,7 +381,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BP_GetHUDWorldDrawLocation(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BP_GetHUDWorldDrawLocation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalActor.BP_GetHUDWorldDrawLocation(FName)", a0);
@@ -389,7 +389,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BP_OverrideTargetingLocation(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BP_OverrideTargetingLocation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalActor.BP_OverrideTargetingLocation(AActor*)", a0);
@@ -481,7 +481,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.ForceAllowsInventoryUse(UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ForceAllowsInventoryUse(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalActor.ForceAllowsInventoryUse(UObject*)", a0);
@@ -521,7 +521,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.GetAllSceneComponents(TArray<USceneComponent*,TSizedDefaultAllocator<32>>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=256+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     void GetAllSceneComponents(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalActor.GetAllSceneComponents(TArray<USceneComponent*,TSizedDefaultAllocator<32>>&)", a0);
@@ -557,7 +557,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.GetInterpolatedVelocity()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=67]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetInterpolatedVelocity() const
     {
         return NativeCall<void*>(this, "UPrimalActor.GetInterpolatedVelocity()");
@@ -625,7 +625,7 @@ struct UPrimalActor : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalActor.GetNetCullDistance()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNetCullDistance() const
     {
         return NativeCall<void*>(this, "UPrimalActor.GetNetCullDistance()");
@@ -657,7 +657,7 @@ struct UPrimalActor : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalActor.GetOrbitCamZoomParams(float&,float&,float&,float&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetOrbitCamZoomParams(void* a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, void*, void*, void*, void*>(this, "UPrimalActor.GetOrbitCamZoomParams(float&,float&,float&,float&)", a0, a1, a2, a3);
@@ -689,7 +689,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.GetTargetActorForDyeUI()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     UObject* GetTargetActorForDyeUI() const
     {
         return NativeCall<UObject*>(this, "UPrimalActor.GetTargetActorForDyeUI()");
@@ -713,7 +713,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.GetUsablePriority()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     float GetUsablePriority() const
     {
         return NativeCall<float>(this, "UPrimalActor.GetUsablePriority()");
@@ -785,7 +785,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.IsMultiMeshPaintable()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=112+chamadores=3]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsMultiMeshPaintable() const
     {
         return NativeCall<bool>(this, "UPrimalActor.IsMultiMeshPaintable()");
@@ -825,7 +825,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.MulticastPropertyToPlayer(FName,APlayerController*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=227]]
+    // endereco: casamento de bytes com a build de referencia
     void MulticastPropertyToPlayer(unsigned long long a0, void* a1, bool a2) const
     {
         NativeCall<void, unsigned long long, void*, bool>(this, "UPrimalActor.MulticastPropertyToPlayer(FName,APlayerController*,bool)", a0, a1, a2);
@@ -833,7 +833,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.OffsetHUDFromBottomScreenY(AHUD*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=142]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float OffsetHUDFromBottomScreenY(void* a0) const
     {
         return NativeCall<float, void*>(this, "UPrimalActor.OffsetHUDFromBottomScreenY(AHUD*)", a0);
@@ -841,7 +841,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.OffsetHUDFromCenterScreenY(AHUD*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=142]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float OffsetHUDFromCenterScreenY(void* a0) const
     {
         return NativeCall<float, void*>(this, "UPrimalActor.OffsetHUDFromCenterScreenY(AHUD*)", a0);
@@ -857,7 +857,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.OnUROPostInterpolation_AnyThread(float,USkeletalMeshComponent*,FAnimationEvaluation
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnUROPostInterpolation_AnyThread(float a0, void* a1, void* a2) const
     {
         NativeCall<void, float, void*, void*>(this, "UPrimalActor.OnUROPostInterpolation_AnyThread(float,USkeletalMeshComponent*,FAnimationEvaluationContext&)", a0, a1, a2);
@@ -873,7 +873,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.PreventCharacterBasing(AActor*,UPrimitiveComponent*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventCharacterBasing(void* a0, void* a1) const
     {
         return NativeCall<bool, void*, void*>(this, "UPrimalActor.PreventCharacterBasing(AActor*,UPrimitiveComponent*)", a0, a1);
@@ -881,7 +881,7 @@ struct UPrimalActor : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalActor.PrimalOnComponentAdded(UActorComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PrimalOnComponentAdded(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalActor.PrimalOnComponentAdded(UActorComponent*)", a0);
@@ -905,7 +905,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.RemoveControllingMatineeActor(AMatineeActor&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=107]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveControllingMatineeActor(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalActor.RemoveControllingMatineeActor(AMatineeActor&)", a0);
@@ -929,7 +929,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.ShouldMovementUndermeshCheck()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=60]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldMovementUndermeshCheck() const
     {
         return NativeCall<bool>(this, "UPrimalActor.ShouldMovementUndermeshCheck()");
@@ -969,7 +969,7 @@ struct UPrimalActor : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalActor.TryMultiUse(APlayerController*,int,int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool TryMultiUse(void* a0, int a1, int a2) const
     {
         return NativeCall<bool, void*, int, int>(this, "UPrimalActor.TryMultiUse(APlayerController*,int,int)", a0, a1, a2);
@@ -1002,28 +1002,28 @@ struct UPrimalActor : public UObject
     int& DefaultUnstasisedOctreeFlagsField() const
     { return *GetNativePointerField<int*>(this, "UPrimalActor.DefaultUnstasisedOctreeFlags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StasisCheckComponent` +8, medido na build 25090264
+    //  ancorado em `StasisCheckComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x128; confianca alta)
     UMovementComponent*& DeferredMovementComponentField() const
     { return BrzCampoAncorado<UMovementComponent*>(this, "StasisCheckComponent", 8); }
     unsigned char& DesiredRepGraphBehaviorField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalActor.DesiredRepGraphBehavior"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultUnstasisedOctreeFlags` +8, medido na build 25090264
+    //  ancorado em `DefaultUnstasisedOctreeFlags` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1C8; confianca alta)
     int& ForceImmediateReplicationFrameField() const
     { return BrzCampoAncorado<int>(this, "DefaultUnstasisedOctreeFlags", 8); }
     double& ForceMaximumReplicationRateUntilTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.ForceMaximumReplicationRateUntilTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorFlags` +4, medido na build 25090264
+    //  ancorado em `CustomActorFlags` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1AC; confianca alta)
     int& LastActorForceReplicationFrameField() const
     { return BrzCampoAncorado<int>(this, "CustomActorFlags", 4); }
     double& LastActorForceReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.LastActorForceReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OriginalCreationTime` +8, medido na build 25090264
+    //  ancorado em `OriginalCreationTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x170; confianca alta)
     long long& LastActorUnstasisedCycleField() const
     { return BrzCampoAncorado<long long>(this, "OriginalCreationTime", 8); }
@@ -1032,17 +1032,17 @@ struct UPrimalActor : public UObject
     double& LastExitStasisTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.LastExitStasisTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorFlags` +12, medido na build 25090264
+    //  ancorado em `CustomActorFlags` +12, medido na build 25535041
     //  (offset absoluto medido: 0x1B4; confianca alta)
     int& LastFrameCalculatedNetworkRangeMultiplierField() const
     { return BrzCampoAncorado<int>(this, "CustomActorFlags", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OriginalCreationTime` +16, medido na build 25090264
+    //  ancorado em `OriginalCreationTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x178; confianca alta)
     unsigned long long& LastFrameUnStasisField() const
     { return BrzCampoAncorado<unsigned long long>(this, "OriginalCreationTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetCriticalPriorityAdjustment` +4, medido na build 25090264
+    //  ancorado em `NetCriticalPriorityAdjustment` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1D0; confianca alta)
     void*& LastOnlyInitialReplicationPreReplicationFrameField() const
     { return BrzCampoAncorado<void*>(this, "NetCriticalPriorityAdjustment", 4); }
@@ -1055,7 +1055,7 @@ struct UPrimalActor : public UObject
     double& LastThrottledTickTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.LastThrottledTickTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultUnstasisedOctreeFlags` +4, medido na build 25090264
+    //  ancorado em `DefaultUnstasisedOctreeFlags` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1C4; confianca alta)
     void*& LastUnstasisFrameCounterField() const
     { return BrzCampoAncorado<void*>(this, "DefaultUnstasisedOctreeFlags", 4); }
@@ -1066,7 +1066,7 @@ struct UPrimalActor : public UObject
     float& NetworkAndStasisRangeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalActor.NetworkAndStasisRangeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorFlags` +8, medido na build 25090264
+    //  ancorado em `CustomActorFlags` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1B0; confianca alta)
     int& NetworkDormantChildrenOpIdxField() const
     { return BrzCampoAncorado<int>(this, "CustomActorFlags", 8); }
@@ -1083,7 +1083,7 @@ struct UPrimalActor : public UObject
     BrzCampoPonteiro OnMatineeUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.OnMatineeUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnMatineeUpdated` +16, medido na build 25090264
+    //  ancorado em `OnMatineeUpdated` +16, medido na build 25535041
     //  (offset absoluto medido: 0xD0; confianca alta)
     void*& OnMatineeUpdatedRawField() const
     { return BrzCampoAncorado<void*>(this, "OnMatineeUpdated", 16); }
@@ -1092,7 +1092,7 @@ struct UPrimalActor : public UObject
     BrzCampoPonteiro OnTargetingTeamChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.OnTargetingTeamChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnTargetingTeamChanged` +16, medido na build 25090264
+    //  ancorado em `OnTargetingTeamChanged` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA8; confianca alta)
     void*& OnTeamChangedForActorField() const
     { return BrzCampoAncorado<void*>(this, "OnTargetingTeamChanged", 16); }
@@ -1101,12 +1101,12 @@ struct UPrimalActor : public UObject
     float& OverrideStasisComponentRadiusField() const
     { return *GetNativePointerField<float*>(this, "UPrimalActor.OverrideStasisComponentRadius"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OriginalCreationTime` +24, medido na build 25090264
+    //  ancorado em `OriginalCreationTime` +24, medido na build 25535041
     //  (offset absoluto medido: 0x180; confianca alta)
     void*& PlayerScaledNetworkAndStasisRangeMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "OriginalCreationTime", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetCullDistanceSquaredDormant` +4, medido na build 25090264
+    //  ancorado em `NetCullDistanceSquaredDormant` +4, medido na build 25535041
     //  (offset absoluto medido: 0x190; confianca alta)
     void*& PreviousStasisRangeMultField() const
     { return BrzCampoAncorado<void*>(this, "NetCullDistanceSquaredDormant", 4); }
@@ -1121,12 +1121,168 @@ struct UPrimalActor : public UObject
     int& TargetingTeamField() const
     { return *GetNativePointerField<int*>(this, "UPrimalActor.TargetingTeam"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPostProcessVolumeSound` +8, medido na build 25090264
+    //  ancorado em `LastPostProcessVolumeSound` +8, medido na build 25535041
     //  (offset absoluto medido: 0x78; confianca alta)
     TArray<void*>& TimerStasisStoreField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "LastPostProcessVolumeSound", 8); }
     double& UnstasisLastInRangeTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.UnstasisLastInRangeTime"); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bAutoStasis")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bClimbable")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bEnableMultiUse")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForceAllowNetMulticast")); }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bForcedHudDrawingRequiresSameTeam")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bHibernateChange")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bIsMapActor")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bIsValidUnstasisCaster")); }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bNetCritical")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bPreventSaving")); }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bReplicateHidden")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bSavedWhenStasised")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bStasised")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bUseStasisGrid")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.bWantsServerThrottledTick")); }
     BitFieldValue<bool, unsigned __int32> bIsShooterPlayerController()
     { return { (void*)this, "bIsShooterPlayerController" }; }
     BitFieldValue<bool, unsigned __int32> bIsPrimalDino()

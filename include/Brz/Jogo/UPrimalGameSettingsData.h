@@ -33,8 +33,24 @@ struct UPrimalGameSettingsData
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
+    BrzCampoPonteiro AdminLoggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AdminLogging")); }
+    BrzCampoPonteiro AllowAnyoneBabyImprintCuddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AllowAnyoneBabyImprintCuddle")); }
+    BrzCampoPonteiro AllowCaveBuildingPvEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AllowCaveBuildingPvE")); }
+    BrzCampoPonteiro AllowFlyerCarryPvEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AllowFlyerCarryPvE")); }
+    BrzCampoPonteiro AllowHideDamageSourceFromLogsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AllowHideDamageSourceFromLogs")); }
+    BrzCampoPonteiro AllowRaidDinoFeedingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AllowRaidDinoFeeding")); }
+    BrzCampoPonteiro AllowThirdPersonPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AllowThirdPersonPlayer")); }
     float& AlphaKillXPMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.AlphaKillXPMultiplier"); }
+    BrzCampoPonteiro AlwaysNotifyPlayerLeftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.AlwaysNotifyPlayerLeft")); }
     float& AutoPvEStartTimeSecondsField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.AutoPvEStartTimeSeconds"); }
     float& AutoPvEStopTimeSecondsField() const
@@ -89,12 +105,32 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.DinoResistanceMultiplier"); }
     float& DinoTurretDamageMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.DinoTurretDamageMultiplier"); }
+    BrzCampoPonteiro DisableDinoDecayPvEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.DisableDinoDecayPvE")); }
+    BrzCampoPonteiro DisableImprintDinoBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.DisableImprintDinoBuff")); }
+    BrzCampoPonteiro DisablePvEGammaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.DisablePvEGamma")); }
+    BrzCampoPonteiro DisableStructureDecayPvEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.DisableStructureDecayPvE")); }
+    BrzCampoPonteiro DisableWeatherFogField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.DisableWeatherFog")); }
+    BrzCampoPonteiro DontAlwaysNotifyPlayerJoinedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.DontAlwaysNotifyPlayerJoined")); }
     float& EggHatchSpeedMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.EggHatchSpeedMultiplier"); }
+    BrzCampoPonteiro EnableExtraStructurePreventionVolumesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.EnableExtraStructurePreventionVolumes")); }
+    BrzCampoPonteiro EnablePvPGammaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.EnablePvPGamma")); }
     float& ExplorerNoteXPMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.ExplorerNoteXPMultiplier"); }
     float& FishingLootQualityMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.FishingLootQualityMultiplier"); }
+    BrzCampoPonteiro ForceAllowCaveFlyersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ForceAllowCaveFlyers")); }
+    BrzCampoPonteiro ForceResetWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ForceResetWildDinos")); }
     float& FuelConsumptionIntervalMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.FuelConsumptionIntervalMultiplier"); }
     float& GenericXPMultiplierField() const
@@ -105,6 +141,8 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.GlobalItemDecompositionTimeMultiplier"); }
     float& GlobalSpoilingTimeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.GlobalSpoilingTimeMultiplier"); }
+    BrzCampoPonteiro GlobalVoiceChatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.GlobalVoiceChat")); }
     float& HarvestAmountMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.HarvestAmountMultiplier"); }
     float& HarvestHealthMultiplierField() const
@@ -117,6 +155,8 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.IncreasePvPRespawnIntervalCheckPeriod"); }
     float& IncreasePvPRespawnIntervalMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.IncreasePvPRespawnIntervalMultiplier"); }
+    BrzCampoPonteiro IsBaseBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.IsBaseBP")); }
     float& KillXPMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.KillXPMultiplier"); }
     float& LayEggIntervalMultiplierField() const
@@ -135,12 +175,20 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.NewMaxStructuresInRange"); }
     float& NightTimeSpeedScaleField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.NightTimeSpeedScale"); }
+    BrzCampoPonteiro NoTributeDownloadsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.NoTributeDownloads")); }
+    BrzCampoPonteiro NonPermanentDiseasesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.NonPermanentDiseases")); }
+    BrzCampoPonteiro OnlyAllowSpecifiedEngramsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.OnlyAllowSpecifiedEngrams")); }
     int& OverrideMaxExperiencePointsDinoField() const
     { return *GetNativePointerField<int*>(this, "UPrimalGameSettingsData.OverrideMaxExperiencePointsDino"); }
     int& OverrideMaxExperiencePointsPlayerField() const
     { return *GetNativePointerField<int*>(this, "UPrimalGameSettingsData.OverrideMaxExperiencePointsPlayer"); }
     bool& OverrideStartTimeField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.OverrideStartTime"); }
+    BrzCampoPonteiro OverrideStructurePlatformPreventionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.OverrideStructurePlatformPrevention")); }
     float& PerLevelStatsDinoTamedAdd_DamageField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PerLevelStatsDinoTamedAdd_Damage"); }
     float& PerLevelStatsDinoTamedAdd_FoodField() const
@@ -271,28 +319,52 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PlayerResistanceMultiplier"); }
     float& PoopIntervalMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PoopIntervalMultiplier"); }
+    BrzCampoPonteiro PreventDiseasesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.PreventDiseases")); }
     bool& PreventDownloadDinosField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.PreventDownloadDinos"); }
     bool& PreventDownloadItemsField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.PreventDownloadItems"); }
     bool& PreventDownloadSurvivorsField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.PreventDownloadSurvivors"); }
+    BrzCampoPonteiro PreventOfflinePvPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.PreventOfflinePvP")); }
     float& PreventOfflinePvPIntervalField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PreventOfflinePvPInterval"); }
+    BrzCampoPonteiro PreventTribeAlliancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.PreventTribeAlliances")); }
+    BrzCampoPonteiro ProximityChatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ProximityChat")); }
     float& PvEDinoDecayPeriodMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PvEDinoDecayPeriodMultiplier"); }
     float& PvEStructureDecayPeriodMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PvEStructureDecayPeriodMultiplier"); }
+    BrzCampoPonteiro PvPDinoDecayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.PvPDinoDecay")); }
     float& PvPZoneStructureDamageMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.PvPZoneStructureDamageMultiplier"); }
     float& RaidDinoCharacterFoodDrainMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.RaidDinoCharacterFoodDrainMultiplier"); }
+    BrzCampoPonteiro RandomSupplyCratePointsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.RandomSupplyCratePoints")); }
     float& ResourceNoReplenishRadiusPlayersField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.ResourceNoReplenishRadiusPlayers"); }
     float& ResourceNoReplenishRadiusStructuresField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.ResourceNoReplenishRadiusStructures"); }
     float& ResourcesRespawnPeriodMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.ResourcesRespawnPeriodMultiplier"); }
+    BrzCampoPonteiro ServerCrosshairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ServerCrosshair")); }
+    BrzCampoPonteiro ServerForceNoHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ServerForceNoHUD")); }
+    BrzCampoPonteiro ServerHardcoreField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ServerHardcore")); }
+    BrzCampoPonteiro ServerPVEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ServerPVE")); }
+    BrzCampoPonteiro ShowFloatingDamageTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ShowFloatingDamageText")); }
+    BrzCampoPonteiro ShowMapPlayerLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.ShowMapPlayerLocation")); }
     float& SpecialXPMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameSettingsData.SpecialXPMultiplier"); }
     int& StartTimeHourField() const
@@ -333,6 +405,8 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bAutoPvETimer"); }
     bool& bAutoPvEUseSystemTimeField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bAutoPvEUseSystemTime"); }
+    BrzCampoPonteiro bDisableDefaultDinoTamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.bDisableDefaultDinoTaming")); }
     bool& bDisableDinoRidingField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bDisableDinoRiding"); }
     bool& bDisableDinoTamingField() const
@@ -355,6 +429,8 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bDisableWirelessCraftingForStructures"); }
     bool& bFlyerPlatformAllowUnalignedDinoBasingField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bFlyerPlatformAllowUnalignedDinoBasing"); }
+    BrzCampoPonteiro bForceGachaUnhappyInCavesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.bForceGachaUnhappyInCaves")); }
     bool& bHardLimitTurretsInRangeField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bHardLimitTurretsInRange"); }
     bool& bIncreasePvPRespawnIntervalField() const
@@ -367,6 +443,8 @@ struct UPrimalGameSettingsData
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bPvEAllowTribeWarCancel"); }
     bool& bShowCreativeModeField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bShowCreativeMode"); }
+    BrzCampoPonteiro bUseCorpseLocatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameSettingsData.bUseCorpseLocator")); }
     bool& bUseSingleplayerSettingsField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameSettingsData.bUseSingleplayerSettings"); }
     BrzCampoPonteiro defaultBoolMapField() const

@@ -81,90 +81,90 @@ struct ULevelInstanceComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.RelativeScale3D")); }
     int& UCSSerializationIndexField() const
     { return *GetNativePointerField<int*>(this, "ULevelInstanceComponent.UCSSerializationIndex"); }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteLocation()
-    { return { (void*)this, "bAbsoluteLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteRotation()
-    { return { (void*)this, "bAbsoluteRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAbsoluteScale()
-    { return { (void*)this, "bAbsoluteScale" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachedSoundsForceHighPriority()
-    { return { (void*)this, "bAttachedSoundsForceHighPriority" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bBoundsChangeTriggersStreamingDataRebuild()
-    { return { (void*)this, "bBoundsChangeTriggersStreamingDataRebuild" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bClientSyncAlwaysUpdatePhysicsCollision()
-    { return { (void*)this, "bClientSyncAlwaysUpdatePhysicsCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bComponentToWorldUpdated()
-    { return { (void*)this, "bComponentToWorldUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeBoundsOnceForGame()
-    { return { (void*)this, "bComputeBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bComputeFastLocalBounds()
-    { return { (void*)this, "bComputeFastLocalBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bComputedBoundsOnceForGame()
-    { return { (void*)this, "bComputedBoundsOnceForGame" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHiddenInGame()
-    { return { (void*)this, "bHiddenInGame" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreParentTransformUpdate()
-    { return { (void*)this, "bIgnoreParentTransformUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bIsNotRenderAttachmentRoot()
-    { return { (void*)this, "bIsNotRenderAttachmentRoot" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeAttached()
-    { return { (void*)this, "bShouldBeAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapLocationWhenAttached()
-    { return { (void*)this, "bShouldSnapLocationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapRotationWhenAttached()
-    { return { (void*)this, "bShouldSnapRotationWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldSnapScaleWhenAttached()
-    { return { (void*)this, "bShouldSnapScaleWhenAttached" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldUpdatePhysicsVolume()
-    { return { (void*)this, "bShouldUpdatePhysicsVolume" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUpdateChildOverlaps()
-    { return { (void*)this, "bUpdateChildOverlaps" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachParentBound()
-    { return { (void*)this, "bUseAttachParentBound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bVisible()
-    { return { (void*)this, "bVisible" }; }
+    BrzCampoPonteiro bAbsoluteLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bAbsoluteLocation")); }
+    BrzCampoPonteiro bAbsoluteRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bAbsoluteRotation")); }
+    BrzCampoPonteiro bAbsoluteScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bAbsoluteScale")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAttachedSoundsForceHighPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bAttachedSoundsForceHighPriority")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bAutoActivate")); }
+    BrzCampoPonteiro bBoundsChangeTriggersStreamingDataRebuildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bBoundsChangeTriggersStreamingDataRebuild")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bClientSyncAlwaysUpdatePhysicsCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bClientSyncAlwaysUpdatePhysicsCollision")); }
+    BrzCampoPonteiro bComponentToWorldUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bComponentToWorldUpdated")); }
+    BrzCampoPonteiro bComputeBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bComputeBoundsOnceForGame")); }
+    BrzCampoPonteiro bComputeFastLocalBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bComputeFastLocalBounds")); }
+    BrzCampoPonteiro bComputedBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bComputedBoundsOnceForGame")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHiddenInGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bHiddenInGame")); }
+    BrzCampoPonteiro bIgnoreParentTransformUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bIgnoreParentTransformUpdate")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsNotRenderAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bIsNotRenderAttachmentRoot")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bReplicates")); }
+    BrzCampoPonteiro bShouldBeAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bShouldBeAttached")); }
+    BrzCampoPonteiro bShouldSnapLocationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bShouldSnapLocationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapRotationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bShouldSnapRotationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapScaleWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bShouldSnapScaleWhenAttached")); }
+    BrzCampoPonteiro bShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUpdateChildOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bUpdateChildOverlaps")); }
+    BrzCampoPonteiro bUseAttachParentBoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bUseAttachParentBound")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceComponent.bVisible")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELINSTANCECOMPONENT_H

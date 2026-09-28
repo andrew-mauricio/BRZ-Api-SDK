@@ -53,7 +53,7 @@ struct UPrimalSubMenuUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalSubMenuUI.OnHide()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnHide() const
     {
         return NativeCall<void*>(this, "UPrimalSubMenuUI.OnHide()");
@@ -69,7 +69,7 @@ struct UPrimalSubMenuUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalSubMenuUI.StoreHighlightedState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StoreHighlightedState() const
     {
         return NativeCall<void*>(this, "UPrimalSubMenuUI.StoreHighlightedState()");
@@ -141,12 +141,12 @@ struct UPrimalSubMenuUI
     { return *GetNativePointerField<float*>(this, "UPrimalSubMenuUI.GamepadSelectClosestDistanceMultiplier"); }
     BrzCampoPonteiro HTTPGetResponseEventField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.HTTPGetResponseEvent")); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.HandleVisibilityWithInput")); }
     unsigned char& HighlightStartPointTypeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalSubMenuUI.HighlightStartPointType"); }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.Highlightable")); }
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UPrimalSubMenuUI.InputComponent"); }
     TWeakObjectPtr<void>& ItemContainerField() const
@@ -167,8 +167,8 @@ struct UPrimalSubMenuUI
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.OriginalUnStretchedAnchors")); }
     BrzCampoPonteiro OriginalUnstretchedSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.OriginalUnstretchedSize")); }
-    BitFieldValue<bool, unsigned __int32> OverrideButtonSounds()
-    { return { (void*)this, "OverrideButtonSounds" }; }
+    BrzCampoPonteiro OverrideButtonSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.OverrideButtonSounds")); }
     BrzCampoPonteiro PaddingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.Padding")); }
     BrzCampoPonteiro PixelSnappingField() const
@@ -185,8 +185,8 @@ struct UPrimalSubMenuUI
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.RenderTransformPivot")); }
     int& SceneStackPriorityField() const
     { return *GetNativePointerField<int*>(this, "UPrimalSubMenuUI.SceneStackPriority"); }
-    BitFieldValue<bool, unsigned __int32> ShouldStretchMainScreenWhenHandheld()
-    { return { (void*)this, "ShouldStretchMainScreenWhenHandheld" }; }
+    BrzCampoPonteiro ShouldStretchMainScreenWhenHandheldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.ShouldStretchMainScreenWhenHandheld")); }
     BrzCampoPonteiro SizeBoxHandheldSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.SizeBoxHandheldSize")); }
     int& SlotField() const
@@ -211,126 +211,126 @@ struct UPrimalSubMenuUI
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.ToolTipWidgetDelegate")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UPrimalSubMenuUI.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.VisibilityGamepadInput")); }
     BrzCampoPonteiro VisibilityKBMInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.VisibilityKBMInput")); }
-    BitFieldValue<bool, unsigned __int32> WasInHandheldMode()
-    { return { (void*)this, "WasInHandheldMode" }; }
+    BrzCampoPonteiro WasInHandheldModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.WasInHandheldMode")); }
     BrzCampoPonteiro WidgetTreeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.WidgetTree")); }
     BrzCampoPonteiro XBoxFooterUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.XBoxFooterUITemplate")); }
-    BitFieldValue<bool, unsigned __int32> bAutoProcessSplitscreenScaling()
-    { return { (void*)this, "bAutoProcessSplitscreenScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCachedIsGamepadActive()
-    { return { (void*)this, "bCachedIsGamepadActive" }; }
-    BitFieldValue<bool, unsigned __int32> bCaptureMouseInput()
-    { return { (void*)this, "bCaptureMouseInput" }; }
-    BitFieldValue<bool, unsigned __int32> bClickClosesMenu()
-    { return { (void*)this, "bClickClosesMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bCloseOnPlayerDie()
-    { return { (void*)this, "bCloseOnPlayerDie" }; }
-    BitFieldValue<bool, unsigned __int32> bConstrainVirtualCursor()
-    { return { (void*)this, "bConstrainVirtualCursor" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoExtraDataListButtonPanelFilteringChecks()
-    { return { (void*)this, "bDoExtraDataListButtonPanelFilteringChecks" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bEscapeClosesMenu()
-    { return { (void*)this, "bEscapeClosesMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bEscapeOpensPauseMenu()
-    { return { (void*)this, "bEscapeOpensPauseMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisableFrameGen()
-    { return { (void*)this, "bForceDisableFrameGen" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFullscreenVirtualCursor()
-    { return { (void*)this, "bForceFullscreenVirtualCursor" }; }
-    BitFieldValue<bool, unsigned __int32> bForceVirtualCursorEnabled()
-    { return { (void*)this, "bForceVirtualCursorEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreUIScaling()
-    { return { (void*)this, "bIgnoreUIScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIsClosing()
-    { return { (void*)this, "bIsClosing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutoProcessSplitscreenScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bAutoProcessSplitscreenScaling")); }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCachedIsGamepadActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bCachedIsGamepadActive")); }
+    BrzCampoPonteiro bCaptureMouseInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bCaptureMouseInput")); }
+    BrzCampoPonteiro bClickClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bClickClosesMenu")); }
+    BrzCampoPonteiro bCloseOnPlayerDieField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bCloseOnPlayerDie")); }
+    BrzCampoPonteiro bConstrainVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bConstrainVirtualCursor")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoExtraDataListButtonPanelFilteringChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bDoExtraDataListButtonPanelFilteringChecks")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bDontRenderHighlight")); }
+    BrzCampoPonteiro bEscapeClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bEscapeClosesMenu")); }
+    BrzCampoPonteiro bEscapeOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bEscapeOpensPauseMenu")); }
+    BrzCampoPonteiro bForceDisableFrameGenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bForceDisableFrameGen")); }
+    BrzCampoPonteiro bForceFullscreenVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bForceFullscreenVirtualCursor")); }
+    BrzCampoPonteiro bForceVirtualCursorEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bForceVirtualCursorEnabled")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIgnoreUIScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIgnoreUIScaling")); }
+    BrzCampoPonteiro bIsClosingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsClosing")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsGameplayUI()
-    { return { (void*)this, "bIsGameplayUI" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTopUI()
-    { return { (void*)this, "bIsTopUI" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bMenuSupportSlomo()
-    { return { (void*)this, "bMenuSupportSlomo" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventGamepadDpadNavegation()
-    { return { (void*)this, "bPreventGamepadDpadNavegation" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleScreenResolution()
-    { return { (void*)this, "bScaleScreenResolution" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldValidateInputOnRemove()
-    { return { (void*)this, "bShouldValidateInputOnRemove" }; }
-    BitFieldValue<bool, unsigned __int32> bShowAcceptIcon()
-    { return { (void*)this, "bShowAcceptIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowBumpersIcon()
-    { return { (void*)this, "bShowBumpersIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowCancelIcon()
-    { return { (void*)this, "bShowCancelIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnBottomIcon()
-    { return { (void*)this, "bShowFaceBtnBottomIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnLeftIcon()
-    { return { (void*)this, "bShowFaceBtnLeftIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnRightIcon()
-    { return { (void*)this, "bShowFaceBtnRightIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnTopIcon()
-    { return { (void*)this, "bShowFaceBtnTopIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLStickIcon()
-    { return { (void*)this, "bShowLStickIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLTBtnIcon()
-    { return { (void*)this, "bShowLTBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLeftShoulderBtnIcon()
-    { return { (void*)this, "bShowLeftShoulderBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowRStickIcon()
-    { return { (void*)this, "bShowRStickIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowRTBtnIcon()
-    { return { (void*)this, "bShowRTBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowStartBtnIcon()
-    { return { (void*)this, "bShowStartBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowXBoxFooter()
-    { return { (void*)this, "bShowXBoxFooter" }; }
-    BitFieldValue<bool, unsigned __int32> bSpecialRightOpensPauseMenu()
-    { return { (void*)this, "bSpecialRightOpensPauseMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitForObjects()
-    { return { (void*)this, "bUseBPInitForObjects" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPrimalItemNotifications()
-    { return { (void*)this, "bWantsPrimalItemNotifications" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsFocusable")); }
+    BrzCampoPonteiro bIsGameplayUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsGameplayUI")); }
+    BrzCampoPonteiro bIsTopUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsTopUI")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bIsVolatile")); }
+    BrzCampoPonteiro bMenuSupportSlomoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bMenuSupportSlomo")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bOverride_Cursor")); }
+    BrzCampoPonteiro bPreventGamepadDpadNavegationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bPreventGamepadDpadNavegation")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bScaleScreenResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bScaleScreenResolution")); }
+    BrzCampoPonteiro bShouldValidateInputOnRemoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShouldValidateInputOnRemove")); }
+    BrzCampoPonteiro bShowAcceptIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowAcceptIcon")); }
+    BrzCampoPonteiro bShowBumpersIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowBumpersIcon")); }
+    BrzCampoPonteiro bShowCancelIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowCancelIcon")); }
+    BrzCampoPonteiro bShowFaceBtnBottomIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowFaceBtnBottomIcon")); }
+    BrzCampoPonteiro bShowFaceBtnLeftIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowFaceBtnLeftIcon")); }
+    BrzCampoPonteiro bShowFaceBtnRightIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowFaceBtnRightIcon")); }
+    BrzCampoPonteiro bShowFaceBtnTopIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowFaceBtnTopIcon")); }
+    BrzCampoPonteiro bShowLStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowLStickIcon")); }
+    BrzCampoPonteiro bShowLTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowLTBtnIcon")); }
+    BrzCampoPonteiro bShowLeftShoulderBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowLeftShoulderBtnIcon")); }
+    BrzCampoPonteiro bShowRStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowRStickIcon")); }
+    BrzCampoPonteiro bShowRTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowRTBtnIcon")); }
+    BrzCampoPonteiro bShowStartBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowStartBtnIcon")); }
+    BrzCampoPonteiro bShowXBoxFooterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bShowXBoxFooter")); }
+    BrzCampoPonteiro bSpecialRightOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bSpecialRightOpensPauseMenu")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitForObjectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bUseBPInitForObjects")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bUseWindowClippingForHighlight")); }
+    BrzCampoPonteiro bWantsPrimalItemNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalSubMenuUI.bWantsPrimalItemNotifications")); }
     int& virtualCursorFramesField() const
     { return *GetNativePointerField<int*>(this, "UPrimalSubMenuUI.virtualCursorFrames"); }
 };

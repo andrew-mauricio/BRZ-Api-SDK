@@ -63,7 +63,7 @@ struct ULevelStreamingDynamic
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreamingDynamic.PostLoad()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=162]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PostLoad() const
     {
         return NativeCall<void*>(this, "ULevelStreamingDynamic.PostLoad()");
@@ -79,7 +79,7 @@ struct ULevelStreamingDynamic
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreamingDynamic.ShouldBeLoaded()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldBeLoaded() const
     {
         return NativeCall<void*>(this, "ULevelStreamingDynamic.ShouldBeLoaded()");
@@ -115,30 +115,34 @@ struct ULevelStreamingDynamic
     { return *GetNativePointerField<int*>(this, "ULevelStreamingDynamic.StreamingPriority"); }
     BrzCampoPonteiro WorldAssetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.WorldAsset")); }
-    BitFieldValue<bool, unsigned __int32> bClientOnlyVisible()
-    { return { (void*)this, "bClientOnlyVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableDistanceStreaming()
-    { return { (void*)this, "bDisableDistanceStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bDrawOnLevelStatusMap()
-    { return { (void*)this, "bDrawOnLevelStatusMap" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableTileStreaming()
-    { return { (void*)this, "bEnableTileStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bIsStatic()
-    { return { (void*)this, "bIsStatic" }; }
-    BitFieldValue<bool, unsigned __int32> bLevelStreamingDesiredVisibility()
-    { return { (void*)this, "bLevelStreamingDesiredVisibility" }; }
-    BitFieldValue<bool, unsigned __int32> bLevelStreamingVisibilityOnly()
-    { return { (void*)this, "bLevelStreamingVisibilityOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bLocked()
-    { return { (void*)this, "bLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeLoaded()
-    { return { (void*)this, "bShouldBeLoaded" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBeVisible()
-    { return { (void*)this, "bShouldBeVisible" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBlockOnLoad()
-    { return { (void*)this, "bShouldBlockOnLoad" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldBlockOnUnload()
-    { return { (void*)this, "bShouldBlockOnUnload" }; }
+    BrzCampoPonteiro bClientOnlyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bClientOnlyVisible")); }
+    BrzCampoPonteiro bDisableDistanceStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bDisableDistanceStreaming")); }
+    BrzCampoPonteiro bDrawOnLevelStatusMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bDrawOnLevelStatusMap")); }
+    BrzCampoPonteiro bEnableTileStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bEnableTileStreaming")); }
+    BrzCampoPonteiro bInitiallyLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bInitiallyLoaded")); }
+    BrzCampoPonteiro bInitiallyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bInitiallyVisible")); }
+    BrzCampoPonteiro bIsStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bIsStatic")); }
+    BrzCampoPonteiro bLevelStreamingDesiredVisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bLevelStreamingDesiredVisibility")); }
+    BrzCampoPonteiro bLevelStreamingVisibilityOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bLevelStreamingVisibilityOnly")); }
+    BrzCampoPonteiro bLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bLocked")); }
+    BrzCampoPonteiro bShouldBeLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bShouldBeLoaded")); }
+    BrzCampoPonteiro bShouldBeVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bShouldBeVisible")); }
+    BrzCampoPonteiro bShouldBlockOnLoadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bShouldBlockOnLoad")); }
+    BrzCampoPonteiro bShouldBlockOnUnloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreamingDynamic.bShouldBlockOnUnload")); }
     BitFieldValue<bool, unsigned __int32> bInitiallyLoaded()
     { return { (void*)this, "bInitiallyLoaded" }; }
     BitFieldValue<bool, unsigned __int32> bInitiallyVisible()

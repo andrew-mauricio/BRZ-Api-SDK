@@ -40,6 +40,9 @@ struct UClassProperty
     {
         return NativeCall<void*, void*>(this, "UClassProperty.Serialize(FArchive&)", a0);
     }
+
+    BrzCampoPonteiro MetaClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClassProperty.MetaClass")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UCLASSPROPERTY_H

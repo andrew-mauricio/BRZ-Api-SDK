@@ -39,10 +39,16 @@ struct FStringTemplate
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.Line")); }
     BrzCampoPonteiro MessageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.Message")); }
+    BrzCampoPonteiro NumNamedParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.NumNamedParameters")); }
     BrzCampoPonteiro OffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.Offset")); }
+    BrzCampoPonteiro TemplateStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.TemplateString")); }
     BrzCampoPonteiro TextField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.Text")); }
+    BrzCampoPonteiro bIsParameterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplate.bIsParameter")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGTEMPLATE_H

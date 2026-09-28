@@ -33,8 +33,8 @@ struct FVector2fCameraRigParameterOverride
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector2fCameraRigParameterOverride.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTOR2FCAMERARIGPARAMETEROVERRIDE_H

@@ -35,7 +35,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalEmitterSpawnable.Activate()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Activate() const
     {
         return NativeCall<void*>(this, "APrimalEmitterSpawnable.Activate()");
@@ -52,7 +52,7 @@ struct APrimalEmitterSpawnable : public AActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalEmitterSpawnable.BeginPlay()
     // classe: a funcao mora em AActor, e APrimalEmitterSpawnable herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BeginPlay() const
     {
         return NativeCall<void*>(this, "AActor.BeginPlay()");
@@ -60,7 +60,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalEmitterSpawnable.Deactivate()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Deactivate() const
     {
         return NativeCall<void*>(this, "APrimalEmitterSpawnable.Deactivate()");
@@ -94,7 +94,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalEmitterSpawnable.OnNiagaraSystemFinished(UNiagaraComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnNiagaraSystemFinished(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalEmitterSpawnable.OnNiagaraSystemFinished(UNiagaraComponent*)", a0);
@@ -110,7 +110,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalEmitterSpawnable.PreActivation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PreActivation() const
     {
         NativeCall<void>(this, "APrimalEmitterSpawnable.PreActivation()");
@@ -134,7 +134,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalEmitterSpawnable.SetSourceNotify(UAnimNotifyState_SpawnProp*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSourceNotify(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalEmitterSpawnable.SetSourceNotify(UAnimNotifyState_SpawnProp*)", a0);
@@ -142,7 +142,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalEmitterSpawnable.SetupEmitter(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetupEmitter(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalEmitterSpawnable.SetupEmitter(AActor*)", a0);
@@ -166,7 +166,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalEmitterSpawnable.ToggleActivation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ToggleActivation(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalEmitterSpawnable.ToggleActivation(bool)", a0);
@@ -221,6 +221,8 @@ struct APrimalEmitterSpawnable : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.HitLocation")); }
     BrzCampoPonteiro ImpulseDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.ImpulseData")); }
+    int& MaxConcurrentActivatedVfxField() const
+    { return *GetNativePointerField<int*>(this, "APrimalEmitterSpawnable.MaxConcurrentActivatedVfx"); }
     BrzCampoPonteiro NiagaraComponentField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.NiagaraComponent")); }
     BrzCampoPonteiro RootTransformCompField() const
@@ -235,11 +237,39 @@ struct APrimalEmitterSpawnable : public AActor
     { return *GetNativePointerField<UAudioComponent**>(this, "APrimalEmitterSpawnable.SoundToPlay"); }
     BrzCampoPonteiro SpawnedForActorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.SpawnedForActor")); }
+    float& WarmupSecondsPerFrameCapField() const
+    { return *GetNativePointerField<float*>(this, "APrimalEmitterSpawnable.WarmupSecondsPerFrameCap"); }
+    BrzCampoPonteiro bAllowLoopingEmitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bAllowLoopingEmitter")); }
+    BrzCampoPonteiro bCameraShakeOrientTowardsEpicenterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bCameraShakeOrientTowardsEpicenter")); }
+    BrzCampoPonteiro bDelayedDeactivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bDelayedDeactivation")); }
+    BrzCampoPonteiro bEnableDistanceBasedVfxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bEnableDistanceBasedVfx")); }
+    BrzCampoPonteiro bForceNoRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bForceNoRotation")); }
+    BrzCampoPonteiro bHasImpulseDataAvailableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bHasImpulseDataAvailable")); }
+    BrzCampoPonteiro bHighPrioritySoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bHighPrioritySound")); }
+    BrzCampoPonteiro bShallowEmitterDontSpawnOutOfViewField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bShallowEmitterDontSpawnOutOfView")); }
+    BrzCampoPonteiro bShallowEmitterSpawnableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bShallowEmitterSpawnable")); }
+    BrzCampoPonteiro bTickSoundInRangePlaybackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bTickSoundInRangePlayback")); }
+    BrzCampoPonteiro bUseBPCustomApplyColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bUseBPCustomApplyColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ColorParameter` +16, medido na build 25090264
+    //  ancorado em `ColorParameter` +16, medido na build 25535041
     //  (offset absoluto medido: 0x55C; confianca alta)
     void*& bUseNiagaraComponentField() const
     { return BrzCampoAncorado<void*>(this, "ColorParameter", 16); }
+    BrzCampoPonteiro bUseNiagaraDestroyOnSystemFinishField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bUseNiagaraDestroyOnSystemFinish")); }
+    BrzCampoPonteiro bWasActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bWasActivated")); }
     BitFieldValue<bool, unsigned __int32> bAllowLoopingEmitter()
     { return { (void*)this, "bAllowLoopingEmitter" }; }
     BitFieldValue<bool, unsigned __int32> bCameraShakeOrientTowardsEpicenter()

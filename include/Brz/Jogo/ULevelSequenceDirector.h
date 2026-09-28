@@ -113,6 +113,8 @@ struct ULevelSequenceDirector
     { return *GetNativePointerField<int*>(this, "ULevelSequenceDirector.SubSequenceID"); }
     TWeakObjectPtr<void>& WeakLinkerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "ULevelSequenceDirector.WeakLinker"); }
+    BrzCampoPonteiro bSequenceDirectorHideUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequenceDirector.bSequenceDirectorHideUI")); }
     BitFieldValue<bool, unsigned __int32> bSequenceDirectorHideUI()
     { return { (void*)this, "bSequenceDirectorHideUI" }; }
 

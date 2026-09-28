@@ -33,8 +33,8 @@ struct FLevelLegacyMapBuildData
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Data()
-    { return { (void*)this, "Data" }; }
+    BrzCampoPonteiro DataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelLegacyMapBuildData.Data")); }
     BrzCampoPonteiro IdField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelLegacyMapBuildData.Id")); }
 };

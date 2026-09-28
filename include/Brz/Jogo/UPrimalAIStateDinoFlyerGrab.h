@@ -37,7 +37,7 @@ struct UPrimalAIStateDinoFlyerGrab
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoFlyerGrab.OnBegin(UPrimalAIState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=99]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnBegin(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalAIStateDinoFlyerGrab.OnBegin(UPrimalAIState*)", a0);
@@ -57,10 +57,10 @@ struct UPrimalAIStateDinoFlyerGrab
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.ChildStates")); }
     BrzCampoPonteiro FirstHitField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.FirstHit")); }
-    BitFieldValue<bool, unsigned __int32> IsInAnimationState()
-    { return { (void*)this, "IsInAnimationState" }; }
-    BitFieldValue<bool, unsigned __int32> IsInAttackState()
-    { return { (void*)this, "IsInAttackState" }; }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.IsInAttackState")); }
     BrzCampoPonteiro ParentStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.ParentState")); }
     TObjectPtr<APawn>& PawnField() const
@@ -77,38 +77,40 @@ struct UPrimalAIStateDinoFlyerGrab
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateDinoFlyerGrab.SpawnProjectileInterval"); }
     FName& SpawnProjectileSocketField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalAIStateDinoFlyerGrab.SpawnProjectileSocket"); }
-    BitFieldValue<bool, unsigned __int32> bBPCanUseState()
-    { return { (void*)this, "bBPCanUseState" }; }
-    BitFieldValue<bool, unsigned __int32> bCanAttackWhileFlying()
-    { return { (void*)this, "bCanAttackWhileFlying" }; }
-    BitFieldValue<bool, unsigned __int32> bClearAttackStateOnEnd()
-    { return { (void*)this, "bClearAttackStateOnEnd" }; }
-    BitFieldValue<bool, unsigned __int32> bDidAnySweepAttacks()
-    { return { (void*)this, "bDidAnySweepAttacks" }; }
-    BitFieldValue<bool, unsigned __int32> bDoSecondarySwingTrace()
-    { return { (void*)this, "bDoSecondarySwingTrace" }; }
-    BitFieldValue<bool, unsigned __int32> bDontActuallyDealDamage()
-    { return { (void*)this, "bDontActuallyDealDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNoCachedTrace()
-    { return { (void*)this, "bForceNoCachedTrace" }; }
-    BitFieldValue<bool, unsigned __int32> bSecondarySwingTraceForCorpsesOnly()
-    { return { (void*)this, "bSecondarySwingTraceForCorpsesOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldResetInLosingTarget()
-    { return { (void*)this, "bShouldResetInLosingTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAttack()
-    { return { (void*)this, "bUseBPCanAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanInterrupt()
-    { return { (void*)this, "bUseBPCanInterrupt" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetSocketLocation()
-    { return { (void*)this, "bUseBPGetSocketLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnHitActor()
-    { return { (void*)this, "bUseBPOnHitActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAttackWeight()
-    { return { (void*)this, "bUseBPOverrideAttackWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipIntervalCheck()
-    { return { (void*)this, "bUseBPSkipIntervalCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipRangeCheck()
-    { return { (void*)this, "bUseBPSkipRangeCheck" }; }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bBPCanUseState")); }
+    BrzCampoPonteiro bCanAttackWhileFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bCanAttackWhileFlying")); }
+    BrzCampoPonteiro bClearAttackStateOnEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bClearAttackStateOnEnd")); }
+    BrzCampoPonteiro bDidAnySweepAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bDidAnySweepAttacks")); }
+    BrzCampoPonteiro bDoSecondarySwingTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bDoSecondarySwingTrace")); }
+    BrzCampoPonteiro bDontActuallyDealDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bDontActuallyDealDamage")); }
+    BrzCampoPonteiro bForceNoCachedTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bForceNoCachedTrace")); }
+    BrzCampoPonteiro bSecondarySwingTraceForCorpsesOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bSecondarySwingTraceForCorpsesOnly")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseBPAdjustProjectileSpawnTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPAdjustProjectileSpawnTransform")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPGetSocketLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPGetSocketLocation")); }
+    BrzCampoPonteiro bUseBPOnHitActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPOnHitActor")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoFlyerGrab.bUseBPSkipRangeCheck")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALAISTATEDINOFLYERGRAB_H

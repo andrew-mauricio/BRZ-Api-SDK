@@ -135,7 +135,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.BPProcessSplitscreenAndAddToViewport(bool,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPProcessSplitscreenAndAddToViewport(bool a0, int a1) const
     {
         return NativeCall<void*, bool, int>(this, "UPrimalUI.BPProcessSplitscreenAndAddToViewport(bool,int)", a0, a1);
@@ -143,7 +143,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.BPReleasedVirtualAccept()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPReleasedVirtualAccept() const
     {
         return NativeCall<void*>(this, "UPrimalUI.BPReleasedVirtualAccept()");
@@ -159,7 +159,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.CacheLastHighlightedWidget(UWidget*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CacheLastHighlightedWidget(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalUI.CacheLastHighlightedWidget(UWidget*)", a0);
@@ -167,7 +167,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.CacheSplitScreenValues()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CacheSplitScreenValues() const
     {
         return NativeCall<void*>(this, "UPrimalUI.CacheSplitScreenValues()");
@@ -199,7 +199,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.ChangeChildrenTextColorBP(UPanelWidget*,FSlateColor,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ChangeChildrenTextColorBP(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "UPrimalUI.ChangeChildrenTextColorBP(UPanelWidget*,FSlateColor,bool)", a0, a1, a2);
@@ -439,7 +439,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.GetParentBorder(UWidget*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=105+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetParentBorder(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalUI.GetParentBorder(UWidget*)", a0);
@@ -527,7 +527,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.GetWidgetParentScrollBox(UWidget*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=105+chamadores=4]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetWidgetParentScrollBox(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalUI.GetWidgetParentScrollBox(UWidget*)", a0);
@@ -551,7 +551,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.HandleControllerAnalogValueChanged(FControllerEvent)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HandleControllerAnalogValueChanged(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalUI.HandleControllerAnalogValueChanged(FControllerEvent)", a0);
@@ -683,7 +683,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.ManageVirtualCursorInit()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ManageVirtualCursorInit() const
     {
         return NativeCall<void*>(this, "UPrimalUI.ManageVirtualCursorInit()");
@@ -903,7 +903,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.ReHighlightSlotInDataList(int,UDataListPanel*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ReHighlightSlotInDataList(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalUI.ReHighlightSlotInDataList(int,UDataListPanel*)", a0, a1);
@@ -943,7 +943,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.RemoveWidget(UWidget*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveWidget(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalUI.RemoveWidget(UWidget*)", a0);
@@ -951,7 +951,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.RemovedFromViewport()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemovedFromViewport() const
     {
         return NativeCall<void*>(this, "UPrimalUI.RemovedFromViewport()");
@@ -1015,7 +1015,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.SetOverlayWidget(UWidget*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetOverlayWidget(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalUI.SetOverlayWidget(UWidget*)", a0);
@@ -1099,7 +1099,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.ShowConfirmationDialogBP(FString&,FString&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShowConfirmationDialogBP(const FString& a0, const FString& a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "UPrimalUI.ShowConfirmationDialogBP(FString&,FString&,bool)", const_cast<FString*>(&a0), const_cast<FString*>(&a1), a2);
@@ -1167,7 +1167,7 @@ struct UPrimalUI
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUI.UsingProController(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UsingProController(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UPrimalUI.UsingProController(bool)", a0);
@@ -1197,6 +1197,22 @@ struct UPrimalUI
         return NativeCall<void*, void*, void*, bool>(this, "UPrimalUI.WidgetTreeGetAllChildWidgets(UWidget*,TArray<UWidget*,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
     }
 
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   UPrimalUI.`vcall'{1648,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__1648__flat__() const
+    {
+        return NativeCall<void*>(this, "UPrimalUI.`vcall'{1648,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   UPrimalUI.`vcall'{1704,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__1704__flat__() const
+    {
+        return NativeCall<void*>(this, "UPrimalUI.`vcall'{1704,{flat}}()");
+    }
+
     BrzCampoPonteiro AccessibleWidgetDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.AccessibleWidgetData")); }
     BrzCampoPonteiro ActiveSequencePlayersField() const
@@ -1218,12 +1234,12 @@ struct UPrimalUI
     BrzCampoPonteiro AnimationTickManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.AnimationTickManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +72, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +72, medido na build 25535041
     //  (offset absoluto medido: 0x554; confianca media)
     void*& CachedItemForReHighlightField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +80, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +80, medido na build 25535041
     //  (offset absoluto medido: 0x738; confianca media)
     void*& CachedWidgetGeometryField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 80); }
@@ -1236,17 +1252,17 @@ struct UPrimalUI
     BrzCampoPonteiro ConfirmationDialogUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.ConfirmationDialogUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +56, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +56, medido na build 25535041
     //  (offset absoluto medido: 0x544; confianca media)
     void*& CurrentHighlightedField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +172, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +172, medido na build 25535041
     //  (offset absoluto medido: 0x5B8; confianca baixa)
     void*& CurrentToolTipInstanceField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 172); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +184, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +184, medido na build 25535041
     //  (offset absoluto medido: 0x5C4; confianca baixa)
     void*& CurrentToolTipSponsorField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 184); }
@@ -1275,7 +1291,7 @@ struct UPrimalUI
     BrzCampoPonteiro DesiredFocusWidgetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.DesiredFocusWidget")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +68, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +68, medido na build 25535041
     //  (offset absoluto medido: 0x4F4; confianca media)
     void*& DraggedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 68); }
@@ -1284,7 +1300,7 @@ struct UPrimalUI
     BrzCampoPonteiro FlowDirectionPreferenceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.FlowDirectionPreference")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +192, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +192, medido na build 25535041
     //  (offset absoluto medido: 0x5CC; confianca baixa)
     void*& ForcedWidgetToolTipField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 192); }
@@ -1298,24 +1314,24 @@ struct UPrimalUI
     { return *GetNativePointerField<float*>(this, "UPrimalUI.GamepadSelectClosestDistanceMultiplier"); }
     BrzCampoPonteiro HTTPGetResponseEventField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.HTTPGetResponseEvent")); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.HandleVisibilityWithInput")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +184, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +184, medido na build 25535041
     //  (offset absoluto medido: 0x7A0; confianca baixa)
     void*& HasBeenAddedToParentRemoveListField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +224, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +224, medido na build 25535041
     //  (offset absoluto medido: 0x7C8; confianca baixa)
     void*& HasScaledForSplitscreenField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 224); }
     unsigned char& HighlightStartPointTypeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalUI.HighlightStartPointType"); }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.Highlightable")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +48, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +48, medido na build 25535041
     //  (offset absoluto medido: 0x4E0; confianca media)
     void*& HighlightedWidgetsField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 48); }
@@ -1324,47 +1340,47 @@ struct UPrimalUI
     TWeakObjectPtr<void>& ItemContainerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "UPrimalUI.ItemContainer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +20, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +20, medido na build 25535041
     //  (offset absoluto medido: 0x4C4; confianca alta)
     void*& LastFocusedDataWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +12, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +12, medido na build 25535041
     //  (offset absoluto medido: 0x4BC; confianca alta)
     void*& LastFocusedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +124, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +124, medido na build 25535041
     //  (offset absoluto medido: 0x588; confianca media)
     void*& LastGamepadMovementTimeField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 124); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +92, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +92, medido na build 25535041
     //  (offset absoluto medido: 0x568; confianca media)
     void*& LastHighlightedScreenPosField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 92); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +164, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +164, medido na build 25535041
     //  (offset absoluto medido: 0x5B0; confianca baixa)
     void*& LastHighlightedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 164); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +16, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +16, medido na build 25535041
     //  (offset absoluto medido: 0x6F8; confianca media)
     void*& LastTargetVelocityYField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +8, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +8, medido na build 25535041
     //  (offset absoluto medido: 0x6F0; confianca media)
     void*& LastTooltipChangeTimeField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +108, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +108, medido na build 25535041
     //  (offset absoluto medido: 0x578; confianca media)
     void*& LastXLeftField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +112, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +112, medido na build 25535041
     //  (offset absoluto medido: 0x57C; confianca media)
     void*& LastYLeftField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 112); }
@@ -1375,7 +1391,7 @@ struct UPrimalUI
     BrzCampoPonteiro NavigationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.Navigation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +226, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +226, medido na build 25535041
     //  (offset absoluto medido: 0x7CA; confianca baixa)
     void*& NumTimesRefreshedWhileCollectingGarbageField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 226); }
@@ -1384,32 +1400,32 @@ struct UPrimalUI
     BrzCampoPonteiro OnVisibilityChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.OnVisibilityChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +80, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +80, medido na build 25535041
     //  (offset absoluto medido: 0x500; confianca media)
     void*& OpenedTimeField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +196, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +196, medido na build 25535041
     //  (offset absoluto medido: 0x7AC; confianca baixa)
     void*& OrgRenderTransformPivotXField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 196); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +188, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +188, medido na build 25535041
     //  (offset absoluto medido: 0x7A4; confianca baixa)
     void*& OrgRenderTransformPivotYField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 188); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +208, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +208, medido na build 25535041
     //  (offset absoluto medido: 0x7B8; confianca baixa)
     void*& OrgRenderTransformScaleField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 208); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +200, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +200, medido na build 25535041
     //  (offset absoluto medido: 0x7B0; confianca baixa)
     void*& OrgRenderTransformTranslationXField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +192, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +192, medido na build 25535041
     //  (offset absoluto medido: 0x7A8; confianca baixa)
     void*& OrgRenderTransformTranslationYField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 192); }
@@ -1420,12 +1436,14 @@ struct UPrimalUI
     BrzCampoPonteiro OriginalUnstretchedSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.OriginalUnstretchedSize")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +80, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +80, medido na build 25535041
     //  (offset absoluto medido: 0x55C; confianca media)
     void*& OverlayWidgetField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 80); }
+    BrzCampoPonteiro OverrideButtonSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.OverrideButtonSounds")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +4, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +4, medido na build 25535041
     //  (offset absoluto medido: 0x4B4; confianca alta)
     void*& OverrideViewingInventoryCompField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 4); }
@@ -1434,12 +1452,12 @@ struct UPrimalUI
     BrzCampoPonteiro PixelSnappingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.PixelSnapping")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +64, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +64, medido na build 25535041
     //  (offset absoluto medido: 0x728; confianca media)
     void*& PooledToolTipsField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +48, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +48, medido na build 25535041
     //  (offset absoluto medido: 0x718; confianca media)
     void*& PreviousToolTipsField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 48); }
@@ -1448,7 +1466,7 @@ struct UPrimalUI
     BrzCampoPonteiro QueuedWidgetAnimationTransitionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.QueuedWidgetAnimationTransitions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +168, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +168, medido na build 25535041
     //  (offset absoluto medido: 0x790; confianca baixa)
     void*& RemoveChildTickUIsField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 168); }
@@ -1459,89 +1477,91 @@ struct UPrimalUI
     BrzCampoPonteiro RenderTransformPivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.RenderTransformPivot")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +24, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +24, medido na build 25535041
     //  (offset absoluto medido: 0x700; confianca media)
     void*& ResolvedFrameInterpolationSensitiveBrushesField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +420, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +420, medido na build 25535041
     //  (offset absoluto medido: 0x6B0; confianca baixa)
     void*& RightStickFunctionModifierKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 420); }
     int& SceneStackPriorityField() const
     { return *GetNativePointerField<int*>(this, "UPrimalUI.SceneStackPriority"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +324, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +324, medido na build 25535041
     //  (offset absoluto medido: 0x650; confianca baixa)
     void*& ScrollChatDownKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 324); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +348, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +348, medido na build 25535041
     //  (offset absoluto medido: 0x668; confianca baixa)
     void*& ScrollChatUpKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 348); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +20, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +20, medido na build 25535041
     //  (offset absoluto medido: 0x520; confianca media)
     void*& ScrollCurrentVelocityField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +396, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +396, medido na build 25535041
     //  (offset absoluto medido: 0x698; confianca baixa)
     void*& ScrollDownGamePadKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 396); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +4, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +4, medido na build 25535041
     //  (offset absoluto medido: 0x510; confianca media)
     void*& ScrollMaxVelocityField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +36, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +36, medido na build 25535041
     //  (offset absoluto medido: 0x530; confianca media)
     void*& ScrollTagetVelocityField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +372, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +372, medido na build 25535041
     //  (offset absoluto medido: 0x680; confianca baixa)
     void*& ScrollUpGamePadKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 372); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +148, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +148, medido na build 25535041
     //  (offset absoluto medido: 0x5A0; confianca baixa)
     void*& SelectClosestToLastHighlightedPosHandleField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 148); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +64, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +64, medido na build 25535041
     //  (offset absoluto medido: 0x54C; confianca media)
     void*& SelectedEntryField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +140, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +140, medido na build 25535041
     //  (offset absoluto medido: 0x598; confianca baixa)
     void*& SetupInputFocusAndHighlightHandleField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 140); }
+    BrzCampoPonteiro ShouldStretchMainScreenWhenHandheldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.ShouldStretchMainScreenWhenHandheld")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +276, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +276, medido na build 25535041
     //  (offset absoluto medido: 0x620; confianca baixa)
     void*& ShowAllianceChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 276); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +204, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +204, medido na build 25535041
     //  (offset absoluto medido: 0x5D8; confianca baixa)
     void*& ShowGlobalChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 204); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +252, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +252, medido na build 25535041
     //  (offset absoluto medido: 0x608; confianca baixa)
     void*& ShowLocalChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 252); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +156, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +156, medido na build 25535041
     //  (offset absoluto medido: 0x5A8; confianca baixa)
     void*& ShowToolTipForHighlightedHandleField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 156); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +228, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +228, medido na build 25535041
     //  (offset absoluto medido: 0x5F0; confianca baixa)
     void*& ShowTribeChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 228); }
@@ -1560,7 +1580,7 @@ struct UPrimalUI
     BrzCampoPonteiro TickFrequencyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.TickFrequency")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +300, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +300, medido na build 25535041
     //  (offset absoluto medido: 0x638; confianca baixa)
     void*& ToggleAutoChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 300); }
@@ -1574,162 +1594,238 @@ struct UPrimalUI
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.ToolTipWidgetDelegate")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UPrimalUI.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.VisibilityGamepadInput")); }
     BrzCampoPonteiro VisibilityKBMInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.VisibilityKBMInput")); }
+    BrzCampoPonteiro WasInHandheldModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.WasInHandheldMode")); }
     BrzCampoPonteiro WidgetTreeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.WidgetTree")); }
     BrzCampoPonteiro XBoxFooterUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.XBoxFooterUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +228, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +228, medido na build 25535041
     //  (offset absoluto medido: 0x7CC; confianca baixa)
     void*& autoScrollWidgetField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 228); }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
+    BrzCampoPonteiro bAutoProcessSplitscreenScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bAutoProcessSplitscreenScaling")); }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bAutomaticallyRegisterInputOnConstruction")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +160, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +160, medido na build 25535041
     //  (offset absoluto medido: 0x788; confianca baixa)
     void*& bBlockMovementForAddingField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 160); }
+    BrzCampoPonteiro bCachedIsGamepadActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bCachedIsGamepadActive")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +132, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +132, medido na build 25535041
     //  (offset absoluto medido: 0x590; confianca baixa)
     void*& bCanBeTopField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 132); }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
+    BrzCampoPonteiro bCaptureMouseInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bCaptureMouseInput")); }
+    BrzCampoPonteiro bClickClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bClickClosesMenu")); }
+    BrzCampoPonteiro bCloseOnPlayerDieField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bCloseOnPlayerDie")); }
+    BrzCampoPonteiro bConstrainVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bConstrainVirtualCursor")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bCreatedByConstructionScript")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +225, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +225, medido na build 25535041
     //  (offset absoluto medido: 0x7C9; confianca baixa)
     void*& bDirtyCacheField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 225); }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bDisableAxisOrientedSweepTestOnMe")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +447, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +447, medido na build 25535041
     //  (offset absoluto medido: 0x6CB; confianca baixa)
     void*& bDisableHighlightSetAfterAnimationIfCycleHighlightedField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 447); }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
+    BrzCampoPonteiro bDoExtraDataListButtonPanelFilteringChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bDoExtraDataListButtonPanelFilteringChecks")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bDontRenderHighlight")); }
+    BrzCampoPonteiro bEscapeClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bEscapeClosesMenu")); }
+    BrzCampoPonteiro bEscapeOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bEscapeOpensPauseMenu")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +21, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +21, medido na build 25535041
     //  (offset absoluto medido: 0x6FD; confianca media)
     void*& bForceDirtyWidgetGeometryCacheField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 21); }
+    BrzCampoPonteiro bForceDisableFrameGenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bForceDisableFrameGen")); }
+    BrzCampoPonteiro bForceFullscreenVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bForceFullscreenVirtualCursor")); }
+    BrzCampoPonteiro bForceVirtualCursorEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bForceVirtualCursorEnabled")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +446, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +446, medido na build 25535041
     //  (offset absoluto medido: 0x6CA; confianca baixa)
     void*& bHasCycleHighlightedField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 446); }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIgnoreUIScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIgnoreUIScaling")); }
+    BrzCampoPonteiro bIsClosingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsClosing")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +64, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +64, medido na build 25535041
     //  (offset absoluto medido: 0x4F0; confianca media)
     void*& bIsDraggingWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 64); }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsFocusable")); }
+    BrzCampoPonteiro bIsGameplayUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsGameplayUI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +445, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +445, medido na build 25535041
     //  (offset absoluto medido: 0x6C9; confianca baixa)
     void*& bIsPaintingField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 445); }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
+    BrzCampoPonteiro bIsTopUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsTopUI")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsVolatile")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +53, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +53, medido na build 25535041
     //  (offset absoluto medido: 0x541; confianca media)
     void*& bKeepControllerOpenedToolTipField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 53); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +54, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +54, medido na build 25535041
     //  (offset absoluto medido: 0x542; confianca media)
     void*& bKeepToolTipOpenField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 54); }
+    BrzCampoPonteiro bMenuSupportSlomoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bMenuSupportSlomo")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +444, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +444, medido na build 25535041
     //  (offset absoluto medido: 0x6C8; confianca baixa)
     void*& bModifyRightStickFunctionField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 444); }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bOverride_Cursor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +40, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +40, medido na build 25535041
     //  (offset absoluto medido: 0x710; confianca media)
     void*& bPendingFrameInterpolationSensitiveBrushInitializationField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 40); }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
+    BrzCampoPonteiro bPreventGamepadDpadNavegationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bPreventGamepadDpadNavegation")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bPrimalSetupSpecialAdjacents")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +116, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +116, medido na build 25535041
     //  (offset absoluto medido: 0x580; confianca media)
     void*& bRemovedFromViewportField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 116); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +20, medido na build 25090264
+    //  ancorado em `bCachedIsGamepadActive` +20, medido na build 25535041
     //  (offset absoluto medido: 0x6FC; confianca media)
     void*& bResetTooltipField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 20); }
+    BrzCampoPonteiro bScaleScreenResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bScaleScreenResolution")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +52, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +52, medido na build 25535041
     //  (offset absoluto medido: 0x540; confianca media)
     void*& bScrolledField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 52); }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bShouldValidateInputOnRemoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShouldValidateInputOnRemove")); }
+    BrzCampoPonteiro bShowAcceptIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowAcceptIcon")); }
+    BrzCampoPonteiro bShowBumpersIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowBumpersIcon")); }
+    BrzCampoPonteiro bShowCancelIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowCancelIcon")); }
+    BrzCampoPonteiro bShowFaceBtnBottomIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowFaceBtnBottomIcon")); }
+    BrzCampoPonteiro bShowFaceBtnLeftIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowFaceBtnLeftIcon")); }
+    BrzCampoPonteiro bShowFaceBtnRightIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowFaceBtnRightIcon")); }
+    BrzCampoPonteiro bShowFaceBtnTopIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowFaceBtnTopIcon")); }
+    BrzCampoPonteiro bShowLStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowLStickIcon")); }
+    BrzCampoPonteiro bShowLTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowLTBtnIcon")); }
+    BrzCampoPonteiro bShowLeftShoulderBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowLeftShoulderBtnIcon")); }
+    BrzCampoPonteiro bShowRStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowRStickIcon")); }
+    BrzCampoPonteiro bShowRTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowRTBtnIcon")); }
+    BrzCampoPonteiro bShowStartBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowStartBtnIcon")); }
+    BrzCampoPonteiro bShowXBoxFooterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bShowXBoxFooter")); }
+    BrzCampoPonteiro bSpecialRightOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bSpecialRightOpensPauseMenu")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitForObjectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bUseBPInitForObjects")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bUseWindowClippingForHighlight")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +180, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +180, medido na build 25535041
     //  (offset absoluto medido: 0x5C0; confianca baixa)
     void*& bUsingTooltipField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 180); }
+    BrzCampoPonteiro bWantsPrimalItemNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bWantsPrimalItemNotifications")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +448, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +448, medido na build 25535041
     //  (offset absoluto medido: 0x6CC; confianca baixa)
     void*& leftShoulderDownField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 448); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +449, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +449, medido na build 25535041
     //  (offset absoluto medido: 0x6CD; confianca baixa)
     void*& leftTriggerDownField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 449); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +40, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +40, medido na build 25535041
     //  (offset absoluto medido: 0x4D8; confianca media)
     void*& recentlyExpandedTimeField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +28, medido na build 25090264
+    //  ancorado em `virtualCursorFrames` +28, medido na build 25535041
     //  (offset absoluto medido: 0x4CC; confianca alta)
     void*& recentlyExpandedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +450, medido na build 25090264
+    //  ancorado em `AnalogDeltaY` +450, medido na build 25535041
     //  (offset absoluto medido: 0x6CE; confianca baixa)
     void*& rightTriggerDownField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 450); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WasInHandheldMode` +1, medido na build 25090264
+    //  ancorado em `WasInHandheldMode` +1, medido na build 25535041
     //  (offset absoluto medido: 0x413; confianca alta)
     void*& tickedDockedModeChangesField() const
     { return BrzCampoAncorado<void*>(this, "WasInHandheldMode", 1); }

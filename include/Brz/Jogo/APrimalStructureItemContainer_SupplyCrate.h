@@ -55,7 +55,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=211]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.Destroyed()");
@@ -71,7 +71,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_SupplyCrate.GetInterpolatedLocation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetInterpolatedLocation() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer_SupplyCrate.GetInterpolatedLocation()");
@@ -95,7 +95,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.LoseHealth()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void LoseHealth() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.LoseHealth()");
@@ -111,7 +111,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.OnRep_FinishedCrateMovement()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_FinishedCrateMovement() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.OnRep_FinishedCrateMovement()");
@@ -119,7 +119,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.OnRep_FinishedCrateMovement_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_FinishedCrateMovement_Implementation() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.OnRep_FinishedCrateMovement_Implementation()");
@@ -135,7 +135,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_SupplyCrate.SetAppliedBuff(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void SetAppliedBuff(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureItemContainer_SupplyCrate.SetAppliedBuff(bool)", a0);
@@ -151,7 +151,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.StartLosingHealth()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=407+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void StartLosingHealth() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.StartLosingHealth()");
@@ -263,6 +263,38 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
     { return *GetNativePointerField<TObjectPtr<UTexture2D>*>(this, "APrimalStructureItemContainer_SupplyCrate.SurvivorLevelUpIcon"); }
     UPrimalWindSourceComponent*& WindSourceComponentRefField() const
     { return *GetNativePointerField<UPrimalWindSourceComponent**>(this, "APrimalStructureItemContainer_SupplyCrate.WindSourceComponentRef"); }
+    BrzCampoPonteiro bAlwaysAllowTributeInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bAlwaysAllowTributeInventory")); }
+    BrzCampoPonteiro bAppliedBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bAppliedBuff")); }
+    BrzCampoPonteiro bDestroyWindSourceComponentOnLandField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bDestroyWindSourceComponentOnLand")); }
+    BrzCampoPonteiro bDontGenerateCrateItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bDontGenerateCrateItems")); }
+    BrzCampoPonteiro bEnableHideSupplyCratesCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bEnableHideSupplyCratesCheck")); }
+    BrzCampoPonteiro bFinishedCrateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bFinishedCrateMovement")); }
+    BrzCampoPonteiro bGeneratedCrateItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bGeneratedCrateItems")); }
+    BrzCampoPonteiro bInventoryAccessOnlyActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bInventoryAccessOnlyActivated")); }
+    BrzCampoPonteiro bIsBonusCrateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bIsBonusCrate")); }
+    BrzCampoPonteiro bIsCrateRenderedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bIsCrateRendered")); }
+    BrzCampoPonteiro bIsQuestCrateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bIsQuestCrate")); }
+    BrzCampoPonteiro bIsUnderWaterCrateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bIsUnderWaterCrate")); }
+    BrzCampoPonteiro bSetsRandomWithoutReplacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bSetsRandomWithoutReplacement")); }
+    BrzCampoPonteiro bSpawnCrateOnTopOfStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bSpawnCrateOnTopOfStructures")); }
+    BrzCampoPonteiro bSupplyCrateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bSupplyCrateHidden")); }
+    BrzCampoPonteiro bWantsOriginalMatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_SupplyCrate.bWantsOriginalMats")); }
     BitFieldValue<bool, unsigned __int32> bGeneratedCrateItems()
     { return { (void*)this, "bGeneratedCrateItems" }; }
     BitFieldValue<bool, unsigned __int32> bIsBonusCrate()

@@ -120,7 +120,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.BPGetGameData()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* BPGetGameData() const
     {
         return NativeCall<UObject*>(this, "UPrimalGameData.BPGetGameData()");
@@ -136,7 +136,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.BPInitializeGameData()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInitializeGameData() const
     {
         NativeCall<void>(this, "UPrimalGameData.BPInitializeGameData()");
@@ -160,7 +160,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.CallGeneTrait_BPGetCustomBlueprintData(FName,FFunctionParams_NoArrays,FFunctionP
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=299+bytes40+grafo=10/10]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=299+bytes40+chamadores=8+grafo=10/10]]
     bool CallGeneTrait_BPGetCustomBlueprintData(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<bool, unsigned long long, void*, void*>(this, "UPrimalGameData.CallGeneTrait_BPGetCustomBlueprintData(FName,FFunctionParams_NoArrays,FFunctionParams_NoArrays&)", a0, a1, a2);
@@ -272,7 +272,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.GetCosmeticEyebrowDefinition(__int64,int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCosmeticEyebrowDefinition(long long a0, int a1, bool a2) const
     {
         return NativeCall<void*, long long, int, bool>(this, "UPrimalGameData.GetCosmeticEyebrowDefinition(__int64,int,bool)", a0, a1, a2);
@@ -280,7 +280,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.GetCosmeticFacialHairDefinition(__int64,int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCosmeticFacialHairDefinition(long long a0, int a1, bool a2) const
     {
         return NativeCall<void*, long long, int, bool>(this, "UPrimalGameData.GetCosmeticFacialHairDefinition(__int64,int,bool)", a0, a1, a2);
@@ -288,7 +288,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.GetCosmeticHeadHairDefinition(__int64,int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCosmeticHeadHairDefinition(long long a0, int a1, bool a2) const
     {
         return NativeCall<void*, long long, int, bool>(this, "UPrimalGameData.GetCosmeticHeadHairDefinition(__int64,int,bool)", a0, a1, a2);
@@ -304,7 +304,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetDefinitionIndexForColorName(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDefinitionIndexForColorName(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalGameData.GetDefinitionIndexForColorName(FName)", a0);
@@ -312,7 +312,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.GetDinoBabySetup(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDinoBabySetup(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalGameData.GetDinoBabySetup(FName)", a0);
@@ -344,7 +344,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetDinoGestationSetup(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDinoGestationSetup(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalGameData.GetDinoGestationSetup(FName)", a0);
@@ -360,7 +360,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetEngramRequirementLevel(UClass*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEngramRequirementLevel(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalGameData.GetEngramRequirementLevel(UClass*)", a0);
@@ -408,7 +408,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.GetExplorerNoteName(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned long long GetExplorerNoteName(int a0) const
     {
         return NativeCall<unsigned long long, int>(this, "UPrimalGameData.GetExplorerNoteName(int)", a0);
@@ -432,7 +432,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.GetGenericCombatMusic(APrimalCharacter*,APrimalCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=150+chamadores=2]]
     USoundBase* GetGenericCombatMusic(void* a0, void* a1) const
     {
         return NativeCall<USoundBase*, void*, void*>(this, "UPrimalGameData.GetGenericCombatMusic(APrimalCharacter*,APrimalCharacter*)", a0, a1);
@@ -480,7 +480,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetItemQualityIndex(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetItemQualityIndex(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalGameData.GetItemQualityIndex(float)", a0);
@@ -520,7 +520,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.GetNamedTargetingTeamIndex(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetNamedTargetingTeamIndex(unsigned long long a0) const
     {
         return NativeCall<int, unsigned long long>(this, "UPrimalGameData.GetNamedTargetingTeamIndex(FName)", a0);
@@ -604,7 +604,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetTeamTargetingDesirabilityMultiplier(int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTeamTargetingDesirabilityMultiplier(int a0, int a1) const
     {
         return NativeCall<void*, int, int>(this, "UPrimalGameData.GetTeamTargetingDesirabilityMultiplier(int,int)", a0, a1);
@@ -620,7 +620,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetUIIndexForEyebrowData(FCustomCosmeticHairstyleDataPair)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetUIIndexForEyebrowData(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalGameData.GetUIIndexForEyebrowData(FCustomCosmeticHairstyleDataPair)", a0);
@@ -628,7 +628,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetUIIndexForFacialHairData(FCustomCosmeticHairstyleDataPair)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetUIIndexForFacialHairData(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalGameData.GetUIIndexForFacialHairData(FCustomCosmeticHairstyleDataPair)", a0);
@@ -636,7 +636,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.GetUIIndexForHeadHairData(FCustomCosmeticHairstyleDataPair)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetUIIndexForHeadHairData(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalGameData.GetUIIndexForHeadHairData(FCustomCosmeticHairstyleDataPair)", a0);
@@ -668,7 +668,7 @@ struct UPrimalGameData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGameData.IsCosmeticSkinWhitelisted(__int64,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsCosmeticSkinWhitelisted(long long a0, bool a1) const
     {
         return NativeCall<void*, long long, bool>(this, "UPrimalGameData.IsCosmeticSkinWhitelisted(__int64,bool)", a0, a1);
@@ -676,7 +676,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGameData.IsCosmeticSkinWhitelistedBP(__int64,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=55]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsCosmeticSkinWhitelistedBP(long long a0, bool a1) const
     {
         return NativeCall<bool, long long, bool>(this, "UPrimalGameData.IsCosmeticSkinWhitelistedBP(__int64,bool)", a0, a1);
@@ -700,7 +700,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.LoadedWorld(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void LoadedWorld(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalGameData.LoadedWorld(UWorld*)", a0);
@@ -708,7 +708,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.LocalIsGlobalExplorerNoteUnlocked(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LocalIsGlobalExplorerNoteUnlocked(int a0)
     {
         return NativeCall<bool, int>(nullptr, "UPrimalGameData.LocalIsGlobalExplorerNoteUnlocked(int)", a0);
@@ -764,7 +764,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.TickedWorld(UWorld*,float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=59+chamadores=2]]
     void TickedWorld(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "UPrimalGameData.TickedWorld(UWorld*,float)", a0, a1);
@@ -773,12 +773,12 @@ struct UPrimalGameData : public UObject
     TArray<void*>& AbilityDescriptionsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.AbilityDescriptions"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AbilityDescriptions` +16, medido na build 25090264
+    //  ancorado em `AbilityDescriptions` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3428; confianca alta)
     void*& AbilityDescriptionsMapField() const
     { return BrzCampoAncorado<void*>(this, "AbilityDescriptions", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AchievementIDs` +16, medido na build 25090264
+    //  ancorado em `AchievementIDs` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2A80; confianca alta)
     void*& AchievementIDSetField() const
     { return BrzCampoAncorado<void*>(this, "AchievementIDs", 16); }
@@ -838,10 +838,18 @@ struct UPrimalGameData : public UObject
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.AdditionalHumanMaleOverrideAnimBlueprints"); }
     TArray<void*>& AdditionalInvalidReferenceRedirectsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.AdditionalInvalidReferenceRedirects"); }
+    BrzCampoPonteiro AdditionalMilestoneCompleteEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.AdditionalMilestoneCompleteEffects")); }
+    BrzCampoPonteiro AdditionalMilestoneTreesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.AdditionalMilestoneTrees")); }
     UModDataAsset*& AdditionalModDataAssetField() const
     { return *GetNativePointerField<UModDataAsset**>(this, "UPrimalGameData.AdditionalModDataAsset"); }
     BrzCampoPonteiro AdditionalNamedExplorerNoteEntriesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.AdditionalNamedExplorerNoteEntries")); }
+    BrzCampoPonteiro AdditionalSkillTreeUIDataContainerClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.AdditionalSkillTreeUIDataContainerClasses")); }
+    BrzCampoPonteiro AdditionalSkillTreesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.AdditionalSkillTrees")); }
     TArray<void*>& AdditionalStructureEngramsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.AdditionalStructureEngrams"); }
     TArray<void*>& AdditionalStructureVariantsField() const
@@ -899,17 +907,17 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro CDOLiveUpdatesDataClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.CDOLiveUpdatesDataClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +264, medido na build 25090264
+    //  ancorado em `LoadedCustomCosmeticSkins` +264, medido na build 25535041
     //  (offset absoluto medido: 0x3748; confianca baixa)
     void*& CacheOwnedCustomCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 264); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +184, medido na build 25090264
+    //  ancorado em `LoadedCustomCosmeticSkins` +184, medido na build 25535041
     //  (offset absoluto medido: 0x36F8; confianca baixa)
     void*& CachedBlacklistedCustomCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +104, medido na build 25090264
+    //  ancorado em `LoadedCustomCosmeticSkins` +104, medido na build 25535041
     //  (offset absoluto medido: 0x36A8; confianca media)
     void*& CachedValidatedWhitelistCustomCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 104); }
@@ -1032,7 +1040,7 @@ struct UPrimalGameData : public UObject
     TArray<UPrimalDinoEntry*>& DinoEntriesObjectsField() const
     { return *GetNativePointerField<TArray<UPrimalDinoEntry*>*>(this, "UPrimalGameData.DinoEntriesObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultDynamicMaterialByteColors` +16, medido na build 25090264
+    //  ancorado em `DefaultDynamicMaterialByteColors` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2928; confianca alta)
     void*& DinoEntryMapField() const
     { return BrzCampoAncorado<void*>(this, "DefaultDynamicMaterialByteColors", 16); }
@@ -1087,14 +1095,14 @@ struct UPrimalGameData : public UObject
     TArray<UGenericDataListEntry*>& ExplorerNoteEntriesObjectsField() const
     { return *GetNativePointerField<TArray<UGenericDataListEntry*>*>(this, "UPrimalGameData.ExplorerNoteEntriesObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalExplorerNoteSpawns` +96, medido na build 25090264
+    //  ancorado em `AdditionalExplorerNoteSpawns` +96, medido na build 25535041
     //  (offset absoluto medido: 0x2CE0; confianca media)
     void*& ExplorerNoteIndexToNameMapField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalExplorerNoteSpawns", 96); }
     TArray<void*>& ExplorerNoteIntroIDsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.ExplorerNoteIntroIDs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalExplorerNoteSpawns` +16, medido na build 25090264
+    //  ancorado em `AdditionalExplorerNoteSpawns` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2C90; confianca media)
     void*& ExplorerNoteNameToIndexMapField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalExplorerNoteSpawns", 16); }
@@ -1197,7 +1205,7 @@ struct UPrimalGameData : public UObject
     UTexture2D*& ItemButtonRecentlySelectedBackgroundField() const
     { return *GetNativePointerField<UTexture2D**>(this, "UPrimalGameData.ItemButtonRecentlySelectedBackground"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GenericBatteryItemClass` +8, medido na build 25090264
+    //  ancorado em `GenericBatteryItemClass` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3178; confianca alta)
     void*& ItemEngramMapField() const
     { return BrzCampoAncorado<void*>(this, "GenericBatteryItemClass", 8); }
@@ -1226,12 +1234,12 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro MainNameWordListField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.MainNameWordList")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostRespawnUISound` +8, medido na build 25090264
+    //  ancorado em `PostRespawnUISound` +8, medido na build 25535041
     //  (offset absoluto medido: 0x33E8; confianca alta)
     TArray<void*>& MapMovieOrderHelperField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "PostRespawnUISound", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MasterDyeList` +16, medido na build 25090264
+    //  ancorado em `MasterDyeList` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2878; confianca alta)
     TArray<void*>& MasterColorTableField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MasterDyeList", 16); }
@@ -1524,24 +1532,24 @@ struct UPrimalGameData : public UObject
     float& TribeXPSharePercentField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameData.TribeXPSharePercent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GenericDroppedItemTemplateLowQuality` +8, medido na build 25090264
+    //  ancorado em `GenericDroppedItemTemplateLowQuality` +8, medido na build 25535041
     //  (offset absoluto medido: 0x10F0; confianca alta)
     TArray<void*>& TutorialDefinitionsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "GenericDroppedItemTemplateLowQuality", 8); }
     USoundBase*& TutorialDisplaySoundField() const
     { return *GetNativePointerField<USoundBase**>(this, "UPrimalGameData.TutorialDisplaySound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticEyebrowsCollection` +48, medido na build 25090264
+    //  ancorado em `CustomCosmeticEyebrowsCollection` +48, medido na build 25535041
     //  (offset absoluto medido: 0x2FD0; confianca media)
     void*& UISelectionIndexEyebrowMapField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticEyebrowsCollection", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticEyebrowsCollection` +32, medido na build 25090264
+    //  ancorado em `CustomCosmeticEyebrowsCollection` +32, medido na build 25535041
     //  (offset absoluto medido: 0x2FC0; confianca alta)
     void*& UISelectionIndexFacialHairMapField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticEyebrowsCollection", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticEyebrowsCollection` +16, medido na build 25090264
+    //  ancorado em `CustomCosmeticEyebrowsCollection` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2FB0; confianca alta)
     void*& UISelectionIndexHeadHairMapField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticEyebrowsCollection", 16); }
@@ -1570,7 +1578,7 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro WheelFolderColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.WheelFolderColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +80, medido na build 25090264
+    //  ancorado em `LoadedCustomCosmeticSkins` +80, medido na build 25535041
     //  (offset absoluto medido: 0x3690; confianca media)
     void*& WhiteListedCustomCosmeticModSkinsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 80); }
@@ -1578,15 +1586,113 @@ struct UPrimalGameData : public UObject
     { return *GetNativePointerField<UTexture2D**>(this, "UPrimalGameData.WhiteTexture"); }
     UPrimalWorldBuffData*& WorldBuffDataField() const
     { return *GetNativePointerField<UPrimalWorldBuffData**>(this, "UPrimalGameData.WorldBuffData"); }
+    BrzCampoPonteiro bAllowAdditionalLocalPlayersWithoutFirstPlayerPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bAllowAdditionalLocalPlayersWithoutFirstPlayerPawn")); }
+    BrzCampoPonteiro bAllowForceAttackUnconsciousTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bAllowForceAttackUnconsciousTarget")); }
+    BrzCampoPonteiro bAllowJumpingWhileCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bAllowJumpingWhileCrafting")); }
+    BrzCampoPonteiro bAllowRunningWhileCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bAllowRunningWhileCrafting")); }
+    BrzCampoPonteiro bCameraPPAllowNonShooterCharField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bCameraPPAllowNonShooterChar")); }
+    BrzCampoPonteiro bDinoCheckControlledByPlayerBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDinoCheckControlledByPlayerBuff")); }
+    BrzCampoPonteiro bDinoConsumeRunningStaminaWithPCField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDinoConsumeRunningStaminaWithPC")); }
+    BrzCampoPonteiro bDisableDeathMarkersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableDeathMarkers")); }
+    BrzCampoPonteiro bDisableDefaultWeaponEquipOnEmptySlotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableDefaultWeaponEquipOnEmptySlot")); }
+    BrzCampoPonteiro bDisableFogOfWarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableFogOfWar")); }
+    BrzCampoPonteiro bDisableFoodConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableFoodConsumption")); }
+    BrzCampoPonteiro bDisableHarvestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableHarvesting")); }
+    BrzCampoPonteiro bDisableItemAddedRemovedNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableItemAddedRemovedNotifications")); }
+    BrzCampoPonteiro bDisableMUEntriesForSOTFField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableMUEntriesForSOTF")); }
+    BrzCampoPonteiro bDisableSplitscreenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableSplitscreen")); }
+    BrzCampoPonteiro bDisableTamedDinoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableTamedDinoStasis")); }
+    BrzCampoPonteiro bDisableTribeManagerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableTribeManager")); }
+    BrzCampoPonteiro bDisableUnderMeshChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableUnderMeshChecks")); }
+    BrzCampoPonteiro bDisableWakingTameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableWakingTame")); }
+    BrzCampoPonteiro bDisableWildBabySpawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableWildBabySpawns")); }
+    BrzCampoPonteiro bDisableWildDinoInventoryDropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDisableWildDinoInventoryDrop")); }
+    BrzCampoPonteiro bDoNotConsumeDefaultARKInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDoNotConsumeDefaultARKInputs")); }
+    BrzCampoPonteiro bDontForceFPVForPCViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bDontForceFPVForPCViewTarget")); }
+    BrzCampoPonteiro bEnableCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bEnableCanMoveThroughActor")); }
+    BrzCampoPonteiro bEnableCharacterGetCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bEnableCharacterGetCustomTooltip")); }
     bool& bForceEnablePhysicsSimulationField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGameData.bForceEnablePhysicsSimulation"); }
     //  no cache antigo este campo se chamava bForceEnablePhysicsSimulation_DEPRECATED.
     //  nesta build ele e' `bForceEnablePhysicsSimulation` — resolve por NOME.
+    BrzCampoPonteiro bForceEnablePhysicsSimulation_DEPRECATEDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bForceEnablePhysicsSimulation")); }
+    BrzCampoPonteiro bForceInfiniteWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bForceInfiniteWeight")); }
+    BrzCampoPonteiro bForceServerUseDinoListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bForceServerUseDinoList")); }
+    BrzCampoPonteiro bForceStepDamageOnlyFoliageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bForceStepDamageOnlyFoliage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +96, medido na build 25090264
+    //  ancorado em `LoadedCustomCosmeticSkins` +96, medido na build 25535041
     //  (offset absoluto medido: 0x36A0; confianca media)
     void*& bHasInitializedCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 96); }
+    BrzCampoPonteiro bHideRepairOnDinoToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bHideRepairOnDinoToolTip")); }
+    BrzCampoPonteiro bIgnoreSwimmingStaminaRecoveryRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bIgnoreSwimmingStaminaRecoveryRate")); }
+    BrzCampoPonteiro bInitializedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bInitialized")); }
+    BrzCampoPonteiro bIsSOTFGameModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bIsSOTFGameMode")); }
+    BrzCampoPonteiro bOfficialServerAllowDinoPossesionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bOfficialServerAllowDinoPossesion")); }
+    BrzCampoPonteiro bOnlyAllowGlobalChatInLobbyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bOnlyAllowGlobalChatInLobby")); }
+    BrzCampoPonteiro bPreventCharacterCreationHeightSliderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bPreventCharacterCreationHeightSlider")); }
+    BrzCampoPonteiro bPreventCharacterCreationSpawnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bPreventCharacterCreationSpawnMap")); }
+    BrzCampoPonteiro bPreventDinoKillVictimItemCollectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bPreventDinoKillVictimItemCollection")); }
+    BrzCampoPonteiro bPreventPhotoModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bPreventPhotoMode")); }
+    BrzCampoPonteiro bRidingEquipsDefaultWeaponField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bRidingEquipsDefaultWeapon")); }
+    BrzCampoPonteiro bSameTeamAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bSameTeamAlwaysRelevant")); }
+    BrzCampoPonteiro bStopAttackingUnconsciousTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bStopAttackingUnconsciousTarget")); }
+    BrzCampoPonteiro bUseAbilityDescriptionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bUseAbilityDescriptions")); }
+    BrzCampoPonteiro bUseDisablePaintingsUserSettingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bUseDisablePaintingsUserSetting")); }
+    BrzCampoPonteiro bUseSOTFFloatingDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bUseSOTFFloatingDamage")); }
+    BrzCampoPonteiro bUseSOTFHUDHandlingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bUseSOTFHUDHandling")); }
+    BrzCampoPonteiro bUseSOTFInputHandlingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bUseSOTFInputHandling")); }
+    BrzCampoPonteiro bUsesCustomPlayerDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bUsesCustomPlayerData")); }
+    BrzCampoPonteiro bWantsToRunMissionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bWantsToRunMissions")); }
     BitFieldValue<bool, unsigned __int32> bAllowAdditionalLocalPlayersWithoutFirstPlayerPawn()
     { return { (void*)this, "bAllowAdditionalLocalPlayersWithoutFirstPlayerPawn" }; }
     BitFieldValue<bool, unsigned __int32> bAllowForceAttackUnconsciousTarget()

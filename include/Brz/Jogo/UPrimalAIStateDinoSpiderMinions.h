@@ -53,7 +53,7 @@ struct UPrimalAIStateDinoSpiderMinions
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoSpiderMinions.IsInAnimationStateActive()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsInAnimationStateActive() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateDinoSpiderMinions.IsInAnimationStateActive()");
@@ -87,10 +87,10 @@ struct UPrimalAIStateDinoSpiderMinions
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.ChildStates")); }
     FName& EggSocketField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalAIStateDinoSpiderMinions.EggSocket"); }
-    BitFieldValue<bool, unsigned __int32> IsInAnimationState()
-    { return { (void*)this, "IsInAnimationState" }; }
-    BitFieldValue<bool, unsigned __int32> IsInAttackState()
-    { return { (void*)this, "IsInAttackState" }; }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.IsInAttackState")); }
     double& LastBatchTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalAIStateDinoSpiderMinions.LastBatchTime"); }
     BrzCampoPonteiro MinionCharacterTypeClassField() const
@@ -116,24 +116,30 @@ struct UPrimalAIStateDinoSpiderMinions
     BrzCampoPonteiro SpawnRandomOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.SpawnRandomOffset")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinionMaxCount` +8, medido na build 25090264
+    //  ancorado em `MinionMaxCount` +8, medido na build 25535041
     //  (offset absoluto medido: 0x88; confianca alta)
     void*& SpawnedMinionsField() const
     { return BrzCampoAncorado<void*>(this, "MinionMaxCount", 8); }
-    BitFieldValue<bool, unsigned __int32> bBPCanUseState()
-    { return { (void*)this, "bBPCanUseState" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldResetInLosingTarget()
-    { return { (void*)this, "bShouldResetInLosingTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAttack()
-    { return { (void*)this, "bUseBPCanAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanInterrupt()
-    { return { (void*)this, "bUseBPCanInterrupt" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAttackWeight()
-    { return { (void*)this, "bUseBPOverrideAttackWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipIntervalCheck()
-    { return { (void*)this, "bUseBPSkipIntervalCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipRangeCheck()
-    { return { (void*)this, "bUseBPSkipRangeCheck" }; }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bBPCanUseState")); }
+    BrzCampoPonteiro bFirstBatchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bFirstBatch")); }
+    BrzCampoPonteiro bPreventMinionSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bPreventMinionSaving")); }
+    BrzCampoPonteiro bPreventMinionTamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bPreventMinionTaming")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.bUseBPSkipRangeCheck")); }
     BitFieldValue<bool, unsigned __int32> bFirstBatch()
     { return { (void*)this, "bFirstBatch" }; }
     BitFieldValue<bool, unsigned __int32> bPreventMinionSaving()

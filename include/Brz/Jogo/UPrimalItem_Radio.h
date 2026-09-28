@@ -44,7 +44,7 @@ struct UPrimalItem_Radio
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem_Radio.GetMiscInfoFontScale()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMiscInfoFontScale() const
     {
         return NativeCall<void*>(this, "UPrimalItem_Radio.GetMiscInfoFontScale()");
@@ -60,7 +60,7 @@ struct UPrimalItem_Radio
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem_Radio.InitializeItem(bool,UWorld*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=38]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InitializeItem(bool a0, void* a1) const
     {
         return NativeCall<void*, bool, void*>(this, "UPrimalItem_Radio.InitializeItem(bool,UWorld*)", a0, a1);
@@ -68,7 +68,7 @@ struct UPrimalItem_Radio
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem_Radio.IsRadioActive()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsRadioActive() const
     {
         return NativeCall<void*>(this, "UPrimalItem_Radio.IsRadioActive()");
@@ -106,10 +106,10 @@ struct UPrimalItem_Radio
     { return *GetNativePointerField<float*>(this, "UPrimalItem_Radio.AddDinoTargetingRange"); }
     TArray<void*>& AllowClassesToBeUsedAsParentSkinField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem_Radio.AllowClassesToBeUsedAsParentSkin"); }
-    BitFieldValue<bool, unsigned __int32> AllowToggleDisableCharacterCustomizationProportionsForSkin_BoneModifiers()
-    { return { (void*)this, "AllowToggleDisableCharacterCustomizationProportionsForSkin_BoneModifiers" }; }
-    BitFieldValue<bool, unsigned __int32> AllowToggleDisableCharacterCustomizationProportionsForSkin_MaterialParameters()
-    { return { (void*)this, "AllowToggleDisableCharacterCustomizationProportionsForSkin_MaterialParameters" }; }
+    BrzCampoPonteiro AllowToggleDisableCharacterCustomizationProportionsForSkin_BoneModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.AllowToggleDisableCharacterCustomizationProportionsForSkin_BoneModifiers")); }
+    BrzCampoPonteiro AllowToggleDisableCharacterCustomizationProportionsForSkin_MaterialParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.AllowToggleDisableCharacterCustomizationProportionsForSkin_MaterialParameters")); }
     UTexture2D*& AlternateItemIconBelowDurabilityField() const
     { return *GetNativePointerField<UTexture2D**>(this, "UPrimalItem_Radio.AlternateItemIconBelowDurability"); }
     BrzCampoPonteiro AlternateItemIconBelowDurabilityJITField() const
@@ -438,506 +438,510 @@ struct UPrimalItem_Radio
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem_Radio.WheelItemsAmmo"); }
     BrzCampoPonteiro WidgetCustomBrokenOverlayStyleBrushField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.WidgetCustomBrokenOverlayStyleBrush")); }
-    BitFieldValue<bool, unsigned __int32> bAllowCraftingWithStarterAmmo()
-    { return { (void*)this, "bAllowCraftingWithStarterAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCustomColors()
-    { return { (void*)this, "bAllowCustomColors" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowDefaultCharacterAttachment()
-    { return { (void*)this, "bAllowDefaultCharacterAttachment" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowEquppingItem()
-    { return { (void*)this, "bAllowEquppingItem" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowInvalidItemVersion()
-    { return { (void*)this, "bAllowInvalidItemVersion" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowInventoryItem()
-    { return { (void*)this, "bAllowInventoryItem" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowOverrideItemAutoDecreaseDurability()
-    { return { (void*)this, "bAllowOverrideItemAutoDecreaseDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRemoteUseInInventory()
-    { return { (void*)this, "bAllowRemoteUseInInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRemovalFromInventory()
-    { return { (void*)this, "bAllowRemovalFromInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRemoveFromSteamInventory()
-    { return { (void*)this, "bAllowRemoveFromSteamInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRepair()
-    { return { (void*)this, "bAllowRepair" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowUseIgnoreMovementMode()
-    { return { (void*)this, "bAllowUseIgnoreMovementMode" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowUseInInventory()
-    { return { (void*)this, "bAllowUseInInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowUseWhileRiding()
-    { return { (void*)this, "bAllowUseWhileRiding" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWakingTameZeroAffinityEffectivenessMulti()
-    { return { (void*)this, "bAllowWakingTameZeroAffinityEffectivenessMulti" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysLearnedEngram()
-    { return { (void*)this, "bAlwaysLearnedEngram" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysTriggerTributeDownloaded()
-    { return { (void*)this, "bAlwaysTriggerTributeDownloaded" }; }
-    BitFieldValue<bool, unsigned __int32> bAppendPrimaryColorToName()
-    { return { (void*)this, "bAppendPrimaryColorToName" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoCraftBlueprint()
-    { return { (void*)this, "bAutoCraftBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDecreaseDurabilityOverTime()
-    { return { (void*)this, "bAutoDecreaseDurabilityOverTime" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoTameSpawnedActor()
-    { return { (void*)this, "bAutoTameSpawnedActor" }; }
-    BitFieldValue<bool, unsigned __int32> bBPAllowRemoteAddToInventory()
-    { return { (void*)this, "bBPAllowRemoteAddToInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bBPAllowRemoteRemoveFromInventory()
-    { return { (void*)this, "bBPAllowRemoteRemoveFromInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bBPCanUse()
-    { return { (void*)this, "bBPCanUse" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryNotifyCraftingFinished()
-    { return { (void*)this, "bBPInventoryNotifyCraftingFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeArkTributeItem()
-    { return { (void*)this, "bCanBeArkTributeItem" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeBlueprint()
-    { return { (void*)this, "bCanBeBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBuildStructures()
-    { return { (void*)this, "bCanBuildStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bCanSlot()
-    { return { (void*)this, "bCanSlot" }; }
-    BitFieldValue<bool, unsigned __int32> bCanUseSwimming()
-    { return { (void*)this, "bCanUseSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bCensoredItemSkin()
-    { return { (void*)this, "bCensoredItemSkin" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckBPAllowCrafting()
-    { return { (void*)this, "bCheckBPAllowCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bClearSkinOnInventoryRemoval()
-    { return { (void*)this, "bClearSkinOnInventoryRemoval" }; }
-    BitFieldValue<bool, unsigned __int32> bConfirmBeforeUsing()
-    { return { (void*)this, "bConfirmBeforeUsing" }; }
-    BitFieldValue<bool, unsigned __int32> bConsumeItemOnUse()
-    { return { (void*)this, "bConsumeItemOnUse" }; }
-    BitFieldValue<bool, unsigned __int32> bCopyCustomDescriptionIntoSpoiledItem()
-    { return { (void*)this, "bCopyCustomDescriptionIntoSpoiledItem" }; }
-    BitFieldValue<bool, unsigned __int32> bCopyDurabilityIntoSpoiledItem()
-    { return { (void*)this, "bCopyDurabilityIntoSpoiledItem" }; }
-    BitFieldValue<bool, unsigned __int32> bCopyItemDurabilityFromCraftingResource()
-    { return { (void*)this, "bCopyItemDurabilityFromCraftingResource" }; }
-    BitFieldValue<bool, unsigned __int32> bCostumeHideSaddleMesh()
-    { return { (void*)this, "bCostumeHideSaddleMesh" }; }
-    BitFieldValue<bool, unsigned __int32> bCraftDontActuallyGiveItem()
-    { return { (void*)this, "bCraftDontActuallyGiveItem" }; }
-    BitFieldValue<bool, unsigned __int32> bCraftedRequestCustomItemDescription()
-    { return { (void*)this, "bCraftedRequestCustomItemDescription" }; }
-    BitFieldValue<bool, unsigned __int32> bCustomBrokenIcon()
-    { return { (void*)this, "bCustomBrokenIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bCustomBrokenOverlayIcon()
-    { return { (void*)this, "bCustomBrokenOverlayIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bDeferWeaponBeginPlayToAssociatedItemSetTime()
-    { return { (void*)this, "bDeferWeaponBeginPlayToAssociatedItemSetTime" }; }
-    BitFieldValue<bool, unsigned __int32> bDeprecateBlueprint()
-    { return { (void*)this, "bDeprecateBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bDeprecateItem()
-    { return { (void*)this, "bDeprecateItem" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyBrokenItem()
-    { return { (void*)this, "bDestroyBrokenItem" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAutoDecreaseDurabilityOverTime()
-    { return { (void*)this, "bDisableAutoDecreaseDurabilityOverTime" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableItemUITooltip()
-    { return { (void*)this, "bDisableItemUITooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bDivideTimeToCraftByGlobalCropGrowthSpeed()
-    { return { (void*)this, "bDivideTimeToCraftByGlobalCropGrowthSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bDoApplyOriginalColorsWhenUnskinned()
-    { return { (void*)this, "bDoApplyOriginalColorsWhenUnskinned" }; }
-    BitFieldValue<bool, unsigned __int32> bDontCountItemForUploadRestrictions()
-    { return { (void*)this, "bDontCountItemForUploadRestrictions" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRemoveOnEquip()
-    { return { (void*)this, "bDontRemoveOnEquip" }; }
-    BitFieldValue<bool, unsigned __int32> bDontResetAttachmentIfNotUpdatingItem()
-    { return { (void*)this, "bDontResetAttachmentIfNotUpdatingItem" }; }
-    BitFieldValue<bool, unsigned __int32> bDontScaleSnapshot()
-    { return { (void*)this, "bDontScaleSnapshot" }; }
-    BitFieldValue<bool, unsigned __int32> bDontUseDurabilityDamageOverlay()
-    { return { (void*)this, "bDontUseDurabilityDamageOverlay" }; }
-    BitFieldValue<bool, unsigned __int32> bDragClearDyedItem()
-    { return { (void*)this, "bDragClearDyedItem" }; }
-    BitFieldValue<bool, unsigned __int32> bDroppedItemAllowDinoPickup()
-    { return { (void*)this, "bDroppedItemAllowDinoPickup" }; }
-    BitFieldValue<bool, unsigned __int32> bDurabilityRequirementIgnoredInWater()
-    { return { (void*)this, "bDurabilityRequirementIgnoredInWater" }; }
-    BitFieldValue<bool, unsigned __int32> bEggSpoilsWhenFertilized()
-    { return { (void*)this, "bEggSpoilsWhenFertilized" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipAddTekExtendedInfo()
-    { return { (void*)this, "bEquipAddTekExtendedInfo" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipPreventsCharacterSkinsCosmetics()
-    { return { (void*)this, "bEquipPreventsCharacterSkinsCosmetics" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipRequiresDLC_Aberration()
-    { return { (void*)this, "bEquipRequiresDLC_Aberration" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipRequiresDLC_Extinction()
-    { return { (void*)this, "bEquipRequiresDLC_Extinction" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipRequiresDLC_Genesis()
-    { return { (void*)this, "bEquipRequiresDLC_Genesis" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipRequiresDLC_ScorchedEarth()
-    { return { (void*)this, "bEquipRequiresDLC_ScorchedEarth" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentForceHairHiding()
-    { return { (void*)this, "bEquipmentForceHairHiding" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentForceHideAllHairComponents()
-    { return { (void*)this, "bEquipmentForceHideAllHairComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentHatHideItemEyeHair()
-    { return { (void*)this, "bEquipmentHatHideItemEyeHair" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentHatHideItemFacialHair()
-    { return { (void*)this, "bEquipmentHatHideItemFacialHair" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentHatHideItemHeadHair()
-    { return { (void*)this, "bEquipmentHatHideItemHeadHair" }; }
-    BitFieldValue<bool, unsigned __int32> bEquippedItem()
-    { return { (void*)this, "bEquippedItem" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowCustomItemDescription()
-    { return { (void*)this, "bForceAllowCustomItemDescription" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowDragging()
-    { return { (void*)this, "bForceAllowDragging" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowGrinding()
-    { return { (void*)this, "bForceAllowGrinding" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowRemovalWhenDead()
-    { return { (void*)this, "bForceAllowRemovalWhenDead" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowSkinColorization()
-    { return { (void*)this, "bForceAllowSkinColorization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDediAttachments()
-    { return { (void*)this, "bForceDediAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisplayInInventory()
-    { return { (void*)this, "bForceDisplayInInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDropDestruction()
-    { return { (void*)this, "bForceDropDestruction" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHideAllDefaultPawnAttachmentsWhenEquipped()
-    { return { (void*)this, "bForceHideAllDefaultPawnAttachmentsWhenEquipped" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNoLearnedEngramRequirement()
-    { return { (void*)this, "bForceNoLearnedEngramRequirement" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNotificationItemCombatMode()
-    { return { (void*)this, "bForceNotificationItemCombatMode" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventConsumableWhileHandcuffed()
-    { return { (void*)this, "bForcePreventConsumableWhileHandcuffed" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventGrinding()
-    { return { (void*)this, "bForcePreventGrinding" }; }
-    BitFieldValue<bool, unsigned __int32> bForceQualityColorOverlay()
-    { return { (void*)this, "bForceQualityColorOverlay" }; }
-    BitFieldValue<bool, unsigned __int32> bForceRequiresExplicitOwnerChecks()
-    { return { (void*)this, "bForceRequiresExplicitOwnerChecks" }; }
-    BitFieldValue<bool, unsigned __int32> bForceUseItemAddCharacterStatsOnDinos()
-    { return { (void*)this, "bForceUseItemAddCharacterStatsOnDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bFromSteamInventory()
-    { return { (void*)this, "bFromSteamInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bGiveItemWhenUsedCopyItemStats()
-    { return { (void*)this, "bGiveItemWhenUsedCopyItemStats" }; }
-    BitFieldValue<bool, unsigned __int32> bHideCustomDescription()
-    { return { (void*)this, "bHideCustomDescription" }; }
-    BitFieldValue<bool, unsigned __int32> bHideFromInventoryDisplay()
-    { return { (void*)this, "bHideFromInventoryDisplay" }; }
-    BitFieldValue<bool, unsigned __int32> bHideFromRemoteInventoryDisplay()
-    { return { (void*)this, "bHideFromRemoteInventoryDisplay" }; }
-    BitFieldValue<bool, unsigned __int32> bHideMoreOptionsIfNonRemovable()
-    { return { (void*)this, "bHideMoreOptionsIfNonRemovable" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDrawingItemButtonIcon()
-    { return { (void*)this, "bIgnoreDrawingItemButtonIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreMinimumUseIntervalForDinoAutoEatingFood()
-    { return { (void*)this, "bIgnoreMinimumUseIntervalForDinoAutoEatingFood" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAbstractItem()
-    { return { (void*)this, "bIsAbstractItem" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBlueprint()
-    { return { (void*)this, "bIsBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCharacterSkinOrCosmetic()
-    { return { (void*)this, "bIsCharacterSkinOrCosmetic" }; }
-    BitFieldValue<bool, unsigned __int32> bIsClubArkReward()
-    { return { (void*)this, "bIsClubArkReward" }; }
-    BitFieldValue<bool, unsigned __int32> bIsClubArkTrade()
-    { return { (void*)this, "bIsClubArkTrade" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCookingIngredient()
-    { return { (void*)this, "bIsCookingIngredient" }; }
-    BitFieldValue<bool, unsigned __int32> bIsCustomRecipe()
-    { return { (void*)this, "bIsCustomRecipe" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDescriptionOnlyItem()
-    { return { (void*)this, "bIsDescriptionOnlyItem" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDinoAutoHealingItem()
-    { return { (void*)this, "bIsDinoAutoHealingItem" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEgg()
-    { return { (void*)this, "bIsEgg" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEmbryo()
-    { return { (void*)this, "bIsEmbryo" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEngram()
-    { return { (void*)this, "bIsEngram" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFoodRecipe()
-    { return { (void*)this, "bIsFoodRecipe" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromAllClustersInventory()
-    { return { (void*)this, "bIsFromAllClustersInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bIsGhostItemSkin()
-    { return { (void*)this, "bIsGhostItemSkin" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInitialItem()
-    { return { (void*)this, "bIsInitialItem" }; }
-    BitFieldValue<bool, unsigned __int32> bIsItemAccessory()
-    { return { (void*)this, "bIsItemAccessory" }; }
-    BitFieldValue<bool, unsigned __int32> bIsItemSkin()
-    { return { (void*)this, "bIsItemSkin" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMisssionItem()
-    { return { (void*)this, "bIsMisssionItem" }; }
-    BitFieldValue<bool, unsigned __int32> bIsRepairing()
-    { return { (void*)this, "bIsRepairing" }; }
-    BitFieldValue<bool, unsigned __int32> bItemIsUsable()
-    { return { (void*)this, "bItemIsUsable" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinAllowEquipping()
-    { return { (void*)this, "bItemSkinAllowEquipping" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinIgnoreSkinIcon()
-    { return { (void*)this, "bItemSkinIgnoreSkinIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinKeepOriginalIcon()
-    { return { (void*)this, "bItemSkinKeepOriginalIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinKeepOriginalItemName()
-    { return { (void*)this, "bItemSkinKeepOriginalItemName" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinKeepOriginalWeaponTemplate()
-    { return { (void*)this, "bItemSkinKeepOriginalWeaponTemplate" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinReceiveOwnerEquippedBlueprintEvents()
-    { return { (void*)this, "bItemSkinReceiveOwnerEquippedBlueprintEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bItemSkinReceiveOwnerEquippedBlueprintTick()
-    { return { (void*)this, "bItemSkinReceiveOwnerEquippedBlueprintTick" }; }
-    BitFieldValue<bool, unsigned __int32> bMergeCustomDataFromCraftingResources()
-    { return { (void*)this, "bMergeCustomDataFromCraftingResources" }; }
-    BitFieldValue<bool, unsigned __int32> bMuteExtraEquipmentSounds()
-    { return { (void*)this, "bMuteExtraEquipmentSounds" }; }
-    BitFieldValue<bool, unsigned __int32> bNameForceNoStatQualityRank()
-    { return { (void*)this, "bNameForceNoStatQualityRank" }; }
+    BrzCampoPonteiro bAllowCraftingWithStarterAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowCraftingWithStarterAmmo")); }
+    BrzCampoPonteiro bAllowCustomColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowCustomColors")); }
+    BrzCampoPonteiro bAllowDefaultCharacterAttachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowDefaultCharacterAttachment")); }
+    BrzCampoPonteiro bAllowEquppingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowEquppingItem")); }
+    BrzCampoPonteiro bAllowInvalidItemVersionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowInvalidItemVersion")); }
+    BrzCampoPonteiro bAllowInventoryItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowInventoryItem")); }
+    BrzCampoPonteiro bAllowOverrideItemAutoDecreaseDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowOverrideItemAutoDecreaseDurability")); }
+    BrzCampoPonteiro bAllowRemoteUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowRemoteUseInInventory")); }
+    BrzCampoPonteiro bAllowRemovalFromInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowRemovalFromInventory")); }
+    BrzCampoPonteiro bAllowRemoveFromSteamInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowRemoveFromSteamInventory")); }
+    BrzCampoPonteiro bAllowRepairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowRepair")); }
+    BrzCampoPonteiro bAllowUseIgnoreMovementModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowUseIgnoreMovementMode")); }
+    BrzCampoPonteiro bAllowUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowUseInInventory")); }
+    BrzCampoPonteiro bAllowUseWhileRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowUseWhileRiding")); }
+    BrzCampoPonteiro bAllowVoiceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowVoice")); }
+    BrzCampoPonteiro bAllowWakingTameZeroAffinityEffectivenessMultiField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAllowWakingTameZeroAffinityEffectivenessMulti")); }
+    BrzCampoPonteiro bAlwaysLearnedEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAlwaysLearnedEngram")); }
+    BrzCampoPonteiro bAlwaysTriggerTributeDownloadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAlwaysTriggerTributeDownloaded")); }
+    BrzCampoPonteiro bAppendPrimaryColorToNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAppendPrimaryColorToName")); }
+    BrzCampoPonteiro bAutoCraftBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAutoCraftBlueprint")); }
+    BrzCampoPonteiro bAutoDecreaseDurabilityOverTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAutoDecreaseDurabilityOverTime")); }
+    BrzCampoPonteiro bAutoTameSpawnedActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bAutoTameSpawnedActor")); }
+    BrzCampoPonteiro bBPAllowRemoteAddToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bBPAllowRemoteAddToInventory")); }
+    BrzCampoPonteiro bBPAllowRemoteRemoveFromInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bBPAllowRemoteRemoveFromInventory")); }
+    BrzCampoPonteiro bBPCanUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bBPCanUse")); }
+    BrzCampoPonteiro bBPInventoryNotifyCraftingFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bBPInventoryNotifyCraftingFinished")); }
+    BrzCampoPonteiro bCanBeArkTributeItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCanBeArkTributeItem")); }
+    BrzCampoPonteiro bCanBeBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCanBeBlueprint")); }
+    BrzCampoPonteiro bCanBuildStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCanBuildStructures")); }
+    BrzCampoPonteiro bCanSlotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCanSlot")); }
+    BrzCampoPonteiro bCanUseSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCanUseSwimming")); }
+    BrzCampoPonteiro bCensoredItemSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCensoredItemSkin")); }
+    BrzCampoPonteiro bCheckBPAllowCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCheckBPAllowCrafting")); }
+    BrzCampoPonteiro bClearSkinOnInventoryRemovalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bClearSkinOnInventoryRemoval")); }
+    BrzCampoPonteiro bConfirmBeforeUsingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bConfirmBeforeUsing")); }
+    BrzCampoPonteiro bConsumeItemOnUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bConsumeItemOnUse")); }
+    BrzCampoPonteiro bCopyCustomDescriptionIntoSpoiledItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCopyCustomDescriptionIntoSpoiledItem")); }
+    BrzCampoPonteiro bCopyDurabilityIntoSpoiledItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCopyDurabilityIntoSpoiledItem")); }
+    BrzCampoPonteiro bCopyItemDurabilityFromCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCopyItemDurabilityFromCraftingResource")); }
+    BrzCampoPonteiro bCostumeHideSaddleMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCostumeHideSaddleMesh")); }
+    BrzCampoPonteiro bCraftDontActuallyGiveItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCraftDontActuallyGiveItem")); }
+    BrzCampoPonteiro bCraftedRequestCustomItemDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCraftedRequestCustomItemDescription")); }
+    BrzCampoPonteiro bCustomBrokenIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCustomBrokenIcon")); }
+    BrzCampoPonteiro bCustomBrokenOverlayIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bCustomBrokenOverlayIcon")); }
+    BrzCampoPonteiro bDeferWeaponBeginPlayToAssociatedItemSetTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDeferWeaponBeginPlayToAssociatedItemSetTime")); }
+    BrzCampoPonteiro bDeprecateBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDeprecateBlueprint")); }
+    BrzCampoPonteiro bDeprecateItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDeprecateItem")); }
+    BrzCampoPonteiro bDestroyBrokenItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDestroyBrokenItem")); }
+    BrzCampoPonteiro bDisableAutoDecreaseDurabilityOverTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDisableAutoDecreaseDurabilityOverTime")); }
+    BrzCampoPonteiro bDisableItemUITooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDisableItemUITooltip")); }
+    BrzCampoPonteiro bDivideTimeToCraftByGlobalCropGrowthSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDivideTimeToCraftByGlobalCropGrowthSpeed")); }
+    BrzCampoPonteiro bDoApplyOriginalColorsWhenUnskinnedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDoApplyOriginalColorsWhenUnskinned")); }
+    BrzCampoPonteiro bDontCountItemForUploadRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDontCountItemForUploadRestrictions")); }
+    BrzCampoPonteiro bDontRemoveOnEquipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDontRemoveOnEquip")); }
+    BrzCampoPonteiro bDontResetAttachmentIfNotUpdatingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDontResetAttachmentIfNotUpdatingItem")); }
+    BrzCampoPonteiro bDontScaleSnapshotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDontScaleSnapshot")); }
+    BrzCampoPonteiro bDontUseDurabilityDamageOverlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDontUseDurabilityDamageOverlay")); }
+    BrzCampoPonteiro bDragClearDyedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDragClearDyedItem")); }
+    BrzCampoPonteiro bDroppedItemAllowDinoPickupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDroppedItemAllowDinoPickup")); }
+    BrzCampoPonteiro bDurabilityRequirementIgnoredInWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bDurabilityRequirementIgnoredInWater")); }
+    BrzCampoPonteiro bEggSpoilsWhenFertilizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEggSpoilsWhenFertilized")); }
+    BrzCampoPonteiro bEquipAddTekExtendedInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipAddTekExtendedInfo")); }
+    BrzCampoPonteiro bEquipPreventsCharacterSkinsCosmeticsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipPreventsCharacterSkinsCosmetics")); }
+    BrzCampoPonteiro bEquipRequiresDLC_AberrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipRequiresDLC_Aberration")); }
+    BrzCampoPonteiro bEquipRequiresDLC_ExtinctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipRequiresDLC_Extinction")); }
+    BrzCampoPonteiro bEquipRequiresDLC_GenesisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipRequiresDLC_Genesis")); }
+    BrzCampoPonteiro bEquipRequiresDLC_ScorchedEarthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipRequiresDLC_ScorchedEarth")); }
+    BrzCampoPonteiro bEquipmentForceHairHidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipmentForceHairHiding")); }
+    BrzCampoPonteiro bEquipmentForceHideAllHairComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipmentForceHideAllHairComponents")); }
+    BrzCampoPonteiro bEquipmentHatHideItemEyeHairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipmentHatHideItemEyeHair")); }
+    BrzCampoPonteiro bEquipmentHatHideItemFacialHairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipmentHatHideItemFacialHair")); }
+    BrzCampoPonteiro bEquipmentHatHideItemHeadHairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquipmentHatHideItemHeadHair")); }
+    BrzCampoPonteiro bEquippedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bEquippedItem")); }
+    BrzCampoPonteiro bForceAllowCustomItemDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceAllowCustomItemDescription")); }
+    BrzCampoPonteiro bForceAllowDraggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceAllowDragging")); }
+    BrzCampoPonteiro bForceAllowGrindingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceAllowGrinding")); }
+    BrzCampoPonteiro bForceAllowRemovalWhenDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceAllowRemovalWhenDead")); }
+    BrzCampoPonteiro bForceAllowSkinColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceAllowSkinColorization")); }
+    BrzCampoPonteiro bForceDediAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceDediAttachments")); }
+    BrzCampoPonteiro bForceDisplayInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceDisplayInInventory")); }
+    BrzCampoPonteiro bForceDropDestructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceDropDestruction")); }
+    BrzCampoPonteiro bForceHideAllDefaultPawnAttachmentsWhenEquippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceHideAllDefaultPawnAttachmentsWhenEquipped")); }
+    BrzCampoPonteiro bForceNoLearnedEngramRequirementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceNoLearnedEngramRequirement")); }
+    BrzCampoPonteiro bForceNotificationItemCombatModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceNotificationItemCombatMode")); }
+    BrzCampoPonteiro bForcePreventConsumableWhileHandcuffedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForcePreventConsumableWhileHandcuffed")); }
+    BrzCampoPonteiro bForcePreventGrindingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForcePreventGrinding")); }
+    BrzCampoPonteiro bForceQualityColorOverlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceQualityColorOverlay")); }
+    BrzCampoPonteiro bForceRequiresExplicitOwnerChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceRequiresExplicitOwnerChecks")); }
+    BrzCampoPonteiro bForceUseItemAddCharacterStatsOnDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bForceUseItemAddCharacterStatsOnDinos")); }
+    BrzCampoPonteiro bFromSteamInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bFromSteamInventory")); }
+    BrzCampoPonteiro bGiveItemWhenUsedCopyItemStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bGiveItemWhenUsedCopyItemStats")); }
+    BrzCampoPonteiro bHideCustomDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bHideCustomDescription")); }
+    BrzCampoPonteiro bHideFromInventoryDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bHideFromInventoryDisplay")); }
+    BrzCampoPonteiro bHideFromRemoteInventoryDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bHideFromRemoteInventoryDisplay")); }
+    BrzCampoPonteiro bHideMoreOptionsIfNonRemovableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bHideMoreOptionsIfNonRemovable")); }
+    BrzCampoPonteiro bIgnoreDrawingItemButtonIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIgnoreDrawingItemButtonIcon")); }
+    BrzCampoPonteiro bIgnoreMinimumUseIntervalForDinoAutoEatingFoodField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIgnoreMinimumUseIntervalForDinoAutoEatingFood")); }
+    BrzCampoPonteiro bIsAbstractItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsAbstractItem")); }
+    BrzCampoPonteiro bIsBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsBlueprint")); }
+    BrzCampoPonteiro bIsCharacterSkinOrCosmeticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsCharacterSkinOrCosmetic")); }
+    BrzCampoPonteiro bIsClubArkRewardField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsClubArkReward")); }
+    BrzCampoPonteiro bIsClubArkTradeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsClubArkTrade")); }
+    BrzCampoPonteiro bIsCookingIngredientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsCookingIngredient")); }
+    BrzCampoPonteiro bIsCustomRecipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsCustomRecipe")); }
+    BrzCampoPonteiro bIsDescriptionOnlyItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsDescriptionOnlyItem")); }
+    BrzCampoPonteiro bIsDinoAutoHealingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsDinoAutoHealingItem")); }
+    BrzCampoPonteiro bIsEggField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsEgg")); }
+    BrzCampoPonteiro bIsEmbryoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsEmbryo")); }
+    BrzCampoPonteiro bIsEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsEngram")); }
+    BrzCampoPonteiro bIsFoodRecipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsFoodRecipe")); }
+    BrzCampoPonteiro bIsFromAllClustersInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsFromAllClustersInventory")); }
+    BrzCampoPonteiro bIsGhostItemSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsGhostItemSkin")); }
+    BrzCampoPonteiro bIsInitialItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsInitialItem")); }
+    BrzCampoPonteiro bIsItemAccessoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsItemAccessory")); }
+    BrzCampoPonteiro bIsItemSkinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsItemSkin")); }
+    BrzCampoPonteiro bIsMisssionItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsMisssionItem")); }
+    BrzCampoPonteiro bIsRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bIsRepairing")); }
+    BrzCampoPonteiro bItemIsUsableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemIsUsable")); }
+    BrzCampoPonteiro bItemSkinAllowEquippingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinAllowEquipping")); }
+    BrzCampoPonteiro bItemSkinIgnoreSkinIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinIgnoreSkinIcon")); }
+    BrzCampoPonteiro bItemSkinKeepOriginalIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinKeepOriginalIcon")); }
+    BrzCampoPonteiro bItemSkinKeepOriginalItemNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinKeepOriginalItemName")); }
+    BrzCampoPonteiro bItemSkinKeepOriginalWeaponTemplateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinKeepOriginalWeaponTemplate")); }
+    BrzCampoPonteiro bItemSkinReceiveOwnerEquippedBlueprintEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinReceiveOwnerEquippedBlueprintEvents")); }
+    BrzCampoPonteiro bItemSkinReceiveOwnerEquippedBlueprintTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bItemSkinReceiveOwnerEquippedBlueprintTick")); }
+    BrzCampoPonteiro bMergeCustomDataFromCraftingResourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bMergeCustomDataFromCraftingResources")); }
+    BrzCampoPonteiro bMuteExtraEquipmentSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bMuteExtraEquipmentSounds")); }
+    BrzCampoPonteiro bNameForceNoStatQualityRankField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bNameForceNoStatQualityRank")); }
     bool& bNetInfoFromClientField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalItem_Radio.bNetInfoFromClient"); }
-    BitFieldValue<bool, unsigned __int32> bNewWeaponAutoFillClipAmmo()
-    { return { (void*)this, "bNewWeaponAutoFillClipAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bNonBlockingShield()
-    { return { (void*)this, "bNonBlockingShield" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyCanUseInFalling()
-    { return { (void*)this, "bOnlyCanUseInFalling" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyCanUseInWater()
-    { return { (void*)this, "bOnlyCanUseInWater" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyEquipWhenUnconscious()
-    { return { (void*)this, "bOnlyEquipWhenUnconscious" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideExactClassCraftingRequirement()
-    { return { (void*)this, "bOverrideExactClassCraftingRequirement" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideRepairingRequirements()
-    { return { (void*)this, "bOverrideRepairingRequirements" }; }
-    BitFieldValue<bool, unsigned __int32> bPickupEggAlertsDinos()
-    { return { (void*)this, "bPickupEggAlertsDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bPickupEggForceAggro()
-    { return { (void*)this, "bPickupEggForceAggro" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventArmorDurabiltyConsumption()
-    { return { (void*)this, "bPreventArmorDurabiltyConsumption" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCheatGive()
-    { return { (void*)this, "bPreventCheatGive" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventConsumeItemOnDrag()
-    { return { (void*)this, "bPreventConsumeItemOnDrag" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCraftingResourceAtFullDurability()
-    { return { (void*)this, "bPreventCraftingResourceAtFullDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDepositDropping()
-    { return { (void*)this, "bPreventDepositDropping" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDinoAutoConsume()
-    { return { (void*)this, "bPreventDinoAutoConsume" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDragOntoOtherItemIfSameCustomData()
-    { return { (void*)this, "bPreventDragOntoOtherItemIfSameCustomData" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventEquipOnTaxidermyBase()
-    { return { (void*)this, "bPreventEquipOnTaxidermyBase" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventItemBlueprint()
-    { return { (void*)this, "bPreventItemBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventItemSkins()
-    { return { (void*)this, "bPreventItemSkins" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventModifyArmorValue()
-    { return { (void*)this, "bPreventModifyArmorValue" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNativeItemBroken()
-    { return { (void*)this, "bPreventNativeItemBroken" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNotificationItemCombatMode()
-    { return { (void*)this, "bPreventNotificationItemCombatMode" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnFullEquippedSuitHUD()
-    { return { (void*)this, "bPreventOnFullEquippedSuitHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnSkinTab()
-    { return { (void*)this, "bPreventOnSkinTab" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularDroppingButStillDropInBulkAndDestructionCaches()
-    { return { (void*)this, "bPreventRegularDroppingButStillDropInBulkAndDestructionCaches" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRemovingClipAmmo()
-    { return { (void*)this, "bPreventRemovingClipAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUpload()
-    { return { (void*)this, "bPreventUpload" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUploadingWeaponClipAmmo()
-    { return { (void*)this, "bPreventUploadingWeaponClipAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUseAndShouldShowDLCPurchaseItemWhenAttemptingToUseIfDLCIsNotOwned()
-    { return { (void*)this, "bPreventUseAndShouldShowDLCPurchaseItemWhenAttemptingToUseIfDLCIsNotOwned" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUseAtTameLimit()
-    { return { (void*)this, "bPreventUseAtTameLimit" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUseByDinos()
-    { return { (void*)this, "bPreventUseByDinos" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUseByHumans()
-    { return { (void*)this, "bPreventUseByHumans" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUseWhenSleeping()
-    { return { (void*)this, "bPreventUseWhenSleeping" }; }
-    BitFieldValue<bool, unsigned __int32> bRefreshOnDyeUsed()
-    { return { (void*)this, "bRefreshOnDyeUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiresBobsTallTalesToCraft()
-    { return { (void*)this, "bRequiresBobsTallTalesToCraft" }; }
-    BitFieldValue<bool, unsigned __int32> bResourcePreventGivingFromDemolition()
-    { return { (void*)this, "bResourcePreventGivingFromDemolition" }; }
-    BitFieldValue<bool, unsigned __int32> bRestoreDurabilityWhenColorized()
-    { return { (void*)this, "bRestoreDurabilityWhenColorized" }; }
-    BitFieldValue<bool, unsigned __int32> bSaddleUseRegularDurability()
-    { return { (void*)this, "bSaddleUseRegularDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleOverridenRepairingRequirements()
-    { return { (void*)this, "bScaleOverridenRepairingRequirements" }; }
-    BitFieldValue<bool, unsigned __int32> bSetCraftingActorToSpawnTeamFromCrafter()
-    { return { (void*)this, "bSetCraftingActorToSpawnTeamFromCrafter" }; }
-    BitFieldValue<bool, unsigned __int32> bShowItemRatingAsPercent()
-    { return { (void*)this, "bShowItemRatingAsPercent" }; }
-    BitFieldValue<bool, unsigned __int32> bShowTooltipColors()
-    { return { (void*)this, "bShowTooltipColors" }; }
-    BitFieldValue<bool, unsigned __int32> bSkinAddWeightToSkinnedItem()
-    { return { (void*)this, "bSkinAddWeightToSkinnedItem" }; }
-    BitFieldValue<bool, unsigned __int32> bSkinDisableWhenSubmerged()
-    { return { (void*)this, "bSkinDisableWhenSubmerged" }; }
-    BitFieldValue<bool, unsigned __int32> bSkinReequipOnClientBeginPlay()
-    { return { (void*)this, "bSkinReequipOnClientBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bSkipEquipAnimation()
-    { return { (void*)this, "bSkipEquipAnimation" }; }
-    BitFieldValue<bool, unsigned __int32> bSpawnActorOnWaterOnly()
-    { return { (void*)this, "bSpawnActorOnWaterOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportDragOntoOtherItem()
-    { return { (void*)this, "bSupportDragOntoOtherItem" }; }
-    BitFieldValue<bool, unsigned __int32> bTekItem()
-    { return { (void*)this, "bTekItem" }; }
-    BitFieldValue<bool, unsigned __int32> bThrowOnHotKeyUse()
-    { return { (void*)this, "bThrowOnHotKeyUse" }; }
-    BitFieldValue<bool, unsigned __int32> bThrowUsesSecondaryActionDrop()
-    { return { (void*)this, "bThrowUsesSecondaryActionDrop" }; }
-    BitFieldValue<bool, unsigned __int32> bUnappliedItemSkinIgnoreItemAttachments()
-    { return { (void*)this, "bUnappliedItemSkinIgnoreItemAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUnlockAsPersistentProfileItemOnCraft()
-    { return { (void*)this, "bUnlockAsPersistentProfileItemOnCraft" }; }
-    BitFieldValue<bool, unsigned __int32> bUsableWithTekGrenadeLauncher()
-    { return { (void*)this, "bUsableWithTekGrenadeLauncher" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAddedAttachments()
-    { return { (void*)this, "bUseBPAddedAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAddedToInventory()
-    { return { (void*)this, "bUseBPAddedToInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowAddToInventory()
-    { return { (void*)this, "bUseBPAllowAddToInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanPlayerUseItem()
-    { return { (void*)this, "bUseBPCanPlayerUseItem" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPConsumeProjectileImpact()
-    { return { (void*)this, "bUseBPConsumeProjectileImpact" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCrafted()
-    { return { (void*)this, "bUseBPCrafted" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomAutoDecreaseDurabilityPerInterval()
-    { return { (void*)this, "bUseBPCustomAutoDecreaseDurabilityPerInterval" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomDurabilityText()
-    { return { (void*)this, "bUseBPCustomDurabilityText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomDurabilityTextColor()
-    { return { (void*)this, "bUseBPCustomDurabilityTextColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomInventoryWidgetText()
-    { return { (void*)this, "bUseBPCustomInventoryWidgetText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomInventoryWidgetTextColor()
-    { return { (void*)this, "bUseBPCustomInventoryWidgetTextColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomInventoryWidgetTextForBlueprint()
-    { return { (void*)this, "bUseBPCustomInventoryWidgetTextForBlueprint" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawItemIcon()
-    { return { (void*)this, "bUseBPDrawItemIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPEquippedItemOnXPEarning()
-    { return { (void*)this, "bUseBPEquippedItemOnXPEarning" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowRemoteAddToInventory()
-    { return { (void*)this, "bUseBPForceAllowRemoteAddToInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetItemDescription()
-    { return { (void*)this, "bUseBPGetItemDescription" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetItemDurabilityPercentage()
-    { return { (void*)this, "bUseBPGetItemDurabilityPercentage" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetItemIcon()
-    { return { (void*)this, "bUseBPGetItemIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetItemName()
-    { return { (void*)this, "bUseBPGetItemName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetItemNetInfo()
-    { return { (void*)this, "bUseBPGetItemNetInfo" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetItemStatString()
-    { return { (void*)this, "bUseBPGetItemStatString" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMaxAmmo()
-    { return { (void*)this, "bUseBPGetMaxAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitFromItemNetInfo()
-    { return { (void*)this, "bUseBPInitFromItemNetInfo" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitItemColors()
-    { return { (void*)this, "bUseBPInitItemColors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitializeItem()
-    { return { (void*)this, "bUseBPInitializeItem" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPIsValidForCrafting()
-    { return { (void*)this, "bUseBPIsValidForCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyDropped()
-    { return { (void*)this, "bUseBPNotifyDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyItemRefreshed()
-    { return { (void*)this, "bUseBPNotifyItemRefreshed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnCropPhaseIncrease()
-    { return { (void*)this, "bUseBPOnCropPhaseIncrease" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnItemConsumed()
-    { return { (void*)this, "bUseBPOnItemConsumed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnUpdatedItemContextMenu()
-    { return { (void*)this, "bUseBPOnUpdatedItemContextMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAnimMontage()
-    { return { (void*)this, "bUseBPOverrideAnimMontage" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideCraftingConsumption()
-    { return { (void*)this, "bUseBPOverrideCraftingConsumption" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideDeathAnim()
-    { return { (void*)this, "bUseBPOverrideDeathAnim" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideHoldItemSlotAction()
-    { return { (void*)this, "bUseBPOverrideHoldItemSlotAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideInheritedStatWeight()
-    { return { (void*)this, "bUseBPOverrideInheritedStatWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideProjectileType()
-    { return { (void*)this, "bUseBPOverrideProjectileType" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideRemainingCooldownTime()
-    { return { (void*)this, "bUseBPOverrideRemainingCooldownTime" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideSound()
-    { return { (void*)this, "bUseBPOverrideSound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPostAddBuffToGiveOwnerCharacter()
-    { return { (void*)this, "bUseBPPostAddBuffToGiveOwnerCharacter" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventUpload()
-    { return { (void*)this, "bUseBPPreventUpload" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventUseOntoItem()
-    { return { (void*)this, "bUseBPPreventUseOntoItem" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPrimalDinoCharacterConsumedItem()
-    { return { (void*)this, "bUseBPPrimalDinoCharacterConsumedItem" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRemovedFromInventory()
-    { return { (void*)this, "bUseBPRemovedFromInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSetupHUDIconMaterial()
-    { return { (void*)this, "bUseBPSetupHUDIconMaterial" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBlueprintEquippedNotifications()
-    { return { (void*)this, "bUseBlueprintEquippedNotifications" }; }
-    BitFieldValue<bool, unsigned __int32> bUseEquippedItemBlueprintTick()
-    { return { (void*)this, "bUseEquippedItemBlueprintTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseEquippedItemNativeTick()
-    { return { (void*)this, "bUseEquippedItemNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInWaterRestoreDurability()
-    { return { (void*)this, "bUseInWaterRestoreDurability" }; }
+    BrzCampoPonteiro bNewWeaponAutoFillClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bNewWeaponAutoFillClipAmmo")); }
+    BrzCampoPonteiro bNonBlockingShieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bNonBlockingShield")); }
+    BrzCampoPonteiro bOnlyCanUseInFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bOnlyCanUseInFalling")); }
+    BrzCampoPonteiro bOnlyCanUseInWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bOnlyCanUseInWater")); }
+    BrzCampoPonteiro bOnlyEquipWhenUnconsciousField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bOnlyEquipWhenUnconscious")); }
+    BrzCampoPonteiro bOverrideExactClassCraftingRequirementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bOverrideExactClassCraftingRequirement")); }
+    BrzCampoPonteiro bOverrideRepairingRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bOverrideRepairingRequirements")); }
+    BrzCampoPonteiro bPickupEggAlertsDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPickupEggAlertsDinos")); }
+    BrzCampoPonteiro bPickupEggForceAggroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPickupEggForceAggro")); }
+    BrzCampoPonteiro bPreventArmorDurabiltyConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventArmorDurabiltyConsumption")); }
+    BrzCampoPonteiro bPreventCheatGiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventCheatGive")); }
+    BrzCampoPonteiro bPreventColdStorageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventColdStorage")); }
+    BrzCampoPonteiro bPreventConsumeItemOnDragField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventConsumeItemOnDrag")); }
+    BrzCampoPonteiro bPreventCraftingResourceAtFullDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventCraftingResourceAtFullDurability")); }
+    BrzCampoPonteiro bPreventDepositDroppingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventDepositDropping")); }
+    BrzCampoPonteiro bPreventDinoAutoConsumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventDinoAutoConsume")); }
+    BrzCampoPonteiro bPreventDragOntoOtherItemIfSameCustomDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventDragOntoOtherItemIfSameCustomData")); }
+    BrzCampoPonteiro bPreventEquipOnTaxidermyBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventEquipOnTaxidermyBase")); }
+    BrzCampoPonteiro bPreventItemBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventItemBlueprint")); }
+    BrzCampoPonteiro bPreventItemSkinsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventItemSkins")); }
+    BrzCampoPonteiro bPreventModifyArmorValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventModifyArmorValue")); }
+    BrzCampoPonteiro bPreventNativeItemBrokenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventNativeItemBroken")); }
+    BrzCampoPonteiro bPreventNotificationItemCombatModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventNotificationItemCombatMode")); }
+    BrzCampoPonteiro bPreventOnFullEquippedSuitHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventOnFullEquippedSuitHUD")); }
+    BrzCampoPonteiro bPreventOnSkinTabField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventOnSkinTab")); }
+    BrzCampoPonteiro bPreventRegularDroppingButStillDropInBulkAndDestructionCachesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventRegularDroppingButStillDropInBulkAndDestructionCaches")); }
+    BrzCampoPonteiro bPreventRemovingClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventRemovingClipAmmo")); }
+    BrzCampoPonteiro bPreventUploadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUpload")); }
+    BrzCampoPonteiro bPreventUploadingWeaponClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUploadingWeaponClipAmmo")); }
+    BrzCampoPonteiro bPreventUseAndShouldShowDLCPurchaseItemWhenAttemptingToUseIfDLCIsNotOwnedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUseAndShouldShowDLCPurchaseItemWhenAttemptingToUseIfDLCIsNotOwned")); }
+    BrzCampoPonteiro bPreventUseAtTameLimitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUseAtTameLimit")); }
+    BrzCampoPonteiro bPreventUseByDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUseByDinos")); }
+    BrzCampoPonteiro bPreventUseByHumansField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUseByHumans")); }
+    BrzCampoPonteiro bPreventUseWhenSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bPreventUseWhenSleeping")); }
+    BrzCampoPonteiro bRefreshOnDyeUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bRefreshOnDyeUsed")); }
+    BrzCampoPonteiro bRequiresBobsTallTalesToCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bRequiresBobsTallTalesToCraft")); }
+    BrzCampoPonteiro bResourcePreventGivingFromDemolitionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bResourcePreventGivingFromDemolition")); }
+    BrzCampoPonteiro bRestoreDurabilityWhenColorizedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bRestoreDurabilityWhenColorized")); }
+    BrzCampoPonteiro bSaddleUseRegularDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSaddleUseRegularDurability")); }
+    BrzCampoPonteiro bScaleOverridenRepairingRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bScaleOverridenRepairingRequirements")); }
+    BrzCampoPonteiro bSetCraftingActorToSpawnTeamFromCrafterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSetCraftingActorToSpawnTeamFromCrafter")); }
+    BrzCampoPonteiro bShowItemRatingAsPercentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bShowItemRatingAsPercent")); }
+    BrzCampoPonteiro bShowTooltipColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bShowTooltipColors")); }
+    BrzCampoPonteiro bSkinAddWeightToSkinnedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSkinAddWeightToSkinnedItem")); }
+    BrzCampoPonteiro bSkinDisableWhenSubmergedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSkinDisableWhenSubmerged")); }
+    BrzCampoPonteiro bSkinReequipOnClientBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSkinReequipOnClientBeginPlay")); }
+    BrzCampoPonteiro bSkipEquipAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSkipEquipAnimation")); }
+    BrzCampoPonteiro bSpawnActorOnWaterOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSpawnActorOnWaterOnly")); }
+    BrzCampoPonteiro bSupportDragOntoOtherItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bSupportDragOntoOtherItem")); }
+    BrzCampoPonteiro bTekItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bTekItem")); }
+    BrzCampoPonteiro bThrowOnHotKeyUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bThrowOnHotKeyUse")); }
+    BrzCampoPonteiro bThrowUsesSecondaryActionDropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bThrowUsesSecondaryActionDrop")); }
+    BrzCampoPonteiro bUnappliedItemSkinIgnoreItemAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUnappliedItemSkinIgnoreItemAttachments")); }
+    BrzCampoPonteiro bUnlockAsPersistentProfileItemOnCraftField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUnlockAsPersistentProfileItemOnCraft")); }
+    BrzCampoPonteiro bUsableWithTekGrenadeLauncherField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUsableWithTekGrenadeLauncher")); }
+    BrzCampoPonteiro bUseBPAddedAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPAddedAttachments")); }
+    BrzCampoPonteiro bUseBPAddedToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPAddedToInventory")); }
+    BrzCampoPonteiro bUseBPAllowAddToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPAllowAddToInventory")); }
+    BrzCampoPonteiro bUseBPCanPlayerUseItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCanPlayerUseItem")); }
+    BrzCampoPonteiro bUseBPConsumeProjectileImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPConsumeProjectileImpact")); }
+    BrzCampoPonteiro bUseBPCraftedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCrafted")); }
+    BrzCampoPonteiro bUseBPCustomAutoDecreaseDurabilityPerIntervalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCustomAutoDecreaseDurabilityPerInterval")); }
+    BrzCampoPonteiro bUseBPCustomDurabilityTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCustomDurabilityText")); }
+    BrzCampoPonteiro bUseBPCustomDurabilityTextColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCustomDurabilityTextColor")); }
+    BrzCampoPonteiro bUseBPCustomInventoryWidgetTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCustomInventoryWidgetText")); }
+    BrzCampoPonteiro bUseBPCustomInventoryWidgetTextColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCustomInventoryWidgetTextColor")); }
+    BrzCampoPonteiro bUseBPCustomInventoryWidgetTextForBlueprintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPCustomInventoryWidgetTextForBlueprint")); }
+    BrzCampoPonteiro bUseBPDrawItemIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPDrawItemIcon")); }
+    BrzCampoPonteiro bUseBPEquippedItemOnXPEarningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPEquippedItemOnXPEarning")); }
+    BrzCampoPonteiro bUseBPForceAllowRemoteAddToInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPForceAllowRemoteAddToInventory")); }
+    BrzCampoPonteiro bUseBPGetItemDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetItemDescription")); }
+    BrzCampoPonteiro bUseBPGetItemDurabilityPercentageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetItemDurabilityPercentage")); }
+    BrzCampoPonteiro bUseBPGetItemIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetItemIcon")); }
+    BrzCampoPonteiro bUseBPGetItemNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetItemName")); }
+    BrzCampoPonteiro bUseBPGetItemNetInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetItemNetInfo")); }
+    BrzCampoPonteiro bUseBPGetItemStatStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetItemStatString")); }
+    BrzCampoPonteiro bUseBPGetMaxAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPGetMaxAmmo")); }
+    BrzCampoPonteiro bUseBPInitFromItemNetInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPInitFromItemNetInfo")); }
+    BrzCampoPonteiro bUseBPInitItemColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPInitItemColors")); }
+    BrzCampoPonteiro bUseBPInitializeItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPInitializeItem")); }
+    BrzCampoPonteiro bUseBPIsValidForCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPIsValidForCrafting")); }
+    BrzCampoPonteiro bUseBPNotifyDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPNotifyDropped")); }
+    BrzCampoPonteiro bUseBPNotifyItemRefreshedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPNotifyItemRefreshed")); }
+    BrzCampoPonteiro bUseBPOnCropPhaseIncreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOnCropPhaseIncrease")); }
+    BrzCampoPonteiro bUseBPOnItemConsumedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOnItemConsumed")); }
+    BrzCampoPonteiro bUseBPOnUpdatedItemContextMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOnUpdatedItemContextMenu")); }
+    BrzCampoPonteiro bUseBPOverrideAnimMontageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideAnimMontage")); }
+    BrzCampoPonteiro bUseBPOverrideCraftingConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideCraftingConsumption")); }
+    BrzCampoPonteiro bUseBPOverrideDeathAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideDeathAnim")); }
+    BrzCampoPonteiro bUseBPOverrideHoldItemSlotActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideHoldItemSlotAction")); }
+    BrzCampoPonteiro bUseBPOverrideInheritedStatWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideInheritedStatWeight")); }
+    BrzCampoPonteiro bUseBPOverrideProjectileTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideProjectileType")); }
+    BrzCampoPonteiro bUseBPOverrideRemainingCooldownTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideRemainingCooldownTime")); }
+    BrzCampoPonteiro bUseBPOverrideSoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPOverrideSound")); }
+    BrzCampoPonteiro bUseBPPostAddBuffToGiveOwnerCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPPostAddBuffToGiveOwnerCharacter")); }
+    BrzCampoPonteiro bUseBPPreventUploadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPPreventUpload")); }
+    BrzCampoPonteiro bUseBPPreventUseOntoItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPPreventUseOntoItem")); }
+    BrzCampoPonteiro bUseBPPrimalDinoCharacterConsumedItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPPrimalDinoCharacterConsumedItem")); }
+    BrzCampoPonteiro bUseBPRemovedFromInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPRemovedFromInventory")); }
+    BrzCampoPonteiro bUseBPSetupHUDIconMaterialField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBPSetupHUDIconMaterial")); }
+    BrzCampoPonteiro bUseBlueprintEquippedNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseBlueprintEquippedNotifications")); }
+    BrzCampoPonteiro bUseEquippedItemBlueprintTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseEquippedItemBlueprintTick")); }
+    BrzCampoPonteiro bUseEquippedItemNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseEquippedItemNativeTick")); }
+    BrzCampoPonteiro bUseInWaterRestoreDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseInWaterRestoreDurability")); }
     FieldArray<unsigned char> bUseItemColorField() const
     { return { (void*)this, "UPrimalItem_Radio.bUseItemColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseItemColors()
-    { return { (void*)this, "bUseItemColors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseItemDurability()
-    { return { (void*)this, "bUseItemDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bUseItemStats()
-    { return { (void*)this, "bUseItemStats" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMultiSaddleMeshOverrideMap()
-    { return { (void*)this, "bUseMultiSaddleMeshOverrideMap" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnItemSetIndexAsDestinationItemCustomData()
-    { return { (void*)this, "bUseOnItemSetIndexAsDestinationItemCustomData" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnItemWeaponRemoveClipAmmo()
-    { return { (void*)this, "bUseOnItemWeaponRemoveClipAmmo" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOntoItemRequiresImmobilization()
-    { return { (void*)this, "bUseOntoItemRequiresImmobilization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseScaleStatEffectivenessByDurability()
-    { return { (void*)this, "bUseScaleStatEffectivenessByDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSkinDroppedItemTemplateForSecondryAction()
-    { return { (void*)this, "bUseSkinDroppedItemTemplateForSecondryAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSkinnedBPCustomInventoryWidgetText()
-    { return { (void*)this, "bUseSkinnedBPCustomInventoryWidgetText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSlottedTick()
-    { return { (void*)this, "bUseSlottedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSpawnActor()
-    { return { (void*)this, "bUseSpawnActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSpawnActorRelativeLoc()
-    { return { (void*)this, "bUseSpawnActorRelativeLoc" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSpawnActorTakeOwnerRotation()
-    { return { (void*)this, "bUseSpawnActorTakeOwnerRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSpawnActorWhenRiding()
-    { return { (void*)this, "bUseSpawnActorWhenRiding" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesCreationTime()
-    { return { (void*)this, "bUsesCreationTime" }; }
-    BitFieldValue<bool, unsigned __int32> bUsingRequiresStandingOnSolidGround()
-    { return { (void*)this, "bUsingRequiresStandingOnSolidGround" }; }
-    BitFieldValue<bool, unsigned __int32> bValidCraftingResource()
-    { return { (void*)this, "bValidCraftingResource" }; }
+    BrzCampoPonteiro bUseItemColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseItemColors")); }
+    BrzCampoPonteiro bUseItemDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseItemDurability")); }
+    BrzCampoPonteiro bUseItemStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseItemStats")); }
+    BrzCampoPonteiro bUseMultiSaddleMeshOverrideMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseMultiSaddleMeshOverrideMap")); }
+    BrzCampoPonteiro bUseOnItemSetIndexAsDestinationItemCustomDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseOnItemSetIndexAsDestinationItemCustomData")); }
+    BrzCampoPonteiro bUseOnItemWeaponRemoveClipAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseOnItemWeaponRemoveClipAmmo")); }
+    BrzCampoPonteiro bUseOntoItemRequiresImmobilizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseOntoItemRequiresImmobilization")); }
+    BrzCampoPonteiro bUseScaleStatEffectivenessByDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseScaleStatEffectivenessByDurability")); }
+    BrzCampoPonteiro bUseSkinDroppedItemTemplateForSecondryActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSkinDroppedItemTemplateForSecondryAction")); }
+    BrzCampoPonteiro bUseSkinnedBPCustomInventoryWidgetTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSkinnedBPCustomInventoryWidgetText")); }
+    BrzCampoPonteiro bUseSlottedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSlottedTick")); }
+    BrzCampoPonteiro bUseSpawnActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSpawnActor")); }
+    BrzCampoPonteiro bUseSpawnActorRelativeLocField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSpawnActorRelativeLoc")); }
+    BrzCampoPonteiro bUseSpawnActorTakeOwnerRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSpawnActorTakeOwnerRotation")); }
+    BrzCampoPonteiro bUseSpawnActorWhenRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUseSpawnActorWhenRiding")); }
+    BrzCampoPonteiro bUsesCreationTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUsesCreationTime")); }
+    BrzCampoPonteiro bUsingRequiresStandingOnSolidGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bUsingRequiresStandingOnSolidGround")); }
+    BrzCampoPonteiro bValidCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem_Radio.bValidCraftingResource")); }
     BitFieldValue<bool, unsigned __int32> bAllowVoice()
     { return { (void*)this, "bAllowVoice" }; }
 

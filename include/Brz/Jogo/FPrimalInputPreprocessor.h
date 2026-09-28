@@ -35,7 +35,7 @@ struct FPrimalInputPreprocessor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FPrimalInputPreprocessor.HandleAnalogInputEvent(FSlateApplication&,FAnalogInputEvent&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleAnalogInputEvent(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "FPrimalInputPreprocessor.HandleAnalogInputEvent(FSlateApplication&,FAnalogInputEvent&)", a0, a1);
@@ -56,6 +56,13 @@ struct FPrimalInputPreprocessor
     {
         return NativeCall<void*, float, void*, void*>(this, "FPrimalInputPreprocessor.Tick(float,FSlateApplication&,TSharedRef<ICursor,1>)", a0, a1, a2);
     }
+
+    BrzCampoPonteiro AllowOnlyInputFromSpecificControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalInputPreprocessor.AllowOnlyInputFromSpecificController")); }
+    BrzCampoPonteiro AllowedControllerIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalInputPreprocessor.AllowedControllerId")); }
+    BrzCampoPonteiro LastUsedControllerIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalInputPreprocessor.LastUsedControllerId")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALINPUTPREPROCESSOR_H

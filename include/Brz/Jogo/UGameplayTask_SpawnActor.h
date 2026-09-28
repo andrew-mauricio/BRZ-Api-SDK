@@ -46,18 +46,18 @@ struct UGameplayTask_SpawnActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask_SpawnActor.FinishSpawningActor(UObject*,AActor*)
     // endereco: casamento de bytes com a build de referencia
-    static AActor* FinishSpawningActor(void* a0, void* a1)
+    AActor* FinishSpawningActor(void* a0, void* a1) const
     {
-        return NativeCall<AActor*, void*, void*>(nullptr, "UGameplayTask_SpawnActor.FinishSpawningActor(UObject*,AActor*)", a0, a1);
+        return NativeCall<AActor*, void*, void*>(this, "UGameplayTask_SpawnActor.FinishSpawningActor(UObject*,AActor*)", a0, a1);
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DidNotSpawn` +16, medido na build 25090264
+    //  ancorado em `DidNotSpawn` +16, medido na build 25535041
     //  (offset absoluto medido: 0x88; confianca alta)
     void*& CachedSpawnLocationField() const
     { return BrzCampoAncorado<void*>(this, "DidNotSpawn", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DidNotSpawn` +40, medido na build 25090264
+    //  ancorado em `DidNotSpawn` +40, medido na build 25535041
     //  (offset absoluto medido: 0xA0; confianca media)
     void*& CachedSpawnRotationField() const
     { return BrzCampoAncorado<void*>(this, "DidNotSpawn", 40); }
@@ -71,8 +71,10 @@ struct UGameplayTask_SpawnActor
     { return *GetNativePointerField<FName*>(this, "UGameplayTask_SpawnActor.InstanceName"); }
     BrzCampoPonteiro ResourceOverlapPolicyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask_SpawnActor.ResourceOverlapPolicy")); }
-    BitFieldValue<bool, unsigned __int32> success()
-    { return { (void*)this, "success" }; }
+    BrzCampoPonteiro SuccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask_SpawnActor.success")); }
+    BrzCampoPonteiro successField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask_SpawnActor.success")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UGAMEPLAYTASK_SPAWNACTOR_H

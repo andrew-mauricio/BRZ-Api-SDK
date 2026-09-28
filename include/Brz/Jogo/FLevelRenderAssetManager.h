@@ -64,10 +64,23 @@ struct FLevelRenderAssetManager
     {
         return NativeCall<void*, void*, void*>(this, "FLevelRenderAssetManager.RemoveComponentReferences(UPrimitiveComponent*,TArray<UStreamableRenderAsset*,TSizedInlineAllocator<12,32,TSizedDefaultAllocator<32>>>&)", a0, a1);
     }
+
+    BrzCampoPonteiro BuildStepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.BuildStep")); }
     BrzCampoPonteiro LevelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.Level")); }
-    BitFieldValue<bool, unsigned __int32> bIsInitialized()
-    { return { (void*)this, "bIsInitialized" }; }
+    BrzCampoPonteiro PendingComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.PendingComponents")); }
+    BrzCampoPonteiro StaticInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.StaticInstances")); }
+    BrzCampoPonteiro TextureGuidToLevelIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.TextureGuidToLevelIndex")); }
+    BrzCampoPonteiro UnprocessedComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.UnprocessedComponents")); }
+    BrzCampoPonteiro bHasBeenReferencedToStreamedTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.bHasBeenReferencedToStreamedTextures")); }
+    BrzCampoPonteiro bIsInitializedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelRenderAssetManager.bIsInitialized")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELRENDERASSETMANAGER_H

@@ -97,7 +97,7 @@ struct ADroppedItem : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItem.OnDeserializedByGame(EOnDeserializationType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=103]]
+    // endereco: casamento de bytes com a build de referencia
     void OnDeserializedByGame(int a0) const
     {
         NativeCall<void, int>(this, "ADroppedItem.OnDeserializedByGame(EOnDeserializationType::Type)", a0);
@@ -105,7 +105,7 @@ struct ADroppedItem : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItem.OnRep_ReplicatedMovement()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=92]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_ReplicatedMovement() const
     {
         NativeCall<void>(this, "ADroppedItem.OnRep_ReplicatedMovement()");
@@ -122,7 +122,7 @@ struct ADroppedItem : public AActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItem.PostNetReceivePhysicState()
     // classe: a funcao mora em AActor, e ADroppedItem herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=366]]
+    // endereco: casamento de bytes com a build de referencia
     void PostNetReceivePhysicState() const
     {
         NativeCall<void>(this, "AActor.PostNetReceivePhysicState()");
@@ -138,7 +138,7 @@ struct ADroppedItem : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItem.ReplicateMovement()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=534+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     void ReplicateMovement() const
     {
         NativeCall<void>(this, "ADroppedItem.ReplicateMovement()");
@@ -214,7 +214,7 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro DroppedItemVelocityField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.DroppedItemVelocity")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PickupAllRange` +4, medido na build 25090264
+    //  ancorado em `PickupAllRange` +4, medido na build 25535041
     //  (offset absoluto medido: 0x8B8; confianca alta)
     float& DroppedLifeSpanOverrideField() const
     { return BrzCampoAncorado<float>(this, "PickupAllRange", 4); }
@@ -231,12 +231,12 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro ImpulseOffsetRangesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.ImpulseOffsetRanges")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPickUpDistance` +8, medido na build 25090264
+    //  ancorado em `MaxPickUpDistance` +8, medido na build 25535041
     //  (offset absoluto medido: 0x800; confianca alta)
     double& LastReplicatedMovementField() const
     { return BrzCampoAncorado<double>(this, "MaxPickUpDistance", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventDropAttachment` +30, medido na build 25090264
+    //  ancorado em `bPreventDropAttachment` +30, medido na build 25535041
     //  (offset absoluto medido: 0x8A0; confianca alta)
     float& LocationStuckTimerField() const
     { return BrzCampoAncorado<float>(this, "bPreventDropAttachment", 30); }
@@ -257,7 +257,7 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro OverlayTooltipScaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.OverlayTooltipScale")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventDropAttachment` +38, medido na build 25090264
+    //  ancorado em `bPreventDropAttachment` +38, medido na build 25535041
     //  (offset absoluto medido: 0x8A8; confianca media)
     double& PhysicsKeepAliveUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "bPreventDropAttachment", 38); }
@@ -270,22 +270,22 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro PickupSingleIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.PickupSingleIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPickUpDistance` +20, medido na build 25090264
+    //  ancorado em `MaxPickUpDistance` +20, medido na build 25535041
     //  (offset absoluto medido: 0x80C; confianca alta)
     float& PrevAngularDampingField() const
     { return BrzCampoAncorado<float>(this, "MaxPickUpDistance", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPickUpDistance` +16, medido na build 25090264
+    //  ancorado em `MaxPickUpDistance` +16, medido na build 25535041
     //  (offset absoluto medido: 0x808; confianca alta)
     float& PrevLinearDampingField() const
     { return BrzCampoAncorado<float>(this, "MaxPickUpDistance", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpawnDropSoundTime` +8, medido na build 25090264
+    //  ancorado em `SpawnDropSoundTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x818; confianca alta)
     void*& PreviousLocationField() const
     { return BrzCampoAncorado<void*>(this, "SpawnDropSoundTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventDropAttachment` +6, medido na build 25090264
+    //  ancorado em `bPreventDropAttachment` +6, medido na build 25535041
     //  (offset absoluto medido: 0x888; confianca alta)
     void*& PreviousStuckLocationField() const
     { return BrzCampoAncorado<void*>(this, "bPreventDropAttachment", 6); }
@@ -293,8 +293,44 @@ struct ADroppedItem : public AActor
     { return *GetNativePointerField<double*>(this, "ADroppedItem.SpawnDropSoundTime"); }
     UStaticMesh*& UsedMeshAssetField() const
     { return *GetNativePointerField<UStaticMesh**>(this, "ADroppedItem.UsedMeshAsset"); }
+    BrzCampoPonteiro bApplyImpulseOnSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bApplyImpulseOnSpawn")); }
+    BrzCampoPonteiro bAssignedToTribePickupOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bAssignedToTribePickupOnly")); }
+    BrzCampoPonteiro bBPOnItemPickedUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bBPOnItemPickedUp")); }
+    BrzCampoPonteiro bClientDisablePhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bClientDisablePhysics")); }
+    BrzCampoPonteiro bDestroyOnStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bDestroyOnStasis")); }
+    BrzCampoPonteiro bDestroyOutOfWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bDestroyOutOfWater")); }
+    BrzCampoPonteiro bHasStoppedMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bHasStoppedMovement")); }
+    BrzCampoPonteiro bIsPreventDroppedItemPhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bIsPreventDroppedItemPhysics")); }
+    BrzCampoPonteiro bIsUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bIsUnderwater")); }
+    BrzCampoPonteiro bIsWildEggField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bIsWildEgg")); }
+    BrzCampoPonteiro bLowQualityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bLowQuality")); }
+    BrzCampoPonteiro bNotifyPreviousOwnerOfPickupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bNotifyPreviousOwnerOfPickup")); }
+    BrzCampoPonteiro bPreventDropAttachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bPreventDropAttachment")); }
+    BrzCampoPonteiro bPreventPickupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bPreventPickup")); }
+    BrzCampoPonteiro bUseBPDroppedItemImpactedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bUseBPDroppedItemImpacted")); }
     bool& bUseBPSetupDroppedItemVisualsField() const
     { return *GetNativePointerField<bool*>(this, "ADroppedItem.bUseBPSetupDroppedItemVisuals"); }
+    BrzCampoPonteiro bUseClientDroppedItemPhysicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bUseClientDroppedItemPhysics")); }
+    BrzCampoPonteiro bUseCollisionTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bUseCollisionTrace")); }
+    BrzCampoPonteiro bUseImpulseOffsetRangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.bUseImpulseOffsetRanges")); }
     BitFieldValue<bool, unsigned __int32> bApplyImpulseOnSpawn()
     { return { (void*)this, "bApplyImpulseOnSpawn" }; }
     BitFieldValue<bool, unsigned __int32> bDestroyOnStasis()

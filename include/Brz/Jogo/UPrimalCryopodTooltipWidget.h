@@ -50,7 +50,7 @@ struct UPrimalCryopodTooltipWidget
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCryopodTooltipWidget.InitToolTipBP(AShooterPlayerController*,FString&,UPrimalItem*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InitToolTipBP(void* a0, const FString& a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "UPrimalCryopodTooltipWidget.InitToolTipBP(AShooterPlayerController*,FString&,UPrimalItem*)", a0, const_cast<FString*>(&a1), a2);
@@ -124,10 +124,10 @@ struct UPrimalCryopodTooltipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.ForegroundColorDelegate")); }
     float& GamepadSelectClosestDistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCryopodTooltipWidget.GamepadSelectClosestDistanceMultiplier"); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.HandleVisibilityWithInput")); }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.Highlightable")); }
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UPrimalCryopodTooltipWidget.InputComponent"); }
     BrzCampoPonteiro MaleColorField() const
@@ -196,8 +196,8 @@ struct UPrimalCryopodTooltipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.TraitsHeaderFont")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UPrimalCryopodTooltipWidget.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -210,44 +210,44 @@ struct UPrimalCryopodTooltipWidget
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.WidgetTree")); }
     int& WidgetWidthField() const
     { return *GetNativePointerField<int*>(this, "UPrimalCryopodTooltipWidget.WidgetWidth"); }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoOverlayFade()
-    { return { (void*)this, "bDoOverlayFade" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoOverlayFadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bDoOverlayFade")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bDontRenderHighlight")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitToolTip()
-    { return { (void*)this, "bUseBPInitToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPUpdateToolTip()
-    { return { (void*)this, "bUseBPUpdateToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bIsFocusable")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bIsVolatile")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bUseBPInitToolTip")); }
+    BrzCampoPonteiro bUseBPUpdateToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bUseBPUpdateToolTip")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCryopodTooltipWidget.bUseWindowClippingForHighlight")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALCRYOPODTOOLTIPWIDGET_H

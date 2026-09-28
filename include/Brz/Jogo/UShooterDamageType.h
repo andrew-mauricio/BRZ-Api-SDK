@@ -43,7 +43,7 @@ struct UShooterDamageType
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterDamageType.ApplyEffectToVictimStructure(APrimalStructure*,AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ApplyEffectToVictimStructure(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UShooterDamageType.ApplyEffectToVictimStructure(APrimalStructure*,AActor*)", a0, a1);
@@ -59,7 +59,7 @@ struct UShooterDamageType
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterDamageType.BPAdjustDamage(AActor*,float,FDamageEvent,AController*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPAdjustDamage(void* a0, float a1, void* a2, void* a3, void* a4) const
     {
         return NativeCall<void*, void*, float, void*, void*, void*>(this, "UShooterDamageType.BPAdjustDamage(AActor*,float,FDamageEvent,AController*,AActor*)", a0, a1, a2, a3, a4);
@@ -67,7 +67,7 @@ struct UShooterDamageType
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterDamageType.BPAdjustHarvestingDamage(AActor*,float,FDamageEvent,AController*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=224]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPAdjustHarvestingDamage(void* a0, float a1, void* a2, void* a3, void* a4) const
     {
         return NativeCall<void*, void*, float, void*, void*, void*>(this, "UShooterDamageType.BPAdjustHarvestingDamage(AActor*,float,FDamageEvent,AController*,AActor*)", a0, a1, a2, a3, a4);
@@ -153,20 +153,106 @@ struct UShooterDamageType
     { return *GetNativePointerField<float*>(this, "UShooterDamageType.UseSpecialDamageInterval"); }
     float& WildDinoForcedAggroDurationField() const
     { return *GetNativePointerField<float*>(this, "UShooterDamageType.WildDinoForcedAggroDuration"); }
-    BitFieldValue<bool, unsigned __int32> bAllowPerBoneDamageAdjustment()
-    { return { (void*)this, "bAllowPerBoneDamageAdjustment" }; }
-    BitFieldValue<bool, unsigned __int32> bCausedByWorld()
-    { return { (void*)this, "bCausedByWorld" }; }
-    BitFieldValue<bool, unsigned __int32> bImpulseAffectsLivePawns()
-    { return { (void*)this, "bImpulseAffectsLivePawns" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPassiveDamage()
-    { return { (void*)this, "bIsPassiveDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPhysicalDamage()
-    { return { (void*)this, "bIsPhysicalDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bRadialDamageVelChange()
-    { return { (void*)this, "bRadialDamageVelChange" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleMomentumByMass()
-    { return { (void*)this, "bScaleMomentumByMass" }; }
+    BrzCampoPonteiro bAllowDamageCorpsesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bAllowDamageCorpses")); }
+    BrzCampoPonteiro bAllowPerBoneDamageAdjustmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bAllowPerBoneDamageAdjustment")); }
+    BrzCampoPonteiro bAllowShieldBlockAllPointDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bAllowShieldBlockAllPointDamage")); }
+    BrzCampoPonteiro bApplyBuffOnKillingDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bApplyBuffOnKillingDamage")); }
+    BrzCampoPonteiro bApplyMomentumToBigPawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bApplyMomentumToBigPawns")); }
+    BrzCampoPonteiro bAutoDragDeadDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bAutoDragDeadDino")); }
+    BrzCampoPonteiro bCausedByWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bCausedByWorld")); }
+    BrzCampoPonteiro bDamageImpulseOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDamageImpulseOnly")); }
+    BrzCampoPonteiro bDamageInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDamageInstigator")); }
+    BrzCampoPonteiro bDamageProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDamageProjectiles")); }
+    BrzCampoPonteiro bDestroyOnKillField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDestroyOnKill")); }
+    BrzCampoPonteiro bDinoDamageCauserAllowSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDinoDamageCauserAllowSameTeam")); }
+    BrzCampoPonteiro bDinoOnDinoDamageCauserAllowSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDinoOnDinoDamageCauserAllowSameTeam")); }
+    BrzCampoPonteiro bDisplayHitMarkerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDisplayHitMarker")); }
+    BrzCampoPonteiro bDontActuallyDealDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bDontActuallyDealDamage")); }
+    BrzCampoPonteiro bForceAllowFriendlyFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bForceAllowFriendlyFire")); }
+    BrzCampoPonteiro bForceAllowPvEDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bForceAllowPvEDamage")); }
+    BrzCampoPonteiro bForceGeneralArmorUsageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bForceGeneralArmorUsage")); }
+    BrzCampoPonteiro bForceRespawnCooldownField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bForceRespawnCooldown")); }
+    BrzCampoPonteiro bHarvestDamageWithNoResourceGrabField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bHarvestDamageWithNoResourceGrab")); }
+    BrzCampoPonteiro bHasRiderIgnoreDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bHasRiderIgnoreDamage")); }
+    BrzCampoPonteiro bHitMarkerPlaySoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bHitMarkerPlaySound")); }
+    BrzCampoPonteiro bIgnoreDinoFlyersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bIgnoreDinoFlyers")); }
+    BrzCampoPonteiro bImpulseAffectsLivePawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bImpulseAffectsLivePawns")); }
+    BrzCampoPonteiro bImpulseResetsDinoVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bImpulseResetsDinoVelocity")); }
+    BrzCampoPonteiro bIsInstantDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bIsInstantDamage")); }
+    BrzCampoPonteiro bIsMeleeDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bIsMeleeDamage")); }
+    BrzCampoPonteiro bIsPassiveDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bIsPassiveDamage")); }
+    BrzCampoPonteiro bIsPhysicalDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bIsPhysicalDamage")); }
+    BrzCampoPonteiro bIsTurretDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bIsTurretDamage")); }
+    BrzCampoPonteiro bNoFriendlyDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bNoFriendlyDamage")); }
+    BrzCampoPonteiro bOnlyApplyDamageTorpidityToPlayersAndTamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bOnlyApplyDamageTorpidityToPlayersAndTames")); }
+    BrzCampoPonteiro bOnlyGiveBuffToDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bOnlyGiveBuffToDino")); }
+    BrzCampoPonteiro bOnlyGiveBuffToPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bOnlyGiveBuffToPlayer")); }
+    BrzCampoPonteiro bOnlyGiveBuffToPlayerOrTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bOnlyGiveBuffToPlayerOrTamed")); }
+    BrzCampoPonteiro bPreventDefaultTargetHurtEffectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventDefaultTargetHurtEffect")); }
+    BrzCampoPonteiro bPreventDinoKillVictimItemCollectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventDinoKillVictimItemCollection")); }
+    BrzCampoPonteiro bPreventHitPawnEffectsFromLocalInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventHitPawnEffectsFromLocalInstigator")); }
+    BrzCampoPonteiro bPreventHurtAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventHurtAnim")); }
+    BrzCampoPonteiro bPreventHurtSoundAndCameraShakeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventHurtSoundAndCameraShake")); }
+    BrzCampoPonteiro bPreventMeleeHarvestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventMeleeHarvesting")); }
+    BrzCampoPonteiro bPreventMomentumWhenFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventMomentumWhenFalling")); }
+    BrzCampoPonteiro bPreventPointDamageShieldBlockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bPreventPointDamageShieldBlock")); }
+    BrzCampoPonteiro bRadialDamageVelChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bRadialDamageVelChange")); }
+    BrzCampoPonteiro bRiderIgnoreDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bRiderIgnoreDamage")); }
+    BrzCampoPonteiro bScaleMomentumByMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bScaleMomentumByMass")); }
+    BrzCampoPonteiro bUseBPAdjustAggroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bUseBPAdjustAggro")); }
+    BrzCampoPonteiro bUseBPAdjustDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bUseBPAdjustDamage")); }
+    BrzCampoPonteiro bUseBPAdjustHarvestingDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bUseBPAdjustHarvestingDamage")); }
+    BrzCampoPonteiro bUseOverrideDamageHarvestEntriesForValidHarvestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType.bUseOverrideDamageHarvestEntriesForValidHarvesting")); }
     BitFieldValue<bool, unsigned __int32> bAllowDamageCorpses()
     { return { (void*)this, "bAllowDamageCorpses" }; }
     BitFieldValue<bool, unsigned __int32> bAllowShieldBlockAllPointDamage()

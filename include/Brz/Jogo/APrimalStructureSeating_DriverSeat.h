@@ -62,7 +62,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.AreAnyRowersNPCs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=165]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AreAnyRowersNPCs() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.AreAnyRowersNPCs()");
@@ -86,7 +86,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.AutoPilot_Start(UE::Math::TVector2<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AutoPilot_Start(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureSeating_DriverSeat.AutoPilot_Start(UE::Math::TVector2<double>)", a0);
@@ -94,7 +94,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.AutoPilot_Stop()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AutoPilot_Stop() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.AutoPilot_Stop()");
@@ -110,7 +110,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.AutoPilot_UpdateDesiredDir(UE::Math::TVector2<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AutoPilot_UpdateDesiredDir(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureSeating_DriverSeat.AutoPilot_UpdateDesiredDir(UE::Math::TVector2<double>)", a0);
@@ -150,7 +150,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.BindCaptainsOrdersSeatInputs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=3033+grafo=24/24]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BindCaptainsOrdersSeatInputs() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.BindCaptainsOrdersSeatInputs()");
@@ -158,7 +158,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.BindDriverSeatInputs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=39/39]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BindDriverSeatInputs() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.BindDriverSeatInputs()");
@@ -166,7 +166,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.CanPlaceDriverSeat(APrimalShip*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanPlaceDriverSeat(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureSeating_DriverSeat.CanPlaceDriverSeat(APrimalShip*,bool)", a0, a1);
@@ -174,7 +174,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.CanRow()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanRow() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.CanRow()");
@@ -182,7 +182,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.CanSeatedCharRow(APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanSeatedCharRow(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureSeating_DriverSeat.CanSeatedCharRow(APrimalCharacter*)", a0);
@@ -190,7 +190,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.CanUseAutoPilot()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanUseAutoPilot() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.CanUseAutoPilot()");
@@ -214,7 +214,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DoOnCaptainOrderPressed(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoOnCaptainOrderPressed(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.DoOnCaptainOrderPressed(int)", a0);
@@ -238,7 +238,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_AutoThrottleBindReleased()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_AutoThrottleBindReleased() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_AutoThrottleBindReleased()");
@@ -246,7 +246,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_GamepadZoomAxis(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_GamepadZoomAxis(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_GamepadZoomAxis(float)", a0);
@@ -254,7 +254,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_PressedActivateTurningSail_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_PressedActivateTurningSail_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_PressedActivateTurningSail_Implementation()");
@@ -262,7 +262,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_PressedProne_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_PressedProne_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_PressedProne_Implementation()");
@@ -270,7 +270,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_PressedStartRowing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_PressedStartRowing() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_PressedStartRowing()");
@@ -278,7 +278,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_ReleasedActivateTurningSail_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_ReleasedActivateTurningSail_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_ReleasedActivateTurningSail_Implementation()");
@@ -286,7 +286,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_SetSailsFullyClosed()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_SetSailsFullyClosed() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_SetSailsFullyClosed()");
@@ -294,7 +294,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_SetSailsFullyOpen()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_SetSailsFullyOpen() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_SetSailsFullyOpen()");
@@ -334,7 +334,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_SetTurnSailsInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_SetTurnSailsInput(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_SetTurnSailsInput(float)", a0);
@@ -342,7 +342,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_ZoomIn()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_ZoomIn() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_ZoomIn()");
@@ -350,7 +350,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.DriverSeat_ZoomOut()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DriverSeat_ZoomOut() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.DriverSeat_ZoomOut()");
@@ -374,7 +374,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.ForceThirdPerson_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ForceThirdPerson_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.ForceThirdPerson_Implementation()");
@@ -382,7 +382,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GamepadDoOnCaptainOrderPressed(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GamepadDoOnCaptainOrderPressed(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.GamepadDoOnCaptainOrderPressed(int)", a0);
@@ -390,7 +390,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GamepadDoOnCaptainOrderReleased(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GamepadDoOnCaptainOrderReleased(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.GamepadDoOnCaptainOrderReleased(int)", a0);
@@ -398,7 +398,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GamepadOnCaptainOrderPressed<0>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GamepadOnCaptainOrderPressed_0_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GamepadOnCaptainOrderPressed<0>()");
@@ -406,7 +406,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GamepadOnCaptainOrderPressed<7>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GamepadOnCaptainOrderPressed_7_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GamepadOnCaptainOrderPressed<7>()");
@@ -414,7 +414,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GamepadOnCaptainOrderReleased<7>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GamepadOnCaptainOrderReleased_7_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GamepadOnCaptainOrderReleased<7>()");
@@ -422,7 +422,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetActiveDriverCount()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=50]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetActiveDriverCount() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetActiveDriverCount()");
@@ -438,7 +438,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetCameraPivotOverride(UE::Math::TVector<double>&,float&,bool
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=110]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetCameraPivotOverride(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APrimalStructureSeating_DriverSeat.GetCameraPivotOverride(UE::Math::TVector<double>&,float&,bool&)", a0, a1, a2);
@@ -454,7 +454,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetHandIKEnabled(bool&,bool&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetHandIKEnabled(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureSeating_DriverSeat.GetHandIKEnabled(bool&,bool&)", a0, a1);
@@ -462,7 +462,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetHandsSocketsTransforms(UE::Math::TTransform<double>&,UE::M
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetHandsSocketsTransforms(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureSeating_DriverSeat.GetHandsSocketsTransforms(UE::Math::TTransform<double>&,UE::Math::TTransform<double>&)", a0, a1);
@@ -494,7 +494,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetNextRowingAnim()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=108]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetNextRowingAnim() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetNextRowingAnim()");
@@ -502,7 +502,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetOarBottomLocation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetOarBottomLocation() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetOarBottomLocation()");
@@ -518,7 +518,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetRowingInput_Seat(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetRowingInput_Seat(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.GetRowingInput_Seat(int)", a0);
@@ -542,7 +542,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetValidDriverCount()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetValidDriverCount() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetValidDriverCount()");
@@ -550,7 +550,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.HasActivePlayer()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HasActivePlayer() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.HasActivePlayer()");
@@ -558,7 +558,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.HideAmmoGroupHighlight()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=80]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HideAmmoGroupHighlight() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.HideAmmoGroupHighlight()");
@@ -574,7 +574,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.IsRowing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsRowing() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.IsRowing()");
@@ -582,7 +582,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.LocalSetShouldDrawFloatingHUD(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro LocalSetShouldDrawFloatingHUD(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalStructureSeating_DriverSeat.LocalSetShouldDrawFloatingHUD(bool)", a0);
@@ -598,7 +598,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.Multi_OnDriverSeated(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Multi_OnDriverSeated(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.Multi_OnDriverSeated(int)", a0);
@@ -622,7 +622,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.Multi_OnStartRowing_Implementation(bool,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Multi_OnStartRowing_Implementation(bool a0, float a1) const
     {
         return NativeCall<void*, bool, float>(this, "APrimalStructureSeating_DriverSeat.Multi_OnStartRowing_Implementation(bool,float)", a0, a1);
@@ -646,7 +646,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.Net_StartRowing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Net_StartRowing() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.Net_StartRowing()");
@@ -654,7 +654,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.Net_StopRowing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Net_StopRowing() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.Net_StopRowing()");
@@ -662,7 +662,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnAttachedToValidShip()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnAttachedToValidShip() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnAttachedToValidShip()");
@@ -670,7 +670,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<0>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnCaptainOrderPressed_0_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<0>()");
@@ -678,7 +678,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<1>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnCaptainOrderPressed_1_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<1>()");
@@ -686,7 +686,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<2>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnCaptainOrderPressed_2_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<2>()");
@@ -694,7 +694,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<3>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnCaptainOrderPressed_3_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<3>()");
@@ -702,7 +702,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<5>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnCaptainOrderPressed_5_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<5>()");
@@ -710,7 +710,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<6>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnCaptainOrderPressed_6_() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnCaptainOrderPressed<6>()");
@@ -718,7 +718,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnDriverSeated(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnDriverSeated(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.OnDriverSeated(int)", a0);
@@ -726,7 +726,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnDriverUnseated(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnDriverUnseated(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.OnDriverUnseated(int)", a0);
@@ -734,7 +734,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnHoldingReload()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=673+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnHoldingReload() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnHoldingReload()");
@@ -742,7 +742,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnPressReload()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=365+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnPressReload() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnPressReload()");
@@ -766,7 +766,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnStopRowing()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=56]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnStopRowing() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnStopRowing()");
@@ -774,7 +774,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnStopShowAllGroupIcons()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnStopShowAllGroupIcons() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnStopShowAllGroupIcons()");
@@ -782,7 +782,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.PlayNextRowingAnim()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=72]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro PlayNextRowingAnim() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.PlayNextRowingAnim()");
@@ -798,7 +798,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.Release(AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Release(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureSeating_DriverSeat.Release(AShooterCharacter*)", a0);
@@ -806,7 +806,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.ServerSetTurningSailState_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerSetTurningSailState_Implementation(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalStructureSeating_DriverSeat.ServerSetTurningSailState_Implementation(bool)", a0);
@@ -846,7 +846,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.StaticRegisterNativesAPrimalStructureSeating_DriverSeat()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StaticRegisterNativesAPrimalStructureSeating_DriverSeat() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.StaticRegisterNativesAPrimalStructureSeating_DriverSeat()");
@@ -854,7 +854,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.StopAllRowingAnims()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=56]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StopAllRowingAnims() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.StopAllRowingAnims()");
@@ -862,7 +862,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.TickCriticalShipStructure(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TickCriticalShipStructure(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalStructureSeating_DriverSeat.TickCriticalShipStructure(float)", a0);
@@ -870,7 +870,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.ToggleLadders()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=172]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ToggleLadders() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.ToggleLadders()");
@@ -910,7 +910,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.UpdateManualFireLocation(UE::Math::TVector<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateManualFireLocation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureSeating_DriverSeat.UpdateManualFireLocation(UE::Math::TVector<double>)", a0);
@@ -918,7 +918,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.UpdateWindSourceActorRef()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateWindSourceActorRef() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.UpdateWindSourceActorRef()");
@@ -926,7 +926,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.WeaponAllowCommand()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=101]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro WeaponAllowCommand() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.WeaponAllowCommand()");
@@ -952,8 +952,8 @@ struct APrimalStructureSeating_DriverSeat
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureSeating_DriverSeat.ActiveRequiresFuelItems"); }
     TObjectPtr<AActor>& ActorUsingQuickActionField() const
     { return *GetNativePointerField<TObjectPtr<AActor>*>(this, "APrimalStructureSeating_DriverSeat.ActorUsingQuickAction"); }
-    BitFieldValue<bool, unsigned __int32> AllowOverrideParticleLightColor()
-    { return { (void*)this, "AllowOverrideParticleLightColor" }; }
+    BrzCampoPonteiro AllowOverrideParticleLightColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.AllowOverrideParticleLightColor")); }
     FieldArray<unsigned char> AllowStructureColorSetsField() const
     { return { (void*)this, "APrimalStructureSeating_DriverSeat.AllowStructureColorSets" }; }
     TObjectPtr<UTexture2D>& AllowWirelessCraftingIconField() const
@@ -990,8 +990,8 @@ struct APrimalStructureSeating_DriverSeat
     { return *GetNativePointerField<int*>(this, "APrimalStructureSeating_DriverSeat.AutoPilot_ThrottleIntervalCount"); }
     unsigned char& AutoReceiveInputField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalStructureSeating_DriverSeat.AutoReceiveInput"); }
-    BitFieldValue<bool, unsigned __int32> BPOverrideDestroyedMeshTextures()
-    { return { (void*)this, "BPOverrideDestroyedMeshTextures" }; }
+    BrzCampoPonteiro BPOverrideDestroyedMeshTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.BPOverrideDestroyedMeshTextures")); }
     float& BasedCharacterDamageAmountField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureSeating_DriverSeat.BasedCharacterDamageAmount"); }
     float& BasedCharacterDamageIntervalField() const
@@ -1014,6 +1014,8 @@ struct APrimalStructureSeating_DriverSeat
     { return *GetNativePointerField<FString*>(this, "APrimalStructureSeating_DriverSeat.BoxNamePrefaceString"); }
     //  no cache antigo este campo se chamava CaptainExtraActionCooldown.
     //  nesta build ele e' `bAutoPilotActive` — resolve por NOME.
+    BrzCampoPonteiro CaptainExtraActionCooldownField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoPilotActive")); }
     float& CaptainsOrderTargetRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureSeating_DriverSeat.CaptainsOrderTargetRange"); }
     TArray<TWeakObjectPtr<void>>& CharacterPerSeatField() const
@@ -1684,10 +1686,10 @@ struct APrimalStructureSeating_DriverSeat
     { return *GetNativePointerField<double*>(this, "APrimalStructureSeating_DriverSeat.UnstasisLastInRangeTime"); }
     int& UpdateOverlapsMethodDuringLevelStreamingField() const
     { return *GetNativePointerField<int*>(this, "APrimalStructureSeating_DriverSeat.UpdateOverlapsMethodDuringLevelStreaming"); }
-    BitFieldValue<bool, unsigned __int32> UseBPApplyPinCode()
-    { return { (void*)this, "UseBPApplyPinCode" }; }
-    BitFieldValue<bool, unsigned __int32> UseBPOverrideTargetLocation()
-    { return { (void*)this, "UseBPOverrideTargetLocation" }; }
+    BrzCampoPonteiro UseBPApplyPinCodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.UseBPApplyPinCode")); }
+    BrzCampoPonteiro UseBPOverrideTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.UseBPOverrideTargetLocation")); }
     float& ValidCraftingResourceMaxDurabilityField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureSeating_DriverSeat.ValidCraftingResourceMaxDurability"); }
     TArray<TWeakObjectPtr<void>>& ValidatedByPinCodePlayerControllersField() const
@@ -1698,612 +1700,672 @@ struct APrimalStructureSeating_DriverSeat
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.WindSourceRef")); }
     BrzCampoPonteiro WirelessExchangeRefsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.WirelessExchangeRefs")); }
-    BitFieldValue<bool, unsigned __int32> bActiveRequiresPower()
-    { return { (void*)this, "bActiveRequiresPower" }; }
-    BitFieldValue<bool, unsigned __int32> bActorEnableCollision()
-    { return { (void*)this, "bActorEnableCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bActorIsBeingDestroyed()
-    { return { (void*)this, "bActorIsBeingDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bActorPreventPhysicsSceneRegistration()
-    { return { (void*)this, "bActorPreventPhysicsSceneRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bAdjustDamageAsPlayerWithEquipment()
-    { return { (void*)this, "bAdjustDamageAsPlayerWithEquipment" }; }
-    BitFieldValue<bool, unsigned __int32> bAdjustForLegLength()
-    { return { (void*)this, "bAdjustForLegLength" }; }
-    BitFieldValue<bool, unsigned __int32> bAdjustForLegLengthStanding()
-    { return { (void*)this, "bAdjustForLegLengthStanding" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAnyTeamToSit()
-    { return { (void*)this, "bAllowAnyTeamToSit" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAttachToSaddle()
-    { return { (void*)this, "bAllowAttachToSaddle" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAutoActivateWhenNoPower()
-    { return { (void*)this, "bAllowAutoActivateWhenNoPower" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowChooseRotationWhenSnapped()
-    { return { (void*)this, "bAllowChooseRotationWhenSnapped" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCrouchProneToSit()
-    { return { (void*)this, "bAllowCrouchProneToSit" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowCustomName()
-    { return { (void*)this, "bAllowCustomName" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowDinoCompanionAttachment()
-    { return { (void*)this, "bAllowDinoCompanionAttachment" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowFPV()
-    { return { (void*)this, "bAllowFPV" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowOrbitCam()
-    { return { (void*)this, "bAllowOrbitCam" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowPickingUpStructureAfterPlacement()
-    { return { (void*)this, "bAllowPickingUpStructureAfterPlacement" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowReceiveTickEventOnDedicatedServer()
-    { return { (void*)this, "bAllowReceiveTickEventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowSleepingPlayers()
-    { return { (void*)this, "bAllowSleepingPlayers" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowSnapRotation()
-    { return { (void*)this, "bAllowSnapRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowStructureSkinsWithoutTeamCheck()
-    { return { (void*)this, "bAllowStructureSkinsWithoutTeamCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTickBeforeBeginPlay()
-    { return { (void*)this, "bAllowTickBeforeBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWeldRoundRobin()
-    { return { (void*)this, "bAllowWeldRoundRobin" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWeldingToShips()
-    { return { (void*)this, "bAllowWeldingToShips" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevant()
-    { return { (void*)this, "bAlwaysRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevantPrimalStructure()
-    { return { (void*)this, "bAlwaysRelevantPrimalStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyNiagaraColorInBP()
-    { return { (void*)this, "bApplyNiagaraColorInBP" }; }
-    BitFieldValue<bool, unsigned __int32> bAsyncPhysicsTickEnabled()
-    { return { (void*)this, "bAsyncPhysicsTickEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachmentReplicationUseNetworkParent()
-    { return { (void*)this, "bAttachmentReplicationUseNetworkParent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateContainer()
-    { return { (void*)this, "bAutoActivateContainer" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateIfPowered()
-    { return { (void*)this, "bAutoActivateIfPowered" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateWhenFueled()
-    { return { (void*)this, "bAutoActivateWhenFueled" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivateWhenNoPower()
-    { return { (void*)this, "bAutoActivateWhenNoPower" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDestroyWhenFinished()
-    { return { (void*)this, "bAutoDestroyWhenFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoStasis()
-    { return { (void*)this, "bAutoStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryItemUsedHandlesDurability()
-    { return { (void*)this, "bBPInventoryItemUsedHandlesDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bBPIsValidWaterSourceForPipe()
-    { return { (void*)this, "bBPIsValidWaterSourceForPipe" }; }
-    BitFieldValue<bool, unsigned __int32> bBPNotifyRemoteViewerChange()
-    { return { (void*)this, "bBPNotifyRemoteViewerChange" }; }
-    BitFieldValue<bool, unsigned __int32> bBPOnContainerActiveHealthDecrease()
-    { return { (void*)this, "bBPOnContainerActiveHealthDecrease" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPostInitializeComponents()
-    { return { (void*)this, "bBPPostInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPreInitializeComponents()
-    { return { (void*)this, "bBPPreInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBendForwardWithIK()
-    { return { (void*)this, "bBendForwardWithIK" }; }
-    BitFieldValue<bool, unsigned __int32> bBlockInput()
-    { return { (void*)this, "bBlockInput" }; }
-    BitFieldValue<bool, unsigned __int32> bBlueprintMultiUseEntries()
-    { return { (void*)this, "bBlueprintMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplication()
-    { return { (void*)this, "bCallPreReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplicationForReplay()
-    { return { (void*)this, "bCallPreReplicationForReplay" }; }
-    BitFieldValue<bool, unsigned __int32> bCanAttachToExosuit()
-    { return { (void*)this, "bCanAttachToExosuit" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDamaged()
-    { return { (void*)this, "bCanBeDamaged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeInCluster()
-    { return { (void*)this, "bCanBeInCluster" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeRepaired()
-    { return { (void*)this, "bCanBeRepaired" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeStoredByExosuit()
-    { return { (void*)this, "bCanBeStoredByExosuit" }; }
-    BitFieldValue<bool, unsigned __int32> bCanToggleActivation()
-    { return { (void*)this, "bCanToggleActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bCarriedByDino()
-    { return { (void*)this, "bCarriedByDino" }; }
-    BitFieldValue<bool, unsigned __int32> bCenterOffscreenFloatingHUDWidgets()
-    { return { (void*)this, "bCenterOffscreenFloatingHUDWidgets" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckStartedUnderwater()
-    { return { (void*)this, "bCheckStartedUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bClientBPNotifyInventoryItemChanges()
-    { return { (void*)this, "bClientBPNotifyInventoryItemChanges" }; }
-    BitFieldValue<bool, unsigned __int32> bClientReceivedStructuresPlacedOnFloor()
-    { return { (void*)this, "bClientReceivedStructuresPlacedOnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWhenPlacing()
-    { return { (void*)this, "bCollideWhenPlacing" }; }
-    BitFieldValue<bool, unsigned __int32> bContainerActivated()
-    { return { (void*)this, "bContainerActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bCraftingSubstractConnectedWater()
-    { return { (void*)this, "bCraftingSubstractConnectedWater" }; }
-    BitFieldValue<bool, unsigned __int32> bDebug()
-    { return { (void*)this, "bDebug" }; }
-    BitFieldValue<bool, unsigned __int32> bDemolishJustDestroy()
-    { return { (void*)this, "bDemolishJustDestroy" }; }
-    BitFieldValue<bool, unsigned __int32> bDesiredRepGraphBehaviorHasBeenSet()
-    { return { (void*)this, "bDesiredRepGraphBehaviorHasBeenSet" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyDontClearNetworkChildren()
-    { return { (void*)this, "bDestroyDontClearNetworkChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyWhenAllItemsRemoved()
-    { return { (void*)this, "bDestroyWhenAllItemsRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyWhenAllItemsRemovedExceptDefaults()
-    { return { (void*)this, "bDestroyWhenAllItemsRemovedExceptDefaults" }; }
-    BitFieldValue<bool, unsigned __int32> bDidSpawnEffects()
-    { return { (void*)this, "bDidSpawnEffects" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableActivationUnderwater()
-    { return { (void*)this, "bDisableActivationUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNodes()
-    { return { (void*)this, "bDisableRigidBodyAnimNodes" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableStructureOnElectricStorm()
-    { return { (void*)this, "bDisableStructureOnElectricStorm" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayActivationOnInventoryUI()
-    { return { (void*)this, "bDisplayActivationOnInventoryUI" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayActivationOnInventoryUISecondary()
-    { return { (void*)this, "bDisplayActivationOnInventoryUISecondary" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayActivationOnInventoryUITertiary()
-    { return { (void*)this, "bDisplayActivationOnInventoryUITertiary" }; }
-    BitFieldValue<bool, unsigned __int32> bDontResetPickupTimer()
-    { return { (void*)this, "bDontResetPickupTimer" }; }
-    BitFieldValue<bool, unsigned __int32> bDontSetDamageParameters()
-    { return { (void*)this, "bDontSetDamageParameters" }; }
-    BitFieldValue<bool, unsigned __int32> bDrawFuelRemaining()
-    { return { (void*)this, "bDrawFuelRemaining" }; }
-    BitFieldValue<bool, unsigned __int32> bDrinkingWater()
-    { return { (void*)this, "bDrinkingWater" }; }
-    BitFieldValue<bool, unsigned __int32> bDropInventoryOnDestruction()
-    { return { (void*)this, "bDropInventoryOnDestruction" }; }
-    BitFieldValue<bool, unsigned __int32> bEditorOnlyActorShowInPIE()
-    { return { (void*)this, "bEditorOnlyActorShowInPIE" }; }
+    BrzCampoPonteiro bActiveRequiresPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bActiveRequiresPower")); }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAdjustDamageAsPlayerWithEquipmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAdjustDamageAsPlayerWithEquipment")); }
+    BrzCampoPonteiro bAdjustForLegLengthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAdjustForLegLength")); }
+    BrzCampoPonteiro bAdjustForLegLengthStandingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAdjustForLegLengthStanding")); }
+    BrzCampoPonteiro bAllowAnyTeamToSitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowAnyTeamToSit")); }
+    BrzCampoPonteiro bAllowAttachToSaddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowAttachToSaddle")); }
+    BrzCampoPonteiro bAllowAutoActivateWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowAutoActivateWhenNoPower")); }
+    BrzCampoPonteiro bAllowCaptainOrdersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowCaptainOrders")); }
+    BrzCampoPonteiro bAllowChooseRotationWhenSnappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowChooseRotationWhenSnapped")); }
+    BrzCampoPonteiro bAllowCrouchProneToSitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowCrouchProneToSit")); }
+    BrzCampoPonteiro bAllowCustomNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowCustomName")); }
+    BrzCampoPonteiro bAllowDinoCompanionAttachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowDinoCompanionAttachment")); }
+    BrzCampoPonteiro bAllowFPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowFPV")); }
+    BrzCampoPonteiro bAllowOrbitCamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowOrbitCam")); }
+    BrzCampoPonteiro bAllowPickingUpStructureAfterPlacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowPickingUpStructureAfterPlacement")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowSleepingPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowSleepingPlayers")); }
+    BrzCampoPonteiro bAllowSnapRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowSnapRotation")); }
+    BrzCampoPonteiro bAllowStructureSkinsWithoutTeamCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowStructureSkinsWithoutTeamCheck")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAllowWeldRoundRobinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowWeldRoundRobin")); }
+    BrzCampoPonteiro bAllowWeldingToShipsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAllowWeldingToShips")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bApplyNiagaraColorInBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bApplyNiagaraColorInBP")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAttackMyTargetEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAttackMyTargetEnabled")); }
+    BrzCampoPonteiro bAutoActivateContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoActivateContainer")); }
+    BrzCampoPonteiro bAutoActivateIfPoweredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoActivateIfPowered")); }
+    BrzCampoPonteiro bAutoActivateWhenFueledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoActivateWhenFueled")); }
+    BrzCampoPonteiro bAutoActivateWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoActivateWhenNoPower")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoDestroyWhenFinished")); }
+    BrzCampoPonteiro bAutoFurlSailsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoFurlSails")); }
+    BrzCampoPonteiro bAutoHoldThrottleForwardField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoHoldThrottleForward")); }
+    BrzCampoPonteiro bAutoPilotActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoPilotActive")); }
+    BrzCampoPonteiro bAutoPilot_FollowWindField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoPilot_FollowWind")); }
+    BrzCampoPonteiro bAutoPilot_HasReachedHeadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoPilot_HasReachedHeading")); }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bAutoStasis")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPIsValidWaterSourceForPipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBPIsValidWaterSourceForPipe")); }
+    BrzCampoPonteiro bBPNotifyRemoteViewerChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBPNotifyRemoteViewerChange")); }
+    BrzCampoPonteiro bBPOnContainerActiveHealthDecreaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBPOnContainerActiveHealthDecrease")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBendForwardWithIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBendForwardWithIK")); }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBlockInput")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCanAttachToExosuitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCanAttachToExosuit")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCanBeInCluster")); }
+    BrzCampoPonteiro bCanBeRepairedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCanBeRepaired")); }
+    BrzCampoPonteiro bCanBeStoredByExosuitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCanBeStoredByExosuit")); }
+    BrzCampoPonteiro bCanToggleActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCanToggleActivation")); }
+    BrzCampoPonteiro bCarriedByDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCarriedByDino")); }
+    BrzCampoPonteiro bCenterOffscreenFloatingHUDWidgetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCenterOffscreenFloatingHUDWidgets")); }
+    BrzCampoPonteiro bCheckStartedUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCheckStartedUnderwater")); }
+    BrzCampoPonteiro bClientBPNotifyInventoryItemChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bClientBPNotifyInventoryItemChanges")); }
+    BrzCampoPonteiro bClientReceivedStructuresPlacedOnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bClientReceivedStructuresPlacedOnFloor")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bClimbable")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bContainerActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bContainerActivated")); }
+    BrzCampoPonteiro bCraftingSubstractConnectedWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCraftingSubstractConnectedWater")); }
+    BrzCampoPonteiro bCreateMusicPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bCreateMusicPlayer")); }
+    BrzCampoPonteiro bDebugField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDebug")); }
+    BrzCampoPonteiro bDebugAutoPilotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDebugAutoPilot")); }
+    BrzCampoPonteiro bDebugDrivingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDebugDriving")); }
+    BrzCampoPonteiro bDebugRowingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDebugRowing")); }
+    BrzCampoPonteiro bDemolishJustDestroyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDemolishJustDestroy")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bDestroyWhenAllItemsRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDestroyWhenAllItemsRemoved")); }
+    BrzCampoPonteiro bDestroyWhenAllItemsRemovedExceptDefaultsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDestroyWhenAllItemsRemovedExceptDefaults")); }
+    BrzCampoPonteiro bDidSpawnEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDidSpawnEffects")); }
+    BrzCampoPonteiro bDisableActivationUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDisableActivationUnderwater")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bDisableStructureOnElectricStormField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDisableStructureOnElectricStorm")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDisplayActivationOnInventoryUI")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUISecondaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDisplayActivationOnInventoryUISecondary")); }
+    BrzCampoPonteiro bDisplayActivationOnInventoryUITertiaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDisplayActivationOnInventoryUITertiary")); }
+    BrzCampoPonteiro bDontResetPickupTimerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDontResetPickupTimer")); }
+    BrzCampoPonteiro bDontSetDamageParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDontSetDamageParameters")); }
+    BrzCampoPonteiro bDrawFuelRemainingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDrawFuelRemaining")); }
+    BrzCampoPonteiro bDrinkingWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDrinkingWater")); }
+    BrzCampoPonteiro bDropInventoryOnDestructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bDropInventoryOnDestruction")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bEditorOnlyActorShowInPIE")); }
     //  no cache antigo este campo se chamava bEnabeldLoweringAnchor.
     //  nesta build ele e' `bUsingSteeringAnimation` — resolve por NOME.
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiUse()
-    { return { (void*)this, "bEnableMultiUse" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableSeatedFreeLook()
-    { return { (void*)this, "bEnableSeatedFreeLook" }; }
-    BitFieldValue<bool, unsigned __int32> bExchangedRoles()
-    { return { (void*)this, "bExchangedRoles" }; }
-    BitFieldValue<bool, unsigned __int32> bFindCameraComponentWhenViewTarget()
-    { return { (void*)this, "bFindCameraComponentWhenViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowNetMulticast()
-    { return { (void*)this, "bForceAllowNetMulticast" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFloatingDamageNumbers()
-    { return { (void*)this, "bForceFloatingDamageNumbers" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFloorCollisionGroup()
-    { return { (void*)this, "bForceFloorCollisionGroup" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHiddenReplication()
-    { return { (void*)this, "bForceHiddenReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHighQualityViewerReplication()
-    { return { (void*)this, "bForceHighQualityViewerReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInfiniteDrawDistance()
-    { return { (void*)this, "bForceInfiniteDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetAddressable()
-    { return { (void*)this, "bForceNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetworkSpatialization()
-    { return { (void*)this, "bForceNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNeverLock()
-    { return { (void*)this, "bForceNeverLock" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNoPinLocking()
-    { return { (void*)this, "bForceNoPinLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNonBlockingHits()
-    { return { (void*)this, "bForceNonBlockingHits" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventAutoActivateWhenConnectedToWater()
-    { return { (void*)this, "bForcePreventAutoActivateWhenConnectedToWater" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventSeamlessTravel()
-    { return { (void*)this, "bForcePreventSeamlessTravel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceReplicateDormantChildrenWithoutSpatialRelevancy()
-    { return { (void*)this, "bForceReplicateDormantChildrenWithoutSpatialRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bForceSnappedStructureToGround()
-    { return { (void*)this, "bForceSnappedStructureToGround" }; }
-    BitFieldValue<bool, unsigned __int32> bForceZeroDamageProcessing()
-    { return { (void*)this, "bForceZeroDamageProcessing" }; }
-    BitFieldValue<bool, unsigned __int32> bForcedHudDrawingRequiresSameTeam()
-    { return { (void*)this, "bForcedHudDrawingRequiresSameTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bFreeLookActive()
-    { return { (void*)this, "bFreeLookActive" }; }
-    BitFieldValue<bool, unsigned __int32> bFuelAllowActivationWhenNoPower()
-    { return { (void*)this, "bFuelAllowActivationWhenNoPower" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEventsDuringLevelStreaming()
-    { return { (void*)this, "bGenerateOverlapEventsDuringLevelStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bHasAnyStructuresPlacedOnFloor()
-    { return { (void*)this, "bHasAnyStructuresPlacedOnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bHasFuel()
-    { return { (void*)this, "bHasFuel" }; }
-    BitFieldValue<bool, unsigned __int32> bHasHighVolumeRPCs()
-    { return { (void*)this, "bHasHighVolumeRPCs" }; }
-    BitFieldValue<bool, unsigned __int32> bHasResetDecayTime()
-    { return { (void*)this, "bHasResetDecayTime" }; }
-    BitFieldValue<bool, unsigned __int32> bHibernateChange()
-    { return { (void*)this, "bHibernateChange" }; }
-    BitFieldValue<bool, unsigned __int32> bHidden()
-    { return { (void*)this, "bHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bHideAutoActivateToggle()
-    { return { (void*)this, "bHideAutoActivateToggle" }; }
-    BitFieldValue<bool, unsigned __int32> bHideCharacterInFPV()
-    { return { (void*)this, "bHideCharacterInFPV" }; }
-    BitFieldValue<bool, unsigned __int32> bHideLegacyStructureAmmoHUD()
-    { return { (void*)this, "bHideLegacyStructureAmmoHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bHidePowerJunctionConnection()
-    { return { (void*)this, "bHidePowerJunctionConnection" }; }
+    BrzCampoPonteiro bEnabeldLoweringAnchorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsingSteeringAnimation")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bEnableMultiUse")); }
+    BrzCampoPonteiro bEnableSeatedFreeLookField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bEnableSeatedFreeLook")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bExchangedRoles")); }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceAllowNetMulticast")); }
+    BrzCampoPonteiro bForceDrawFloatingHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceDrawFloatingHUD")); }
+    BrzCampoPonteiro bForceFloatingDamageNumbersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceFloatingDamageNumbers")); }
+    BrzCampoPonteiro bForceFloorCollisionGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceFloorCollisionGroup")); }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceNetAddressable")); }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNeverLockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceNeverLock")); }
+    BrzCampoPonteiro bForceNoPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceNoPinLocking")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePreventAutoActivateWhenConnectedToWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForcePreventAutoActivateWhenConnectedToWater")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForceSnappedStructureToGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceSnappedStructureToGround")); }
+    BrzCampoPonteiro bForceZeroDamageProcessingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForceZeroDamageProcessing")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bForcedHudDrawingRequiresSameTeam")); }
+    BrzCampoPonteiro bFreeLookActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bFreeLookActive")); }
+    BrzCampoPonteiro bFuelAllowActivationWhenNoPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bFuelAllowActivationWhenNoPower")); }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bHasAnyStructuresPlacedOnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHasAnyStructuresPlacedOnFloor")); }
+    BrzCampoPonteiro bHasFuelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHasFuel")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHasResetDecayTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHasResetDecayTime")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHibernateChange")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHidden")); }
+    BrzCampoPonteiro bHideAutoActivateToggleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHideAutoActivateToggle")); }
+    BrzCampoPonteiro bHideCharacterInFPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHideCharacterInFPV")); }
+    BrzCampoPonteiro bHideLegacyStructureAmmoHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHideLegacyStructureAmmoHUD")); }
+    BrzCampoPonteiro bHidePowerJunctionConnectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHidePowerJunctionConnection")); }
+    BrzCampoPonteiro bHideSailsForAimingCaptainOrdersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bHideSailsForAimingCaptainOrders")); }
     bool& bHideUnusedParticleTypesOnRefreshActiveEffectsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalStructureSeating_DriverSeat.bHideUnusedParticleTypesOnRefreshActiveEffects"); }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDestructionEffects()
-    { return { (void*)this, "bIgnoreDestructionEffects" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDyingWhenDemolished()
-    { return { (void*)this, "bIgnoreDyingWhenDemolished" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNetworkRangeScaling()
-    { return { (void*)this, "bIgnoreNetworkRangeScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreSpawnEffects()
-    { return { (void*)this, "bIgnoreSpawnEffects" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByTargeting()
-    { return { (void*)this, "bIgnoredByTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoresOriginShifting()
-    { return { (void*)this, "bIgnoresOriginShifting" }; }
+    BrzCampoPonteiro bIgnoreDestructionEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoreDestructionEffects")); }
+    BrzCampoPonteiro bIgnoreDyingWhenDemolishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoreDyingWhenDemolished")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoreSpawnEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoreSpawnEffects")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIgnoredByTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoredByTargeting")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoresOriginShifting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MusicPlayer` +10, medido na build 25090264
+    //  ancorado em `MusicPlayer` +10, medido na build 25535041
     //  (offset absoluto medido: 0x1622; confianca alta)
     void*& bInGamepadLoweringAnchorField() const
     { return BrzCampoAncorado<void*>(this, "MusicPlayer", 10); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MusicPlayer` +9, medido na build 25090264
+    //  ancorado em `MusicPlayer` +9, medido na build 25535041
     //  (offset absoluto medido: 0x1621; confianca alta)
     void*& bInGamepadZoomingStateField() const
     { return BrzCampoAncorado<void*>(this, "MusicPlayer", 9); }
-    BitFieldValue<bool, unsigned __int32> bInventoryForcePreventItemAppends()
-    { return { (void*)this, "bInventoryForcePreventItemAppends" }; }
-    BitFieldValue<bool, unsigned __int32> bInventoryForcePreventRemoteAddItems()
-    { return { (void*)this, "bInventoryForcePreventRemoteAddItems" }; }
-    BitFieldValue<bool, unsigned __int32> bIsAmmoContainer()
-    { return { (void*)this, "bIsAmmoContainer" }; }
-    BitFieldValue<bool, unsigned __int32> bIsBed()
-    { return { (void*)this, "bIsBed" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDead()
-    { return { (void*)this, "bIsDead" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyedFromChildActorComponent()
-    { return { (void*)this, "bIsDestroyedFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsDoorframe()
-    { return { (void*)this, "bIsDoorframe" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnlyActor()
-    { return { (void*)this, "bIsEditorOnlyActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFlipped()
-    { return { (void*)this, "bIsFlipped" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFloor()
-    { return { (void*)this, "bIsFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFoundation()
-    { return { (void*)this, "bIsFoundation" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromChildActorComponent()
-    { return { (void*)this, "bIsFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInvincible()
-    { return { (void*)this, "bIsInvincible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLocked()
-    { return { (void*)this, "bIsLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMapActor()
-    { return { (void*)this, "bIsMapActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPinLocked()
-    { return { (void*)this, "bIsPinLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPowerJunction()
-    { return { (void*)this, "bIsPowerJunction" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPowered()
-    { return { (void*)this, "bIsPowered" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPreviewStructure()
-    { return { (void*)this, "bIsPreviewStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bIsRepairing()
-    { return { (void*)this, "bIsRepairing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsStructureAttachmentBase()
-    { return { (void*)this, "bIsStructureAttachmentBase" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTeleporter()
-    { return { (void*)this, "bIsTeleporter" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTrapped()
-    { return { (void*)this, "bIsTrapped" }; }
-    BitFieldValue<bool, unsigned __int32> bIsUnderwater()
-    { return { (void*)this, "bIsUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidUnstasisCaster()
-    { return { (void*)this, "bIsValidUnstasisCaster" }; }
-    BitFieldValue<bool, unsigned __int32> bJumpOnDetach()
-    { return { (void*)this, "bJumpOnDetach" }; }
-    BitFieldValue<bool, unsigned __int32> bLastToggleActivated()
-    { return { (void*)this, "bLastToggleActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bLinkedStructureRemovalForceClientUpdate()
-    { return { (void*)this, "bLinkedStructureRemovalForceClientUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bLoadedFromSaveGame()
-    { return { (void*)this, "bLoadedFromSaveGame" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiUseCenterHUD()
-    { return { (void*)this, "bMultiUseCenterHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bNetCritical()
-    { return { (void*)this, "bNetCritical" }; }
-    BitFieldValue<bool, unsigned __int32> bNetLoadOnClient()
-    { return { (void*)this, "bNetLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bNetTemporary()
-    { return { (void*)this, "bNetTemporary" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseClientRelevancy()
-    { return { (void*)this, "bNetUseClientRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseOwnerRelevancy()
-    { return { (void*)this, "bNetUseOwnerRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSpatializationForceRelevancyCheck()
-    { return { (void*)this, "bNetworkSpatializationForceRelevancyCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bNoCollision()
-    { return { (void*)this, "bNoCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyAllowTeamActivation()
-    { return { (void*)this, "bOnlyAllowTeamActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyConsumeDurabilityOnEquipmentForEnemies()
-    { return { (void*)this, "bOnlyConsumeDurabilityOnEquipmentForEnemies" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyReplicateOnNetForcedUpdate()
-    { return { (void*)this, "bOnlyReplicateOnNetForcedUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyUseHandIKForFirstSeat()
-    { return { (void*)this, "bOnlyUseHandIKForFirstSeat" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyUseSpoilingMultipliersIfActivated()
-    { return { (void*)this, "bOnlyUseSpoilingMultipliersIfActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideFoundationSupportDistance()
-    { return { (void*)this, "bOverrideFoundationSupportDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideOrbitCamTargetLocation()
-    { return { (void*)this, "bOverrideOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bPendingRemoval()
-    { return { (void*)this, "bPendingRemoval" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementAdjustHeight()
-    { return { (void*)this, "bPlacementAdjustHeight" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementChooseRotation()
-    { return { (void*)this, "bPlacementChooseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementIgnoreChooseRotation()
-    { return { (void*)this, "bPlacementIgnoreChooseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bPlacementPreventLockingCameraWhileChooseRotation()
-    { return { (void*)this, "bPlacementPreventLockingCameraWhileChooseRotation" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredAllowBattery()
-    { return { (void*)this, "bPoweredAllowBattery" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredAllowBot()
-    { return { (void*)this, "bPoweredAllowBot" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredAllowSolar()
-    { return { (void*)this, "bPoweredAllowSolar" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredHasBattery()
-    { return { (void*)this, "bPoweredHasBattery" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredHasBot()
-    { return { (void*)this, "bPoweredHasBot" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredUsingBattery()
-    { return { (void*)this, "bPoweredUsingBattery" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredUsingBot()
-    { return { (void*)this, "bPoweredUsingBot" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredUsingSolar()
-    { return { (void*)this, "bPoweredUsingSolar" }; }
-    BitFieldValue<bool, unsigned __int32> bPoweredWaterSourceWhenActive()
-    { return { (void*)this, "bPoweredWaterSourceWhenActive" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventActorStasis()
-    { return { (void*)this, "bPreventActorStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventBotIdleFidgetAnimations()
-    { return { (void*)this, "bPreventBotIdleFidgetAnimations" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasingAllowSteppingUp()
-    { return { (void*)this, "bPreventCharacterBasingAllowSteppingUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCliffPlatforms()
-    { return { (void*)this, "bPreventCliffPlatforms" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventContainerPingType()
-    { return { (void*)this, "bPreventContainerPingType" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventHandcuffLockedSeating()
-    { return { (void*)this, "bPreventHandcuffLockedSeating" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLevelBoundsRelevant()
-    { return { (void*)this, "bPreventLevelBoundsRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLinkingToStorageInterface()
-    { return { (void*)this, "bPreventLinkingToStorageInterface" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNPCSpawnFloor()
-    { return { (void*)this, "bPreventNPCSpawnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularForceNetUpdate()
-    { return { (void*)this, "bPreventRegularForceNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSaving()
-    { return { (void*)this, "bPreventSaving" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSeatingWhenHandcuffed()
-    { return { (void*)this, "bPreventSeatingWhenHandcuffed" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventStasis()
-    { return { (void*)this, "bPreventStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventToggleActivation()
-    { return { (void*)this, "bPreventToggleActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventUsingAsWirelessCraftingSource()
-    { return { (void*)this, "bPreventUsingAsWirelessCraftingSource" }; }
-    BitFieldValue<bool, unsigned __int32> bPreviewApplyColorToChildComponents()
-    { return { (void*)this, "bPreviewApplyColorToChildComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bRealtimeThrottledTickUseNativeTick()
-    { return { (void*)this, "bRealtimeThrottledTickUseNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bReleaseFindsGroundPlacement()
-    { return { (void*)this, "bReleaseFindsGroundPlacement" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForLevelBounds()
-    { return { (void*)this, "bRelevantForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForNetworkReplays()
-    { return { (void*)this, "bRelevantForNetworkReplays" }; }
-    BitFieldValue<bool, unsigned __int32> bReplayRewindable()
-    { return { (void*)this, "bReplayRewindable" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateHidden()
-    { return { (void*)this, "bReplicateHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateItemFuelClass()
-    { return { (void*)this, "bReplicateItemFuelClass" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateLastActivatedTime()
-    { return { (void*)this, "bReplicateLastActivatedTime" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateMovement()
-    { return { (void*)this, "bReplicateMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiresItemExactClass()
-    { return { (void*)this, "bRequiresItemExactClass" }; }
+    BrzCampoPonteiro bInventoryForcePreventItemAppendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bInventoryForcePreventItemAppends")); }
+    BrzCampoPonteiro bInventoryForcePreventRemoteAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bInventoryForcePreventRemoteAddItems")); }
+    BrzCampoPonteiro bIsAmmoContainerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsAmmoContainer")); }
+    BrzCampoPonteiro bIsBedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsBed")); }
+    BrzCampoPonteiro bIsDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsDead")); }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsDoorframeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsDoorframe")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsFlippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsFlipped")); }
+    BrzCampoPonteiro bIsFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsFloor")); }
+    BrzCampoPonteiro bIsFoundationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsFoundation")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsInvincible")); }
+    BrzCampoPonteiro bIsLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsLocked")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsMapActor")); }
+    BrzCampoPonteiro bIsPinLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsPinLocked")); }
+    BrzCampoPonteiro bIsPowerJunctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsPowerJunction")); }
+    BrzCampoPonteiro bIsPoweredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsPowered")); }
+    BrzCampoPonteiro bIsPreviewStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsPreviewStructure")); }
+    BrzCampoPonteiro bIsRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsRepairing")); }
+    BrzCampoPonteiro bIsRowingSeatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsRowingSeat")); }
+    BrzCampoPonteiro bIsRowingSeatActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsRowingSeatActive")); }
+    BrzCampoPonteiro bIsStructureAttachmentBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsStructureAttachmentBase")); }
+    BrzCampoPonteiro bIsTeleporterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsTeleporter")); }
+    BrzCampoPonteiro bIsTrappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsTrapped")); }
+    BrzCampoPonteiro bIsUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsUnderwater")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIsValidUnstasisCaster")); }
+    BrzCampoPonteiro bJumpOnDetachField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bJumpOnDetach")); }
+    BrzCampoPonteiro bLastRowSuccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bLastRowSuccess")); }
+    BrzCampoPonteiro bLastToggleActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bLastToggleActivated")); }
+    BrzCampoPonteiro bLinkedStructureRemovalForceClientUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bLinkedStructureRemovalForceClientUpdate")); }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bManualFireEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bManualFireEnabled")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNetCritical")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bNoCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bNoCollision")); }
+    BrzCampoPonteiro bOarTracesIgnoreHullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOarTracesIgnoreHull")); }
+    BrzCampoPonteiro bOnlyAllowTeamActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyAllowTeamActivation")); }
+    BrzCampoPonteiro bOnlyConsumeDurabilityOnEquipmentForEnemiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyConsumeDurabilityOnEquipmentForEnemies")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bOnlyUseHandIKForFirstSeatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyUseHandIKForFirstSeat")); }
+    BrzCampoPonteiro bOnlyUseSpoilingMultipliersIfActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOnlyUseSpoilingMultipliersIfActivated")); }
+    BrzCampoPonteiro bOverrideFoundationSupportDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOverrideFoundationSupportDistance")); }
+    BrzCampoPonteiro bOverrideOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bOverrideOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bPendingRemovalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPendingRemoval")); }
+    BrzCampoPonteiro bPlacementAdjustHeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPlacementAdjustHeight")); }
+    BrzCampoPonteiro bPlacementChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPlacementChooseRotation")); }
+    BrzCampoPonteiro bPlacementIgnoreChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPlacementIgnoreChooseRotation")); }
+    BrzCampoPonteiro bPlacementPreventLockingCameraWhileChooseRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPlacementPreventLockingCameraWhileChooseRotation")); }
+    BrzCampoPonteiro bPoweredAllowBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredAllowBattery")); }
+    BrzCampoPonteiro bPoweredAllowBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredAllowBot")); }
+    BrzCampoPonteiro bPoweredAllowSolarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredAllowSolar")); }
+    BrzCampoPonteiro bPoweredHasBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredHasBattery")); }
+    BrzCampoPonteiro bPoweredHasBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredHasBot")); }
+    BrzCampoPonteiro bPoweredUsingBatteryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredUsingBattery")); }
+    BrzCampoPonteiro bPoweredUsingBotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredUsingBot")); }
+    BrzCampoPonteiro bPoweredUsingSolarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredUsingSolar")); }
+    BrzCampoPonteiro bPoweredWaterSourceWhenActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPoweredWaterSourceWhenActive")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventBotIdleFidgetAnimationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventBotIdleFidgetAnimations")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventContainerPingTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventContainerPingType")); }
+    BrzCampoPonteiro bPreventHandcuffLockedSeatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventHandcuffLockedSeating")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventLinkingToStorageInterfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventLinkingToStorageInterface")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventSaving")); }
+    BrzCampoPonteiro bPreventSeatingWhenHandcuffedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventSeatingWhenHandcuffed")); }
+    BrzCampoPonteiro bPreventStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventStasis")); }
+    BrzCampoPonteiro bPreventStructureHibernationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventStructureHibernation")); }
+    BrzCampoPonteiro bPreventToggleActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventToggleActivation")); }
+    BrzCampoPonteiro bPreventUsingAsWirelessCraftingSourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreventUsingAsWirelessCraftingSource")); }
+    BrzCampoPonteiro bPreviewApplyColorToChildComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bPreviewApplyColorToChildComponents")); }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bReleaseFindsGroundPlacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReleaseFindsGroundPlacement")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bRelevantForNetworkReplays")); }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplicateHidden")); }
+    BrzCampoPonteiro bReplicateItemFuelClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplicateItemFuelClass")); }
+    BrzCampoPonteiro bReplicateLastActivatedTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplicateLastActivatedTime")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bReplicates")); }
+    BrzCampoPonteiro bRequiresItemExactClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bRequiresItemExactClass")); }
     bool& bRestrictTPVCameraYawField() const
     { return *GetNativePointerField<bool*>(this, "APrimalStructureSeating_DriverSeat.bRestrictTPVCameraYaw"); }
-    BitFieldValue<bool, unsigned __int32> bSavedWhenStasised()
-    { return { (void*)this, "bSavedWhenStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bServerBPNotifyInventoryItemChanges()
-    { return { (void*)this, "bServerBPNotifyInventoryItemChanges" }; }
-    BitFieldValue<bool, unsigned __int32> bServerBPNotifyInventoryItemChangesUseQuantity()
-    { return { (void*)this, "bServerBPNotifyInventoryItemChangesUseQuantity" }; }
-    BitFieldValue<bool, unsigned __int32> bServerBPNotifyInventoryItemChangesUseSwapped()
-    { return { (void*)this, "bServerBPNotifyInventoryItemChangesUseSwapped" }; }
-    BitFieldValue<bool, unsigned __int32> bStartedUnderwater()
-    { return { (void*)this, "bStartedUnderwater" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisComponentRadiusForceDistanceCheck()
-    { return { (void*)this, "bStasisComponentRadiusForceDistanceCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bStasised()
-    { return { (void*)this, "bStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bStationaryStructure()
-    { return { (void*)this, "bStationaryStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bStructureCosmeticOverrideStructureColorSets()
-    { return { (void*)this, "bStructureCosmeticOverrideStructureColorSets" }; }
-    BitFieldValue<bool, unsigned __int32> bStructureFiresProjectiles()
-    { return { (void*)this, "bStructureFiresProjectiles" }; }
-    BitFieldValue<bool, unsigned __int32> bStructureIgnoreDying()
-    { return { (void*)this, "bStructureIgnoreDying" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportDynamicSeatingChanges()
-    { return { (void*)this, "bSupportDynamicSeatingChanges" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsLocking()
-    { return { (void*)this, "bSupportsLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsPinActivation()
-    { return { (void*)this, "bSupportsPinActivation" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsPinLocking()
-    { return { (void*)this, "bSupportsPinLocking" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportsStorageInterfaceLinking()
-    { return { (void*)this, "bSupportsStorageInterfaceLinking" }; }
-    BitFieldValue<bool, unsigned __int32> bTearOff()
-    { return { (void*)this, "bTearOff" }; }
-    BitFieldValue<bool, unsigned __int32> bTraceToUnboardLocation()
-    { return { (void*)this, "bTraceToUnboardLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUnstreamComponentsUseEndOverlap()
-    { return { (void*)this, "bUnstreamComponentsUseEndOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bUseActorNotifyCustomEventBP()
-    { return { (void*)this, "bUseActorNotifyCustomEventBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAmmoContainerBuff()
-    { return { (void*)this, "bUseAmmoContainerBuff" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachmentReplication()
-    { return { (void*)this, "bUseAttachmentReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPActivated()
-    { return { (void*)this, "bUseBPActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowActorSpawn()
-    { return { (void*)this, "bUseBPAllowActorSpawn" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAddWirelessExchange()
-    { return { (void*)this, "bUseBPCanAddWirelessExchange" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanBeActivated()
-    { return { (void*)this, "bUseBPCanBeActivated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanBeActivatedByPlayer()
-    { return { (void*)this, "bUseBPCanBeActivatedByPlayer" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPChangedActorTeam()
-    { return { (void*)this, "bUseBPChangedActorTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckForErrors()
-    { return { (void*)this, "bUseBPCheckForErrors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomIsRelevantForClient()
-    { return { (void*)this, "bUseBPCustomIsRelevantForClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawEntry()
-    { return { (void*)this, "bUseBPDrawEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFilterMultiUseEntries()
-    { return { (void*)this, "bUseBPFilterMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowsInventoryUse()
-    { return { (void*)this, "bUseBPForceAllowsInventoryUse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetBonesToHideOnAllocation()
-    { return { (void*)this, "bUseBPGetBonesToHideOnAllocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetCameraCollisionIgnoreActors()
-    { return { (void*)this, "bUseBPGetCameraCollisionIgnoreActors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetFuelConsumptionMultiplier()
-    { return { (void*)this, "bUseBPGetFuelConsumptionMultiplier" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetHUDDrawLocationOffset()
-    { return { (void*)this, "bUseBPGetHUDDrawLocationOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterText()
-    { return { (void*)this, "bUseBPGetMultiUseCenterText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterTextWithName()
-    { return { (void*)this, "bUseBPGetMultiUseCenterTextWithName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOrbitCamTargetLocation()
-    { return { (void*)this, "bUseBPGetOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetQuantityOfItemWithoutCheckingInventory()
-    { return { (void*)this, "bUseBPGetQuantityOfItemWithoutCheckingInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetShowDebugAnimationComponents()
-    { return { (void*)this, "bUseBPGetShowDebugAnimationComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemDropped()
-    { return { (void*)this, "bUseBPInventoryItemDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemUsed()
-    { return { (void*)this, "bUseBPInventoryItemUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessConsumerAdded()
-    { return { (void*)this, "bUseBPNotifyWirelessConsumerAdded" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessConsumerRemoved()
-    { return { (void*)this, "bUseBPNotifyWirelessConsumerRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessSourceAdded()
-    { return { (void*)this, "bUseBPNotifyWirelessSourceAdded" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPNotifyWirelessSourceRemoved()
-    { return { (void*)this, "bUseBPNotifyWirelessSourceRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnClientUpdatedLinkedStructures()
-    { return { (void*)this, "bUseBPOnClientUpdatedLinkedStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnServerUpdatedLinkedStructures()
-    { return { (void*)this, "bUseBPOnServerUpdatedLinkedStructures" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTargetingLocation()
-    { return { (void*)this, "bUseBPOverrideTargetingLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideUILocation()
-    { return { (void*)this, "bUseBPOverrideUILocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPostPreviewStructureFlipped()
-    { return { (void*)this, "bUseBPPostPreviewStructureFlipped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventAttachments()
-    { return { (void*)this, "bUseBPPreventAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventCharacterBasing()
-    { return { (void*)this, "bUseBPPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventStasis()
-    { return { (void*)this, "bUseBPPreventStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSetPlayerConstructor()
-    { return { (void*)this, "bUseBPSetPlayerConstructor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCanMoveThroughActor()
-    { return { (void*)this, "bUseCanMoveThroughActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCollisionCompsForFloatingDPS()
-    { return { (void*)this, "bUseCollisionCompsForFloatingDPS" }; }
-    BitFieldValue<bool, unsigned __int32> bUseColorRegionForEmitterColor()
-    { return { (void*)this, "bUseColorRegionForEmitterColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCooldownOnTransferAll()
-    { return { (void*)this, "bUseCooldownOnTransferAll" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDeathCacheCharacterID()
-    { return { (void*)this, "bUseDeathCacheCharacterID" }; }
-    BitFieldValue<bool, unsigned __int32> bUseGetSeatingAnimOverrideBP()
-    { return { (void*)this, "bUseGetSeatingAnimOverrideBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseHandIk()
-    { return { (void*)this, "bUseHandIk" }; }
-    BitFieldValue<bool, unsigned __int32> bUseHarvestingComponent()
-    { return { (void*)this, "bUseHarvestingComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMeshOriginForInventoryAccessTrace()
-    { return { (void*)this, "bUseMeshOriginForInventoryAccessTrace" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNetworkSpatialization()
-    { return { (void*)this, "bUseNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnlyPointForLevelBounds()
-    { return { (void*)this, "bUseOnlyPointForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOpenSceneAction()
-    { return { (void*)this, "bUseOpenSceneAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStasisGrid()
-    { return { (void*)this, "bUseStasisGrid" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesAltFire()
-    { return { (void*)this, "bUsesAltFire" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesHealth()
-    { return { (void*)this, "bUsesHealth" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesItemSlotKeys()
-    { return { (void*)this, "bUsesItemSlotKeys" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesPrimaryFire()
-    { return { (void*)this, "bUsesPrimaryFire" }; }
-    BitFieldValue<bool, unsigned __int32> bUsesTargeting()
-    { return { (void*)this, "bUsesTargeting" }; }
-    BitFieldValue<bool, unsigned __int32> bUsingStructureColors()
-    { return { (void*)this, "bUsingStructureColors" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPerformanceThrottledTick()
-    { return { (void*)this, "bWantsPerformanceThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsRealtimeThrottledTick()
-    { return { (void*)this, "bWantsRealtimeThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsServerThrottledTick()
-    { return { (void*)this, "bWantsServerThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWasAttachedToPawn()
-    { return { (void*)this, "bWasAttachedToPawn" }; }
-    BitFieldValue<bool, unsigned __int32> bWasPlacementSnapped()
-    { return { (void*)this, "bWasPlacementSnapped" }; }
-    BitFieldValue<bool, unsigned __int32> bWithinPreventionVolume()
-    { return { (void*)this, "bWithinPreventionVolume" }; }
+    BrzCampoPonteiro bRowingSeatPlacementRequiresBothSidesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bRowingSeatPlacementRequiresBothSides")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSavedWhenStasised")); }
+    BrzCampoPonteiro bSeatOnlyAllowsCaptainOrdersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSeatOnlyAllowsCaptainOrders")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bServerBPNotifyInventoryItemChanges")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesUseQuantityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bServerBPNotifyInventoryItemChangesUseQuantity")); }
+    BrzCampoPonteiro bServerBPNotifyInventoryItemChangesUseSwappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bServerBPNotifyInventoryItemChangesUseSwapped")); }
+    BrzCampoPonteiro bSkipForceFirstPersonCameraCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSkipForceFirstPersonCameraCheck")); }
+    BrzCampoPonteiro bStartedUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStartedUnderwater")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStasised")); }
+    BrzCampoPonteiro bStationaryStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStationaryStructure")); }
+    BrzCampoPonteiro bStructureCosmeticOverrideStructureColorSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStructureCosmeticOverrideStructureColorSets")); }
+    BrzCampoPonteiro bStructureFiresProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStructureFiresProjectiles")); }
+    BrzCampoPonteiro bStructureIgnoreDyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bStructureIgnoreDying")); }
+    BrzCampoPonteiro bSupportDynamicSeatingChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSupportDynamicSeatingChanges")); }
+    BrzCampoPonteiro bSupportsLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSupportsLocking")); }
+    BrzCampoPonteiro bSupportsPinActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSupportsPinActivation")); }
+    BrzCampoPonteiro bSupportsPinLockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSupportsPinLocking")); }
+    BrzCampoPonteiro bSupportsStorageInterfaceLinkingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bSupportsStorageInterfaceLinking")); }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bTearOff")); }
+    BrzCampoPonteiro bToggleOpenGunportsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bToggleOpenGunports")); }
+    BrzCampoPonteiro bTraceToUnboardLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bTraceToUnboardLocation")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAmmoContainerBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseAmmoContainerBuff")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPActivated")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPCanAddWirelessExchangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPCanAddWirelessExchange")); }
+    BrzCampoPonteiro bUseBPCanBeActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPCanBeActivated")); }
+    BrzCampoPonteiro bUseBPCanBeActivatedByPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPCanBeActivatedByPlayer")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetFuelConsumptionMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetFuelConsumptionMultiplier")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetQuantityOfItemWithoutCheckingInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetQuantityOfItemWithoutCheckingInventory")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessConsumerAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPNotifyWirelessConsumerAdded")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessConsumerRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPNotifyWirelessConsumerRemoved")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessSourceAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPNotifyWirelessSourceAdded")); }
+    BrzCampoPonteiro bUseBPNotifyWirelessSourceRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPNotifyWirelessSourceRemoved")); }
+    BrzCampoPonteiro bUseBPOnClientUpdatedLinkedStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPOnClientUpdatedLinkedStructures")); }
+    BrzCampoPonteiro bUseBPOnServerUpdatedLinkedStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPOnServerUpdatedLinkedStructures")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPostPreviewStructureFlippedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPPostPreviewStructureFlipped")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseBPPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPPreventCharacterBasing")); }
+    BrzCampoPonteiro bUseBPPreventStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPPreventStasis")); }
+    BrzCampoPonteiro bUseBPSetPlayerConstructorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseBPSetPlayerConstructor")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseCollisionCompsForFloatingDPSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseCollisionCompsForFloatingDPS")); }
+    BrzCampoPonteiro bUseColorRegionForEmitterColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseColorRegionForEmitterColor")); }
+    BrzCampoPonteiro bUseCooldownOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseCooldownOnTransferAll")); }
+    BrzCampoPonteiro bUseDeathCacheCharacterIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseDeathCacheCharacterID")); }
+    BrzCampoPonteiro bUseGetSeatingAnimOverrideBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseGetSeatingAnimOverrideBP")); }
+    BrzCampoPonteiro bUseHandIkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseHandIk")); }
+    BrzCampoPonteiro bUseHarvestingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseHarvestingComponent")); }
+    BrzCampoPonteiro bUseMeshOriginForInventoryAccessTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseMeshOriginForInventoryAccessTrace")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUseOpenSceneActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseOpenSceneAction")); }
+    BrzCampoPonteiro bUseShipCameraOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseShipCameraOffset")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUseStasisGrid")); }
+    BrzCampoPonteiro bUsesAltFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesAltFire")); }
+    BrzCampoPonteiro bUsesCustomSteeringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesCustomSteering")); }
+    BrzCampoPonteiro bUsesCustomThrottleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesCustomThrottle")); }
+    BrzCampoPonteiro bUsesHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesHealth")); }
+    BrzCampoPonteiro bUsesItemSlotKeysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesItemSlotKeys")); }
+    BrzCampoPonteiro bUsesPrimaryFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesPrimaryFire")); }
+    BrzCampoPonteiro bUsesSubControlsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesSubControls")); }
+    BrzCampoPonteiro bUsesTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsesTargeting")); }
+    BrzCampoPonteiro bUsingSteeringAnimationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsingSteeringAnimation")); }
+    BrzCampoPonteiro bUsingStructureColorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bUsingStructureColors")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWantsServerThrottledTick")); }
+    BrzCampoPonteiro bWasAttachedToPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWasAttachedToPawn")); }
+    BrzCampoPonteiro bWasForceTPVLastFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWasForceTPVLastFrame")); }
+    BrzCampoPonteiro bWasPlacementSnappedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWasPlacementSnapped")); }
+    BrzCampoPonteiro bWithinPreventionVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bWithinPreventionVolume")); }
     BitFieldValue<bool, unsigned __int32> bAllowCaptainOrders()
     { return { (void*)this, "bAllowCaptainOrders" }; }
     BitFieldValue<bool, unsigned __int32> bAttackMyTargetEnabled()

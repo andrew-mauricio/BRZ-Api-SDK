@@ -37,7 +37,7 @@ struct UPrimalWorldBuffCustomImplement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWorldBuffCustomImplement.BuffStackDecrease(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BuffStackDecrease(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalWorldBuffCustomImplement.BuffStackDecrease(int)", a0);
@@ -45,7 +45,7 @@ struct UPrimalWorldBuffCustomImplement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWorldBuffCustomImplement.BuffStackIncreased(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BuffStackIncreased(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalWorldBuffCustomImplement.BuffStackIncreased(int)", a0);
@@ -61,7 +61,7 @@ struct UPrimalWorldBuffCustomImplement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWorldBuffCustomImplement.GetWorld()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UPrimalWorldBuffCustomImplement.GetWorld()");

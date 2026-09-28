@@ -115,7 +115,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.EnableHDRDisplayOutputInternal(bool,int,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EnableHDRDisplayOutputInternal(bool a0, int a1, bool a2) const
     {
         return NativeCall<void*, bool, int, bool>(this, "UShooterGameUserSettings.EnableHDRDisplayOutputInternal(bool,int,bool)", a0, a1, a2);
@@ -123,7 +123,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetAmbientSoundVolume()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAmbientSoundVolume() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.GetAmbientSoundVolume()");
@@ -139,7 +139,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetDLFGSupported()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=120]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetDLFGSupported() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.GetDLFGSupported()");
@@ -167,7 +167,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetEnableDLFG()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=129]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEnableDLFG() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.GetEnableDLFG()");
@@ -175,7 +175,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetEnableFSRFG()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=129]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEnableFSRFG() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.GetEnableFSRFG()");
@@ -183,7 +183,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetFSRQualityMode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=118]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetFSRQualityMode() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.GetFSRQualityMode()");
@@ -227,7 +227,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetShouldResetCinematicForNote(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetShouldResetCinematicForNote(int a0) const
     {
         return NativeCall<void*, int>(this, "UShooterGameUserSettings.GetShouldResetCinematicForNote(int)", a0);
@@ -235,7 +235,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.GetSuperResolutionQualityLevel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSuperResolutionQualityLevel() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.GetSuperResolutionQualityLevel()");
@@ -275,7 +275,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.ManageShadowSetting()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ManageShadowSetting() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.ManageShadowSetting()");
@@ -283,7 +283,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.MarkDLCBrowsed(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MarkDLCBrowsed(int a0) const
     {
         return NativeCall<void*, int>(this, "UShooterGameUserSettings.MarkDLCBrowsed(int)", a0);
@@ -299,7 +299,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.RateGPUPerf()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=395+grafo=8/8]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RateGPUPerf() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.RateGPUPerf()");
@@ -315,7 +315,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.ResetDefaultAudioSetting()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetDefaultAudioSetting() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.ResetDefaultAudioSetting()");
@@ -323,7 +323,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.ResetDefaultGraphicsSetting()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetDefaultGraphicsSetting() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.ResetDefaultGraphicsSetting()");
@@ -331,7 +331,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.ResetDefaultOptionsSetting()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetDefaultOptionsSetting() const
     {
         return NativeCall<void*>(this, "UShooterGameUserSettings.ResetDefaultOptionsSetting()");
@@ -367,7 +367,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetEnableDLFG(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetEnableDLFG(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterGameUserSettings.SetEnableDLFG(bool)", a0);
@@ -375,7 +375,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetEnableDLSS(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=122]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetEnableDLSS(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterGameUserSettings.SetEnableDLSS(bool)", a0);
@@ -383,7 +383,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetEnableFSRFG(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetEnableFSRFG(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterGameUserSettings.SetEnableFSRFG(bool)", a0);
@@ -391,7 +391,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetEnableReflex(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=115]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetEnableReflex(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterGameUserSettings.SetEnableReflex(bool)", a0);
@@ -399,7 +399,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetFSRQualityMode(int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=136]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetFSRQualityMode(int a0, bool a1) const
     {
         return NativeCall<void*, int, bool>(this, "UShooterGameUserSettings.SetFSRQualityMode(int,bool)", a0, a1);
@@ -415,7 +415,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetFrameGenSystem(EFrameGenSystem)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=124]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetFrameGenSystem(int a0) const
     {
         return NativeCall<void*, int>(this, "UShooterGameUserSettings.SetFrameGenSystem(EFrameGenSystem)", a0);
@@ -423,7 +423,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetMasterAudioVolume(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetMasterAudioVolume(float a0) const
     {
         return NativeCall<void*, float>(this, "UShooterGameUserSettings.SetMasterAudioVolume(float)", a0);
@@ -439,7 +439,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.SetSuperResolutionMethod(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=147]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetSuperResolutionMethod(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameUserSettings.SetSuperResolutionMethod(FString&)", const_cast<FString*>(&a0));
@@ -467,7 +467,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.UpdateCustomCosmeticUserSetting(__int64,bool,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateCustomCosmeticUserSetting(long long a0, bool a1, bool a2) const
     {
         return NativeCall<void*, long long, bool, bool>(this, "UShooterGameUserSettings.UpdateCustomCosmeticUserSetting(__int64,bool,bool)", a0, a1, a2);
@@ -475,7 +475,7 @@ struct UShooterGameUserSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameUserSettings.UpdateCustomCosmeticUserSettingName(FCFCoreMod&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateCustomCosmeticUserSettingName(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameUserSettings.UpdateCustomCosmeticUserSettingName(FCFCoreMod&)", a0);
@@ -537,10 +537,14 @@ struct UShooterGameUserSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.CinematicForNoteShouldReset")); }
     int& ClientNetQualityField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.ClientNetQuality"); }
+    BrzCampoPonteiro CompanionIsHiddenStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.CompanionIsHiddenState")); }
     int& CompanionReactionVerbosityField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.CompanionReactionVerbosity"); }
     int& CompanionSubtitleVerbosityLevelField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.CompanionSubtitleVerbosityLevel"); }
+    BrzCampoPonteiro ConsoleAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.ConsoleAccess")); }
     BrzCampoPonteiro CrosshairColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.CrosshairColor")); }
     BrzCampoPonteiro CrosshairColorHitmarkField() const
@@ -584,10 +588,20 @@ struct UShooterGameUserSettings
     int& DesiredScreenWidthField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.DesiredScreenWidth"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableVirtualCursor` +1, medido na build 25090264
+    //  ancorado em `bDisableVirtualCursor` +1, medido na build 25535041
     //  (offset absoluto medido: 0x6C1; confianca alta)
     void*& DetailGraphicsField() const
     { return BrzCampoAncorado<void*>(this, "bDisableVirtualCursor", 1); }
+    BrzCampoPonteiro DisableCosmeticsDynamicDownloadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.DisableCosmeticsDynamicDownloading")); }
+    BrzCampoPonteiro DisableDefaultCharacterItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.DisableDefaultCharacterItems")); }
+    BrzCampoPonteiro DisableLoadScreenMusicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.DisableLoadScreenMusic")); }
+    BrzCampoPonteiro DisableMenuMusicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.DisableMenuMusic")); }
+    BrzCampoPonteiro DisableSubtitlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.DisableSubtitles")); }
     int& DynamicDownloadSpeedField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.DynamicDownloadSpeed"); }
     int& EmoteKeyBind1Field() const
@@ -596,6 +610,18 @@ struct UShooterGameUserSettings
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.EmoteKeyBind2"); }
     int& EnableDLSSField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.EnableDLSS"); }
+    BrzCampoPonteiro EnableDeathReactionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.EnableDeathReactions")); }
+    BrzCampoPonteiro EnableEmoteReactionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.EnableEmoteReactions")); }
+    BrzCampoPonteiro EnableEnvironmentalReactionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.EnableEnvironmentalReactions")); }
+    BrzCampoPonteiro EnableMovementSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.EnableMovementSounds")); }
+    BrzCampoPonteiro EnableRespawnReactionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.EnableRespawnReactions")); }
+    BrzCampoPonteiro EnableSayHelloReactionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.EnableSayHelloReactions")); }
     float& FOVMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.FOVMultiplier"); }
     int& FilterTypeCustomCosmeticItemsField() const
@@ -662,10 +688,18 @@ struct UShooterGameUserSettings
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.HFSQuality"); }
     unsigned char& HideEnemyStructureCosmeticsModeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UShooterGameUserSettings.HideEnemyStructureCosmeticsMode"); }
+    BrzCampoPonteiro HideItemTextOverlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.HideItemTextOverlay")); }
+    BrzCampoPonteiro HighQualityMaterialsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.HighQualityMaterials")); }
+    BrzCampoPonteiro HighQualitySurfacesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.HighQualitySurfaces")); }
     unsigned char& ItemNotificationModeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UShooterGameUserSettings.ItemNotificationMode"); }
     float& LODScalarField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.LODScalar"); }
+    BrzCampoPonteiro LastAutoFavoriteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.LastAutoFavorite")); }
     int& LastBrowsedDLCVersionField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.LastBrowsedDLCVersion"); }
     float& LastCPUBenchmarkResultField() const
@@ -690,14 +724,22 @@ struct UShooterGameUserSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.LastJoinedSessionPerCategory")); }
     int& LastPVESearchTypeField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.LastPVESearchType"); }
+    BrzCampoPonteiro LastPlatformSpecificServerSearchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.LastPlatformSpecificServerSearch")); }
     float& LastRecommendedScreenHeightField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.LastRecommendedScreenHeight"); }
     float& LastRecommendedScreenWidthField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.LastRecommendedScreenWidth"); }
+    BrzCampoPonteiro LastServerSearchHideFullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.LastServerSearchHideFull")); }
+    BrzCampoPonteiro LastServerSearchProtectedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.LastServerSearchProtected")); }
     int& LastServerSearchTypeField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.LastServerSearchType"); }
     int& LastServerSortField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.LastServerSort"); }
+    BrzCampoPonteiro LastServerSortAscField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.LastServerSortAsc")); }
     int& LastSessionCategoryJoinedField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.LastSessionCategoryJoined"); }
     int& LastUserConfirmedDesiredScreenHeightField() const
@@ -728,6 +770,8 @@ struct UShooterGameUserSettings
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.MaxAscensionLevel"); }
     int& MaxLastDeathMarkField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.MaxLastDeathMark"); }
+    BrzCampoPonteiro MinimalFloatingNameSettingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.MinimalFloatingNameSetting")); }
     float& MusicAudioVolumeField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.MusicAudioVolume"); }
     FString& OCIOAssetField() const
@@ -752,10 +796,16 @@ struct UShooterGameUserSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.PhotomodePresets_Splines")); }
     BrzCampoPonteiro PhotomodePresets_TargetingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.PhotomodePresets_Targeting")); }
+    BrzCampoPonteiro PlayActionWheelClickSoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.PlayActionWheelClickSound")); }
+    BrzCampoPonteiro PlayHUDRolloverSoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.PlayHUDRolloverSound")); }
     int& PreferredFullscreenModeField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.PreferredFullscreenMode"); }
     int& PrevVSMEnableValueField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.PrevVSMEnableValue"); }
+    BrzCampoPonteiro PreventDetailGraphicsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.PreventDetailGraphics")); }
     int& RemoteCraftingSortTypeField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.RemoteCraftingSortType"); }
     int& RemoteItemSortTypeField() const
@@ -776,8 +826,14 @@ struct UShooterGameUserSettings
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.ScreenPercentage"); }
     unsigned char& SelectedMainMenuIntroField() const
     { return *GetNativePointerField<unsigned char*>(this, "UShooterGameUserSettings.SelectedMainMenuIntro"); }
+    BrzCampoPonteiro ShowExplorerNoteSubtitlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.ShowExplorerNoteSubtitles")); }
+    BrzCampoPonteiro ShowPlayerServersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.ShowPlayerServers")); }
     float& SoundUIAudioVolumeField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.SoundUIAudioVolume"); }
+    BrzCampoPonteiro StopExplorerNoteAudioOnCloseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.StopExplorerNoteAudioOnClose")); }
     float& StructureTooltipMaxSpeedMultiplyField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.StructureTooltipMaxSpeedMultiply"); }
     int& SuperResolutionQualityLevelField() const
@@ -819,46 +875,284 @@ struct UShooterGameUserSettings
     BrzCampoPonteiro agreedToTermsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.agreedToTerms")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectedMainMenuIntro` +1, medido na build 25090264
+    //  ancorado em `SelectedMainMenuIntro` +1, medido na build 25535041
     //  (offset absoluto medido: 0x355; confianca alta)
     void*& bAssociateIDWithOverwolfRunningField() const
     { return BrzCampoAncorado<void*>(this, "SelectedMainMenuIntro", 1); }
+    BrzCampoPonteiro bAutomaticallyCreatePOIOnDeathField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bAutomaticallyCreatePOIOnDeath")); }
+    BrzCampoPonteiro bAutomaticallyCreateWaypointOnTamingCreaturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bAutomaticallyCreateWaypointOnTamingCreatures")); }
+    BrzCampoPonteiro bCameraViewBobField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCameraViewBob")); }
+    BrzCampoPonteiro bChatBubblesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bChatBubbles")); }
+    BrzCampoPonteiro bChatShowSteamNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bChatShowSteamName")); }
+    BrzCampoPonteiro bChatShowTribeNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bChatShowTribeName")); }
+    BrzCampoPonteiro bCinematicLightingModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCinematicLightingMode")); }
+    BrzCampoPonteiro bCraftablesShowAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCraftablesShowAllItems")); }
+    BrzCampoPonteiro bCustomCosmeticDefaultItemsTabField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCustomCosmeticDefaultItemsTab")); }
+    BrzCampoPonteiro bCustomCosmeticLocalTabExpandedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCustomCosmeticLocalTabExpanded")); }
+    BrzCampoPonteiro bCustomCosmeticsDefaultSupressedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCustomCosmeticsDefaultSupressed")); }
+    BrzCampoPonteiro bCustomCosmeticsShowAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bCustomCosmeticsShowAllItems")); }
     bool& bDisableBloomField() const
     { return *GetNativePointerField<bool*>(this, "UShooterGameUserSettings.bDisableBloom"); }
+    BrzCampoPonteiro bDisableHLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableHLOD")); }
     bool& bDisableLightShaftsField() const
     { return *GetNativePointerField<bool*>(this, "UShooterGameUserSettings.bDisableLightShafts"); }
+    BrzCampoPonteiro bDisableMeleeCameraSwingAnimsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableMeleeCameraSwingAnims")); }
+    BrzCampoPonteiro bDisableMenuTransitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableMenuTransitions")); }
+    BrzCampoPonteiro bDisableNameYourTamePopupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableNameYourTamePopup")); }
+    BrzCampoPonteiro bDisablePaintingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisablePaintings")); }
+    BrzCampoPonteiro bDisableShadowsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableShadows")); }
+    BrzCampoPonteiro bDisableTPVCameraInterpolationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableTPVCameraInterpolation")); }
+    BrzCampoPonteiro bDisableTorporEffectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableTorporEffect")); }
+    BrzCampoPonteiro bDisableVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableVirtualCursor")); }
+    BrzCampoPonteiro bDisableVirtualKeyboardField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDisableVirtualKeyboard")); }
+    BrzCampoPonteiro bDistanceFieldShadowingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDistanceFieldShadowing")); }
+    BrzCampoPonteiro bDontReduceGameResolutionInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bDontReduceGameResolutionInInventory")); }
+    BrzCampoPonteiro bEnableASACameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableASACamera")); }
+    BrzCampoPonteiro bEnableColorGradingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableColorGrading")); }
+    BrzCampoPonteiro bEnableDLFGField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableDLFG")); }
+    BrzCampoPonteiro bEnableFluidInteractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableFluidInteraction")); }
+    BrzCampoPonteiro bEnableFootstepDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableFootstepDecals")); }
+    BrzCampoPonteiro bEnableFootstepParticlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableFootstepParticles")); }
+    BrzCampoPonteiro bEnableHDROutputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableHDROutput")); }
+    BrzCampoPonteiro bEnableInventoryItemTooltipsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableInventoryItemTooltips")); }
+    BrzCampoPonteiro bEnableLowLightEnhancementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableLowLightEnhancement")); }
+    BrzCampoPonteiro bEnableReflexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bEnableReflex")); }
+    BrzCampoPonteiro bExtraLevelStreamingDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bExtraLevelStreamingDistance")); }
+    BrzCampoPonteiro bFPVClimbingGearField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bFPVClimbingGear")); }
+    BrzCampoPonteiro bFPVGlidingGearField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bFPVGlidingGear")); }
+    BrzCampoPonteiro bFilmGrainField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bFilmGrain")); }
+    BrzCampoPonteiro bFirstPersonRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bFirstPersonRiding")); }
+    BrzCampoPonteiro bFirstPersonShipDrivingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bFirstPersonShipDriving")); }
+    BrzCampoPonteiro bFloatingNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bFloatingNames")); }
+    BrzCampoPonteiro bForceShowItemNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bForceShowItemNames")); }
+    BrzCampoPonteiro bForceShowRadialWheelTextsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bForceShowRadialWheelTexts")); }
     bool& bForceTPVCameraOffsetField() const
     { return *GetNativePointerField<bool*>(this, "UShooterGameUserSettings.bForceTPVCameraOffset"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bAutomaticallyCreatePOIOnDeath` +1, medido na build 25090264
+    //  ancorado em `bAutomaticallyCreatePOIOnDeath` +1, medido na build 25535041
     //  (offset absoluto medido: 0x77E; confianca alta)
     void*& bHasCFAuthCFForClientSessionField() const
     { return BrzCampoAncorado<void*>(this, "bAutomaticallyCreatePOIOnDeath", 1); }
+    BrzCampoPonteiro bHasCompletedGen2Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasCompletedGen2")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectedMainMenuIntro` +2, medido na build 25090264
+    //  ancorado em `SelectedMainMenuIntro` +2, medido na build 25535041
     //  (offset absoluto medido: 0x356; confianca alta)
     void*& bHasEmptyStoreField() const
     { return BrzCampoAncorado<void*>(this, "SelectedMainMenuIntro", 2); }
+    BrzCampoPonteiro bHasInitializedScreenPercentageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasInitializedScreenPercentage")); }
+    BrzCampoPonteiro bHasLoadedLostColonyMainMenuOnceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasLoadedLostColonyMainMenuOnce")); }
+    BrzCampoPonteiro bHasRunAutoSettingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasRunAutoSettings")); }
+    BrzCampoPonteiro bHasSavedGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasSavedGame")); }
+    BrzCampoPonteiro bHasSeenGen2IntroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasSeenGen2Intro")); }
+    BrzCampoPonteiro bHasSetupDifficultySPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasSetupDifficultySP")); }
+    BrzCampoPonteiro bHasSetupVisualSettingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasSetupVisualSettings")); }
+    BrzCampoPonteiro bHasStartedTheGameOnceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasStartedTheGameOnce")); }
+    BrzCampoPonteiro bHideFloatingPlayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHideFloatingPlayerNames")); }
+    BrzCampoPonteiro bHideGamepadItemSelectionModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHideGamepadItemSelectionModifier")); }
+    BrzCampoPonteiro bHideServerInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHideServerInfo")); }
+    BrzCampoPonteiro bHideStructurePlacementCrosshairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHideStructurePlacementCrosshair")); }
+    BrzCampoPonteiro bHighQualityAnisotropicFilteringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHighQualityAnisotropicFiltering")); }
+    BrzCampoPonteiro bHighQualityLODsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHighQualityLODs")); }
+    BrzCampoPonteiro bHostSessionHasBeenOpenedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHostSessionHasBeenOpened")); }
+    BrzCampoPonteiro bInvertLookYField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bInvertLookY")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SuperResolutionQualityLevel` +4, medido na build 25090264
+    //  ancorado em `SuperResolutionQualityLevel` +4, medido na build 25535041
     //  (offset absoluto medido: 0x7E8; confianca alta)
     void*& bIsInUISpawnField() const
     { return BrzCampoAncorado<void*>(this, "SuperResolutionQualityLevel", 4); }
+    BrzCampoPonteiro bJoinNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bJoinNotifications")); }
+    BrzCampoPonteiro bLocalInventoryCraftingShowAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bLocalInventoryCraftingShowAllItems")); }
+    BrzCampoPonteiro bLocalInventoryItemsShowAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bLocalInventoryItemsShowAllItems")); }
+    BrzCampoPonteiro bLowQualityVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bLowQualityVFX")); }
+    BrzCampoPonteiro bMenuGyroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bMenuGyro")); }
+    BrzCampoPonteiro bMinimalUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bMinimalUI")); }
+    BrzCampoPonteiro bMinimapOverlayUseLowOpacityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bMinimapOverlayUseLowOpacity")); }
+    BrzCampoPonteiro bNoBloodEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bNoBloodEffects")); }
+    BrzCampoPonteiro bNoTooltipDelayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bNoTooltipDelay")); }
+    BrzCampoPonteiro bOCIOIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bOCIOIsEnabled")); }
+    BrzCampoPonteiro bPreventBiomeWallsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventBiomeWalls")); }
+    BrzCampoPonteiro bPreventColorizedItemNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventColorizedItemNames")); }
+    BrzCampoPonteiro bPreventCrosshairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventCrosshair")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MarketFilterType` +4, medido na build 25090264
+    //  ancorado em `MarketFilterType` +4, medido na build 25535041
     //  (offset absoluto medido: 0x284; confianca alta)
     void*& bPreventDinoNameTagsField() const
     { return BrzCampoAncorado<void*>(this, "MarketFilterType", 4); }
-    BitFieldValue<bool, unsigned __int32> bUseDesiredScreenHeight()
-    { return { (void*)this, "bUseDesiredScreenHeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDynamicResolution()
-    { return { (void*)this, "bUseDynamicResolution" }; }
+    BrzCampoPonteiro bPreventHitMarkersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventHitMarkers")); }
+    BrzCampoPonteiro bPreventInventoryOpeningSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventInventoryOpeningSounds")); }
+    BrzCampoPonteiro bPreventItemCraftingSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventItemCraftingSounds")); }
+    BrzCampoPonteiro bReceiveDiscordFriendRequestsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bReceiveDiscordFriendRequests")); }
+    BrzCampoPonteiro bReceiveDiscordNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bReceiveDiscordNotifications")); }
+    BrzCampoPonteiro bRemoteInventoryCraftingShowAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bRemoteInventoryCraftingShowAllItems")); }
+    BrzCampoPonteiro bRemoteInventoryItemsShowAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bRemoteInventoryItemsShowAllItems")); }
+    BrzCampoPonteiro bRemoteInventoryShowCraftablesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bRemoteInventoryShowCraftables")); }
+    BrzCampoPonteiro bRemoteInventoryShowEngramsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bRemoteInventoryShowEngrams")); }
+    BrzCampoPonteiro bRequestDefaultCharacterItemsOnceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bRequestDefaultCharacterItemsOnce")); }
+    BrzCampoPonteiro bRequiresRestartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bRequiresRestart")); }
+    BrzCampoPonteiro bReverseTribeLogOrderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bReverseTribeLogOrder")); }
+    BrzCampoPonteiro bSaveLastDeathMarkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bSaveLastDeathMark")); }
+    BrzCampoPonteiro bShowAmbientInsectsVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowAmbientInsectsVFX")); }
+    BrzCampoPonteiro bShowBedsOnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowBedsOnMap")); }
+    BrzCampoPonteiro bShowChatBoxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowChatBox")); }
+    BrzCampoPonteiro bShowDinosOnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowDinosOnMap")); }
+    BrzCampoPonteiro bShowInfoButtonsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowInfoButtons")); }
+    BrzCampoPonteiro bShowMissionsOnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowMissionsOnMap")); }
+    BrzCampoPonteiro bShowPingsOnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowPingsOnMap")); }
+    BrzCampoPonteiro bShowPlayersOnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowPlayersOnMap")); }
+    BrzCampoPonteiro bShowRTSKeyBindsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowRTSKeyBinds")); }
+    BrzCampoPonteiro bShowStatusNotificationMessagesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowStatusNotificationMessages")); }
+    BrzCampoPonteiro bShowWaypointsOnMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowWaypointsOnMap")); }
+    BrzCampoPonteiro bShowedGenesis2DLCBackgroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowedGenesis2DLCBackground")); }
+    BrzCampoPonteiro bShowedGenesisDLCBackgroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bShowedGenesisDLCBackground")); }
+    BrzCampoPonteiro bSpectatorManualFloatingNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bSpectatorManualFloatingNames")); }
+    BrzCampoPonteiro bSuppressAdminIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bSuppressAdminIcon")); }
+    BrzCampoPonteiro bTemperatureFField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bTemperatureF")); }
+    BrzCampoPonteiro bTextChatBubblesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bTextChatBubbles")); }
+    BrzCampoPonteiro bThirdPersonPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bThirdPersonPlayer")); }
+    BrzCampoPonteiro bToggleExtendedHUDInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bToggleExtendedHUDInfo")); }
+    BrzCampoPonteiro bToggleToTalkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bToggleToTalk")); }
+    BrzCampoPonteiro bUIVibrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUIVibration")); }
+    BrzCampoPonteiro bUseDFAOField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseDFAO")); }
+    BrzCampoPonteiro bUseDesiredScreenHeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseDesiredScreenHeight")); }
+    BrzCampoPonteiro bUseDistanceFieldAmbientOcclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseDistanceFieldAmbientOcclusion")); }
+    BrzCampoPonteiro bUseDynamicResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseDynamicResolution")); }
     unsigned char& bUseGamepadAimAssistField() const
     { return *GetNativePointerField<unsigned char*>(this, "UShooterGameUserSettings.bUseGamepadAimAssist"); }
-    BitFieldValue<bool, unsigned __int32> bUseHDRDisplayOutput()
-    { return { (void*)this, "bUseHDRDisplayOutput" }; }
-    BitFieldValue<bool, unsigned __int32> bUseVSync()
-    { return { (void*)this, "bUseVSync" }; }
+    BrzCampoPonteiro bUseGamepadSpeakerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseGamepadSpeaker")); }
+    BrzCampoPonteiro bUseHDRDisplayOutputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseHDRDisplayOutput")); }
+    BrzCampoPonteiro bUseLowQualityLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseLowQualityLevelStreaming")); }
+    BrzCampoPonteiro bUseOldThirdPersonCameraOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseOldThirdPersonCameraOffset")); }
+    BrzCampoPonteiro bUseOldThirdPersonCameraTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseOldThirdPersonCameraTrace")); }
+    BrzCampoPonteiro bUseSSAOField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseSSAO")); }
+    BrzCampoPonteiro bUseSimpleDistanceMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseSimpleDistanceMovement")); }
+    BrzCampoPonteiro bUseVSyncField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUseVSync")); }
+    BrzCampoPonteiro bUserMotionBlurField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bUserMotionBlur")); }
+    BrzCampoPonteiro bVibrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bVibration")); }
+    BrzCampoPonteiro bViewedARK2TrailerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bViewedARK2Trailer")); }
+    BrzCampoPonteiro bViewedAnimatedSeriesTrailerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bViewedAnimatedSeriesTrailer")); }
     BrzCampoPonteiro consoleCommandHistoryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.consoleCommandHistory")); }
     float& gyroSensitivityField() const
@@ -866,7 +1160,7 @@ struct UShooterGameUserSettings
     float& radialSelectionSpeedField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.radialSelectionSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `radialSelectionSpeed` +4, medido na build 25090264
+    //  ancorado em `radialSelectionSpeed` +4, medido na build 25535041
     //  (offset absoluto medido: 0x6BC; confianca alta)
     void*& radialSelectionSpeedConstantField() const
     { return BrzCampoAncorado<void*>(this, "radialSelectionSpeed", 4); }

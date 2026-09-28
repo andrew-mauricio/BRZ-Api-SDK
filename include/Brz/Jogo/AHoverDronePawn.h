@@ -41,7 +41,7 @@ struct AHoverDronePawn : public ADefaultPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHoverDronePawn.LookUpAccel(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void LookUpAccel(float a0) const
     {
         NativeCall<void, float>(this, "AHoverDronePawn.LookUpAccel(float)", a0);
@@ -49,7 +49,7 @@ struct AHoverDronePawn : public ADefaultPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHoverDronePawn.MoveForward(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=84]]
+    // endereco: casamento de bytes com a build de referencia
     void MoveForward(float a0) const
     {
         NativeCall<void, float>(this, "AHoverDronePawn.MoveForward(float)", a0);
@@ -57,7 +57,7 @@ struct AHoverDronePawn : public ADefaultPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHoverDronePawn.MoveRight(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=84]]
+    // endereco: casamento de bytes com a build de referencia
     void MoveRight(float a0) const
     {
         NativeCall<void, float>(this, "AHoverDronePawn.MoveRight(float)", a0);
@@ -81,7 +81,7 @@ struct AHoverDronePawn : public ADefaultPawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHoverDronePawn.TurnAccel(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void TurnAccel(float a0) const
     {
         NativeCall<void, float>(this, "AHoverDronePawn.TurnAccel(float)", a0);
@@ -95,6 +95,12 @@ struct AHoverDronePawn : public ADefaultPawn
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHoverDronePawn.TiltUpVector")); }
     bool& bAllowSpeedChangeField() const
     { return *GetNativePointerField<bool*>(this, "AHoverDronePawn.bAllowSpeedChange"); }
+    BrzCampoPonteiro bConstrainMovementToXYPlaneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHoverDronePawn.bConstrainMovementToXYPlane")); }
+    BrzCampoPonteiro bEnableTiltLimitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHoverDronePawn.bEnableTiltLimits")); }
+    BrzCampoPonteiro bIsTiltingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AHoverDronePawn.bIsTiltingEnabled")); }
     BitFieldValue<bool, unsigned __int32> bAllowSpeedChange()
     { return { (void*)this, "bAllowSpeedChange" }; }
     BitFieldValue<bool, unsigned __int32> bConstrainMovementToXYPlane()

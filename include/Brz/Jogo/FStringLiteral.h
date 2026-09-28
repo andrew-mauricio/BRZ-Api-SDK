@@ -32,6 +32,9 @@ struct FStringLiteral
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro LenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringLiteral.Len")); }
     BrzCampoPonteiro StringField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringLiteral.String")); }
 };

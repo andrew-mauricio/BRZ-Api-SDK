@@ -39,6 +39,8 @@ struct FInventoryComponentDefaultItemsAppend
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FInventoryComponentDefaultItemsAppend.InventoryComponentClasses")); }
     BrzCampoPonteiro RemoveItemsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FInventoryComponentDefaultItemsAppend.RemoveItems")); }
+    BrzCampoPonteiro bAddToForceAllowCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FInventoryComponentDefaultItemsAppend.bAddToForceAllowCrafting")); }
     BitFieldValue<bool, unsigned __int32> bAddToForceAllowCrafting()
     { return { (void*)this, "bAddToForceAllowCrafting" }; }
 

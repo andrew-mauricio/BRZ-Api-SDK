@@ -56,6 +56,25 @@ struct FWorldDataLayersEffectiveStates
     {
         return NativeCall<void*, unsigned long long>(this, "FWorldDataLayersEffectiveStates.GetDataLayerEffectiveRuntimeStateByName(FName)", a0);
     }
+
+    BrzCampoPonteiro AllEffectiveActiveDataLayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.AllEffectiveActiveDataLayerNames")); }
+    BrzCampoPonteiro AllEffectiveActiveDataLayerNamesEpochField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.AllEffectiveActiveDataLayerNamesEpoch")); }
+    BrzCampoPonteiro AllEffectiveLoadedDataLayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.AllEffectiveLoadedDataLayerNames")); }
+    BrzCampoPonteiro AllEffectiveLoadedDataLayerNamesEpochField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.AllEffectiveLoadedDataLayerNamesEpoch")); }
+    BrzCampoPonteiro LocalEffectiveActiveDataLayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.LocalEffectiveActiveDataLayerNames")); }
+    BrzCampoPonteiro LocalEffectiveLoadedDataLayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.LocalEffectiveLoadedDataLayerNames")); }
+    BrzCampoPonteiro ReplicatedEffectiveActiveDataLayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.ReplicatedEffectiveActiveDataLayerNames")); }
+    BrzCampoPonteiro ReplicatedEffectiveLoadedDataLayerNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.ReplicatedEffectiveLoadedDataLayerNames")); }
+    BrzCampoPonteiro UpdateEpochField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDataLayersEffectiveStates.UpdateEpoch")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDDATALAYERSEFFECTIVESTATES_H

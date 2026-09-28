@@ -34,6 +34,9 @@ struct FWorldConditionDataView
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro MemoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionDataView.Memory")); }
     BrzCampoPonteiro StructField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionDataView.Struct")); }
     FName& TypeField() const

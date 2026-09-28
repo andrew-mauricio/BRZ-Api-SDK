@@ -37,12 +37,16 @@ struct FVectorFieldResource
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.Intensity")); }
     BrzCampoPonteiro LocalBoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.LocalBounds")); }
+    BrzCampoPonteiro NumRefsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.NumRefs")); }
     BrzCampoPonteiro SizeXField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.SizeX")); }
     BrzCampoPonteiro SizeYField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.SizeY")); }
     BrzCampoPonteiro SizeZField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.SizeZ")); }
+    BrzCampoPonteiro VolumeTextureRHIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldResource.VolumeTextureRHI")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDRESOURCE_H

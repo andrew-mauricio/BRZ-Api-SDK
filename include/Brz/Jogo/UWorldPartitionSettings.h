@@ -41,6 +41,10 @@ struct UWorldPartitionSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSettings.PropertyOverridePolicy")); }
     BrzCampoPonteiro RuntimeHashDefaultClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSettings.RuntimeHashDefaultClass")); }
+    BrzCampoPonteiro bNewMapsEnableWorldPartitionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSettings.bNewMapsEnableWorldPartition")); }
+    BrzCampoPonteiro bNewMapsEnableWorldPartitionStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSettings.bNewMapsEnableWorldPartitionStreaming")); }
     BitFieldValue<bool, unsigned __int32> bNewMapsEnableWorldPartition()
     { return { (void*)this, "bNewMapsEnableWorldPartition" }; }
     BitFieldValue<bool, unsigned __int32> bNewMapsEnableWorldPartitionStreaming()

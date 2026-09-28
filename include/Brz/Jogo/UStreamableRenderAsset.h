@@ -41,7 +41,7 @@ struct UStreamableRenderAsset : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStreamableRenderAsset.CalcCumulativeLODSize(int)
-    // endereco: INFERIDO, com segunda evidencia [string_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int CalcCumulativeLODSize(int a0) const
     {
         return NativeCall<int, int>(this, "UStreamableRenderAsset.CalcCumulativeLODSize(int)", a0);
@@ -49,7 +49,7 @@ struct UStreamableRenderAsset : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStreamableRenderAsset.DoesMipDataExist(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     bool DoesMipDataExist(int a0) const
     {
         return NativeCall<bool, int>(this, "UStreamableRenderAsset.DoesMipDataExist(int)", a0);
@@ -57,7 +57,7 @@ struct UStreamableRenderAsset : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStreamableRenderAsset.GetMipIoFilenameHash(int)
-    // endereco: INFERIDO, com segunda evidencia [string_aprovado [tam=42]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned int GetMipIoFilenameHash(int a0) const
     {
         return NativeCall<unsigned int, int>(this, "UStreamableRenderAsset.GetMipIoFilenameHash(int)", a0);
@@ -97,7 +97,7 @@ struct UStreamableRenderAsset : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStreamableRenderAsset.StreamIn(int,bool)
-    // endereco: INFERIDO, com segunda evidencia [string_aprovado [tam=42]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool StreamIn(int a0, bool a1) const
     {
         return NativeCall<bool, int, bool>(this, "UStreamableRenderAsset.StreamIn(int,bool)", a0, a1);
@@ -105,7 +105,7 @@ struct UStreamableRenderAsset : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStreamableRenderAsset.StreamOut(int)
-    // endereco: INFERIDO, com segunda evidencia [string_aprovado [tam=42]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool StreamOut(int a0) const
     {
         return NativeCall<bool, int>(this, "UStreamableRenderAsset.StreamOut(int)", a0);
@@ -145,12 +145,28 @@ struct UStreamableRenderAsset : public UObject
 
     double& ForceMipLevelsToBeResidentTimestampField() const
     { return *GetNativePointerField<double*>(this, "UStreamableRenderAsset.ForceMipLevelsToBeResidentTimestamp"); }
+    BrzCampoPonteiro NeverStreamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.NeverStream")); }
     BrzCampoPonteiro NoRefStreamingLODBiasField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.NoRefStreamingLODBias")); }
     int& NumCinematicMipLevelsField() const
     { return *GetNativePointerField<int*>(this, "UStreamableRenderAsset.NumCinematicMipLevels"); }
     int& StreamingIndexField() const
     { return *GetNativePointerField<int*>(this, "UStreamableRenderAsset.StreamingIndex"); }
+    BrzCampoPonteiro bConsoleDropLOD0Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bConsoleDropLOD0")); }
+    BrzCampoPonteiro bConsoleDropLOD0onLowMemPlatformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bConsoleDropLOD0onLowMemPlatform")); }
+    BrzCampoPonteiro bForceMiplevelsToBeResidentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bForceMiplevelsToBeResident")); }
+    BrzCampoPonteiro bGlobalForceMipLevelsToBeResidentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bGlobalForceMipLevelsToBeResident")); }
+    BrzCampoPonteiro bHasStreamingUpdatePendingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bHasStreamingUpdatePending")); }
+    BrzCampoPonteiro bIgnoreStreamingMipBiasField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bIgnoreStreamingMipBias")); }
+    BrzCampoPonteiro bUseCinematicMipLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStreamableRenderAsset.bUseCinematicMipLevels")); }
     BitFieldValue<bool, unsigned __int32> NeverStream()
     { return { (void*)this, "NeverStream" }; }
     BitFieldValue<bool, unsigned __int32> bGlobalForceMipLevelsToBeResident()

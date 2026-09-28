@@ -53,8 +53,8 @@ struct UShooterWeaponDB
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterWeaponDB.CachedWeaponData")); }
     BrzCampoPonteiro NativeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterWeaponDB.NativeClass")); }
-    BitFieldValue<bool, unsigned __int32> bForceRepopulateAll()
-    { return { (void*)this, "bForceRepopulateAll" }; }
+    BrzCampoPonteiro bForceRepopulateAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterWeaponDB.bForceRepopulateAll")); }
 };
 
 #endif  // BRZ_SDK_JOGO_USHOOTERWEAPONDB_H

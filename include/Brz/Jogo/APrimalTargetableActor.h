@@ -119,11 +119,10 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.FellOutOfWorld(UDamageType&)
-    // classe: a funcao mora em AActor, e APrimalTargetableActor herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=82]]
+    // endereco: casamento de bytes com a build de referencia
     void FellOutOfWorld(void* a0) const
     {
-        NativeCall<void, void*>(this, "AActor.FellOutOfWorld(UDamageType&)", a0);
+        NativeCall<void, void*>(this, "APrimalTargetableActor.FellOutOfWorld(UDamageType&)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -168,7 +167,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalTargetableActor.GetRepGraphBehavior()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetRepGraphBehavior() const
     {
         return NativeCall<int>(this, "APrimalTargetableActor.GetRepGraphBehavior()");
@@ -176,7 +175,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.GetTargetableDamageFXDefaultPhysMaterial()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTargetableDamageFXDefaultPhysMaterial() const
     {
         return NativeCall<void*>(this, "APrimalTargetableActor.GetTargetableDamageFXDefaultPhysMaterial()");
@@ -184,7 +183,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.HarvestingDepleted(UPrimalHarvestingComponent*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void HarvestingDepleted(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalTargetableActor.HarvestingDepleted(UPrimalHarvestingComponent*)", a0);
@@ -192,7 +191,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.IsAlive()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsAlive() const
     {
         return NativeCall<bool>(this, "APrimalTargetableActor.IsAlive()");
@@ -200,7 +199,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.IsDead()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsDead() const
     {
         return NativeCall<bool>(this, "APrimalTargetableActor.IsDead()");
@@ -216,7 +215,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.IsOfTribe(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsOfTribe(int a0) const
     {
         return NativeCall<bool, int>(this, "APrimalTargetableActor.IsOfTribe(int)", a0);
@@ -224,7 +223,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.IsTargetableDead()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsTargetableDead() const
     {
         return NativeCall<bool>(this, "APrimalTargetableActor.IsTargetableDead()");
@@ -240,7 +239,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.NetUpdatedHealth_Implementation(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetUpdatedHealth_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "APrimalTargetableActor.NetUpdatedHealth_Implementation(int)", a0);
@@ -248,7 +247,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalTargetableActor.OnRep_ReplicatedHealth()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedHealth() const
     {
         NativeCall<void>(this, "APrimalTargetableActor.OnRep_ReplicatedHealth()");
@@ -272,7 +271,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.PlayDyingGeneric(float,FDamageEvent,APawn*,AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayDyingGeneric(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalTargetableActor.PlayDyingGeneric(float,FDamageEvent,APawn*,AActor*)", a0, a1, a2, a3);
@@ -280,7 +279,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.PlayDyingPoint(float,FPointDamageEvent,APawn*,AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayDyingPoint(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalTargetableActor.PlayDyingPoint(float,FPointDamageEvent,APawn*,AActor*)", a0, a1, a2, a3);
@@ -288,7 +287,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.PlayDyingRadial(float,FRadialDamageEvent,APawn*,AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayDyingRadial(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalTargetableActor.PlayDyingRadial(float,FRadialDamageEvent,APawn*,AActor*)", a0, a1, a2, a3);
@@ -304,7 +303,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.PlayHitEffectGeneric(float,FDamageEvent,APawn*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=212]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayHitEffectGeneric(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalTargetableActor.PlayHitEffectGeneric(float,FDamageEvent,APawn*,AActor*)", a0, a1, a2, a3);
@@ -312,7 +311,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.PlayHitEffectPoint(float,FPointDamageEvent,APawn*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=230]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayHitEffectPoint(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalTargetableActor.PlayHitEffectPoint(float,FPointDamageEvent,APawn*,AActor*)", a0, a1, a2, a3);
@@ -320,7 +319,7 @@ struct APrimalTargetableActor : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalTargetableActor.PlayHitEffectRadial(float,FRadialDamageEvent,APawn*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=251+grafo=3/3]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayHitEffectRadial(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, float, void*, void*, void*>(this, "APrimalTargetableActor.PlayHitEffectRadial(float,FRadialDamageEvent,APawn*,AActor*)", a0, a1, a2, a3);
@@ -368,12 +367,22 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.UpdatedHealth(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdatedHealth(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalTargetableActor.UpdatedHealth(bool)", a0);
     }
 
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   APrimalTargetableActor.`vcall'{3784,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__3784__flat__() const
+    {
+        return NativeCall<void*>(this, "APrimalTargetableActor.`vcall'{3784,{flat}}()");
+    }
+
+    BrzCampoPonteiro BPOverrideDestroyedMeshTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.BPOverrideDestroyedMeshTextures")); }
     TArray<void*>& BoneDamageAdjustersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalTargetableActor.BoneDamageAdjusters"); }
     TArray<void*>& DamageTypeAdjustersField() const
@@ -395,29 +404,29 @@ struct APrimalTargetableActor : public AActor
     BrzCampoPonteiro HurtFX_NiagaraField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.HurtFX_Niagara")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +8, medido na build 25090264
+    //  ancorado em `MaxHealth` +8, medido na build 25535041
     //  (offset absoluto medido: 0x580; confianca alta)
     float& LastHealthBeforeTakeDamageField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +12, medido na build 25090264
+    //  ancorado em `MaxHealth` +12, medido na build 25535041
     //  (offset absoluto medido: 0x584; confianca alta)
     float& LastPreBlueprintAdjustmentActualDamageField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +16, medido na build 25090264
+    //  ancorado em `MaxHealth` +16, medido na build 25535041
     //  (offset absoluto medido: 0x588; confianca alta)
     float& LastReplicatedHealthField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +4, medido na build 25090264
+    //  ancorado em `MaxHealth` +4, medido na build 25535041
     //  (offset absoluto medido: 0x57C; confianca alta)
     float& LastReplicatedHealthValueField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 4); }
     float& LifeSpanAfterDeathField() const
     { return *GetNativePointerField<float*>(this, "APrimalTargetableActor.LifeSpanAfterDeath"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DescriptiveName` +24, medido na build 25090264
+    //  ancorado em `DescriptiveName` +24, medido na build 25535041
     //  (offset absoluto medido: 0x568; confianca alta)
     float& LowHealthPercentageField() const
     { return BrzCampoAncorado<float>(this, "DescriptiveName", 24); }
@@ -430,17 +439,17 @@ struct APrimalTargetableActor : public AActor
     UPrimalHarvestingComponent*& MyHarvestingComponentField() const
     { return *GetNativePointerField<UPrimalHarvestingComponent**>(this, "APrimalTargetableActor.MyHarvestingComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestructibleMeshScaleOverride` +24, medido na build 25090264
+    //  ancorado em `DestructibleMeshScaleOverride` +24, medido na build 25535041
     //  (offset absoluto medido: 0x510; confianca alta)
     void*& MyHarvestingElementField() const
     { return BrzCampoAncorado<void*>(this, "DestructibleMeshScaleOverride", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyHarvestingComponent` +8, medido na build 25090264
+    //  ancorado em `MyHarvestingComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x548; confianca alta)
     UPrimalStructureSettings*& MyStructureSettingsCDOField() const
     { return BrzCampoAncorado<UPrimalStructureSettings*>(this, "MyHarvestingComponent", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DescriptiveName` +16, medido na build 25090264
+    //  ancorado em `DescriptiveName` +16, medido na build 25535041
     //  (offset absoluto medido: 0x560; confianca alta)
     double& NextAllowRepairTimeField() const
     { return BrzCampoAncorado<double>(this, "DescriptiveName", 16); }
@@ -450,6 +459,20 @@ struct APrimalTargetableActor : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.StructureSettingsClass")); }
     unsigned char& TargetableDamageFXDefaultPhysMaterialField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalTargetableActor.TargetableDamageFXDefaultPhysMaterial"); }
+    BrzCampoPonteiro bForceFloatingDamageNumbersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bForceFloatingDamageNumbers")); }
+    BrzCampoPonteiro bForceZeroDamageProcessingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bForceZeroDamageProcessing")); }
+    BrzCampoPonteiro bIgnoreDestructionEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bIgnoreDestructionEffects")); }
+    BrzCampoPonteiro bIgnoreSpawnEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bIgnoreSpawnEffects")); }
+    BrzCampoPonteiro bIsDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bIsDead")); }
+    BrzCampoPonteiro bUseHarvestingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bUseHarvestingComponent")); }
+    BrzCampoPonteiro bWithinPreventionVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.bWithinPreventionVolume")); }
     BitFieldValue<bool, unsigned __int32> bDestructionActorTemplateServerOnly()
     { return { (void*)this, "bDestructionActorTemplateServerOnly" }; }
     BitFieldValue<bool, unsigned __int32> bDestroyedMeshUseSkeletalMeshComponent()

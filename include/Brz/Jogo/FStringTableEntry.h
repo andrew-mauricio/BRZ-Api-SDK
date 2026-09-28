@@ -32,6 +32,11 @@ struct FStringTableEntry
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro DisplayStringIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEntry.DisplayStringId")); }
+    BrzCampoPonteiro OwnerTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEntry.OwnerTable")); }
     BrzCampoPonteiro SourceStringField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTableEntry.SourceString")); }
 };

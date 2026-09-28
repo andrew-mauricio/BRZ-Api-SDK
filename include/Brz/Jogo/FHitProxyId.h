@@ -35,14 +35,14 @@ struct FHitProxyId
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FHitProxyId.GetColor()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetColor() const
     {
         return NativeCall<void*>(this, "FHitProxyId.GetColor()");
     }
 
-    BitFieldValue<bool, unsigned __int32> Index()
-    { return { (void*)this, "Index" }; }
+    BrzCampoPonteiro IndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitProxyId.Index")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITPROXYID_H

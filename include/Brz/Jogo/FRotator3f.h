@@ -33,12 +33,12 @@ struct FRotator3f
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Pitch()
-    { return { (void*)this, "Pitch" }; }
-    BitFieldValue<bool, unsigned __int32> Roll()
-    { return { (void*)this, "Roll" }; }
-    BitFieldValue<bool, unsigned __int32> Yaw()
-    { return { (void*)this, "Yaw" }; }
+    BrzCampoPonteiro PitchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FRotator3f.Pitch")); }
+    BrzCampoPonteiro RollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FRotator3f.Roll")); }
+    BrzCampoPonteiro YawField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FRotator3f.Yaw")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FROTATOR3F_H

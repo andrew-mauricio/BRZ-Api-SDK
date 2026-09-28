@@ -48,6 +48,9 @@ struct FPrimalRecastNavMeshGenerator
     {
         return NativeCall<void*, float>(this, "FPrimalRecastNavMeshGenerator.TickAsyncBuild(float)", a0);
     }
+
+    BrzCampoPonteiro LastVacuumField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalRecastNavMeshGenerator.LastVacuum")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALRECASTNAVMESHGENERATOR_H

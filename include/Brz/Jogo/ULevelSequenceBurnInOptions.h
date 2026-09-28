@@ -45,6 +45,8 @@ struct ULevelSequenceBurnInOptions
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequenceBurnInOptions.BurnInClass")); }
     BrzCampoPonteiro SettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequenceBurnInOptions.Settings")); }
+    BrzCampoPonteiro bUseBurnInField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelSequenceBurnInOptions.bUseBurnIn")); }
     BitFieldValue<bool, unsigned __int32> bUseBurnIn()
     { return { (void*)this, "bUseBurnIn" }; }
 

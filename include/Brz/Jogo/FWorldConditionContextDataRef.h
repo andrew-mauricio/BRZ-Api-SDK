@@ -33,8 +33,8 @@ struct FWorldConditionContextDataRef
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Index()
-    { return { (void*)this, "Index" }; }
+    BrzCampoPonteiro IndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionContextDataRef.Index")); }
     FString& NameField() const
     { return *GetNativePointerField<FString*>(this, "FWorldConditionContextDataRef.Name"); }
 };

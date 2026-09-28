@@ -33,12 +33,16 @@ struct FActorRepList
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
-    BitFieldValue<bool, unsigned __int32> Data()
-    { return { (void*)this, "Data" }; }
+    BrzCampoPonteiro DataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepList.Data")); }
     BrzCampoPonteiro MaxField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepList.Max")); }
     BrzCampoPonteiro NumField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepList.Num")); }
+    BrzCampoPonteiro RefCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepList.RefCount")); }
+    BrzCampoPonteiro UsedBitRefField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepList.UsedBitRef")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORREPLIST_H

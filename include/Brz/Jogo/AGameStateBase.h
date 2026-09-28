@@ -36,7 +36,7 @@ struct AGameStateBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameStateBase.AddPlayerState(APlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void AddPlayerState(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameStateBase.AddPlayerState(APlayerState*)", a0);
@@ -44,7 +44,7 @@ struct AGameStateBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameStateBase.GetDefaultGameMode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     AGameModeBase* GetDefaultGameMode() const
     {
         return NativeCall<AGameModeBase*>(this, "AGameStateBase.GetDefaultGameMode()");
@@ -60,10 +60,10 @@ struct AGameStateBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameStateBase.GetPlayerStateFromUniqueNetId(FUniqueNetIdWrapper&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
-    static APlayerState* GetPlayerStateFromUniqueNetId(void* a0)
+    // endereco: casamento de bytes com a build de referencia
+    APlayerState* GetPlayerStateFromUniqueNetId(void* a0) const
     {
-        return NativeCall<APlayerState*, void*>(nullptr, "AGameStateBase.GetPlayerStateFromUniqueNetId(FUniqueNetIdWrapper&)", a0);
+        return NativeCall<APlayerState*, void*>(this, "AGameStateBase.GetPlayerStateFromUniqueNetId(FUniqueNetIdWrapper&)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -92,7 +92,7 @@ struct AGameStateBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameStateBase.OnRep_ReplicatedHasBegunPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_ReplicatedHasBegunPlay() const
     {
         NativeCall<void>(this, "AGameStateBase.OnRep_ReplicatedHasBegunPlay()");
@@ -108,7 +108,7 @@ struct AGameStateBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameStateBase.OnRep_ReplicatedWorldTimeSecondsDouble()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=172]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_ReplicatedWorldTimeSecondsDouble() const
     {
         NativeCall<void>(this, "AGameStateBase.OnRep_ReplicatedWorldTimeSecondsDouble()");
@@ -167,7 +167,7 @@ struct AGameStateBase : public AInfo
     BrzCampoPonteiro GameModeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameStateBase.GameModeClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +20, medido na build 25090264
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +20, medido na build 25535041
     //  (offset absoluto medido: 0x4E0; confianca alta)
     void*& NumServerWorldTimeSecondsDeltasField() const
     { return BrzCampoAncorado<void*>(this, "ServerWorldTimeSecondsUpdateFrequency", 20); }
@@ -182,7 +182,7 @@ struct AGameStateBase : public AInfo
     double& ReplicatedWorldTimeSecondsDoubleField() const
     { return *GetNativePointerField<double*>(this, "AGameStateBase.ReplicatedWorldTimeSecondsDouble"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +28, medido na build 25090264
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +28, medido na build 25535041
     //  (offset absoluto medido: 0x4E8; confianca alta)
     void*& SemaphoreStorageField() const
     { return BrzCampoAncorado<void*>(this, "ServerWorldTimeSecondsUpdateFrequency", 28); }
@@ -193,15 +193,17 @@ struct AGameStateBase : public AInfo
     BrzCampoPonteiro SpectatorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameStateBase.SpectatorClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +12, medido na build 25090264
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +12, medido na build 25535041
     //  (offset absoluto medido: 0x4D8; confianca alta)
     double& SumServerWorldTimeSecondsDeltaField() const
     { return BrzCampoAncorado<double>(this, "ServerWorldTimeSecondsUpdateFrequency", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +4, medido na build 25090264
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +4, medido na build 25535041
     //  (offset absoluto medido: 0x4D0; confianca alta)
     void*& TimerHandle_UpdateServerTimeSecondsField() const
     { return BrzCampoAncorado<void*>(this, "ServerWorldTimeSecondsUpdateFrequency", 4); }
+    BrzCampoPonteiro bReplicatedHasBegunPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameStateBase.bReplicatedHasBegunPlay")); }
     BitFieldValue<bool, unsigned __int32> bReplicatedHasBegunPlay()
     { return { (void*)this, "bReplicatedHasBegunPlay" }; }
 

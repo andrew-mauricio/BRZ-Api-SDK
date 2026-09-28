@@ -35,7 +35,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.AdjustStructureItemInsulation_Implementation(AShooterCharacter*,UPrimalItem*,EP
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float AdjustStructureItemInsulation_Implementation(void* a0, void* a1, int a2, float a3) const
     {
         return NativeCall<float, void*, void*, int, float>(this, "ADayCycleManager.AdjustStructureItemInsulation_Implementation(AShooterCharacter*,UPrimalItem*,EPrimalItemStat::Type,float)", a0, a1, a2, a3);
@@ -43,7 +43,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.AllowStructureActivation(APrimalStructure*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=3]]
     bool AllowStructureActivation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.AllowStructureActivation(APrimalStructure*)", a0);
@@ -51,7 +51,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.AllowWeaponFiring(AActor*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=3]]
     bool AllowWeaponFiring(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.AllowWeaponFiring(AActor*)", a0);
@@ -123,7 +123,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.IsRainingAtLocation(UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=163+chamadores=2]]
     bool IsRainingAtLocation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.IsRainingAtLocation(UE::Math::TVector<double>)", a0);
@@ -131,7 +131,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.IsRainingAtLocation_Implementation(UE::Math::TVector<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsRainingAtLocation_Implementation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.IsRainingAtLocation_Implementation(UE::Math::TVector<double>)", a0);
@@ -228,7 +228,7 @@ struct ADayCycleManager : public AInfo
     BrzCampoPonteiro HexagonVFXActorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.HexagonVFXActorClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveLightingSequence` +4, medido na build 25090264
+    //  ancorado em `ActiveLightingSequence` +4, medido na build 25535041
     //  (offset absoluto medido: 0x5C4; confianca alta)
     float& LastCurrentTimeField() const
     { return BrzCampoAncorado<float>(this, "ActiveLightingSequence", 4); }
@@ -269,7 +269,7 @@ struct ADayCycleManager : public AInfo
     float& SnowAmountField() const
     { return *GetNativePointerField<float*>(this, "ADayCycleManager.SnowAmount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveLightingSequence` +8, medido na build 25090264
+    //  ancorado em `ActiveLightingSequence` +8, medido na build 25535041
     //  (offset absoluto medido: 0x5C8; confianca alta)
     float& SoundLastCurrentTimeField() const
     { return BrzCampoAncorado<float>(this, "ActiveLightingSequence", 8); }
@@ -287,19 +287,33 @@ struct ADayCycleManager : public AInfo
     { return *GetNativePointerField<float*>(this, "ADayCycleManager.Sound_TransitionToNightTime"); }
     float& TrueSkyTimeField() const
     { return *GetNativePointerField<float*>(this, "ADayCycleManager.TrueSkyTime"); }
+    BrzCampoPonteiro bCheckForStructureActivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bCheckForStructureActivation")); }
+    BrzCampoPonteiro bCheckForWeaponFiringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bCheckForWeaponFiring")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HexagonVFXActorClass` +9, medido na build 25090264
+    //  ancorado em `HexagonVFXActorClass` +9, medido na build 25535041
     //  (offset absoluto medido: 0x651; confianca alta)
     bool& bFirstDaytimeField() const
     { return BrzCampoAncorado<bool>(this, "HexagonVFXActorClass", 9); }
+    BrzCampoPonteiro bHideSupplyCratesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bHideSupplyCrates")); }
     bool& bIsRainingField() const
     { return *GetNativePointerField<bool*>(this, "ADayCycleManager.bIsRaining"); }
     bool& bLastReplicatedIsRainingField() const
     { return *GetNativePointerField<bool*>(this, "ADayCycleManager.bLastReplicatedIsRaining"); }
+    BrzCampoPonteiro bLastReplicatedIsSnowingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bLastReplicatedIsSnowing")); }
+    BrzCampoPonteiro bShowWindVelocityDebugField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bShowWindVelocityDebug")); }
+    BrzCampoPonteiro bTailWindEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bTailWindEnabled")); }
     bool& bUseBPOverrideItemAutoDecreaseDurabilityField() const
     { return *GetNativePointerField<bool*>(this, "ADayCycleManager.bUseBPOverrideItemAutoDecreaseDurability"); }
     bool& bUsesWindField() const
     { return *GetNativePointerField<bool*>(this, "ADayCycleManager.bUsesWind"); }
+    BrzCampoPonteiro bUsesWindVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bUsesWindVelocity")); }
     int& theDayNumberToMakeSerilizationWorkField() const
     { return *GetNativePointerField<int*>(this, "ADayCycleManager.theDayNumberToMakeSerilizationWork"); }
     BitFieldValue<bool, unsigned __int32> bCheckForStructureActivation()

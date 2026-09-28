@@ -45,7 +45,7 @@ struct FHittestGrid
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FHittestGrid.Clear()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Clear() const
     {
         return NativeCall<void*>(this, "FHittestGrid.Clear()");
@@ -117,7 +117,7 @@ struct FHittestGrid
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FHittestGrid.SameSize(FHittestGrid*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SameSize(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FHittestGrid.SameSize(FHittestGrid*)", a0);
@@ -130,28 +130,73 @@ struct FHittestGrid
     {
         return NativeCall<void*, void*, void*, void*>(this, "FHittestGrid.SetHittestArea(UE::Slate::FDeprecateVector2DParameter&,UE::Slate::FDeprecateVector2DParameter&,UE::Slate::FDeprecateVector2DParameter&)", a0, a1, a2);
     }
+
+    BrzCampoPonteiro AppendedGridArrayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.AppendedGridArray")); }
     BrzCampoPonteiro CachedOwnerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.CachedOwner")); }
+    BrzCampoPonteiro CellCoordField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.CellCoord")); }
     BrzCampoPonteiro CellsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.Cells")); }
+    BrzCampoPonteiro CullingRectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.CullingRect")); }
+    BrzCampoPonteiro CurrentUserIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.CurrentUserIndex")); }
+    BrzCampoPonteiro CursorPositionInGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.CursorPositionInGrid")); }
+    BrzCampoPonteiro CustomPathField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.CustomPath")); }
     BrzCampoPonteiro DirectionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.Direction")); }
+    BrzCampoPonteiro DistanceSqToWidgetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.DistanceSqToWidget")); }
     BrzCampoPonteiro GridField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.Grid")); }
+    BrzCampoPonteiro GridOriginField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.GridOrigin")); }
     BrzCampoPonteiro GridSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.GridSize")); }
+    BrzCampoPonteiro GridWindowOriginField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.GridWindowOrigin")); }
+    BrzCampoPonteiro IntermediateResultsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.IntermediateResults")); }
+    BrzCampoPonteiro LowerRightCellField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.LowerRightCell")); }
+    BrzCampoPonteiro NavigationReplyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.NavigationReply")); }
     BrzCampoPonteiro NumCellsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.NumCells")); }
     TObjectPtr<AActor>& OwnerField() const
     { return *GetNativePointerField<TObjectPtr<AActor>*>(this, "FHittestGrid.Owner"); }
+    BrzCampoPonteiro PrimarySortField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.PrimarySort")); }
     BrzCampoPonteiro RadiusField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.Radius")); }
-    BitFieldValue<bool, unsigned __int32> Result()
-    { return { (void*)this, "Result" }; }
+    BrzCampoPonteiro ResultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.Result")); }
+    BrzCampoPonteiro RuleWidgetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.RuleWidget")); }
+    BrzCampoPonteiro SecondarySortField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.SecondarySort")); }
+    BrzCampoPonteiro StartingWidgetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.StartingWidget")); }
+    BrzCampoPonteiro UpperLeftCellField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.UpperLeftCell")); }
     BrzCampoPonteiro UserIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.UserIndex")); }
+    BrzCampoPonteiro WeakWidgetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.WeakWidget")); }
+    BrzCampoPonteiro WidgetArrayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.WidgetArray")); }
     BrzCampoPonteiro WidgetIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.WidgetIndex")); }
+    BrzCampoPonteiro WidgetIndexesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.WidgetIndexes")); }
+    BrzCampoPonteiro WidgetMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.WidgetMap")); }
+    BrzCampoPonteiro bTestWidgetIsInteractiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHittestGrid.bTestWidgetIsInteractive")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITTESTGRID_H

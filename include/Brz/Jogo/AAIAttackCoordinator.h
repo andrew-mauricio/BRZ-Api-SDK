@@ -33,7 +33,7 @@ struct AAIAttackCoordinator : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIAttackCoordinator.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=19]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "AAIAttackCoordinator.Tick(float)", a0);
@@ -41,7 +41,7 @@ struct AAIAttackCoordinator : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIAttackCoordinator.UpdateAttackPriorities()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2501+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateAttackPriorities() const
     {
         NativeCall<void>(this, "AAIAttackCoordinator.UpdateAttackPriorities()");

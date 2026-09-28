@@ -35,7 +35,7 @@ struct UWorldPartitionSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionSubsystem.Deinitialize()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=171+grafo=7/7]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Deinitialize() const
     {
         return NativeCall<void*>(this, "UWorldPartitionSubsystem.Deinitialize()");
@@ -171,7 +171,7 @@ struct UWorldPartitionSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionSubsystem.OnUpdateStreamingState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=27]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnUpdateStreamingState() const
     {
         return NativeCall<void*>(this, "UWorldPartitionSubsystem.OnUpdateStreamingState()");
@@ -248,8 +248,45 @@ struct UWorldPartitionSubsystem
     {
         return NativeCall<void*, void*, void*>(this, "UWorldPartitionSubsystem.UpdateStreamingStateInternal(UWorld*,UWorldPartition*)", a0, a1);
     }
-    BitFieldValue<bool, unsigned __int32> bHasBegunPlay()
-    { return { (void*)this, "bHasBegunPlay" }; }
+
+    BrzCampoPonteiro DrawHandleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.DrawHandle")); }
+    BrzCampoPonteiro IncrementalUpdateWorldPartitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.IncrementalUpdateWorldPartitions")); }
+    BrzCampoPonteiro IncrementalUpdateWorldPartitionsPendingAddField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.IncrementalUpdateWorldPartitionsPendingAdd")); }
+    BrzCampoPonteiro IsStreamingSourceProviderFilteredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.IsStreamingSourceProviderFiltered")); }
+    BrzCampoPonteiro LevelStreamingContinuouslyIncrementalGCWhileLevelsPendingPurgeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.LevelStreamingContinuouslyIncrementalGCWhileLevelsPendingPurge")); }
+    BrzCampoPonteiro LevelStreamingForceGCAfterLevelStreamedOutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.LevelStreamingForceGCAfterLevelStreamedOut")); }
+    BrzCampoPonteiro NumWorldPartitionServerStreamingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.NumWorldPartitionServerStreamingEnabled")); }
+    BrzCampoPonteiro RegisteredWorldPartitionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.RegisteredWorldPartitions")); }
+    BrzCampoPonteiro ServerClientsVisibleLevelNamesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.ServerClientsVisibleLevelNames")); }
+    BrzCampoPonteiro ServerClientsVisibleLevelsHashField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.ServerClientsVisibleLevelsHash")); }
+    BrzCampoPonteiro StreamingSourceProvidersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.StreamingSourceProviders")); }
+    BrzCampoPonteiro StreamingSourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.StreamingSources")); }
+    BrzCampoPonteiro StreamingSourcesHashField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.StreamingSourcesHash")); }
+    BrzCampoPonteiro StreamingSourcesVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.StreamingSourcesVelocity")); }
+    BrzCampoPonteiro StreamingStateUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.StreamingStateUpdated")); }
+    BrzCampoPonteiro WorldPartitionLoadingAndPendingLoadStreamingLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.WorldPartitionLoadingAndPendingLoadStreamingLevels")); }
+    BrzCampoPonteiro WorldPartitionUninitializationPendingStreamingLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.WorldPartitionUninitializationPendingStreamingLevels")); }
+    BrzCampoPonteiro WorldPartitionsDraw2DContextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.WorldPartitionsDraw2DContext")); }
+    BrzCampoPonteiro bHasBegunPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionSubsystem.bHasBegunPlay")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UWORLDPARTITIONSUBSYSTEM_H

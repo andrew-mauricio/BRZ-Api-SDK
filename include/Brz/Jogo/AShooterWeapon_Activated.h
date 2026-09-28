@@ -37,7 +37,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.ActivateWeapon(bool,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=149]]
+    // endereco: casamento de bytes com a build de referencia
     void ActivateWeapon(bool a0, int a1) const
     {
         NativeCall<void, bool, int>(this, "AShooterWeapon_Activated.ActivateWeapon(bool,int)", a0, a1);
@@ -61,7 +61,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.CanPlayFireEffects()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanPlayFireEffects() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Activated.CanPlayFireEffects()");
@@ -69,7 +69,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.CancelActivation_Internal()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=133+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void CancelActivation_Internal() const
     {
         NativeCall<void>(this, "AShooterWeapon_Activated.CancelActivation_Internal()");
@@ -77,7 +77,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.ClientActivateWeapon_Implementation(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ClientActivateWeapon_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Activated.ClientActivateWeapon_Implementation(bool)", a0);
@@ -85,7 +85,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.ClientHandleActivation_Implementation(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientHandleActivation_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Activated.ClientHandleActivation_Implementation(bool)", a0);
@@ -93,7 +93,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Activated.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=164]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Destroyed() const
     {
         return NativeCall<void*>(this, "AShooterWeapon_Activated.Destroyed()");
@@ -101,7 +101,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.EndActivationAnim()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=149+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void EndActivationAnim() const
     {
         NativeCall<void>(this, "AShooterWeapon_Activated.EndActivationAnim()");
@@ -117,7 +117,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Activated.GetBeamTarget()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBeamTarget() const
     {
         return NativeCall<void*>(this, "AShooterWeapon_Activated.GetBeamTarget()");
@@ -125,10 +125,11 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)
-    // endereco: cache_pdb_25090264
+    // classe: a funcao mora em AShooterWeapon_FlameThrower, e AShooterWeapon_Activated herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void GetFirePosition(void* a0, void* a1) const
     {
-        NativeCall<void, void*, void*>(this, "AShooterWeapon_Activated.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
+        NativeCall<void, void*, void*>(this, "AShooterWeapon_FlameThrower.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
     }
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
@@ -149,7 +150,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Activated.MultiPlayActivationAnim_Implementation(bool,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=627+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MultiPlayActivationAnim_Implementation(bool a0, int a1) const
     {
         return NativeCall<void*, bool, int>(this, "AShooterWeapon_Activated.MultiPlayActivationAnim_Implementation(bool,int)", a0, a1);
@@ -157,7 +158,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.MuzzlePSCSpawned()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=83]]
+    // endereco: casamento de bytes com a build de referencia
     void MuzzlePSCSpawned() const
     {
         NativeCall<void>(this, "AShooterWeapon_Activated.MuzzlePSCSpawned()");
@@ -165,7 +166,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Activated.OnRep_IsActivated()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=78]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_IsActivated() const
     {
         NativeCall<void>(this, "AShooterWeapon_Activated.OnRep_IsActivated()");
@@ -181,7 +182,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.ServerActivateWeapon_Implementation(bool,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerActivateWeapon_Implementation(bool a0, int a1) const
     {
         NativeCall<void, bool, int>(this, "AShooterWeapon_Activated.ServerActivateWeapon_Implementation(bool,int)", a0, a1);
@@ -206,15 +207,16 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.StartFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=97]]
+    // classe: a funcao mora em AShooterWeapon_FlameThrower, e AShooterWeapon_Activated herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
-        NativeCall<void, bool>(this, "AShooterWeapon_Activated.StartFire(bool)", a0);
+        NativeCall<void, bool>(this, "AShooterWeapon_FlameThrower.StartFire(bool)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.StartSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=147]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartSecondaryAction() const
     {
         NativeCall<void>(this, "AShooterWeapon_Activated.StartSecondaryAction()");
@@ -222,7 +224,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.StopFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopFire() const
     {
         NativeCall<void>(this, "AShooterWeapon_Activated.StopFire()");
@@ -230,10 +232,11 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.Tick(float)
+    // classe: a funcao mora em AShooterWeapon_FlameThrower, e AShooterWeapon_Activated herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
-        NativeCall<void, float>(this, "AShooterWeapon_Activated.Tick(float)", a0);
+        NativeCall<void, float>(this, "AShooterWeapon_FlameThrower.Tick(float)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -257,7 +260,7 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
     USoundCue*& EmptySoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "AShooterWeapon_Activated.EmptySound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MovementFireAnim` +16, medido na build 25090264
+    //  ancorado em `MovementFireAnim` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1258; confianca alta)
     void*& EndActivationAnimHandleField() const
     { return BrzCampoAncorado<void*>(this, "MovementFireAnim", 16); }
@@ -279,6 +282,10 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Activated.StopFireAnim")); }
     BrzCampoPonteiro TargetLocationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Activated.TargetLocation")); }
+    BrzCampoPonteiro bDamagePawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Activated.bDamagePawns")); }
+    BrzCampoPonteiro bIsActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Activated.bIsActivated")); }
     BitFieldValue<bool, unsigned __int32> bIsActivated()
     { return { (void*)this, "bIsActivated" }; }
     BitFieldValue<bool, unsigned __int32> bActivationHeld()

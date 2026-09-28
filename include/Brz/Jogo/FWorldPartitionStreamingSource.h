@@ -59,12 +59,24 @@ struct FWorldPartitionStreamingSource
 
     BrzCampoPonteiro DebugColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.DebugColor")); }
-    BitFieldValue<bool, unsigned __int32> Location()
-    { return { (void*)this, "Location" }; }
+    BrzCampoPonteiro ExtraAngleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.ExtraAngle")); }
+    BrzCampoPonteiro ExtraRadiusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.ExtraRadius")); }
+    BrzCampoPonteiro Hash2DField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.Hash2D")); }
+    BrzCampoPonteiro Hash3DField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.Hash3D")); }
+    BrzCampoPonteiro LocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.Location")); }
     FString& NameField() const
     { return *GetNativePointerField<FString*>(this, "FWorldPartitionStreamingSource.Name"); }
     int& PriorityField() const
     { return *GetNativePointerField<int*>(this, "FWorldPartitionStreamingSource.Priority"); }
+    BrzCampoPonteiro QuantizedLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.QuantizedLocation")); }
+    BrzCampoPonteiro QuantizedRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.QuantizedRotation")); }
     BrzCampoPonteiro RotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.Rotation")); }
     BrzCampoPonteiro ShapesField() const
@@ -77,10 +89,18 @@ struct FWorldPartitionStreamingSource
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.TargetHLODLayers")); }
     BrzCampoPonteiro TargetStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.TargetState")); }
-    BitFieldValue<bool, unsigned __int32> Velocity()
-    { return { (void*)this, "Velocity" }; }
-    BitFieldValue<bool, unsigned __int32> bBlockOnSlowLoading()
-    { return { (void*)this, "bBlockOnSlowLoading" }; }
+    BrzCampoPonteiro VelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.Velocity")); }
+    BrzCampoPonteiro bBlockOnSlowLoadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.bBlockOnSlowLoading")); }
+    BrzCampoPonteiro bForce2DField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.bForce2D")); }
+    BrzCampoPonteiro bRemoteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.bRemote")); }
+    BrzCampoPonteiro bReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.bReplay")); }
+    BrzCampoPonteiro bUseVelocityContributionToCellsSortingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingSource.bUseVelocityContributionToCellsSorting")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDPARTITIONSTREAMINGSOURCE_H

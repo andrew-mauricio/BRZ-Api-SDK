@@ -47,6 +47,8 @@ struct UPrimalDinoSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoSettings.FoodEffectivenessMultipliers")); }
     float& TamingAffinityNoFoodDecreasePercentageSpeedField() const
     { return *GetNativePointerField<float*>(this, "UPrimalDinoSettings.TamingAffinityNoFoodDecreasePercentageSpeed"); }
+    BrzCampoPonteiro bWakingTameDisplayItemNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoSettings.bWakingTameDisplayItemName")); }
     BitFieldValue<bool, unsigned __int32> bWakingTameDisplayItemName()
     { return { (void*)this, "bWakingTameDisplayItemName" }; }
 

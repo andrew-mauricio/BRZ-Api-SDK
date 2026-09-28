@@ -32,6 +32,9 @@ struct FStringOutputDeviceCountLines
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro LineCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringOutputDeviceCountLines.LineCount")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGOUTPUTDEVICECOUNTLINES_H

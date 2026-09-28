@@ -36,7 +36,7 @@ struct USoundBase : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USoundBase.GetAssetUserDataArray()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAssetUserDataArray() const
     {
         return NativeCall<void*>(this, "USoundBase.GetAssetUserDataArray()");
@@ -44,7 +44,7 @@ struct USoundBase : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USoundBase.GetMaxDistance()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMaxDistance() const
     {
         return NativeCall<float>(this, "USoundBase.GetMaxDistance()");
@@ -60,7 +60,7 @@ struct USoundBase : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USoundBase.HasConcatenatorNode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasConcatenatorNode() const
     {
         return NativeCall<bool>(this, "USoundBase.HasConcatenatorNode()");
@@ -68,7 +68,7 @@ struct USoundBase : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USoundBase.HasDelayNode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasDelayNode() const
     {
         return NativeCall<bool>(this, "USoundBase.HasDelayNode()");
@@ -92,7 +92,7 @@ struct USoundBase : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USoundBase.IsPlayWhenSilent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPlayWhenSilent() const
     {
         return NativeCall<bool>(this, "USoundBase.IsPlayWhenSilent()");
@@ -117,7 +117,7 @@ struct USoundBase : public UObject
     BrzCampoPonteiro ConcurrencySetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.ConcurrencySet")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VirtualizationMode` +7, medido na build 25090264
+    //  ancorado em `VirtualizationMode` +7, medido na build 25535041
     //  (offset absoluto medido: 0x40; confianca alta)
     void*& CurrentPlayCountField() const
     { return BrzCampoAncorado<void*>(this, "VirtualizationMode", 7); }
@@ -141,6 +141,22 @@ struct USoundBase : public UObject
     { return *GetNativePointerField<float*>(this, "USoundBase.TotalSamples"); }
     int& VirtualizationModeField() const
     { return *GetNativePointerField<int*>(this, "USoundBase.VirtualizationMode"); }
+    BrzCampoPonteiro bBypassVolumeScaleForPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bBypassVolumeScaleForPriority")); }
+    BrzCampoPonteiro bDebugField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bDebug")); }
+    BrzCampoPonteiro bEnableBaseSubmixField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bEnableBaseSubmix")); }
+    BrzCampoPonteiro bEnableBusSendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bEnableBusSends")); }
+    BrzCampoPonteiro bEnableSubmixSendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bEnableSubmixSends")); }
+    BrzCampoPonteiro bHasConcatenatorNodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bHasConcatenatorNode")); }
+    BrzCampoPonteiro bHasDelayNodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bHasDelayNode")); }
+    BrzCampoPonteiro bOverrideConcurrencyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.bOverrideConcurrency")); }
     BitFieldValue<bool, unsigned __int32> bDebug()
     { return { (void*)this, "bDebug" }; }
     BitFieldValue<bool, unsigned __int32> bOverrideConcurrency()

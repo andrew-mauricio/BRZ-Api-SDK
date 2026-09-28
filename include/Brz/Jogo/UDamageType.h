@@ -39,6 +39,14 @@ struct UDamageType : public UObject
     { return *GetNativePointerField<float*>(this, "UDamageType.DestructibleDamageSpreadScale"); }
     float& DestructibleImpulseField() const
     { return *GetNativePointerField<float*>(this, "UDamageType.DestructibleImpulse"); }
+    BrzCampoPonteiro bCausedByWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UDamageType.bCausedByWorld")); }
+    BrzCampoPonteiro bIsPassiveDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UDamageType.bIsPassiveDamage")); }
+    BrzCampoPonteiro bRadialDamageVelChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UDamageType.bRadialDamageVelChange")); }
+    BrzCampoPonteiro bScaleMomentumByMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UDamageType.bScaleMomentumByMass")); }
     BitFieldValue<bool, unsigned __int32> bIsPassiveDamage()
     { return { (void*)this, "bIsPassiveDamage" }; }
     BitFieldValue<bool, unsigned __int32> bCausedByWorld()

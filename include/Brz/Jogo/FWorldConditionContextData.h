@@ -51,6 +51,8 @@ struct FWorldConditionContextData
 
     BrzCampoPonteiro SchemaField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionContextData.Schema")); }
+    BrzCampoPonteiro ViewsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionContextData.Views")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDCONDITIONCONTEXTDATA_H

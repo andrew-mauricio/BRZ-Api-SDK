@@ -32,6 +32,15 @@ struct FDinoContentData
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro Body_Impact_Size_Mult_9_197D28CA425237844607078D92E6711AField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoContentData.Body_Impact_Size_Mult_9_197D28CA425237844607078D92E6711A")); }
+    BrzCampoPonteiro FootImpact_Size_Mult_6_7B9BB9844DA6FCCB2734298B8D14F388Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoContentData.FootImpact_Size_Mult_6_7B9BB9844DA6FCCB2734298B8D14F388")); }
+    BrzCampoPonteiro Foot_Impact_Amount_Mult_4_68F8F48342BA13C8D5B263A2298DE525Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoContentData.Foot_Impact_Amount_Mult_4_68F8F48342BA13C8D5B263A2298DE525")); }
+    BrzCampoPonteiro Foot_Impact_Velocity_Mult_2_7C765A16485FE747675120B0DA29D905Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoContentData.Foot_Impact_Velocity_Mult_2_7C765A16485FE747675120B0DA29D905")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FDINOCONTENTDATA_H

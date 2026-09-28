@@ -41,6 +41,10 @@ struct FWorldSelectionElementArgs
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldSelectionElementArgs.SelectionSet")); }
     BrzCampoPonteiro ShowFlagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldSelectionElementArgs.ShowFlags")); }
+    BrzCampoPonteiro bBSPSelectionOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldSelectionElementArgs.bBSPSelectionOnly")); }
+    BrzCampoPonteiro bMustEncompassEntireElementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldSelectionElementArgs.bMustEncompassEntireElement")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDSELECTIONELEMENTARGS_H

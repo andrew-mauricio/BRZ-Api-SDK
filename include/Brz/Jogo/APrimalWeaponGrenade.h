@@ -52,7 +52,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponGrenade.BPGetProjectileSpeed()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float BPGetProjectileSpeed() const
     {
         return NativeCall<float>(this, "APrimalWeaponGrenade.BPGetProjectileSpeed()");
@@ -101,7 +101,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponGrenade.HidePin()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void HidePin() const
     {
         NativeCall<void>(this, "APrimalWeaponGrenade.HidePin()");
@@ -109,7 +109,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrenade.PlayFireAnimation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     void PlayFireAnimation() const
     {
         NativeCall<void>(this, "APrimalWeaponGrenade.PlayFireAnimation()");
@@ -125,7 +125,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrenade.StartFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=35]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponGrenade.StartFire(bool)", a0);
@@ -133,7 +133,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrenade.StopFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=115]]
+    // endereco: casamento de bytes com a build de referencia
     void StopFire() const
     {
         NativeCall<void>(this, "APrimalWeaponGrenade.StopFire()");
@@ -141,7 +141,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrenade.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalWeaponGrenade.Tick(float)", a0);
@@ -157,7 +157,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponGrenade.UnHidePin()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UnHidePin() const
     {
         NativeCall<void>(this, "APrimalWeaponGrenade.UnHidePin()");
@@ -165,7 +165,7 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrenade.UpdateFirstPersonMeshes(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateFirstPersonMeshes(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponGrenade.UpdateFirstPersonMeshes(bool)", a0);
@@ -189,15 +189,31 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.ProjectileShootDir")); }
     BrzCampoPonteiro QuickThrowAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.QuickThrowAnim")); }
+    BrzCampoPonteiro bDontCookGrenadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bDontCookGrenade")); }
+    BrzCampoPonteiro bEnablePrepareThrowAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bEnablePrepareThrowAnim")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileShootDir` +24, medido na build 25090264
+    //  ancorado em `ProjectileShootDir` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1288; confianca alta)
     void*& bHiddenGrenadeFPVField() const
     { return BrzCampoAncorado<void*>(this, "ProjectileShootDir", 24); }
+    BrzCampoPonteiro bHideGrenadeOnFireProjectileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bHideGrenadeOnFireProjectile")); }
+    BrzCampoPonteiro bHideSkeletalMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bHideSkeletalMesh")); }
+    BrzCampoPonteiro bIsCookingGrenadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bIsCookingGrenade")); }
     bool& bIsThrowingGrenadeField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWeaponGrenade.bIsThrowingGrenade"); }
     bool& bIsWeapScoutField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWeaponGrenade.bIsWeapScout"); }
+    BrzCampoPonteiro bPlayBothFirstAndThirdPersonOnStartFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bPlayBothFirstAndThirdPersonOnStartFire")); }
+    BrzCampoPonteiro bPreventCookingWhileProneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bPreventCookingWhileProne")); }
+    BrzCampoPonteiro bReplicateIsCookingGrenadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bReplicateIsCookingGrenade")); }
     bool& bUseBlueprintSpeedField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWeaponGrenade.bUseBlueprintSpeed"); }
     BitFieldValue<bool, unsigned __int32> bDontCookGrenade()

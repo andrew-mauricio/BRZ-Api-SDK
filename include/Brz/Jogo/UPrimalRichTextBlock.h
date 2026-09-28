@@ -135,6 +135,10 @@ struct UPrimalRichTextBlock
     { return *GetNativePointerField<FName*>(this, "UPrimalRichTextBlock.AdjacentRightName"); }
     FName& AdjacentUpNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalRichTextBlock.AdjacentUpName"); }
+    BrzCampoPonteiro AutoWrapTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.AutoWrapText")); }
+    BrzCampoPonteiro CenterVerticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.CenterVertically")); }
     BrzCampoPonteiro ClippingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.Clipping")); }
     unsigned char& CursorField() const
@@ -157,10 +161,10 @@ struct UPrimalRichTextBlock
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.FlowDirectionPreference")); }
     float& GamepadSelectClosestDistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalRichTextBlock.GamepadSelectClosestDistanceMultiplier"); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.HandleVisibilityWithInput")); }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.Highlightable")); }
     BrzCampoPonteiro ImageStylesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.ImageStyles")); }
     unsigned char& JustificationField() const
@@ -197,8 +201,8 @@ struct UPrimalRichTextBlock
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.ToolTipWidget")); }
     BrzCampoPonteiro ToolTipWidgetDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.ToolTipWidgetDelegate")); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -209,33 +213,33 @@ struct UPrimalRichTextBlock
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.WidgetStyle")); }
     float& WrapTextAtField() const
     { return *GetNativePointerField<float*>(this, "UPrimalRichTextBlock.WrapTextAt"); }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bDontRenderHighlight")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CenterVertically` +1, medido na build 25090264
+    //  ancorado em `CenterVertically` +1, medido na build 25535041
     //  (offset absoluto medido: 0x229; confianca alta)
     void*& bIgnoreParsingField() const
     { return BrzCampoAncorado<void*>(this, "CenterVertically", 1); }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bIsVolatile")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bUseWindowClippingForHighlight")); }
     BitFieldValue<bool, unsigned __int32> AutoWrapText()
     { return { (void*)this, "AutoWrapText" }; }
     BitFieldValue<bool, unsigned __int32> CenterVertically()

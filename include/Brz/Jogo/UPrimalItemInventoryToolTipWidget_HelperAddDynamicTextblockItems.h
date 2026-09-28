@@ -32,6 +32,15 @@ struct UPrimalItemInventoryToolTipWidget_HelperAddDynamicTextblockItems
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro _blocksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicTextblockItems._blocks")); }
+    BrzCampoPonteiro _currentIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicTextblockItems._currentIndex")); }
+    BrzCampoPonteiro _groupFrequencyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicTextblockItems._groupFrequency")); }
+    BrzCampoPonteiro _groupsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget_HelperAddDynamicTextblockItems._groups")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALITEMINVENTORYTOOLTIPWIDGET_HELPERADDDYNAMICTEXTBLOCKITEMS_H

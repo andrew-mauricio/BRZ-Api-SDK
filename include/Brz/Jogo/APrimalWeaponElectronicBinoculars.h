@@ -38,7 +38,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.ClientSetActivateNightVision_Implementation(signedchar)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=194]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientSetActivateNightVision_Implementation(char a0) const
     {
         NativeCall<void, char>(this, "APrimalWeaponElectronicBinoculars.ClientSetActivateNightVision_Implementation(signedchar)", a0);
@@ -54,7 +54,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.GetPC()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     AShooterPlayerController* GetPC() const
     {
         return NativeCall<AShooterPlayerController*>(this, "APrimalWeaponElectronicBinoculars.GetPC()");
@@ -70,7 +70,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=136+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APrimalWeaponElectronicBinoculars.PostInitializeComponents()");
@@ -102,15 +102,16 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.StartSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // classe: a funcao mora em AShooterWeapon_Melee, e APrimalWeaponElectronicBinoculars herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void StartSecondaryAction() const
     {
-        NativeCall<void>(this, "APrimalWeaponElectronicBinoculars.StartSecondaryAction()");
+        NativeCall<void>(this, "AShooterWeapon_Melee.StartSecondaryAction()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.StopSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     void StopSecondaryAction() const
     {
         NativeCall<void>(this, "APrimalWeaponElectronicBinoculars.StopSecondaryAction()");
@@ -118,7 +119,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=59]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalWeaponElectronicBinoculars.Tick(float)", a0);
@@ -126,7 +127,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.ZoomIn()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63]]
+    // endereco: casamento de bytes com a build de referencia
     void ZoomIn() const
     {
         NativeCall<void>(this, "APrimalWeaponElectronicBinoculars.ZoomIn()");
@@ -151,12 +152,12 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     BrzCampoPonteiro CurrentCompassAngleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponElectronicBinoculars.CurrentCompassAngle")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LatLongInterpSpeed` +4, medido na build 25090264
+    //  ancorado em `LatLongInterpSpeed` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1194; confianca alta)
     float& CurrentLatField() const
     { return BrzCampoAncorado<float>(this, "LatLongInterpSpeed", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LatLongInterpSpeed` +8, medido na build 25090264
+    //  ancorado em `LatLongInterpSpeed` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1198; confianca alta)
     float& CurrentLongField() const
     { return BrzCampoAncorado<float>(this, "LatLongInterpSpeed", 8); }
@@ -173,7 +174,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     UMaterialInstanceDynamic*& LatitudeMIDField() const
     { return *GetNativePointerField<UMaterialInstanceDynamic**>(this, "APrimalWeaponElectronicBinoculars.LatitudeMID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +16, medido na build 25090264
+    //  ancorado em `MaxTargetingFOV` +16, medido na build 25535041
     //  (offset absoluto medido: 0x11E8; confianca alta)
     float& LatitudeNumberField() const
     { return BrzCampoAncorado<float>(this, "MaxTargetingFOV", 16); }
@@ -186,7 +187,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     UMaterialInstanceDynamic*& LongitudeMIDField() const
     { return *GetNativePointerField<UMaterialInstanceDynamic**>(this, "APrimalWeaponElectronicBinoculars.LongitudeMID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +20, medido na build 25090264
+    //  ancorado em `MaxTargetingFOV` +20, medido na build 25535041
     //  (offset absoluto medido: 0x11EC; confianca alta)
     float& LongitudeNumberField() const
     { return BrzCampoAncorado<float>(this, "MaxTargetingFOV", 20); }
@@ -201,7 +202,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     BrzCampoPonteiro NightVisionBuffField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponElectronicBinoculars.NightVisionBuff")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +8, medido na build 25090264
+    //  ancorado em `MaxTargetingFOV` +8, medido na build 25535041
     //  (offset absoluto medido: 0x11E0; confianca alta)
     AShooterPlayerController*& PCField() const
     { return BrzCampoAncorado<AShooterPlayerController*>(this, "MaxTargetingFOV", 8); }
@@ -216,15 +217,19 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     float& YPosDistanceField() const
     { return *GetNativePointerField<float*>(this, "APrimalWeaponElectronicBinoculars.YPosDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +25, medido na build 25090264
+    //  ancorado em `MaxTargetingFOV` +25, medido na build 25535041
     //  (offset absoluto medido: 0x11F1; confianca alta)
     bool& bFromGamepadLeftField() const
     { return BrzCampoAncorado<bool>(this, "MaxTargetingFOV", 25); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +24, medido na build 25090264
+    //  ancorado em `MaxTargetingFOV` +24, medido na build 25535041
     //  (offset absoluto medido: 0x11F0; confianca alta)
     void*& bHasApplyedNightVisionBuffField() const
     { return BrzCampoAncorado<void*>(this, "MaxTargetingFOV", 24); }
+    BrzCampoPonteiro bIsNightVisionOnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponElectronicBinoculars.bIsNightVisionOn")); }
+    BrzCampoPonteiro bZoomInField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponElectronicBinoculars.bZoomIn")); }
     bool& bZoomOutField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWeaponElectronicBinoculars.bZoomOut"); }
     BitFieldValue<bool, unsigned __int32> bIsNightVisionOn()

@@ -53,14 +53,14 @@ struct FTransformAnimationAttribute
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformAnimationAttribute.StaticStruct()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=55+chamadores=7]]
-    static UScriptStruct* StaticStruct()
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=55+chamadores=6]]
+    UScriptStruct* StaticStruct() const
     {
-        return NativeCall<UScriptStruct*>(nullptr, "FTransformAnimationAttribute.StaticStruct()");
+        return NativeCall<UScriptStruct*>(this, "FTransformAnimationAttribute.StaticStruct()");
     }
 
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformAnimationAttribute.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FTRANSFORMANIMATIONATTRIBUTE_H

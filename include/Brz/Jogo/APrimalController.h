@@ -43,6 +43,8 @@ struct APrimalController : public AController
 
     int& LastValidUnstasisCasterFrameField() const
     { return *GetNativePointerField<int*>(this, "APrimalController.LastValidUnstasisCasterFrame"); }
+    BrzCampoPonteiro bDebugPathingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalController.bDebugPathing")); }
     BitFieldValue<bool, unsigned __int32> bDebugPathing()
     { return { (void*)this, "bDebugPathing" }; }
 

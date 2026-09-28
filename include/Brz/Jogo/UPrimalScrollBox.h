@@ -51,16 +51,16 @@ struct UPrimalScrollBox
     { return *GetNativePointerField<FName*>(this, "UPrimalScrollBox.AdjacentRightName"); }
     FName& AdjacentUpNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalScrollBox.AdjacentUpName"); }
-    BitFieldValue<bool, unsigned __int32> AllowOverscroll()
-    { return { (void*)this, "AllowOverscroll" }; }
-    BitFieldValue<bool, unsigned __int32> AlwaysShowScrollbar()
-    { return { (void*)this, "AlwaysShowScrollbar" }; }
-    BitFieldValue<bool, unsigned __int32> AlwaysShowScrollbarTrack()
-    { return { (void*)this, "AlwaysShowScrollbarTrack" }; }
-    BitFieldValue<bool, unsigned __int32> BackPadScrolling()
-    { return { (void*)this, "BackPadScrolling" }; }
-    BitFieldValue<bool, unsigned __int32> ClipChildren()
-    { return { (void*)this, "ClipChildren" }; }
+    BrzCampoPonteiro AllowOverscrollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.AllowOverscroll")); }
+    BrzCampoPonteiro AlwaysShowScrollbarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.AlwaysShowScrollbar")); }
+    BrzCampoPonteiro AlwaysShowScrollbarTrackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.AlwaysShowScrollbarTrack")); }
+    BrzCampoPonteiro BackPadScrollingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.BackPadScrolling")); }
+    BrzCampoPonteiro ClipChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.ClipChildren")); }
     BrzCampoPonteiro ClippingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.Clipping")); }
     BrzCampoPonteiro ConsumeMouseWheelField() const
@@ -83,14 +83,14 @@ struct UPrimalScrollBox
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalScrollBox.CustomToolTipVerticalAlignment"); }
     BrzCampoPonteiro FlowDirectionPreferenceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.FlowDirectionPreference")); }
-    BitFieldValue<bool, unsigned __int32> FrontPadScrolling()
-    { return { (void*)this, "FrontPadScrolling" }; }
+    BrzCampoPonteiro FrontPadScrollingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.FrontPadScrolling")); }
     float& GamepadSelectClosestDistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalScrollBox.GamepadSelectClosestDistanceMultiplier"); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.HandleVisibilityWithInput")); }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.Highlightable")); }
     BrzCampoPonteiro NativeBindingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.NativeBindings")); }
     BrzCampoPonteiro NavigationField() const
@@ -139,12 +139,12 @@ struct UPrimalScrollBox
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.ToolTipWidget")); }
     BrzCampoPonteiro ToolTipWidgetDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.ToolTipWidgetDelegate")); }
-    BitFieldValue<bool, unsigned __int32> UseScaledRenderClipForHUDChildren()
-    { return { (void*)this, "UseScaledRenderClipForHUDChildren" }; }
-    BitFieldValue<bool, unsigned __int32> UseWidgetPaddingAsMargin()
-    { return { (void*)this, "UseWidgetPaddingAsMargin" }; }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro UseScaledRenderClipForHUDChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.UseScaledRenderClipForHUDChildren")); }
+    BrzCampoPonteiro UseWidgetPaddingAsMarginField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.UseWidgetPaddingAsMargin")); }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -167,44 +167,44 @@ struct UPrimalScrollBox
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.WidgetStyle")); }
     unsigned char& WidgetVerticalAlignmentField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalScrollBox.WidgetVerticalAlignment"); }
-    BitFieldValue<bool, unsigned __int32> bAllowRightClickDragScrolling()
-    { return { (void*)this, "bAllowRightClickDragScrolling" }; }
-    BitFieldValue<bool, unsigned __int32> bAnimateWheelScrolling()
-    { return { (void*)this, "bAnimateWheelScrolling" }; }
-    BitFieldValue<bool, unsigned __int32> bCanNavigateToDifferentPanel()
-    { return { (void*)this, "bCanNavigateToDifferentPanel" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableTouchScrolling()
-    { return { (void*)this, "bEnableTouchScrolling" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowGamepadHighlight()
-    { return { (void*)this, "bForceAllowGamepadHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bGamepadMovementMovesScrollBox()
-    { return { (void*)this, "bGamepadMovementMovesScrollBox" }; }
-    BitFieldValue<bool, unsigned __int32> bHighlightInsteadOfChild()
-    { return { (void*)this, "bHighlightInsteadOfChild" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAllowRightClickDragScrollingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bAllowRightClickDragScrolling")); }
+    BrzCampoPonteiro bAnimateWheelScrollingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bAnimateWheelScrolling")); }
+    BrzCampoPonteiro bCanNavigateToDifferentPanelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bCanNavigateToDifferentPanel")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bDontRenderHighlight")); }
+    BrzCampoPonteiro bEnableTouchScrollingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bEnableTouchScrolling")); }
+    BrzCampoPonteiro bForceAllowGamepadHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bForceAllowGamepadHighlight")); }
+    BrzCampoPonteiro bGamepadMovementMovesScrollBoxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bGamepadMovementMovesScrollBox")); }
+    BrzCampoPonteiro bHighlightInsteadOfChildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bHighlightInsteadOfChild")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalAllowRightSpecialStickScroll()
-    { return { (void*)this, "bPrimalAllowRightSpecialStickScroll" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bIsVolatile")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalAllowRightSpecialStickScrollField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bPrimalAllowRightSpecialStickScroll")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalScrollBox.bUseWindowClippingForHighlight")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALSCROLLBOX_H

@@ -35,7 +35,7 @@ struct FVectorFieldSceneProxy
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FVectorFieldSceneProxy.CreateRenderThreadResources(FRHICommandListBase&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CreateRenderThreadResources(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FVectorFieldSceneProxy.CreateRenderThreadResources(FRHICommandListBase&)", a0);
@@ -51,11 +51,16 @@ struct FVectorFieldSceneProxy
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FVectorFieldSceneProxy.GetMemoryFootprint()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMemoryFootprint() const
     {
         return NativeCall<void*>(this, "FVectorFieldSceneProxy.GetMemoryFootprint()");
     }
+
+    BrzCampoPonteiro VectorFieldInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldSceneProxy.VectorFieldInstance")); }
+    BrzCampoPonteiro VisualizationVertexFactoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldSceneProxy.VisualizationVertexFactory")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDSCENEPROXY_H

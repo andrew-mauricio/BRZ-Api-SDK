@@ -43,7 +43,7 @@ struct UGameplayTaskResource
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTaskResource.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=84]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PostInitProperties() const
     {
         return NativeCall<void*>(this, "UGameplayTaskResource.PostInitProperties()");
@@ -53,6 +53,8 @@ struct UGameplayTaskResource
     { return *GetNativePointerField<signed char*>(this, "UGameplayTaskResource.AutoResourceID"); }
     int& ManualResourceIDField() const
     { return *GetNativePointerField<int*>(this, "UGameplayTaskResource.ManualResourceID"); }
+    BrzCampoPonteiro bManuallySetIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTaskResource.bManuallySetID")); }
     BitFieldValue<bool, unsigned __int32> bManuallySetID()
     { return { (void*)this, "bManuallySetID" }; }
 

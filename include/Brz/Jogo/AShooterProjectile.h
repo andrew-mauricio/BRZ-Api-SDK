@@ -121,7 +121,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterProjectile.ClearHomingTarget()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=83]]
+    // endereco: casamento de bytes com a build de referencia
     void ClearHomingTarget() const
     {
         NativeCall<void>(this, "AShooterProjectile.ClearHomingTarget()");
@@ -137,7 +137,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.ClientNetDestroy_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNetDestroy_Implementation() const
     {
         NativeCall<void>(this, "AShooterProjectile.ClientNetDestroy_Implementation()");
@@ -145,7 +145,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.ClientNetExplode(FHitResult)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNetExplode(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterProjectile.ClientNetExplode(FHitResult)", a0);
@@ -153,7 +153,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.ClientNetExplode_Implementation(FHitResult)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=70]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientNetExplode_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterProjectile.ClientNetExplode_Implementation(FHitResult)", a0);
@@ -161,7 +161,7 @@ struct AShooterProjectile : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterProjectile.ClientNetImpactFX(FHitResult)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientNetImpactFX(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterProjectile.ClientNetImpactFX(FHitResult)", a0);
@@ -201,7 +201,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.DeactivateProjectileEffects()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void DeactivateProjectileEffects() const
     {
         NativeCall<void>(this, "AShooterProjectile.DeactivateProjectileEffects()");
@@ -209,7 +209,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.DeleteNearbyGlowSticks()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=605+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void DeleteNearbyGlowSticks() const
     {
         NativeCall<void>(this, "AShooterProjectile.DeleteNearbyGlowSticks()");
@@ -233,7 +233,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.DisableAndDestroy(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=208]]
+    // endereco: casamento de bytes com a build de referencia
     void DisableAndDestroy(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterProjectile.DisableAndDestroy(bool)", a0);
@@ -241,7 +241,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.Explode(FHitResult&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=243+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=243+chamadores=3]]
     void Explode(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterProjectile.Explode(FHitResult&)", a0);
@@ -265,7 +265,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=447+grafo=16/16]]
+    // endereco: casamento de bytes com a build de referencia
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterProjectile.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -273,7 +273,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterProjectile.GetProjectileID()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetProjectileID() const
     {
         return NativeCall<int>(this, "AShooterProjectile.GetProjectileID()");
@@ -297,7 +297,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.InitVelocity(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=283]]
+    // endereco: casamento de bytes com a build de referencia
     void InitVelocity(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterProjectile.InitVelocity(UE::Math::TVector<double>&)", a0);
@@ -305,7 +305,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.InitVelocity(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=274]]
+    // endereco: casamento de bytes com a build de referencia
     void InitVelocity(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "AShooterProjectile.InitVelocity(UE::Math::TVector<double>&,float)", a0, a1);
@@ -353,7 +353,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.NetUpdateTimer()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetUpdateTimer() const
     {
         NativeCall<void>(this, "AShooterProjectile.NetUpdateTimer()");
@@ -393,7 +393,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.OnRep_AttachmentReplication()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_AttachmentReplication() const
     {
         NativeCall<void>(this, "AShooterProjectile.OnRep_AttachmentReplication()");
@@ -434,7 +434,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.ProjectileBounced(FHitResult&,UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     void ProjectileBounced(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterProjectile.ProjectileBounced(FHitResult&,UE::Math::TVector<double>&)", a0, a1);
@@ -442,7 +442,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.Reset()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     void Reset() const
     {
         NativeCall<void>(this, "AShooterProjectile.Reset()");
@@ -458,7 +458,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.ShouldNotifyServerOfClientImpact(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldNotifyServerOfClientImpact(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AShooterProjectile.ShouldNotifyServerOfClientImpact(AActor*)", a0);
@@ -523,7 +523,7 @@ struct AShooterProjectile : public AActor
     float& CustomColorDesaturationField() const
     { return *GetNativePointerField<float*>(this, "AShooterProjectile.CustomColorDesaturation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +50, medido na build 25090264
+    //  ancorado em `ProjectileBounceSound` +50, medido na build 25535041
     //  (offset absoluto medido: 0x6F2; confianca media)
     short& CustomColorIDField() const
     { return BrzCampoAncorado<short>(this, "ProjectileBounceSound", 50); }
@@ -549,6 +549,8 @@ struct AShooterProjectile : public AActor
     { return *GetNativePointerField<float*>(this, "AShooterProjectile.FragmentOriginOffset"); }
     BrzCampoPonteiro FragmentProjectileTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.FragmentProjectileTemplate")); }
+    BrzCampoPonteiro HasPerformedAnEnvirnonmentalImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.HasPerformedAnEnvirnonmentalImpact")); }
     TArray<void*>& IgnoreNonBlockingHitClassesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterProjectile.IgnoreNonBlockingHitClasses"); }
     BrzCampoPonteiro ImpactEmitterField() const
@@ -562,7 +564,7 @@ struct AShooterProjectile : public AActor
     double& LastFoliageTraceCheckTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterProjectile.LastFoliageTraceCheckTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +8, medido na build 25090264
+    //  ancorado em `ProjectileBounceSound` +8, medido na build 25535041
     //  (offset absoluto medido: 0x6C8; confianca alta)
     double& LastProjectileBounceSoundField() const
     { return BrzCampoAncorado<double>(this, "ProjectileBounceSound", 8); }
@@ -573,7 +575,7 @@ struct AShooterProjectile : public AActor
     BrzCampoPonteiro MyAmmoTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.MyAmmoTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ImpactEmitter` +8, medido na build 25090264
+    //  ancorado em `ImpactEmitter` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4E8; confianca alta)
     TWeakObjectPtr<void>& MyControllerField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "ImpactEmitter", 8); }
@@ -592,19 +594,19 @@ struct AShooterProjectile : public AActor
     float& PostExplosionKeepAliveLifeSpanField() const
     { return *GetNativePointerField<float*>(this, "AShooterProjectile.PostExplosionKeepAliveLifeSpan"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +16, medido na build 25090264
+    //  ancorado em `ProjectileBounceSound` +16, medido na build 25535041
     //  (offset absoluto medido: 0x6D0; confianca alta)
     void*& PreviousLocationField() const
     { return BrzCampoAncorado<void*>(this, "ProjectileBounceSound", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomColorDesaturation` +8, medido na build 25090264
+    //  ancorado em `CustomColorDesaturation` +8, medido na build 25535041
     //  (offset absoluto medido: 0x508; confianca alta)
     TArray<TWeakObjectPtr<void>>& PreviousNonBlockingHitComponentsField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CustomColorDesaturation", 8); }
     USoundCue*& ProjectileBounceSoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "AShooterProjectile.ProjectileBounceSound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +40, medido na build 25090264
+    //  ancorado em `ProjectileBounceSound` +40, medido na build 25535041
     //  (offset absoluto medido: 0x6E8; confianca media)
     int& RandIntSeedField() const
     { return BrzCampoAncorado<int>(this, "ProjectileBounceSound", 40); }
@@ -628,17 +630,145 @@ struct AShooterProjectile : public AActor
     { return *GetNativePointerField<unsigned char*>(this, "AShooterProjectile.WeaponColorizeVFXUseColorRegion"); }
     BrzCampoPonteiro WeaponConfigField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.WeaponConfig")); }
+    BrzCampoPonteiro bAttachOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bAttachOnImpact")); }
+    BrzCampoPonteiro bAttachOnProjectileBouncedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bAttachOnProjectileBounced")); }
+    BrzCampoPonteiro bCheckForNonBlockingHitImpactFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bCheckForNonBlockingHitImpactFX")); }
+    BrzCampoPonteiro bClearStructureColorsOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bClearStructureColorsOnImpact")); }
+    BrzCampoPonteiro bClientTickWhenInAirAndCheckForNonBlockingHitImpactFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bClientTickWhenInAirAndCheckForNonBlockingHitImpactFX")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +44, medido na build 25090264
+    //  ancorado em `ProjectileBounceSound` +44, medido na build 25535041
     //  (offset absoluto medido: 0x6EC; confianca media)
     void*& bColorizeRegionsField() const
     { return BrzCampoAncorado<void*>(this, "ProjectileBounceSound", 44); }
+    BrzCampoPonteiro bColorizeStructureOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bColorizeStructureOnImpact")); }
+    BrzCampoPonteiro bDamageOnBeginOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDamageOnBeginOverlap")); }
+    BrzCampoPonteiro bDestroyOnExplodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDestroyOnExplode")); }
+    BrzCampoPonteiro bDestroyOnExplodeNonBlockingImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDestroyOnExplodeNonBlockingImpact")); }
+    BrzCampoPonteiro bDoFinalTraceCheckFromInstigatorToDirectDamageVictimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDoFinalTraceCheckFromInstigatorToDirectDamageVictim")); }
+    BrzCampoPonteiro bDoFinalTraceCheckToDirectDamageVictimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDoFinalTraceCheckToDirectDamageVictim")); }
+    BrzCampoPonteiro bDoFullRadialDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDoFullRadialDamage")); }
+    BrzCampoPonteiro bDontExplodeOnAnyDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDontExplodeOnAnyDamage")); }
+    BrzCampoPonteiro bDontFragmentOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bDontFragmentOnDamage")); }
+    BrzCampoPonteiro bExplodeEffectOnDestroyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExplodeEffectOnDestroy")); }
+    BrzCampoPonteiro bExplodeOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExplodeOnClient")); }
+    BrzCampoPonteiro bExplodeOnImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExplodeOnImpact")); }
+    BrzCampoPonteiro bExplodeOnLifeTimeEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExplodeOnLifeTimeEnd")); }
+    BrzCampoPonteiro bExplodeOnNonBlockingImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExplodeOnNonBlockingImpact")); }
+    BrzCampoPonteiro bExplodedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExploded")); }
+    BrzCampoPonteiro bExplosionOrientUpwardsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bExplosionOrientUpwards")); }
+    BrzCampoPonteiro bForceIgnoreBlockingHitClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bForceIgnoreBlockingHitClasses")); }
+    BrzCampoPonteiro bForceIgnoreFriendlyFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bForceIgnoreFriendlyFire")); }
     bool& bForceNetUpdateField() const
     { return *GetNativePointerField<bool*>(this, "AShooterProjectile.bForceNetUpdate"); }
+    BrzCampoPonteiro bForceUseTickFunctionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bForceUseTickFunction")); }
+    BrzCampoPonteiro bFragmentateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bFragmentate")); }
+    BrzCampoPonteiro bHadAttachParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bHadAttachParent")); }
+    BrzCampoPonteiro bHasImpactedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bHasImpacted")); }
+    BrzCampoPonteiro bIgnoreDirectImpactRadialDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bIgnoreDirectImpactRadialDamage")); }
+    BrzCampoPonteiro bIgnoredByTurretsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bIgnoredByTurrets")); }
+    BrzCampoPonteiro bImpactPvEOnlyAllyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bImpactPvEOnlyAlly")); }
+    BrzCampoPonteiro bImpactRequiresDinoLineOfSightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bImpactRequiresDinoLineOfSight")); }
+    BrzCampoPonteiro bImpactSetRotationToNormalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bImpactSetRotationToNormal")); }
+    BrzCampoPonteiro bIsGlowStickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bIsGlowStick")); }
+    BrzCampoPonteiro bIsGlowStickSelfField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bIsGlowStickSelf")); }
+    BrzCampoPonteiro bMoveIgnoreOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bMoveIgnoreOwner")); }
+    BrzCampoPonteiro bMultiTraceCollideAgainstPawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bMultiTraceCollideAgainstPawns")); }
+    BrzCampoPonteiro bNoImpactEmitterOnCharacterHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bNoImpactEmitterOnCharacterHit")); }
+    BrzCampoPonteiro bNonBlockingImpactNoExplosionEmitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bNonBlockingImpactNoExplosionEmitter")); }
+    BrzCampoPonteiro bNonBlockingVolumeMustBeWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bNonBlockingVolumeMustBeWater")); }
+    BrzCampoPonteiro bPreventReflectingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bPreventReflecting")); }
+    BrzCampoPonteiro bRadialDamageIgnoreDamageCauserField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bRadialDamageIgnoreDamageCauser")); }
+    BrzCampoPonteiro bReplicateImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bReplicateImpact")); }
+    BrzCampoPonteiro bResetHasImpactedOnMultiTraceForBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bResetHasImpactedOnMultiTraceForBlocking")); }
+    BrzCampoPonteiro bRotateMeshWhileMovingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bRotateMeshWhileMoving")); }
+    BrzCampoPonteiro bSpawnExplosionTemplateOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bSpawnExplosionTemplateOnClient")); }
+    BrzCampoPonteiro bSpawnImpactEffectOnHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bSpawnImpactEffectOnHit")); }
     //  no cache antigo este campo se chamava bSpawnedExplosionEffects.
     //  nesta build ele e' `ProjectileBounceSound` — resolve por NOME.
     BrzCampoPonteiro bSpawnedExplosionEffectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.ProjectileBounceSound")); }
+    BrzCampoPonteiro bStopOnExplodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bStopOnExplode")); }
+    BrzCampoPonteiro bTickedNonBlockingHitImpactFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bTickedNonBlockingHitImpactFX")); }
+    BrzCampoPonteiro bTraceForBlockingDoImpactBackTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bTraceForBlockingDoImpactBackTrace")); }
+    BrzCampoPonteiro bTriggerDealtDirectDamageEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bTriggerDealtDirectDamageEvent")); }
+    BrzCampoPonteiro bUseBPIgnoreProjectileImpactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseBPIgnoreProjectileImpact")); }
+    BrzCampoPonteiro bUseBPIgnoreRadialDamageVictimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseBPIgnoreRadialDamageVictim")); }
+    BrzCampoPonteiro bUseBPProjectileBouncedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseBPProjectileBounced")); }
+    BrzCampoPonteiro bUseBPRadialDamageMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseBPRadialDamageMultiplier")); }
+    BrzCampoPonteiro bUseBPUpdateExplosionEmitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseBPUpdateExplosionEmitter")); }
+    BrzCampoPonteiro bUseClientHitDeterminationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseClientHitDetermination")); }
+    BrzCampoPonteiro bUseCustomColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseCustomColor")); }
+    BrzCampoPonteiro bUseMultiTraceForBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseMultiTraceForBlocking")); }
+    BrzCampoPonteiro bUseOwnerProjectileLifeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseOwnerProjectileLife")); }
+    BrzCampoPonteiro bUseProjectileTraceChannelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseProjectileTraceChannel")); }
+    BrzCampoPonteiro bUseTraceForBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseTraceForBlocking")); }
+    BrzCampoPonteiro bUseTraceForBlockingStopOnExplodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseTraceForBlockingStopOnExplode")); }
+    BrzCampoPonteiro bUseWeaponColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bUseWeaponColorization")); }
+    BrzCampoPonteiro bWeaponColorizationColorizeVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bWeaponColorizationColorizeVFX")); }
     BitFieldValue<bool, unsigned __int32> bExploded()
     { return { (void*)this, "bExploded" }; }
     BitFieldValue<bool, unsigned __int32> bSpawnExplosionTemplateOnClient()

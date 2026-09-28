@@ -37,8 +37,8 @@ struct UPrimalInventoryDB
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryDB.CachedInventoryData")); }
     BrzCampoPonteiro NativeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryDB.NativeClass")); }
-    BitFieldValue<bool, unsigned __int32> bForceRepopulateAll()
-    { return { (void*)this, "bForceRepopulateAll" }; }
+    BrzCampoPonteiro bForceRepopulateAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryDB.bForceRepopulateAll")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALINVENTORYDB_H

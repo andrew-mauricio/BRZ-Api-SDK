@@ -78,7 +78,7 @@ struct AShooterProjectile_Swarm : public AShooterProjectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile_Swarm.DoSwarmSync()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoSwarmSync() const
     {
         NativeCall<void>(this, "AShooterProjectile_Swarm.DoSwarmSync()");
@@ -86,7 +86,7 @@ struct AShooterProjectile_Swarm : public AShooterProjectile
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterProjectile_Swarm.GetNumberOfBoidsInFlight()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetNumberOfBoidsInFlight() const
     {
         return NativeCall<int>(this, "AShooterProjectile_Swarm.GetNumberOfBoidsInFlight()");
@@ -94,7 +94,7 @@ struct AShooterProjectile_Swarm : public AShooterProjectile
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterProjectile_Swarm.LifeSpanExpired()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=347]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro LifeSpanExpired() const
     {
         return NativeCall<void*>(this, "AShooterProjectile_Swarm.LifeSpanExpired()");
@@ -214,10 +214,16 @@ struct AShooterProjectile_Swarm : public AShooterProjectile
     { return *GetNativePointerField<float*>(this, "AShooterProjectile_Swarm.SwarmTargetRadius"); }
     BrzCampoPonteiro SwarmTurnRateRangeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile_Swarm.SwarmTurnRateRange")); }
+    BrzCampoPonteiro bFadeOutSwarmOverProjectileLifeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile_Swarm.bFadeOutSwarmOverProjectileLife")); }
     //  no cache antigo este campo se chamava bPrimaryProjectileDestroyed.
     //  nesta build ele e' `ProjectilePeakTime` — resolve por NOME.
     BrzCampoPonteiro bPrimaryProjectileDestroyedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile_Swarm.ProjectilePeakTime")); }
+    BrzCampoPonteiro bUseBPGetBoidSpawnLocationAndVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile_Swarm.bUseBPGetBoidSpawnLocationAndVelocity")); }
+    BrzCampoPonteiro bUseCrazinessMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile_Swarm.bUseCrazinessMultiplier")); }
     BitFieldValue<bool, unsigned __int32> bFadeOutSwarmOverProjectileLife()
     { return { (void*)this, "bFadeOutSwarmOverProjectileLife" }; }
     BitFieldValue<bool, unsigned __int32> bUseBPGetBoidSpawnLocationAndVelocity()

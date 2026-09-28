@@ -61,7 +61,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.DrawRuntimeCellsDetails(UCanvas*,UE::Math::TVector2<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DrawRuntimeCellsDetails(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UWorldPartition.DrawRuntimeCellsDetails(UCanvas*,UE::Math::TVector2<double>&)", a0, a1);
@@ -69,7 +69,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.DrawRuntimeHash2D(FWorldPartitionDraw2DContext&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DrawRuntimeHash2D(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorldPartition.DrawRuntimeHash2D(FWorldPartitionDraw2DContext&)", a0);
@@ -77,7 +77,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.DrawRuntimeHash3D()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DrawRuntimeHash3D() const
     {
         return NativeCall<void*>(this, "UWorldPartition.DrawRuntimeHash3D()");
@@ -85,7 +85,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.GetInstanceTransform()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetInstanceTransform() const
     {
         return NativeCall<void*>(this, "UWorldPartition.GetInstanceTransform()");
@@ -93,7 +93,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.GetStreamingPerformance()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetStreamingPerformance() const
     {
         return NativeCall<void*>(this, "UWorldPartition.GetStreamingPerformance()");
@@ -109,7 +109,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.GetStreamingStateEpoch()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetStreamingStateEpoch() const
     {
         return NativeCall<void*>(this, "UWorldPartition.GetStreamingStateEpoch()");
@@ -117,7 +117,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.GetUpdateStreamingStateEpoch()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetUpdateStreamingStateEpoch() const
     {
         return NativeCall<void*>(this, "UWorldPartition.GetUpdateStreamingStateEpoch()");
@@ -125,7 +125,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.GetWorld()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UWorldPartition.GetWorld()");
@@ -149,7 +149,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.IsExternalStreamingObjectInjected(URuntimeHashExternalStreamingObjectBase*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsExternalStreamingObjectInjected(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorldPartition.IsExternalStreamingObjectInjected(URuntimeHashExternalStreamingObjectBase*)", a0);
@@ -157,7 +157,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.IsInitialized()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsInitialized() const
     {
         return NativeCall<void*>(this, "UWorldPartition.IsInitialized()");
@@ -221,7 +221,7 @@ struct UWorldPartition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartition.OnBeginPlay()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnBeginPlay() const
     {
         return NativeCall<void*>(this, "UWorldPartition.OnBeginPlay()");
@@ -310,22 +310,22 @@ struct UWorldPartition
     BrzCampoPonteiro ExternalDataLayerManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.ExternalDataLayerManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +37, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +37, medido na build 25535041
     //  (offset absoluto medido: 0x60; confianca media)
     void*& GuidField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 37); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +13, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +13, medido na build 25535041
     //  (offset absoluto medido: 0x48; confianca media)
     void*& InitStateField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 13); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +21, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +21, medido na build 25535041
     //  (offset absoluto medido: 0x50; confianca media)
     void*& InstanceTransformField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 21); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingPolicy` +16, medido na build 25090264
+    //  ancorado em `StreamingPolicy` +16, medido na build 25535041
     //  (offset absoluto medido: 0xF0; confianca alta)
     void*& ReplayField() const
     { return BrzCampoAncorado<void*>(this, "StreamingPolicy", 16); }
@@ -338,24 +338,24 @@ struct UWorldPartition
     BrzCampoPonteiro StreamingPolicyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.StreamingPolicy")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingPolicy` +8, medido na build 25090264
+    //  ancorado em `StreamingPolicy` +8, medido na build 25535041
     //  (offset absoluto medido: 0xE8; confianca alta)
     void*& StreamingStateEpochField() const
     { return BrzCampoAncorado<void*>(this, "StreamingPolicy", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +29, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +29, medido na build 25535041
     //  (offset absoluto medido: 0x58; confianca media)
     void*& TargetGridHLODField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 29); }
     BrzCampoPonteiro TileVolumesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.TileVolumes")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +53, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +53, medido na build 25535041
     //  (offset absoluto medido: 0x70; confianca media)
     void*& TransformField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 53); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +5, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +5, medido na build 25535041
     //  (offset absoluto medido: 0x40; confianca media)
     void*& WorldField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 5); }
@@ -364,27 +364,31 @@ struct UWorldPartition
     BrzCampoPonteiro WorldAssetHLODField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.RuntimeHash")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +138, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +138, medido na build 25535041
     //  (offset absoluto medido: 0xC5; confianca baixa)
     void*& bCachedIsServerStreamingEnabledField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 138); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +140, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +140, medido na build 25535041
     //  (offset absoluto medido: 0xC7; confianca baixa)
     void*& bCachedIsServerStreamingOutEnabledField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 140); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +134, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +134, medido na build 25535041
     //  (offset absoluto medido: 0xC1; confianca baixa)
     void*& bCachedUseMakingInvisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 134); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +136, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +136, medido na build 25535041
     //  (offset absoluto medido: 0xC3; confianca baixa)
     void*& bCachedUseMakingVisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 136); }
+    BrzCampoPonteiro bDisableContentBundlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.bDisableContentBundles")); }
+    BrzCampoPonteiro bEnableStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.bEnableStreaming")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +133, medido na build 25090264
+    //  ancorado em `DataLayersLogicOperator` +133, medido na build 25535041
     //  (offset absoluto medido: 0xC0; confianca baixa)
     void*& bStreamingInEnabledField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 133); }

@@ -45,6 +45,8 @@ struct FWorldMetricCollection
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldMetricCollection.Metrics")); }
     BrzCampoPonteiro SubsystemField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldMetricCollection.Subsystem")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldMetricCollection.bIsEnabled")); }
     BitFieldValue<bool, unsigned __int32> bIsEnabled()
     { return { (void*)this, "bIsEnabled" }; }
 

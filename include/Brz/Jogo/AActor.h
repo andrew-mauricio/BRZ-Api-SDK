@@ -56,7 +56,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.ActorHasTag(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ActorHasTag(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AActor.ActorHasTag(FName)", a0);
@@ -80,7 +80,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.ActorPlaySoundUnreliable(USoundBase*,bool,FName,UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ActorPlaySoundUnreliable(void* a0, bool a1, unsigned long long a2, void* a3) const
     {
         return NativeCall<void*, void*, bool, unsigned long long, void*>(this, "AActor.ActorPlaySoundUnreliable(USoundBase*,bool,FName,UE::Math::TVector<double>)", a0, a1, a2, a3);
@@ -88,7 +88,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.ActorPlaySound_Implementation(USoundBase*,bool,FName,UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ActorPlaySound_Implementation(void* a0, bool a1, unsigned long long a2, void* a3) const
     {
         NativeCall<void, void*, bool, unsigned long long, void*>(this, "AActor.ActorPlaySound_Implementation(USoundBase*,bool,FName,UE::Math::TVector<double>)", a0, a1, a2, a3);
@@ -137,14 +137,14 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.AddReferencedObjects(UObject*,FReferenceCollector&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddReferencedObjects(void* a0, void* a1)
+    BrzPonteiro AddReferencedObjects(void* a0, void* a1) const
     {
-        return NativeCall<void*, void*, void*>(nullptr, "AActor.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
+        return NativeCall<void*, void*, void*>(this, "AActor.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.AddReplicatedSubObject(UObject*,ELifetimeCondition)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddReplicatedSubObject(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "AActor.AddReplicatedSubObject(UObject*,ELifetimeCondition)", a0, a1);
@@ -152,7 +152,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.AddTickPrerequisiteActor(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddTickPrerequisiteActor(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.AddTickPrerequisiteActor(AActor*)", a0);
@@ -160,7 +160,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.AddTickPrerequisiteComponent(UActorComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddTickPrerequisiteComponent(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.AddTickPrerequisiteComponent(UActorComponent*)", a0);
@@ -168,7 +168,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.AllowActorComponentToReplicate(UActorComponent*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int AllowActorComponentToReplicate(void* a0) const
     {
         return NativeCall<int, void*>(this, "AActor.AllowActorComponentToReplicate(UActorComponent*)", a0);
@@ -184,7 +184,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.AttachToActor(AActor*,FAttachmentTransformRules&,FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool AttachToActor(void* a0, void* a1, unsigned long long a2) const
     {
         return NativeCall<bool, void*, void*, unsigned long long>(this, "AActor.AttachToActor(AActor*,FAttachmentTransformRules&,FName)", a0, a1, a2);
@@ -192,7 +192,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.AttachToComponent(USceneComponent*,FAttachmentTransformRules&,FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AttachToComponent(void* a0, void* a1, unsigned long long a2) const
     {
         return NativeCall<bool, void*, void*, unsigned long long>(this, "AActor.AttachToComponent(USceneComponent*,FAttachmentTransformRules&,FName)", a0, a1, a2);
@@ -232,7 +232,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.BecomeViewTarget(APlayerController*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void BecomeViewTarget(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.BecomeViewTarget(APlayerController*)", a0);
@@ -248,7 +248,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "AActor.BeginPlay()");
@@ -256,7 +256,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.BuildReplicatedComponentsInfo()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void BuildReplicatedComponentsInfo() const
     {
         NativeCall<void>(this, "AActor.BuildReplicatedComponentsInfo()");
@@ -304,7 +304,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.CanTriggerResimulation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanTriggerResimulation() const
     {
         return NativeCall<void*>(this, "AActor.CanTriggerResimulation()");
@@ -360,7 +360,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.ClearNetworkSpatializationParent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClearNetworkSpatializationParent() const
     {
         NativeCall<void>(this, "AActor.ClearNetworkSpatializationParent()");
@@ -440,7 +440,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.DetachFromActor(FDetachmentTransformRules&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DetachFromActor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AActor.DetachFromActor(FDetachmentTransformRules&)", a0);
@@ -448,7 +448,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.DetachRootComponentFromParent(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void DetachRootComponentFromParent(bool a0) const
     {
         NativeCall<void, bool>(this, "AActor.DetachRootComponentFromParent(bool)", a0);
@@ -464,7 +464,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.DisableInput(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=146]]
+    // endereco: casamento de bytes com a build de referencia
     void DisableInput(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.DisableInput(APlayerController*)", a0);
@@ -520,7 +520,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.EndViewTarget(APlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndViewTarget(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.EndViewTarget(APlayerController*)", a0);
@@ -536,7 +536,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.FellOutOfWorld(UDamageType&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=82]]
+    // endereco: casamento de bytes com a build de referencia
     void FellOutOfWorld(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.FellOutOfWorld(UDamageType&)", a0);
@@ -560,7 +560,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.FindComponentByClass<UBehaviorTreeComponent>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindComponentByClass_UBehaviorTreeComponent_() const
     {
         return NativeCall<void*>(this, "AActor.FindComponentByClass<UBehaviorTreeComponent>()");
@@ -568,7 +568,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.FindComponentByClass<UBlackboardComponent>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindComponentByClass_UBlackboardComponent_() const
     {
         return NativeCall<void*>(this, "AActor.FindComponentByClass<UBlackboardComponent>()");
@@ -592,7 +592,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.FindComponentByClass<UCharacterMovementComponent>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=76]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro FindComponentByClass_UCharacterMovementComponent_() const
     {
         return NativeCall<void*>(this, "AActor.FindComponentByClass<UCharacterMovementComponent>()");
@@ -624,7 +624,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.FindComponentByClass<USkeletalMeshComponent>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FindComponentByClass_USkeletalMeshComponent_() const
     {
         return NativeCall<void*>(this, "AActor.FindComponentByClass<USkeletalMeshComponent>()");
@@ -664,7 +664,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.FinishAddComponent(UActorComponent*,bool,UE::Math::TTransform<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void FinishAddComponent(void* a0, bool a1, void* a2) const
     {
         NativeCall<void, void*, bool, void*>(this, "AActor.FinishAddComponent(UActorComponent*,bool,UE::Math::TTransform<double>&)", a0, a1, a2);
@@ -673,9 +673,9 @@ struct AActor : public UPrimalActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.FinishSpawning(UE::Math::TTransform<double>&,bool,FComponentInstanceDataCache*,ESpawnActo
     // endereco: casamento de bytes com a build de referencia
-    static void FinishSpawning(void* a0, bool a1, void* a2, int a3)
+    void FinishSpawning(void* a0, bool a1, void* a2, int a3) const
     {
-        NativeCall<void, void*, bool, void*, int>(nullptr, "AActor.FinishSpawning(UE::Math::TTransform<double>&,bool,FComponentInstanceDataCache*,ESpawnActorScaleMethod)", a0, a1, a2, a3);
+        NativeCall<void, void*, bool, void*, int>(this, "AActor.FinishSpawning(UE::Math::TTransform<double>&,bool,FComponentInstanceDataCache*,ESpawnActorScaleMethod)", a0, a1, a2, a3);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -752,7 +752,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.ForcePropertyCompare()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ForcePropertyCompare() const
     {
         NativeCall<void>(this, "AActor.ForcePropertyCompare()");
@@ -776,7 +776,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetActorScale3D()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetActorScale3D() const
     {
         return NativeCall<void*>(this, "AActor.GetActorScale3D()");
@@ -792,7 +792,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetActorTimeDilation(UWorld&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetActorTimeDilation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AActor.GetActorTimeDilation(UWorld&)", a0);
@@ -808,7 +808,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetAttachParentActor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAttachParentActor() const
     {
         return NativeCall<void*>(this, "AActor.GetAttachParentActor()");
@@ -816,7 +816,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetAttachParentSocketName()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAttachParentSocketName() const
     {
         return NativeCall<void*>(this, "AActor.GetAttachParentSocketName()");
@@ -848,7 +848,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetComponents<UPrimitiveComponent,TSizedDefaultAllocator<32>>(TArray<UPrimitiveComponent*
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=338+bytes40+chamadores=3]]
     BrzPonteiro GetComponents_UPrimitiveComponent_TSizedDefaultAllocator_32__(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AActor.GetComponents<UPrimitiveComponent,TSizedDefaultAllocator<32>>(TArray<UPrimitiveComponent*,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -912,7 +912,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetDistanceTo(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float GetDistanceTo(void* a0) const
     {
         return NativeCall<float, void*>(this, "AActor.GetDistanceTo(AActor*)", a0);
@@ -929,9 +929,9 @@ struct AActor : public UPrimalActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetGameInstance()
     // endereco: casamento de bytes com a build de referencia
-    static UGameInstance* GetGameInstance()
+    UGameInstance* GetGameInstance() const
     {
-        return NativeCall<UGameInstance*>(nullptr, "AActor.GetGameInstance()");
+        return NativeCall<UGameInstance*>(this, "AActor.GetGameInstance()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -952,7 +952,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetInputAxisValue(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetInputAxisValue(unsigned long long a0) const
     {
         return NativeCall<float, unsigned long long>(this, "AActor.GetInputAxisValue(FName)", a0);
@@ -960,7 +960,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetInstanceComponents()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetInstanceComponents() const
     {
         return NativeCall<void*>(this, "AActor.GetInstanceComponents()");
@@ -976,7 +976,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetInstigatorController()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetInstigatorController() const
     {
         return NativeCall<void*>(this, "AActor.GetInstigatorController()");
@@ -992,7 +992,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetLevel()
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevel() const
     {
         return NativeCall<void*>(this, "AActor.GetLevel()");
@@ -1000,7 +1000,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetLifeSpan()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetLifeSpan() const
     {
         return NativeCall<float>(this, "AActor.GetLifeSpan()");
@@ -1014,18 +1014,17 @@ struct AActor : public UPrimalActor
         NativeCall<void, void*>(this, "AActor.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
     }
 
-    // ── NAO EXISTE COMO FUNCAO: e' `inline` na Unreal ──────────────
-    //
-    //   AActor.GetMinNetUpdateFrequency() nao tem endereco nesta build e nao vai ter:
-    //   o compilador dissolve o getter dentro de quem chama.
-    //   Ate' 09/09/2026 esta chamada devolvia o ZERO do tipo.
-    //
-    //   Agora le' o campo, pela reflexao viva, como o resto do SDK.
-    float GetMinNetUpdateFrequency() const { return MinNetUpdateFrequencyField(); }
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AActor.GetMinNetUpdateFrequency()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro GetMinNetUpdateFrequency() const
+    {
+        return NativeCall<void*>(this, "AActor.GetMinNetUpdateFrequency()");
+    }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetNetCullDistanceSquared()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNetCullDistanceSquared() const
     {
         return NativeCall<void*>(this, "AActor.GetNetCullDistanceSquared()");
@@ -1033,7 +1032,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetNetDriver()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=126+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     UNetDriver* GetNetDriver() const
     {
         return NativeCall<UNetDriver*>(this, "AActor.GetNetDriver()");
@@ -1041,7 +1040,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetNetOwner()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNetOwner() const
     {
         return NativeCall<void*>(this, "AActor.GetNetOwner()");
@@ -1049,7 +1048,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetNetOwningPlayer()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPlayer* GetNetOwningPlayer() const
     {
         return NativeCall<UPlayer*>(this, "AActor.GetNetOwningPlayer()");
@@ -1081,7 +1080,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetOwnerController()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     APlayerController* GetOwnerController() const
     {
         return NativeCall<APlayerController*>(this, "AActor.GetOwnerController()");
@@ -1089,7 +1088,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetParentActor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetParentActor() const
     {
         return NativeCall<void*>(this, "AActor.GetParentActor()");
@@ -1097,7 +1096,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetParentComponent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UChildActorComponent* GetParentComponent() const
     {
         return NativeCall<UChildActorComponent*>(this, "AActor.GetParentComponent()");
@@ -1105,7 +1104,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetPhysicsReplicationMode()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetPhysicsReplicationMode() const
     {
         return NativeCall<void*>(this, "AActor.GetPhysicsReplicationMode()");
@@ -1121,7 +1120,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetRayTracingGroupId()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     int GetRayTracingGroupId() const
     {
         return NativeCall<int>(this, "AActor.GetRayTracingGroupId()");
@@ -1185,7 +1184,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.GetSimpleCollisionCylinder(float&,float&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void GetSimpleCollisionCylinder(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AActor.GetSimpleCollisionCylinder(float&,float&)", a0, a1);
@@ -1193,7 +1192,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetSquaredDistanceTo(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetSquaredDistanceTo(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AActor.GetSquaredDistanceTo(AActor*)", a0);
@@ -1209,7 +1208,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetTransform()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTransform() const
     {
         return NativeCall<void*>(this, "AActor.GetTransform()");
@@ -1289,7 +1288,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.HasLocalNetOwner()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=203]]
+    // endereco: casamento de bytes com a build de referencia
     bool HasLocalNetOwner() const
     {
         return NativeCall<bool>(this, "AActor.HasLocalNetOwner()");
@@ -1297,7 +1296,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.HasNetOwner()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasNetOwner() const
     {
         return NativeCall<bool>(this, "AActor.HasNetOwner()");
@@ -1305,7 +1304,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IncrementalRegisterComponents(int,FRegisterComponentContext*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IncrementalRegisterComponents(int a0, void* a1) const
     {
         return NativeCall<bool, int, void*>(this, "AActor.IncrementalRegisterComponents(int,FRegisterComponentContext*)", a0, a1);
@@ -1345,7 +1344,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.InternalGetNetMode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=153+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     int InternalGetNetMode() const
     {
         return NativeCall<int>(this, "AActor.InternalGetNetMode()");
@@ -1369,7 +1368,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.IsActorTickEnabled()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsActorTickEnabled() const
     {
         return NativeCall<void*>(this, "AActor.IsActorTickEnabled()");
@@ -1377,7 +1376,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsAsset()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=109]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsAsset() const
     {
         return NativeCall<bool>(this, "AActor.IsAsset()");
@@ -1385,7 +1384,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsAttachedTo(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsAttachedTo(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AActor.IsAttachedTo(AActor*)", a0);
@@ -1393,7 +1392,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsChildActor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsChildActor() const
     {
         return NativeCall<bool>(this, "AActor.IsChildActor()");
@@ -1442,7 +1441,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsLevelBoundsRelevant()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsLevelBoundsRelevant() const
     {
         return NativeCall<bool>(this, "AActor.IsLevelBoundsRelevant()");
@@ -1490,7 +1489,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsRelevancyOwnerFor(AActor*,AActor*,AActor*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsRelevancyOwnerFor(void* a0, void* a1, void* a2) const
     {
         return NativeCall<bool, void*, void*, void*>(this, "AActor.IsRelevancyOwnerFor(AActor*,AActor*,AActor*)", a0, a1, a2);
@@ -1498,7 +1497,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsRootComponentCollisionRegistered()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsRootComponentCollisionRegistered() const
     {
         return NativeCall<bool>(this, "AActor.IsRootComponentCollisionRegistered()");
@@ -1506,7 +1505,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.IsRootComponentMovable()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsRootComponentMovable() const
     {
         return NativeCall<void*>(this, "AActor.IsRootComponentMovable()");
@@ -1514,7 +1513,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.IsRootComponentStatic()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsRootComponentStatic() const
     {
         return NativeCall<void*>(this, "AActor.IsRootComponentStatic()");
@@ -1522,7 +1521,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.IsRootComponentStationary()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsRootComponentStationary() const
     {
         return NativeCall<void*>(this, "AActor.IsRootComponentStationary()");
@@ -1538,7 +1537,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.IsWithinNetRelevancyDistance(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=162]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsWithinNetRelevancyDistance(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AActor.IsWithinNetRelevancyDistance(UE::Math::TVector<double>&)", a0);
@@ -1546,7 +1545,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.K2_AttachRootComponentTo(USceneComponent*,FName,EAttachLocation::Type,bool)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro K2_AttachRootComponentTo(void* a0, unsigned long long a1, int a2, bool a3) const
     {
         return NativeCall<void*, void*, unsigned long long, int, bool>(this, "AActor.K2_AttachRootComponentTo(USceneComponent*,FName,EAttachLocation::Type,bool)", a0, a1, a2, a3);
@@ -1562,7 +1561,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.K2_TeleportTo(UE::Math::TVector<double>,UE::Math::TRotator<double>,bool,float)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro K2_TeleportTo(void* a0, void* a1, bool a2, float a3) const
     {
         return NativeCall<void*, void*, void*, bool, float>(this, "AActor.K2_TeleportTo(UE::Math::TVector<double>,UE::Math::TRotator<double>,bool,float)", a0, a1, a2, a3);
@@ -1594,7 +1593,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.MarkComponentsRenderStateDirty()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void MarkComponentsRenderStateDirty() const
     {
         NativeCall<void>(this, "AActor.MarkComponentsRenderStateDirty()");
@@ -1602,7 +1601,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MarkNeedsRecomputeBoundsOnceForGame()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MarkNeedsRecomputeBoundsOnceForGame() const
     {
         return NativeCall<void*>(this, "AActor.MarkNeedsRecomputeBoundsOnceForGame()");
@@ -1611,14 +1610,14 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugArrow(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinear
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugArrow(void* a0, void* a1, float a2, void* a3, float a4, bool a5)
+    BrzPonteiro MulticastDrawDebugArrow(void* a0, void* a1, float a2, void* a3, float a4, bool a5) const
     {
-        return NativeCall<void*, void*, void*, float, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugArrow(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
+        return NativeCall<void*, void*, void*, float, void*, float, bool>(this, "AActor.MulticastDrawDebugArrow(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugArrow_Implementation(UE::Math::TVector<double>,UE::Math::TVector<double
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=297]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro MulticastDrawDebugArrow_Implementation(void* a0, void* a1, float a2, void* a3, float a4, bool a5) const
     {
         return NativeCall<void*, void*, void*, float, void*, float, bool>(this, "AActor.MulticastDrawDebugArrow_Implementation(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
@@ -1627,14 +1626,14 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugBox(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,UE
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugBox(void* a0, void* a1, void* a2, void* a3, float a4, bool a5)
+    BrzPonteiro MulticastDrawDebugBox(void* a0, void* a1, void* a2, void* a3, float a4, bool a5) const
     {
-        return NativeCall<void*, void*, void*, void*, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugBox(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,UE::Math::TRotator<double>,float,bool)", a0, a1, a2, a3, a4, a5);
+        return NativeCall<void*, void*, void*, void*, void*, float, bool>(this, "AActor.MulticastDrawDebugBox(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,UE::Math::TRotator<double>,float,bool)", a0, a1, a2, a3, a4, a5);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugBox_Implementation(UE::Math::TVector<double>,UE::Math::TVector<double>,
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MulticastDrawDebugBox_Implementation(void* a0, void* a1, void* a2, void* a3, float a4, bool a5) const
     {
         return NativeCall<void*, void*, void*, void*, void*, float, bool>(this, "AActor.MulticastDrawDebugBox_Implementation(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,UE::Math::TRotator<double>,float,bool)", a0, a1, a2, a3, a4, a5);
@@ -1643,14 +1642,14 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCamera(ACameraActor*,FLinearColor,float,bool)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugCamera(void* a0, void* a1, float a2, bool a3)
+    BrzPonteiro MulticastDrawDebugCamera(void* a0, void* a1, float a2, bool a3) const
     {
-        return NativeCall<void*, void*, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugCamera(ACameraActor*,FLinearColor,float,bool)", a0, a1, a2, a3);
+        return NativeCall<void*, void*, void*, float, bool>(this, "AActor.MulticastDrawDebugCamera(ACameraActor*,FLinearColor,float,bool)", a0, a1, a2, a3);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCamera_Implementation(ACameraActor*,FLinearColor,float,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=183]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MulticastDrawDebugCamera_Implementation(void* a0, void* a1, float a2, bool a3) const
     {
         return NativeCall<void*, void*, void*, float, bool>(this, "AActor.MulticastDrawDebugCamera_Implementation(ACameraActor*,FLinearColor,float,bool)", a0, a1, a2, a3);
@@ -1659,22 +1658,22 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCapsule(UE::Math::TVector<double>,float,float,UE::Math::TRotator<double
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugCapsule(void* a0, float a1, float a2, void* a3, void* a4, float a5, bool a6)
+    BrzPonteiro MulticastDrawDebugCapsule(void* a0, float a1, float a2, void* a3, void* a4, float a5, bool a6) const
     {
-        return NativeCall<void*, void*, float, float, void*, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugCapsule(UE::Math::TVector<double>,float,float,UE::Math::TRotator<double>,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5, a6);
+        return NativeCall<void*, void*, float, float, void*, void*, float, bool>(this, "AActor.MulticastDrawDebugCapsule(UE::Math::TVector<double>,float,float,UE::Math::TRotator<double>,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5, a6);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCapsuleWithExtents(UE::Math::TVector<double>,UE::Math::TVector<double>,
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugCapsuleWithExtents(void* a0, void* a1, float a2, void* a3, float a4, bool a5, bool a6)
+    BrzPonteiro MulticastDrawDebugCapsuleWithExtents(void* a0, void* a1, float a2, void* a3, float a4, bool a5, bool a6) const
     {
-        return NativeCall<void*, void*, void*, float, void*, float, bool, bool>(nullptr, "AActor.MulticastDrawDebugCapsuleWithExtents(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool,bool)", a0, a1, a2, a3, a4, a5, a6);
+        return NativeCall<void*, void*, void*, float, void*, float, bool, bool>(this, "AActor.MulticastDrawDebugCapsuleWithExtents(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool,bool)", a0, a1, a2, a3, a4, a5, a6);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCapsuleWithExtents_Implementation(UE::Math::TVector<double>,UE::Math::T
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=295]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro MulticastDrawDebugCapsuleWithExtents_Implementation(void* a0, void* a1, float a2, void* a3, float a4, bool a5, bool a6) const
     {
         return NativeCall<void*, void*, void*, float, void*, float, bool, bool>(this, "AActor.MulticastDrawDebugCapsuleWithExtents_Implementation(UE::Math::TVector<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool,bool)", a0, a1, a2, a3, a4, a5, a6);
@@ -1691,9 +1690,9 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCoordinateSystem(UE::Math::TVector<double>,UE::Math::TRotator<double>,f
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugCoordinateSystem(void* a0, void* a1, float a2, float a3, float a4, bool a5)
+    BrzPonteiro MulticastDrawDebugCoordinateSystem(void* a0, void* a1, float a2, float a3, float a4, bool a5) const
     {
-        return NativeCall<void*, void*, void*, float, float, float, bool>(nullptr, "AActor.MulticastDrawDebugCoordinateSystem(UE::Math::TVector<double>,UE::Math::TRotator<double>,float,float,float,bool)", a0, a1, a2, a3, a4, a5);
+        return NativeCall<void*, void*, void*, float, float, float, bool>(this, "AActor.MulticastDrawDebugCoordinateSystem(UE::Math::TVector<double>,UE::Math::TRotator<double>,float,float,float,bool)", a0, a1, a2, a3, a4, a5);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -1707,9 +1706,9 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugCylinder(UE::Math::TVector<double>,UE::Math::TVector<double>,float,int,
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugCylinder(void* a0, void* a1, float a2, int a3, void* a4, float a5, bool a6)
+    BrzPonteiro MulticastDrawDebugCylinder(void* a0, void* a1, float a2, int a3, void* a4, float a5, bool a6) const
     {
-        return NativeCall<void*, void*, void*, float, int, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugCylinder(UE::Math::TVector<double>,UE::Math::TVector<double>,float,int,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5, a6);
+        return NativeCall<void*, void*, void*, float, int, void*, float, bool>(this, "AActor.MulticastDrawDebugCylinder(UE::Math::TVector<double>,UE::Math::TVector<double>,float,int,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5, a6);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -1723,9 +1722,9 @@ struct AActor : public UPrimalActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.MulticastDrawDebugLine(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,f
     // endereco: casamento de bytes com a build de referencia
-    static void MulticastDrawDebugLine(void* a0, void* a1, void* a2, float a3, float a4, bool a5)
+    void MulticastDrawDebugLine(void* a0, void* a1, void* a2, float a3, float a4, bool a5) const
     {
-        NativeCall<void, void*, void*, void*, float, float, bool>(nullptr, "AActor.MulticastDrawDebugLine(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,float,float,bool)", a0, a1, a2, a3, a4, a5);
+        NativeCall<void, void*, void*, void*, float, float, bool>(this, "AActor.MulticastDrawDebugLine(UE::Math::TVector<double>,UE::Math::TVector<double>,FLinearColor,float,float,bool)", a0, a1, a2, a3, a4, a5);
     }
 
     // dump_sobre_sdk_287a0
@@ -1746,7 +1745,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugPlane_Implementation(UE::Math::TPlane<double>,UE::Math::TVector<double>
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MulticastDrawDebugPlane_Implementation(void* a0, void* a1, float a2, void* a3, float a4, bool a5) const
     {
         return NativeCall<void*, void*, void*, float, void*, float, bool>(this, "AActor.MulticastDrawDebugPlane_Implementation(UE::Math::TPlane<double>,UE::Math::TVector<double>,float,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
@@ -1755,9 +1754,9 @@ struct AActor : public UPrimalActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.MulticastDrawDebugPoint(UE::Math::TVector<double>,float,FLinearColor,float,bool)
     // endereco: casamento de bytes com a build de referencia
-    static void MulticastDrawDebugPoint(void* a0, float a1, void* a2, float a3, bool a4)
+    void MulticastDrawDebugPoint(void* a0, float a1, void* a2, float a3, bool a4) const
     {
-        NativeCall<void, void*, float, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugPoint(UE::Math::TVector<double>,float,FLinearColor,float,bool)", a0, a1, a2, a3, a4);
+        NativeCall<void, void*, float, void*, float, bool>(this, "AActor.MulticastDrawDebugPoint(UE::Math::TVector<double>,float,FLinearColor,float,bool)", a0, a1, a2, a3, a4);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -1771,14 +1770,14 @@ struct AActor : public UPrimalActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.MulticastDrawDebugSphere(UE::Math::TVector<double>,float,int,FLinearColor,float,bool)
     // endereco: casamento de bytes com a build de referencia
-    static void MulticastDrawDebugSphere(void* a0, float a1, int a2, void* a3, float a4, bool a5)
+    void MulticastDrawDebugSphere(void* a0, float a1, int a2, void* a3, float a4, bool a5) const
     {
-        NativeCall<void, void*, float, int, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugSphere(UE::Math::TVector<double>,float,int,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
+        NativeCall<void, void*, float, int, void*, float, bool>(this, "AActor.MulticastDrawDebugSphere(UE::Math::TVector<double>,float,int,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugSphere_Implementation(UE::Math::TVector<double>,float,int,FLinearColor,
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro MulticastDrawDebugSphere_Implementation(void* a0, float a1, int a2, void* a3, float a4, bool a5) const
     {
         return NativeCall<void*, void*, float, int, void*, float, bool>(this, "AActor.MulticastDrawDebugSphere_Implementation(UE::Math::TVector<double>,float,int,FLinearColor,float,bool)", a0, a1, a2, a3, a4, a5);
@@ -1787,13 +1786,13 @@ struct AActor : public UPrimalActor
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.MulticastDrawDebugString(UE::Math::TVector<double>,FString&,AActor*,FLinearColor,float,bo
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro MulticastDrawDebugString(void* a0, const FString& a1, void* a2, void* a3, float a4, bool a5)
+    BrzPonteiro MulticastDrawDebugString(void* a0, const FString& a1, void* a2, void* a3, float a4, bool a5) const
     {
-        return NativeCall<void*, void*, void*, void*, void*, float, bool>(nullptr, "AActor.MulticastDrawDebugString(UE::Math::TVector<double>,FString&,AActor*,FLinearColor,float,bool)", a0, const_cast<FString*>(&a1), a2, a3, a4, a5);
+        return NativeCall<void*, void*, void*, void*, void*, float, bool>(this, "AActor.MulticastDrawDebugString(UE::Math::TVector<double>,FString&,AActor*,FLinearColor,float,bool)", a0, const_cast<FString*>(&a1), a2, a3, a4, a5);
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static BrzPonteiro MulticastDrawDebugString(void* a0, FString* a1, void* a2, void* a3, float a4, bool a5)
+    BrzPonteiro MulticastDrawDebugString(void* a0, FString* a1, void* a2, void* a3, float a4, bool a5) const
     { return MulticastDrawDebugString(a0, *a1, a2, a3, a4, a5); }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -1834,7 +1833,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.NetSpawnedActor(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NetSpawnedActor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AActor.NetSpawnedActor(AActor*)", a0);
@@ -1842,7 +1841,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.NotifyActorOnClicked(FKey)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63+bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyActorOnClicked(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.NotifyActorOnClicked(FKey)", a0);
@@ -1850,7 +1849,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.NotifyActorOnReleased(FKey)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63+bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyActorOnReleased(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.NotifyActorOnReleased(FKey)", a0);
@@ -1858,7 +1857,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.OnRep_AttachmentReplication()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=41]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_AttachmentReplication() const
     {
         NativeCall<void>(this, "AActor.OnRep_AttachmentReplication()");
@@ -1914,7 +1913,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitProperties() const
     {
         NativeCall<void>(this, "AActor.PostInitProperties()");
@@ -1930,7 +1929,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.PostLoad()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void PostLoad() const
     {
         NativeCall<void>(this, "AActor.PostLoad()");
@@ -1970,7 +1969,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.PostNetReceivePhysicState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=366]]
+    // endereco: casamento de bytes com a build de referencia
     void PostNetReceivePhysicState() const
     {
         NativeCall<void>(this, "AActor.PostNetReceivePhysicState()");
@@ -2026,7 +2025,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.PreNetReceive()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PreNetReceive() const
     {
         NativeCall<void>(this, "AActor.PreNetReceive()");
@@ -2042,7 +2041,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.PreReplication(IRepChangedPropertyTracker&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void PreReplication(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.PreReplication(IRepChangedPropertyTracker&)", a0);
@@ -2050,7 +2049,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.PreReplicationForReplay(IRepChangedPropertyTracker&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PreReplicationForReplay(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.PreReplicationForReplay(IRepChangedPropertyTracker&)", a0);
@@ -2090,7 +2089,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.RealtimeThrottledTick_Implementation(double)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RealtimeThrottledTick_Implementation(double a0) const
     {
         NativeCall<void, double>(this, "AActor.RealtimeThrottledTick_Implementation(double)", a0);
@@ -2114,7 +2113,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.RegisterAllActorTickFunctions(bool,bool,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void RegisterAllActorTickFunctions(bool a0, bool a1, bool a2) const
     {
         NativeCall<void, bool, bool, bool>(this, "AActor.RegisterAllActorTickFunctions(bool,bool,bool)", a0, a1, a2);
@@ -2130,7 +2129,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.RemoveActorComponentReplicatedSubObject(UActorComponent*,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveActorComponentReplicatedSubObject(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AActor.RemoveActorComponentReplicatedSubObject(UActorComponent*,UObject*)", a0, a1);
@@ -2138,7 +2137,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.RemoveInstanceComponent(UActorComponent*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RemoveInstanceComponent(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AActor.RemoveInstanceComponent(UActorComponent*)", a0);
@@ -2162,7 +2161,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.RemoveReplicatedSubObject(UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveReplicatedSubObject(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AActor.RemoveReplicatedSubObject(UObject*)", a0);
@@ -2170,7 +2169,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.RemoveTickPrerequisiteActor(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemoveTickPrerequisiteActor(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.RemoveTickPrerequisiteActor(AActor*)", a0);
@@ -2178,7 +2177,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.RemoveTickPrerequisiteComponent(UActorComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemoveTickPrerequisiteComponent(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.RemoveTickPrerequisiteComponent(UActorComponent*)", a0);
@@ -2202,7 +2201,7 @@ struct AActor : public UPrimalActor
 
     // jogo_confirmou_dump
     //   AActor.ReregisterAllComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=38]]
+    // endereco: casamento de bytes com a build de referencia
     void ReregisterAllComponents() const
     {
         NativeCall<void>(this, "AActor.ReregisterAllComponents()");
@@ -2218,7 +2217,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.ResetOwnedComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ResetOwnedComponents() const
     {
         NativeCall<void>(this, "AActor.ResetOwnedComponents()");
@@ -2298,7 +2297,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.SetActorHiddenInGame(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetActorHiddenInGame(bool a0) const
     {
         NativeCall<void, bool>(this, "AActor.SetActorHiddenInGame(bool)", a0);
@@ -2314,7 +2313,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetActorLocationAndRotation(UE::Math::TVector<double>,UE::Math::TQuat<double>&,bool,FHitR
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetActorLocationAndRotation(void* a0, void* a1, bool a2, void* a3, int a4) const
     {
         return NativeCall<void*, void*, void*, bool, void*, int>(this, "AActor.SetActorLocationAndRotation(UE::Math::TVector<double>,UE::Math::TQuat<double>&,bool,FHitResult*,ETeleportType)", a0, a1, a2, a3, a4);
@@ -2346,7 +2345,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.SetActorRelativeTransform(UE::Math::TTransform<double>&,bool,FHitResult*,ETeleportType)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=258+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=258+bytes40+chamadores=2]]
     void SetActorRelativeTransform(void* a0, bool a1, void* a2, int a3) const
     {
         NativeCall<void, void*, bool, void*, int>(this, "AActor.SetActorRelativeTransform(UE::Math::TTransform<double>&,bool,FHitResult*,ETeleportType)", a0, a1, a2, a3);
@@ -2394,7 +2393,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetAutonomousProxy(bool,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetAutonomousProxy(bool a0, bool a1) const
     {
         return NativeCall<void*, bool, bool>(this, "AActor.SetAutonomousProxy(bool,bool)", a0, a1);
@@ -2402,7 +2401,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.SetCanBeDamaged(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCanBeDamaged(bool a0) const
     {
         NativeCall<void, bool>(this, "AActor.SetCanBeDamaged(bool)", a0);
@@ -2418,7 +2417,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetHidden(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetHidden(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AActor.SetHidden(bool)", a0);
@@ -2450,7 +2449,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetMinNetUpdateFrequency(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetMinNetUpdateFrequency(float a0) const
     {
         return NativeCall<void*, float>(this, "AActor.SetMinNetUpdateFrequency(float)", a0);
@@ -2458,7 +2457,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetNetAddressable()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetNetAddressable() const
     {
         return NativeCall<void*>(this, "AActor.SetNetAddressable()");
@@ -2474,7 +2473,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.SetNetDriverName(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetNetDriverName(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AActor.SetNetDriverName(FName)", a0);
@@ -2482,7 +2481,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetNetUpdateFrequency(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetNetUpdateFrequency(float a0) const
     {
         return NativeCall<void*, float>(this, "AActor.SetNetUpdateFrequency(float)", a0);
@@ -2506,7 +2505,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetPhysicsReplicationMode(EPhysicsReplicationMode)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetPhysicsReplicationMode(int a0) const
     {
         return NativeCall<void*, int>(this, "AActor.SetPhysicsReplicationMode(EPhysicsReplicationMode)", a0);
@@ -2522,7 +2521,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetReplicatingMovement(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetReplicatingMovement(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AActor.SetReplicatingMovement(bool)", a0);
@@ -2530,7 +2529,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetRole(ENetRole)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetRole(int a0) const
     {
         return NativeCall<void*, int>(this, "AActor.SetRole(ENetRole)", a0);
@@ -2546,7 +2545,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.SetTickGroup(ETickingGroup)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetTickGroup(int a0) const
     {
         return NativeCall<void*, int>(this, "AActor.SetTickGroup(ETickingGroup)", a0);
@@ -2562,7 +2561,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.StaticRegisterNativesAActor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: casamento de bytes com a build de referencia
     static void StaticRegisterNativesAActor()
     {
         NativeCall<void>(nullptr, "AActor.StaticRegisterNativesAActor()");
@@ -2578,7 +2577,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.SwapRoles()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SwapRoles() const
     {
         NativeCall<void>(this, "AActor.SwapRoles()");
@@ -2602,7 +2601,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.TearOff()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=214]]
+    // endereco: casamento de bytes com a build de referencia
     void TearOff() const
     {
         NativeCall<void>(this, "AActor.TearOff()");
@@ -2658,7 +2657,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.UpdateAllReplicatedComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateAllReplicatedComponents() const
     {
         NativeCall<void>(this, "AActor.UpdateAllReplicatedComponents()");
@@ -2674,7 +2673,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.UpdateOverlaps(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateOverlaps(bool a0) const
     {
         NativeCall<void, bool>(this, "AActor.UpdateOverlaps(bool)", a0);
@@ -2682,7 +2681,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.UpdateReplicatedComponent(UActorComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateReplicatedComponent(void* a0) const
     {
         NativeCall<void, void*>(this, "AActor.UpdateReplicatedComponent(UActorComponent*)", a0);
@@ -2712,7 +2711,7 @@ struct AActor : public UPrimalActor
     //      (colide com AActor.SetActorLocationAndRotation(UE::Math::TVector<double>,UE::Math::TQuat<double>&,bool,FHitR)
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteRole` +7, medido na build 25090264
+    //  ancorado em `RemoteRole` +7, medido na build 25535041
     //  (offset absoluto medido: 0x238; confianca alta)
     void*& ActorCategoryField() const
     { return BrzCampoAncorado<void*>(this, "RemoteRole", 7); }
@@ -2723,7 +2722,7 @@ struct AActor : public UPrimalActor
     TArray<void*>& BlueprintCreatedComponentsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AActor.BlueprintCreatedComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Tags` +16, medido na build 25090264
+    //  ancorado em `Tags` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3D8; confianca alta)
     int& CachedStasisGridIndexField() const
     { return BrzCampoAncorado<int>(this, "Tags", 16); }
@@ -2746,12 +2745,12 @@ struct AActor : public UPrimalActor
     TObjectPtr<APawn>& InstigatorField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "AActor.Instigator"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteRole` +3, medido na build 25090264
+    //  ancorado em `RemoteRole` +3, medido na build 25535041
     //  (offset absoluto medido: 0x234; confianca alta)
     int& LastForceNetUpdateFrameField() const
     { return BrzCampoAncorado<int>(this, "RemoteRole", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsReplicationMode` +4, medido na build 25090264
+    //  ancorado em `PhysicsReplicationMode` +4, medido na build 25535041
     //  (offset absoluto medido: 0x378; confianca alta)
     double& LastRenderTimeField() const
     { return BrzCampoAncorado<double>(this, "PhysicsReplicationMode", 4); }
@@ -2788,7 +2787,7 @@ struct AActor : public UPrimalActor
     BrzCampoPonteiro OnTakeRadialDamageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.OnTakeRadialDamage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +53, medido na build 25090264
+    //  ancorado em `OnEndPlay` +53, medido na build 25535041
     //  (offset absoluto medido: 0x418; confianca media)
     void*& OwnedComponentsField() const
     { return BrzCampoAncorado<void*>(this, "OnEndPlay", 53); }
@@ -2805,19 +2804,19 @@ struct AActor : public UPrimalActor
     unsigned char& RemoteRoleField() const
     { return *GetNativePointerField<unsigned char*>(this, "AActor.RemoteRole"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +37, medido na build 25090264
+    //  ancorado em `OnEndPlay` +37, medido na build 25535041
     //  (offset absoluto medido: 0x408; confianca media)
     TArray<UActorComponent*>& ReplicatedComponentsField() const
     { return BrzCampoAncorado<TArray<UActorComponent*>>(this, "OnEndPlay", 37); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +21, medido na build 25090264
+    //  ancorado em `OnEndPlay` +21, medido na build 25535041
     //  (offset absoluto medido: 0x3F8; confianca media)
     void*& ReplicatedComponentsInfoField() const
     { return BrzCampoAncorado<void*>(this, "OnEndPlay", 21); }
     BrzCampoPonteiro ReplicatedMovementField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.ReplicatedMovement")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +5, medido na build 25090264
+    //  ancorado em `OnEndPlay` +5, medido na build 25535041
     //  (offset absoluto medido: 0x3E8; confianca media)
     void*& ReplicatedSubObjectsField() const
     { return BrzCampoAncorado<void*>(this, "OnEndPlay", 5); }
@@ -2830,12 +2829,86 @@ struct AActor : public UPrimalActor
     TArray<void*>& TagsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AActor.Tags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RootComponent` +8, medido na build 25090264
+    //  ancorado em `RootComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3A8; confianca alta)
     void*& TimerHandle_LifeSpanExpiredField() const
     { return BrzCampoAncorado<void*>(this, "RootComponent", 8); }
     int& UpdateOverlapsMethodDuringLevelStreamingField() const
     { return *GetNativePointerField<int*>(this, "AActor.UpdateOverlapsMethodDuringLevelStreaming"); }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bAutoDestroyWhenFinished")); }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bBlockInput")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bCanBeInCluster")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bEditorOnlyActorShowInPIE")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bExchangedRoles")); }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bForceNetAddressable")); }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bHidden")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bIgnoresOriginShifting")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bIsInvincible")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bRelevantForNetworkReplays")); }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bReplicates")); }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.bTearOff")); }
     BitFieldValue<bool, unsigned __int32> bNetTemporary()
     { return { (void*)this, "bNetTemporary" }; }
     BitFieldValue<bool, unsigned __int32> bNetStartup()

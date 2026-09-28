@@ -255,8 +255,8 @@ struct FPrimalStructureSparseClassData : public FPrimalTargetableActorSparseClas
     { return *GetNativePointerField<TArray<void*>*>(this, "FPrimalStructureSparseClassData.SnapToStructureTypesToExclude"); }
     BrzCampoPonteiro SnappingRotationOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSparseClassData.SnappingRotationOffset")); }
-    BitFieldValue<bool, unsigned __int32> SpawnEmitter()
-    { return { (void*)this, "SpawnEmitter" }; }
+    BrzCampoPonteiro SpawnEmitterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSparseClassData.SpawnEmitter")); }
     BrzCampoPonteiro SpawnEmitterLocationOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalStructureSparseClassData.SpawnEmitterLocationOffset")); }
     BrzCampoPonteiro SpawnEmitterRotationOffsetField() const

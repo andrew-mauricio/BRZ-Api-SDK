@@ -37,7 +37,7 @@ struct ATogglePainVolume : public AActor
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ATogglePainVolume.BeginPlay()
     // classe: a funcao mora em AActor, e ATogglePainVolume herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "AActor.BeginPlay()");
@@ -61,7 +61,7 @@ struct ATogglePainVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ATogglePainVolume.DelayedActive()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=138+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void DelayedActive() const
     {
         NativeCall<void>(this, "ATogglePainVolume.DelayedActive()");
@@ -69,7 +69,7 @@ struct ATogglePainVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ATogglePainVolume.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=88+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void EndPlay(int a0) const
     {
         NativeCall<void, int>(this, "ATogglePainVolume.EndPlay(EEndPlayReason::Type)", a0);
@@ -130,7 +130,7 @@ struct ATogglePainVolume : public AActor
     float& PainIntervalField() const
     { return *GetNativePointerField<float*>(this, "ATogglePainVolume.PainInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureDamageOverlapRadius` +8, medido na build 25090264
+    //  ancorado em `StructureDamageOverlapRadius` +8, medido na build 25535041
     //  (offset absoluto medido: 0x540; confianca alta)
     void*& PainTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "StructureDamageOverlapRadius", 8); }
@@ -146,6 +146,24 @@ struct ATogglePainVolume : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.StructureDamageType")); }
     BrzCampoPonteiro ToggleEmittersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.ToggleEmitters")); }
+    BrzCampoPonteiro bEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bEnabled")); }
+    BrzCampoPonteiro bEntryPainField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bEntryPain")); }
+    BrzCampoPonteiro bIgnoreWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bIgnoreWildDinos")); }
+    BrzCampoPonteiro bPainCausingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bPainCausing")); }
+    BrzCampoPonteiro bPainWalkingOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bPainWalkingOnly")); }
+    BrzCampoPonteiro bTriggerUndermeshDetectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bTriggerUndermeshDetection")); }
+    BrzCampoPonteiro bUseBeginOverlapEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bUseBeginOverlapEvent")); }
+    BrzCampoPonteiro bUseCausedPainEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bUseCausedPainEvent")); }
+    BrzCampoPonteiro bUseEndOverlapEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ATogglePainVolume.bUseEndOverlapEvent")); }
     BitFieldValue<bool, unsigned __int32> bPainCausing()
     { return { (void*)this, "bPainCausing" }; }
     BitFieldValue<bool, unsigned __int32> bEntryPain()

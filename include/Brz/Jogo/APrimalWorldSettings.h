@@ -46,7 +46,7 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.AddDynamicResourceReference(UObject*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void AddDynamicResourceReference(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalWorldSettings.AddDynamicResourceReference(UObject*)", a0);
@@ -54,10 +54,11 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.AddReferencedObjects(UObject*,FReferenceCollector&)
+    // classe: a funcao mora em AActor, e APrimalWorldSettings herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     static void AddReferencedObjects(void* a0, void* a1)
     {
-        NativeCall<void, void*, void*>(nullptr, "APrimalWorldSettings.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
+        NativeCall<void, void*, void*>(nullptr, "AActor.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -70,7 +71,7 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=127+grafo=3/5]]
+    // endereco: casamento de bytes com a build de referencia
     void EndPlay(int a0) const
     {
         NativeCall<void, int>(this, "APrimalWorldSettings.EndPlay(EEndPlayReason::Type)", a0);
@@ -146,7 +147,7 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.GetMissionMetaData(FName,FMissionMetaData&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     bool GetMissionMetaData(unsigned long long a0, void* a1) const
     {
         return NativeCall<bool, unsigned long long, void*>(this, "APrimalWorldSettings.GetMissionMetaData(FName,FMissionMetaData&)", a0, a1);
@@ -162,7 +163,7 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.HandleDeferredTickActors(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void HandleDeferredTickActors(float a0) const
     {
         NativeCall<void, float>(this, "APrimalWorldSettings.HandleDeferredTickActors(float)", a0);
@@ -178,7 +179,7 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.IsAllowedInLevelBounds(UE::Math::TVector<double>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsAllowedInLevelBounds(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalWorldSettings.IsAllowedInLevelBounds(UE::Math::TVector<double>&)", a0);
@@ -218,7 +219,7 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.SetTimeDilation(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     float SetTimeDilation(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalWorldSettings.SetTimeDilation(float)", a0);
@@ -317,24 +318,24 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
     float& DinosLerpToMaxRandomBaseLevelField() const
     { return *GetNativePointerField<float*>(this, "APrimalWorldSettings.DinosLerpToMaxRandomBaseLevel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +336, medido na build 25090264
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +336, medido na build 25535041
     //  (offset absoluto medido: 0x2260; confianca baixa)
     TArray<APrimalBuff*>& DisableFootstepParticlesBuffsField() const
     { return BrzCampoAncorado<TArray<APrimalBuff*>>(this, "NonPlayerFacingMissionsMetaData", 336); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatTeleportLocations` +96, medido na build 25090264
+    //  ancorado em `CheatTeleportLocations` +96, medido na build 25535041
     //  (offset absoluto medido: 0x1DD8; confianca media)
     void*& DynamicExclusionRegionsField() const
     { return BrzCampoAncorado<void*>(this, "CheatTeleportLocations", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatTeleportLocations` +112, medido na build 25090264
+    //  ancorado em `CheatTeleportLocations` +112, medido na build 25535041
     //  (offset absoluto medido: 0x1DE8; confianca media)
     void*& DynamicNoBuildRegionsField() const
     { return BrzCampoAncorado<void*>(this, "CheatTeleportLocations", 112); }
     TArray<UObject*>& DynamicResourceRefsField() const
     { return *GetNativePointerField<TArray<UObject*>*>(this, "APrimalWorldSettings.DynamicResourceRefs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatTeleportLocations` +80, medido na build 25090264
+    //  ancorado em `CheatTeleportLocations` +80, medido na build 25535041
     //  (offset absoluto medido: 0x1DC8; confianca media)
     TArray<void*>& DynamicUndermeshRegionsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "CheatTeleportLocations", 80); }
@@ -391,17 +392,17 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
     float& HerbivoreNaturalTargetingRangeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "APrimalWorldSettings.HerbivoreNaturalTargetingRangeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +88, medido na build 25090264
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +88, medido na build 25535041
     //  (offset absoluto medido: 0x2168; confianca media)
     void*& HumanFemaleAnimMontageOverridesField() const
     { return BrzCampoAncorado<void*>(this, "NonPlayerFacingMissionsMetaData", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +248, medido na build 25090264
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +248, medido na build 25535041
     //  (offset absoluto medido: 0x2208; confianca baixa)
     void*& HumanMaleAnimMontageOverridesField() const
     { return BrzCampoAncorado<void*>(this, "NonPlayerFacingMissionsMetaData", 248); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +168, medido na build 25090264
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +168, medido na build 25535041
     //  (offset absoluto medido: 0x21B8; confianca baixa)
     void*& HumanMaleAnimSequenceOverridesField() const
     { return BrzCampoAncorado<void*>(this, "NonPlayerFacingMissionsMetaData", 168); }
@@ -595,44 +596,102 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.WaterPlaneDataAsset")); }
     BrzCampoPonteiro WorldVO_DataAssetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.WorldVO_DataAsset")); }
+    BrzCampoPonteiro bAllowRagdollsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bAllowRagdolls")); }
     bool& bAllowRidingFliersField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bAllowRidingFliers"); }
+    BrzCampoPonteiro bAllowStartMissionsFromAnywhereField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bAllowStartMissionsFromAnywhere")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MatineeManager` +72, medido na build 25090264
+    //  ancorado em `MatineeManager` +72, medido na build 25535041
     //  (offset absoluto medido: 0x1D18; confianca media)
     void*& bAssignedUnderwaterReverbField() const
     { return BrzCampoAncorado<void*>(this, "MatineeManager", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GlobalDinoCountValue` +8, medido na build 25090264
+    //  ancorado em `GlobalDinoCountValue` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2270; confianca alta)
     void*& bDidPreGameplaySetupField() const
     { return BrzCampoAncorado<void*>(this, "GlobalDinoCountValue", 8); }
+    BrzCampoPonteiro bDisableAllASAFluidSimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bDisableAllASAFluidSim")); }
     bool& bDisableFirstPersonRidingField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bDisableFirstPersonRiding"); }
+    BrzCampoPonteiro bDisableReplicationGraphField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bDisableReplicationGraph")); }
+    BrzCampoPonteiro bDisableStructureObstructedByWorldGeometryCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bDisableStructureObstructedByWorldGeometryCheck")); }
     bool& bEditorDoForceDisableNPCSpawnersField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bEditorDoForceDisableNPCSpawners"); }
+    BrzCampoPonteiro bEditorEnableNPCSpawnersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bEditorEnableNPCSpawners")); }
     bool& bEditorForceSpawnCharacterAsFemaleField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bEditorForceSpawnCharacterAsFemale"); }
+    BrzCampoPonteiro bEnforceSingleBiomeBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bEnforceSingleBiomeBuff")); }
+    BrzCampoPonteiro bFlyersStructurePreventionDismountingAnywhereField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bFlyersStructurePreventionDismountingAnywhere")); }
     bool& bFlyersStructurePreventionDismountingUnderTerrainOnlyField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bFlyersStructurePreventionDismountingUnderTerrainOnly"); }
+    BrzCampoPonteiro bForceDinoDrawHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bForceDinoDrawHUD")); }
+    BrzCampoPonteiro bForceDinoHighQualityAttacksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bForceDinoHighQualityAttacks")); }
     bool& bForceEnablePhysicsSimulationField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bForceEnablePhysicsSimulation"); }
     bool& bForceEnableTurretLimitField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bForceEnableTurretLimit"); }
+    BrzCampoPonteiro bForcePreventPhysicsSimulationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bForcePreventPhysicsSimulation")); }
     bool& bForceSpawnAnimationTestField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bForceSpawnAnimationTest"); }
+    BrzCampoPonteiro bGenerateTerrainField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bGenerateTerrain")); }
     bool& bHideMissionSortByDistanceField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bHideMissionSortByDistance"); }
+    BrzCampoPonteiro bHideMissionUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bHideMissionUI")); }
+    BrzCampoPonteiro bIgnoreBiomeWindField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bIgnoreBiomeWind")); }
+    BrzCampoPonteiro bIgnoreInMeshCheckingUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bIgnoreInMeshCheckingUnderwater")); }
+    BrzCampoPonteiro bIgnoreWindStructureMinClampField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bIgnoreWindStructureMinClamp")); }
+    BrzCampoPonteiro bIsBTT2IntroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bIsBTT2Intro")); }
+    BrzCampoPonteiro bLandscapeStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bLandscapeStreaming")); }
     bool& bMapSupportsMissionsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bMapSupportsMissions"); }
+    BrzCampoPonteiro bOverrideCharacterCreationPreviewSceneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bOverrideCharacterCreationPreviewScene")); }
+    BrzCampoPonteiro bOverrideLongitudeAndLatitudeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bOverrideLongitudeAndLatitude")); }
+    BrzCampoPonteiro bOverrideMaxMusicVolumeOnVolumesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bOverrideMaxMusicVolumeOnVolumes")); }
+    BrzCampoPonteiro bPlayBTTIntroFirstField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bPlayBTTIntroFirst")); }
+    BrzCampoPonteiro bPlayPersistentPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bPlayPersistentPlayer")); }
+    BrzCampoPonteiro bPreventGlobalNonEventSpawnOverridesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bPreventGlobalNonEventSpawnOverrides")); }
+    BrzCampoPonteiro bSP_DeferZoneSpawnVolumeSetup_UntilPlayerSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bSP_DeferZoneSpawnVolumeSetup_UntilPlayerSpawn")); }
     bool& bScaleDinoFloatingHUDByMeshSizeField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bScaleDinoFloatingHUDByMeshSize"); }
     //  no cache antigo este campo se chamava bSetupFemaleAnimOverrides.
     //  nesta build ele e' `NonPlayerFacingMissionsMetaData` — resolve por NOME.
     BrzCampoPonteiro bSetupFemaleAnimOverridesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.NonPlayerFacingMissionsMetaData")); }
+    BrzCampoPonteiro bSpawnDataChanelVFXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bSpawnDataChanelVFX")); }
+    BrzCampoPonteiro bUseMissionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bUseMissions")); }
     bool& bUseMissionsMetaDataField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWorldSettings.bUseMissionsMetaData"); }
+    BrzCampoPonteiro bUseSpawnLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bUseSpawnLevelBounds")); }
+    BrzCampoPonteiro bWaterDinosUseFlightBlockingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bWaterDinosUseFlightBlocking")); }
     BitFieldValue<bool, unsigned __int32> bAllowRagdolls()
     { return { (void*)this, "bAllowRagdolls" }; }
     BitFieldValue<bool, unsigned __int32> bAllowRidingFliers()

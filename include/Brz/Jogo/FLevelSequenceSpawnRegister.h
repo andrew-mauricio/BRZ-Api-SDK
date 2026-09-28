@@ -38,10 +38,13 @@ struct FLevelSequenceSpawnRegister
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelSequenceSpawnRegister.SpawnObject(FMovieSceneSpawnable&,FMovieSceneSequenceID&,TSharedRef<
     // endereco: casamento de bytes com a build de referencia
-    static UObject* SpawnObject(void* a0, void* a1, void* a2)
+    UObject* SpawnObject(void* a0, void* a1, void* a2) const
     {
-        return NativeCall<UObject*, void*, void*, void*>(nullptr, "FLevelSequenceSpawnRegister.SpawnObject(FMovieSceneSpawnable&,FMovieSceneSequenceID&,TSharedRef<UE::MovieScene::FSharedPlaybackState,1>)", a0, a1, a2);
+        return NativeCall<UObject*, void*, void*, void*>(this, "FLevelSequenceSpawnRegister.SpawnObject(FMovieSceneSpawnable&,FMovieSceneSequenceID&,TSharedRef<UE::MovieScene::FSharedPlaybackState,1>)", a0, a1, a2);
     }
+
+    BrzCampoPonteiro MovieSceneObjectSpawnersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceSpawnRegister.MovieSceneObjectSpawners")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELSEQUENCESPAWNREGISTER_H

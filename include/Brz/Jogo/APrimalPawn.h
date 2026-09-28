@@ -84,7 +84,7 @@ struct APrimalPawn : public APawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalPawn.BP_PreventMovementMode(EMovementMode,unsignedchar)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BP_PreventMovementMode(int a0, unsigned char a1) const
     {
         return NativeCall<void*, int, unsigned char>(this, "APrimalPawn.BP_PreventMovementMode(EMovementMode,unsignedchar)", a0, a1);
@@ -100,7 +100,7 @@ struct APrimalPawn : public APawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPawn.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=185+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalPawn.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -108,7 +108,7 @@ struct APrimalPawn : public APawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPawn.GetOwnerController()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=272]]
+    // endereco: casamento de bytes com a build de referencia
     APlayerController* GetOwnerController() const
     {
         return NativeCall<APlayerController*>(this, "APrimalPawn.GetOwnerController()");
@@ -116,7 +116,7 @@ struct APrimalPawn : public APawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPawn.InitInputComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     void InitInputComponent() const
     {
         NativeCall<void>(this, "APrimalPawn.InitInputComponent()");
@@ -136,7 +136,7 @@ struct APrimalPawn : public APawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPawn.IsLocallyControlledByPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsLocallyControlledByPlayer() const
     {
         return NativeCall<bool>(this, "APrimalPawn.IsLocallyControlledByPlayer()");
@@ -144,7 +144,7 @@ struct APrimalPawn : public APawn
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalPawn.SetLastMovementDesiredRotation(UE::Math::TRotator<double>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetLastMovementDesiredRotation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalPawn.SetLastMovementDesiredRotation(UE::Math::TRotator<double>&)", a0);
@@ -154,6 +154,22 @@ struct APrimalPawn : public APawn
     { return *GetNativePointerField<float*>(this, "APrimalPawn.HarvestingDestructionMeshRangeMultipler"); }
     BrzCampoPonteiro LastMovementDesiredRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.LastMovementDesiredRotation")); }
+    BrzCampoPonteiro bClearOnConsumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bClearOnConsume")); }
+    BrzCampoPonteiro bIsPlayingTurningAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bIsPlayingTurningAnim")); }
+    BrzCampoPonteiro bPreventHUDInitializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bPreventHUDInitialization")); }
+    BrzCampoPonteiro bReplicateDesiredRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bReplicateDesiredRotation")); }
+    BrzCampoPonteiro bUseBPCanCombineMovesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bUseBPCanCombineMoves")); }
+    BrzCampoPonteiro bUseBPPreventMovementModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bUseBPPreventMovementMode")); }
+    BrzCampoPonteiro bUse_ModifySavedMoveAcceleration_PostRepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bUse_ModifySavedMoveAcceleration_PostRep")); }
+    BrzCampoPonteiro bUse_ModifySavedMoveAcceleration_PreRepField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalPawn.bUse_ModifySavedMoveAcceleration_PreRep")); }
     BitFieldValue<bool, unsigned __int32> bUseBPPreventMovementMode()
     { return { (void*)this, "bUseBPPreventMovementMode" }; }
     BitFieldValue<bool, unsigned __int32> bReplicateDesiredRotation()

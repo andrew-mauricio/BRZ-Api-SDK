@@ -43,20 +43,22 @@ struct FTransformCollectionDataflowNode
 
     BrzCampoPonteiro CollectionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.Collection")); }
-    BitFieldValue<bool, unsigned __int32> Rotate()
-    { return { (void*)this, "Rotate" }; }
+    BrzCampoPonteiro RotateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.Rotate")); }
     BrzCampoPonteiro RotatePivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.RotatePivot")); }
     BrzCampoPonteiro RotationOrderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.RotationOrder")); }
-    BitFieldValue<bool, unsigned __int32> Scale()
-    { return { (void*)this, "Scale" }; }
+    BrzCampoPonteiro ScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.Scale")); }
     BrzCampoPonteiro ScalePivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.ScalePivot")); }
     BrzCampoPonteiro TranslateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.Translate")); }
     BrzCampoPonteiro UniformScaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.UniformScale")); }
+    BrzCampoPonteiro bInvertTransformationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollectionDataflowNode.bInvertTransformation")); }
     BitFieldValue<bool, unsigned __int32> bInvertTransformation()
     { return { (void*)this, "bInvertTransformation" }; }
 

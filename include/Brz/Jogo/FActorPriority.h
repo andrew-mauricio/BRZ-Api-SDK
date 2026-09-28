@@ -37,6 +37,8 @@ struct FActorPriority
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorPriority.ActorInfo")); }
     BrzCampoPonteiro ChannelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorPriority.Channel")); }
+    BrzCampoPonteiro DestructionInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorPriority.DestructionInfo")); }
     int& PriorityField() const
     { return *GetNativePointerField<int*>(this, "FActorPriority.Priority"); }
 };

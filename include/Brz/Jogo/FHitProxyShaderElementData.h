@@ -32,6 +32,9 @@ struct FHitProxyShaderElementData
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro BatchHitProxyIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitProxyShaderElementData.BatchHitProxyId")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FHITPROXYSHADERELEMENTDATA_H

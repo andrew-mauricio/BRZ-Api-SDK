@@ -44,7 +44,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.AddLocalRotation(UE::Math::TRotator<double>,bool,FHitResult*,ETeleportType)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddLocalRotation(void* a0, bool a1, void* a2, int a3) const
     {
         NativeCall<void, void*, bool, void*, int>(this, "USceneComponent.AddLocalRotation(UE::Math::TRotator<double>,bool,FHitResult*,ETeleportType)", a0, a1, a2, a3);
@@ -108,7 +108,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.CalcBoundingCylinder(float&,float&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CalcBoundingCylinder(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "USceneComponent.CalcBoundingCylinder(float&,float&)", a0, a1);
@@ -124,7 +124,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.ClearSkipUpdateOverlaps()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClearSkipUpdateOverlaps() const
     {
         NativeCall<void>(this, "USceneComponent.ClearSkipUpdateOverlaps()");
@@ -204,7 +204,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.IsAnySimulatingPhysics()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsAnySimulatingPhysics() const
     {
         return NativeCall<bool>(this, "USceneComponent.IsAnySimulatingPhysics()");
@@ -220,7 +220,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.IsVisible()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=61]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsVisible() const
     {
         return NativeCall<bool>(this, "USceneComponent.IsVisible()");
@@ -228,7 +228,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.IsVisibleInEditor()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsVisibleInEditor() const
     {
         return NativeCall<bool>(this, "USceneComponent.IsVisibleInEditor()");
@@ -268,7 +268,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.OnChildAttached(USceneComponent*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnChildAttached(void* a0) const
     {
         NativeCall<void, void*>(this, "USceneComponent.OnChildAttached(USceneComponent*)", a0);
@@ -284,7 +284,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.OnHiddenInGameChanged()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnHiddenInGameChanged() const
     {
         NativeCall<void>(this, "USceneComponent.OnHiddenInGameChanged()");
@@ -317,7 +317,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.PostNetReceive()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     void PostNetReceive() const
     {
         NativeCall<void>(this, "USceneComponent.PostNetReceive()");
@@ -565,7 +565,7 @@ struct USceneComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USceneComponent.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ValidateGeneratedRepEnums(void* a0) const
     {
         NativeCall<void, void*>(this, "USceneComponent.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)", a0);
@@ -595,14 +595,14 @@ struct USceneComponent : public UActorComponent
     int& AttachmentChangedIncrementerField() const
     { return *GetNativePointerField<int*>(this, "USceneComponent.AttachmentChangedIncrementer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientAttachedChildren` +24, medido na build 25090264
+    //  ancorado em `ClientAttachedChildren` +24, medido na build 25535041
     //  (offset absoluto medido: 0x120; confianca alta)
     void*& BoundsField() const
     { return BrzCampoAncorado<void*>(this, "ClientAttachedChildren", 24); }
     TArray<void*>& ClientAttachedChildrenField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "USceneComponent.ClientAttachedChildren"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsVolumeChangedDelegate` +72, medido na build 25090264
+    //  ancorado em `PhysicsVolumeChangedDelegate` +72, medido na build 25535041
     //  (offset absoluto medido: 0x210; confianca media)
     void*& ComponentToWorldField() const
     { return BrzCampoAncorado<void*>(this, "PhysicsVolumeChangedDelegate", 72); }
@@ -613,12 +613,12 @@ struct USceneComponent : public UActorComponent
     BrzCampoPonteiro MobilityField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.Mobility")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientAttachedChildren` +16, medido na build 25090264
+    //  ancorado em `ClientAttachedChildren` +16, medido na build 25535041
     //  (offset absoluto medido: 0x118; confianca alta)
     USceneComponent*& NetOldAttachParentField() const
     { return BrzCampoAncorado<USceneComponent*>(this, "ClientAttachedChildren", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AttachSocketName` +8, medido na build 25090264
+    //  ancorado em `AttachSocketName` +8, medido na build 25535041
     //  (offset absoluto medido: 0xF0; confianca alta)
     FName& NetOldAttachSocketNameField() const
     { return BrzCampoAncorado<FName>(this, "AttachSocketName", 8); }
@@ -631,17 +631,59 @@ struct USceneComponent : public UActorComponent
     BrzCampoPonteiro RelativeRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.RelativeRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsVolumeChangedDelegate` +56, medido na build 25090264
+    //  ancorado em `PhysicsVolumeChangedDelegate` +56, medido na build 25535041
     //  (offset absoluto medido: 0x200; confianca media)
     void*& RelativeRotationCacheField() const
     { return BrzCampoAncorado<void*>(this, "PhysicsVolumeChangedDelegate", 56); }
     BrzCampoPonteiro RelativeScale3DField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.RelativeScale3D")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsVolumeChangedDelegate` +48, medido na build 25090264
+    //  ancorado em `PhysicsVolumeChangedDelegate` +48, medido na build 25535041
     //  (offset absoluto medido: 0x1F8; confianca media)
     void*& WorldRotationCacheField() const
     { return BrzCampoAncorado<void*>(this, "PhysicsVolumeChangedDelegate", 48); }
+    BrzCampoPonteiro bAbsoluteLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bAbsoluteLocation")); }
+    BrzCampoPonteiro bAbsoluteRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bAbsoluteRotation")); }
+    BrzCampoPonteiro bAbsoluteScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bAbsoluteScale")); }
+    BrzCampoPonteiro bAttachedSoundsForceHighPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bAttachedSoundsForceHighPriority")); }
+    BrzCampoPonteiro bBoundsChangeTriggersStreamingDataRebuildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bBoundsChangeTriggersStreamingDataRebuild")); }
+    BrzCampoPonteiro bClientSyncAlwaysUpdatePhysicsCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bClientSyncAlwaysUpdatePhysicsCollision")); }
+    BrzCampoPonteiro bComponentToWorldUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bComponentToWorldUpdated")); }
+    BrzCampoPonteiro bComputeBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bComputeBoundsOnceForGame")); }
+    BrzCampoPonteiro bComputeFastLocalBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bComputeFastLocalBounds")); }
+    BrzCampoPonteiro bComputedBoundsOnceForGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bComputedBoundsOnceForGame")); }
+    BrzCampoPonteiro bHiddenInGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bHiddenInGame")); }
+    BrzCampoPonteiro bIgnoreParentTransformUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bIgnoreParentTransformUpdate")); }
+    BrzCampoPonteiro bIsNotRenderAttachmentRootField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bIsNotRenderAttachmentRoot")); }
+    BrzCampoPonteiro bShouldBeAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bShouldBeAttached")); }
+    BrzCampoPonteiro bShouldSnapLocationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bShouldSnapLocationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapRotationWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bShouldSnapRotationWhenAttached")); }
+    BrzCampoPonteiro bShouldSnapScaleWhenAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bShouldSnapScaleWhenAttached")); }
+    BrzCampoPonteiro bShouldUpdatePhysicsVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bShouldUpdatePhysicsVolume")); }
+    BrzCampoPonteiro bUpdateChildOverlapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bUpdateChildOverlaps")); }
+    BrzCampoPonteiro bUseAttachParentBoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bUseAttachParentBound")); }
+    BrzCampoPonteiro bVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.bVisible")); }
     BitFieldValue<bool, unsigned __int32> bClientSyncAlwaysUpdatePhysicsCollision()
     { return { (void*)this, "bClientSyncAlwaysUpdatePhysicsCollision" }; }
     BitFieldValue<bool, unsigned __int32> bComponentToWorldUpdated()

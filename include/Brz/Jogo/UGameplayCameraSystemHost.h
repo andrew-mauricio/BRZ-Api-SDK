@@ -36,18 +36,21 @@ struct UGameplayCameraSystemHost
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCameraSystemHost.AddReferencedObjects(UObject*,FReferenceCollector&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddReferencedObjects(void* a0, void* a1)
+    BrzPonteiro AddReferencedObjects(void* a0, void* a1) const
     {
-        return NativeCall<void*, void*, void*>(nullptr, "UGameplayCameraSystemHost.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
+        return NativeCall<void*, void*, void*>(this, "UGameplayCameraSystemHost.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCameraSystemHost.FindOrCreateHost(APlayerController*,wchar_t*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=320+chamadores=4+grafo=6/6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=320+chamadores=4+grafo=5/5]]
     BrzPonteiro FindOrCreateHost(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UGameplayCameraSystemHost.FindOrCreateHost(APlayerController*,wchar_t*)", a0, a1);
     }
+
+    BrzCampoPonteiro EvaluatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraSystemHost.Evaluator")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UGAMEPLAYCAMERASYSTEMHOST_H

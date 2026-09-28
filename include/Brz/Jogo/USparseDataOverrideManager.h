@@ -51,7 +51,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideCraftingGivesItemQuantityOverride(int,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static int Internal_OverrideCraftingGivesItemQuantityOverride(int a0, void* a1)
     {
         return NativeCall<int, int, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideCraftingGivesItemQuantityOverride(int,UObject*)", a0, a1);
@@ -59,7 +59,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideFemaleMatingTime(float,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideFemaleMatingTime(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideFemaleMatingTime(float,UObject*)", a0, a1);
@@ -67,7 +67,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideMateBoostDamageGiveMultiplier(float,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideMateBoostDamageGiveMultiplier(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideMateBoostDamageGiveMultiplier(float,UObject*)", a0, a1);
@@ -75,7 +75,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideMateBoostDamageReceiveMultiplier(float,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideMateBoostDamageReceiveMultiplier(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideMateBoostDamageReceiveMultiplier(float,UObject*)", a0, a1);
@@ -83,7 +83,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideMateBoostRange(float,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideMateBoostRange(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideMateBoostRange(float,UObject*)", a0, a1);
@@ -91,7 +91,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideRandomMutationChance(float,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideRandomMutationChance(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideRandomMutationChance(float,UObject*)", a0, a1);
@@ -99,7 +99,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideRandomMutationGivePoints(float,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideRandomMutationGivePoints(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideRandomMutationGivePoints(float,UObject*)", a0, a1);
@@ -107,7 +107,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideRandomMutationRolls(int,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=78]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static int Internal_OverrideRandomMutationRolls(int a0, void* a1)
     {
         return NativeCall<int, int, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideRandomMutationRolls(int,UObject*)", a0, a1);
@@ -115,7 +115,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverrideRiderFlyingRotationRateModifier(float,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static float Internal_OverrideRiderFlyingRotationRateModifier(float a0, void* a1)
     {
         return NativeCall<float, float, void*>(nullptr, "USparseDataOverrideManager.Internal_OverrideRiderFlyingRotationRateModifier(float,UObject*)", a0, a1);
@@ -123,7 +123,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverridebIsAlphaEliteMegaDino(bool,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool Internal_OverridebIsAlphaEliteMegaDino(bool a0, void* a1)
     {
         return NativeCall<bool, bool, void*>(nullptr, "USparseDataOverrideManager.Internal_OverridebIsAlphaEliteMegaDino(bool,UObject*)", a0, a1);
@@ -131,7 +131,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.Internal_OverridebUseBabyGestation(bool,UObject*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=83]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool Internal_OverridebUseBabyGestation(bool a0, void* a1)
     {
         return NativeCall<bool, bool, void*>(nullptr, "USparseDataOverrideManager.Internal_OverridebUseBabyGestation(bool,UObject*)", a0, a1);
@@ -139,7 +139,7 @@ struct USparseDataOverrideManager : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USparseDataOverrideManager.StaticRegisterNativesUSparseDataOverrideManager()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesUSparseDataOverrideManager()
     {
         NativeCall<void>(nullptr, "USparseDataOverrideManager.StaticRegisterNativesUSparseDataOverrideManager()");

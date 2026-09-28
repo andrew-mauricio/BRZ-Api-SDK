@@ -43,7 +43,7 @@ struct FTransformConstraintDescription
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformConstraintDescription.DoesAffectRotation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesAffectRotation() const
     {
         return NativeCall<void*>(this, "FTransformConstraintDescription.DoesAffectRotation()");
@@ -51,7 +51,7 @@ struct FTransformConstraintDescription
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformConstraintDescription.DoesAffectScale()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesAffectScale() const
     {
         return NativeCall<void*>(this, "FTransformConstraintDescription.DoesAffectScale()");
@@ -59,7 +59,7 @@ struct FTransformConstraintDescription
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformConstraintDescription.DoesAffectTransform()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesAffectTransform() const
     {
         return NativeCall<void*>(this, "FTransformConstraintDescription.DoesAffectTransform()");
@@ -67,7 +67,7 @@ struct FTransformConstraintDescription
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformConstraintDescription.DoesAffectTranslation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesAffectTranslation() const
     {
         return NativeCall<void*>(this, "FTransformConstraintDescription.DoesAffectTranslation()");

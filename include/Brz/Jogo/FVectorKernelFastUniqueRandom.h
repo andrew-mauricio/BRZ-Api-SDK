@@ -43,7 +43,7 @@ struct FVectorKernelFastUniqueRandom
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FVectorKernelFastUniqueRandom.FastUniqueRandom_FastPathLibrary(int,int,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro FastUniqueRandom_FastPathLibrary(int a0, int a1, int a2)
     {
         return NativeCall<void*, int, int, int>(nullptr, "FVectorKernelFastUniqueRandom.FastUniqueRandom_FastPathLibrary(int,int,int)", a0, a1, a2);

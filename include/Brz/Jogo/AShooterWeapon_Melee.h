@@ -34,7 +34,7 @@ struct AShooterWeapon_Melee : public AShooterWeapon
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Melee.StartFire(bool)
     // classe: a funcao mora em AShooterWeapon, e AShooterWeapon_Melee herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon.StartFire(bool)", a0);
@@ -50,7 +50,7 @@ struct AShooterWeapon_Melee : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Melee.StartSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=136]]
+    // endereco: casamento de bytes com a build de referencia
     void StartSecondaryAction() const
     {
         NativeCall<void>(this, "AShooterWeapon_Melee.StartSecondaryAction()");
@@ -58,12 +58,14 @@ struct AShooterWeapon_Melee : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Melee.StopFire()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopFire() const
     {
         NativeCall<void>(this, "AShooterWeapon_Melee.StopFire()");
     }
 
+    BrzCampoPonteiro bUseAltFireOnNormalFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Melee.bUseAltFireOnNormalFire")); }
     BitFieldValue<bool, unsigned __int32> bUseAltFireOnNormalFire()
     { return { (void*)this, "bUseAltFireOnNormalFire" }; }
 

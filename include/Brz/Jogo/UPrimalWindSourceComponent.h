@@ -134,7 +134,7 @@ struct UPrimalWindSourceComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWindSourceComponent.IsAttachedToPrimalStructure()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsAttachedToPrimalStructure() const
     {
         return NativeCall<void*>(this, "UPrimalWindSourceComponent.IsAttachedToPrimalStructure()");
@@ -150,7 +150,7 @@ struct UPrimalWindSourceComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWindSourceComponent.SetAttachment(UPrimitiveComponent*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetAttachment(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "UPrimalWindSourceComponent.SetAttachment(UPrimitiveComponent*,int)", a0, a1);
@@ -198,6 +198,8 @@ struct UPrimalWindSourceComponent
     { return *GetNativePointerField<double*>(this, "UPrimalWindSourceComponent.BeginPlayTime"); }
     float& BendAmountField() const
     { return *GetNativePointerField<float*>(this, "UPrimalWindSourceComponent.BendAmount"); }
+    BrzCampoPonteiro BubbleComponentIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.BubbleComponentIsActive")); }
     FName& CharacterAttachmentSocketField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalWindSourceComponent.CharacterAttachmentSocket"); }
     int& CollectionIndexField() const
@@ -270,8 +272,14 @@ struct UPrimalWindSourceComponent
     { return *GetNativePointerField<float*>(this, "UPrimalWindSourceComponent.RadiusInner"); }
     float& RadiusOuterField() const
     { return *GetNativePointerField<float*>(this, "UPrimalWindSourceComponent.RadiusOuter"); }
+    BrzCampoPonteiro SelectThisComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.SelectThisComponent")); }
     BrzCampoPonteiro SourceScaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.SourceScale")); }
+    BrzCampoPonteiro SpecialCheck_DetermineInnerSphereImpactsFluidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.SpecialCheck_DetermineInnerSphereImpactsFluid")); }
+    BrzCampoPonteiro SpecialCheck_IsInnerSphereAboveWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.SpecialCheck_IsInnerSphereAboveWater")); }
     float& StrengthField() const
     { return *GetNativePointerField<float*>(this, "UPrimalWindSourceComponent.Strength"); }
     float& TriggerPeriodicIntervalField() const
@@ -294,50 +302,94 @@ struct UPrimalWindSourceComponent
     { return *GetNativePointerField<float*>(this, "UPrimalWindSourceComponent.WindSpeed"); }
     float& WindStrengthField() const
     { return *GetNativePointerField<float*>(this, "UPrimalWindSourceComponent.WindStrength"); }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bAutoActivate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bClearedParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bClearedParameters")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bEnableBubbleSpawnWhenUnderwaterIfWaterInteractionIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableBubbleSpawnWhenUnderwaterIfWaterInteractionIsEnabled")); }
+    BrzCampoPonteiro bEnableDebugField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableDebug")); }
+    BrzCampoPonteiro bEnableFluidEmissionTextureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableFluidEmissionTexture")); }
+    BrzCampoPonteiro bEnableFluidInteractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableFluidInteraction")); }
+    BrzCampoPonteiro bEnableFoliageInteractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableFoliageInteraction")); }
+    BrzCampoPonteiro bEnableFoliageInteractionOnBabiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableFoliageInteractionOnBabies")); }
+    BrzCampoPonteiro bEnableSnowInteractionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bEnableSnowInteraction")); }
     bool& bEnabledField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalWindSourceComponent.bEnabled"); }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
+    BrzCampoPonteiro bFluidInteractionWasThrottledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bFluidInteractionWasThrottled")); }
+    BrzCampoPonteiro bFoliageInteractionWasThrottledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bFoliageInteractionWasThrottled")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bReplicates")); }
+    BrzCampoPonteiro bSnowInteractionWasThrottledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bSnowInteractionWasThrottled")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bTriggerConstantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bTriggerConstant")); }
+    BrzCampoPonteiro bTriggerManualField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bTriggerManual")); }
+    BrzCampoPonteiro bTriggerPeriodicallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bTriggerPeriodically")); }
+    BrzCampoPonteiro bUseActorVelForDirectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseActorVelForDirection")); }
+    BrzCampoPonteiro bUseActorVelForStrengthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseActorVelForStrength")); }
+    BrzCampoPonteiro bUseBPExitedFluidSurfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseBPExitedFluidSurface")); }
+    BrzCampoPonteiro bUseBPImpactedFluidSurfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseBPImpactedFluidSurface")); }
+    BrzCampoPonteiro bUseBPImpactingFluidSurfaceTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseBPImpactingFluidSurfaceTick")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseVolumetricDispatcherField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUseVolumetricDispatcher")); }
+    BrzCampoPonteiro bUsedOnPlayerCameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bUsedOnPlayerCamera")); }
+    BrzCampoPonteiro bWasEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWindSourceComponent.bWasEnabled")); }
     BitFieldValue<bool, unsigned __int32> BubbleComponentIsActive()
     { return { (void*)this, "BubbleComponentIsActive" }; }
     BitFieldValue<bool, unsigned __int32> SelectThisComponent()

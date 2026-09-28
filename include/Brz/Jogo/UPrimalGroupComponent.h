@@ -94,7 +94,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.GetGroupSize()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetGroupSize() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.GetGroupSize()");
@@ -102,7 +102,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.GetHighPriorityActor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetHighPriorityActor() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.GetHighPriorityActor()");
@@ -110,7 +110,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.HandleUnstasis()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleUnstasis() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.HandleUnstasis()");
@@ -118,7 +118,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.HasGroup()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasGroup() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.HasGroup()");
@@ -126,7 +126,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.HasGroup_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasGroup_Implementation() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.HasGroup_Implementation()");
@@ -134,7 +134,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.IsAllowedToJoinGroup(UPrimalGroupComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsAllowedToJoinGroup(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalGroupComponent.IsAllowedToJoinGroup(UPrimalGroupComponent*)", a0);
@@ -150,7 +150,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.IsBetterLeader(UPrimalGroupComponent*,UPrimalGroupComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsBetterLeader(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalGroupComponent.IsBetterLeader(UPrimalGroupComponent*,UPrimalGroupComponent*)", a0, a1);
@@ -166,7 +166,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.IsGroupFull()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsGroupFull() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.IsGroupFull()");
@@ -190,7 +190,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.IsGroupLeader_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsGroupLeader_Implementation() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.IsGroupLeader_Implementation()");
@@ -294,7 +294,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.StartUpdateAttackPrioritiesTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StartUpdateAttackPrioritiesTimer() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.StartUpdateAttackPrioritiesTimer()");
@@ -302,7 +302,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.StartUpdateGroupTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StartUpdateGroupTimer() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.StartUpdateGroupTimer()");
@@ -310,7 +310,7 @@ struct UPrimalGroupComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalGroupComponent.StartUpdateHighPriorityActorTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StartUpdateHighPriorityActorTimer() const
     {
         return NativeCall<void*>(this, "UPrimalGroupComponent.StartUpdateHighPriorityActorTimer()");
@@ -401,7 +401,7 @@ struct UPrimalGroupComponent
     FName& GroupTypeNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalGroupComponent.GroupTypeName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OwningPrimalCharacter` +8, medido na build 25090264
+    //  ancorado em `OwningPrimalCharacter` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1A0; confianca alta)
     void*& HighPriorityActorField() const
     { return BrzCampoAncorado<void*>(this, "OwningPrimalCharacter", 8); }
@@ -439,48 +439,56 @@ struct UPrimalGroupComponent
     { return *GetNativePointerField<float*>(this, "UPrimalGroupComponent.UpdateHighPriorityActorInterval"); }
     BrzCampoPonteiro UpdateHighPriorityActorTimerHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.UpdateHighPriorityActorTimerHandle")); }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bAutoActivate")); }
+    BrzCampoPonteiro bAutoRefillGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bAutoRefillGroup")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bGroupUsesHighPriorityActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bGroupUsesHighPriorityActor")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bReplicates")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUseBPIsTeamAllowedToJoinGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bUseBPIsTeamAllowedToJoinGroup")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseGroupLeaderPriotizeMemberTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGroupComponent.bUseGroupLeaderPriotizeMemberType")); }
     BitFieldValue<bool, unsigned __int32> bAutoRefillGroup()
     { return { (void*)this, "bAutoRefillGroup" }; }
     BitFieldValue<bool, unsigned __int32> bGroupUsesHighPriorityActor()

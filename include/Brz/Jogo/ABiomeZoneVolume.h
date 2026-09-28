@@ -37,7 +37,7 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.EggGetOverrideIntervalBetweenUnstasisChances(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=220]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float EggGetOverrideIntervalBetweenUnstasisChances(void* a0) const
     {
         return NativeCall<float, void*>(this, "ABiomeZoneVolume.EggGetOverrideIntervalBetweenUnstasisChances(APrimalDinoCharacter*)", a0);
@@ -45,7 +45,7 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.EggOverrideChanceToSpawn(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=211]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float EggOverrideChanceToSpawn(void* a0) const
     {
         return NativeCall<float, void*>(this, "ABiomeZoneVolume.EggOverrideChanceToSpawn(APrimalDinoCharacter*)", a0);
@@ -53,15 +53,16 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=75+grafo=4/4]]
+    // classe: a funcao mora em AActor, e ABiomeZoneVolume herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void EndPlay(int a0) const
     {
-        NativeCall<void, int>(this, "ABiomeZoneVolume.EndPlay(EEndPlayReason::Type)", a0);
+        NativeCall<void, int>(this, "AActor.EndPlay(EEndPlayReason::Type)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.GetBiomeTemperature(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=230]]
+    // endereco: casamento de bytes com a build de referencia
     float GetBiomeTemperature(float a0) const
     {
         return NativeCall<float, float>(this, "ABiomeZoneVolume.GetBiomeTemperature(float)", a0);
@@ -69,7 +70,7 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.GetBiomeWind(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=214]]
+    // endereco: casamento de bytes com a build de referencia
     float GetBiomeWind(float a0) const
     {
         return NativeCall<float, float>(this, "ABiomeZoneVolume.GetBiomeWind(float)", a0);
@@ -117,10 +118,11 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=82+grafo=4/4]]
+    // classe: a funcao mora em AActor, e ABiomeZoneVolume herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "ABiomeZoneVolume.PostInitializeComponents()");
+        NativeCall<void>(this, "AActor.PostInitializeComponents()");
     }
 
     float& AboveTemperatureOffsetExponentField() const
@@ -217,6 +219,16 @@ struct ABiomeZoneVolume : public AActor
     { return { (void*)this, "ABiomeZoneVolume.StatusAdjustmentRateMultipliersNegative" }; }
     FieldArray<float> StatusAdjustmentRateMultipliersPositiveField() const
     { return { (void*)this, "ABiomeZoneVolume.StatusAdjustmentRateMultipliersPositive" }; }
+    BrzCampoPonteiro bDisableDayTransitionSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABiomeZoneVolume.bDisableDayTransitionSounds")); }
+    BrzCampoPonteiro bIsOutsideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABiomeZoneVolume.bIsOutside")); }
+    BrzCampoPonteiro bOnlyApplyAdjustmentRateValuesOutdoorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABiomeZoneVolume.bOnlyApplyAdjustmentRateValuesOutdoors")); }
+    BrzCampoPonteiro bPreventCropsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABiomeZoneVolume.bPreventCrops")); }
+    BrzCampoPonteiro bRemoveBuffWhenLeavingVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABiomeZoneVolume.bRemoveBuffWhenLeavingVolume")); }
     bool& bStatusAdjustRateValuesField() const
     { return *GetNativePointerField<bool*>(this, "ABiomeZoneVolume.bStatusAdjustRateValues"); }
     BitFieldValue<bool, unsigned __int32> bPreventCrops()

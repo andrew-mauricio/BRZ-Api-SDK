@@ -32,6 +32,9 @@ struct FPrimalCharacterNetworkMoveDataContainer
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro PrimalDefaultMoveDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterNetworkMoveDataContainer.PrimalDefaultMoveData")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALCHARACTERNETWORKMOVEDATACONTAINER_H

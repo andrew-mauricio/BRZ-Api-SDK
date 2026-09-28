@@ -55,7 +55,7 @@ struct UGameplayTask
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask.ExternalCancel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ExternalCancel() const
     {
         return NativeCall<void*>(this, "UGameplayTask.ExternalCancel()");
@@ -63,7 +63,7 @@ struct UGameplayTask
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask.ExternalConfirm(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ExternalConfirm(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UGameplayTask.ExternalConfirm(bool)", a0);
@@ -87,7 +87,7 @@ struct UGameplayTask
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask.GetGameplayTasksComponent(UGameplayTask&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UGameplayTasksComponent* GetGameplayTasksComponent(void* a0) const
     {
         return NativeCall<UGameplayTasksComponent*, void*>(this, "UGameplayTask.GetGameplayTasksComponent(UGameplayTask&)", a0);
@@ -103,7 +103,7 @@ struct UGameplayTask
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask.GetWorld()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UGameplayTask.GetWorld()");
@@ -143,7 +143,7 @@ struct UGameplayTask
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask.OnGameplayTaskDeactivated(UGameplayTask&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnGameplayTaskDeactivated(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UGameplayTask.OnGameplayTaskDeactivated(UGameplayTask&)", a0);
@@ -183,7 +183,7 @@ struct UGameplayTask
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayTask.TaskOwnerEnded()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TaskOwnerEnded() const
     {
         return NativeCall<void*>(this, "UGameplayTask.TaskOwnerEnded()");
@@ -192,36 +192,36 @@ struct UGameplayTask
     BrzCampoPonteiro ChildTaskField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask.ChildTask")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +8, medido na build 25090264
+    //  ancorado em `ResourceOverlapPolicy` +8, medido na build 25535041
     //  (offset absoluto medido: 0x42; confianca alta)
     void*& ClaimedResourcesField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 8); }
     FName& InstanceNameField() const
     { return *GetNativePointerField<FName*>(this, "UGameplayTask.InstanceName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceName` +8, medido na build 25090264
+    //  ancorado em `InstanceName` +8, medido na build 25535041
     //  (offset absoluto medido: 0x38; confianca alta)
     int& PriorityField() const
     { return BrzCampoAncorado<int>(this, "InstanceName", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +6, medido na build 25090264
+    //  ancorado em `ResourceOverlapPolicy` +6, medido na build 25535041
     //  (offset absoluto medido: 0x40; confianca alta)
     void*& RequiredResourcesField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 6); }
     BrzCampoPonteiro ResourceOverlapPolicyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask.ResourceOverlapPolicy")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +14, medido na build 25090264
+    //  ancorado em `ResourceOverlapPolicy` +14, medido na build 25535041
     //  (offset absoluto medido: 0x48; confianca alta)
     void*& TaskOwnerField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 14); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceName` +9, medido na build 25090264
+    //  ancorado em `InstanceName` +9, medido na build 25535041
     //  (offset absoluto medido: 0x39; confianca alta)
     void*& TaskStateField() const
     { return BrzCampoAncorado<void*>(this, "InstanceName", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +30, medido na build 25090264
+    //  ancorado em `ResourceOverlapPolicy` +30, medido na build 25535041
     //  (offset absoluto medido: 0x58; confianca alta)
     void*& TasksComponentField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 30); }

@@ -37,7 +37,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalRaft.AllowExtendedCraftingFunctionality()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowExtendedCraftingFunctionality() const
     {
         return NativeCall<bool>(this, "APrimalRaft.AllowExtendedCraftingFunctionality()");
@@ -45,7 +45,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.Anchor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Anchor() const
     {
         return NativeCall<void*>(this, "APrimalRaft.Anchor()");
@@ -77,7 +77,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.CanAnchor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanAnchor() const
     {
         return NativeCall<void*>(this, "APrimalRaft.CanAnchor()");
@@ -117,7 +117,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.CanPlayerCheatAnchor(APlayerController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=218+chamadores=4+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanPlayerCheatAnchor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalRaft.CanPlayerCheatAnchor(APlayerController*)", a0);
@@ -133,7 +133,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.EnsureDecayClocksInitialized()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EnsureDecayClocksInitialized() const
     {
         return NativeCall<void*>(this, "APrimalRaft.EnsureDecayClocksInitialized()");
@@ -182,7 +182,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.HasAnchorOccupant()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HasAnchorOccupant() const
     {
         return NativeCall<void*>(this, "APrimalRaft.HasAnchorOccupant()");
@@ -190,7 +190,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.IsInOcean()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsInOcean() const
     {
         return NativeCall<void*>(this, "APrimalRaft.IsInOcean()");
@@ -206,7 +206,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalRaft.MoveRight(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=77]]
+    // endereco: casamento de bytes com a build de referencia
     void MoveRight(float a0) const
     {
         NativeCall<void, float>(this, "APrimalRaft.MoveRight(float)", a0);
@@ -214,7 +214,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalRaft.OnDeserializedByGame(EOnDeserializationType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: casamento de bytes com a build de referencia
     void OnDeserializedByGame(int a0) const
     {
         NativeCall<void, int>(this, "APrimalRaft.OnDeserializedByGame(EOnDeserializationType::Type)", a0);
@@ -230,7 +230,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalRaft.OverrideSwimmingAcceleration(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=152]]
+    // endereco: casamento de bytes com a build de referencia
     void OverrideSwimmingAcceleration(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalRaft.OverrideSwimmingAcceleration(UE::Math::TVector<double>&,float)", a0, a1);
@@ -278,7 +278,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.RefreshPhysicsVolumeForAnchor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RefreshPhysicsVolumeForAnchor() const
     {
         return NativeCall<void*>(this, "APrimalRaft.RefreshPhysicsVolumeForAnchor()");
@@ -294,7 +294,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.SetAnchorPropertyDirty()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetAnchorPropertyDirty() const
     {
         return NativeCall<void*>(this, "APrimalRaft.SetAnchorPropertyDirty()");
@@ -318,7 +318,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalRaft.ShouldTreadWater()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldTreadWater() const
     {
         return NativeCall<bool>(this, "APrimalRaft.ShouldTreadWater()");
@@ -326,7 +326,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.SyncAllyRangeDecayTime()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=59]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SyncAllyRangeDecayTime() const
     {
         return NativeCall<void*>(this, "APrimalRaft.SyncAllyRangeDecayTime()");
@@ -358,7 +358,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.TryGetWaterVolume()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TryGetWaterVolume() const
     {
         return NativeCall<void*>(this, "APrimalRaft.TryGetWaterVolume()");
@@ -374,7 +374,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.Unanchor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Unanchor() const
     {
         return NativeCall<void*>(this, "APrimalRaft.Unanchor()");
@@ -390,7 +390,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.UpdateAllyRangeDecayTime(double)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateAllyRangeDecayTime(double a0) const
     {
         return NativeCall<void*, double>(this, "APrimalRaft.UpdateAllyRangeDecayTime(double)", a0);
@@ -406,7 +406,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalRaft.UpdateSwimmingState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=171]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateSwimmingState() const
     {
         NativeCall<void>(this, "APrimalRaft.UpdateSwimmingState()");
@@ -414,7 +414,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.ValidateAnchorState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ValidateAnchorState() const
     {
         return NativeCall<void*>(this, "APrimalRaft.ValidateAnchorState()");
@@ -441,14 +441,14 @@ struct APrimalRaft : public APrimalDinoCharacter
     double& LastAnchorLiftedPersistentTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalRaft.LastAnchorLiftedPersistentTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchoredAutoDestroyTime` +12, medido na build 25090264
+    //  ancorado em `AnchoredAutoDestroyTime` +12, medido na build 25535041
     //  (offset absoluto medido: 0x2AE4; confianca alta)
     int& LastFrameDisabledForcedVelcoityDirectionField() const
     { return BrzCampoAncorado<int>(this, "AnchoredAutoDestroyTime", 12); }
     double& LastRaftAllyRangePersistentTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalRaft.LastRaftAllyRangePersistentTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchoredAutoDestroyTime` +4, medido na build 25090264
+    //  ancorado em `AnchoredAutoDestroyTime` +4, medido na build 25535041
     //  (offset absoluto medido: 0x2ADC; confianca alta)
     float& LastTracedWaterZField() const
     { return BrzCampoAncorado<float>(this, "AnchoredAutoDestroyTime", 4); }
@@ -459,19 +459,43 @@ struct APrimalRaft : public APrimalDinoCharacter
     double& NetworkCreationTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalRaft.NetworkCreationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchoredAutoDestroyTime` +8, medido na build 25090264
+    //  ancorado em `AnchoredAutoDestroyTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2AE0; confianca alta)
     int& NoWaterTriesField() const
     { return BrzCampoAncorado<int>(this, "AnchoredAutoDestroyTime", 8); }
     float& SurfaceAdjustmentZInterpSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalRaft.SurfaceAdjustmentZInterpSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRaftAllyRangePersistentTime` +8, medido na build 25090264
+    //  ancorado em `LastRaftAllyRangePersistentTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2AB8; confianca alta)
     double& TimeSinceLastFadeOutField() const
     { return BrzCampoAncorado<double>(this, "LastRaftAllyRangePersistentTime", 8); }
     float& UnAnchoredAutoDestroyTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalRaft.UnAnchoredAutoDestroyTime"); }
+    BrzCampoPonteiro bAllowOverrideUpdatesWhenNoRaftRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bAllowOverrideUpdatesWhenNoRaftRider")); }
+    BrzCampoPonteiro bAllowTargetingBasedCharactersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bAllowTargetingBasedCharacters")); }
+    BrzCampoPonteiro bAutoUnanchorOnDriveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bAutoUnanchorOnDrive")); }
+    BrzCampoPonteiro bBPOverrideSwimmingAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bBPOverrideSwimmingAcceleration")); }
+    BrzCampoPonteiro bBPOverrideSwimmingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bBPOverrideSwimmingVelocity")); }
+    BrzCampoPonteiro bCanAnchorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bCanAnchor")); }
+    BrzCampoPonteiro bCheatAnchoredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bCheatAnchored")); }
+    BrzCampoPonteiro bDisableGravityAdjustementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bDisableGravityAdjustement")); }
+    BrzCampoPonteiro bIsAnchoredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bIsAnchored")); }
+    BrzCampoPonteiro bRaftAllowCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bRaftAllowCrafting")); }
+    BrzCampoPonteiro bRaftAllowWalkingStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bRaftAllowWalkingState")); }
+    BrzCampoPonteiro bUseTracedSurfaceAdjustmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalRaft.bUseTracedSurfaceAdjustment")); }
     BitFieldValue<bool, unsigned __int32> bRaftAllowCrafting()
     { return { (void*)this, "bRaftAllowCrafting" }; }
     BitFieldValue<bool, unsigned __int32> bBPOverrideSwimmingVelocity()

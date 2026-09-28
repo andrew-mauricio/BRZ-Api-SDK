@@ -51,6 +51,10 @@ struct FWorldPartitionDraw2DCanvas
 
     BrzCampoPonteiro CanvasField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DCanvas.Canvas")); }
+    BrzCampoPonteiro CanvasLineBatchedElementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DCanvas.CanvasLineBatchedElements")); }
+    BrzCampoPonteiro CanvasTriangleBatchedElementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionDraw2DCanvas.CanvasTriangleBatchedElements")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDPARTITIONDRAW2DCANVAS_H

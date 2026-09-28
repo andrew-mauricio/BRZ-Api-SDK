@@ -127,7 +127,7 @@ struct UWorldPartitionRuntimeSpatialHash
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeSpatialHash.IsStreaming3D()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsStreaming3D() const
     {
         return NativeCall<void*>(this, "UWorldPartitionRuntimeSpatialHash.IsStreaming3D()");
@@ -162,7 +162,7 @@ struct UWorldPartitionRuntimeSpatialHash
     { return SupportsWorldAssetStreaming(*a0); }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingGrids` +16, medido na build 25090264
+    //  ancorado em `StreamingGrids` +16, medido na build 25535041
     //  (offset absoluto medido: 0x90; confianca alta)
     void*& NameToGridMappingField() const
     { return BrzCampoAncorado<void*>(this, "StreamingGrids", 16); }
@@ -172,8 +172,10 @@ struct UWorldPartitionRuntimeSpatialHash
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeSpatialHash.StreamingGrids")); }
     BrzCampoPonteiro WorldAssetStreamingObjectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeSpatialHash.WorldAssetStreamingObjects")); }
+    BrzCampoPonteiro bEnableZCullingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeSpatialHash.bEnableZCulling")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingGrids` +96, medido na build 25090264
+    //  ancorado em `StreamingGrids` +96, medido na build 25535041
     //  (offset absoluto medido: 0xE0; confianca media)
     void*& bIsNameToGridMappingDirtyField() const
     { return BrzCampoAncorado<void*>(this, "StreamingGrids", 96); }

@@ -53,12 +53,12 @@ struct UPrimalBuffPersistentData_MissionData
     { return *GetNativePointerField<FString*>(this, "UPrimalBuffPersistentData_MissionData.ForPrimalBuffClassString"); }
     BrzCampoPonteiro MissionDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_MissionData.MissionData")); }
-    BitFieldValue<bool, unsigned __int32> bPermanentlyPersist()
-    { return { (void*)this, "bPermanentlyPersist" }; }
-    BitFieldValue<bool, unsigned __int32> bSaveAndStopRefreshingOnDisconnect()
-    { return { (void*)this, "bSaveAndStopRefreshingOnDisconnect" }; }
-    BitFieldValue<bool, unsigned __int32> bSerializeAndStopRefreshingIfDead()
-    { return { (void*)this, "bSerializeAndStopRefreshingIfDead" }; }
+    BrzCampoPonteiro bPermanentlyPersistField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_MissionData.bPermanentlyPersist")); }
+    BrzCampoPonteiro bSaveAndStopRefreshingOnDisconnectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_MissionData.bSaveAndStopRefreshingOnDisconnect")); }
+    BrzCampoPonteiro bSerializeAndStopRefreshingIfDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalBuffPersistentData_MissionData.bSerializeAndStopRefreshingIfDead")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALBUFFPERSISTENTDATA_MISSIONDATA_H

@@ -52,7 +52,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_FlameThrower.BPSpawnImpactEffects(TArray<UE::Math::TVector<double>,TSizedDefaultA
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPSpawnImpactEffects(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterWeapon_FlameThrower.BPSpawnImpactEffects(TArray<UE::Math::TVector<double>,TSizedDefaultAllocator<32>>&)", a0);
@@ -60,7 +60,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.BPStopShootEffects()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPStopShootEffects() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.BPStopShootEffects()");
@@ -76,7 +76,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_FlameThrower.BeginShootFX_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void BeginShootFX_Implementation() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.BeginShootFX_Implementation()");
@@ -84,7 +84,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_FlameThrower.ClientSpawnHarvestFX(TArray<UE::Math::TVector<double>,TSizedDefaultA
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=169]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro ClientSpawnHarvestFX(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterWeapon_FlameThrower.ClientSpawnHarvestFX(TArray<UE::Math::TVector<double>,TSizedDefaultAllocator<32>>&)", a0);
@@ -116,7 +116,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.GetActiveMuzzleParticle()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetActiveMuzzleParticle() const
     {
         return NativeCall<UObject*>(this, "AShooterWeapon_FlameThrower.GetActiveMuzzleParticle()");
@@ -124,7 +124,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_FlameThrower.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void GetFirePosition(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterWeapon_FlameThrower.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
@@ -132,7 +132,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.GetSecondaryActiveMuzzleParticle()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetSecondaryActiveMuzzleParticle() const
     {
         return NativeCall<UObject*>(this, "AShooterWeapon_FlameThrower.GetSecondaryActiveMuzzleParticle()");
@@ -148,7 +148,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.ServerBeginShootFX()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerBeginShootFX() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.ServerBeginShootFX()");
@@ -156,7 +156,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.ServerTickShootFX()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTickShootFX() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.ServerTickShootFX()");
@@ -164,7 +164,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_FlameThrower.ServerTickShootFX_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=156+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerTickShootFX_Implementation() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.ServerTickShootFX_Implementation()");
@@ -188,7 +188,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.StopShootFX()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopShootFX() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.StopShootFX()");
@@ -196,7 +196,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_FlameThrower.StopShootFX_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=38]]
+    // endereco: casamento de bytes com a build de referencia
     void StopShootFX_Implementation() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.StopShootFX_Implementation()");
@@ -204,7 +204,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_FlameThrower.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "AShooterWeapon_FlameThrower.Tick(float)", a0);
@@ -212,7 +212,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_FlameThrower.TickShootFX()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TickShootFX() const
     {
         NativeCall<void>(this, "AShooterWeapon_FlameThrower.TickShootFX()");
@@ -227,7 +227,7 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Niagara_HarvestFX` +8, medido na build 25090264
+    //  ancorado em `Niagara_HarvestFX` +8, medido na build 25535041
     //  (offset absoluto medido: 0x11C8; confianca alta)
     TArray<void*>& CachedShotsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "Niagara_HarvestFX", 8); }
@@ -272,10 +272,22 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
     float& ShotDelayField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_FlameThrower.ShotDelay"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShotDelay` +4, medido na build 25090264
+    //  ancorado em `ShotDelay` +4, medido na build 25535041
     //  (offset absoluto medido: 0x11DC; confianca alta)
     void*& bAllowLocalExecutionField() const
     { return BrzCampoAncorado<void*>(this, "ShotDelay", 4); }
+    BrzCampoPonteiro bMuzzlePSC_IsTPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_FlameThrower.bMuzzlePSC_IsTPV")); }
+    BrzCampoPonteiro bSpawnGeneralTargetImpactEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_FlameThrower.bSpawnGeneralTargetImpactEffects")); }
+    BrzCampoPonteiro bUseBPBeginStopShootEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_FlameThrower.bUseBPBeginStopShootEffects")); }
+    BrzCampoPonteiro bUseBPOverrideImpactEffectSpawnLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_FlameThrower.bUseBPOverrideImpactEffectSpawnLocation")); }
+    BrzCampoPonteiro bUseBPSpawnImpactEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_FlameThrower.bUseBPSpawnImpactEffects")); }
+    BrzCampoPonteiro bUseMuzzlePSCTickGroupOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_FlameThrower.bUseMuzzlePSCTickGroupOverride")); }
     BitFieldValue<bool, unsigned __int32> bUseMuzzlePSCTickGroupOverride()
     { return { (void*)this, "bUseMuzzlePSCTickGroupOverride" }; }
     BitFieldValue<bool, unsigned __int32> bMuzzlePSC_IsTPV()

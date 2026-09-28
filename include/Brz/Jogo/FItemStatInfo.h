@@ -35,7 +35,7 @@ struct FItemStatInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   FItemStatInfo.GetItemStatModifier(unsignedshort)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetItemStatModifier(unsigned short a0) const
     {
         return NativeCall<float, unsigned short>(this, "FItemStatInfo.GetItemStatModifier(unsignedshort)", a0);

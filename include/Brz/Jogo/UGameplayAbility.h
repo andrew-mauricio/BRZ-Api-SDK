@@ -144,7 +144,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetCurrentAbilitySpecHandle()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentAbilitySpecHandle() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.GetCurrentAbilitySpecHandle()");
@@ -152,7 +152,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetCurrentActivationInfo()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentActivationInfo() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.GetCurrentActivationInfo()");
@@ -160,7 +160,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetCurrentActorInfo()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentActorInfo() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.GetCurrentActorInfo()");
@@ -168,7 +168,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetCurrentMontage()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UAnimMontage* GetCurrentMontage() const
     {
         return NativeCall<UAnimMontage*>(this, "UGameplayAbility.GetCurrentMontage()");
@@ -184,7 +184,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetGameplayTaskAvatar(UGameplayTask*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AActor* GetGameplayTaskAvatar(void* a0) const
     {
         return NativeCall<AActor*, void*>(this, "UGameplayAbility.GetGameplayTaskAvatar(UGameplayTask*)", a0);
@@ -192,7 +192,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetGameplayTaskOwner(UGameplayTask*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AActor* GetGameplayTaskOwner(void* a0) const
     {
         return NativeCall<AActor*, void*>(this, "UGameplayAbility.GetGameplayTaskOwner(UGameplayTask*)", a0);
@@ -200,7 +200,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetGameplayTasksComponent(UGameplayTask&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UGameplayTasksComponent* GetGameplayTasksComponent(void* a0) const
     {
         return NativeCall<UGameplayTasksComponent*, void*>(this, "UGameplayAbility.GetGameplayTasksComponent(UGameplayTask&)", a0);
@@ -208,7 +208,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetInstancingPolicy()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetInstancingPolicy() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.GetInstancingPolicy()");
@@ -224,7 +224,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.GetWorld()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UGameplayAbility.GetWorld()");
@@ -240,7 +240,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.IncrementListLock()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IncrementListLock() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.IncrementListLock()");
@@ -248,7 +248,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.IsActive()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsActive() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.IsActive()");
@@ -264,7 +264,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.IsInstantiated()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsInstantiated() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.IsInstantiated()");
@@ -296,7 +296,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.IsTriggered()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsTriggered() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.IsTriggered()");
@@ -464,7 +464,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.ShouldActivateAbility(ENetRole)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=56]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldActivateAbility(int a0) const
     {
         return NativeCall<void*, int>(this, "UGameplayAbility.ShouldActivateAbility(ENetRole)", a0);
@@ -472,7 +472,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.StaticRegisterNativesUGameplayAbility()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StaticRegisterNativesUGameplayAbility() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.StaticRegisterNativesUGameplayAbility()");
@@ -495,7 +495,7 @@ struct UGameplayAbility
     BrzCampoPonteiro CancelAbilitiesWithTagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.CancelAbilitiesWithTag")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetBlockedTags` +32, medido na build 25090264
+    //  ancorado em `TargetBlockedTags` +32, medido na build 25535041
     //  (offset absoluto medido: 0x2E0; confianca alta)
     void*& CancelTaskInstanceNamesField() const
     { return BrzCampoAncorado<void*>(this, "TargetBlockedTags", 32); }
@@ -506,7 +506,7 @@ struct UGameplayAbility
     BrzCampoPonteiro CurrentActivationInfoField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.CurrentActivationInfo")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentMontage` +8, medido na build 25090264
+    //  ancorado em `CurrentMontage` +8, medido na build 25535041
     //  (offset absoluto medido: 0x328; confianca alta)
     void*& CurrentActorInfoField() const
     { return BrzCampoAncorado<void*>(this, "CurrentMontage", 8); }
@@ -515,12 +515,12 @@ struct UGameplayAbility
     BrzCampoPonteiro CurrentMontageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.CurrentMontage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentMontage` +16, medido na build 25090264
+    //  ancorado em `CurrentMontage` +16, medido na build 25535041
     //  (offset absoluto medido: 0x330; confianca alta)
     void*& CurrentSpecHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentMontage", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetBlockedTags` +48, medido na build 25090264
+    //  ancorado em `TargetBlockedTags` +48, medido na build 25535041
     //  (offset absoluto medido: 0x2F0; confianca media)
     void*& EndTaskInstanceNamesField() const
     { return BrzCampoAncorado<void*>(this, "TargetBlockedTags", 48); }
@@ -530,10 +530,12 @@ struct UGameplayAbility
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility.NetExecutionPolicy"); }
     unsigned char& NetSecurityPolicyField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility.NetSecurityPolicy"); }
+    BrzCampoPonteiro RemoteInstanceEndedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.RemoteInstanceEnded")); }
     unsigned char& ReplicationPolicyField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility.ReplicationPolicy"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsBlockingOtherAbilities` +1, medido na build 25090264
+    //  ancorado em `bIsBlockingOtherAbilities` +1, medido na build 25535041
     //  (offset absoluto medido: 0x38C; confianca alta)
     void*& ScopeLockCountField() const
     { return BrzCampoAncorado<void*>(this, "bIsBlockingOtherAbilities", 1); }
@@ -546,40 +548,56 @@ struct UGameplayAbility
     BrzCampoPonteiro TargetRequiredTagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.TargetRequiredTags")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveTasks` +16, medido na build 25090264
+    //  ancorado em `ActiveTasks` +16, medido na build 25535041
     //  (offset absoluto medido: 0x310; confianca alta)
     void*& TaskDebugMessagesField() const
     { return BrzCampoAncorado<void*>(this, "ActiveTasks", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentMontage` +24, medido na build 25090264
+    //  ancorado em `CurrentMontage` +24, medido na build 25535041
     //  (offset absoluto medido: 0x338; confianca alta)
     void*& TrackedGameplayCuesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentMontage", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsBlockingOtherAbilities` +5, medido na build 25090264
+    //  ancorado em `bIsBlockingOtherAbilities` +5, medido na build 25535041
     //  (offset absoluto medido: 0x390; confianca alta)
     void*& WaitingToExecuteField() const
     { return BrzCampoAncorado<void*>(this, "bIsBlockingOtherAbilities", 5); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +3, medido na build 25090264
+    //  ancorado em `RemoteInstanceEnded` +3, medido na build 25535041
     //  (offset absoluto medido: 0xCC; confianca alta)
     void*& bHasBlueprintActivateField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +4, medido na build 25090264
+    //  ancorado em `RemoteInstanceEnded` +4, medido na build 25535041
     //  (offset absoluto medido: 0xCD; confianca alta)
     void*& bHasBlueprintActivateFromEventField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +2, medido na build 25090264
+    //  ancorado em `RemoteInstanceEnded` +2, medido na build 25535041
     //  (offset absoluto medido: 0xCB; confianca alta)
     void*& bHasBlueprintCanUseField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 2); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +1, medido na build 25090264
+    //  ancorado em `RemoteInstanceEnded` +1, medido na build 25535041
     //  (offset absoluto medido: 0xCA; confianca alta)
     void*& bHasBlueprintShouldAbilityRespondToEventField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 1); }
+    BrzCampoPonteiro bIsAbilityEndingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bIsAbilityEnding")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bIsActive")); }
+    BrzCampoPonteiro bIsBlockingOtherAbilitiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bIsBlockingOtherAbilities")); }
+    BrzCampoPonteiro bIsCancelableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bIsCancelable")); }
+    BrzCampoPonteiro bMarkPendingKillOnAbilityEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bMarkPendingKillOnAbilityEnd")); }
+    BrzCampoPonteiro bReplicateInputDirectlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bReplicateInputDirectly")); }
+    BrzCampoPonteiro bRetriggerInstancedAbilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bRetriggerInstancedAbility")); }
+    BrzCampoPonteiro bServerRespectsRemoteAbilityCancellationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.bServerRespectsRemoteAbilityCancellation")); }
     BitFieldValue<bool, unsigned __int32> RemoteInstanceEnded()
     { return { (void*)this, "RemoteInstanceEnded" }; }
     BitFieldValue<bool, unsigned __int32> bIsAbilityEnding()

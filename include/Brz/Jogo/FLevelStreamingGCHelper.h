@@ -35,7 +35,7 @@ struct FLevelStreamingGCHelper
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelStreamingGCHelper.AddGarbageCollectorCallback()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=17]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro AddGarbageCollectorCallback()
     {
         return NativeCall<void*>(nullptr, "FLevelStreamingGCHelper.AddGarbageCollectorCallback()");
@@ -43,7 +43,7 @@ struct FLevelStreamingGCHelper
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelStreamingGCHelper.GetNumLevelsPendingPurge()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetNumLevelsPendingPurge()
     {
         return NativeCall<void*>(nullptr, "FLevelStreamingGCHelper.GetNumLevelsPendingPurge()");
@@ -59,7 +59,7 @@ struct FLevelStreamingGCHelper
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelStreamingGCHelper.OnWorldTickEnd(UWorld*,ELevelTick,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro OnWorldTickEnd(void* a0, int a1, float a2)
     {
         return NativeCall<void*, void*, int, float>(nullptr, "FLevelStreamingGCHelper.OnWorldTickEnd(UWorld*,ELevelTick,float)", a0, a1, a2);
@@ -75,7 +75,7 @@ struct FLevelStreamingGCHelper
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelStreamingGCHelper.PrepareStreamedOutLevelsForGC()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=102]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro PrepareStreamedOutLevelsForGC()
     {
         return NativeCall<void*>(nullptr, "FLevelStreamingGCHelper.PrepareStreamedOutLevelsForGC()");
@@ -99,7 +99,7 @@ struct FLevelStreamingGCHelper
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FLevelStreamingGCHelper.VerifyLevelsGotRemovedByGC()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro VerifyLevelsGotRemovedByGC()
     {
         return NativeCall<void*>(nullptr, "FLevelStreamingGCHelper.VerifyLevelsGotRemovedByGC()");

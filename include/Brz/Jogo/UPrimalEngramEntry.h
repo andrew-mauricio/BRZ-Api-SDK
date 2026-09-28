@@ -129,6 +129,8 @@ struct UPrimalEngramEntry : public UObject
         return NativeCall<bool>(this, "UPrimalEngramEntry.UseEngramRequirementSets()");
     }
 
+    BrzCampoPonteiro AutoUnlockEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEngramEntry.AutoUnlockEngram")); }
     BrzCampoPonteiro BluePrintEntryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEngramEntry.BluePrintEntry")); }
     unsigned char& EngramCategoryField() const
@@ -147,6 +149,12 @@ struct UPrimalEngramEntry : public UObject
     { return *GetNativePointerField<int*>(this, "UPrimalEngramEntry.RequiredEngramPoints"); }
     unsigned char& RequiresDLCField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalEngramEntry.RequiresDLC"); }
+    BrzCampoPonteiro bCanBeManuallyUnlockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEngramEntry.bCanBeManuallyUnlocked")); }
+    BrzCampoPonteiro bForceIsTekEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEngramEntry.bForceIsTekEngram")); }
+    BrzCampoPonteiro bGiveBlueprintToPlayerInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalEngramEntry.bGiveBlueprintToPlayerInventory")); }
     BitFieldValue<bool, unsigned __int32> bGiveBlueprintToPlayerInventory()
     { return { (void*)this, "bGiveBlueprintToPlayerInventory" }; }
     BitFieldValue<bool, unsigned __int32> bCanBeManuallyUnlocked()

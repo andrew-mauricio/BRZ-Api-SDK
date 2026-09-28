@@ -47,6 +47,8 @@ struct FPrimalSnapshotPose
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalSnapshotPose.Sequence")); }
     float& TimeField() const
     { return *GetNativePointerField<float*>(this, "FPrimalSnapshotPose.Time"); }
+    BrzCampoPonteiro pedestalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalSnapshotPose.pedestal")); }
     BitFieldValue<bool, unsigned __int32> pedestal()
     { return { (void*)this, "pedestal" }; }
 

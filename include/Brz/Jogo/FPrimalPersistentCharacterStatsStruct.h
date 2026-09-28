@@ -53,7 +53,7 @@ struct FPrimalPersistentCharacterStatsStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   FPrimalPersistentCharacterStatsStruct.IsEmoteUnlocked(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsEmoteUnlocked(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "FPrimalPersistentCharacterStatsStruct.IsEmoteUnlocked(FName)", a0);
@@ -61,7 +61,7 @@ struct FPrimalPersistentCharacterStatsStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   FPrimalPersistentCharacterStatsStruct.IsPerMapExplorerNoteUnlocked(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=60]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPerMapExplorerNoteUnlocked(int a0) const
     {
         return NativeCall<bool, int>(this, "FPrimalPersistentCharacterStatsStruct.IsPerMapExplorerNoteUnlocked(int)", a0);
@@ -169,6 +169,16 @@ struct FPrimalPersistentCharacterStatsStruct
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.SkillRanks")); }
     BrzCampoPonteiro SkillUnlocksField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.SkillUnlocks")); }
+    BrzCampoPonteiro bHasUnlockedAllBBTExplorerNotesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.bHasUnlockedAllBBTExplorerNotes")); }
+    BrzCampoPonteiro bHasUnlockedAllBTT2ExplorerNotesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.bHasUnlockedAllBTT2ExplorerNotes")); }
+    BrzCampoPonteiro bHasUnlockedAllBTT3ExplorerNotesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.bHasUnlockedAllBTT3ExplorerNotes")); }
+    BrzCampoPonteiro bHasUnlockedAllBTT4ExplorerNotesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.bHasUnlockedAllBTT4ExplorerNotes")); }
+    BrzCampoPonteiro bHasUnlockedAllExplorerNotesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalPersistentCharacterStatsStruct.bHasUnlockedAllExplorerNotes")); }
     BitFieldValue<bool, unsigned __int32> bHasUnlockedAllBBTExplorerNotes()
     { return { (void*)this, "bHasUnlockedAllBBTExplorerNotes" }; }
     BitFieldValue<bool, unsigned __int32> bHasUnlockedAllBTT2ExplorerNotes()

@@ -32,6 +32,9 @@ struct FLevelSequenceLegacyObjectReference
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ObjectIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceLegacyObjectReference.ObjectId")); }
     BrzCampoPonteiro ObjectPathField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceLegacyObjectReference.ObjectPath")); }
 };

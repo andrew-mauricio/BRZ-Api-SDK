@@ -55,6 +55,10 @@ struct FPrimalCharacterStatusStateDefinition
     { return *GetNativePointerField<unsigned char*>(this, "FPrimalCharacterStatusStateDefinition.StatusValueType"); }
     bool& bDisplayHUDMessageField() const
     { return *GetNativePointerField<bool*>(this, "FPrimalCharacterStatusStateDefinition.bDisplayHUDMessage"); }
+    BrzCampoPonteiro bPreventDisplayBuffHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusStateDefinition.bPreventDisplayBuffHUD")); }
+    BrzCampoPonteiro bUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusStateDefinition.bUsed")); }
     BitFieldValue<bool, unsigned __int32> bDisplayHUDMessage()
     { return { (void*)this, "bDisplayHUDMessage" }; }
     BitFieldValue<bool, unsigned __int32> bPreventDisplayBuffHUD()

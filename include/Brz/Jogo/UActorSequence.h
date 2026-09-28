@@ -77,10 +77,10 @@ struct UActorSequence
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorSequence.SequenceFlags")); }
     BrzCampoPonteiro SignatureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorSequence.Signature")); }
-    BitFieldValue<bool, unsigned __int32> bParentContextsAreSignificant()
-    { return { (void*)this, "bParentContextsAreSignificant" }; }
-    BitFieldValue<bool, unsigned __int32> bPlayableDirectly()
-    { return { (void*)this, "bPlayableDirectly" }; }
+    BrzCampoPonteiro bParentContextsAreSignificantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorSequence.bParentContextsAreSignificant")); }
+    BrzCampoPonteiro bPlayableDirectlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorSequence.bPlayableDirectly")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UACTORSEQUENCE_H

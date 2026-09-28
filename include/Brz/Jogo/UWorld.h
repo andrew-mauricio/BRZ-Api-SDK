@@ -65,7 +65,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.AddNetworkActor(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddNetworkActor(void* a0) const
     {
         NativeCall<void, void*>(this, "UWorld.AddNetworkActor(AActor*)", a0);
@@ -121,7 +121,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.AddUniqueStreamingLevel(ULevelStreaming*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddUniqueStreamingLevel(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.AddUniqueStreamingLevel(ULevelStreaming*)", a0);
@@ -129,7 +129,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.AllowAudioPlayback()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowAudioPlayback() const
     {
         return NativeCall<void*>(this, "UWorld.AllowAudioPlayback()");
@@ -145,7 +145,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.AreActorsInitialized()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AreActorsInitialized() const
     {
         return NativeCall<void*>(this, "UWorld.AreActorsInitialized()");
@@ -233,7 +233,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.BeginTearingDown()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginTearingDown() const
     {
         NativeCall<void>(this, "UWorld.BeginTearingDown()");
@@ -249,7 +249,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.BroadcastPostTickDispatch()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BroadcastPostTickDispatch() const
     {
         return NativeCall<void*>(this, "UWorld.BroadcastPostTickDispatch()");
@@ -257,7 +257,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.BroadcastPostTickFlush(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BroadcastPostTickFlush(float a0) const
     {
         return NativeCall<void*, float>(this, "UWorld.BroadcastPostTickFlush(float)", a0);
@@ -265,7 +265,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.BroadcastPreTickFlush(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BroadcastPreTickFlush(float a0) const
     {
         return NativeCall<void*, float>(this, "UWorld.BroadcastPreTickFlush(float)", a0);
@@ -273,7 +273,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.BroadcastTickDispatch(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BroadcastTickDispatch(float a0) const
     {
         return NativeCall<void*, float>(this, "UWorld.BroadcastTickDispatch(float)", a0);
@@ -281,7 +281,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.BroadcastTickFlush(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BroadcastTickFlush(float a0) const
     {
         return NativeCall<void*, float>(this, "UWorld.BroadcastTickFlush(float)", a0);
@@ -321,7 +321,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.ClearDemoNetDriver()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClearDemoNetDriver() const
     {
         return NativeCall<void*>(this, "UWorld.ClearDemoNetDriver()");
@@ -329,7 +329,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.ClearNetDriver(UNetDriver*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClearNetDriver(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.ClearNetDriver(UNetDriver*)", a0);
@@ -413,7 +413,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.CreateFXSystem()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CreateFXSystem() const
     {
         return NativeCall<void*>(this, "UWorld.CreateFXSystem()");
@@ -485,7 +485,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.FindCollectionByType(ELevelCollectionType)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindCollectionByType(int a0) const
     {
         return NativeCall<void*, int>(this, "UWorld.FindCollectionByType(ELevelCollectionType)", a0);
@@ -493,7 +493,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.FindCollectionIndexByType(ELevelCollectionType)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindCollectionIndexByType(int a0) const
     {
         return NativeCall<void*, int>(this, "UWorld.FindCollectionIndexByType(ELevelCollectionType)", a0);
@@ -573,7 +573,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetActiveLevelCollection()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetActiveLevelCollection() const
     {
         return NativeCall<void*>(this, "UWorld.GetActiveLevelCollection()");
@@ -581,7 +581,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.GetActiveLightingScenario()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     ULevel* GetActiveLightingScenario() const
     {
         return NativeCall<ULevel*>(this, "UWorld.GetActiveLightingScenario()");
@@ -597,7 +597,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetAllowDeferredPhysicsStateCreation()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAllowDeferredPhysicsStateCreation() const
     {
         return NativeCall<void*>(this, "UWorld.GetAllowDeferredPhysicsStateCreation()");
@@ -653,7 +653,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetBegunPlay()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBegunPlay() const
     {
         return NativeCall<void*>(this, "UWorld.GetBegunPlay()");
@@ -661,7 +661,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetChaosEventRelay()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetChaosEventRelay() const
     {
         return NativeCall<void*>(this, "UWorld.GetChaosEventRelay()");
@@ -677,7 +677,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetControllerIterator()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetControllerIterator() const
     {
         return NativeCall<void*>(this, "UWorld.GetControllerIterator()");
@@ -685,7 +685,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetCurrentLevel()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentLevel() const
     {
         return NativeCall<void*>(this, "UWorld.GetCurrentLevel()");
@@ -741,7 +741,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetLatentActionManager()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLatentActionManager() const
     {
         return NativeCall<void*>(this, "UWorld.GetLatentActionManager()");
@@ -749,7 +749,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetLevel(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevel(int a0) const
     {
         return NativeCall<void*, int>(this, "UWorld.GetLevel(int)", a0);
@@ -757,7 +757,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetLevelIterator()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelIterator() const
     {
         return NativeCall<void*>(this, "UWorld.GetLevelIterator()");
@@ -765,7 +765,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetLevelScriptActor(ULevel*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelScriptActor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.GetLevelScriptActor(ULevel*)", a0);
@@ -781,7 +781,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetNumPlayerControllers()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNumPlayerControllers() const
     {
         return NativeCall<void*>(this, "UWorld.GetNumPlayerControllers()");
@@ -805,7 +805,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetPlayerControllerIterator()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetPlayerControllerIterator() const
     {
         return NativeCall<void*>(this, "UWorld.GetPlayerControllerIterator()");
@@ -833,7 +833,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UAutoDestroySubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSubsystem_UAutoDestroySubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UAutoDestroySubsystem>()");
@@ -841,7 +841,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UDataLayerSubsystem>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UDataLayerSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UDataLayerSubsystem>()");
@@ -849,7 +849,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UDaySequenceSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UDaySequenceSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UDaySequenceSubsystem>()");
@@ -857,7 +857,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UGameAnalyticsSubsystem>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UGameAnalyticsSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UGameAnalyticsSubsystem>()");
@@ -873,7 +873,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UHoldoutCompositeSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=113]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UHoldoutCompositeSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UHoldoutCompositeSubsystem>()");
@@ -881,7 +881,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<ULandscapeSubsystem>()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=2]]
     BrzPonteiro GetSubsystem_ULandscapeSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<ULandscapeSubsystem>()");
@@ -889,7 +889,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<ULevelInstanceSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSubsystem_ULevelInstanceSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<ULevelInstanceSubsystem>()");
@@ -897,7 +897,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassActorSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UMassActorSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassActorSubsystem>()");
@@ -905,7 +905,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassAgentSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UMassAgentSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassAgentSubsystem>()");
@@ -913,7 +913,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassDebuggerSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=113]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UMassDebuggerSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassDebuggerSubsystem>()");
@@ -921,7 +921,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassEQSSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=113]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UMassEQSSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassEQSSubsystem>()");
@@ -929,7 +929,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassEntitySubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=6]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSubsystem_UMassEntitySubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassEntitySubsystem>()");
@@ -945,7 +945,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassRepresentationSubsystem>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_UMassRepresentationSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassRepresentationSubsystem>()");
@@ -1001,7 +1001,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UPrimalMassSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=7]]
     BrzPonteiro GetSubsystem_UPrimalMassSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UPrimalMassSubsystem>()");
@@ -1009,7 +1009,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<USmartObjectSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubsystem_USmartObjectSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<USmartObjectSubsystem>()");
@@ -1017,7 +1017,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UWorldPartitionHLODRuntimeSubsystem>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSubsystem_UWorldPartitionHLODRuntimeSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UWorldPartitionHLODRuntimeSubsystem>()");
@@ -1025,7 +1025,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UWorldPartitionSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetSubsystem_UWorldPartitionSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UWorldPartitionSubsystem>()");
@@ -1033,7 +1033,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UZoneGraphAnnotationSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=3]]
     BrzPonteiro GetSubsystem_UZoneGraphAnnotationSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UZoneGraphAnnotationSubsystem>()");
@@ -1041,7 +1041,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UZoneGraphSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=8]]
     BrzPonteiro GetSubsystem_UZoneGraphSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UZoneGraphSubsystem>()");
@@ -1049,7 +1049,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.GetTimerManager()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTimerManager() const
     {
         return NativeCall<void*>(this, "UWorld.GetTimerManager()");
@@ -1057,7 +1057,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetWorldDataLayers()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldDataLayers() const
     {
         return NativeCall<void*>(this, "UWorld.GetWorldDataLayers()");
@@ -1121,7 +1121,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.HasBegunPlay()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasBegunPlay() const
     {
         return NativeCall<void*>(this, "UWorld.HasBegunPlay()");
@@ -1129,7 +1129,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.HasEndOfFrameUpdates()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasEndOfFrameUpdates() const
     {
         return NativeCall<void*>(this, "UWorld.HasEndOfFrameUpdates()");
@@ -1185,7 +1185,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.IsEditorWorld()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsEditorWorld() const
     {
         return NativeCall<void*>(this, "UWorld.IsEditorWorld()");
@@ -1194,9 +1194,9 @@ struct UWorld : public UPrimalWorld
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.IsGameWorld()
     // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
-    static bool IsGameWorld()
+    bool IsGameWorld() const
     {
-        return NativeCall<bool>(nullptr, "UWorld.IsGameWorld()");
+        return NativeCall<bool>(this, "UWorld.IsGameWorld()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -1233,7 +1233,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.IsPlayInEditor()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsPlayInEditor() const
     {
         return NativeCall<void*>(this, "UWorld.IsPlayInEditor()");
@@ -1249,7 +1249,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.IsPreparingMapChange()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsPreparingMapChange() const
     {
         return NativeCall<void*>(this, "UWorld.IsPreparingMapChange()");
@@ -1257,7 +1257,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.IsPreviewWorld()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsPreviewWorld() const
     {
         return NativeCall<void*>(this, "UWorld.IsPreviewWorld()");
@@ -1289,7 +1289,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.IsVisibilityRequestPending()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsVisibilityRequestPending() const
     {
         return NativeCall<bool>(this, "UWorld.IsVisibilityRequestPending()");
@@ -1297,7 +1297,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.K2_GetLastAverageSceneLuminance(float&,int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro K2_GetLastAverageSceneLuminance(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "UWorld.K2_GetLastAverageSceneLuminance(float&,int)", a0, a1);
@@ -1305,7 +1305,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.LineTraceMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=135+chamadores=13]]
     BrzPonteiro LineTraceMultiByChannel(void* a0, void* a1, void* a2, int a3, void* a4, void* a5) const
     {
         return NativeCall<void*, void*, void*, void*, int, void*, void*>(this, "UWorld.LineTraceMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,ECollisionChannel,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5);
@@ -1321,15 +1321,15 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.LineTraceMultiByProfile(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=243+chamadores=2]]
-    static BrzPonteiro LineTraceMultiByProfile(void* a0, void* a1, void* a2, unsigned long long a3, void* a4)
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    BrzPonteiro LineTraceMultiByProfile(void* a0, void* a1, void* a2, unsigned long long a3, void* a4) const
     {
-        return NativeCall<void*, void*, void*, void*, unsigned long long, void*>(nullptr, "UWorld.LineTraceMultiByProfile(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,FName,FCollisionQueryParams&)", a0, a1, a2, a3, a4);
+        return NativeCall<void*, void*, void*, void*, unsigned long long, void*>(this, "UWorld.LineTraceMultiByProfile(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,FName,FCollisionQueryParams&)", a0, a1, a2, a3, a4);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.LineTraceSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=135+chamadores=164]]
     bool LineTraceSingleByChannel(void* a0, void* a1, void* a2, int a3, void* a4, void* a5) const
     {
         return NativeCall<bool, void*, void*, void*, int, void*, void*>(this, "UWorld.LineTraceSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,ECollisionChannel,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5);
@@ -1346,9 +1346,9 @@ struct UWorld : public UPrimalWorld
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.LineTraceSingleByProfile(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>
     // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
-    static BrzPonteiro LineTraceSingleByProfile(void* a0, void* a1, void* a2, unsigned long long a3, void* a4)
+    BrzPonteiro LineTraceSingleByProfile(void* a0, void* a1, void* a2, unsigned long long a3, void* a4) const
     {
-        return NativeCall<void*, void*, void*, void*, unsigned long long, void*>(nullptr, "UWorld.LineTraceSingleByProfile(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,FName,FCollisionQueryParams&)", a0, a1, a2, a3, a4);
+        return NativeCall<void*, void*, void*, void*, unsigned long long, void*>(this, "UWorld.LineTraceSingleByProfile(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,FName,FCollisionQueryParams&)", a0, a1, a2, a3, a4);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -1385,7 +1385,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.ModifyLevel(ULevel*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ModifyLevel(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.ModifyLevel(ULevel*)", a0);
@@ -1409,7 +1409,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.NotifyControlMessage(UNetConnection*,unsignedchar,FInBunch&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyControlMessage(void* a0, unsigned char a1, void* a2) const
     {
         NativeCall<void, void*, unsigned char, void*>(this, "UWorld.NotifyControlMessage(UNetConnection*,unsignedchar,FInBunch&)", a0, a1, a2);
@@ -1417,7 +1417,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.NotifyPostRegisterAllActorComponents(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NotifyPostRegisterAllActorComponents(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.NotifyPostRegisterAllActorComponents(AActor*)", a0);
@@ -1425,7 +1425,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.NotifyPreUnregisterAllActorComponents(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NotifyPreUnregisterAllActorComponents(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.NotifyPreUnregisterAllActorComponents(AActor*)", a0);
@@ -1441,7 +1441,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.OnPostTickDispatch()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnPostTickDispatch() const
     {
         return NativeCall<void*>(this, "UWorld.OnPostTickDispatch()");
@@ -1449,7 +1449,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.OnPostTickFlush()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnPostTickFlush() const
     {
         return NativeCall<void*>(this, "UWorld.OnPostTickFlush()");
@@ -1457,7 +1457,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.OnTickDispatch()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnTickDispatch() const
     {
         return NativeCall<void*>(this, "UWorld.OnTickDispatch()");
@@ -1465,7 +1465,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.OnTickFlush()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnTickFlush() const
     {
         return NativeCall<void*>(this, "UWorld.OnTickFlush()");
@@ -1545,7 +1545,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.PreDuplicate(FObjectDuplicationParameters&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreDuplicate(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.PreDuplicate(FObjectDuplicationParameters&)", a0);
@@ -1701,7 +1701,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.RequestNewWorldOrigin(UE::Math::TIntVector3<int>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RequestNewWorldOrigin(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.RequestNewWorldOrigin(UE::Math::TIntVector3<int>)", a0);
@@ -1773,7 +1773,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SetAllowDeferredPhysicsStateCreation(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetAllowDeferredPhysicsStateCreation(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UWorld.SetAllowDeferredPhysicsStateCreation(bool)", a0);
@@ -1837,7 +1837,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SetShouldForceUnloadStreamingLevels(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetShouldForceUnloadStreamingLevels(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UWorld.SetShouldForceUnloadStreamingLevels(bool)", a0);
@@ -1853,7 +1853,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SetWorldDataLayers(AWorldDataLayers*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetWorldDataLayers(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.SetWorldDataLayers(AWorldDataLayers*)", a0);
@@ -1957,7 +1957,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SweepMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<doub
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=22]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=24]]
     BrzPonteiro SweepMultiByChannel(void* a0, void* a1, void* a2, void* a3, int a4, void* a5, void* a6, void* a7) const
     {
         return NativeCall<void*, void*, void*, void*, void*, int, void*, void*, void*>(this, "UWorld.SweepMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TQuat<double>&,ECollisionChannel,FCollisionShape&,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -1981,7 +1981,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SweepSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=174]]
     BrzPonteiro SweepSingleByChannel(void* a0, void* a1, void* a2, void* a3, int a4, void* a5, void* a6, void* a7) const
     {
         return NativeCall<void*, void*, void*, void*, void*, int, void*, void*, void*>(this, "UWorld.SweepSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TQuat<double>&,ECollisionChannel,FCollisionShape&,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -2021,7 +2021,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.ToggleHLODHack0()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ToggleHLODHack0() const
     {
         return NativeCall<void*>(this, "UWorld.ToggleHLODHack0()");
@@ -2045,7 +2045,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.UpdateStreamingLevelPriority(ULevelStreaming*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateStreamingLevelPriority(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorld.UpdateStreamingLevelPriority(ULevelStreaming*)", a0);
@@ -2089,41 +2089,41 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro AISystemField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.AISystem")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +16, medido na build 25090264
+    //  ancorado em `LevelCollections` +16, medido na build 25535041
     //  (offset absoluto medido: 0x468; confianca alta)
     int& ActiveLevelCollectionIndexField() const
     { return BrzCampoAncorado<int>(this, "LevelCollections", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +72, medido na build 25090264
+    //  ancorado em `LevelCollections` +72, medido na build 25535041
     //  (offset absoluto medido: 0x4A0; confianca media)
     void*& AudioDeviceDestroyedHandleField() const
     { return BrzCampoAncorado<void*>(this, "LevelCollections", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +48, medido na build 25090264
+    //  ancorado em `LevelCollections` +48, medido na build 25535041
     //  (offset absoluto medido: 0x488; confianca media)
     void*& AudioDeviceHandleField() const
     { return BrzCampoAncorado<void*>(this, "LevelCollections", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +24, medido na build 25090264
+    //  ancorado em `TimeSeconds` +24, medido na build 25535041
     //  (offset absoluto medido: 0x9B0; confianca alta)
     double& AudioTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 24); }
     TObjectPtr<AGameModeBase>& AuthorityGameModeField() const
     { return *GetNativePointerField<TObjectPtr<AGameModeBase>*>(this, "UWorld.AuthorityGameMode"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +48, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +48, medido na build 25535041
     //  (offset absoluto medido: 0x4F8; confianca media)
     void*& AutoCameraActorListField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 48); }
     BrzCampoPonteiro AvoidanceManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.AvoidanceManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +72, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +72, medido na build 25535041
     //  (offset absoluto medido: 0x418; confianca media)
     int& BlockTillLevelStreamingCompletedEpochField() const
     { return BrzCampoAncorado<int>(this, "DefaultPhysicsVolume", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +32, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +32, medido na build 25535041
     //  (offset absoluto medido: 0x3F0; confianca alta)
     void*& CachedViewInfoRenderedLastFrameField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 32); }
@@ -2132,12 +2132,12 @@ struct UWorld : public UPrimalWorld
     TObjectPtr<UCanvas>& CanvasForRenderingToTargetField() const
     { return *GetNativePointerField<TObjectPtr<UCanvas>*>(this, "UWorld.CanvasForRenderingToTarget"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +60, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +60, medido na build 25535041
     //  (offset absoluto medido: 0xA4C; confianca media)
     void*& CleanupWorldTagField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +48, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +48, medido na build 25535041
     //  (offset absoluto medido: 0xA40; confianca media)
     FName& CommittedPersistentLevelNameField() const
     { return BrzCampoAncorado<FName>(this, "ContentBundleManager", 48); }
@@ -2150,7 +2150,7 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro ContentBundleManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.ContentBundleManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +16, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +16, medido na build 25535041
     //  (offset absoluto medido: 0x4D8; confianca alta)
     TArray<TWeakObjectPtr<void>>& ControllerListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CanvasForDrawMaterialToRenderTarget", 16); }
@@ -2159,24 +2159,24 @@ struct UWorld : public UPrimalWorld
     TObjectPtr<ULevel>& CurrentLevelPendingVisibilityField() const
     { return *GetNativePointerField<TObjectPtr<ULevel>*>(this, "UWorld.CurrentLevelPendingVisibility"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +104, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +104, medido na build 25535041
     //  (offset absoluto medido: 0x530; confianca media)
     void*& DefaultPhysicsScene_ChaosField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 104); }
     TObjectPtr<APhysicsVolume>& DefaultPhysicsVolumeField() const
     { return *GetNativePointerField<TObjectPtr<APhysicsVolume>*>(this, "UWorld.DefaultPhysicsVolume"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +32, medido na build 25090264
+    //  ancorado em `TimeSeconds` +32, medido na build 25535041
     //  (offset absoluto medido: 0x9B8; confianca alta)
     float& DeltaRealTimeSecondsField() const
     { return BrzCampoAncorado<float>(this, "TimeSeconds", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +40, medido na build 25090264
+    //  ancorado em `TimeSeconds` +40, medido na build 25535041
     //  (offset absoluto medido: 0x9C0; confianca media)
     void*& DeltaTimeAlterationField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +36, medido na build 25090264
+    //  ancorado em `TimeSeconds` +36, medido na build 25535041
     //  (offset absoluto medido: 0x9BC; confianca media)
     float& DeltaTimeSecondsField() const
     { return BrzCampoAncorado<float>(this, "TimeSeconds", 36); }
@@ -2185,12 +2185,12 @@ struct UWorld : public UPrimalWorld
     TArray<void*>& ExtraReferencedObjectsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UWorld.ExtraReferencedObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +56, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +56, medido na build 25535041
     //  (offset absoluto medido: 0x408; confianca media)
     void*& FeatureLevelField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +8, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +8, medido na build 25535041
     //  (offset absoluto medido: 0xA18; confianca media)
     void*& FlushLevelStreamingTypeField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 8); }
@@ -2199,17 +2199,17 @@ struct UWorld : public UPrimalWorld
     TObjectPtr<AGameStateBase>& GameStateField() const
     { return *GetNativePointerField<TObjectPtr<AGameStateBase>*>(this, "UWorld.GameState"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +176, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +176, medido na build 25535041
     //  (offset absoluto medido: 0xAC0; confianca baixa)
     void*& GameStateSetEventField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +68, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +68, medido na build 25535041
     //  (offset absoluto medido: 0x414; confianca media)
     void*& IsInBlockTillLevelStreamingCompletedField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +48, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +48, medido na build 25535041
     //  (offset absoluto medido: 0x400; confianca media)
     double& LastRenderTimeField() const
     { return BrzCampoAncorado<double>(this, "DefaultPhysicsVolume", 48); }
@@ -2228,62 +2228,62 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro NetworkManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.NetworkManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +104, medido na build 25090264
+    //  ancorado em `TimeSeconds` +104, medido na build 25535041
     //  (offset absoluto medido: 0xA00; confianca media)
     float& NextSwitchCountdownField() const
     { return BrzCampoAncorado<float>(this, "TimeSeconds", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +9, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +9, medido na build 25535041
     //  (offset absoluto medido: 0xA19; confianca media)
     void*& NextTravelTypeField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +16, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA20; confianca media)
     FString& NextURLField() const
     { return BrzCampoAncorado<FString>(this, "ContentBundleManager", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +64, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +64, medido na build 25535041
     //  (offset absoluto medido: 0x508; confianca media)
     TArray<TWeakObjectPtr<void>>& NonDefaultPhysicsVolumeListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CanvasForDrawMaterialToRenderTarget", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +10, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +10, medido na build 25535041
     //  (offset absoluto medido: 0xA1A; confianca media)
     unsigned short& NumStreamingLevelsBeingLoadedField() const
     { return BrzCampoAncorado<unsigned short>(this, "ContentBundleManager", 10); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +80, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +80, medido na build 25535041
     //  (offset absoluto medido: 0xA60; confianca media)
     void*& OnActorsInitializedField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +24, medido na build 25090264
+    //  ancorado em `LevelCollections` +24, medido na build 25535041
     //  (offset absoluto medido: 0x470; confianca alta)
     void*& OnBeginPlayField() const
     { return BrzCampoAncorado<void*>(this, "LevelCollections", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +104, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +104, medido na build 25535041
     //  (offset absoluto medido: 0xA78; confianca media)
     void*& OnWorldBeginPlayField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +128, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +128, medido na build 25535041
     //  (offset absoluto medido: 0xA90; confianca media)
     void*& OnWorldMatchStartingField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +152, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +152, medido na build 25535041
     //  (offset absoluto medido: 0xAA8; confianca baixa)
     void*& OnWorldPreBeginPlayField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +56, medido na build 25090264
+    //  ancorado em `TimeSeconds` +56, medido na build 25535041
     //  (offset absoluto medido: 0x9D0; confianca media)
     void*& OriginLocationField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +80, medido na build 25090264
+    //  ancorado em `TimeSeconds` +80, medido na build 25535041
     //  (offset absoluto medido: 0x9E8; confianca media)
     void*& OriginOffsetThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 80); }
@@ -2294,19 +2294,19 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro ParameterCollectionInstancesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.ParameterCollectionInstances")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +72, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +72, medido na build 25535041
     //  (offset absoluto medido: 0xA58; confianca media)
     void*& ParticlePerfStatsField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +48, medido na build 25090264
+    //  ancorado em `TimeSeconds` +48, medido na build 25535041
     //  (offset absoluto medido: 0x9C8; confianca media)
     double& PauseDelayField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 48); }
     TArray<void*>& PerModuleDataObjectsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UWorld.PerModuleDataObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +64, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +64, medido na build 25535041
     //  (offset absoluto medido: 0xA50; confianca media)
     void*& PerfTrackersField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 64); }
@@ -2319,42 +2319,42 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro PhysicsFieldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.PhysicsField")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +80, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +80, medido na build 25535041
     //  (offset absoluto medido: 0x518; confianca media)
     void*& PhysicsSceneField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +88, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +88, medido na build 25535041
     //  (offset absoluto medido: 0x520; confianca media)
     void*& PhysicsScene_ChaosField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +32, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +32, medido na build 25535041
     //  (offset absoluto medido: 0x4E8; confianca alta)
     TArray<TWeakObjectPtr<void>>& PlayerControllerListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CanvasForDrawMaterialToRenderTarget", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ComponentsThatNeedEndOfFrameUpdate_OnGameThread` +496, medido na build 25090264
+    //  ancorado em `ComponentsThatNeedEndOfFrameUpdate_OnGameThread` +496, medido na build 25535041
     //  (offset absoluto medido: 0x798; confianca baixa)
     void*& PostTickDispatchEventField() const
     { return BrzCampoAncorado<void*>(this, "ComponentsThatNeedEndOfFrameUpdate_OnGameThread", 496); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +32, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +32, medido na build 25535041
     //  (offset absoluto medido: 0xA30; confianca media)
     TArray<void*>& PreparingLevelNamesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "ContentBundleManager", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +16, medido na build 25090264
+    //  ancorado em `TimeSeconds` +16, medido na build 25535041
     //  (offset absoluto medido: 0x9A8; confianca alta)
     double& RealTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +68, medido na build 25090264
+    //  ancorado em `TimeSeconds` +68, medido na build 25535041
     //  (offset absoluto medido: 0x9DC; confianca media)
     void*& RequestedOriginLocationField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +8, medido na build 25090264
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4D0; confianca alta)
     void*& SceneField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 8); }
@@ -2367,51 +2367,53 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro StreamingLevelsToConsiderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.StreamingLevelsToConsider")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +57, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +57, medido na build 25535041
     //  (offset absoluto medido: 0x409; confianca media)
     unsigned char& TickGroupField() const
     { return BrzCampoAncorado<unsigned char>(this, "DefaultPhysicsVolume", 57); }
     double& TimeSecondsField() const
     { return *GetNativePointerField<double*>(this, "UWorld.TimeSeconds"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +8, medido na build 25090264
+    //  ancorado em `TimeSeconds` +8, medido na build 25535041
     //  (offset absoluto medido: 0x9A0; confianca alta)
     double& UnpausedTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +16, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3E0; confianca alta)
     TArray<void*>& ViewLocationsRenderedLastFrameField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "DefaultPhysicsVolume", 16); }
     BrzCampoPonteiro WorldCompositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.WorldComposition")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +58, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +58, medido na build 25535041
     //  (offset absoluto medido: 0x40A; confianca media)
     void*& WorldTypeField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 58); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +8, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3D8; confianca alta)
     void*& bAllowDeferredPhysicsStateCreationField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 8); }
+    BrzCampoPonteiro bAreConstraintsDirtyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.bAreConstraintsDirty")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +200, medido na build 25090264
+    //  ancorado em `ContentBundleManager` +200, medido na build 25535041
     //  (offset absoluto medido: 0xAD8; confianca baixa)
     void*& bBroadcastLevelsChangedEventIsEnabledField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +64, medido na build 25090264
+    //  ancorado em `DefaultPhysicsVolume` +64, medido na build 25535041
     //  (offset absoluto medido: 0x410; confianca media)
     void*& bIsBeingCleanedUpField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingLevelsPrefix` +18, medido na build 25090264
+    //  ancorado em `StreamingLevelsPrefix` +18, medido na build 25535041
     //  (offset absoluto medido: 0x3AA; confianca alta)
     void*& bSupportsMakingInvisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "StreamingLevelsPrefix", 18); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingLevelsPrefix` +16, medido na build 25090264
+    //  ancorado em `StreamingLevelsPrefix` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3A8; confianca alta)
     void*& bSupportsMakingVisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "StreamingLevelsPrefix", 16); }

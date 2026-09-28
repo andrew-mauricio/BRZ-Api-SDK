@@ -35,11 +35,14 @@ struct FPrimalCharacterNetworkMoveData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FPrimalCharacterNetworkMoveData.Validate(UCharacterMovementComponent&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
-    static BrzPonteiro Validate(void* a0)
+    // endereco: casamento de bytes com a build de referencia
+    BrzPonteiro Validate(void* a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "FPrimalCharacterNetworkMoveData.Validate(UCharacterMovementComponent&)", a0);
+        return NativeCall<void*, void*>(this, "FPrimalCharacterNetworkMoveData.Validate(UCharacterMovementComponent&)", a0);
     }
+
+    BrzCampoPonteiro PrimalMoveDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterNetworkMoveData.PrimalMoveData")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALCHARACTERNETWORKMOVEDATA_H

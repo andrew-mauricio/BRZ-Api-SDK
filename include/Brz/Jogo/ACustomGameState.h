@@ -36,7 +36,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.AllowShowPlayerHudUI(APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowShowPlayerHudUI(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ACustomGameState.AllowShowPlayerHudUI(APrimalCharacter*)", a0);
@@ -64,7 +64,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.DrawHUDNotifications(AShooterHUD*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DrawHUDNotifications(void* a0) const
     {
         NativeCall<void, void*>(this, "ACustomGameState.DrawHUDNotifications(AShooterHUD*)", a0);
@@ -72,7 +72,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.ForceOccludedFloatingHUD(AActor*,AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ForceOccludedFloatingHUD(void* a0, void* a1) const
     {
         return NativeCall<bool, void*, void*>(this, "ACustomGameState.ForceOccludedFloatingHUD(AActor*,AShooterPlayerController*)", a0, a1);
@@ -80,7 +80,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.GetColorForTargetingTeam_Implementation(int,FColor&,FColor&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetColorForTargetingTeam_Implementation(int a0, void* a1, void* a2) const
     {
         NativeCall<void, int, void*, void*>(this, "ACustomGameState.GetColorForTargetingTeam_Implementation(int,FColor&,FColor&)", a0, a1, a2);
@@ -100,7 +100,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=398+grafo=13/13]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=398+grafo=14/14]]
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "ACustomGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -116,7 +116,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.GetTribeTexture(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     UTexture2D* GetTribeTexture(int a0) const
     {
         return NativeCall<UTexture2D*, int>(this, "ACustomGameState.GetTribeTexture(int)", a0);
@@ -132,7 +132,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.OnRep_PlayerScoreData_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_PlayerScoreData_Implementation() const
     {
         NativeCall<void>(this, "ACustomGameState.OnRep_PlayerScoreData_Implementation()");
@@ -140,7 +140,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.RemoveTribeFlag(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveTribeFlag(int a0) const
     {
         NativeCall<void, int>(this, "ACustomGameState.RemoveTribeFlag(int)", a0);
@@ -156,7 +156,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=408+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "ACustomGameState.Tick(float)", a0);
@@ -164,7 +164,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.UpdatePlayerScoreDataMap()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdatePlayerScoreDataMap() const
     {
         NativeCall<void>(this, "ACustomGameState.UpdatePlayerScoreDataMap()");
@@ -172,7 +172,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.UpdateTribeScoreDataMap()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateTribeScoreDataMap() const
     {
         NativeCall<void>(this, "ACustomGameState.UpdateTribeScoreDataMap()");
@@ -188,6 +188,14 @@ struct ACustomGameState : public AShooterGameState
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACustomGameState.TribeScoreData")); }
     BrzCampoPonteiro TribesFlagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACustomGameState.TribesFlags")); }
+    BrzCampoPonteiro bEnableAllyRadarDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACustomGameState.bEnableAllyRadarData")); }
+    BrzCampoPonteiro bEnableAutoUploadTribeFlagField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACustomGameState.bEnableAutoUploadTribeFlag")); }
+    BrzCampoPonteiro bReplicateScoreDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACustomGameState.bReplicateScoreData")); }
+    BrzCampoPonteiro bUseGetColorForTargetingTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACustomGameState.bUseGetColorForTargetingTeam")); }
     BitFieldValue<bool, unsigned __int32> bEnableAllyRadarData()
     { return { (void*)this, "bEnableAllyRadarData" }; }
     BitFieldValue<bool, unsigned __int32> bEnableAutoUploadTribeFlag()

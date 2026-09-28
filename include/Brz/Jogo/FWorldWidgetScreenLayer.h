@@ -55,6 +55,8 @@ struct FWorldWidgetScreenLayer
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldWidgetScreenLayer.Components")); }
     BrzCampoPonteiro OwningPlayerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldWidgetScreenLayer.OwningPlayer")); }
+    BrzCampoPonteiro ScreenLayerPtrField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldWidgetScreenLayer.ScreenLayerPtr")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDWIDGETSCREENLAYER_H

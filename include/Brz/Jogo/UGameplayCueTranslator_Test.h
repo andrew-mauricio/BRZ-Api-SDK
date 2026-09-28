@@ -35,7 +35,7 @@ struct UGameplayCueTranslator_Test
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueTranslator_Test.GameplayCueToTranslationIndex(FName&,AActor*,FGameplayCueParameters&
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GameplayCueToTranslationIndex(const FName& a0, void* a1, void* a2)
     {
         return NativeCall<void*, void*, void*, void*>(nullptr, "UGameplayCueTranslator_Test.GameplayCueToTranslationIndex(FName&,AActor*,FGameplayCueParameters&)", const_cast<FName*>(&a0), a1, a2);

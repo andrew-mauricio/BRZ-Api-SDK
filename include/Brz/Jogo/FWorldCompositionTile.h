@@ -41,6 +41,12 @@ struct FWorldCompositionTile
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCompositionTile.LODPackageNames")); }
     FName& PackageNameField() const
     { return *GetNativePointerField<FName*>(this, "FWorldCompositionTile.PackageName"); }
+    BrzCampoPonteiro ShortHandNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCompositionTile.ShortHandName")); }
+    BrzCampoPonteiro StreamingLevelStateChangeTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCompositionTile.StreamingLevelStateChangeTime")); }
+    BrzCampoPonteiro bHasInclusionVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldCompositionTile.bHasInclusionVolume")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDCOMPOSITIONTILE_H

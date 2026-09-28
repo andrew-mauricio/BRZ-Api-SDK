@@ -35,10 +35,12 @@ struct FPrimalServerMoveExtendedData
 
     BrzCampoPonteiro ClientRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalServerMoveExtendedData.ClientRotation")); }
-    BitFieldValue<bool, unsigned __int32> bIsDino()
-    { return { (void*)this, "bIsDino" }; }
-    BitFieldValue<bool, unsigned __int32> bIsRunning()
-    { return { (void*)this, "bIsRunning" }; }
+    BrzCampoPonteiro bIsDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalServerMoveExtendedData.bIsDino")); }
+    BrzCampoPonteiro bIsRunningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalServerMoveExtendedData.bIsRunning")); }
+    BrzCampoPonteiro bTestForYawDisagreementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalServerMoveExtendedData.bTestForYawDisagreement")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALSERVERMOVEEXTENDEDDATA_H

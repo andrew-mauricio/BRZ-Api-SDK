@@ -104,7 +104,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.AddDinoToClientTrackedActorPointersIfApplicable(APrimalDinoCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddDinoToClientTrackedActorPointersIfApplicable(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.AddDinoToClientTrackedActorPointersIfApplicable(APrimalDinoCharacter*)", a0);
@@ -120,7 +120,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.AddExperience(float,bool,bool,EXPType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void AddExperience(float a0, bool a1, bool a2, int a3) const
     {
         NativeCall<void, float, bool, bool, int>(this, "AShooterPlayerController.AddExperience(float,bool,bool,EXPType::Type)", a0, a1, a2, a3);
@@ -145,13 +145,13 @@ struct AShooterPlayerController : public ABasePlayerController
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.AddItemToAllClustersInventory(FString,int)
     // endereco: casamento de bytes com a build de referencia
-    static char AddItemToAllClustersInventory(const FString& a0, int a1)
+    char AddItemToAllClustersInventory(const FString& a0, int a1) const
     {
-        return NativeCall<char, void*, int>(nullptr, "AShooterPlayerController.AddItemToAllClustersInventory(FString,int)", const_cast<FString*>(&a0), a1);
+        return NativeCall<char, void*, int>(this, "AShooterPlayerController.AddItemToAllClustersInventory(FString,int)", const_cast<FString*>(&a0), a1);
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static char AddItemToAllClustersInventory(FString* a0, int a1)
+    char AddItemToAllClustersInventory(FString* a0, int a1) const
     { return AddItemToAllClustersInventory(*a0, a1); }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -164,7 +164,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.AddPlayerToClientTrackedActorPointersIfApplicable(AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddPlayerToClientTrackedActorPointersIfApplicable(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.AddPlayerToClientTrackedActorPointersIfApplicable(AShooterCharacter*)", a0);
@@ -192,7 +192,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.AllowPlayerToJoinNoCheck(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AllowPlayerToJoinNoCheck(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.AllowPlayerToJoinNoCheck(FString&)", const_cast<FString*>(&a0));
@@ -204,7 +204,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.AllowTribeGroupPermission(ETribeGroupPermission::Type,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowTribeGroupPermission(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "AShooterPlayerController.AllowTribeGroupPermission(ETribeGroupPermission::Type,UObject*)", a0, a1);
@@ -236,7 +236,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.AttemptTransferRedownload()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AttemptTransferRedownload() const
     {
         NativeCall<void>(this, "AShooterPlayerController.AttemptTransferRedownload()");
@@ -244,7 +244,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.AutoCycle(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AutoCycle(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.AutoCycle(float)", a0);
@@ -252,7 +252,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.BPAcknowledgePossession(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPAcknowledgePossession(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.BPAcknowledgePossession(APawn*)", a0);
@@ -284,7 +284,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.BPDisableSpectator()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPDisableSpectator() const
     {
         NativeCall<void>(this, "AShooterPlayerController.BPDisableSpectator()");
@@ -292,7 +292,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.BPGetExtraWaypointsSOTF(APlayerController*,AShooterCharacter*,TArray<FP
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=408+bytes40+grafo=5/5]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BPGetExtraWaypointsSOTF(void* a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, void*, void*, void*, void*>(this, "AShooterPlayerController.BPGetExtraWaypointsSOTF(APlayerController*,AShooterCharacter*,TArray<FPointOfInterestData_ForCompanion,TSizedDefaultAllocator<32>>&,TArray<FPointOfInterestData_ForCompanion,TSizedDefaultAllocator<32>>&)", a0, a1, a2, a3);
@@ -300,7 +300,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.BPHandleClientCheckUnfreeze()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=61]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPHandleClientCheckUnfreeze() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.BPHandleClientCheckUnfreeze()");
@@ -328,7 +328,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.BPPostRender_Implementation(UCanvas*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=255]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BPPostRender_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.BPPostRender_Implementation(UCanvas*)", a0);
@@ -336,7 +336,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.BPPreventChangeCamera()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventChangeCamera() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.BPPreventChangeCamera()");
@@ -344,7 +344,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.BPSearchForPOIs()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPSearchForPOIs() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.BPSearchForPOIs()");
@@ -380,7 +380,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.BPServerRequestRespawnAtPoint(int,int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void BPServerRequestRespawnAtPoint(int a0, int a1) const
     {
         NativeCall<void, int, int>(this, "AShooterPlayerController.BPServerRequestRespawnAtPoint(int,int)", a0, a1);
@@ -397,13 +397,13 @@ struct AShooterPlayerController : public ABasePlayerController
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.BanPlayer(FString)
     // endereco: casamento de bytes com a build de referencia
-    static void BanPlayer(const FString& a0)
+    void BanPlayer(const FString& a0) const
     {
-        NativeCall<void, void*>(nullptr, "AShooterPlayerController.BanPlayer(FString)", const_cast<FString*>(&a0));
+        NativeCall<void, void*>(this, "AShooterPlayerController.BanPlayer(FString)", const_cast<FString*>(&a0));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static void BanPlayer(FString* a0)
+    void BanPlayer(FString* a0) const
     { BanPlayer(*a0); }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -432,7 +432,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.BeginSpectatingState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginSpectatingState() const
     {
         NativeCall<void>(this, "AShooterPlayerController.BeginSpectatingState()");
@@ -448,7 +448,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.CCC()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CCC() const
     {
         NativeCall<void>(this, "AShooterPlayerController.CCC()");
@@ -472,7 +472,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CanDoPlayerCharacterInput(bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanDoPlayerCharacterInput(bool a0, bool a1) const
     {
         return NativeCall<bool, bool, bool>(this, "AShooterPlayerController.CanDoPlayerCharacterInput(bool,bool)", a0, a1);
@@ -488,7 +488,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CanPingRallyPoint()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=356+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanPingRallyPoint() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.CanPingRallyPoint()");
@@ -504,7 +504,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CanRestartPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=56]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanRestartPlayer() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.CanRestartPlayer()");
@@ -520,7 +520,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CanUseAimMagnetism()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=627+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanUseAimMagnetism() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.CanUseAimMagnetism()");
@@ -608,7 +608,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClearInstigatorVOQueue()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClearInstigatorVOQueue() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ClearInstigatorVOQueue()");
@@ -624,7 +624,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClearTutorials()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClearTutorials() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClearTutorials()");
@@ -672,7 +672,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientAddCustomActorTrackListEntries_Creatures(TArray<FCustomTrackedAct
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientAddCustomActorTrackListEntries_Creatures(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AShooterPlayerController.ClientAddCustomActorTrackListEntries_Creatures(TArray<FCustomTrackedActorInfo,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -680,7 +680,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientAddCustomActorTrackListEntries_Creatures_ForcePOIVisible(TArray<F
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientAddCustomActorTrackListEntries_Creatures_ForcePOIVisible(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AShooterPlayerController.ClientAddCustomActorTrackListEntries_Creatures_ForcePOIVisible(TArray<FCustomTrackedActorInfo,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -688,7 +688,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientAddCustomActorTrackListEntries_Players(TArray<FCustomTrackedActor
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientAddCustomActorTrackListEntries_Players(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AShooterPlayerController.ClientAddCustomActorTrackListEntries_Players(TArray<FCustomTrackedActorInfo,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -736,7 +736,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientAddItemToArk_Implementation(UPrimalInventoryComponent*,FItemNetIn
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=89+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientAddItemToArk_Implementation(void* a0, void* a1, bool a2) const
     {
         NativeCall<void, void*, void*, bool>(this, "AShooterPlayerController.ClientAddItemToArk_Implementation(UPrimalInventoryComponent*,FItemNetInfo,bool)", a0, a1, a2);
@@ -752,7 +752,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientBeginBatchedArkItemChanges_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientBeginBatchedArkItemChanges_Implementation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ClientBeginBatchedArkItemChanges_Implementation()");
@@ -812,7 +812,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientDisplayNotificationDialog_Implementation(FString&,FString&,bool,b
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ClientDisplayNotificationDialog_Implementation(const FString& a0, const FString& a1, bool a2, bool a3, bool a4, bool a5, bool a6) const
     {
         NativeCall<void, void*, void*, bool, bool, bool, bool, bool>(this, "AShooterPlayerController.ClientDisplayNotificationDialog_Implementation(FString&,FString&,bool,bool,bool,bool,bool)", const_cast<FString*>(&a0), const_cast<FString*>(&a1), a2, a3, a4, a5, a6);
@@ -848,7 +848,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientDownloadDinoRequestFinished(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClientDownloadDinoRequestFinished(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ClientDownloadDinoRequestFinished(bool)", a0);
@@ -864,7 +864,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientDownloadPlayerCharacterRequestFinished(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClientDownloadPlayerCharacterRequestFinished(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ClientDownloadPlayerCharacterRequestFinished(bool)", a0);
@@ -888,7 +888,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientEndBatchedArkItemChanges()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientEndBatchedArkItemChanges() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientEndBatchedArkItemChanges()");
@@ -896,7 +896,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientEndBatchedArkItemChanges_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientEndBatchedArkItemChanges_Implementation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ClientEndBatchedArkItemChanges_Implementation()");
@@ -912,7 +912,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientFailedRemoveSaddle()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientFailedRemoveSaddle() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientFailedRemoveSaddle()");
@@ -936,7 +936,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientFinishedLoadArkItems_Implementation(UPrimalInventoryComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientFinishedLoadArkItems_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientFinishedLoadArkItems_Implementation(UPrimalInventoryComponent*)", a0);
@@ -1004,7 +1004,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientLoadArkItems(UPrimalInventoryComponent*,TArray<FItemNetInfo,TSize
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     void ClientLoadArkItems(void* a0, void* a1, bool a2, bool a3) const
     {
         NativeCall<void, void*, void*, bool, bool>(this, "AShooterPlayerController.ClientLoadArkItems(UPrimalInventoryComponent*,TArray<FItemNetInfo,TSizedDefaultAllocator<32>>&,bool,bool)", a0, a1, a2, a3);
@@ -1012,7 +1012,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientLoadArkItems_Implementation(UPrimalInventoryComponent*,TArray<FIt
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientLoadArkItems_Implementation(void* a0, void* a1, bool a2, bool a3) const
     {
         NativeCall<void, void*, void*, bool, bool>(this, "AShooterPlayerController.ClientLoadArkItems_Implementation(UPrimalInventoryComponent*,TArray<FItemNetInfo,TSizedDefaultAllocator<32>>&,bool,bool)", a0, a1, a2, a3);
@@ -1028,7 +1028,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientNotifyAdmin()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyAdmin() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientNotifyAdmin()");
@@ -1036,7 +1036,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientNotifyCantHarvest()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyCantHarvest() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientNotifyCantHarvest()");
@@ -1136,7 +1136,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientNotifyPaintFinished_Implementation(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyPaintFinished_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ClientNotifyPaintFinished_Implementation(bool)", a0);
@@ -1220,7 +1220,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientNotifyTorpidityIncrease()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyTorpidityIncrease() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientNotifyTorpidityIncrease()");
@@ -1260,7 +1260,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientNotifyUnlockedAllExplorerNotes()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ClientNotifyUnlockedAllExplorerNotes() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientNotifyUnlockedAllExplorerNotes()");
@@ -1308,7 +1308,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientOnCurrentCharacterAndItemsUploaded(unsigned__int64)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientOnCurrentCharacterAndItemsUploaded(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AShooterPlayerController.ClientOnCurrentCharacterAndItemsUploaded(unsigned__int64)", a0);
@@ -1388,7 +1388,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientOnStartDownloadTransferredPlayerCharacter()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientOnStartDownloadTransferredPlayerCharacter() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientOnStartDownloadTransferredPlayerCharacter()");
@@ -1412,7 +1412,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientPlayInstigatorVO_Implementation(AActor*,FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientPlayInstigatorVO_Implementation(void* a0, unsigned long long a1) const
     {
         return NativeCall<void*, void*, unsigned long long>(this, "AShooterPlayerController.ClientPlayInstigatorVO_Implementation(AActor*,FName)", a0, a1);
@@ -1428,7 +1428,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientPlayLocalSound_Implementation(USoundBase*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=224]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientPlayLocalSound_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterPlayerController.ClientPlayLocalSound_Implementation(USoundBase*,bool)", a0, a1);
@@ -1444,7 +1444,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientPlayMultipleInstigatorVO_Implementation(TArray<AActor*,TSizedDefa
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientPlayMultipleInstigatorVO_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterPlayerController.ClientPlayMultipleInstigatorVO_Implementation(TArray<AActor*,TSizedDefaultAllocator<32>>&,TArray<FName,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -1468,7 +1468,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientProcessItemNetExecCommandBP(UPrimalInventoryComponent*,FItemNetID
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientProcessItemNetExecCommandBP(void* a0, unsigned long long a1, bool a2, unsigned long long a3, void* a4) const
     {
         NativeCall<void, void*, unsigned long long, bool, unsigned long long, void*>(this, "AShooterPlayerController.ClientProcessItemNetExecCommandBP(UPrimalInventoryComponent*,FItemNetID,bool,FName,FBPNetExecParams)", a0, a1, a2, a3, a4);
@@ -1484,7 +1484,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientProcessItemNetExecCommandUnreliableBP(UPrimalInventoryComponent*,
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientProcessItemNetExecCommandUnreliableBP(void* a0, unsigned long long a1, bool a2, unsigned long long a3, void* a4) const
     {
         NativeCall<void, void*, unsigned long long, bool, unsigned long long, void*>(this, "AShooterPlayerController.ClientProcessItemNetExecCommandUnreliableBP(UPrimalInventoryComponent*,FItemNetID,bool,FName,FBPNetExecParams)", a0, a1, a2, a3, a4);
@@ -1544,7 +1544,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientReceiveDinoAncestors_Implementation(APrimalDinoCharacter*,TArray<
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientReceiveDinoAncestors_Implementation(void* a0, void* a1, void* a2, int a3, int a4) const
     {
         NativeCall<void, void*, void*, void*, int, int>(this, "AShooterPlayerController.ClientReceiveDinoAncestors_Implementation(APrimalDinoCharacter*,TArray<FDinoAncestorsEntry,TSizedDefaultAllocator<32>>&,TArray<FDinoAncestorsEntry,TSizedDefaultAllocator<32>>&,int,int)", a0, a1, a2, a3, a4);
@@ -1576,7 +1576,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveInventoryItems_AppendChunk(TArray<unsignedchar,TSizedDefau
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientReceiveInventoryItems_AppendChunk(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceiveInventoryItems_AppendChunk(TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0);
@@ -1592,7 +1592,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ClientReceiveInventoryItems_BeginChunked(UPrimalInventoryComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientReceiveInventoryItems_BeginChunked(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientReceiveInventoryItems_BeginChunked(UPrimalInventoryComponent*)", a0);
@@ -1608,7 +1608,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientReceiveInventoryItems_EndChunked()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientReceiveInventoryItems_EndChunked() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientReceiveInventoryItems_EndChunked()");
@@ -1632,7 +1632,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveItemForStructureSkin_Implementation(APrimalStructure*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientReceiveItemForStructureSkin_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceiveItemForStructureSkin_Implementation(APrimalStructure*)", a0);
@@ -1696,7 +1696,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceivePlayerDataArray_AppendPlayerDataChunk(TArray<unsignedchar,
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientReceivePlayerDataArray_AppendPlayerDataChunk(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceivePlayerDataArray_AppendPlayerDataChunk(TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0);
@@ -1720,7 +1720,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientReceivePlayerDataArray_Begin()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientReceivePlayerDataArray_Begin() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientReceivePlayerDataArray_Begin()");
@@ -1752,7 +1752,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveTamingInfoList(TArray<FTamingDinoInfo,TSizedDefaultAllocat
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro ClientReceiveTamingInfoList(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceiveTamingInfoList(TArray<FTamingDinoInfo,TSizedDefaultAllocator<32>>&)", a0);
@@ -1768,7 +1768,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveTradeLog(APrimalStructureMarket*,TArray<FMarketTradeLogEnt
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientReceiveTradeLog(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "AShooterPlayerController.ClientReceiveTradeLog(APrimalStructureMarket*,TArray<FMarketTradeLogEntry,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
@@ -1776,7 +1776,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveTradeLog_Implementation(APrimalStructureMarket*,TArray<FMa
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientReceiveTradeLog_Implementation(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "AShooterPlayerController.ClientReceiveTradeLog_Implementation(APrimalStructureMarket*,TArray<FMarketTradeLogEntry,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
@@ -1784,7 +1784,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ClientReceiveTribeLog(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=167]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientReceiveTribeLog(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientReceiveTribeLog(FString&)", const_cast<FString*>(&a0));
@@ -1824,7 +1824,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientRemoveActorItem_Implementation(UPrimalInventoryComponent*,FItemNe
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=64]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientRemoveActorItem_Implementation(void* a0, unsigned long long a1, bool a2) const
     {
         NativeCall<void, void*, unsigned long long, bool>(this, "AShooterPlayerController.ClientRemoveActorItem_Implementation(UPrimalInventoryComponent*,FItemNetID,bool)", a0, a1, a2);
@@ -1832,7 +1832,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientRemoveCustomActorTrackListEntries_FromTotalList_Creatures(TArray<
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientRemoveCustomActorTrackListEntries_FromTotalList_Creatures(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AShooterPlayerController.ClientRemoveCustomActorTrackListEntries_FromTotalList_Creatures(TArray<int,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -1840,7 +1840,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // dump_sobre_sdk_287a0
     //   AShooterPlayerController.ClientRemoveCustomActorTrackListEntries_FromTotalList_Creatures_Impleme
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientRemoveCustomActorTrackListEntries_FromTotalList_Creatures_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterPlayerController.ClientRemoveCustomActorTrackListEntries_FromTotalList_Creatures_Implementation(TArray<int,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -1848,7 +1848,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientRemoveCustomActorTrackListEntries_FromTotalList_TeammatePlayers(T
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientRemoveCustomActorTrackListEntries_FromTotalList_TeammatePlayers(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AShooterPlayerController.ClientRemoveCustomActorTrackListEntries_FromTotalList_TeammatePlayers(TArray<int,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -1864,7 +1864,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientRemoveItemFromArk_Implementation(UPrimalInventoryComponent*,FItem
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=39]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientRemoveItemFromArk_Implementation(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "AShooterPlayerController.ClientRemoveItemFromArk_Implementation(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -2060,7 +2060,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientServerNotification(FString&,FLinearColor,float,float,UTexture2D*,
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientServerNotification(const FString& a0, void* a1, float a2, float a3, void* a4, void* a5, int a6) const
     {
         NativeCall<void, void*, void*, float, float, void*, void*, int>(this, "AShooterPlayerController.ClientServerNotification(FString&,FLinearColor,float,float,UTexture2D*,USoundBase*,int)", const_cast<FString*>(&a0), a1, a2, a3, a4, a5, a6);
@@ -2072,7 +2072,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // jogo_confirmou_dump
     //   AShooterPlayerController.ClientServerNotificationSingle(FString&,FLinearColor,float,float,UTextu
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientServerNotificationSingle(const FString& a0, void* a1, float a2, float a3, void* a4, void* a5, int a6, int a7) const
     {
         NativeCall<void, void*, void*, float, float, void*, void*, int, int>(this, "AShooterPlayerController.ClientServerNotificationSingle(FString&,FLinearColor,float,float,UTexture2D*,USoundBase*,int,int)", const_cast<FString*>(&a0), a1, a2, a3, a4, a5, a6, a7);
@@ -2084,7 +2084,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientServerSOTFNotificationCustom(FString&,FLinearColor,float,float,UT
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=257]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientServerSOTFNotificationCustom(const FString& a0, void* a1, float a2, float a3, void* a4, void* a5, int a6) const
     {
         return NativeCall<void*, void*, void*, float, float, void*, void*, int>(this, "AShooterPlayerController.ClientServerSOTFNotificationCustom(FString&,FLinearColor,float,float,UTexture2D*,USoundBase*,int)", const_cast<FString*>(&a0), a1, a2, a3, a4, a5, a6);
@@ -2144,7 +2144,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientSetCanEnableCheats_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSetCanEnableCheats_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ClientSetCanEnableCheats_Implementation(bool)", a0);
@@ -2152,7 +2152,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientSetContainerFuel_Implementation(APrimalStructureItemContainer*,fl
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSetContainerFuel_Implementation(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "AShooterPlayerController.ClientSetContainerFuel_Implementation(APrimalStructureItemContainer*,float)", a0, a1);
@@ -2200,7 +2200,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientSetPerfCheckLocations_Implementation(TArray<FString,TSizedDefault
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientSetPerfCheckLocations_Implementation(void* a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, void*, void*, void*, void*>(this, "AShooterPlayerController.ClientSetPerfCheckLocations_Implementation(TArray<FString,TSizedDefaultAllocator<32>>&,TArray<bool,TSizedDefaultAllocator<32>>&,TArray<bool,TSizedDefaultAllocator<32>>&,TArray<FString,TSizedDefaultAllocator<32>>&)", a0, a1, a2, a3);
@@ -2216,7 +2216,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientSetPersonalDinoTameCount_Implementation(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSetPersonalDinoTameCount_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.ClientSetPersonalDinoTameCount_Implementation(int)", a0);
@@ -2240,7 +2240,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ClientShooterWasKicked(FText&)
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientShooterWasKicked(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientShooterWasKicked(FText&)", a0);
@@ -2368,7 +2368,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ClientShowRequiresDLCDialog(EEngramGroup::Type)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=3]]
     void ClientShowRequiresDLCDialog(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.ClientShowRequiresDLCDialog(EEngramGroup::Type)", a0);
@@ -2400,7 +2400,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientShowTransferredPlayerConfirmationDialog()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientShowTransferredPlayerConfirmationDialog() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientShowTransferredPlayerConfirmationDialog()");
@@ -2408,7 +2408,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientSimpleMarkTrackedActorInfoUpdated_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSimpleMarkTrackedActorInfoUpdated_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientSimpleMarkTrackedActorInfoUpdated_Implementation()");
@@ -2424,7 +2424,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientStartActivity_Implementation(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientStartActivity_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientStartActivity_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -2476,7 +2476,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientStopLocalSound_Implementation(USoundBase*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientStopLocalSound_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientStopLocalSound_Implementation(USoundBase*)", a0);
@@ -2536,7 +2536,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientUnlockAchievement(FString&,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=186+bytes40+chamadores=9]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=186+bytes40+chamadores=15]]
     void ClientUnlockAchievement(const FString& a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterPlayerController.ClientUnlockAchievement(FString&,bool)", const_cast<FString*>(&a0), a1);
@@ -2584,7 +2584,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientUnlockedShipSkill_Implementation(FName,APrimalShip*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientUnlockedShipSkill_Implementation(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "AShooterPlayerController.ClientUnlockedShipSkill_Implementation(FName,APrimalShip*)", a0, a1);
@@ -2640,7 +2640,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientUpdateInventorySortingInputs_Implementation(UPrimalInventoryCompo
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=181]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientUpdateInventorySortingInputs_Implementation(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "AShooterPlayerController.ClientUpdateInventorySortingInputs_Implementation(UPrimalInventoryComponent*,TArray<TSubclassOf<UPrimalItem>,TSizedDefaultAllocator<32>>&,TArray<int,TSizedDefaultAllocator<32>>&)", a0, a1, a2);
@@ -2688,7 +2688,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientUpdateItemQuantity_Implementation(UPrimalInventoryComponent*,FIte
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=77]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientUpdateItemQuantity_Implementation(void* a0, unsigned long long a1, int a2) const
     {
         NativeCall<void, void*, unsigned long long, int>(this, "AShooterPlayerController.ClientUpdateItemQuantity_Implementation(UPrimalInventoryComponent*,FItemNetID,int)", a0, a1, a2);
@@ -2744,7 +2744,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientUploadedDinosLoaded(TArray<FARKTributeDinoListing,TSizedDefaultAl
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=207+bytes40+grafo=5/5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=207+bytes40+grafo=4/4]]
     BrzPonteiro ClientUploadedDinosLoaded(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientUploadedDinosLoaded(TArray<FARKTributeDinoListing,TSizedDefaultAllocator<32>>&)", a0);
@@ -2768,7 +2768,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientUsedActorItem_Implementation(UPrimalInventoryComponent*,FItemNetI
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=72]]
+    // endereco: casamento de bytes com a build de referencia
     void ClientUsedActorItem_Implementation(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "AShooterPlayerController.ClientUsedActorItem_Implementation(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -2792,7 +2792,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Client_GetPlatformNameFromId(unsignedint,FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void Client_GetPlatformNameFromId(unsigned int a0, const FString& a1) const
     {
         NativeCall<void, unsigned int, void*>(this, "AShooterPlayerController.Client_GetPlatformNameFromId(unsignedint,FString&)", a0, const_cast<FString*>(&a1));
@@ -2816,7 +2816,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.Client_OnCannonCharacterFired()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Client_OnCannonCharacterFired() const
     {
         NativeCall<void>(this, "AShooterPlayerController.Client_OnCannonCharacterFired()");
@@ -2840,7 +2840,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Client_OnCannonSideClaimed_Implementation(EShipFiringSide)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Client_OnCannonSideClaimed_Implementation(int a0) const
     {
         return NativeCall<void*, int>(this, "AShooterPlayerController.Client_OnCannonSideClaimed_Implementation(EShipFiringSide)", a0);
@@ -2856,7 +2856,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Client_OnCannonSideReleased_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=82]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Client_OnCannonSideReleased_Implementation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.Client_OnCannonSideReleased_Implementation()");
@@ -2888,7 +2888,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Client_ReceiveLastDeathTrackingActorLoc_Implementation(int,UE::Math::TV
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Client_ReceiveLastDeathTrackingActorLoc_Implementation(int a0, void* a1) const
     {
         NativeCall<void, int, void*>(this, "AShooterPlayerController.Client_ReceiveLastDeathTrackingActorLoc_Implementation(int,UE::Math::TVector<double>)", a0, a1);
@@ -2968,7 +2968,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ConditionalSaveProfile()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ConditionalSaveProfile() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ConditionalSaveProfile()");
@@ -2996,7 +2996,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsEndInventory()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsEndInventory() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsEndInventory()");
@@ -3004,7 +3004,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsEndJump()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsEndJump() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsEndJump()");
@@ -3012,7 +3012,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsEndReload()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsEndReload() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsEndReload()");
@@ -3020,7 +3020,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsEndUse()
-    // endereco: INFERIDO, com segunda evidencia [string_aprovado [tam=196+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     void ControlsEndUse() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsEndUse()");
@@ -3028,7 +3028,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsStartInventory()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsStartInventory() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsStartInventory()");
@@ -3036,7 +3036,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsStartJump()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsStartJump() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsStartJump()");
@@ -3044,7 +3044,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsStartMap()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsStartMap() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsStartMap()");
@@ -3052,7 +3052,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsStartReload()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=754+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void ControlsStartReload() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsStartReload()");
@@ -3060,7 +3060,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsStartUse()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsStartUse() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsStartUse()");
@@ -3068,7 +3068,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ControlsStopMap()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ControlsStopMap() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ControlsStopMap()");
@@ -3076,7 +3076,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CopyCoordsToClipboard()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=742+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void CopyCoordsToClipboard() const
     {
         NativeCall<void>(this, "AShooterPlayerController.CopyCoordsToClipboard()");
@@ -3100,7 +3100,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.DelayedNetCleanup()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DelayedNetCleanup() const
     {
         NativeCall<void>(this, "AShooterPlayerController.DelayedNetCleanup()");
@@ -3108,7 +3108,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "AShooterPlayerController.Destroyed()");
@@ -3116,7 +3116,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.DisableEnemyInvisible()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DisableEnemyInvisible() const
     {
         NativeCall<void>(this, "AShooterPlayerController.DisableEnemyInvisible()");
@@ -3132,7 +3132,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.DisableStreamingSource()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=429+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void DisableStreamingSource() const
     {
         NativeCall<void>(this, "AShooterPlayerController.DisableStreamingSource()");
@@ -3140,7 +3140,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.DisallowPlayerToJoinNoCheck(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DisallowPlayerToJoinNoCheck(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.DisallowPlayerToJoinNoCheck(FString&)", const_cast<FString*>(&a0));
@@ -3160,7 +3160,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.DoCrash()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoCrash() const
     {
         NativeCall<void>(this, "AShooterPlayerController.DoCrash()");
@@ -3176,7 +3176,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.DoPlayNextInstigatorVO()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=42]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro DoPlayNextInstigatorVO() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.DoPlayNextInstigatorVO()");
@@ -3204,7 +3204,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.DoesPlayerOwnPing(AShooterPlayerController*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool DoesPlayerOwnPing(void* a0, int a1) const
     {
         return NativeCall<bool, void*, int>(this, "AShooterPlayerController.DoesPlayerOwnPing(AShooterPlayerController*,int)", a0, a1);
@@ -3244,7 +3244,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.EditorReconnect()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void EditorReconnect() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EditorReconnect()");
@@ -3276,7 +3276,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndAArkGamepadDpadUp()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     void EndAArkGamepadDpadUp() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndAArkGamepadDpadUp()");
@@ -3292,7 +3292,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadDpadDown()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=33]]
+    // endereco: casamento de bytes com a build de referencia
     void EndArkGamepadDpadDown() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadDpadDown()");
@@ -3300,7 +3300,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadDpadRight()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=75]]
+    // endereco: casamento de bytes com a build de referencia
     void EndArkGamepadDpadRight() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadDpadRight()");
@@ -3308,7 +3308,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadFaceButtonBottom()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void EndArkGamepadFaceButtonBottom() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadFaceButtonBottom()");
@@ -3316,7 +3316,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadFaceButtonLeft()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=163+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void EndArkGamepadFaceButtonLeft() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadFaceButtonLeft()");
@@ -3356,7 +3356,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndInventoryRadialSelector(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndInventoryRadialSelector(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.EndInventoryRadialSelector(bool)", a0);
@@ -3380,7 +3380,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndWhistleSelectionInput(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=250+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void EndWhistleSelectionInput(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.EndWhistleSelectionInput(bool)", a0);
@@ -3388,7 +3388,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EnemyInVisible(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EnemyInVisible(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.EnemyInVisible(bool)", a0);
@@ -3396,7 +3396,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.EnforcementHighlight(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EnforcementHighlight(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.EnforcementHighlight(bool)", a0);
@@ -3436,7 +3436,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.FindGetTrackedActorFavoritedIndex(int,TEnumAsByte<ETrackedActorCategory
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int FindGetTrackedActorFavoritedIndex(int a0, unsigned char a1) const
     {
         return NativeCall<int, int, unsigned char>(this, "AShooterPlayerController.FindGetTrackedActorFavoritedIndex(int,TEnumAsByte<ETrackedActorCategory::Type>)", a0, a1);
@@ -3444,7 +3444,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.FindGetTrackedActorFavoritedIndexID(int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int FindGetTrackedActorFavoritedIndexID(int a0, int a1) const
     {
         return NativeCall<int, int, int>(this, "AShooterPlayerController.FindGetTrackedActorFavoritedIndexID(int,int)", a0, a1);
@@ -3452,7 +3452,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.FindGetTrackedActorWaypointIndex(int,TEnumAsByte<ETrackedActorCategory:
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int FindGetTrackedActorWaypointIndex(int a0, unsigned char a1) const
     {
         return NativeCall<int, int, unsigned char>(this, "AShooterPlayerController.FindGetTrackedActorWaypointIndex(int,TEnumAsByte<ETrackedActorCategory::Type>)", a0, a1);
@@ -3460,7 +3460,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.FindGetTrackedActorWaypointIndexID(int,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int FindGetTrackedActorWaypointIndexID(int a0, int a1) const
     {
         return NativeCall<int, int, int>(this, "AShooterPlayerController.FindGetTrackedActorWaypointIndexID(int,int)", a0, a1);
@@ -3468,7 +3468,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.FinishInputBlockingTimeout()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void FinishInputBlockingTimeout() const
     {
         NativeCall<void>(this, "AShooterPlayerController.FinishInputBlockingTimeout()");
@@ -3476,7 +3476,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.FlushLevelStreaming()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=577+grafo=12/12]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=577+grafo=11/11]]
     void FlushLevelStreaming() const
     {
         NativeCall<void>(this, "AShooterPlayerController.FlushLevelStreaming()");
@@ -3492,7 +3492,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ForceCraftPressed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=35]]
+    // endereco: casamento de bytes com a build de referencia
     void ForceCraftPressed() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ForceCraftPressed()");
@@ -3500,7 +3500,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ForceCraftReleased()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=35]]
+    // endereco: casamento de bytes com a build de referencia
     void ForceCraftReleased() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ForceCraftReleased()");
@@ -3548,7 +3548,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetActiveMission()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     AMissionType* GetActiveMission() const
     {
         return NativeCall<AMissionType*>(this, "AShooterPlayerController.GetActiveMission()");
@@ -3628,7 +3628,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetCompanionBuff()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=180+chamadores=7]]
+    // endereco: casamento de bytes com a build de referencia
     UObject* GetCompanionBuff() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerController.GetCompanionBuff()");
@@ -3636,7 +3636,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetControllerPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     AShooterCharacter* GetControllerPlayer() const
     {
         return NativeCall<AShooterCharacter*>(this, "AShooterPlayerController.GetControllerPlayer()");
@@ -3644,7 +3644,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetControllingCinematic()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     APrimalCinematicActor* GetControllingCinematic() const
     {
         return NativeCall<APrimalCinematicActor*>(this, "AShooterPlayerController.GetControllingCinematic()");
@@ -3660,7 +3660,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetCurrentMilestoneAsset(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     UObject* GetCurrentMilestoneAsset(unsigned long long a0) const
     {
         return NativeCall<UObject*, unsigned long long>(this, "AShooterPlayerController.GetCurrentMilestoneAsset(FName)", a0);
@@ -3684,7 +3684,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetCurrentMilestoneLevelAndIndex(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentMilestoneLevelAndIndex(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "AShooterPlayerController.GetCurrentMilestoneLevelAndIndex(FName)", a0);
@@ -3708,7 +3708,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetCustomCosmeticUISelectedItemLocal()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetCustomCosmeticUISelectedItemLocal() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerController.GetCustomCosmeticUISelectedItemLocal()");
@@ -3716,7 +3716,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetCustomCosmeticUISelectedSkinLocal()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetCustomCosmeticUISelectedSkinLocal() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerController.GetCustomCosmeticUISelectedSkinLocal()");
@@ -3732,7 +3732,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetCustomTooltipActor()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetCustomTooltipActor() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetCustomTooltipActor()");
@@ -3740,7 +3740,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetDesiredRotation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=111]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetDesiredRotation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetDesiredRotation()");
@@ -3784,7 +3784,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetIntFromTrackedActorCategoryEnum(TEnumAsByte<ETrackedActorCategory::T
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetIntFromTrackedActorCategoryEnum(unsigned char a0) const
     {
         return NativeCall<void*, unsigned char>(this, "AShooterPlayerController.GetIntFromTrackedActorCategoryEnum(TEnumAsByte<ETrackedActorCategory::Type>)", a0);
@@ -3792,7 +3792,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetInventoryUISelectedItemLocal()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetInventoryUISelectedItemLocal() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerController.GetInventoryUISelectedItemLocal()");
@@ -3800,7 +3800,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetInventoryUISelectedItemRemote()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPrimalItem* GetInventoryUISelectedItemRemote() const
     {
         return NativeCall<UPrimalItem*>(this, "AShooterPlayerController.GetInventoryUISelectedItemRemote()");
@@ -3808,7 +3808,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetInventoryUISelectedSkinLocal()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPrimalItem* GetInventoryUISelectedSkinLocal() const
     {
         return NativeCall<UPrimalItem*>(this, "AShooterPlayerController.GetInventoryUISelectedSkinLocal()");
@@ -3816,7 +3816,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetIsMissionWaypointActive()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetIsMissionWaypointActive() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetIsMissionWaypointActive()");
@@ -3824,7 +3824,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetLastInventoryRetrievalTime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     double GetLastInventoryRetrievalTime() const
     {
         return NativeCall<double>(this, "AShooterPlayerController.GetLastInventoryRetrievalTime()");
@@ -3854,14 +3854,13 @@ struct AShooterPlayerController : public ABasePlayerController
         NativeCall<void, void*>(this, "AShooterPlayerController.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
     }
 
-    // ── NAO EXISTE COMO FUNCAO: e' `inline` na Unreal ──────────────
-    //
-    //   AShooterPlayerController.GetLinkedPlayerID() nao tem endereco nesta build e nao vai ter:
-    //   o compilador dissolve o getter dentro de quem chama.
-    //   Ate' 09/09/2026 esta chamada devolvia o ZERO do tipo.
-    //
-    //   Agora le' o campo, pela reflexao viva, como o resto do SDK.
-    long long GetLinkedPlayerID() const { return LinkedPlayerIDField(); }
+    // retorno: AsaApi da comunidade — segunda fonte independente
+    //   AShooterPlayerController.GetLinkedPlayerID()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    int GetLinkedPlayerID() const
+    {
+        return NativeCall<int>(this, "AShooterPlayerController.GetLinkedPlayerID()");
+    }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetLocalPlayerViewSize()
@@ -3905,7 +3904,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetMilestoneProgress(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMilestoneProgress(unsigned long long a0) const
     {
         return NativeCall<float, unsigned long long>(this, "AShooterPlayerController.GetMilestoneProgress(FName)", a0);
@@ -3929,7 +3928,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetMissionWaypointID()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMissionWaypointID() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetMissionWaypointID()");
@@ -3961,7 +3960,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetNewValidMilestoneIndex(FName,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1834+chamadores=2+grafo=15/15]]
+    // endereco: casamento de bytes com a build de referencia
     int GetNewValidMilestoneIndex(unsigned long long a0, int a1) const
     {
         return NativeCall<int, unsigned long long, int>(this, "AShooterPlayerController.GetNewValidMilestoneIndex(FName,int)", a0, a1);
@@ -4025,7 +4024,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetPlayerCharacterEvenIfDead()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetPlayerCharacterEvenIfDead() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerController.GetPlayerCharacterEvenIfDead()");
@@ -4049,7 +4048,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetPlayerFinishedNamedEvent(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool GetPlayerFinishedNamedEvent(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AShooterPlayerController.GetPlayerFinishedNamedEvent(FName)", a0);
@@ -4057,7 +4056,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetPlayerInventory()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     UPrimalInventoryComponent* GetPlayerInventory() const
     {
         return NativeCall<UPrimalInventoryComponent*>(this, "AShooterPlayerController.GetPlayerInventory()");
@@ -4081,7 +4080,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetPotentialBountiesForClass(TSubclassOf<UObject>,EPrimalMilestoneType)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetPotentialBountiesForClass(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "AShooterPlayerController.GetPotentialBountiesForClass(TSubclassOf<UObject>,EPrimalMilestoneType)", a0, a1);
@@ -4089,7 +4088,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetPotentialBountiesForClassAndTypes(TSubclassOf<UObject>,TArray<EPrima
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetPotentialBountiesForClassAndTypes(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterPlayerController.GetPotentialBountiesForClassAndTypes(TSubclassOf<UObject>,TArray<EPrimalMilestoneType,TSizedDefaultAllocator<32>>)", a0, a1);
@@ -4137,7 +4136,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetProviderFreeSkillPoints_Implementation(AShooterPlayerController*,FNa
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderFreeSkillPoints_Implementation(void* a0, unsigned long long a1) const
     {
         return NativeCall<void*, void*, unsigned long long>(this, "AShooterPlayerController.GetProviderFreeSkillPoints_Implementation(AShooterPlayerController*,FName)", a0, a1);
@@ -4145,7 +4144,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetProviderSkillBuffTargets_Implementation(ESkillBuffAplicationType,ASh
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetProviderSkillBuffTargets_Implementation(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "AShooterPlayerController.GetProviderSkillBuffTargets_Implementation(ESkillBuffAplicationType,AShooterPlayerController*)", a0, a1);
@@ -4153,7 +4152,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetProviderSkillCooldown_Implementation(FName,FSkillCooldown&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=79]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetProviderSkillCooldown_Implementation(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "AShooterPlayerController.GetProviderSkillCooldown_Implementation(FName,FSkillCooldown&)", a0, a1);
@@ -4193,7 +4192,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetProviderUnlockedSkillsAndRanks_Implementation(TArray<FName,TSizedDef
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetProviderUnlockedSkillsAndRanks_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterPlayerController.GetProviderUnlockedSkillsAndRanks_Implementation(TArray<FName,TSizedDefaultAllocator<32>>&,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -4217,7 +4216,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetResponsibleDamager(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=107]]
+    // endereco: casamento de bytes com a build de referencia
     APawn* GetResponsibleDamager(void* a0) const
     {
         return NativeCall<APawn*, void*>(this, "AShooterPlayerController.GetResponsibleDamager(AActor*)", a0);
@@ -4297,7 +4296,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetTrackedActorCategoryEnumFromInt(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned char GetTrackedActorCategoryEnumFromInt(int a0) const
     {
         return NativeCall<unsigned char, int>(this, "AShooterPlayerController.GetTrackedActorCategoryEnumFromInt(int)", a0);
@@ -4313,7 +4312,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetUIHidingSequenceDirector()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=88]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetUIHidingSequenceDirector() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetUIHidingSequenceDirector()");
@@ -4353,7 +4352,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetViewLocation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void GetViewLocation(void* retorno) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.GetViewLocation()", retorno);
@@ -4361,10 +4360,11 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetViewTarget()
-    // endereco: cache_pdb_25090264
+    // classe: a funcao mora em APlayerController, e AShooterPlayerController herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     AActor* GetViewTarget() const
     {
-        return NativeCall<AActor*>(this, "AShooterPlayerController.GetViewTarget()");
+        return NativeCall<AActor*>(this, "APlayerController.GetViewTarget()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -4489,7 +4489,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GiveSlotItemNum(int,int,int)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     bool GiveSlotItemNum(int a0, int a1, int a2) const
     {
         return NativeCall<bool, int, int, int>(this, "AShooterPlayerController.GiveSlotItemNum(int,int,int)", a0, a1, a2);
@@ -4537,7 +4537,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.HasGodMode()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasGodMode() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.HasGodMode()");
@@ -4545,7 +4545,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.HasInstantHarvest()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasInstantHarvest() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.HasInstantHarvest()");
@@ -4569,7 +4569,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.HavePingDataOfPlayer(int,int&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HavePingDataOfPlayer(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "AShooterPlayerController.HavePingDataOfPlayer(int,int&)", a0, a1);
@@ -4601,7 +4601,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.HideChat()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=41]]
+    // endereco: casamento de bytes com a build de referencia
     void HideChat() const
     {
         NativeCall<void>(this, "AShooterPlayerController.HideChat()");
@@ -4609,7 +4609,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.HideFPVMesh()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=310]]
+    // endereco: casamento de bytes com a build de referencia
     void HideFPVMesh() const
     {
         NativeCall<void>(this, "AShooterPlayerController.HideFPVMesh()");
@@ -4633,7 +4633,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IncrementPrimalStats(EPrimalStatsValueTypes::Type)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=541+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     void IncrementPrimalStats(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.IncrementPrimalStats(EPrimalStatsValueTypes::Type)", a0);
@@ -4641,7 +4641,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IncrementStat(EPrimalGDKStat::Type)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=4]]
     void IncrementStat(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.IncrementStat(EPrimalGDKStat::Type)", a0);
@@ -4649,7 +4649,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InfiniteStats()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void InfiniteStats() const
     {
         NativeCall<void>(this, "AShooterPlayerController.InfiniteStats()");
@@ -4665,7 +4665,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InitCharacterPainting_Implementation(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=73]]
+    // endereco: casamento de bytes com a build de referencia
     void InitCharacterPainting_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.InitCharacterPainting_Implementation(APrimalCharacter*)", a0);
@@ -4673,7 +4673,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InitHUD(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitHUD(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.InitHUD(bool)", a0);
@@ -4681,7 +4681,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InitInputSystem()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=120]]
+    // endereco: casamento de bytes com a build de referencia
     void InitInputSystem() const
     {
         NativeCall<void>(this, "AShooterPlayerController.InitInputSystem()");
@@ -4689,7 +4689,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InputDismissPOI(APlayerController*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=75]]
+    // endereco: casamento de bytes com a build de referencia
     void InputDismissPOI(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.InputDismissPOI(APlayerController*,int)", a0, a1);
@@ -4697,7 +4697,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.InputKey(FInputKeyParams&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=195+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro InputKey(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.InputKey(FInputKeyParams&)", a0);
@@ -4729,7 +4729,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsFirstLocalPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=97]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsFirstLocalPlayer() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsFirstLocalPlayer()");
@@ -4737,7 +4737,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsFirstLocalPlayerOrLivingLocalPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=176+grafo=6/6]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsFirstLocalPlayerOrLivingLocalPlayer() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsFirstLocalPlayerOrLivingLocalPlayer()");
@@ -4769,7 +4769,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsMilestoneComplete(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsMilestoneComplete(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AShooterPlayerController.IsMilestoneComplete(FName)", a0);
@@ -4793,7 +4793,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsPawnAcknowledged()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPawnAcknowledged() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsPawnAcknowledged()");
@@ -4801,7 +4801,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.IsPhotoMode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=142]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsPhotoMode() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.IsPhotoMode()");
@@ -4825,7 +4825,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsPlayingInstigatorVO()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=70]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsPlayingInstigatorVO() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsPlayingInstigatorVO()");
@@ -4841,7 +4841,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsRemoteControlling()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsRemoteControlling() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsRemoteControlling()");
@@ -4849,7 +4849,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsRidingDino()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsRidingDino() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsRidingDino()");
@@ -4857,7 +4857,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsSOTFIntro()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsSOTFIntro() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsSOTFIntro()");
@@ -4921,7 +4921,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsUsingSurfaceCamera()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsUsingSurfaceCamera() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsUsingSurfaceCamera()");
@@ -4937,16 +4937,15 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsValidUnStasisCaster()
-    // classe: a funcao mora em UPrimalActor, e AShooterPlayerController herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     bool IsValidUnStasisCaster() const
     {
-        return NativeCall<bool>(this, "UPrimalActor.IsValidUnStasisCaster()");
+        return NativeCall<bool>(this, "AShooterPlayerController.IsValidUnStasisCaster()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsViewingInventoryUI()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsViewingInventoryUI() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsViewingInventoryUI()");
@@ -4966,7 +4965,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.JoinVoiceChannel_Implementation(FString&,FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void JoinVoiceChannel_Implementation(const FString& a0, const FString& a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterPlayerController.JoinVoiceChannel_Implementation(FString&,FString&)", const_cast<FString*>(&a0), const_cast<FString*>(&a1));
@@ -5002,19 +5001,19 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.KickPlayer(FString)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
-    static void KickPlayer(const FString& a0)
+    // endereco: casamento de bytes com a build de referencia
+    void KickPlayer(const FString& a0) const
     {
-        NativeCall<void, void*>(nullptr, "AShooterPlayerController.KickPlayer(FString)", const_cast<FString*>(&a0));
+        NativeCall<void, void*>(this, "AShooterPlayerController.KickPlayer(FString)", const_cast<FString*>(&a0));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static void KickPlayer(FString* a0)
+    void KickPlayer(FString* a0) const
     { KickPlayer(*a0); }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.LaunchShoulderMountedDino()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=19]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro LaunchShoulderMountedDino() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.LaunchShoulderMountedDino()");
@@ -5038,7 +5037,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.LinkedPlayerIDString()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void LinkedPlayerIDString(void* retorno) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.LinkedPlayerIDString()", retorno);
@@ -5046,7 +5045,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.LoadJIRAConfigFromURL(FString&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=257+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro LoadJIRAConfigFromURL(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.LoadJIRAConfigFromURL(FString&)", const_cast<FString*>(&a0));
@@ -5086,7 +5085,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.LoadProfile(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro LoadProfile(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterPlayerController.LoadProfile(bool)", a0);
@@ -5114,7 +5113,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.LockEmote(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=58]]
+    // endereco: casamento de bytes com a build de referencia
     void LockEmote(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AShooterPlayerController.LockEmote(FName)", a0);
@@ -5130,7 +5129,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.LookInput(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=61]]
+    // endereco: casamento de bytes com a build de referencia
     void LookInput(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.LookInput(float)", a0);
@@ -5138,7 +5137,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.LookUpAtRate(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=434]]
+    // endereco: casamento de bytes com a build de referencia
     void LookUpAtRate(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.LookUpAtRate(float)", a0);
@@ -5154,7 +5153,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.MarkDinoListEntryWidgetFavoriteCreature_Implementation(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MarkDinoListEntryWidgetFavoriteCreature_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.MarkDinoListEntryWidgetFavoriteCreature_Implementation(int)", a0);
@@ -5162,7 +5161,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.MarkDinoListEntryWidgetFavoritePlayer_Implementation(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MarkDinoListEntryWidgetFavoritePlayer_Implementation(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.MarkDinoListEntryWidgetFavoritePlayer_Implementation(int)", a0);
@@ -5186,7 +5185,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.NotifyPawnBuffsOfDamageEvent(AActor*,float,FDamageEvent&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     void NotifyPawnBuffsOfDamageEvent(void* a0, float a1, void* a2) const
     {
         NativeCall<void, void*, float, void*>(this, "AShooterPlayerController.NotifyPawnBuffsOfDamageEvent(AActor*,float,FDamageEvent&)", a0, a1, a2);
@@ -5194,7 +5193,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.NotifyTribeWarStatus(FString&,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=184+bytes40+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void NotifyTribeWarStatus(const FString& a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.NotifyTribeWarStatus(FString&,int)", const_cast<FString*>(&a0), a1);
@@ -5218,7 +5217,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnAltFireReleased_RTSKeyBinds()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnAltFireReleased_RTSKeyBinds() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnAltFireReleased_RTSKeyBinds()");
@@ -5266,7 +5265,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.OnDisableSpectator()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     void OnDisableSpectator() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnDisableSpectator()");
@@ -5294,7 +5293,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnDiscordStatusChanged(EDiscordClientStatus,EDiscordClientError,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnDiscordStatusChanged(int a0, int a1, int a2) const
     {
         return NativeCall<void*, int, int, int>(this, "AShooterPlayerController.OnDiscordStatusChanged(EDiscordClientStatus,EDiscordClientError,int)", a0, a1, a2);
@@ -5310,7 +5309,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnEmoteKey1Release()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=94]]
+    // endereco: casamento de bytes com a build de referencia
     void OnEmoteKey1Release() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnEmoteKey1Release()");
@@ -5318,7 +5317,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnEmoteKey2Press()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=388+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void OnEmoteKey2Press() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnEmoteKey2Press()");
@@ -5326,7 +5325,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnExtendedInfoPress()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=472+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     void OnExtendedInfoPress() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnExtendedInfoPress()");
@@ -5334,7 +5333,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnExtendedInfoRelease()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void OnExtendedInfoRelease() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnExtendedInfoRelease()");
@@ -5382,11 +5381,10 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnNetCleanup(UNetConnection*)
-    // classe: a funcao mora em APlayerController, e AShooterPlayerController herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void OnNetCleanup(void* a0) const
     {
-        NativeCall<void, void*>(this, "APlayerController.OnNetCleanup(UNetConnection*)", a0);
+        NativeCall<void, void*>(this, "AShooterPlayerController.OnNetCleanup(UNetConnection*)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -5415,7 +5413,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnPoopReleased_RTSKeyBinds()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnPoopReleased_RTSKeyBinds() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnPoopReleased_RTSKeyBinds()");
@@ -5423,7 +5421,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnPossess(APawn*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2202+grafo=42/42]]
+    // endereco: casamento de bytes com a build de referencia
     void OnPossess(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.OnPossess(APawn*)", a0);
@@ -5447,7 +5445,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<0>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_0_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<0>()");
@@ -5455,7 +5453,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<1>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_1_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<1>()");
@@ -5463,7 +5461,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<2>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_2_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<2>()");
@@ -5471,7 +5469,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<3>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_3_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<3>()");
@@ -5479,7 +5477,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<4>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_4_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<4>()");
@@ -5487,7 +5485,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<5>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_5_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<5>()");
@@ -5495,7 +5493,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<6>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_6_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<6>()");
@@ -5503,7 +5501,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<7>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_7_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<7>()");
@@ -5511,7 +5509,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<8>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_8_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<8>()");
@@ -5519,7 +5517,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnReleaseItemSlot<9>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnReleaseItemSlot_9_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnReleaseItemSlot<9>()");
@@ -5527,7 +5525,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // dump_sobre_sdk_287a0
     //   AShooterPlayerController.OnRep_Pawn()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=346+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_Pawn() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnRep_Pawn()");
@@ -5535,7 +5533,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnRep_PlayerState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=67]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_PlayerState() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnRep_PlayerState()");
@@ -5551,7 +5549,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnSelectOrderGroup<0>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnSelectOrderGroup_0_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnSelectOrderGroup<0>()");
@@ -5567,7 +5565,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnStartInGameMenu()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=417+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     void OnStartInGameMenu() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnStartInGameMenu()");
@@ -5631,7 +5629,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<0>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_0_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<0>()");
@@ -5639,7 +5637,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<1>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_1_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<1>()");
@@ -5647,7 +5645,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<2>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=115]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnUseItemSlot_2_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<2>()");
@@ -5655,7 +5653,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<3>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_3_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<3>()");
@@ -5663,7 +5661,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<4>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_4_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<4>()");
@@ -5671,7 +5669,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<5>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_5_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<5>()");
@@ -5679,7 +5677,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<6>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_6_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<6>()");
@@ -5687,7 +5685,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<7>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_7_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<7>()");
@@ -5695,7 +5693,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<8>()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUseItemSlot_8_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<8>()");
@@ -5703,7 +5701,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<9>()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=158]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnUseItemSlot_9_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<9>()");
@@ -5735,7 +5733,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnWhistlePress()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=418+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void OnWhistlePress() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnWhistlePress()");
@@ -5763,7 +5761,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.OwnsPremiumMod(__int64)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool OwnsPremiumMod(long long a0) const
     {
         return NativeCall<bool, long long>(this, "AShooterPlayerController.OwnsPremiumMod(__int64)", a0);
@@ -5771,7 +5769,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PawnLeavingGame()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=435]]
+    // endereco: casamento de bytes com a build de referencia
     void PawnLeavingGame() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PawnLeavingGame()");
@@ -5811,7 +5809,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.PlayHitMarkerStructure()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlayHitMarkerStructure() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PlayHitMarkerStructure()");
@@ -5835,7 +5833,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PlayRespawnSound()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlayRespawnSound() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PlayRespawnSound()");
@@ -5851,7 +5849,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PlayWheelProgressSound()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=138]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlayWheelProgressSound() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PlayWheelProgressSound()");
@@ -5859,7 +5857,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.PlayWheelSelectSound()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayWheelSelectSound() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.PlayWheelSelectSound()");
@@ -5879,7 +5877,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=159+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PostInitializeComponents()");
@@ -5947,7 +5945,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ProgressBounties(FName,float,float,bool,FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float ProgressBounties(unsigned long long a0, float a1, float a2, bool a3, unsigned long long a4) const
     {
         return NativeCall<float, unsigned long long, float, float, bool, unsigned long long>(this, "AShooterPlayerController.ProgressBounties(FName,float,float,bool,FName)", a0, a1, a2, a3, a4);
@@ -5971,7 +5969,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PurchaseEngramPoint(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=268]]
+    // endereco: casamento de bytes com a build de referencia
     void PurchaseEngramPoint(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.PurchaseEngramPoint(int)", a0);
@@ -6059,7 +6057,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.RegisterBounties(FName,FPrimalMilestone)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RegisterBounties(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "AShooterPlayerController.RegisterBounties(FName,FPrimalMilestone)", a0, a1);
@@ -6075,7 +6073,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.RemoteServerCheat_Implementation(FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=519+grafo=13/13]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoteServerCheat_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.RemoteServerCheat_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -6123,7 +6121,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.RemoveDinoFromClientTrackedActorPointers(APrimalDinoCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveDinoFromClientTrackedActorPointers(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.RemoveDinoFromClientTrackedActorPointers(APrimalDinoCharacter*)", a0);
@@ -6139,7 +6137,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.RemoveEquipmentAccessories()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=341]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveEquipmentAccessories() const
     {
         NativeCall<void>(this, "AShooterPlayerController.RemoveEquipmentAccessories()");
@@ -6163,7 +6161,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.RemovePlayerFromClientTrackedActorPointers(AShooterCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemovePlayerFromClientTrackedActorPointers(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.RemovePlayerFromClientTrackedActorPointers(AShooterCharacter*)", a0);
@@ -6239,7 +6237,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Reset()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=128]]
+    // endereco: casamento de bytes com a build de referencia
     void Reset() const
     {
         NativeCall<void>(this, "AShooterPlayerController.Reset()");
@@ -6247,7 +6245,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ResetCameraMode()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=22]]
+    // endereco: casamento de bytes com a build de referencia
     void ResetCameraMode() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ResetCameraMode()");
@@ -6263,7 +6261,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ResetThresholdMilestone(EPrimalMilestoneType)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=127]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ResetThresholdMilestone(int a0) const
     {
         return NativeCall<void*, int>(this, "AShooterPlayerController.ResetThresholdMilestone(EPrimalMilestoneType)", a0);
@@ -6271,7 +6269,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SCP()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SCP() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SCP()");
@@ -6287,7 +6285,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SameLinkedId(__int64)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool SameLinkedId(long long a0) const
     {
         return NativeCall<bool, long long>(this, "AShooterPlayerController.SameLinkedId(__int64)", a0);
@@ -6303,7 +6301,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ScheduleTryLoadProfile()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=371+grafo=6/6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=371+grafo=5/5]]
     void ScheduleTryLoadProfile() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ScheduleTryLoadProfile()");
@@ -6363,7 +6361,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerActorCloseRemoteInventory(UPrimalInventoryComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerActorCloseRemoteInventory(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerActorCloseRemoteInventory(UPrimalInventoryComponent*)", a0);
@@ -6515,7 +6513,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerBanPlayer_Implementation(FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=277+grafo=9/9]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=277+bytes40+grafo=9/9]]
     void ServerBanPlayer_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerBanPlayer_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -6603,7 +6601,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerCheckIfWildDinoChildCanBeImprinted()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerCheckIfWildDinoChildCanBeImprinted() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerCheckIfWildDinoChildCanBeImprinted()");
@@ -6643,7 +6641,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerClearPOIVisibilityForAllActors_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=152]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerClearPOIVisibilityForAllActors_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerClearPOIVisibilityForAllActors_Implementation()");
@@ -6651,7 +6649,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerClearPOIVisibilityForAllActors_ServerLogic()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerClearPOIVisibilityForAllActors_ServerLogic() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerClearPOIVisibilityForAllActors_ServerLogic()");
@@ -6691,7 +6689,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerDPC_Implementation()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ServerDPC_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerDPC_Implementation()");
@@ -6787,7 +6785,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerDropFromRemoteInventory(UPrimalInventoryComponent*,FItemNetID)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=7]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerDropFromRemoteInventory(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "AShooterPlayerController.ServerDropFromRemoteInventory(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -6803,7 +6801,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerEquipPawnItem(FItemNetID)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=4]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerEquipPawnItem(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AShooterPlayerController.ServerEquipPawnItem(FItemNetID)", a0);
@@ -6859,7 +6857,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerGetMessageOfTheDay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetMessageOfTheDay() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerGetMessageOfTheDay()");
@@ -6935,7 +6933,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerLoadUploadedCharacters()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerLoadUploadedCharacters() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerLoadUploadedCharacters()");
@@ -7023,7 +7021,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerProcessItemNetExecCommandBP(UPrimalInventoryComponent*,FItemNetID
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=279+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ServerProcessItemNetExecCommandBP(void* a0, unsigned long long a1, bool a2, unsigned long long a3, void* a4) const
     {
         return NativeCall<void*, void*, unsigned long long, bool, unsigned long long, void*>(this, "AShooterPlayerController.ServerProcessItemNetExecCommandBP(UPrimalInventoryComponent*,FItemNetID,bool,FName,FBPNetExecParams)", a0, a1, a2, a3, a4);
@@ -7039,7 +7037,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerReadMessageOFTheDay()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerReadMessageOFTheDay() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerReadMessageOFTheDay()");
@@ -7055,7 +7053,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerReleaseSeatingStructure()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerReleaseSeatingStructure() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerReleaseSeatingStructure()");
@@ -7071,7 +7069,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRemovePassenger()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=45+chamadores=2]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemovePassenger() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRemovePassenger()");
@@ -7079,7 +7077,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRemovePassenger_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemovePassenger_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRemovePassenger_Implementation()");
@@ -7087,7 +7085,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRemovePawnItem(FItemNetID,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=9]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemovePawnItem(unsigned long long a0, bool a1) const
     {
         NativeCall<void, unsigned long long, bool>(this, "AShooterPlayerController.ServerRemovePawnItem(FItemNetID,bool)", a0, a1);
@@ -7103,7 +7101,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerRemoveSteamItemSucceeded()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemoveSteamItemSucceeded() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRemoveSteamItemSucceeded()");
@@ -7159,7 +7157,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestActorItems_Implementation(UPrimalInventoryComponent*,bool,
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestActorItems_Implementation(void* a0, bool a1, bool a2) const
     {
         NativeCall<void, void*, bool, bool>(this, "AShooterPlayerController.ServerRequestActorItems_Implementation(UPrimalInventoryComponent*,bool,bool)", a0, a1, a2);
@@ -7167,7 +7165,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestAddAsSortingInput_Implementation(UPrimalInventoryComponent
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestAddAsSortingInput_Implementation(void* a0, void* a1, unsigned long long a2, int a3) const
     {
         return NativeCall<void*, void*, void*, unsigned long long, int>(this, "AShooterPlayerController.ServerRequestAddAsSortingInput_Implementation(UPrimalInventoryComponent*,UPrimalInventoryComponent*,FItemNetID,int)", a0, a1, a2, a3);
@@ -7207,7 +7205,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestContainerFuel(APrimalStructureItemContainer*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestContainerFuel(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerRequestContainerFuel(APrimalStructureItemContainer*)", a0);
@@ -7379,7 +7377,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestEquipRemoteGhostCustomCosmetic_Implementation(UPrimalInven
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestEquipRemoteGhostCustomCosmetic_Implementation(void* a0, int a1, long long a2, int a3, void* a4) const
     {
         return NativeCall<void*, void*, int, long long, int, void*>(this, "AShooterPlayerController.ServerRequestEquipRemoteGhostCustomCosmetic_Implementation(UPrimalInventoryComponent*,EPrimalEquipmentType::Type,__int64,int,FCustomCosmeticAdditionalSettings)", a0, a1, a2, a3, a4);
@@ -7395,7 +7393,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestExtendedStructureRange_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=111]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ServerRequestExtendedStructureRange_Implementation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ServerRequestExtendedStructureRange_Implementation()");
@@ -7451,7 +7449,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestInventoryUseItemRemoteWithItemLocal_Implementation(UPrimal
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestInventoryUseItemRemoteWithItemLocal_Implementation(void* a0, void* a1, unsigned long long a2, unsigned long long a3, int a4) const
     {
         NativeCall<void, void*, void*, unsigned long long, unsigned long long, int>(this, "AShooterPlayerController.ServerRequestInventoryUseItemRemoteWithItemLocal_Implementation(UPrimalInventoryComponent*,UPrimalInventoryComponent*,FItemNetID,FItemNetID,int)", a0, a1, a2, a3, a4);
@@ -7483,7 +7481,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestInventoryUseItemWithItem_Implementation(UPrimalInventoryCo
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestInventoryUseItemWithItem_Implementation(void* a0, unsigned long long a1, unsigned long long a2, int a3) const
     {
         NativeCall<void, void*, unsigned long long, unsigned long long, int>(this, "AShooterPlayerController.ServerRequestInventoryUseItemWithItem_Implementation(UPrimalInventoryComponent*,FItemNetID,FItemNetID,int)", a0, a1, a2, a3);
@@ -7507,7 +7505,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestLevelUp_Implementation(UPrimalCharacterStatusComponent*,EP
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestLevelUp_Implementation(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.ServerRequestLevelUp_Implementation(UPrimalCharacterStatusComponent*,EPrimalCharacterStatusValue::Type)", a0, a1);
@@ -7595,7 +7593,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestRemoveCustomCosmetic(FItemNetID,UPrimalInventoryComponent*
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestRemoveCustomCosmetic(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "AShooterPlayerController.ServerRequestRemoveCustomCosmetic(FItemNetID,UPrimalInventoryComponent*)", a0, a1);
@@ -7627,7 +7625,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestRemoveItemSkin(UPrimalInventoryComponent*,FItemNetID)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestRemoveItemSkin(void* a0, unsigned long long a1) const
     {
         return NativeCall<void*, void*, unsigned long long>(this, "AShooterPlayerController.ServerRequestRemoveItemSkin(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -7635,7 +7633,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestRemoveItemSkinOnly(UPrimalInventoryComponent*,FItemNetID)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestRemoveItemSkinOnly(void* a0, unsigned long long a1) const
     {
         return NativeCall<void*, void*, unsigned long long>(this, "AShooterPlayerController.ServerRequestRemoveItemSkinOnly(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -7651,7 +7649,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestRemoveWeaponAccessoryOnly(UPrimalInventoryComponent*,FItem
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestRemoveWeaponAccessoryOnly(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "AShooterPlayerController.ServerRequestRemoveWeaponAccessoryOnly(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -7659,7 +7657,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestRemoveWeaponClipAmmo(UPrimalInventoryComponent*,FItemNetID
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestRemoveWeaponClipAmmo(void* a0, unsigned long long a1) const
     {
         NativeCall<void, void*, unsigned long long>(this, "AShooterPlayerController.ServerRequestRemoveWeaponClipAmmo(UPrimalInventoryComponent*,FItemNetID)", a0, a1);
@@ -7819,7 +7817,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerRequestTribeLog()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestTribeLog() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRequestTribeLog()");
@@ -7827,7 +7825,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestTribeLog_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=89]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerRequestTribeLog_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRequestTribeLog_Implementation()");
@@ -7835,7 +7833,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestUnlockShipSkill_Implementation(APrimalShip*,FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestUnlockShipSkill_Implementation(void* a0, unsigned long long a1) const
     {
         return NativeCall<void*, void*, unsigned long long>(this, "AShooterPlayerController.ServerRequestUnlockShipSkill_Implementation(APrimalShip*,FName)", a0, a1);
@@ -7843,7 +7841,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestUnlockSkill_Implementation(FName,UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestUnlockSkill_Implementation(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "AShooterPlayerController.ServerRequestUnlockSkill_Implementation(FName,UObject*)", a0, a1);
@@ -7851,7 +7849,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestUpdateActiveMissionTags()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestUpdateActiveMissionTags() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRequestUpdateActiveMissionTags()");
@@ -7867,7 +7865,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestUpdateTrackedWaypointsAndMapPlayers(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=4]]
     void ServerRequestUpdateTrackedWaypointsAndMapPlayers(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ServerRequestUpdateTrackedWaypointsAndMapPlayers(bool)", a0);
@@ -7875,7 +7873,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestUpdateTrackedWaypointsAndMapPlayers_ServerLogic(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestUpdateTrackedWaypointsAndMapPlayers_ServerLogic(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ServerRequestUpdateTrackedWaypointsAndMapPlayers_ServerLogic(bool)", a0);
@@ -7891,7 +7889,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestUpdateTrackedWaypointsOnly_ServerLogic(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=128]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestUpdateTrackedWaypointsOnly_ServerLogic(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ServerRequestUpdateTrackedWaypointsOnly_ServerLogic(bool)", a0);
@@ -7899,7 +7897,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerResizePaint_Implementation(UStructurePaintingComponent*,float,flo
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerResizePaint_Implementation(void* a0, float a1, float a2) const
     {
         return NativeCall<void*, void*, float, float>(this, "AShooterPlayerController.ServerResizePaint_Implementation(UStructurePaintingComponent*,float,float)", a0, a1, a2);
@@ -7995,7 +7993,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSendDirectMessage(FString&,FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=293+bytes40+chamadores=17]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=293+bytes40+chamadores=16]]
     void ServerSendDirectMessage(const FString& a0, const FString& a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterPlayerController.ServerSendDirectMessage(FString&,FString&)", const_cast<FString*>(&a0), const_cast<FString*>(&a1));
@@ -8027,7 +8025,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_ServerLogic(int
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_ServerLogic(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_ServerLogic(int,bool)", a0, a1);
@@ -8035,7 +8033,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_ServerLogic(int,b
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_ServerLogic(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_ServerLogic(int,bool)", a0, a1);
@@ -8067,7 +8065,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetDeathWaypointInvisible_ServerLogic(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ServerSetDeathWaypointInvisible_ServerLogic(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.ServerSetDeathWaypointInvisible_ServerLogic(int)", a0);
@@ -8107,7 +8105,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerSetFavoriteTrackedCreatureViaCharacterIndex_ServerLogic(int,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetFavoriteTrackedCreatureViaCharacterIndex_ServerLogic(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerSetFavoriteTrackedCreatureViaCharacterIndex_ServerLogic(int,bool)", a0, a1);
@@ -8115,7 +8113,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetFavoriteTrackedPlayerViaCharacterIndex(int,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void ServerSetFavoriteTrackedPlayerViaCharacterIndex(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerSetFavoriteTrackedPlayerViaCharacterIndex(int,bool)", a0, a1);
@@ -8123,7 +8121,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerSetFavoriteTrackedPlayerViaCharacterIndex_ServerLogic(int,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetFavoriteTrackedPlayerViaCharacterIndex_ServerLogic(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerSetFavoriteTrackedPlayerViaCharacterIndex_ServerLogic(int,bool)", a0, a1);
@@ -8155,7 +8153,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetMessageOfTheDay_Implementation(FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=268+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerSetMessageOfTheDay_Implementation(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerSetMessageOfTheDay_Implementation(FString&)", const_cast<FString*>(&a0));
@@ -8175,7 +8173,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerSetOwns_Implementation(bool,bool,bool,bool,bool,TArray<TSubclassO
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerSetOwns_Implementation(bool a0, bool a1, bool a2, bool a3, bool a4, void* a5) const
     {
         return NativeCall<void*, bool, bool, bool, bool, bool, void*>(this, "AShooterPlayerController.ServerSetOwns_Implementation(bool,bool,bool,bool,bool,TArray<TSubclassOf<UDLC>,TSizedDefaultAllocator<32>>&)", a0, a1, a2, a3, a4, a5);
@@ -8215,7 +8213,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetSubscribedApp_Implementation(int,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetSubscribedApp_Implementation(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerSetSubscribedApp_Implementation(int,bool)", a0, a1);
@@ -8231,7 +8229,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetSupressAdminIcon_Implementation(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetSupressAdminIcon_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ServerSetSupressAdminIcon_Implementation(bool)", a0);
@@ -8255,7 +8253,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetVRPlayer_Implementation(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetVRPlayer_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ServerSetVRPlayer_Implementation(bool)", a0);
@@ -8263,7 +8261,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerShowMessageOfTheDay_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void ServerShowMessageOfTheDay_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerShowMessageOfTheDay_Implementation()");
@@ -8279,7 +8277,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ServerStartWeaponAltFire(AShooterWeapon*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerStartWeaponAltFire(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerStartWeaponAltFire(AShooterWeapon*)", a0);
@@ -8287,7 +8285,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ServerStartWeaponFire(AShooterWeapon*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerStartWeaponFire(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerStartWeaponFire(AShooterWeapon*)", a0);
@@ -8295,7 +8293,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ServerStopWeaponAltFire(AShooterWeapon*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerStopWeaponAltFire(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerStopWeaponAltFire(AShooterWeapon*)", a0);
@@ -8383,7 +8381,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerTransferAllFromRemoteInventory(UPrimalInventoryComponent*,FString
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTransferAllFromRemoteInventory(void* a0, const FString& a1, const FString& a2, const FString& a3, bool a4) const
     {
         NativeCall<void, void*, void*, void*, void*, bool>(this, "AShooterPlayerController.ServerTransferAllFromRemoteInventory(UPrimalInventoryComponent*,FString&,FString&,FString&,bool)", a0, const_cast<FString*>(&a1), const_cast<FString*>(&a2), const_cast<FString*>(&a3), a4);
@@ -8395,7 +8393,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerTransferAllFromRemoteInventory_Implementation(UPrimalInventoryCom
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTransferAllFromRemoteInventory_Implementation(void* a0, const FString& a1, const FString& a2, const FString& a3, bool a4) const
     {
         NativeCall<void, void*, void*, void*, void*, bool>(this, "AShooterPlayerController.ServerTransferAllFromRemoteInventory_Implementation(UPrimalInventoryComponent*,FString&,FString&,FString&,bool)", a0, const_cast<FString*>(&a1), const_cast<FString*>(&a2), const_cast<FString*>(&a3), a4);
@@ -8407,7 +8405,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerTransferAllToRemoteInventory(UPrimalInventoryComponent*,FString&,
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTransferAllToRemoteInventory(void* a0, const FString& a1, const FString& a2, const FString& a3, bool a4, bool a5, bool a6) const
     {
         NativeCall<void, void*, void*, void*, void*, bool, bool, bool>(this, "AShooterPlayerController.ServerTransferAllToRemoteInventory(UPrimalInventoryComponent*,FString&,FString&,FString&,bool,bool,bool)", a0, const_cast<FString*>(&a1), const_cast<FString*>(&a2), const_cast<FString*>(&a3), a4, a5, a6);
@@ -8487,7 +8485,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerTryToggleShipLadders_Implementation(APrimalShip*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerTryToggleShipLadders_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ServerTryToggleShipLadders_Implementation(APrimalShip*)", a0);
@@ -8527,7 +8525,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerUntrackAllActors_ServerLogic()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerUntrackAllActors_ServerLogic() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerUntrackAllActors_ServerLogic()");
@@ -8559,7 +8557,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerUpdateOwnedPMXM_Implementation(TArray<__int64,TSizedDefaultAlloca
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerUpdateOwnedPMXM_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ServerUpdateOwnedPMXM_Implementation(TArray<__int64,TSizedDefaultAllocator<32>>&)", a0);
@@ -8567,7 +8565,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerUpdatePersistentItemUnlocks()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerUpdatePersistentItemUnlocks() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerUpdatePersistentItemUnlocks()");
@@ -8599,7 +8597,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerUploadCurrentCharacterAndItems_Implementation(UPrimalInventoryCom
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerUploadCurrentCharacterAndItems_Implementation(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.ServerUploadCurrentCharacterAndItems_Implementation(UPrimalInventoryComponent*,int)", a0, a1);
@@ -8647,7 +8645,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Server_DoTeamPing_Implementation(FTeamPingData)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Server_DoTeamPing_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.Server_DoTeamPing_Implementation(FTeamPingData)", a0);
@@ -8655,7 +8653,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.Server_FireShipCannons()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Server_FireShipCannons() const
     {
         NativeCall<void>(this, "AShooterPlayerController.Server_FireShipCannons()");
@@ -8663,7 +8661,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Server_GetPlatformNameFromId(unsignedint)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Server_GetPlatformNameFromId(unsigned int a0) const
     {
         return NativeCall<void*, unsigned int>(this, "AShooterPlayerController.Server_GetPlatformNameFromId(unsignedint)", a0);
@@ -8671,7 +8669,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Server_GetPlatformNameFromId_Implementation(unsignedint)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Server_GetPlatformNameFromId_Implementation(unsigned int a0) const
     {
         NativeCall<void, unsigned int>(this, "AShooterPlayerController.Server_GetPlatformNameFromId_Implementation(unsignedint)", a0);
@@ -8719,7 +8717,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Server_RequestLastDeathTrackingActorLoc_ServerLogic()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=156+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void Server_RequestLastDeathTrackingActorLoc_ServerLogic() const
     {
         NativeCall<void>(this, "AShooterPlayerController.Server_RequestLastDeathTrackingActorLoc_ServerLogic()");
@@ -8743,7 +8741,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Server_SetShipCannonAimDeltas_Implementation(float,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Server_SetShipCannonAimDeltas_Implementation(float a0, float a1) const
     {
         return NativeCall<void*, float, float>(this, "AShooterPlayerController.Server_SetShipCannonAimDeltas_Implementation(float,float)", a0, a1);
@@ -8751,7 +8749,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Server_SetShipSailTurningInput_Implementation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Server_SetShipSailTurningInput_Implementation(float a0) const
     {
         return NativeCall<void*, float>(this, "AShooterPlayerController.Server_SetShipSailTurningInput_Implementation(float)", a0);
@@ -8759,7 +8757,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.Server_SetShipSteeringInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Server_SetShipSteeringInput(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.Server_SetShipSteeringInput(float)", a0);
@@ -8767,7 +8765,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Server_SetShipSteeringInput_Implementation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Server_SetShipSteeringInput_Implementation(float a0) const
     {
         return NativeCall<void*, float>(this, "AShooterPlayerController.Server_SetShipSteeringInput_Implementation(float)", a0);
@@ -8783,7 +8781,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.Server_SetWantsForcedMovement(int)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Server_SetWantsForcedMovement(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.Server_SetWantsForcedMovement(int)", a0);
@@ -8791,7 +8789,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.Server_SetWantsForcedMovement_Implementation(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Server_SetWantsForcedMovement_Implementation(int a0) const
     {
         return NativeCall<void*, int>(this, "AShooterPlayerController.Server_SetWantsForcedMovement_Implementation(int)", a0);
@@ -8807,7 +8805,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Server_UpdateRallyPointData_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=88]]
+    // endereco: casamento de bytes com a build de referencia
     void Server_UpdateRallyPointData_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.Server_UpdateRallyPointData_Implementation()");
@@ -8823,7 +8821,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetAutoRunEnabled(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAutoRunEnabled(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetAutoRunEnabled(bool)", a0);
@@ -8839,7 +8837,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetCheatPlayer(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCheatPlayer(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetCheatPlayer(bool)", a0);
@@ -8879,7 +8877,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetCurrentMultiUseWheelCategory(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCurrentMultiUseWheelCategory(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.SetCurrentMultiUseWheelCategory(int)", a0);
@@ -8899,7 +8897,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetCustomActorTracking_LastSavedCustomTameSelectionType(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCustomActorTracking_LastSavedCustomTameSelectionType(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.SetCustomActorTracking_LastSavedCustomTameSelectionType(int)", a0);
@@ -8907,7 +8905,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetCustomActorTracking_LastSavedDinoGroup(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCustomActorTracking_LastSavedDinoGroup(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.SetCustomActorTracking_LastSavedDinoGroup(int)", a0);
@@ -8915,7 +8913,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetCustomActorTracking_LastSavedScrollbarIndex(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCustomActorTracking_LastSavedScrollbarIndex(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.SetCustomActorTracking_LastSavedScrollbarIndex(int)", a0);
@@ -8931,7 +8929,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetDoFInterpTime(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetDoFInterpTime(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.SetDoFInterpTime(float)", a0);
@@ -8939,7 +8937,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetDoingMeleeAimAssist()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetDoingMeleeAimAssist() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SetDoingMeleeAimAssist()");
@@ -8963,7 +8961,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetGodMode(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetGodMode(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetGodMode(bool)", a0);
@@ -8987,7 +8985,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetInfiniteStats(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetInfiniteStats(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetInfiniteStats(bool)", a0);
@@ -9003,7 +9001,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetInstantHarvest(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetInstantHarvest(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetInstantHarvest(bool)", a0);
@@ -9043,7 +9041,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetMissionWaypointVisible(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetMissionWaypointVisible(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetMissionWaypointVisible(bool)", a0);
@@ -9067,7 +9065,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.SetPerfCheckLocationsFromSpyglass(TArray<FString,TSizedDefaultAllocator
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro SetPerfCheckLocationsFromSpyglass(void* a0, void* a1, void* a2, void* a3, float a4) const
     {
         return NativeCall<void*, void*, void*, void*, void*, float>(this, "AShooterPlayerController.SetPerfCheckLocationsFromSpyglass(TArray<FString,TSizedDefaultAllocator<32>>&,TArray<bool,TSizedDefaultAllocator<32>>&,TArray<bool,TSizedDefaultAllocator<32>>&,TArray<FString,TSizedDefaultAllocator<32>>&,float)", a0, a1, a2, a3, a4);
@@ -9091,7 +9089,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.SetPreventInstigatorVO(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=108]]
+    // endereco: casamento de bytes com a build de referencia
     void SetPreventInstigatorVO(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.SetPreventInstigatorVO(bool)", a0);
@@ -9167,7 +9165,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetupInputComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=148/148]]
+    // endereco: casamento de bytes com a build de referencia
     void SetupInputComponent() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SetupInputComponent()");
@@ -9175,7 +9173,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetupNewTrackBP()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetupNewTrackBP() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SetupNewTrackBP()");
@@ -9231,7 +9229,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ShouldHideGameplayUI()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=132+chamadores=2]]
     bool ShouldHideGameplayUI() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.ShouldHideGameplayUI()");
@@ -9247,7 +9245,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ShouldSpawnWaterInteraction()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldSpawnWaterInteraction() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.ShouldSpawnWaterInteraction()");
@@ -9255,7 +9253,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ShowAllPlayersListToFollow()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: casamento de bytes com a build de referencia
     void ShowAllPlayersListToFollow() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ShowAllPlayersListToFollow()");
@@ -9279,7 +9277,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ShowStructureCustomCosmeticUI(APrimalStructure*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     void ShowStructureCustomCosmeticUI(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ShowStructureCustomCosmeticUI(APrimalStructure*)", a0);
@@ -9303,7 +9301,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SlowMovementOff()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SlowMovementOff() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SlowMovementOff()");
@@ -9311,7 +9309,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SlowMovementOn()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SlowMovementOn() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SlowMovementOn()");
@@ -9387,7 +9385,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SpectatorDetachOrbitCamera()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SpectatorDetachOrbitCamera() const
     {
         NativeCall<void>(this, "AShooterPlayerController.SpectatorDetachOrbitCamera()");
@@ -9395,7 +9393,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.SpectatorNextPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SpectatorNextPlayer() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.SpectatorNextPlayer()");
@@ -9403,7 +9401,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.SpectatorPreviousPlayer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SpectatorPreviousPlayer() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.SpectatorPreviousPlayer()");
@@ -9411,7 +9409,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SpectatorTurn(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void SpectatorTurn(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.SpectatorTurn(float)", a0);
@@ -9427,7 +9425,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadBackButton()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=749+grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     void StartArkGamepadBackButton() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadBackButton()");
@@ -9435,7 +9433,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadDpadDown()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=33]]
+    // endereco: casamento de bytes com a build de referencia
     void StartArkGamepadDpadDown() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadDpadDown()");
@@ -9451,7 +9449,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadDpadUp()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartArkGamepadDpadUp() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadDpadUp()");
@@ -9459,7 +9457,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadFaceButtonBottom()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartArkGamepadFaceButtonBottom() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadFaceButtonBottom()");
@@ -9467,7 +9465,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadFaceButtonLeft()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1010+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     void StartArkGamepadFaceButtonLeft() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadFaceButtonLeft()");
@@ -9475,7 +9473,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadFaceButtonRight()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=617+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void StartArkGamepadFaceButtonRight() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadFaceButtonRight()");
@@ -9491,7 +9489,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadRightShoulder()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=191+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void StartArkGamepadRightShoulder() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadRightShoulder()");
@@ -9567,7 +9565,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // dump_sobre_sdk_287a0
     //   AShooterPlayerController.StartTalkingWrapper()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void StartTalkingWrapper() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartTalkingWrapper()");
@@ -9583,7 +9581,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartTeamPingWheel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=98]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartTeamPingWheel() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartTeamPingWheel()");
@@ -9591,7 +9589,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartWhistleSelection()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=82]]
+    // endereco: casamento de bytes com a build de referencia
     void StartWhistleSelection() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartWhistleSelection()");
@@ -9599,7 +9597,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StaticRegisterNativesAShooterPlayerController()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesAShooterPlayerController()
     {
         NativeCall<void>(nullptr, "AShooterPlayerController.StaticRegisterNativesAShooterPlayerController()");
@@ -9615,7 +9613,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.StopMapPerformanceTest()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopMapPerformanceTest() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StopMapPerformanceTest()");
@@ -9631,7 +9629,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StopWheelProgressSound()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopWheelProgressSound() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StopWheelProgressSound()");
@@ -9691,7 +9689,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.TestPurchaseEP()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=260]]
+    // endereco: casamento de bytes com a build de referencia
     void TestPurchaseEP() const
     {
         NativeCall<void>(this, "AShooterPlayerController.TestPurchaseEP()");
@@ -9739,7 +9737,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ToggleAutoRun()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ToggleAutoRun() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ToggleAutoRun()");
@@ -9747,7 +9745,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleDinoNameTags()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=24]]
+    // endereco: casamento de bytes com a build de referencia
     void ToggleDinoNameTags() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ToggleDinoNameTags()");
@@ -9796,7 +9794,7 @@ struct AShooterPlayerController : public ABasePlayerController
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleSpeaking(bool)
     // classe: a funcao mora em APlayerController, e AShooterPlayerController herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=150]]
+    // endereco: casamento de bytes com a build de referencia
     void ToggleSpeaking(bool a0) const
     {
         NativeCall<void, bool>(this, "APlayerController.ToggleSpeaking(bool)", a0);
@@ -9804,7 +9802,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleThirdPersonCamera()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ToggleThirdPersonCamera() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ToggleThirdPersonCamera()");
@@ -9812,7 +9810,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleTrackingDinoOnMultiUse(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=1363+grafo=24/24]]
+    // endereco: casamento de bytes com a build de referencia
     void ToggleTrackingDinoOnMultiUse(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ToggleTrackingDinoOnMultiUse(APrimalDinoCharacter*)", a0);
@@ -9828,7 +9826,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleWeaponAccessory()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void ToggleWeaponAccessory() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ToggleWeaponAccessory()");
@@ -9868,7 +9866,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.TryAddCurrentSkillCooldown(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool TryAddCurrentSkillCooldown(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AShooterPlayerController.TryAddCurrentSkillCooldown(FName)", a0);
@@ -9892,7 +9890,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.TryInputCurrentDismiss()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TryInputCurrentDismiss() const
     {
         NativeCall<void>(this, "AShooterPlayerController.TryInputCurrentDismiss()");
@@ -9900,7 +9898,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.TryLoadProfile()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=74]]
+    // endereco: casamento de bytes com a build de referencia
     void TryLoadProfile() const
     {
         NativeCall<void>(this, "AShooterPlayerController.TryLoadProfile()");
@@ -9916,7 +9914,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.TryToForceUploadCharacter_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=46]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TryToForceUploadCharacter_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.TryToForceUploadCharacter_Implementation()");
@@ -9932,7 +9930,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.TryToStopTalking(bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=240]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TryToStopTalking(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterPlayerController.TryToStopTalking(bool)", a0);
@@ -9940,7 +9938,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.TryUnlockDLCContent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TryUnlockDLCContent() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.TryUnlockDLCContent()");
@@ -9948,7 +9946,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.TurnAtRate(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TurnAtRate(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.TurnAtRate(float)", a0);
@@ -9956,7 +9954,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.TurnInput(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TurnInput(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.TurnInput(float)", a0);
@@ -9972,7 +9970,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.UnFreeze()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=35]]
+    // endereco: casamento de bytes com a build de referencia
     void UnFreeze() const
     {
         NativeCall<void>(this, "AShooterPlayerController.UnFreeze()");
@@ -9981,13 +9979,13 @@ struct AShooterPlayerController : public ABasePlayerController
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.UnbanPlayer(FString)
     // endereco: casamento de bytes com a build de referencia
-    static void UnbanPlayer(const FString& a0)
+    void UnbanPlayer(const FString& a0) const
     {
-        NativeCall<void, void*>(nullptr, "AShooterPlayerController.UnbanPlayer(FString)", const_cast<FString*>(&a0));
+        NativeCall<void, void*>(this, "AShooterPlayerController.UnbanPlayer(FString)", const_cast<FString*>(&a0));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static void UnbanPlayer(FString* a0)
+    void UnbanPlayer(FString* a0) const
     { UnbanPlayer(*a0); }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -10000,7 +9998,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.UnlockEmote(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UnlockEmote(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AShooterPlayerController.UnlockEmote(FName)", a0);
@@ -10104,7 +10102,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.UploadCharacterDataToArk(UPrimalInventoryComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UploadCharacterDataToArk(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.UploadCharacterDataToArk(UPrimalInventoryComponent*)", a0);
@@ -10144,7 +10142,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.UseFastInventory()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void UseFastInventory() const
     {
         NativeCall<void>(this, "AShooterPlayerController.UseFastInventory()");
@@ -10202,13 +10200,325 @@ struct AShooterPlayerController : public ABasePlayerController
         NativeCall<void>(this, "AShooterPlayerController.ZoneVolumeReport()");
     }
 
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9416,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9416__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9416,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9424,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9424__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9424,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9432,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9432__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9432,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9440,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9440__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9440,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9448,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9448__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9448,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9456,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9456__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9456,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9504,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9504__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9504,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9512,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9512__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9512,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9528,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9528__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9528,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9576,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9576__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9576,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9584,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9584__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9584,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9592,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9592__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9592,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9600,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9600__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9600,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9640,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9640__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9640,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9648,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9648__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9648,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9656,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9656__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9656,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9664,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9664__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9664,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9672,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9672__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9672,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9680,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9680__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9680,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9688,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9688__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9688,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9696,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9696__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9696,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9704,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9704__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9704,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9712,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9712__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9712,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9720,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9720__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9720,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9728,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9728__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9728,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9736,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9736__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9736,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9744,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9744__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9744,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9752,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9752__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9752,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9768,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9768__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9768,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9784,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9784__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9784,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9800,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9800__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9800,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9808,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9808__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9808,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9880,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9880__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9880,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9888,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9888__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9888,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9896,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9896__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9896,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9904,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9904__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9904,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9912,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9912__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9912,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9928,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9928__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9928,{flat}}()");
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   AShooterPlayerController.`vcall'{9952,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__9952__flat__() const
+    {
+        return NativeCall<void*>(this, "AShooterPlayerController.`vcall'{9952,{flat}}()");
+    }
+
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPlayerTravelLocation` +24, medido na build 25090264
+    //  ancorado em `LastPlayerTravelLocation` +24, medido na build 25535041
     //  (offset absoluto medido: 0x36F0; confianca alta)
     void*& AccumulatedRideTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastPlayerTravelLocation", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +24, medido na build 25090264
+    //  ancorado em `LastRawInputDir` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1040; confianca alta)
     void*& AcknowledgePosessionCallsField() const
     { return BrzCampoAncorado<void*>(this, "LastRawInputDir", 24); }
@@ -10237,17 +10547,17 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro ActorTracking_TempTrack_TrackState_PlayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ActorTracking_TempTrack_TrackState_Players")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +120, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +120, medido na build 25535041
     //  (offset absoluto medido: 0x3610; confianca media)
     void*& AdvanceMapPerformanceTestHandleField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +2, medido na build 25090264
+    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +2, medido na build 25535041
     //  (offset absoluto medido: 0x2720; confianca alta)
     void*& AimMangetismClosestLocationField() const
     { return BrzCampoAncorado<void*>(this, "CustomActorTracking_HasJustChangedSearchText", 2); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +26, medido na build 25090264
+    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +26, medido na build 25535041
     //  (offset absoluto medido: 0x2738; confianca alta)
     FName& AimMangetismCosestBoneField() const
     { return BrzCampoAncorado<FName>(this, "CustomActorTracking_HasJustChangedSearchText", 26); }
@@ -10258,104 +10568,104 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro AllPlayersWhosInfoIsBeingSentToClientFromServer_TeammatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.AllPlayersWhosInfoIsBeingSentToClientFromServer_Teammates")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +456, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +456, medido na build 25535041
     //  (offset absoluto medido: 0x2318; confianca baixa)
     void*& ApplicationEnteredForegroundDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 456); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +448, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +448, medido na build 25535041
     //  (offset absoluto medido: 0x2310; confianca baixa)
     void*& ApplicationReactivatedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 448); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +464, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +464, medido na build 25535041
     //  (offset absoluto medido: 0x2320; confianca baixa)
     void*& ApplicationSystemBlockListChangedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 464); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +60, medido na build 25090264
+    //  ancorado em `CurrentPlayerCharacterLocation` +60, medido na build 25535041
     //  (offset absoluto medido: 0xD4C; confianca media)
     void*& ArkTributeAsyncBatchCountField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPlayerCharacterLocation", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +56, medido na build 25090264
+    //  ancorado em `CurrentPlayerCharacterLocation` +56, medido na build 25535041
     //  (offset absoluto medido: 0xD48; confianca media)
     void*& ArkTributeAsyncLoadIndexField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPlayerCharacterLocation", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +24, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1280; confianca alta)
     void*& AwaitingHUDClassField() const
     { return BrzCampoAncorado<void*>(this, "PhotoModeMarkerActor", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +16, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2160; confianca media)
     void*& BeforeSendHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +336, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +336, medido na build 25535041
     //  (offset absoluto medido: 0x22A0; confianca baixa)
     void*& BlockedTextUsersField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 336); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +176, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +176, medido na build 25535041
     //  (offset absoluto medido: 0x2200; confianca baixa)
     void*& BlockedVoiceQueryResultsField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +256, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +256, medido na build 25535041
     //  (offset absoluto medido: 0x2250; confianca baixa)
     void*& BlockedVoiceUsersField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 256); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +144, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +144, medido na build 25535041
     //  (offset absoluto medido: 0x3628; confianca baixa)
     void*& CacheOwnedPremiumModsField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +48, medido na build 25090264
+    //  ancorado em `EnforcementColors` +48, medido na build 25535041
     //  (offset absoluto medido: 0x25B8; confianca media)
     AActor*& CachedAimedUseActorField() const
     { return BrzCampoAncorado<AActor*>(this, "EnforcementColors", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +56, medido na build 25090264
+    //  ancorado em `EnforcementColors` +56, medido na build 25535041
     //  (offset absoluto medido: 0x25C0; confianca media)
     UActorComponent*& CachedAimedUseActorComponentField() const
     { return BrzCampoAncorado<UActorComponent*>(this, "EnforcementColors", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +160, medido na build 25090264
+    //  ancorado em `CurrentTrackingMark` +160, medido na build 25535041
     //  (offset absoluto medido: 0x11A0; confianca baixa)
     void*& CachedCosmeticsForNewPlayerField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +64, medido na build 25090264
+    //  ancorado em `EnforcementColors` +64, medido na build 25535041
     //  (offset absoluto medido: 0x25C8; confianca media)
     int& CachedHitBodyIndexField() const
     { return BrzCampoAncorado<int>(this, "EnforcementColors", 64); }
     double& CachedTeamTameListUpdateIntervalField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerController.CachedTeamTameListUpdateInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +72, medido na build 25090264
+    //  ancorado em `EnforcementColors` +72, medido na build 25535041
     //  (offset absoluto medido: 0x25D0; confianca media)
     TArray<void*>& Cached_AimedSimplePrimitivesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "EnforcementColors", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +119, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +119, medido na build 25535041
     //  (offset absoluto medido: 0x16E0; confianca media)
     void*& ChatPrivilegCSField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 119); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +15, medido na build 25090264
+    //  ancorado em `bEnableAltFire` +15, medido na build 25535041
     //  (offset absoluto medido: 0x1658; confianca alta)
     float& ChatSpamWeightField() const
     { return BrzCampoAncorado<float>(this, "bEnableAltFire", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +39, medido na build 25090264
+    //  ancorado em `bForceHideGameplayUI` +39, medido na build 25535041
     //  (offset absoluto medido: 0x1A38; confianca media)
     TArray<void*>& ClientCachedTribeOnlineListField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bForceHideGameplayUI", 39); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +128, medido na build 25090264
+    //  ancorado em `CurrentTrackingMark` +128, medido na build 25535041
     //  (offset absoluto medido: 0x1180; confianca media)
     void*& ClientRecvDataField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 128); }
@@ -10367,20 +10677,22 @@ struct AShooterPlayerController : public ABasePlayerController
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.ClientTimerCachedNewScrollbarIndex"); }
     int& ClientTimerCachedTameSelectionTypeField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.ClientTimerCachedTameSelectionType"); }
+    BrzCampoPonteiro ClientsideTrackLatestDeathPOIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ClientsideTrackLatestDeathPOI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +56, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +56, medido na build 25535041
     //  (offset absoluto medido: 0x12A0; confianca media)
     void*& CloseSteamStatusSceneHandleField() const
     { return BrzCampoAncorado<void*>(this, "PhotoModeMarkerActor", 56); }
     int& ClubArkTokensField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.ClubArkTokens"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +152, medido na build 25090264
+    //  ancorado em `DiscordUserID` +152, medido na build 25535041
     //  (offset absoluto medido: 0x2420; confianca baixa)
     void*& CommunicationAllowedPermissionsField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +72, medido na build 25090264
+    //  ancorado em `DiscordUserID` +72, medido na build 25535041
     //  (offset absoluto medido: 0x23D0; confianca media)
     void*& CommunicationPermissionsActivelyBeingCheckedField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 72); }
@@ -10389,7 +10701,7 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro CreaturesAlreadyHandledByTamingAutoAddField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.CreaturesAlreadyHandledByTamingAutoAdd")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +296, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +296, medido na build 25535041
     //  (offset absoluto medido: 0x19A8; confianca baixa)
     void*& CurrentCharacterTransferStateField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 296); }
@@ -10400,7 +10712,7 @@ struct AShooterPlayerController : public ABasePlayerController
     int& CurrentGameModeMaxNumOfRespawnsField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.CurrentGameModeMaxNumOfRespawns"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +296, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +296, medido na build 25535041
     //  (offset absoluto medido: 0x3420; confianca baixa)
     void*& CurrentLeavingVoiceChannelsField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 296); }
@@ -10415,7 +10727,7 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro CurrentTrackingMarkField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.CurrentTrackingMark")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +95, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +95, medido na build 25535041
     //  (offset absoluto medido: 0x16C8; confianca media)
     TArray<void*>& CurrentTribeLogField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 95); }
@@ -10423,6 +10735,10 @@ struct AShooterPlayerController : public ABasePlayerController
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.CustomActorTracking_DisplayedResultsCount"); }
     bool& CustomActorTracking_HasJustChangedDinoGroupField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.CustomActorTracking_HasJustChangedDinoGroup"); }
+    BrzCampoPonteiro CustomActorTracking_HasJustChangedSearchTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.CustomActorTracking_HasJustChangedSearchText")); }
+    BrzCampoPonteiro CustomActorTracking_HasJustChangedSelectionTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.CustomActorTracking_HasJustChangedSelectionType")); }
     FString& CustomActorTracking_LastSavedCustomTameSearchTextField() const
     { return *GetNativePointerField<FString*>(this, "AShooterPlayerController.CustomActorTracking_LastSavedCustomTameSearchText"); }
     int& CustomActorTracking_LastSavedCustomTameSelectionTypeField() const
@@ -10435,15 +10751,17 @@ struct AShooterPlayerController : public ABasePlayerController
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.CustomActorTracking_MaxAllowedFavoritedActors"); }
     int& CustomActorTracking_MaxAllowedWaypointTrackedActorsField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.CustomActorTracking_MaxAllowedWaypointTrackedActors"); }
+    BrzCampoPonteiro DebugPingLifetimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.DebugPingLifetime")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +24, medido na build 25090264
+    //  ancorado em `EnforcementColors` +24, medido na build 25535041
     //  (offset absoluto medido: 0x25A0; confianca alta)
     void*& DelayedNetCleanupHandleField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 24); }
     float& DesiredDistanceForActorTrackingPOILoweredTransparencyField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.DesiredDistanceForActorTrackingPOILoweredTransparency"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +32, medido na build 25090264
+    //  ancorado em `DiscordUserID` +32, medido na build 25535041
     //  (offset absoluto medido: 0x23A8; confianca media)
     void*& DiscordLockField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 32); }
@@ -10452,12 +10770,12 @@ struct AShooterPlayerController : public ABasePlayerController
     float& DistanceNearDeathWaypointToClearPOIField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.DistanceNearDeathWaypointToClearPOI"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +96, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +96, medido na build 25535041
     //  (offset absoluto medido: 0x1858; confianca media)
     float& DoFSettingCurrentTimerField() const
     { return BrzCampoAncorado<float>(this, "WaypointsSOTF", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +100, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +100, medido na build 25535041
     //  (offset absoluto medido: 0x185C; confianca media)
     float& DoFSettingTargetTimerField() const
     { return BrzCampoAncorado<float>(this, "WaypointsSOTF", 100); }
@@ -10466,7 +10784,7 @@ struct AShooterPlayerController : public ABasePlayerController
     TArray<void*>& EnforcementRelevantStructuresField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.EnforcementRelevantStructures"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +23, medido na build 25090264
+    //  ancorado em `bEnableAltFire` +23, medido na build 25535041
     //  (offset absoluto medido: 0x1660; confianca alta)
     double& EnteredSpectatingStateTimeField() const
     { return BrzCampoAncorado<double>(this, "bEnableAltFire", 23); }
@@ -10477,51 +10795,51 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro FogOfWarClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.FogOfWarClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnBountyCategoryProgressed` +16, medido na build 25090264
+    //  ancorado em `OnBountyCategoryProgressed` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2540; confianca alta)
     void*& ForceColorOverlayColorField() const
     { return BrzCampoAncorado<void*>(this, "OnBountyCategoryProgressed", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnBountyCategoryProgressed` +40, medido na build 25090264
+    //  ancorado em `OnBountyCategoryProgressed` +40, medido na build 25535041
     //  (offset absoluto medido: 0x2558; confianca media)
     double& ForceColorOverlayFadeOutTimeField() const
     { return BrzCampoAncorado<double>(this, "OnBountyCategoryProgressed", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnBountyCategoryProgressed` +32, medido na build 25090264
+    //  ancorado em `OnBountyCategoryProgressed` +32, medido na build 25535041
     //  (offset absoluto medido: 0x2550; confianca alta)
     double& ForceColorOverlayUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "OnBountyCategoryProgressed", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +8, medido na build 25090264
+    //  ancorado em `bPendingAllowPlayerMovement` +8, medido na build 25535041
     //  (offset absoluto medido: 0x19E8; confianca alta)
     double& ForceDrawCurrentGroupsUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 8); }
     float& ForcedTimerRestrictionOnRequestingTrackingInfoFromServerField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.ForcedTimerRestrictionOnRequestingTrackingInfoFromServer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +16, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +16, medido na build 25535041
     //  (offset absoluto medido: 0x10C0; confianca alta)
     void*& GamepadBackHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 16); }
     int& Gen1ENFixDesyncValueField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.Gen1ENFixDesyncValue"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +68, medido na build 25090264
+    //  ancorado em `MissionWaypoint` +68, medido na build 25535041
     //  (offset absoluto medido: 0x2514; confianca media)
     int& Gen1FixENCountField() const
     { return BrzCampoAncorado<int>(this, "MissionWaypoint", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +72, medido na build 25090264
+    //  ancorado em `MissionWaypoint` +72, medido na build 25535041
     //  (offset absoluto medido: 0x2518; confianca media)
     int& Gen1FixENCountThresholdField() const
     { return BrzCampoAncorado<int>(this, "MissionWaypoint", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +64, medido na build 25090264
+    //  ancorado em `MissionWaypoint` +64, medido na build 25535041
     //  (offset absoluto medido: 0x2510; confianca media)
     float& Gen1FixENTimeThresholdField() const
     { return BrzCampoAncorado<float>(this, "MissionWaypoint", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +159, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +159, medido na build 25535041
     //  (offset absoluto medido: 0x1708; confianca baixa)
     void*& GetUserCommunicationPrivilegeWithTargetUserCompleteDelegateField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 159); }
@@ -10532,67 +10850,69 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro HighlightedStructuresField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.HighlightedStructures")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +168, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +168, medido na build 25535041
     //  (offset absoluto medido: 0x1358; confianca baixa)
     void*& InProgressNonClusterCharacterUploadsField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 168); }
+    BrzCampoPonteiro IsChangingCameraModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.IsChangingCameraMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +88, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +88, medido na build 25535041
     //  (offset absoluto medido: 0x1308; confianca media)
     void*& LastArkTributeDataField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +184, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +184, medido na build 25535041
     //  (offset absoluto medido: 0xD08; confianca baixa)
     void*& LastAudioComponentVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +432, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +432, medido na build 25535041
     //  (offset absoluto medido: 0x2300; confianca baixa)
     double& LastBlockedVoiceQueryTimeField() const
     { return BrzCampoAncorado<double>(this, "bTribeCacheHaveRallyPointData", 432); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +8, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +8, medido na build 25535041
     //  (offset absoluto medido: 0xC58; confianca media)
     void*& LastCachedPlayerControlRotationField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +101, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +101, medido na build 25535041
     //  (offset absoluto medido: 0x17B0; confianca media)
     void*& LastCheckedOwnedDLCField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 101); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +31, medido na build 25090264
+    //  ancorado em `bForceHideGameplayUI` +31, medido na build 25535041
     //  (offset absoluto medido: 0x1A30; confianca alta)
     double& LastClientModifiedARKInventoryTimeField() const
     { return BrzCampoAncorado<double>(this, "bForceHideGameplayUI", 31); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +48, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +48, medido na build 25535041
     //  (offset absoluto medido: 0xC80; confianca media)
     void*& LastClientNotifyShowProfileRequestCallTimeField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +23, medido na build 25090264
+    //  ancorado em `bForceHideGameplayUI` +23, medido na build 25535041
     //  (offset absoluto medido: 0x1A28; confianca alta)
     double& LastClientRequestTribeOnlineListTimeField() const
     { return BrzCampoAncorado<double>(this, "bForceHideGameplayUI", 23); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +52, medido na build 25090264
+    //  ancorado em `LastRawInputDir` +52, medido na build 25535041
     //  (offset absoluto medido: 0x105C; confianca media)
     TWeakObjectPtr<void>& LastControlledPlayerCharacterField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "LastRawInputDir", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SFXVolumeMultiplier` +12, medido na build 25090264
+    //  ancorado em `SFXVolumeMultiplier` +12, medido na build 25535041
     //  (offset absoluto medido: 0x1A58; confianca alta)
     unsigned long long& LastConvertedPlayerIDField() const
     { return BrzCampoAncorado<unsigned long long>(this, "SFXVolumeMultiplier", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SFXVolumeMultiplier` +20, medido na build 25090264
+    //  ancorado em `SFXVolumeMultiplier` +20, medido na build 25535041
     //  (offset absoluto medido: 0x1A60; confianca alta)
     FString& LastConvertedPlayerIDStringField() const
     { return BrzCampoAncorado<FString>(this, "SFXVolumeMultiplier", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +16, medido na build 25090264
+    //  ancorado em `LastDeathPrimalCharacter` +16, medido na build 25535041
     //  (offset absoluto medido: 0xF98; confianca alta)
     double& LastDeadCharacterDestructionTimeField() const
     { return BrzCampoAncorado<double>(this, "LastDeathPrimalCharacter", 16); }
@@ -10607,19 +10927,19 @@ struct AShooterPlayerController : public ABasePlayerController
     AShooterCharacter*& LastDiedListenServerHostField() const
     { return *GetNativePointerField<AShooterCharacter**>(this, "AShooterPlayerController.LastDiedListenServerHost"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +128, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +128, medido na build 25535041
     //  (offset absoluto medido: 0x1878; confianca media)
     int& LastDownloadCachedTribeIDField() const
     { return BrzCampoAncorado<int>(this, "WaypointsSOTF", 128); }
     BrzCampoPonteiro LastDownloadedTributePlayerDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.LastDownloadedTributePlayerData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +32, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +32, medido na build 25535041
     //  (offset absoluto medido: 0x1288; confianca alta)
     FItemNetID& LastEquipedItemNetIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "PhotoModeMarkerActor", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +40, medido na build 25090264
+    //  ancorado em `EnforcementColors` +40, medido na build 25535041
     //  (offset absoluto medido: 0x25B0; confianca media)
     int& LastFrameAimedUseActorCachedField() const
     { return BrzCampoAncorado<int>(this, "EnforcementColors", 40); }
@@ -10628,81 +10948,81 @@ struct AShooterPlayerController : public ABasePlayerController
     int& LastFrameScrollUpField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.LastFrameScrollUp"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +7, medido na build 25090264
+    //  ancorado em `bForceHideGameplayUI` +7, medido na build 25535041
     //  (offset absoluto medido: 0x1A18; confianca alta)
     double& LastGamepadOpenRemoteInventoryTimeField() const
     { return BrzCampoAncorado<double>(this, "bForceHideGameplayUI", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +56, medido na build 25090264
+    //  ancorado em `MissionWaypoint` +56, medido na build 25535041
     //  (offset absoluto medido: 0x2508; confianca media)
     double& LastGen1FixENTimeField() const
     { return BrzCampoAncorado<double>(this, "MissionWaypoint", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +15, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +15, medido na build 25535041
     //  (offset absoluto medido: 0x1678; confianca media)
     int& LastHarvestedElementIndexField() const
     { return BrzCampoAncorado<int>(this, "bPreventPaintingStreaming", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +80, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +80, medido na build 25535041
     //  (offset absoluto medido: 0x1210; confianca media)
     TWeakObjectPtr<void>& LastHeldUseActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "RemoteViewingInventories", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +96, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +96, medido na build 25535041
     //  (offset absoluto medido: 0x1220; confianca media)
     int& LastHeldUseHitBodyIndexField() const
     { return BrzCampoAncorado<int>(this, "RemoteViewingInventories", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +88, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +88, medido na build 25535041
     //  (offset absoluto medido: 0x1218; confianca media)
     TWeakObjectPtr<void>& LastHeldUseHitComponentField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "RemoteViewingInventories", 88); }
     APostProcessVolume*& LastHighestPriorityPostProcessVolumeField() const
     { return *GetNativePointerField<APostProcessVolume**>(this, "AShooterPlayerController.LastHighestPriorityPostProcessVolume"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +48, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +48, medido na build 25535041
     //  (offset absoluto medido: 0x1828; confianca media)
     void*& LastHitMarkerCharacterSettingsField() const
     { return BrzCampoAncorado<void*>(this, "WaypointsSOTF", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +16, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1808; confianca media)
     double& LastHitMarkerCharacterTimeField() const
     { return BrzCampoAncorado<double>(this, "WaypointsSOTF", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +32, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +32, medido na build 25535041
     //  (offset absoluto medido: 0x1818; confianca media)
     double& LastHitMarkerStructureTimeField() const
     { return BrzCampoAncorado<double>(this, "WaypointsSOTF", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +80, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +80, medido na build 25535041
     //  (offset absoluto medido: 0xCA0; confianca media)
     void*& LastInstigatorVOEntryField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +125, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +125, medido na build 25535041
     //  (offset absoluto medido: 0x17C8; confianca media)
     void*& LastLargeMoveLocationField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 125); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +149, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +149, medido na build 25535041
     //  (offset absoluto medido: 0x17E0; confianca baixa)
     double& LastLargeMoveTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 149); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +40, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +40, medido na build 25535041
     //  (offset absoluto medido: 0x12D8; confianca media)
     double& LastMultiUseInteractionTimeField() const
     { return BrzCampoAncorado<double>(this, "SteamInventoryStatusUITemplate", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +117, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +117, medido na build 25535041
     //  (offset absoluto medido: 0x17C0; confianca media)
     double& LastMultiUseTraceTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 117); }
     double& LastNetworkTimeRequestedFilterCachedTeamTameListField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerController.LastNetworkTimeRequestedFilterCachedTeamTameList"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +157, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +157, medido na build 25535041
     //  (offset absoluto medido: 0x17E8; confianca baixa)
     double& LastNotOnUnriddenDinoTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 157); }
@@ -10711,7 +11031,7 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro LastPlayerTravelLocationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.LastPlayerTravelLocation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +93, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +93, medido na build 25535041
     //  (offset absoluto medido: 0x17A8; confianca media)
     double& LastRPCStayAliveTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 93); }
@@ -10720,49 +11040,49 @@ struct AShooterPlayerController : public ABasePlayerController
     FieldArray<double> LastRepeatUseConsumableTimeField() const
     { return { (void*)this, "AShooterPlayerController.LastRepeatUseConsumableTime" }; }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +16, medido na build 25090264
+    //  ancorado em `bPendingAllowPlayerMovement` +16, medido na build 25535041
     //  (offset absoluto medido: 0x19F0; confianca alta)
     double& LastRequestedPlaceStructureTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +8, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1270; confianca alta)
     double& LastRespawnTimeField() const
     { return BrzCampoAncorado<double>(this, "PhotoModeMarkerActor", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +64, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +64, medido na build 25535041
     //  (offset absoluto medido: 0x12F0; confianca media)
     void*& LastSentCarriedAsPassengerRotationField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +32, medido na build 25090264
+    //  ancorado em `bPendingAllowPlayerMovement` +32, medido na build 25535041
     //  (offset absoluto medido: 0x1A00; confianca alta)
     double& LastServerRemovePawnItemTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +152, medido na build 25090264
+    //  ancorado em `CurrentTrackingMark` +152, medido na build 25535041
     //  (offset absoluto medido: 0x1198; confianca baixa)
     double& LastServerRequestFuelQuantityField() const
     { return BrzCampoAncorado<double>(this, "CurrentTrackingMark", 152); }
     double& LastShowExtendedInfoTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerController.LastShowExtendedInfoTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +320, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +320, medido na build 25535041
     //  (offset absoluto medido: 0x19C0; confianca baixa)
     void*& LastSnapPointCyclePositionField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 320); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +72, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +72, medido na build 25535041
     //  (offset absoluto medido: 0xC98; confianca media)
     void*& LastSoundWaveField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +120, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +120, medido na build 25535041
     //  (offset absoluto medido: 0x1870; confianca media)
     int& LastSpawnPointIDField() const
     { return BrzCampoAncorado<int>(this, "WaypointsSOTF", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +124, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +124, medido na build 25535041
     //  (offset absoluto medido: 0x1874; confianca media)
     int& LastSpawnRegionIndexField() const
     { return BrzCampoAncorado<int>(this, "WaypointsSOTF", 124); }
@@ -10771,141 +11091,143 @@ struct AShooterPlayerController : public ABasePlayerController
     FItemNetID& LastSteamItemIDToRemoveField() const
     { return *GetNativePointerField<FItemNetID*>(this, "AShooterPlayerController.LastSteamItemIDToRemove"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +392, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +392, medido na build 25535041
     //  (offset absoluto medido: 0x3480; confianca baixa)
     void*& LastStructureSkinNetMessageTimeField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 392); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +384, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +384, medido na build 25535041
     //  (offset absoluto medido: 0x3478; confianca baixa)
     void*& LastStructureSkinSetPersistentDataTimeField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 384); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SFXVolumeMultiplier` +4, medido na build 25090264
+    //  ancorado em `SFXVolumeMultiplier` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1A50; confianca alta)
     double& LastTeleportedTimeField() const
     { return BrzCampoAncorado<double>(this, "SFXVolumeMultiplier", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +34, medido na build 25090264
+    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +34, medido na build 25535041
     //  (offset absoluto medido: 0x2740; confianca media)
     double& LastTimeFoundBetterClosestLocationField() const
     { return BrzCampoAncorado<double>(this, "CustomActorTracking_HasJustChangedSearchText", 34); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedTimerRestrictionOnRequestingTrackingInfoFromServer` +4, medido na build 25090264
+    //  ancorado em `ForcedTimerRestrictionOnRequestingTrackingInfoFromServer` +4, medido na build 25535041
     //  (offset absoluto medido: 0x2A88; confianca alta)
     void*& LastTimeRequestedTrackingFromServerField() const
     { return BrzCampoAncorado<void*>(this, "ForcedTimerRestrictionOnRequestingTrackingInfoFromServer", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventCanOpenMap` +15, medido na build 25090264
+    //  ancorado em `bPreventCanOpenMap` +15, medido na build 25535041
     //  (offset absoluto medido: 0x1260; confianca alta)
     void*& LastTimeRequestedTradeDataField() const
     { return BrzCampoAncorado<void*>(this, "bPreventCanOpenMap", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +56, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +56, medido na build 25535041
     //  (offset absoluto medido: 0x12E8; confianca media)
     void*& LastTimeSentCarriedAsPassengerRotationField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +48, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +48, medido na build 25535041
     //  (offset absoluto medido: 0x12E0; confianca media)
     double& LastTimeSentCarriedRotationField() const
     { return BrzCampoAncorado<double>(this, "SteamInventoryStatusUITemplate", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +32, medido na build 25090264
+    //  ancorado em `LastRawInputDir` +32, medido na build 25535041
     //  (offset absoluto medido: 0x1048; confianca alta)
     void*& LastTimeToAcknowledgePosessionCallsField() const
     { return BrzCampoAncorado<void*>(this, "LastRawInputDir", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +24, medido na build 25090264
+    //  ancorado em `LastDeathPrimalCharacter` +24, medido na build 25535041
     //  (offset absoluto medido: 0xFA0; confianca alta)
     double& LastTransferTimeField() const
     { return BrzCampoAncorado<double>(this, "LastDeathPrimalCharacter", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +300, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +300, medido na build 25535041
     //  (offset absoluto medido: 0x19AC; confianca baixa)
     void*& LastTransferWasDownloadingAscendedCharacterField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 300); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +288, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +288, medido na build 25535041
     //  (offset absoluto medido: 0x19A0; confianca baixa)
     unsigned long long& LastTransferredPlayerIDField() const
     { return BrzCampoAncorado<unsigned long long>(this, "LastDownloadedTributePlayerData", 288); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +16, medido na build 25090264
+    //  ancorado em `LastShowExtendedInfoTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1A80; confianca media)
     UPrimalItem*& LastTransferredToRemoteInventoryItemField() const
     { return BrzCampoAncorado<UPrimalItem*>(this, "LastShowExtendedInfoTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +111, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +111, medido na build 25535041
     //  (offset absoluto medido: 0x16D8; confianca media)
     double& LastTribeLogRequestTimeField() const
     { return BrzCampoAncorado<double>(this, "bPreventPaintingStreaming", 111); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +16, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +16, medido na build 25535041
     //  (offset absoluto medido: 0x12C0; confianca media)
     void*& LastTurnSpeedField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +40, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +40, medido na build 25535041
     //  (offset absoluto medido: 0x1290; confianca media)
     FItemNetID& LastUnequippedItemNetIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "PhotoModeMarkerActor", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +7, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +7, medido na build 25535041
     //  (offset absoluto medido: 0x1670; confianca media)
     double& LastUsePressTimeField() const
     { return BrzCampoAncorado<double>(this, "bPreventPaintingStreaming", 7); }
     FieldArray<double> LastUsedItemSlotTimesField() const
     { return { (void*)this, "AShooterPlayerController.LastUsedItemSlotTimes" }; }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +24, medido na build 25090264
+    //  ancorado em `bPendingAllowPlayerMovement` +24, medido na build 25535041
     //  (offset absoluto medido: 0x19F8; confianca alta)
     double& LastVerifyStructureItemTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +63, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +63, medido na build 25535041
     //  (offset absoluto medido: 0x16A8; confianca media)
     void*& LastViewLocationField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 63); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +160, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +160, medido na build 25535041
     //  (offset absoluto medido: 0x21F0; confianca baixa)
     double& LastVoiceOutTimeField() const
     { return BrzCampoAncorado<double>(this, "bTribeCacheHaveRallyPointData", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +32, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +32, medido na build 25535041
     //  (offset absoluto medido: 0x11E0; confianca alta)
     TArray<void*>& LastWheelCategoriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "RemoteViewingInventories", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +48, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +48, medido na build 25535041
     //  (offset absoluto medido: 0x11F0; confianca media)
     TArray<UTexture2D*>& LastWheelIconsField() const
     { return BrzCampoAncorado<TArray<UTexture2D*>>(this, "RemoteViewingInventories", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +64, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +64, medido na build 25535041
     //  (offset absoluto medido: 0x1200; confianca media)
     TArray<void*>& LastWheelStringsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "RemoteViewingInventories", 64); }
+    BrzCampoPonteiro LatestClientAutoTrackTamesSettingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.LatestClientAutoTrackTamesSetting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +64, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +64, medido na build 25535041
     //  (offset absoluto medido: 0x12A8; confianca media)
     long long& LinkedPlayerIDField() const
     { return BrzCampoAncorado<long long>(this, "PhotoModeMarkerActor", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +88, medido na build 25090264
+    //  ancorado em `EnforcementColors` +88, medido na build 25535041
     //  (offset absoluto medido: 0x25E0; confianca media)
     unsigned long long& LoadingFramesField() const
     { return BrzCampoAncorado<unsigned long long>(this, "EnforcementColors", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +16, medido na build 25090264
+    //  ancorado em `DiscordUserID` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2398; confianca media)
     void*& MainLobbyJoinTimerField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 16); }
     TArray<void*>& MapDinosField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.MapDinos"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +32, medido na build 25090264
+    //  ancorado em `CurrentPlayerCharacterLocation` +32, medido na build 25535041
     //  (offset absoluto medido: 0xD30; confianca alta)
     float& MaxDragWeightToAimBoneField() const
     { return BrzCampoAncorado<float>(this, "CurrentPlayerCharacterLocation", 32); }
@@ -10916,36 +11238,36 @@ struct AShooterPlayerController : public ABasePlayerController
     float& MaxUseDistanceField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.MaxUseDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructurePlacer` +8, medido na build 25090264
+    //  ancorado em `StructurePlacer` +8, medido na build 25535041
     //  (offset absoluto medido: 0xD58; confianca alta)
     void*& MeleeAimAssistTimerField() const
     { return BrzCampoAncorado<void*>(this, "StructurePlacer", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +183, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +183, medido na build 25535041
     //  (offset absoluto medido: 0x1720; confianca baixa)
     TArray<void*>& MessageQueueField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 183); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +175, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +175, medido na build 25535041
     //  (offset absoluto medido: 0x1718; confianca baixa)
     void*& MessageQueueTasksCounterField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 175); }
     BrzCampoPonteiro MidasTouchDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.MidasTouchData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPlayerTravelLocation` +32, medido na build 25090264
+    //  ancorado em `LastPlayerTravelLocation` +32, medido na build 25535041
     //  (offset absoluto medido: 0x36F8; confianca alta)
     void*& MilestoneThresholdCountersField() const
     { return BrzCampoAncorado<void*>(this, "LastPlayerTravelLocation", 32); }
     BrzCampoPonteiro MissionWaypointField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.MissionWaypoint")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +52, medido na build 25090264
+    //  ancorado em `CurrentPlayerCharacterLocation` +52, medido na build 25535041
     //  (offset absoluto medido: 0xD44; confianca media)
     int& ModifedButtonCountField() const
     { return BrzCampoAncorado<int>(this, "CurrentPlayerCharacterLocation", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventCanOpenMap` +7, medido na build 25090264
+    //  ancorado em `bPreventCanOpenMap` +7, medido na build 25535041
     //  (offset absoluto medido: 0x1258; confianca alta)
     void*& MultiuseForActorTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "bPreventCanOpenMap", 7); }
@@ -10956,53 +11278,53 @@ struct AShooterPlayerController : public ABasePlayerController
     TArray<void*>& NearbyPointsOfInterestField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.NearbyPointsOfInterest"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +23, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +23, medido na build 25535041
     //  (offset absoluto medido: 0x1680; confianca media)
     TArray<void*>& NotifiedTribeWarIDsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 23); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +39, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +39, medido na build 25535041
     //  (offset absoluto medido: 0x1690; confianca media)
     TArray<void*>& NotifiedTribeWarNamesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 39); }
     BrzCampoPonteiro OnBountyCategoryProgressedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.OnBountyCategoryProgressed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +32, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +32, medido na build 25535041
     //  (offset absoluto medido: 0xC70; confianca media)
     void*& OnClientMessageOfTheDayRecivedField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 32); }
     BrzCampoPonteiro OnClientReceiveStructuresPlacedOnFloorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.OnClientReceiveStructuresPlacedOnFloor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +24, medido na build 25090264
+    //  ancorado em `DiscordUserID` +24, medido na build 25535041
     //  (offset absoluto medido: 0x23A0; confianca media)
     void*& OnFriendsChangedHandleField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +24, medido na build 25090264
+    //  ancorado em `FastTravelDroppedInventory` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1248; confianca alta)
     void*& OnRepeatUseHeldTimerHandlerField() const
     { return BrzCampoAncorado<void*>(this, "FastTravelDroppedInventory", 24); }
     BrzCampoPonteiro OnSkillsChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.OnSkillsChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +440, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +440, medido na build 25535041
     //  (offset absoluto medido: 0x2308; confianca baixa)
     void*& OnSystemUIOverlayStateChangedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 440); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +24, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +24, medido na build 25535041
     //  (offset absoluto medido: 0x11D8; confianca alta)
     void*& OnUseHeldTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "RemoteViewingInventories", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShooterHUDDebugActors` +16, medido na build 25090264
+    //  ancorado em `ShooterHUDDebugActors` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3690; confianca alta)
     void*& OutdatedCosmeticIDsField() const
     { return BrzCampoAncorado<void*>(this, "ShooterHUDDebugActors", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShooterHUDDebugActors` +40, medido na build 25090264
+    //  ancorado em `ShooterHUDDebugActors` +40, medido na build 25535041
     //  (offset absoluto medido: 0x36A8; confianca media)
     void*& OutdatedCosmeticsWarningHandleField() const
     { return BrzCampoAncorado<void*>(this, "ShooterHUDDebugActors", 40); }
@@ -11021,71 +11343,71 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro PauseMenuUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.PauseMenuUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +48, medido na build 25090264
+    //  ancorado em `PhotoModeMarkerActor` +48, medido na build 25535041
     //  (offset absoluto medido: 0x1298; confianca media)
     void*& PendingAscensionItemCountField() const
     { return BrzCampoAncorado<void*>(this, "PhotoModeMarkerActor", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +64, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +64, medido na build 25535041
     //  (offset absoluto medido: 0xC90; confianca media)
     void*& PendingInstigatorHandleField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +144, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +144, medido na build 25535041
     //  (offset absoluto medido: 0xCE0; confianca baixa)
     void*& PendingInstigatorVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +160, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +160, medido na build 25535041
     //  (offset absoluto medido: 0xCF0; confianca baixa)
     void*& PendingInstigatorVORowsField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +144, medido na build 25090264
+    //  ancorado em `CurrentTrackingMark` +144, medido na build 25535041
     //  (offset absoluto medido: 0x1190; confianca baixa)
     void*& PendingMarketDataRequestingStructureField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +104, medido na build 25090264
+    //  ancorado em `LastShowExtendedInfoTime` +104, medido na build 25535041
     //  (offset absoluto medido: 0x1AD8; confianca media)
     void*& PendingRequestEquippedItemsQueueField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +24, medido na build 25090264
+    //  ancorado em `LastShowExtendedInfoTime` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1A88; confianca media)
     void*& PendingResponseEquippedItemsQueueField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 24); }
     int& PendingViewingWheelCategoryField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.PendingViewingWheelCategory"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +80, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +80, medido na build 25535041
     //  (offset absoluto medido: 0x35E8; confianca media)
     void*& PerfCheckCurrentLocationIndexField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +84, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +84, medido na build 25535041
     //  (offset absoluto medido: 0x35EC; confianca media)
     void*& PerfCheckCurrentYawField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 84); }
     BrzCampoPonteiro PerfCheckLocationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.PerfCheckLocations")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +48, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +48, medido na build 25535041
     //  (offset absoluto medido: 0x35C8; confianca media)
     void*& PerfCheckLocationsShouldTakeMemReportField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +32, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +32, medido na build 25535041
     //  (offset absoluto medido: 0x35B8; confianca media)
     void*& PerfCheckLocationsShouldTakeScreenShotField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +16, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +16, medido na build 25535041
     //  (offset absoluto medido: 0x35A8; confianca media)
     void*& PerfCheckPoiTodsField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +88, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +88, medido na build 25535041
     //  (offset absoluto medido: 0x35F0; confianca media)
     void*& PerfCheckShouldTakeScreenshotField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 88); }
@@ -11096,7 +11418,7 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro PersistentItemUnlocksField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.PersistentItemUnlocks")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +44, medido na build 25090264
+    //  ancorado em `bPendingAllowPlayerMovement` +44, medido na build 25535041
     //  (offset absoluto medido: 0x1A0C; confianca media)
     int& PersonalDinoTameCountField() const
     { return BrzCampoAncorado<int>(this, "bPendingAllowPlayerMovement", 44); }
@@ -11121,76 +11443,76 @@ struct AShooterPlayerController : public ABasePlayerController
     float& PingTraceDistanceField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.PingTraceDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +109, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +109, medido na build 25535041
     //  (offset absoluto medido: 0x17B8; confianca media)
     int& PlayerBadgeGroupField() const
     { return BrzCampoAncorado<int>(this, "bHasReachedLowestDepth", 109); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +12, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +12, medido na build 25535041
     //  (offset absoluto medido: 0x12BC; confianca media)
     int& PlayerControllerNumField() const
     { return BrzCampoAncorado<int>(this, "SteamInventoryStatusUITemplate", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +72, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +72, medido na build 25535041
     //  (offset absoluto medido: 0x2198; confianca media)
     void*& PlayerDataForVoiceField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +24, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +24, medido na build 25535041
     //  (offset absoluto medido: 0x2168; confianca media)
     void*& PlayerDataForVoiceCSField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +104, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +104, medido na build 25535041
     //  (offset absoluto medido: 0x1860; confianca media)
     TArray<void*>& PlayerInventoryItemsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "WaypointsSOTF", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +304, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +304, medido na build 25535041
     //  (offset absoluto medido: 0x19B0; confianca baixa)
     double& PossessedFirstPawnTimeField() const
     { return BrzCampoAncorado<double>(this, "LastDownloadedTributePlayerData", 304); }
     UPrimalLocalProfile*& PrimalLocalProfileField() const
     { return *GetNativePointerField<UPrimalLocalProfile**>(this, "AShooterPlayerController.PrimalLocalProfile"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalStatsCacheFlushInterval` +8, medido na build 25090264
+    //  ancorado em `PrimalStatsCacheFlushInterval` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1B58; confianca alta)
     void*& PrimalStatsCacheField() const
     { return BrzCampoAncorado<void*>(this, "PrimalStatsCacheFlushInterval", 8); }
     float& PrimalStatsCacheFlushIntervalField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.PrimalStatsCacheFlushInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +168, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +168, medido na build 25535041
     //  (offset absoluto medido: 0x21F8; confianca baixa)
     void*& QueryBlockedVoiceStateField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +416, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +416, medido na build 25535041
     //  (offset absoluto medido: 0x22F0; confianca baixa)
     TArray<void*>& QueuedBlockedVoiceChatUsersToProcessAfterLoggingInField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bTribeCacheHaveRallyPointData", 416); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +136, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +136, medido na build 25535041
     //  (offset absoluto medido: 0x3380; confianca baixa)
     void*& QueuedVoiceChannelsToJoinField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +216, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +216, medido na build 25535041
     //  (offset absoluto medido: 0x33D0; confianca baixa)
     void*& QueuedVoiceLobbiesToJoinField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +112, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +112, medido na build 25535041
     //  (offset absoluto medido: 0x3608; confianca media)
     void*& RecordMapPerformanceTestHandleField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +96, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +96, medido na build 25535041
     //  (offset absoluto medido: 0x35F8; confianca media)
     void*& RecordedPerfChecksField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +8, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2158; confianca media)
     void*& RecvHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 8); }
@@ -11199,14 +11521,14 @@ struct AShooterPlayerController : public ABasePlayerController
     float& RespawnSoundDelayField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.RespawnSoundDelay"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActorTracking_TempTrackActorsNotYetSyncedAtAll` +16, medido na build 25090264
+    //  ancorado em `ActorTracking_TempTrackActorsNotYetSyncedAtAll` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2BE0; confianca alta)
     void*& RestrictClientAutoMarkDeathWaypointAsReachedField() const
     { return BrzCampoAncorado<void*>(this, "ActorTracking_TempTrackActorsNotYetSyncedAtAll", 16); }
     float& SFXVolumeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.SFXVolumeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +8, medido na build 25090264
+    //  ancorado em `PrimalLocalProfile` +8, medido na build 25535041
     //  (offset absoluto medido: 0xFF8; confianca alta)
     void*& SaveProfileHandleField() const
     { return BrzCampoAncorado<void*>(this, "PrimalLocalProfile", 8); }
@@ -11217,34 +11539,34 @@ struct AShooterPlayerController : public ABasePlayerController
     USoundCue*& SelectSlotSoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "AShooterPlayerController.SelectSlotSound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +5, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +5, medido na build 25535041
     //  (offset absoluto medido: 0x1750; confianca media)
     void*& ServerCachedAchievementIDsField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 5); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +52, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +52, medido na build 25535041
     //  (offset absoluto medido: 0x2C20; confianca media)
     double& ServerClearDeathWaypoint_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +60, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +60, medido na build 25535041
     //  (offset absoluto medido: 0x2C28; confianca media)
     float& ServerClearDeathWaypoint_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +176, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +176, medido na build 25535041
     //  (offset absoluto medido: 0x2A48; confianca baixa)
     double& ServerClearPOIVisibilityForAllActors_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +184, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +184, medido na build 25535041
     //  (offset absoluto medido: 0x2A50; confianca baixa)
     float& ServerClearPOIVisibilityForAllActors_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 184); }
     BrzCampoPonteiro ServerMessageQueueField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ServerMessageQueue")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +203, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +203, medido na build 25535041
     //  (offset absoluto medido: 0x1734; confianca baixa)
     void*& ServerMessageQueueTasksCounterField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 203); }
@@ -11253,211 +11575,211 @@ struct AShooterPlayerController : public ABasePlayerController
     float& ServerRequestCustomTrackedActorListInterval_WithoutUIField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.ServerRequestCustomTrackedActorListInterval_WithoutUI"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +48, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +48, medido na build 25535041
     //  (offset absoluto medido: 0x29C8; confianca media)
     double& ServerRequestCustomTrackedActorList_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +56, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +56, medido na build 25535041
     //  (offset absoluto medido: 0x29D0; confianca media)
     float& ServerRequestCustomTrackedActorList_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +32, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +32, medido na build 25535041
     //  (offset absoluto medido: 0x29B8; confianca media)
     double& ServerRequestRemoveDinoFromTamingListByID_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +40, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +40, medido na build 25535041
     //  (offset absoluto medido: 0x29C0; confianca media)
     float& ServerRequestRemoveDinoFromTamingListByID_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastNetworkTimeRequestedFilterCachedTeamTameList` +8, medido na build 25090264
+    //  ancorado em `LastNetworkTimeRequestedFilterCachedTeamTameList` +8, medido na build 25535041
     //  (offset absoluto medido: 0x26A8; confianca alta)
     void*& ServerRequestTamingInfoListHandleField() const
     { return BrzCampoAncorado<void*>(this, "LastNetworkTimeRequestedFilterCachedTeamTameList", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +16, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +16, medido na build 25535041
     //  (offset absoluto medido: 0x29A8; confianca media)
     double& ServerRequestTamingInfoList_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +24, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +24, medido na build 25535041
     //  (offset absoluto medido: 0x29B0; confianca media)
     float& ServerRequestTamingInfoList_ServerRequestTamingInfoListField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamingWaypoints` +24, medido na build 25090264
+    //  ancorado em `TamingWaypoints` +24, medido na build 25535041
     //  (offset absoluto medido: 0x26C8; confianca alta)
     void*& ServerRequestTrackedDinoInfoListHandle_WithUIField() const
     { return BrzCampoAncorado<void*>(this, "TamingWaypoints", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamingWaypoints` +32, medido na build 25090264
+    //  ancorado em `TamingWaypoints` +32, medido na build 25535041
     //  (offset absoluto medido: 0x26D0; confianca alta)
     void*& ServerRequestTrackedDinoInfoListHandle_WithoutUIField() const
     { return BrzCampoAncorado<void*>(this, "TamingWaypoints", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +80, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +80, medido na build 25535041
     //  (offset absoluto medido: 0x29E8; confianca media)
     double& ServerRequestUpdateTrackedWaypointsAndMapPlayers_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +88, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +88, medido na build 25535041
     //  (offset absoluto medido: 0x29F0; confianca media)
     float& ServerRequestUpdateTrackedWaypointsAndMapPlayers_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +64, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +64, medido na build 25535041
     //  (offset absoluto medido: 0x29D8; confianca media)
     double& ServerRequestUpdateTrackedWaypointsOnly_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +72, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +72, medido na build 25535041
     //  (offset absoluto medido: 0x29E0; confianca media)
     float& ServerRequestUpdateTrackedWaypointsOnly_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +128, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +128, medido na build 25535041
     //  (offset absoluto medido: 0x2A18; confianca media)
     double& ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +136, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +136, medido na build 25535041
     //  (offset absoluto medido: 0x2A20; confianca baixa)
     float& ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +112, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +112, medido na build 25535041
     //  (offset absoluto medido: 0x2A08; confianca media)
     double& ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +120, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +120, medido na build 25535041
     //  (offset absoluto medido: 0x2A10; confianca media)
     float& ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +20, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +20, medido na build 25535041
     //  (offset absoluto medido: 0x2C00; confianca alta)
     double& ServerSetDeathWaypointInvisible_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +28, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +28, medido na build 25535041
     //  (offset absoluto medido: 0x2C08; confianca alta)
     float& ServerSetDeathWaypointInvisible_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +4, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +4, medido na build 25535041
     //  (offset absoluto medido: 0x2BF0; confianca alta)
     double& ServerSetDeathWaypointVisible_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +12, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +12, medido na build 25535041
     //  (offset absoluto medido: 0x2BF8; confianca alta)
     float& ServerSetDeathWaypointVisible_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +208, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +208, medido na build 25535041
     //  (offset absoluto medido: 0x2A68; confianca baixa)
     double& ServerSetFavoriteTrackedCreatureViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 208); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +216, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +216, medido na build 25535041
     //  (offset absoluto medido: 0x2A70; confianca baixa)
     float& ServerSetFavoriteTrackedCreatureViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +192, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +192, medido na build 25535041
     //  (offset absoluto medido: 0x2A58; confianca baixa)
     double& ServerSetFavoriteTrackedPlayerViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +200, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +200, medido na build 25535041
     //  (offset absoluto medido: 0x2A60; confianca baixa)
     float& ServerSetFavoriteTrackedPlayerViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +160, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +160, medido na build 25535041
     //  (offset absoluto medido: 0x2A38; confianca baixa)
     double& ServerTogglePOIVisibilityForTrackedCreatureWaypoint_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +168, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +168, medido na build 25535041
     //  (offset absoluto medido: 0x2A40; confianca baixa)
     float& ServerTogglePOIVisibilityForTrackedCreatureWaypoint_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +144, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +144, medido na build 25535041
     //  (offset absoluto medido: 0x2A28; confianca baixa)
     double& ServerTogglePOIVisibilityForTrackedPlayerWaypoint_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +152, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +152, medido na build 25535041
     //  (offset absoluto medido: 0x2A30; confianca baixa)
     float& ServerTogglePOIVisibilityForTrackedPlayerWaypoint_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +55, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +55, medido na build 25535041
     //  (offset absoluto medido: 0x16A0; confianca media)
     int& ServerTribeLogLastLogIndexField() const
     { return BrzCampoAncorado<int>(this, "bPreventPaintingStreaming", 55); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +59, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +59, medido na build 25535041
     //  (offset absoluto medido: 0x16A4; confianca media)
     int& ServerTribeLogLastTribeIDField() const
     { return BrzCampoAncorado<int>(this, "bPreventPaintingStreaming", 59); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +96, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +96, medido na build 25535041
     //  (offset absoluto medido: 0x29F8; confianca media)
     double& ServerUntrackAllActors_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +104, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +104, medido na build 25535041
     //  (offset absoluto medido: 0x2A00; confianca media)
     float& ServerUntrackAllActors_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +24, medido na build 25090264
+    //  ancorado em `PrimalLocalProfile` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1008; confianca alta)
     FString& ServerVersionField() const
     { return BrzCampoAncorado<FString>(this, "PrimalLocalProfile", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +480, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +480, medido na build 25535041
     //  (offset absoluto medido: 0x34D8; confianca baixa)
     void*& Server_BlockedUserIdsField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 480); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +36, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +36, medido na build 25535041
     //  (offset absoluto medido: 0x2C10; confianca media)
     double& Server_RequestLastDeathTrackingActorLoc_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +44, medido na build 25090264
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +44, medido na build 25535041
     //  (offset absoluto medido: 0x2C18; confianca media)
     float& Server_RequestLastDeathTrackingActorLoc_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 44); }
     BrzCampoPonteiro ShooterHUDDebugActorsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ShooterHUDDebugActors")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +69, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +69, medido na build 25535041
     //  (offset absoluto medido: 0x35DD; confianca media)
     void*& ShouldUploadPerfCheckScreenshotsToJIRAField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 69); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +68, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +68, medido na build 25535041
     //  (offset absoluto medido: 0x35DC; confianca media)
     void*& ShouldUploadPerfCheckToJIRAField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +312, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +312, medido na build 25535041
     //  (offset absoluto medido: 0x19B8; confianca baixa)
     int& SnapPointCycleField() const
     { return BrzCampoAncorado<int>(this, "LastDownloadedTributePlayerData", 312); }
     BrzCampoPonteiro SnowManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.SnowManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +104, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +104, medido na build 25535041
     //  (offset absoluto medido: 0x1228; confianca media)
     TWeakObjectPtr<void>& SpawnAtBedField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "RemoteViewingInventories", 104); }
@@ -11468,37 +11790,37 @@ struct AShooterPlayerController : public ABasePlayerController
     int& SpectatorCycleIndexField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.SpectatorCycleIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +64, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +64, medido na build 25535041
     //  (offset absoluto medido: 0x35D8; confianca media)
     void*& SpyglassPerfWaitSecondsOverrideField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bMissionSortByDistance` +15, medido na build 25090264
+    //  ancorado em `bMissionSortByDistance` +15, medido na build 25535041
     //  (offset absoluto medido: 0x10A8; confianca alta)
     void*& StartChatHandleField() const
     { return BrzCampoAncorado<void*>(this, "bMissionSortByDistance", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +40, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +40, medido na build 25535041
     //  (offset absoluto medido: 0x10D8; confianca media)
     void*& StartEmoteSelectionHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bMissionSortByDistance` +7, medido na build 25090264
+    //  ancorado em `bMissionSortByDistance` +7, medido na build 25535041
     //  (offset absoluto medido: 0x10A0; confianca alta)
     void*& StartInventoryRadialSelectorHandleField() const
     { return BrzCampoAncorado<void*>(this, "bMissionSortByDistance", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +8, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +8, medido na build 25535041
     //  (offset absoluto medido: 0x10B8; confianca alta)
     void*& StartPlayerActionRadialSelectorHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +32, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +32, medido na build 25535041
     //  (offset absoluto medido: 0x10D0; confianca alta)
     void*& StartWhistleSelectionHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +72, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +72, medido na build 25535041
     //  (offset absoluto medido: 0x35E0; confianca media)
     void*& StartedPerfCheckAtField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 72); }
@@ -11511,17 +11833,17 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro TamingWaypointsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TamingWaypoints")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +24, medido na build 25090264
+    //  ancorado em `CurrentPlayerCharacterLocation` +24, medido na build 25535041
     //  (offset absoluto medido: 0xD28; confianca alta)
     AActor*& TargetAimMagnetismField() const
     { return BrzCampoAncorado<AActor*>(this, "CurrentPlayerCharacterLocation", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +40, medido na build 25090264
+    //  ancorado em `LastRawInputDir` +40, medido na build 25535041
     //  (offset absoluto medido: 0x1050; confianca media)
     unsigned long long& TargetOrbitedPlayerIdField() const
     { return BrzCampoAncorado<unsigned long long>(this, "LastRawInputDir", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +48, medido na build 25090264
+    //  ancorado em `LastRawInputDir` +48, medido na build 25535041
     //  (offset absoluto medido: 0x1058; confianca media)
     void*& TargetOrbitedTrialCountField() const
     { return BrzCampoAncorado<void*>(this, "LastRawInputDir", 48); }
@@ -11546,49 +11868,49 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro TeamPingSettings_TrackField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TeamPingSettings_Track")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPings` +16, medido na build 25090264
+    //  ancorado em `CurrentPings` +16, medido na build 25535041
     //  (offset absoluto medido: 0x20F0; confianca alta)
     void*& TeamPingWheelHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPings", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +224, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +224, medido na build 25535041
     //  (offset absoluto medido: 0x2A78; confianca baixa)
     double& TellServerAboutNewAutoTrackSetting_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +232, medido na build 25090264
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +232, medido na build 25535041
     //  (offset absoluto medido: 0x2A80; confianca baixa)
     float& TellServerAboutNewAutoTrackSetting_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +8, medido na build 25090264
+    //  ancorado em `FastTravelDroppedInventory` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1238; confianca alta)
     APawn*& TempLastLostPawnField() const
     { return BrzCampoAncorado<APawn*>(this, "FastTravelDroppedInventory", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShooterHUDDebugActors` +32, medido na build 25090264
+    //  ancorado em `ShooterHUDDebugActors` +32, medido na build 25535041
     //  (offset absoluto medido: 0x36A0; confianca alta)
     void*& TimeLastDisplayOutdatedCosmeticsWarningField() const
     { return BrzCampoAncorado<void*>(this, "ShooterHUDDebugActors", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +176, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +176, medido na build 25535041
     //  (offset absoluto medido: 0xD00; confianca baixa)
     void*& TimerDoPlayNextInstigatorVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `IsChangingCameraMode` +8, medido na build 25090264
+    //  ancorado em `IsChangingCameraMode` +8, medido na build 25535041
     //  (offset absoluto medido: 0x10E8; confianca alta)
     void*& TimerToggleChangeCameraModeField() const
     { return BrzCampoAncorado<void*>(this, "IsChangingCameraMode", 8); }
     BrzCampoPonteiro ToggleAutoRunIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ToggleAutoRunIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `IsChangingCameraMode` +16, medido na build 25090264
+    //  ancorado em `IsChangingCameraMode` +16, medido na build 25535041
     //  (offset absoluto medido: 0x10F0; confianca alta)
     void*& ToggleDubleTapTimerMapField() const
     { return BrzCampoAncorado<void*>(this, "IsChangingCameraMode", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +316, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +316, medido na build 25535041
     //  (offset absoluto medido: 0x19BC; confianca baixa)
     int& TotalNumSnapPointsField() const
     { return BrzCampoAncorado<int>(this, "LastDownloadedTributePlayerData", 316); }
@@ -11605,29 +11927,29 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro TrackedActorWaypoints_TeammatesOnMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TrackedActorWaypoints_TeammatesOnMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +32, medido na build 25090264
+    //  ancorado em `LastDeathPrimalCharacter` +32, medido na build 25535041
     //  (offset absoluto medido: 0xFA8; confianca alta)
     double& TransferTimeCooldownField() const
     { return BrzCampoAncorado<double>(this, "LastDeathPrimalCharacter", 32); }
     BrzCampoPonteiro TribeCacheRallyPointDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TribeCacheRallyPointData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +8, medido na build 25090264
+    //  ancorado em `DiscordUserID` +8, medido na build 25535041
     //  (offset absoluto medido: 0x2390; confianca media)
     void*& TribeLobbyJoinTimerField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPings` +24, medido na build 25090264
+    //  ancorado em `CurrentPings` +24, medido na build 25535041
     //  (offset absoluto medido: 0x20F8; confianca alta)
     void*& TribeRallyPointUpdateHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPings", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructurePlacerClass` +8, medido na build 25090264
+    //  ancorado em `StructurePlacerClass` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1070; confianca alta)
     void*& UnFreezeHandleField() const
     { return BrzCampoAncorado<void*>(this, "StructurePlacerClass", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +140, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +140, medido na build 25535041
     //  (offset absoluto medido: 0x3624; confianca baixa)
     void*& UploadedDinoCountField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 140); }
@@ -11638,347 +11960,415 @@ struct AShooterPlayerController : public ABasePlayerController
     int& ViewingWheelCategoryField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.ViewingWheelCategory"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +16, medido na build 25090264
+    //  ancorado em `FastTravelDroppedInventory` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1240; confianca alta)
     int& VoiceChatFilerTypeField() const
     { return BrzCampoAncorado<int>(this, "FastTravelDroppedInventory", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +152, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +152, medido na build 25535041
     //  (offset absoluto medido: 0x21E8; confianca baixa)
     void*& VoiceChatFilerTypeTSField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +376, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +376, medido na build 25535041
     //  (offset absoluto medido: 0x3470; confianca baixa)
     void*& VoiceChatReevaluatingBlockedUsersField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 376); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +128, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +128, medido na build 25535041
     //  (offset absoluto medido: 0x3618; confianca media)
     void*& WaitingCloudClubARKTimerField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +7, medido na build 25090264
+    //  ancorado em `bEnableAltFire` +7, medido na build 25535041
     //  (offset absoluto medido: 0x1650; confianca alta)
     double& WaitingForSpawnUITimeField() const
     { return BrzCampoAncorado<double>(this, "bEnableAltFire", 7); }
     TArray<void*>& WaypointsSOTFField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.WaypointsSOTF"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +120, medido na build 25090264
+    //  ancorado em `CurrentTrackingMark` +120, medido na build 25535041
     //  (offset absoluto medido: 0x1178; confianca media)
     void*& WeakClientRecvInventoryPtrField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +56, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +56, medido na build 25535041
     //  (offset absoluto medido: 0xC88; confianca media)
     void*& bAbsolutelyForceSetInputModeField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 56); }
+    BrzCampoPonteiro bArePlannedStructuresHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bArePlannedStructuresHidden")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalStatsCacheFlushInterval` +57, medido na build 25090264
+    //  ancorado em `PrimalStatsCacheFlushInterval` +57, medido na build 25535041
     //  (offset absoluto medido: 0x1B89; confianca media)
     bool& bAutoPlayerField() const
     { return BrzCampoAncorado<bool>(this, "PrimalStatsCacheFlushInterval", 57); }
+    BrzCampoPonteiro bCachedOnlyShowOnlineTribeMembersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bCachedOnlyShowOnlineTribeMembers")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +19, medido na build 25090264
+    //  ancorado em `bEnableAltFire` +19, medido na build 25535041
     //  (offset absoluto medido: 0x165C; confianca alta)
     void*& bChatSpammedField() const
     { return BrzCampoAncorado<void*>(this, "bEnableAltFire", 19); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +15, medido na build 25090264
+    //  ancorado em `bForceHideGameplayUI` +15, medido na build 25535041
     //  (offset absoluto medido: 0x1A20; confianca alta)
     void*& bClientIsDPCField() const
     { return BrzCampoAncorado<void*>(this, "bForceHideGameplayUI", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +88, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +88, medido na build 25535041
     //  (offset absoluto medido: 0x16C1; confianca media)
     bool& bClientReceivedTribeLogField() const
     { return BrzCampoAncorado<bool>(this, "bPreventPaintingStreaming", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +31, medido na build 25090264
+    //  ancorado em `bEnableAltFire` +31, medido na build 25535041
     //  (offset absoluto medido: 0x1668; confianca alta)
     void*& bCommunicationPrivilegeFetchedField() const
     { return BrzCampoAncorado<void*>(this, "bEnableAltFire", 31); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentDiscordCalls` +80, medido na build 25090264
+    //  ancorado em `CurrentDiscordCalls` +80, medido na build 25535041
     //  (offset absoluto medido: 0x2380; confianca media)
     void*& bCommunicationRestoredField() const
     { return BrzCampoAncorado<void*>(this, "CurrentDiscordCalls", 80); }
+    BrzCampoPonteiro bDebugPOIsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bDebugPOIs")); }
+    BrzCampoPonteiro bDisablePremiumModChecksForTestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bDisablePremiumModChecksForTesting")); }
     bool& bDrawBlackBackgroundField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bDrawBlackBackground"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +8, medido na build 25090264
+    //  ancorado em `SteamInventoryStatusUITemplate` +8, medido na build 25535041
     //  (offset absoluto medido: 0x12B8; confianca media)
     void*& bDrawLocationField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 8); }
     bool& bEnableAltFireField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bEnableAltFire"); }
+    BrzCampoPonteiro bEnableFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bEnableFire")); }
+    BrzCampoPonteiro bEnablePingSystemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bEnablePingSystem")); }
     bool& bEnableSpectatorCyclingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bEnableSpectatorCycling"); }
+    BrzCampoPonteiro bEnableSpectatorDetachField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bEnableSpectatorDetach")); }
     bool& bEnableTargetingInputField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bEnableTargetingInput"); }
+    BrzCampoPonteiro bEnablingSpectatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bEnablingSpectator")); }
+    BrzCampoPonteiro bEnemyInvisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bEnemyInvisible")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDrawBlackBackground` +1, medido na build 25090264
+    //  ancorado em `bDrawBlackBackground` +1, medido na build 25535041
     //  (offset absoluto medido: 0x1B42; confianca alta)
     void*& bFailedToDownloadedTransferredCharacterField() const
     { return BrzCampoAncorado<void*>(this, "bDrawBlackBackground", 1); }
+    BrzCampoPonteiro bFirstSpecatorCycleSinceDeathField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bFirstSpecatorCycleSinceDeath")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +90, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +90, medido na build 25535041
     //  (offset absoluto medido: 0x35F2; confianca media)
     void*& bFirstTimePerfCheckingField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 90); }
     bool& bForceHideGameplayUIField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bForceHideGameplayUI"); }
+    BrzCampoPonteiro bGamepadHotbarModifierPressedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bGamepadHotbarModifierPressed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +8, medido na build 25090264
+    //  ancorado em `LastShowExtendedInfoTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1A78; confianca media)
     void*& bHasDisplayedSplitScreenMessageField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +87, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +87, medido na build 25535041
     //  (offset absoluto medido: 0x16C0; confianca media)
     void*& bHasGottenInitialSpawnLocationField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 87); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +20, medido na build 25090264
+    //  ancorado em `FastTravelDroppedInventory` +20, medido na build 25535041
     //  (offset absoluto medido: 0x1244; confianca alta)
     void*& bHasLoadedProfileField() const
     { return BrzCampoAncorado<void*>(this, "FastTravelDroppedInventory", 20); }
+    BrzCampoPonteiro bHasReachedHighestPeakField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bHasReachedHighestPeak")); }
     bool& bHasReachedLowestDepthField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bHasReachedLowestDepth"); }
     bool& bHasSurvivedOneDayField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bHasSurvivedOneDay"); }
+    BrzCampoPonteiro bHasViewOnlyInventoryOpenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bHasViewOnlyInventoryOpen")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +16, medido na build 25090264
+    //  ancorado em `EnforcementColors` +16, medido na build 25535041
     //  (offset absoluto medido: 0x2598; confianca alta)
     void*& bHighlightEnforcementStructuresField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 16); }
+    BrzCampoPonteiro bIgnoreNextToggleInGameMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bIgnoreNextToggleInGameMenu")); }
+    BrzCampoPonteiro bInitializedMissionUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bInitializedMissionUI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPlayerTravelLocation` +112, medido na build 25090264
+    //  ancorado em `LastPlayerTravelLocation` +112, medido na build 25535041
     //  (offset absoluto medido: 0x3748; confianca media)
     void*& bInputWasntResetField() const
     { return BrzCampoAncorado<void*>(this, "LastPlayerTravelLocation", 112); }
     unsigned char& bIsAutoRunEnabledField() const
     { return *GetNativePointerField<unsigned char*>(this, "AShooterPlayerController.bIsAutoRunEnabled"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +17, medido na build 25090264
+    //  ancorado em `EnforcementColors` +17, medido na build 25535041
     //  (offset absoluto medido: 0x2599; confianca alta)
     bool& bIsDelayedNetCleanupField() const
     { return BrzCampoAncorado<bool>(this, "EnforcementColors", 17); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructurePlacer` +16, medido na build 25090264
+    //  ancorado em `StructurePlacer` +16, medido na build 25535041
     //  (offset absoluto medido: 0xD60; confianca alta)
     void*& bIsDoingMeleeAimAssitField() const
     { return BrzCampoAncorado<void*>(this, "StructurePlacer", 16); }
     bool& bIsFastTravellingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bIsFastTravelling"); }
+    BrzCampoPonteiro bIsFirstSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bIsFirstSpawn")); }
+    BrzCampoPonteiro bIsInAdvancedCinematicModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bIsInAdvancedCinematicMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +64, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +64, medido na build 25535041
     //  (offset absoluto medido: 0x2190; confianca media)
     void*& bIsMicMutedThreadedField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 64); }
     bool& bIsOnlyViewingRemoteInventoryField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bIsOnlyViewingRemoteInventory"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalStatsCacheFlushInterval` +4, medido na build 25090264
+    //  ancorado em `PrimalStatsCacheFlushInterval` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1B54; confianca alta)
     void*& bIsPrimalStatsTimerActiveField() const
     { return BrzCampoAncorado<void*>(this, "PrimalStatsCacheFlushInterval", 4); }
+    BrzCampoPonteiro bIsRespawningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bIsRespawning")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +303, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +303, medido na build 25535041
     //  (offset absoluto medido: 0x19AF; confianca baixa)
     void*& bIsTransferingClubArkCharacterField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 303); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +302, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +302, medido na build 25535041
     //  (offset absoluto medido: 0x19AE; confianca baixa)
     bool& bIsTransferringCharacterField() const
     { return BrzCampoAncorado<bool>(this, "LastDownloadedTributePlayerData", 302); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +184, medido na build 25090264
+    //  ancorado em `LastShowExtendedInfoTime` +184, medido na build 25535041
     //  (offset absoluto medido: 0x1B28; confianca baixa)
     void*& bIsViewingTributeInventoryField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +136, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +136, medido na build 25535041
     //  (offset absoluto medido: 0x3620; confianca baixa)
     void*& bIsWaitingCloudClubARKField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +137, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +137, medido na build 25535041
     //  (offset absoluto medido: 0x3621; confianca baixa)
     void*& bIsWaitingToGiveInitialProfileItemsField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 137); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +24, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +24, medido na build 25535041
     //  (offset absoluto medido: 0x1810; confianca media)
     void*& bLastHitMarkerCharacterAllyField() const
     { return BrzCampoAncorado<void*>(this, "WaypointsSOTF", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +40, medido na build 25090264
+    //  ancorado em `WaypointsSOTF` +40, medido na build 25535041
     //  (offset absoluto medido: 0x1820; confianca media)
     void*& bLastHitMarkerStructureAllyField() const
     { return BrzCampoAncorado<void*>(this, "WaypointsSOTF", 40); }
+    BrzCampoPonteiro bLastSpawnWasFastTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bLastSpawnWasFastTravel")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +32, medido na build 25090264
+    //  ancorado em `FastTravelDroppedInventory` +32, medido na build 25535041
     //  (offset absoluto medido: 0x1250; confianca alta)
     void*& bLockedInputDontRecenterMouseField() const
     { return BrzCampoAncorado<void*>(this, "FastTravelDroppedInventory", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +12, medido na build 25090264
+    //  ancorado em `DiscordUserID` +12, medido na build 25535041
     //  (offset absoluto medido: 0x2394; confianca media)
     void*& bMainLobbyFailField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 12); }
     bool& bMissionSortByDistanceField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bMissionSortByDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +48, medido na build 25090264
+    //  ancorado em `bPendingAllowPlayerMovement` +48, medido na build 25535041
     //  (offset absoluto medido: 0x1A10; confianca media)
     void*& bNextShowCharacterCreationUIDownloadField() const
     { return BrzCampoAncorado<void*>(this, "bPendingAllowPlayerMovement", 48); }
+    BrzCampoPonteiro bNotifyPawnBuffsOfDamageEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bNotifyPawnBuffsOfDamageEvents")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventCanOpenMap` +1, medido na build 25090264
+    //  ancorado em `bPreventCanOpenMap` +1, medido na build 25535041
     //  (offset absoluto medido: 0x1252; confianca alta)
     void*& bPassedInputBlockingTimeoutField() const
     { return BrzCampoAncorado<void*>(this, "bPreventCanOpenMap", 1); }
+    BrzCampoPonteiro bPendingAllowPlayerMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bPendingAllowPlayerMovement")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +199, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +199, medido na build 25535041
     //  (offset absoluto medido: 0x1730; confianca baixa)
     void*& bPendingServerCheckField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 199); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +89, medido na build 25090264
+    //  ancorado em `PerfCheckLocations` +89, medido na build 25535041
     //  (offset absoluto medido: 0x35F1; confianca media)
     void*& bPerfCheckShouldTakeMemReportField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 89); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +16, medido na build 25090264
+    //  ancorado em `PrimalLocalProfile` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1000; confianca alta)
     void*& bPlayerSpeakingField() const
     { return BrzCampoAncorado<void*>(this, "PrimalLocalProfile", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpectatorCycleIndex` +4, medido na build 25090264
+    //  ancorado em `SpectatorCycleIndex` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1644; confianca alta)
     void*& bPossessedAnyPawnField() const
     { return BrzCampoAncorado<void*>(this, "SpectatorCycleIndex", 4); }
     bool& bPreventCanOpenMapField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bPreventCanOpenMap"); }
+    BrzCampoPonteiro bPreventControllerAutoUnfreezeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bPreventControllerAutoUnfreeze")); }
+    BrzCampoPonteiro bPreventDefaultCharacterItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bPreventDefaultCharacterItems")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +57, medido na build 25090264
+    //  ancorado em `PauseMenuUITemplate` +57, medido na build 25535041
     //  (offset absoluto medido: 0xC89; confianca media)
     void*& bPreventInstigatorVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 57); }
     bool& bPreventPaintingStreamingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bPreventPaintingStreaming"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +24, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +24, medido na build 25535041
     //  (offset absoluto medido: 0x10C8; confianca alta)
     void*& bRTSKeyBindsAltFireHeldField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +26, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +26, medido na build 25535041
     //  (offset absoluto medido: 0x10CA; confianca alta)
     void*& bRTSKeyBindsChordConsumedField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 26); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +25, medido na build 25090264
+    //  ancorado em `bUsingExtendedInfoMap` +25, medido na build 25535041
     //  (offset absoluto medido: 0x10C9; confianca alta)
     void*& bRTSKeyBindsPoopHeldField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 25); }
+    BrzCampoPonteiro bReachedTamedDinoLimitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bReachedTamedDinoLimit")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +301, medido na build 25090264
+    //  ancorado em `LastDownloadedTributePlayerData` +301, medido na build 25535041
     //  (offset absoluto medido: 0x19AD; confianca baixa)
     void*& bReceivedSubscribedAppsField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 301); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +200, medido na build 25090264
+    //  ancorado em `bPreventPaintingStreaming` +200, medido na build 25535041
     //  (offset absoluto medido: 0x1731; confianca baixa)
     bool& bServerAllowCommunicationField() const
     { return BrzCampoAncorado<bool>(this, "bPreventPaintingStreaming", 200); }
+    BrzCampoPonteiro bShouldAutoUploadTribeFlagField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bShouldAutoUploadTribeFlag")); }
     bool& bShowGameModeHUDField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bShowGameModeHUD"); }
+    BrzCampoPonteiro bSprintInputPressedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bSprintInputPressed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +1, medido na build 25090264
+    //  ancorado em `bEnableAltFire` +1, medido na build 25535041
     //  (offset absoluto medido: 0x164A; confianca alta)
     void*& bSuppressAdminIconField() const
     { return BrzCampoAncorado<void*>(this, "bEnableAltFire", 1); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamingWaypoints` +16, medido na build 25090264
+    //  ancorado em `TamingWaypoints` +16, medido na build 25535041
     //  (offset absoluto medido: 0x26C0; confianca alta)
     void*& bSyncTamingWithoutUIField() const
     { return BrzCampoAncorado<void*>(this, "TamingWaypoints", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TrackedActorWaypoints_TeammatesOnMap` +16, medido na build 25090264
+    //  ancorado em `TrackedActorWaypoints_TeammatesOnMap` +16, medido na build 25535041
     //  (offset absoluto medido: 0x26F8; confianca alta)
     void*& bSyncTrackedActorsWithoutUIField() const
     { return BrzCampoAncorado<void*>(this, "TrackedActorWaypoints_TeammatesOnMap", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +13, medido na build 25090264
+    //  ancorado em `DiscordUserID` +13, medido na build 25535041
     //  (offset absoluto medido: 0x2395; confianca media)
     void*& bTeamChangingField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 13); }
+    BrzCampoPonteiro bTribeCacheHaveRallyPointDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bTribeCacheHaveRallyPointData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +40, medido na build 25090264
+    //  ancorado em `PrimalLocalProfile` +40, medido na build 25535041
     //  (offset absoluto medido: 0x1018; confianca media)
     void*& bUpdateDLCContentField() const
     { return BrzCampoAncorado<void*>(this, "PrimalLocalProfile", 40); }
+    BrzCampoPonteiro bUseBPGetExtraWaypointsSOTFField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUseBPGetExtraWaypointsSOTF")); }
+    BrzCampoPonteiro bUseBPServerCycleSpectatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUseBPServerCycleSpectator")); }
+    BrzCampoPonteiro bUseCustomCrosshairBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUseCustomCrosshairBP")); }
+    BrzCampoPonteiro bUseOldMiniMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUseOldMiniMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +100, medido na build 25090264
+    //  ancorado em `RemoteViewingInventories` +100, medido na build 25535041
     //  (offset absoluto medido: 0x1224; confianca media)
     void*& bUsePressedFromGamepadField() const
     { return BrzCampoAncorado<void*>(this, "RemoteViewingInventories", 100); }
+    BrzCampoPonteiro bUsingExtendedInfoMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUsingExtendedInfoMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +473, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +473, medido na build 25535041
     //  (offset absoluto medido: 0x2329; confianca baixa)
     bool& bWaitingForServerMessageOfTheDayField() const
     { return BrzCampoAncorado<bool>(this, "bTribeCacheHaveRallyPointData", 473); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +472, medido na build 25090264
+    //  ancorado em `bTribeCacheHaveRallyPointData` +472, medido na build 25535041
     //  (offset absoluto medido: 0x2328; confianca baixa)
     void*& bWaitingToQueryVoiceChatPermissionsAgainField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 472); }
+    BrzCampoPonteiro bWantsToPingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bWantsToPing")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +8, medido na build 25090264
+    //  ancorado em `LastDeathPrimalCharacter` +8, medido na build 25535041
     //  (offset absoluto medido: 0xF90; confianca alta)
     void*& bWasDeadField() const
     { return BrzCampoAncorado<void*>(this, "LastDeathPrimalCharacter", 8); }
+    BrzCampoPonteiro bWasGamepadHotbarModifierPressed_RightShoulderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bWasGamepadHotbarModifierPressed_RightShoulder")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +86, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +86, medido na build 25535041
     //  (offset absoluto medido: 0x17A1; confianca media)
     bool& bZoomingInField() const
     { return BrzCampoAncorado<bool>(this, "bHasReachedLowestDepth", 86); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +85, medido na build 25090264
+    //  ancorado em `bHasReachedLowestDepth` +85, medido na build 25535041
     //  (offset absoluto medido: 0x17A0; confianca media)
     void*& bZoomingOutField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 85); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +96, medido na build 25090264
+    //  ancorado em `EnforcementColors` +96, medido na build 25535041
     //  (offset absoluto medido: 0x25E8; confianca media)
     float& disableWalkFromRadialWheelField() const
     { return BrzCampoAncorado<float>(this, "EnforcementColors", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +44, medido na build 25090264
+    //  ancorado em `EnforcementColors` +44, medido na build 25535041
     //  (offset absoluto medido: 0x25B4; confianca media)
     void*& doingHarvestMeleeField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 44); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +32, medido na build 25090264
+    //  ancorado em `EnforcementColors` +32, medido na build 25535041
     //  (offset absoluto medido: 0x25A8; confianca alta)
     void*& meleeAttackOrGatheringActiveField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +33, medido na build 25090264
+    //  ancorado em `EnforcementColors` +33, medido na build 25535041
     //  (offset absoluto medido: 0x25A9; confianca media)
     bool& meleeAttackOrGatheringIsGatheringField() const
     { return BrzCampoAncorado<bool>(this, "EnforcementColors", 33); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +36, medido na build 25090264
+    //  ancorado em `EnforcementColors` +36, medido na build 25535041
     //  (offset absoluto medido: 0x25AC; confianca media)
     float& meleeAttackOrGatheringTimerField() const
     { return BrzCampoAncorado<float>(this, "EnforcementColors", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +400, medido na build 25090264
+    //  ancorado em `MyVolumetricDispatcher` +400, medido na build 25535041
     //  (offset absoluto medido: 0x3488; confianca baixa)
     void*& playerIDToPlatformNameMapField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 400); }

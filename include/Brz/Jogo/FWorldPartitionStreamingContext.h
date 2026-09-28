@@ -48,10 +48,15 @@ struct FWorldPartitionStreamingContext
     {
         return NativeCall<void*, void*>(this, "FWorldPartitionStreamingContext.ResolveDataLayerRuntimeState(FDataLayerInstanceNames&)", a0);
     }
+
+    BrzCampoPonteiro DataLayerEffectiveStatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingContext.DataLayerEffectiveStates")); }
     BrzCampoPonteiro DataLayersLogicOperatorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingContext.DataLayersLogicOperator")); }
-    BitFieldValue<bool, unsigned __int32> bIsValid()
-    { return { (void*)this, "bIsValid" }; }
+    BrzCampoPonteiro UpdateStreamingStateEpochField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingContext.UpdateStreamingStateEpoch")); }
+    BrzCampoPonteiro bIsValidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionStreamingContext.bIsValid")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDPARTITIONSTREAMINGCONTEXT_H

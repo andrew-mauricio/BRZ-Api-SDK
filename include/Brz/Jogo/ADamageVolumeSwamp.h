@@ -41,7 +41,7 @@ struct ADamageVolumeSwamp : public ADamageVolumeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADamageVolumeSwamp.OnBeginOverlap(AActor*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=80]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnBeginOverlap(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "ADamageVolumeSwamp.OnBeginOverlap(AActor*,AActor*)", a0, a1);
@@ -49,7 +49,7 @@ struct ADamageVolumeSwamp : public ADamageVolumeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADamageVolumeSwamp.OnEndOverlap(AActor*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=75]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnEndOverlap(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "ADamageVolumeSwamp.OnEndOverlap(AActor*,AActor*)", a0, a1);

@@ -36,7 +36,7 @@ struct UStruct : public UField
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStruct.AddCppProperty(FProperty*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddCppProperty(void* a0) const
     {
         NativeCall<void, void*>(this, "UStruct.AddCppProperty(FProperty*)", a0);
@@ -60,7 +60,7 @@ struct UStruct : public UField
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStruct.FindPropertyByName(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindPropertyByName(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UStruct.FindPropertyByName(FName)", a0);
@@ -100,7 +100,7 @@ struct UStruct : public UField
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStruct.IsChildOf(UStruct*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsChildOf(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UStruct.IsChildOf(UStruct*)", a0);
@@ -169,10 +169,29 @@ struct UStruct : public UField
     {
         NativeCall<void, bool>(this, "UStruct.StaticLink(bool)", a0);
     }
+
+    BrzCampoPonteiro ChildPropertiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStruct.ChildProperties")); }
     UField*& ChildrenField() const
     { return *GetNativePointerField<UField**>(this, "UStruct.Children"); }
+    BrzCampoPonteiro DestructorLinkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStruct.DestructorLink")); }
+    int& MinAlignmentField() const
+    { return *GetNativePointerField<int*>(this, "UStruct.MinAlignment"); }
+    BrzCampoPonteiro PostConstructLinkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStruct.PostConstructLink")); }
+    int& PropertiesSizeField() const
+    { return *GetNativePointerField<int*>(this, "UStruct.PropertiesSize"); }
+    BrzCampoPonteiro PropertyLinkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStruct.PropertyLink")); }
+    BrzCampoPonteiro RefLinkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStruct.RefLink")); }
     TArray<void*>& ScriptField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UStruct.Script"); }
+    TArray<UObject*>& ScriptAndPropertyObjectReferencesField() const
+    { return *GetNativePointerField<TArray<UObject*>*>(this, "UStruct.ScriptAndPropertyObjectReferences"); }
+    UStruct*& SuperStructField() const
+    { return *GetNativePointerField<UStruct**>(this, "UStruct.SuperStruct"); }
 };
 
 #endif  // BRZ_SDK_JOGO_USTRUCT_H

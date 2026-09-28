@@ -39,6 +39,12 @@ struct FPrimalWorldModifierList
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalWorldModifierList.INIStringOptionValues")); }
     BrzCampoPonteiro WorldModifierClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalWorldModifierList.WorldModifierClass")); }
+    BrzCampoPonteiro bHasOverridePriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalWorldModifierList.bHasOverridePriority")); }
+    BrzCampoPonteiro bUseActiveEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalWorldModifierList.bUseActiveEvent")); }
+    BrzCampoPonteiro bUseINIStringOptionValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalWorldModifierList.bUseINIStringOptionValue")); }
     BitFieldValue<bool, unsigned __int32> bHasOverridePriority()
     { return { (void*)this, "bHasOverridePriority" }; }
     BitFieldValue<bool, unsigned __int32> bUseActiveEvent()

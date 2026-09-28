@@ -136,7 +136,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.GetLastLoadedCosmeticModID(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLastLoadedCosmeticModID(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UShooterEngine.GetLastLoadedCosmeticModID(bool)", a0);
@@ -172,7 +172,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.GetTotalConversionId()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTotalConversionId() const
     {
         return NativeCall<void*>(this, "UShooterEngine.GetTotalConversionId()");
@@ -392,7 +392,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.InitCFCore()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro InitCFCore() const
     {
         return NativeCall<void*>(this, "UShooterEngine.InitCFCore()");
@@ -429,18 +429,18 @@ struct UShooterEngine
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.LoadMap(FWorldContext&,FURL,UPendingNetGame*,FString&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro LoadMap(void* a0, void* a1, void* a2, const FString& a3)
+    BrzPonteiro LoadMap(void* a0, void* a1, void* a2, const FString& a3) const
     {
-        return NativeCall<void*, void*, void*, void*, void*>(nullptr, "UShooterEngine.LoadMap(FWorldContext&,FURL,UPendingNetGame*,FString&)", a0, a1, a2, const_cast<FString*>(&a3));
+        return NativeCall<void*, void*, void*, void*, void*>(this, "UShooterEngine.LoadMap(FWorldContext&,FURL,UPendingNetGame*,FString&)", a0, a1, a2, const_cast<FString*>(&a3));
     }
 
     //  a mesma, para quem ja' tem o ponteiro na mao
-    static BrzPonteiro LoadMap(void* a0, void* a1, void* a2, FString* a3)
+    BrzPonteiro LoadMap(void* a0, void* a1, void* a2, FString* a3) const
     { return LoadMap(a0, a1, a2, *a3); }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.LoadMapRedrawViewports()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro LoadMapRedrawViewports() const
     {
         return NativeCall<void*>(this, "UShooterEngine.LoadMapRedrawViewports()");
@@ -504,7 +504,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.PreLoadNetGameMap()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=138]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreLoadNetGameMap() const
     {
         return NativeCall<void*>(this, "UShooterEngine.PreLoadNetGameMap()");
@@ -512,7 +512,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.Primal_IsServerUnderMemoryPressure()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Primal_IsServerUnderMemoryPressure() const
     {
         return NativeCall<void*>(this, "UShooterEngine.Primal_IsServerUnderMemoryPressure()");
@@ -564,7 +564,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.RunCheatDeleteServerMods()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=119+grafo=3/3]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RunCheatDeleteServerMods() const
     {
         return NativeCall<void*>(this, "UShooterEngine.RunCheatDeleteServerMods()");
@@ -580,7 +580,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.SetSparseDataOverrideClass(UClass*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSparseDataOverrideClass(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterEngine.SetSparseDataOverrideClass(UClass*)", a0);
@@ -612,7 +612,7 @@ struct UShooterEngine
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterEngine.UpdateCrashReporterDataForSentryService(UWorld*,APlayerController*,FGuid)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro UpdateCrashReporterDataForSentryService(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "UShooterEngine.UpdateCrashReporterDataForSentryService(UWorld*,APlayerController*,FGuid)", a0, a1, a2);
@@ -863,7 +863,7 @@ struct UShooterEngine
     TArray<void*>& HLODColorationColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UShooterEngine.HLODColorationColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StartupScreenTextBlock` +8, medido na build 25090264
+    //  ancorado em `StartupScreenTextBlock` +8, medido na build 25535041
     //  (offset absoluto medido: 0x12C8; confianca alta)
     void*& HandshakeInstallStateField() const
     { return BrzCampoAncorado<void*>(this, "StartupScreenTextBlock", 8); }
@@ -1087,14 +1087,14 @@ struct UShooterEngine
     { return *GetNativePointerField<FString*>(this, "UShooterEngine.TransitionGameMode"); }
     BrzCampoPonteiro TransitionTypeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.TransitionType")); }
-    BitFieldValue<bool, unsigned __int32> UseClothAssetMinLODPerQualityLevels()
-    { return { (void*)this, "UseClothAssetMinLODPerQualityLevels" }; }
-    BitFieldValue<bool, unsigned __int32> UseGrassVarityPerQualityLevels()
-    { return { (void*)this, "UseGrassVarityPerQualityLevels" }; }
+    BrzCampoPonteiro UseClothAssetMinLODPerQualityLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.UseClothAssetMinLODPerQualityLevels")); }
+    BrzCampoPonteiro UseGrassVarityPerQualityLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.UseGrassVarityPerQualityLevels")); }
     bool& UseSkeletalMeshMinLODPerQualityLevelsField() const
     { return *GetNativePointerField<bool*>(this, "UShooterEngine.UseSkeletalMeshMinLODPerQualityLevels"); }
-    BitFieldValue<bool, unsigned __int32> UseStaticMeshMinLODPerQualityLevels()
-    { return { (void*)this, "UseStaticMeshMinLODPerQualityLevels" }; }
+    BrzCampoPonteiro UseStaticMeshMinLODPerQualityLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.UseStaticMeshMinLODPerQualityLevels")); }
     TObjectPtr<UMaterial>& VertexColorMaterialField() const
     { return *GetNativePointerField<TObjectPtr<UMaterial>*>(this, "UShooterEngine.VertexColorMaterial"); }
     FString& VertexColorMaterialNameField() const
@@ -1135,50 +1135,50 @@ struct UShooterEngine
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.WorldSettingsClass")); }
     BrzCampoPonteiro WorldSettingsClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.WorldSettingsClassName")); }
-    BitFieldValue<bool, unsigned __int32> bAllowMatureLanguage()
-    { return { (void*)this, "bAllowMatureLanguage" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowMultiThreadedAnimationUpdate()
-    { return { (void*)this, "bAllowMultiThreadedAnimationUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBlueprintsTickByDefault()
-    { return { (void*)this, "bCanBlueprintsTickByDefault" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckForMultiplePawnsSpawnedInAFrame()
-    { return { (void*)this, "bCheckForMultiplePawnsSpawnedInAFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAILogging()
-    { return { (void*)this, "bDisableAILogging" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableEditorPSysRealtimeLOD()
-    { return { (void*)this, "bEnableEditorPSysRealtimeLOD" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableOnScreenDebugMessages()
-    { return { (void*)this, "bEnableOnScreenDebugMessages" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableOnScreenDebugMessagesDisplay()
-    { return { (void*)this, "bEnableOnScreenDebugMessagesDisplay" }; }
+    BrzCampoPonteiro bAllowMatureLanguageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bAllowMatureLanguage")); }
+    BrzCampoPonteiro bAllowMultiThreadedAnimationUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bAllowMultiThreadedAnimationUpdate")); }
+    BrzCampoPonteiro bCanBlueprintsTickByDefaultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bCanBlueprintsTickByDefault")); }
+    BrzCampoPonteiro bCheckForMultiplePawnsSpawnedInAFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bCheckForMultiplePawnsSpawnedInAFrame")); }
+    BrzCampoPonteiro bDisableAILoggingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bDisableAILogging")); }
+    BrzCampoPonteiro bEnableEditorPSysRealtimeLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bEnableEditorPSysRealtimeLOD")); }
+    BrzCampoPonteiro bEnableOnScreenDebugMessagesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bEnableOnScreenDebugMessages")); }
+    BrzCampoPonteiro bEnableOnScreenDebugMessagesDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bEnableOnScreenDebugMessagesDisplay")); }
     unsigned int& bEnableVisualLogRecordingOnStartField() const
     { return *GetNativePointerField<unsigned int*>(this, "UShooterEngine.bEnableVisualLogRecordingOnStart"); }
-    BitFieldValue<bool, unsigned __int32> bGenerateDefaultTimecode()
-    { return { (void*)this, "bGenerateDefaultTimecode" }; }
-    BitFieldValue<bool, unsigned __int32> bIsOverridingSelectedColor()
-    { return { (void*)this, "bIsOverridingSelectedColor" }; }
-    BitFieldValue<bool, unsigned __int32> bLockReadOnlyLevels()
-    { return { (void*)this, "bLockReadOnlyLevels" }; }
-    BitFieldValue<bool, unsigned __int32> bOptimizeAnimBlueprintMemberVariableAccess()
-    { return { (void*)this, "bOptimizeAnimBlueprintMemberVariableAccess" }; }
-    BitFieldValue<bool, unsigned __int32> bPauseOnLossOfFocus()
-    { return { (void*)this, "bPauseOnLossOfFocus" }; }
-    BitFieldValue<bool, unsigned __int32> bRenderLightMapDensityGrayscale()
-    { return { (void*)this, "bRenderLightMapDensityGrayscale" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldGenerateLowQualityLightmaps()
-    { return { (void*)this, "bShouldGenerateLowQualityLightmaps" }; }
-    BitFieldValue<bool, unsigned __int32> bSmoothFrameRate()
-    { return { (void*)this, "bSmoothFrameRate" }; }
-    BitFieldValue<bool, unsigned __int32> bStartedLoadMapMovie()
-    { return { (void*)this, "bStartedLoadMapMovie" }; }
-    BitFieldValue<bool, unsigned __int32> bSubtitlesEnabled()
-    { return { (void*)this, "bSubtitlesEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bSubtitlesForcedOff()
-    { return { (void*)this, "bSubtitlesForcedOff" }; }
-    BitFieldValue<bool, unsigned __int32> bSuppressMapWarnings()
-    { return { (void*)this, "bSuppressMapWarnings" }; }
-    BitFieldValue<bool, unsigned __int32> bUseFixedFrameRate()
-    { return { (void*)this, "bUseFixedFrameRate" }; }
+    BrzCampoPonteiro bGenerateDefaultTimecodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bGenerateDefaultTimecode")); }
+    BrzCampoPonteiro bIsOverridingSelectedColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bIsOverridingSelectedColor")); }
+    BrzCampoPonteiro bLockReadOnlyLevelsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bLockReadOnlyLevels")); }
+    BrzCampoPonteiro bOptimizeAnimBlueprintMemberVariableAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bOptimizeAnimBlueprintMemberVariableAccess")); }
+    BrzCampoPonteiro bPauseOnLossOfFocusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bPauseOnLossOfFocus")); }
+    BrzCampoPonteiro bRenderLightMapDensityGrayscaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bRenderLightMapDensityGrayscale")); }
+    BrzCampoPonteiro bShouldGenerateLowQualityLightmapsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bShouldGenerateLowQualityLightmaps")); }
+    BrzCampoPonteiro bSmoothFrameRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bSmoothFrameRate")); }
+    BrzCampoPonteiro bStartedLoadMapMovieField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bStartedLoadMapMovie")); }
+    BrzCampoPonteiro bSubtitlesEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bSubtitlesEnabled")); }
+    BrzCampoPonteiro bSubtitlesForcedOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bSubtitlesForcedOff")); }
+    BrzCampoPonteiro bSuppressMapWarningsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bSuppressMapWarnings")); }
+    BrzCampoPonteiro bUseFixedFrameRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterEngine.bUseFixedFrameRate")); }
 };
 
 #endif  // BRZ_SDK_JOGO_USHOOTERENGINE_H

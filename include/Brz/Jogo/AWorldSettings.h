@@ -70,7 +70,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.GetAssetUserDataArray()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAssetUserDataArray() const
     {
         return NativeCall<void*>(this, "AWorldSettings.GetAssetUserDataArray()");
@@ -78,7 +78,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.GetGravityZ()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=49]]
+    // endereco: casamento de bytes com a build de referencia
     float GetGravityZ() const
     {
         return NativeCall<float>(this, "AWorldSettings.GetGravityZ()");
@@ -94,7 +94,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AWorldSettings.GetWorldPartition()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldPartition() const
     {
         return NativeCall<void*>(this, "AWorldSettings.GetWorldPartition()");
@@ -102,7 +102,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AWorldSettings.IsNavigationSystemEnabled()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsNavigationSystemEnabled() const
     {
         return NativeCall<void*>(this, "AWorldSettings.IsNavigationSystemEnabled()");
@@ -142,10 +142,11 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.PostLoad()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63]]
+    // classe: a funcao mora em AActor, e AWorldSettings herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostLoad() const
     {
-        NativeCall<void>(this, "AWorldSettings.PostLoad()");
+        NativeCall<void>(this, "AActor.PostLoad()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -166,7 +167,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.RewindForReplay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=65]]
+    // endereco: casamento de bytes com a build de referencia
     void RewindForReplay() const
     {
         NativeCall<void>(this, "AWorldSettings.RewindForReplay()");
@@ -190,7 +191,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AWorldSettings.SetAllowMaskedMaterials(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetAllowMaskedMaterials(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AWorldSettings.SetAllowMaskedMaterials(bool)", a0);
@@ -206,7 +207,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.SetPauserPlayerState(APlayerState*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetPauserPlayerState(void* a0) const
     {
         NativeCall<void, void*>(this, "AWorldSettings.SetPauserPlayerState(APlayerState*)", a0);
@@ -214,7 +215,7 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.SetTimeDilation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float SetTimeDilation(float a0) const
     {
         return NativeCall<float, float>(this, "AWorldSettings.SetTimeDilation(float)", a0);
@@ -310,6 +311,48 @@ struct AWorldSettings : public ABasePrimalWorldSettings
     { return *GetNativePointerField<TObjectPtr<UWorldPartition>*>(this, "AWorldSettings.WorldPartition"); }
     float& WorldToMetersField() const
     { return *GetNativePointerField<float*>(this, "AWorldSettings.WorldToMeters"); }
+    BrzCampoPonteiro bEnableAISystemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bEnableAISystem")); }
+    BrzCampoPonteiro bEnableCapsuleIndirectShadowsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bEnableCapsuleIndirectShadows")); }
+    BrzCampoPonteiro bEnableNavigationSystemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bEnableNavigationSystem")); }
+    BrzCampoPonteiro bEnableWorldBoundsChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bEnableWorldBoundsChecks")); }
+    BrzCampoPonteiro bEnableWorldCompositionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bEnableWorldComposition")); }
+    BrzCampoPonteiro bEnableWorldOriginRebasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bEnableWorldOriginRebasing")); }
+    BrzCampoPonteiro bForceLoadAllLevelsOnDediServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bForceLoadAllLevelsOnDediServer")); }
+    BrzCampoPonteiro bForceNoPrecomputedLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bForceNoPrecomputedLighting")); }
+    BrzCampoPonteiro bForceVolumetricLightmapsOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bForceVolumetricLightmapsOnly")); }
+    BrzCampoPonteiro bGenerateSingleClusterForLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bGenerateSingleClusterForLevel")); }
+    BrzCampoPonteiro bGlobalGravitySetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bGlobalGravitySet")); }
+    BrzCampoPonteiro bHighPriorityLoadingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bHighPriorityLoading")); }
+    BrzCampoPonteiro bHighPriorityLoadingLocalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bHighPriorityLoadingLocal")); }
+    BrzCampoPonteiro bMinimizeBSPSectionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bMinimizeBSPSections")); }
+    BrzCampoPonteiro bOverrideDefaultBroadphaseSettingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bOverrideDefaultBroadphaseSettings")); }
+    BrzCampoPonteiro bPlaceCellsOnlyAlongCameraTracksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bPlaceCellsOnlyAlongCameraTracks")); }
+    BrzCampoPonteiro bPrecomputeVisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bPrecomputeVisibility")); }
+    BrzCampoPonteiro bReuseAddressAndPortField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bReuseAddressAndPort")); }
+    BrzCampoPonteiro bUse3DWorldCompStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bUse3DWorldCompStreaming")); }
+    BrzCampoPonteiro bUseClientSideLevelStreamingVolumesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bUseClientSideLevelStreamingVolumes")); }
+    BrzCampoPonteiro bWorldGravitySetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AWorldSettings.bWorldGravitySet")); }
     BitFieldValue<bool, unsigned __int32> bPrecomputeVisibility()
     { return { (void*)this, "bPrecomputeVisibility" }; }
     BitFieldValue<bool, unsigned __int32> bPlaceCellsOnlyAlongCameraTracks()

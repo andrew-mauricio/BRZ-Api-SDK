@@ -57,20 +57,20 @@ struct UShooterDamageType_Passive
     { return *GetNativePointerField<float*>(this, "UShooterDamageType_Passive.PointDamageArmorEffectiveness"); }
     float& RadialPartiallyObstructedDamagePercentField() const
     { return *GetNativePointerField<float*>(this, "UShooterDamageType_Passive.RadialPartiallyObstructedDamagePercent"); }
-    BitFieldValue<bool, unsigned __int32> bAllowPerBoneDamageAdjustment()
-    { return { (void*)this, "bAllowPerBoneDamageAdjustment" }; }
-    BitFieldValue<bool, unsigned __int32> bCausedByWorld()
-    { return { (void*)this, "bCausedByWorld" }; }
-    BitFieldValue<bool, unsigned __int32> bImpulseAffectsLivePawns()
-    { return { (void*)this, "bImpulseAffectsLivePawns" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPassiveDamage()
-    { return { (void*)this, "bIsPassiveDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bIsPhysicalDamage()
-    { return { (void*)this, "bIsPhysicalDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bRadialDamageVelChange()
-    { return { (void*)this, "bRadialDamageVelChange" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleMomentumByMass()
-    { return { (void*)this, "bScaleMomentumByMass" }; }
+    BrzCampoPonteiro bAllowPerBoneDamageAdjustmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bAllowPerBoneDamageAdjustment")); }
+    BrzCampoPonteiro bCausedByWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bCausedByWorld")); }
+    BrzCampoPonteiro bImpulseAffectsLivePawnsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bImpulseAffectsLivePawns")); }
+    BrzCampoPonteiro bIsPassiveDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bIsPassiveDamage")); }
+    BrzCampoPonteiro bIsPhysicalDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bIsPhysicalDamage")); }
+    BrzCampoPonteiro bRadialDamageVelChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bRadialDamageVelChange")); }
+    BrzCampoPonteiro bScaleMomentumByMassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDamageType_Passive.bScaleMomentumByMass")); }
 };
 
 #endif  // BRZ_SDK_JOGO_USHOOTERDAMAGETYPE_PASSIVE_H

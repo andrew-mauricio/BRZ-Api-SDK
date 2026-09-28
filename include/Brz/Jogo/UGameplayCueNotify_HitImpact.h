@@ -45,8 +45,8 @@ struct UGameplayCueNotify_HitImpact
     { return *GetNativePointerField<FName*>(this, "UGameplayCueNotify_HitImpact.GameplayCueName"); }
     BrzCampoPonteiro GameplayCueTagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_HitImpact.GameplayCueTag")); }
-    BitFieldValue<bool, unsigned __int32> IsOverride()
-    { return { (void*)this, "IsOverride" }; }
+    BrzCampoPonteiro IsOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_HitImpact.IsOverride")); }
     BrzCampoPonteiro ParticleSystemField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_HitImpact.ParticleSystem")); }
     BrzCampoPonteiro SoundField() const

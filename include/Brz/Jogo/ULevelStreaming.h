@@ -37,7 +37,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.AllowIncrementalRemovalWhilePendingVisibility()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowIncrementalRemovalWhilePendingVisibility() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.AllowIncrementalRemovalWhilePendingVisibility()");
@@ -77,7 +77,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.DefaultAllowClientUseMakingVisibleTransactionRequests()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DefaultAllowClientUseMakingVisibleTransactionRequests() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.DefaultAllowClientUseMakingVisibleTransactionRequests()");
@@ -101,7 +101,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.GetLevelScriptActor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelScriptActor() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.GetLevelScriptActor()");
@@ -117,7 +117,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.GetLevelStreamingStatusColor(EStreamingStatus)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelStreamingStatusColor(int a0) const
     {
         return NativeCall<void*, int>(this, "ULevelStreaming.GetLevelStreamingStatusColor(EStreamingStatus)", a0);
@@ -125,7 +125,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.GetLevelStreamingStatusDisplayName(EStreamingStatus)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelStreamingStatusDisplayName(int a0) const
     {
         return NativeCall<void*, int>(this, "ULevelStreaming.GetLevelStreamingStatusDisplayName(EStreamingStatus)", a0);
@@ -141,7 +141,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.GetWorldAssetPackageFName()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=52]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldAssetPackageFName() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.GetWorldAssetPackageFName()");
@@ -165,7 +165,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.IsLevelVisible()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsLevelVisible() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.IsLevelVisible()");
@@ -181,7 +181,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.OnLevelAdded()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnLevelAdded() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.OnLevelAdded()");
@@ -189,7 +189,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.OnLevelRemoved()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnLevelRemoved() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.OnLevelRemoved()");
@@ -269,7 +269,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.SetLoadedLevel(ULevel*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=14]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetLoadedLevel(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ULevelStreaming.SetLoadedLevel(ULevel*)", a0);
@@ -317,7 +317,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.ShouldBlockOnUnload()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldBlockOnUnload() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.ShouldBlockOnUnload()");
@@ -357,7 +357,7 @@ struct ULevelStreaming
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelStreaming.ShouldServerUseMakingVisibleTransactionRequest()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldServerUseMakingVisibleTransactionRequest() const
     {
         return NativeCall<void*>(this, "ULevelStreaming.ShouldServerUseMakingVisibleTransactionRequest()");
@@ -380,12 +380,12 @@ struct ULevelStreaming
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelLODIndex` +12, medido na build 25090264
+    //  ancorado em `LevelLODIndex` +12, medido na build 25535041
     //  (offset absoluto medido: 0xF0; confianca alta)
     void*& AsyncRequestIDsField() const
     { return BrzCampoAncorado<void*>(this, "LevelLODIndex", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelLODIndex` +28, medido na build 25090264
+    //  ancorado em `LevelLODIndex` +28, medido na build 25535041
     //  (offset absoluto medido: 0x100; confianca alta)
     int& CurrentStateField() const
     { return BrzCampoAncorado<int>(this, "LevelLODIndex", 28); }
@@ -394,12 +394,12 @@ struct ULevelStreaming
     BrzCampoPonteiro LODPackageNamesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.LODPackageNames")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LODPackageNames` +16, medido na build 25090264
+    //  ancorado em `LODPackageNames` +16, medido na build 25535041
     //  (offset absoluto medido: 0x70; confianca alta)
     void*& LODPackageNamesToLoadField() const
     { return BrzCampoAncorado<void*>(this, "LODPackageNames", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinTimeBetweenVolumeUnloadRequests` +8, medido na build 25090264
+    //  ancorado em `MinTimeBetweenVolumeUnloadRequests` +8, medido na build 25535041
     //  (offset absoluto medido: 0x130; confianca alta)
     void*& LastVolumeUnloadRequestTimeField() const
     { return BrzCampoAncorado<void*>(this, "MinTimeBetweenVolumeUnloadRequests", 8); }
@@ -428,12 +428,36 @@ struct ULevelStreaming
     int& StreamingPriorityField() const
     { return *GetNativePointerField<int*>(this, "ULevelStreaming.StreamingPriority"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelLODIndex` +29, medido na build 25090264
+    //  ancorado em `LevelLODIndex` +29, medido na build 25535041
     //  (offset absoluto medido: 0x101; confianca alta)
     void*& TargetStateField() const
     { return BrzCampoAncorado<void*>(this, "LevelLODIndex", 29); }
     BrzCampoPonteiro WorldAssetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.WorldAsset")); }
+    BrzCampoPonteiro bClientOnlyVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bClientOnlyVisible")); }
+    BrzCampoPonteiro bDisableDistanceStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bDisableDistanceStreaming")); }
+    BrzCampoPonteiro bDrawOnLevelStatusMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bDrawOnLevelStatusMap")); }
+    BrzCampoPonteiro bEnableTileStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bEnableTileStreaming")); }
+    BrzCampoPonteiro bIsStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bIsStatic")); }
+    BrzCampoPonteiro bLevelStreamingDesiredVisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bLevelStreamingDesiredVisibility")); }
+    BrzCampoPonteiro bLevelStreamingVisibilityOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bLevelStreamingVisibilityOnly")); }
+    BrzCampoPonteiro bLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bLocked")); }
+    BrzCampoPonteiro bShouldBeLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bShouldBeLoaded")); }
+    BrzCampoPonteiro bShouldBeVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bShouldBeVisible")); }
+    BrzCampoPonteiro bShouldBlockOnLoadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bShouldBlockOnLoad")); }
+    BrzCampoPonteiro bShouldBlockOnUnloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.bShouldBlockOnUnload")); }
     BitFieldValue<bool, unsigned __int32> bClientOnlyVisible()
     { return { (void*)this, "bClientOnlyVisible" }; }
     BitFieldValue<bool, unsigned __int32> bDisableDistanceStreaming()

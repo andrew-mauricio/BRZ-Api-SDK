@@ -52,11 +52,10 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.AllowStructureAccess(APlayerController*)
-    // classe: a funcao mora em APrimalStructure, e APrimalStructureElevatorPlatform herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     bool AllowStructureAccess(void* a0) const
     {
-        return NativeCall<bool, void*>(this, "APrimalStructure.AllowStructureAccess(APlayerController*)", a0);
+        return NativeCall<bool, void*>(this, "APrimalStructureElevatorPlatform.AllowStructureAccess(APlayerController*)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -77,10 +76,11 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=121]]
+    // classe: a funcao mora em APrimalStructure, e APrimalStructureElevatorPlatform herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
-        NativeCall<void>(this, "APrimalStructureElevatorPlatform.BeginPlay()");
+        NativeCall<void>(this, "APrimalStructure.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -93,7 +93,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureElevatorPlatform.CanBeActivated()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanBeActivated() const
     {
         return NativeCall<void*>(this, "APrimalStructureElevatorPlatform.CanBeActivated()");
@@ -101,7 +101,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.CanOpen(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=105]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanOpen(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureElevatorPlatform.CanOpen(APlayerController*)", a0);
@@ -141,7 +141,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.GetAllTrackStructures(TArray<AActor*,TSizedDefaultAllocator<32>
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void GetAllTrackStructures(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureElevatorPlatform.GetAllTrackStructures(TArray<AActor*,TSizedDefaultAllocator<32>>&)", a0);
@@ -149,7 +149,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureElevatorPlatform.GetCurrentLiftedWeight()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetCurrentLiftedWeight() const
     {
         return NativeCall<float>(this, "APrimalStructureElevatorPlatform.GetCurrentLiftedWeight()");
@@ -157,7 +157,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.GetMultiUseEntries(APlayerController*,TArray<FMultiUseEntry,TSi
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=315]]
+    // endereco: casamento de bytes com a build de referencia
     void GetMultiUseEntries(void* a0, void* a1, int a2) const
     {
         NativeCall<void, void*, void*, int>(this, "APrimalStructureElevatorPlatform.GetMultiUseEntries(APlayerController*,TArray<FMultiUseEntry,TSizedDefaultAllocator<32>>&,int)", a0, a1, a2);
@@ -173,7 +173,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureElevatorPlatform.HasReachedMaxWeight()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasReachedMaxWeight() const
     {
         return NativeCall<bool>(this, "APrimalStructureElevatorPlatform.HasReachedMaxWeight()");
@@ -205,7 +205,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureElevatorPlatform.PlatformIsActive(TEnumAsByte<EPrimalStructureElevatorState>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlatformIsActive(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureElevatorPlatform.PlatformIsActive(TEnumAsByte<EPrimalStructureElevatorState>&)", a0);
@@ -221,7 +221,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureElevatorPlatform.RemoveLiftedActor(APrimalCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RemoveLiftedActor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureElevatorPlatform.RemoveLiftedActor(APrimalCharacter*)", a0);
@@ -317,6 +317,20 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
     { return *GetNativePointerField<float*>(this, "APrimalStructureElevatorPlatform.TraveledDistance"); }
     float& UpObstructionTraceLengthField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureElevatorPlatform.UpObstructionTraceLength"); }
+    BrzCampoPonteiro bAddElevatorMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bAddElevatorMultiUseEntries")); }
+    BrzCampoPonteiro bAdminOnlyAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bAdminOnlyAccess")); }
+    BrzCampoPonteiro bIsActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bIsActivated")); }
+    BrzCampoPonteiro bIsLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bIsLocked")); }
+    BrzCampoPonteiro bIsPinLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bIsPinLocked")); }
+    BrzCampoPonteiro bUpdateLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bUpdateLocation")); }
+    BrzCampoPonteiro bUseBPElevatorStoppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorPlatform.bUseBPElevatorStopped")); }
     BitFieldValue<bool, unsigned __int32> bIsActivated()
     { return { (void*)this, "bIsActivated" }; }
     BitFieldValue<bool, unsigned __int32> bWasActivated()

@@ -47,6 +47,8 @@ struct FLevelInstanceID
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceID.ContainerID")); }
     BrzCampoPonteiro HashField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceID.Hash")); }
+    BrzCampoPonteiro PackageShortNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceID.PackageShortName")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELINSTANCEID_H

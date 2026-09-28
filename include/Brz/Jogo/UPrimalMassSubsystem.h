@@ -43,7 +43,7 @@ struct UPrimalMassSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalMassSubsystem.DoesSupportWorldType(EWorldType::Type)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DoesSupportWorldType(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalMassSubsystem.DoesSupportWorldType(EWorldType::Type)", a0);
@@ -51,7 +51,7 @@ struct UPrimalMassSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalMassSubsystem.Initialize(FSubsystemCollectionBase&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Initialize(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalMassSubsystem.Initialize(FSubsystemCollectionBase&)", a0);
@@ -59,7 +59,7 @@ struct UPrimalMassSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalMassSubsystem.OnMassMoverDied(APrimalCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=141+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OnMassMoverDied(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalMassSubsystem.OnMassMoverDied(APrimalCharacter*)", a0);
@@ -83,7 +83,7 @@ struct UPrimalMassSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalMassSubsystem.PathFinished(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PathFinished(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalMassSubsystem.PathFinished(AActor*)", a0);
@@ -115,7 +115,7 @@ struct UPrimalMassSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalMassSubsystem.UpdateMovementVariables(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateMovementVariables(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalMassSubsystem.UpdateMovementVariables(AActor*)", a0);
@@ -123,6 +123,10 @@ struct UPrimalMassSubsystem
 
     BrzCampoPonteiro EntityManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMassSubsystem.EntityManager")); }
+    BrzCampoPonteiro MassArchetypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMassSubsystem.MassArchetype")); }
+    BrzCampoPonteiro bIsMassDisabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMassSubsystem.bIsMassDisabled")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALMASSSUBSYSTEM_H

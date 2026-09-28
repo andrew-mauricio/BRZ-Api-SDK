@@ -54,7 +54,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.AreNativePropertiesIdenticalTo(UObject*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AreNativePropertiesIdenticalTo(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UStaticMeshComponent.AreNativePropertiesIdenticalTo(UObject*)", a0);
@@ -70,7 +70,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.BuildTextureStreamingDataImpl(ETextureStreamingBuildType,EMaterialQualityLe
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BuildTextureStreamingDataImpl(int a0, int a1, int a2, void* a3, void* a4) const
     {
         return NativeCall<bool, int, int, int, void*, void*>(this, "UStaticMeshComponent.BuildTextureStreamingDataImpl(ETextureStreamingBuildType,EMaterialQualityLevel::Type,ERHIFeatureLevel::Type,TSet<FGuid,DefaultKeyFuncs<FGuid,0>,FDefaultSetAllocator>&,bool&)", a0, a1, a2, a3, a4);
@@ -118,7 +118,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetDiffuseBoost(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetDiffuseBoost(int a0) const
     {
         return NativeCall<float, int>(this, "UStaticMeshComponent.GetDiffuseBoost(int)", a0);
@@ -126,7 +126,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetEmissiveBoost(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetEmissiveBoost(int a0) const
     {
         return NativeCall<float, int>(this, "UStaticMeshComponent.GetEmissiveBoost(int)", a0);
@@ -215,7 +215,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetShadowIndirectOnly()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool GetShadowIndirectOnly() const
     {
         return NativeCall<bool>(this, "UStaticMeshComponent.GetShadowIndirectOnly()");
@@ -223,7 +223,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetSocketByName(FName)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=109+chamadores=6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=109+chamadores=7]]
     UStaticMeshSocket* GetSocketByName(unsigned long long a0) const
     {
         return NativeCall<UStaticMeshSocket*, unsigned long long>(this, "UStaticMeshComponent.GetSocketByName(FName)", a0);
@@ -255,7 +255,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetWorldPositionOffsetDisableDistance()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetWorldPositionOffsetDisableDistance() const
     {
         return NativeCall<float>(this, "UStaticMeshComponent.GetWorldPositionOffsetDisableDistance()");
@@ -263,7 +263,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.HasAnySockets()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=103]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasAnySockets() const
     {
         return NativeCall<bool>(this, "UStaticMeshComponent.HasAnySockets()");
@@ -415,15 +415,16 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.ShouldCreatePhysicsState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=90]]
+    // classe: a funcao mora em UPrimitiveComponent, e UStaticMeshComponent herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldCreatePhysicsState() const
     {
-        return NativeCall<bool>(this, "UStaticMeshComponent.ShouldCreatePhysicsState()");
+        return NativeCall<bool>(this, "UPrimitiveComponent.ShouldCreatePhysicsState()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.ShouldCreateRenderState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=89]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldCreateRenderState() const
     {
         return NativeCall<bool>(this, "UStaticMeshComponent.ShouldCreateRenderState()");
@@ -431,7 +432,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.ShouldRecreateProxyOnUpdateTransform()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldRecreateProxyOnUpdateTransform() const
     {
         return NativeCall<bool>(this, "UStaticMeshComponent.ShouldRecreateProxyOnUpdateTransform()");
@@ -479,7 +480,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.UsesTextureLightmaps(int,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=62]]
+    // endereco: casamento de bytes com a build de referencia
     bool UsesTextureLightmaps(int a0, int a1) const
     {
         return NativeCall<bool, int, int>(this, "UStaticMeshComponent.UsesTextureLightmaps(int,int)", a0, a1);
@@ -495,6 +496,8 @@ struct UStaticMeshComponent : public UMeshComponent
     { return *GetNativePointerField<float*>(this, "UStaticMeshComponent.DistanceFieldSelfShadowBias"); }
     int& ForcedLodModelField() const
     { return *GetNativePointerField<int*>(this, "UStaticMeshComponent.ForcedLodModel"); }
+    BrzCampoPonteiro GDFLightPortalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.GDFLightPortal")); }
     BrzCampoPonteiro GrassSliceIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.GrassSliceIndex")); }
     BrzCampoPonteiro LODDataField() const
@@ -529,6 +532,64 @@ struct UStaticMeshComponent : public UMeshComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.WireframeColorOverride")); }
     int& WorldPositionOffsetDisableDistanceField() const
     { return *GetNativePointerField<int*>(this, "UStaticMeshComponent.WorldPositionOffsetDisableDistance"); }
+    BrzCampoPonteiro bCastDistanceFieldIndirectShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bCastDistanceFieldIndirectShadow")); }
+    BrzCampoPonteiro bDisallowMeshPaintPerInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bDisallowMeshPaintPerInstance")); }
+    BrzCampoPonteiro bDisallowNaniteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bDisallowNanite")); }
+    BrzCampoPonteiro bEnableTextureColorMeshPaintingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bEnableTextureColorMeshPainting")); }
+    BrzCampoPonteiro bEnableVertexColorMeshPaintingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bEnableVertexColorMeshPainting")); }
+    BrzCampoPonteiro bEvaluateWorldPositionOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bEvaluateWorldPositionOffset")); }
+    BrzCampoPonteiro bEvaluateWorldPositionOffsetInRayTracingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bEvaluateWorldPositionOffsetInRayTracing")); }
+    BrzCampoPonteiro bForceDisableNaniteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bForceDisableNanite")); }
+    BrzCampoPonteiro bForceDisablePerInstanceDynamicCustomDataOutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bForceDisablePerInstanceDynamicCustomDataOut")); }
+    BrzCampoPonteiro bForceNaniteForMaskedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bForceNaniteForMasked")); }
+    BrzCampoPonteiro bForceNavigationObstacleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bForceNavigationObstacle")); }
+    BrzCampoPonteiro bIgnoreInstanceForTextureStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bIgnoreInstanceForTextureStreaming")); }
+    BrzCampoPonteiro bIgnoreMaterialGrassOutputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bIgnoreMaterialGrassOutput")); }
+    BrzCampoPonteiro bIncludeWPOInGrassHeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bIncludeWPOInGrassHeight")); }
+    BrzCampoPonteiro bOverrideDistanceFieldSelfShadowBiasField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideDistanceFieldSelfShadowBias")); }
+    BrzCampoPonteiro bOverrideLightMapResField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideLightMapRes")); }
+    BrzCampoPonteiro bOverrideMeshPaintTextureCoordinateIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideMeshPaintTextureCoordinateIndex")); }
+    BrzCampoPonteiro bOverrideMeshPaintTextureResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideMeshPaintTextureResolution")); }
+    BrzCampoPonteiro bOverrideMinLODField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideMinLOD")); }
+    BrzCampoPonteiro bOverrideNavigationExportField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideNavigationExport")); }
+    BrzCampoPonteiro bOverrideWireframeColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bOverrideWireframeColor")); }
+    BrzCampoPonteiro bProjectLandscapeGrassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bProjectLandscapeGrass")); }
+    BrzCampoPonteiro bReverseCullingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bReverseCulling")); }
+    BrzCampoPonteiro bSortTrianglesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bSortTriangles")); }
+    BrzCampoPonteiro bUseDefaultCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bUseDefaultCollision")); }
+    BrzCampoPonteiro bUseDirectionalShadowDistanceLimitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bUseDirectionalShadowDistanceLimit")); }
+    BrzCampoPonteiro bUsePrimitiveDataForCustomFlagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bUsePrimitiveDataForCustomFlags")); }
+    BrzCampoPonteiro bUseSubDivisionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bUseSubDivisions")); }
+    BrzCampoPonteiro bWorldPositionOffsetWritesVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UStaticMeshComponent.bWorldPositionOffsetWritesVelocity")); }
     BitFieldValue<bool, unsigned __int32> bDisallowNanite()
     { return { (void*)this, "bDisallowNanite" }; }
     BitFieldValue<bool, unsigned __int32> bForceDisableNanite()

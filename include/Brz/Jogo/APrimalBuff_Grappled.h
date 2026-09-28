@@ -62,7 +62,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.AllowGrappleLogic()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=112+chamadores=5]]
     bool AllowGrappleLogic() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.AllowGrappleLogic()");
@@ -78,7 +78,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff_Grappled.ApplyOwnerSwingingVelocity(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ApplyOwnerSwingingVelocity(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalBuff_Grappled.ApplyOwnerSwingingVelocity(UE::Math::TVector<double>&,float)", a0, a1);
@@ -86,7 +86,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ApplyOwnerSwingingVelocity_Implementation(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void ApplyOwnerSwingingVelocity_Implementation(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalBuff_Grappled.ApplyOwnerSwingingVelocity_Implementation(UE::Math::TVector<double>&,float)", a0, a1);
@@ -94,7 +94,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ApplyTetherMoveVelocity(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ApplyTetherMoveVelocity(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalBuff_Grappled.ApplyTetherMoveVelocity(UE::Math::TVector<double>&,float)", a0, a1);
@@ -146,7 +146,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.BreakAllTethers()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void BreakAllTethers() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.BreakAllTethers()");
@@ -154,7 +154,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.BreakChildTetherOnGrappledChar(FGrappleTether&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=806+chamadores=2+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     bool BreakChildTetherOnGrappledChar(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff_Grappled.BreakChildTetherOnGrappledChar(FGrappleTether&)", a0);
@@ -182,7 +182,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.CanBeGrappledAgainstSurface()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanBeGrappledAgainstSurface() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.CanBeGrappledAgainstSurface()");
@@ -274,7 +274,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.CanSyncGrappleTetherLengths()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool CanSyncGrappleTetherLengths() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.CanSyncGrappleTetherLengths()");
@@ -282,7 +282,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.CanSyncGrappleTetherLengths_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=68]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanSyncGrappleTetherLengths_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.CanSyncGrappleTetherLengths_Implementation()");
@@ -322,7 +322,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.CheckForAutoBreakTether_Implementation(FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=405+grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     bool CheckForAutoBreakTether_Implementation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff_Grappled.CheckForAutoBreakTether_Implementation(FGrappleTether&)", a0);
@@ -330,7 +330,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.CheckForTetherBreak(FGrappleTether&,int,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void CheckForTetherBreak(void* a0, int a1, float a2) const
     {
         NativeCall<void, void*, int, float>(this, "APrimalBuff_Grappled.CheckForTetherBreak(FGrappleTether&,int,float)", a0, a1, a2);
@@ -338,7 +338,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ClampGrappleVelocity(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClampGrappleVelocity(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.ClampGrappleVelocity(UE::Math::TVector<double>&)", a0);
@@ -346,7 +346,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ClampGrappleVelocity_Implementation(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=91]]
+    // endereco: casamento de bytes com a build de referencia
     void ClampGrappleVelocity_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.ClampGrappleVelocity_Implementation(UE::Math::TVector<double>&)", a0);
@@ -354,7 +354,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff_Grappled.ClampOwnerReleasingVelocity(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClampOwnerReleasingVelocity(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.ClampOwnerReleasingVelocity(UE::Math::TVector<double>&)", a0);
@@ -362,7 +362,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ClampOwnerReleasingVelocity_Implementation(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=61]]
+    // endereco: casamento de bytes com a build de referencia
     void ClampOwnerReleasingVelocity_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.ClampOwnerReleasingVelocity_Implementation(UE::Math::TVector<double>&)", a0);
@@ -378,7 +378,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.Destroyed()");
@@ -398,7 +398,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.DisplayGrappleSystemHudNotification_Implementation(AShooterPlayerController
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=233]]
+    // endereco: casamento de bytes com a build de referencia
     bool DisplayGrappleSystemHudNotification_Implementation(void* a0, void* a1, unsigned char a2, int a3, const FString& a4) const
     {
         return NativeCall<bool, void*, void*, unsigned char, int, void*>(this, "APrimalBuff_Grappled.DisplayGrappleSystemHudNotification_Implementation(AShooterPlayerController*,AActor*,unsignedchar,int,FString&)", a0, a1, a2, a3, const_cast<FString*>(&a4));
@@ -426,7 +426,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetActorAttachParentChar(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static APrimalCharacter* GetActorAttachParentChar(void* a0)
     {
         return NativeCall<APrimalCharacter*, void*>(nullptr, "APrimalBuff_Grappled.GetActorAttachParentChar(AActor*)", a0);
@@ -490,7 +490,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_Grappled.GetCurrentTetherMoveDir(FGrappleTether&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetCurrentTetherMoveDir(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_Grappled.GetCurrentTetherMoveDir(FGrappleTether&)", a0);
@@ -506,7 +506,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.GetDefaultGrappledBuffClass()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=166+chamadores=3]]
     UClass* GetDefaultGrappledBuffClass() const
     {
         return NativeCall<UClass*>(this, "APrimalBuff_Grappled.GetDefaultGrappledBuffClass()");
@@ -514,7 +514,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_Grappled.GetGrappleAltBlendSpaceSettings(float&,float&,UAnimSequence*&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetGrappleAltBlendSpaceSettings(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APrimalBuff_Grappled.GetGrappleAltBlendSpaceSettings(float&,float&,UAnimSequence*&)", a0, a1, a2);
@@ -530,7 +530,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetGrappleTetherPullAcceleration(APrimalCharacter*,FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetGrappleTetherPullAcceleration(void* a0, void* a1) const
     {
         return NativeCall<float, void*, void*>(this, "APrimalBuff_Grappled.GetGrappleTetherPullAcceleration(APrimalCharacter*,FGrappleTether&)", a0, a1);
@@ -538,7 +538,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetGrappleTetherPullMaxVelocity(APrimalCharacter*,FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetGrappleTetherPullMaxVelocity(void* a0, void* a1) const
     {
         return NativeCall<float, void*, void*>(this, "APrimalBuff_Grappled.GetGrappleTetherPullMaxVelocity(APrimalCharacter*,FGrappleTether&)", a0, a1);
@@ -546,7 +546,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetGrappleTetherReleaseMaxVelocity(APrimalCharacter*,FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetGrappleTetherReleaseMaxVelocity(void* a0, void* a1) const
     {
         return NativeCall<float, void*, void*>(this, "APrimalBuff_Grappled.GetGrappleTetherReleaseMaxVelocity(APrimalCharacter*,FGrappleTether&)", a0, a1);
@@ -566,7 +566,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetGrappleVelocityDampingRate(APrimalCharacter*,FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetGrappleVelocityDampingRate(void* a0, void* a1) const
     {
         return NativeCall<float, void*, void*>(this, "APrimalBuff_Grappled.GetGrappleVelocityDampingRate(APrimalCharacter*,FGrappleTether&)", a0, a1);
@@ -598,7 +598,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=608+grafo=22/22]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=608+bytes40+grafo=22/22]]
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -606,7 +606,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetMaxTetherLength(FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMaxTetherLength(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalBuff_Grappled.GetMaxTetherLength(FGrappleTether&)", a0);
@@ -614,7 +614,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetMinTetherLength(FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMinTetherLength(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalBuff_Grappled.GetMinTetherLength(FGrappleTether&)", a0);
@@ -650,7 +650,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.GetReplicatedOwnerInputs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetReplicatedOwnerInputs() const
     {
         return NativeCall<void*>(this, "APrimalBuff_Grappled.GetReplicatedOwnerInputs()");
@@ -666,7 +666,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetTetherBreakLimit_OwnerPastCurrentLengthDelta(FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetTetherBreakLimit_OwnerPastCurrentLengthDelta(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalBuff_Grappled.GetTetherBreakLimit_OwnerPastCurrentLengthDelta(FGrappleTether&)", a0);
@@ -674,7 +674,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.GetTetherBreakLimit_OwnerPastCurrentLengthForTime(FGrappleTether&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetTetherBreakLimit_OwnerPastCurrentLengthForTime(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalBuff_Grappled.GetTetherBreakLimit_OwnerPastCurrentLengthForTime(FGrappleTether&)", a0);
@@ -730,7 +730,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.IsGrappledCharHardAttached(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsGrappledCharHardAttached(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff_Grappled.IsGrappledCharHardAttached(APrimalCharacter*)", a0);
@@ -746,7 +746,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_Grappled.IsHitWithinGrappleRange(FHitResult&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=254]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro IsHitWithinGrappleRange(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_Grappled.IsHitWithinGrappleRange(FHitResult&)", a0);
@@ -762,7 +762,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_Grappled.IsOwnerAboveGround(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=228]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsOwnerAboveGround(void* a0, float a1) const
     {
         return NativeCall<void*, void*, float>(this, "APrimalBuff_Grappled.IsOwnerAboveGround(UE::Math::TVector<double>&,float)", a0, a1);
@@ -770,7 +770,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.IsOwnerAgainstValidSurface()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsOwnerAgainstValidSurface() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.IsOwnerAgainstValidSurface()");
@@ -778,7 +778,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.IsOwnerLookingAtAgainstSurface_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsOwnerLookingAtAgainstSurface_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.IsOwnerLookingAtAgainstSurface_Implementation()");
@@ -850,7 +850,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ModifyOverriddenCharVelocity(UE::Math::TVector<double>&,float)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=168]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=168+chamadores=2]]
     void ModifyOverriddenCharVelocity(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalBuff_Grappled.ModifyOverriddenCharVelocity(UE::Math::TVector<double>&,float)", a0, a1);
@@ -858,7 +858,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ModifyTetherMoveVelocity(UE::Math::TVector<double>&,FGrappleTether&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     void ModifyTetherMoveVelocity(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "APrimalBuff_Grappled.ModifyTetherMoveVelocity(UE::Math::TVector<double>&,FGrappleTether&)", a0, a1);
@@ -874,7 +874,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.ModifyTetherTensionLerpValue(float)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=140]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float ModifyTetherTensionLerpValue(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalBuff_Grappled.ModifyTetherTensionLerpValue(float)", a0);
@@ -882,7 +882,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ModifyTetherTensionLerpValue_Implementation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float ModifyTetherTensionLerpValue_Implementation(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalBuff_Grappled.ModifyTetherTensionLerpValue_Implementation(float)", a0);
@@ -890,7 +890,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Multi_SyncGrappleTetherLength(float)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=54]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=54+chamadores=2]]
     void Multi_SyncGrappleTetherLength(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff_Grappled.Multi_SyncGrappleTetherLength(float)", a0);
@@ -898,7 +898,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Multi_SyncGrappleTetherLength_Implementation(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=172+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void Multi_SyncGrappleTetherLength_Implementation(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff_Grappled.Multi_SyncGrappleTetherLength_Implementation(float)", a0);
@@ -906,7 +906,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_Grappled.Multi_SyncGrappleTetherLengths(TArray<float,TSizedDefaultAllocator<32>>&)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=168]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro Multi_SyncGrappleTetherLengths(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_Grappled.Multi_SyncGrappleTetherLengths(TArray<float,TSizedDefaultAllocator<32>>&)", a0);
@@ -930,7 +930,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnAgainstValidSurfaceStateChanged()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnAgainstValidSurfaceStateChanged() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnAgainstValidSurfaceStateChanged()");
@@ -938,7 +938,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnAgainstValidSurfaceStateChanged_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnAgainstValidSurfaceStateChanged_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnAgainstValidSurfaceStateChanged_Implementation()");
@@ -946,7 +946,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.OnAgainstValidSurfaceUpdated()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void OnAgainstValidSurfaceUpdated() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnAgainstValidSurfaceUpdated()");
@@ -954,7 +954,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.OnAllowedRestrictedAction()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnAllowedRestrictedAction() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnAllowedRestrictedAction()");
@@ -978,7 +978,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnGrappleStateChangedNotify_Implementation(unsignedchar&,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=701+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     void OnGrappleStateChangedNotify_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "APrimalBuff_Grappled.OnGrappleStateChangedNotify_Implementation(unsignedchar&,bool)", a0, a1);
@@ -986,7 +986,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnGrappleStateChanged_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=33]]
+    // endereco: casamento de bytes com a build de referencia
     void OnGrappleStateChanged_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnGrappleStateChanged_Implementation()");
@@ -994,7 +994,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff_Grappled.OnGrappleTetherAdded(FGrappleTether&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=157+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=157+chamadores=2+grafo=4/4]]
     void OnGrappleTetherAdded(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.OnGrappleTetherAdded(FGrappleTether&)", a0);
@@ -1010,7 +1010,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnGrappleTetherRemoved(FGrappleTether&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=157+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=157+chamadores=3+grafo=4/4]]
     void OnGrappleTetherRemoved(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.OnGrappleTetherRemoved(FGrappleTether&)", a0);
@@ -1018,7 +1018,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnGrappleTethersChanged()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void OnGrappleTethersChanged() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnGrappleTethersChanged()");
@@ -1026,7 +1026,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnGrappleTethersChanged_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=27]]
+    // endereco: casamento de bytes com a build de referencia
     void OnGrappleTethersChanged_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnGrappleTethersChanged_Implementation()");
@@ -1074,7 +1074,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnOwnerDeath_Implementation(APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnOwnerDeath_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.OnOwnerDeath_Implementation(APrimalCharacter*)", a0);
@@ -1090,7 +1090,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnOwnerTeleported()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=54]]
+    // endereco: casamento de bytes com a build de referencia
     void OnOwnerTeleported() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnOwnerTeleported()");
@@ -1098,7 +1098,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnReleasedPrimalChar(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnReleasedPrimalChar(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.OnReleasedPrimalChar(APrimalCharacter*)", a0);
@@ -1106,7 +1106,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnReleasedPrimalChar_Implementation(APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnReleasedPrimalChar_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.OnReleasedPrimalChar_Implementation(APrimalCharacter*)", a0);
@@ -1114,7 +1114,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.OnRep_ReplicatedGrappleTethers()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_ReplicatedGrappleTethers() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.OnRep_ReplicatedGrappleTethers()");
@@ -1162,7 +1162,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ReceiveTetherLengthsSuggestion(TArray<float,TSizedDefaultAllocator<32>>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=69]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ReceiveTetherLengthsSuggestion(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.ReceiveTetherLengthsSuggestion(TArray<float,TSizedDefaultAllocator<32>>&)", a0);
@@ -1170,7 +1170,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.RefreshAllTetherMasterRefs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshAllTetherMasterRefs() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.RefreshAllTetherMasterRefs()");
@@ -1190,7 +1190,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.ResetOwnerClientPositionErrorTolerance()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void ResetOwnerClientPositionErrorTolerance() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.ResetOwnerClientPositionErrorTolerance()");
@@ -1198,7 +1198,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ResetOwnerClientPositionErrorTolerance_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=208]]
+    // endereco: casamento de bytes com a build de referencia
     void ResetOwnerClientPositionErrorTolerance_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.ResetOwnerClientPositionErrorTolerance_Implementation()");
@@ -1206,7 +1206,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ResetOwnerVars()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ResetOwnerVars() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.ResetOwnerVars()");
@@ -1214,7 +1214,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ResetOwnerVars_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=444+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void ResetOwnerVars_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff_Grappled.ResetOwnerVars_Implementation()");
@@ -1222,7 +1222,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Server_SetGrappleState_Implementation(unsignedchar,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Server_SetGrappleState_Implementation(unsigned char a0, bool a1) const
     {
         NativeCall<void, unsigned char, bool>(this, "APrimalBuff_Grappled.Server_SetGrappleState_Implementation(unsignedchar,bool)", a0, a1);
@@ -1254,7 +1254,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Server_SuggestTetherLengths_Implementation(TArray<float,TSizedDefaultAlloca
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=55]]
+    // endereco: casamento de bytes com a build de referencia
     void Server_SuggestTetherLengths_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.Server_SuggestTetherLengths_Implementation(TArray<float,TSizedDefaultAllocator<32>>&)", a0);
@@ -1270,7 +1270,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Server_SyncOwnerInputs_Implementation(UE::Math::TVector2<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=87]]
+    // endereco: casamento de bytes com a build de referencia
     void Server_SyncOwnerInputs_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.Server_SyncOwnerInputs_Implementation(UE::Math::TVector2<double>)", a0);
@@ -1286,7 +1286,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.SetGrappleTetherAtIndexLength(int,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool SetGrappleTetherAtIndexLength(int a0, float a1) const
     {
         return NativeCall<bool, int, float>(this, "APrimalBuff_Grappled.SetGrappleTetherAtIndexLength(int,float)", a0, a1);
@@ -1302,7 +1302,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.SetupDelegateBindingsForChar(APrimalCharacter*,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=138+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=138+chamadores=4]]
     void SetupDelegateBindingsForChar(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "APrimalBuff_Grappled.SetupDelegateBindingsForChar(APrimalCharacter*,bool)", a0, a1);
@@ -1310,7 +1310,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.SetupDelegateBindingsForChar_Implementation(APrimalCharacter*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void SetupDelegateBindingsForChar_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "APrimalBuff_Grappled.SetupDelegateBindingsForChar_Implementation(APrimalCharacter*,bool)", a0, a1);
@@ -1318,7 +1318,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ShouldForceOwnerDedicatedMovementTickPerFrame()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=148]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldForceOwnerDedicatedMovementTickPerFrame() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.ShouldForceOwnerDedicatedMovementTickPerFrame()");
@@ -1350,7 +1350,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.ShouldReplicateOwnerInputs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldReplicateOwnerInputs() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.ShouldReplicateOwnerInputs()");
@@ -1358,7 +1358,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ShouldReplicateOwnerInputs_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=121]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldReplicateOwnerInputs_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.ShouldReplicateOwnerInputs_Implementation()");
@@ -1366,7 +1366,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Grappled.ShouldReturnToIdleGrappleState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldReturnToIdleGrappleState() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.ShouldReturnToIdleGrappleState()");
@@ -1374,7 +1374,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.ShouldReturnToIdleGrappleState_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldReturnToIdleGrappleState_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Grappled.ShouldReturnToIdleGrappleState_Implementation()");
@@ -1446,7 +1446,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.StaticRegisterNativesAPrimalBuff_Grappled()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesAPrimalBuff_Grappled()
     {
         NativeCall<void>(nullptr, "APrimalBuff_Grappled.StaticRegisterNativesAPrimalBuff_Grappled()");
@@ -1478,10 +1478,11 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=68]]
+    // classe: a funcao mora em APrimalBuff, e APrimalBuff_Grappled herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
-        NativeCall<void, float>(this, "APrimalBuff_Grappled.Tick(float)", a0);
+        NativeCall<void, float>(this, "APrimalBuff.Tick(float)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -1550,7 +1551,7 @@ struct APrimalBuff_Grappled : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Grappled.UpdateOwnerMovementSpeed_Implementation(UE::Math::TVector<double>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateOwnerMovementSpeed_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Grappled.UpdateOwnerMovementSpeed_Implementation(UE::Math::TVector<double>&)", a0);
@@ -1740,6 +1741,50 @@ struct APrimalBuff_Grappled : public APrimalBuff
     { return *GetNativePointerField<float*>(this, "APrimalBuff_Grappled.VelocityOverrideMaxDeltaTime"); }
     unsigned char& WantsGrappleStateField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalBuff_Grappled.WantsGrappleState"); }
+    BrzCampoPonteiro bAllowDinoPassengerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bAllowDinoPassenger")); }
+    BrzCampoPonteiro bAllowDinoRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bAllowDinoRiding")); }
+    BrzCampoPonteiro bAllowGrappleLogicOnRemoteClientsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bAllowGrappleLogicOnRemoteClients")); }
+    BrzCampoPonteiro bAllowGrappledCharacterToCutGrappleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bAllowGrappledCharacterToCutGrapple")); }
+    BrzCampoPonteiro bAllowLadderClimbingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bAllowLadderClimbing")); }
+    BrzCampoPonteiro bAllowStructureSeatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bAllowStructureSeating")); }
+    BrzCampoPonteiro bBrokeAnyTethersThisFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bBrokeAnyTethersThisFrame")); }
+    BrzCampoPonteiro bDebugGrapplingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bDebugGrappling")); }
+    BrzCampoPonteiro bDebugGrappling_AgainstSurfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bDebugGrappling_AgainstSurface")); }
+    BrzCampoPonteiro bDetachGrappledCharsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bDetachGrappledChars")); }
+    BrzCampoPonteiro bDidOverrideVelocityThisFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bDidOverrideVelocityThisFrame")); }
+    BrzCampoPonteiro bForceIdleGrappleStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bForceIdleGrappleState")); }
+    BrzCampoPonteiro bHasAnyGrappledCharsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bHasAnyGrappledChars")); }
+    BrzCampoPonteiro bHasAnyTethersAttachedToDynamicActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bHasAnyTethersAttachedToDynamicActors")); }
+    BrzCampoPonteiro bHasAnyValidTethersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bHasAnyValidTethers")); }
+    BrzCampoPonteiro bHasGrappleBuffInitializedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bHasGrappleBuffInitialized")); }
+    BrzCampoPonteiro bHasValidReservedTethersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bHasValidReservedTethers")); }
+    BrzCampoPonteiro bIsOwnerAgainstSurfaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bIsOwnerAgainstSurface")); }
+    BrzCampoPonteiro bLastIsOwnerSubmergedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bLastIsOwnerSubmerged")); }
+    BrzCampoPonteiro bLastIsOwnerSwingingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bLastIsOwnerSwinging")); }
+    BrzCampoPonteiro bOwnerMovementAffectedByGrappleTethersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bOwnerMovementAffectedByGrappleTethers")); }
+    BrzCampoPonteiro bShouldResetOwnerVarsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Grappled.bShouldResetOwnerVars")); }
     BitFieldValue<bool, unsigned __int32> bDetachGrappledChars()
     { return { (void*)this, "bDetachGrappledChars" }; }
     BitFieldValue<bool, unsigned __int32> bDebugGrappling()

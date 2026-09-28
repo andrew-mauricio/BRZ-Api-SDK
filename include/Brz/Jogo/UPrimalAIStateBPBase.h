@@ -45,7 +45,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.BPOnClearAttackState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPOnClearAttackState() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.BPOnClearAttackState()");
@@ -61,7 +61,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.CanUseState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=52]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CanUseState() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.CanUseState()");
@@ -69,7 +69,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.DealMeleeDamage(AActor*,FHitResult&)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro DealMeleeDamage(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalAIStateBPBase.DealMeleeDamage(AActor*,FHitResult&)", a0, a1);
@@ -77,7 +77,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.DealMeleeDamageDirect(AActor*,UE::Math::TVector<double>,float,float,TSubcla
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro DealMeleeDamageDirect(void* a0, void* a1, float a2, float a3, void* a4, bool a5, bool a6) const
     {
         return NativeCall<void*, void*, void*, float, float, void*, bool, bool>(this, "UPrimalAIStateBPBase.DealMeleeDamageDirect(AActor*,UE::Math::TVector<double>,float,float,TSubclassOf<UDamageType>,bool,bool)", a0, a1, a2, a3, a4, a5, a6);
@@ -85,7 +85,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.EndAnimationState(FName,ENetRole)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndAnimationState(unsigned long long a0, int a1) const
     {
         return NativeCall<void*, unsigned long long, int>(this, "UPrimalAIStateBPBase.EndAnimationState(FName,ENetRole)", a0, a1);
@@ -93,7 +93,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.FinishState()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FinishState() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.FinishState()");
@@ -101,7 +101,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.GetLastAttackTimeAndInterval(double&,float&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLastAttackTimeAndInterval(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalAIStateBPBase.GetLastAttackTimeAndInterval(double&,float&)", a0, a1);
@@ -109,7 +109,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.GetStateBeginTime()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetStateBeginTime() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.GetStateBeginTime()");
@@ -125,7 +125,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.IsChildState()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsChildState() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.IsChildState()");
@@ -141,7 +141,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.OnAnimNotifyCustomEvent(FName,UAnimSequenceBase*,ENetRole)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnAnimNotifyCustomEvent(unsigned long long a0, void* a1, int a2) const
     {
         return NativeCall<void*, unsigned long long, void*, int>(this, "UPrimalAIStateBPBase.OnAnimNotifyCustomEvent(FName,UAnimSequenceBase*,ENetRole)", a0, a1, a2);
@@ -173,7 +173,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.SetLastAttackTime()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetLastAttackTime() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.SetLastAttackTime()");
@@ -215,10 +215,10 @@ struct UPrimalAIStateBPBase
     { return *GetNativePointerField<FName*>(this, "UPrimalAIStateBPBase.AnimationCustomName"); }
     BrzCampoPonteiro ChildStatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.ChildStates")); }
-    BitFieldValue<bool, unsigned __int32> IsInAnimationState()
-    { return { (void*)this, "IsInAnimationState" }; }
-    BitFieldValue<bool, unsigned __int32> IsInAttackState()
-    { return { (void*)this, "IsInAttackState" }; }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.IsInAttackState")); }
     float& MaxAttackTickTimeField() const
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateBPBase.MaxAttackTickTime"); }
     float& MaxTickEventTimeField() const
@@ -231,20 +231,44 @@ struct UPrimalAIStateBPBase
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.ParentState")); }
     TObjectPtr<APawn>& PawnField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "UPrimalAIStateBPBase.Pawn"); }
-    BitFieldValue<bool, unsigned __int32> bBPCanUseState()
-    { return { (void*)this, "bBPCanUseState" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldResetInLosingTarget()
-    { return { (void*)this, "bShouldResetInLosingTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAttack()
-    { return { (void*)this, "bUseBPCanAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanInterrupt()
-    { return { (void*)this, "bUseBPCanInterrupt" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAttackWeight()
-    { return { (void*)this, "bUseBPOverrideAttackWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipIntervalCheck()
-    { return { (void*)this, "bUseBPSkipIntervalCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipRangeCheck()
-    { return { (void*)this, "bUseBPSkipRangeCheck" }; }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bBPCanUseState")); }
+    BrzCampoPonteiro bCanAttackWhileFlyingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bCanAttackWhileFlying")); }
+    BrzCampoPonteiro bClearAttackStateOnEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bClearAttackStateOnEnd")); }
+    BrzCampoPonteiro bEndStateWhenAttackAnimCompletesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bEndStateWhenAttackAnimCompletes")); }
+    BrzCampoPonteiro bIsMeleeAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bIsMeleeAttack")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPOnAnimNotifyCustomEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPOnAnimNotifyCustomEvent")); }
+    BrzCampoPonteiro bUseBPOnAttackEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPOnAttackEnd")); }
+    BrzCampoPonteiro bUseBPOnAttackStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPOnAttackStart")); }
+    BrzCampoPonteiro bUseBPOnAttackTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPOnAttackTick")); }
+    BrzCampoPonteiro bUseBPOnClearAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPOnClearAttackState")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPShouldEndAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPShouldEndAttack")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseBPSkipRangeCheck")); }
+    BrzCampoPonteiro bUseTickAnimationStateEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseTickAnimationStateEvent")); }
+    BrzCampoPonteiro bUseTickEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateBPBase.bUseTickEvent")); }
     BitFieldValue<bool, unsigned __int32> bCanAttackWhileFlying()
     { return { (void*)this, "bCanAttackWhileFlying" }; }
     BitFieldValue<bool, unsigned __int32> bClearAttackStateOnEnd()

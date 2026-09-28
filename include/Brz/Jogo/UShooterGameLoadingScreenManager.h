@@ -35,7 +35,7 @@ struct UShooterGameLoadingScreenManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterGameLoadingScreenManager.BeginStreamingPause(FViewport*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BeginStreamingPause(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UShooterGameLoadingScreenManager.BeginStreamingPause(FViewport*)", a0);
@@ -64,6 +64,13 @@ struct UShooterGameLoadingScreenManager
     {
         return NativeCall<void*>(this, "UShooterGameLoadingScreenManager.SetupLoadingScreen()");
     }
+
+    BrzCampoPonteiro BeginDelegateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameLoadingScreenManager.BeginDelegate")); }
+    BrzCampoPonteiro EndDelegateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameLoadingScreenManager.EndDelegate")); }
+    BrzCampoPonteiro bMovieWasPlayingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameLoadingScreenManager.bMovieWasPlaying")); }
 };
 
 #endif  // BRZ_SDK_JOGO_USHOOTERGAMELOADINGSCREENMANAGER_H

@@ -32,12 +32,23 @@ struct FActorDestructionInfo
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro DestroyedPositionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.DestroyedPosition")); }
     BrzCampoPonteiro LevelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.Level")); }
+    BrzCampoPonteiro NetGUIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.NetGUID")); }
+    BrzCampoPonteiro ObjOuterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.ObjOuter")); }
     BrzCampoPonteiro PathNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.PathName")); }
     BrzCampoPonteiro ReasonField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.Reason")); }
+    BrzCampoPonteiro StreamingLevelNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.StreamingLevelName")); }
+    BrzCampoPonteiro bIgnoreDistanceCullingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDestructionInfo.bIgnoreDistanceCulling")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORDESTRUCTIONINFO_H

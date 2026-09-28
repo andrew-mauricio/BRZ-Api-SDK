@@ -41,6 +41,8 @@ struct FPrimalCharacterStatusStateThresholds
     { return *GetNativePointerField<TArray<void*>*>(this, "FPrimalCharacterStatusStateThresholds.LowThresholdStatusStateType"); }
     TArray<void*>& LowThresholdStatusStateValuesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "FPrimalCharacterStatusStateThresholds.LowThresholdStatusStateValues"); }
+    BrzCampoPonteiro StatusStateThresholdValuesAbsoluteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusStateThresholds.StatusStateThresholdValuesAbsolute")); }
     BitFieldValue<bool, unsigned __int32> StatusStateThresholdValuesAbsolute()
     { return { (void*)this, "StatusStateThresholdValuesAbsolute" }; }
 

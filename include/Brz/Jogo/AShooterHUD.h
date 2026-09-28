@@ -61,14 +61,14 @@ struct AShooterHUD
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.AddReferencedObjects(UObject*,FReferenceCollector&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddReferencedObjects(void* a0, void* a1)
+    BrzPonteiro AddReferencedObjects(void* a0, void* a1) const
     {
-        return NativeCall<void*, void*, void*>(nullptr, "AShooterHUD.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
+        return NativeCall<void*, void*, void*>(this, "AShooterHUD.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.BPDrawHUD(UCanvas*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPDrawHUD(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.BPDrawHUD(UCanvas*)", a0);
@@ -76,7 +76,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.BPDrawUIHUD(UCanvas*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPDrawUIHUD(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.BPDrawUIHUD(UCanvas*)", a0);
@@ -84,7 +84,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.BPForceReinitUI()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPForceReinitUI() const
     {
         return NativeCall<void*>(this, "AShooterHUD.BPForceReinitUI()");
@@ -92,7 +92,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.BPGetHUDRichTextOverlays()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BPGetHUDRichTextOverlays() const
     {
         return NativeCall<void*>(this, "AShooterHUD.BPGetHUDRichTextOverlays()");
@@ -108,7 +108,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.BPRemoveHUDRichTextOverlaysByInstigator(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPRemoveHUDRichTextOverlaysByInstigator(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.BPRemoveHUDRichTextOverlaysByInstigator(AActor*)", a0);
@@ -160,7 +160,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.BPSimulateHit(float,FDamageEvent&,APawn*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPSimulateHit(float a0, void* a1, void* a2) const
     {
         return NativeCall<void*, float, void*, void*>(this, "AShooterHUD.BPSimulateHit(float,FDamageEvent&,APawn*)", a0, a1, a2);
@@ -176,7 +176,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.CancelCustomWheelRadialSelector()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CancelCustomWheelRadialSelector() const
     {
         return NativeCall<void*>(this, "AShooterHUD.CancelCustomWheelRadialSelector()");
@@ -184,7 +184,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ChatWindowHasFocus()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ChatWindowHasFocus() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ChatWindowHasFocus()");
@@ -208,7 +208,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.CloseChangeCameraModeUI()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CloseChangeCameraModeUI() const
     {
         return NativeCall<void*>(this, "AShooterHUD.CloseChangeCameraModeUI()");
@@ -216,7 +216,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.CloseSpawnMenu()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=57]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro CloseSpawnMenu() const
     {
         return NativeCall<void*>(this, "AShooterHUD.CloseSpawnMenu()");
@@ -224,7 +224,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=423]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Destroyed() const
     {
         return NativeCall<void*>(this, "AShooterHUD.Destroyed()");
@@ -232,7 +232,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.DrawCrosshair()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=3780+bytes40+grafo=27/28]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=3780+bytes40+grafo=28/28]]
     BrzPonteiro DrawCrosshair() const
     {
         return NativeCall<void*>(this, "AShooterHUD.DrawCrosshair()");
@@ -296,7 +296,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.EndAllRadialSelectors()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndAllRadialSelectors() const
     {
         return NativeCall<void*>(this, "AShooterHUD.EndAllRadialSelectors()");
@@ -312,7 +312,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.EndEmoteRadialSelector()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EndEmoteRadialSelector() const
     {
         return NativeCall<void*>(this, "AShooterHUD.EndEmoteRadialSelector()");
@@ -320,7 +320,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.EndMultiUseRadialSelector()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndMultiUseRadialSelector() const
     {
         return NativeCall<void*>(this, "AShooterHUD.EndMultiUseRadialSelector()");
@@ -328,7 +328,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.EndPlay(EEndPlayReason::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=118]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "AShooterHUD.EndPlay(EEndPlayReason::Type)", a0);
@@ -336,7 +336,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ForceHUDHidden(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ForceHUDHidden(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterHUD.ForceHUDHidden(bool)", a0);
@@ -384,7 +384,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetChatBoxWidget()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetChatBoxWidget() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetChatBoxWidget()");
@@ -392,7 +392,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetCurrentCrosshairScreenLocation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentCrosshairScreenLocation() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetCurrentCrosshairScreenLocation()");
@@ -400,7 +400,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetCurrentHubUI()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentHubUI() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetCurrentHubUI()");
@@ -408,7 +408,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetEmoteRadialFilter()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEmoteRadialFilter() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetEmoteRadialFilter()");
@@ -444,7 +444,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetMultiUseRadialSelection(FMultiUseEntry&,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMultiUseRadialSelection(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AShooterHUD.GetMultiUseRadialSelection(FMultiUseEntry&,bool)", a0, a1);
@@ -452,7 +452,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetMultiUseRadialSelectorTargetActor()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMultiUseRadialSelectorTargetActor() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetMultiUseRadialSelectorTargetActor()");
@@ -460,7 +460,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetOrCreateActiveHub()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetOrCreateActiveHub() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetOrCreateActiveHub()");
@@ -500,7 +500,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.GetSubtitlesWidget()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSubtitlesWidget() const
     {
         return NativeCall<void*>(this, "AShooterHUD.GetSubtitlesWidget()");
@@ -508,7 +508,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.HideChatBox()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=77]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro HideChatBox() const
     {
         return NativeCall<void*>(this, "AShooterHUD.HideChatBox()");
@@ -516,7 +516,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.HideMissionAlert()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HideMissionAlert() const
     {
         return NativeCall<void*>(this, "AShooterHUD.HideMissionAlert()");
@@ -524,7 +524,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.HideTopMissionAlert()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HideTopMissionAlert() const
     {
         return NativeCall<void*>(this, "AShooterHUD.HideTopMissionAlert()");
@@ -548,7 +548,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.IsChatBoxVisible()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsChatBoxVisible() const
     {
         return NativeCall<void*>(this, "AShooterHUD.IsChatBoxVisible()");
@@ -556,7 +556,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.IsMissionAlertVisible(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsMissionAlertVisible(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterHUD.IsMissionAlertVisible(bool)", a0);
@@ -564,7 +564,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.IsUsingBuildingUI(TSubclassOf<UBuildingUI>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsUsingBuildingUI(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.IsUsingBuildingUI(TSubclassOf<UBuildingUI>)", a0);
@@ -572,7 +572,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.IsUsingCustomWheelRadialSelector()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsUsingCustomWheelRadialSelector() const
     {
         return NativeCall<void*>(this, "AShooterHUD.IsUsingCustomWheelRadialSelector()");
@@ -580,7 +580,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.IsZoomingSpyglass()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=291]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsZoomingSpyglass() const
     {
         return NativeCall<void*>(this, "AShooterHUD.IsZoomingSpyglass()");
@@ -588,7 +588,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.MoveChatBoxToBottomOfScreen()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MoveChatBoxToBottomOfScreen() const
     {
         return NativeCall<void*>(this, "AShooterHUD.MoveChatBoxToBottomOfScreen()");
@@ -604,7 +604,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.NotifyHubRemoveFromViewport(UUI_Hub*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NotifyHubRemoveFromViewport(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.NotifyHubRemoveFromViewport(UUI_Hub*)", a0);
@@ -636,7 +636,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.PushMilestoneNotify(FName,float,bool,FName)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro PushMilestoneNotify(unsigned long long a0, float a1, bool a2, unsigned long long a3) const
     {
         return NativeCall<void*, unsigned long long, float, bool, unsigned long long>(this, "AShooterHUD.PushMilestoneNotify(FName,float,bool,FName)", a0, a1, a2, a3);
@@ -696,7 +696,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ReturnChatBoxToIntialLocation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ReturnChatBoxToIntialLocation() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ReturnChatBoxToIntialLocation()");
@@ -704,7 +704,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.SetAllowShowChatBox(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetAllowShowChatBox(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterHUD.SetAllowShowChatBox(bool)", a0);
@@ -728,7 +728,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowChangeCameraModeUI()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=108]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowChangeCameraModeUI() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ShowChangeCameraModeUI()");
@@ -736,7 +736,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowChatBox(bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=42]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowChatBox(bool a0, bool a1) const
     {
         return NativeCall<void*, bool, bool>(this, "AShooterHUD.ShowChatBox(bool,bool)", a0, a1);
@@ -752,7 +752,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowInventory(UPrimalInventoryComponent*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowInventory(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.ShowInventory(UPrimalInventoryComponent*)", a0);
@@ -772,7 +772,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowMap()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=344+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowMap() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ShowMap()");
@@ -792,7 +792,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowMissionList(UObject*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=769+grafo=14/14]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowMissionList(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.ShowMissionList(UObject*)", a0);
@@ -808,7 +808,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowNewMinimap(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=117]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowNewMinimap(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.ShowNewMinimap(AShooterPlayerController*)", a0);
@@ -832,7 +832,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowSpawnUI(APrimalStructure*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=13/13]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowSpawnUI(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.ShowSpawnUI(APrimalStructure*)", a0);
@@ -840,7 +840,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowSurvivorProfileUI()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowSurvivorProfileUI() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ShowSurvivorProfileUI()");
@@ -856,7 +856,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowTribeManager(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowTribeManager(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterHUD.ShowTribeManager(bool)", a0);
@@ -864,7 +864,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ShowTribeWarMenu()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowTribeWarMenu() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ShowTribeWarMenu()");
@@ -900,7 +900,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.StartCustomWheelRadialSelector_v2(FCustomWheelSettings&,TArray<FCustomWheelEntry_v2,
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=347+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StartCustomWheelRadialSelector_v2(void* a0, void* a1, bool a2, void* a3, bool a4) const
     {
         return NativeCall<void*, void*, void*, bool, void*, bool>(this, "AShooterHUD.StartCustomWheelRadialSelector_v2(FCustomWheelSettings&,TArray<FCustomWheelEntry_v2,TSizedDefaultAllocator<32>>&,bool,UObject*,bool)", a0, a1, a2, a3, a4);
@@ -908,7 +908,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.StartInventoryRadialSelector()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro StartInventoryRadialSelector() const
     {
         return NativeCall<void*>(this, "AShooterHUD.StartInventoryRadialSelector()");
@@ -916,7 +916,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.ToggleHudHidden()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=887+grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ToggleHudHidden() const
     {
         return NativeCall<void*>(this, "AShooterHUD.ToggleHudHidden()");
@@ -924,7 +924,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.TryToHideMouseCursor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TryToHideMouseCursor() const
     {
         return NativeCall<void*>(this, "AShooterHUD.TryToHideMouseCursor()");
@@ -932,7 +932,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.TutorialEndTimer()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=187]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TutorialEndTimer() const
     {
         return NativeCall<void*>(this, "AShooterHUD.TutorialEndTimer()");
@@ -945,12 +945,12 @@ struct AShooterHUD
     BrzCampoPonteiro AdminMangmentUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.AdminMangmentUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +56, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +56, medido na build 25535041
     //  (offset absoluto medido: 0xD48; confianca media)
     void*& AimAssistLastLocationField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerInfoRequestTimeInterval` +8, medido na build 25090264
+    //  ancorado em `PlayerInfoRequestTimeInterval` +8, medido na build 25535041
     //  (offset absoluto medido: 0x5B8; confianca alta)
     void*& AllPlayersDataField() const
     { return BrzCampoAncorado<void*>(this, "PlayerInfoRequestTimeInterval", 8); }
@@ -971,17 +971,17 @@ struct AShooterHUD
     BrzCampoPonteiro CachedFloatingOverlapsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CachedFloatingOverlaps")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +32, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +32, medido na build 25535041
     //  (offset absoluto medido: 0xD30; confianca alta)
     void*& CantBuildNotifyTimeField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +40, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +40, medido na build 25535041
     //  (offset absoluto medido: 0xD38; confianca media)
     void*& CantBuildStringField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +24, medido na build 25090264
+    //  ancorado em `SpeechBubble` +24, medido na build 25535041
     //  (offset absoluto medido: 0x9A0; confianca alta)
     void*& CantUseHereTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 24); }
@@ -1002,7 +1002,7 @@ struct AShooterHUD
     float& ClientReplicationSendNowThresholdField() const
     { return *GetNativePointerField<float*>(this, "AShooterHUD.ClientReplicationSendNowThreshold"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +48, medido na build 25090264
+    //  ancorado em `CustomRadialSelector` +48, medido na build 25535041
     //  (offset absoluto medido: 0x800; confianca media)
     void*& ColorMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 48); }
@@ -1017,19 +1017,19 @@ struct AShooterHUD
     BrzCampoPonteiro CurrentBasedUIField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CurrentBasedUI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +60, medido na build 25090264
+    //  ancorado em `SpeechBubble` +60, medido na build 25535041
     //  (offset absoluto medido: 0x9C4; confianca media)
     void*& CurrentCrosshairAlphaField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +176, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +176, medido na build 25535041
     //  (offset absoluto medido: 0xE58; confianca baixa)
     void*& CurrentCrosshairScreenLocationField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 176); }
     BrzCampoPonteiro CurrentMinimapHUDField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CurrentMinimapHUD")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +72, medido na build 25090264
+    //  ancorado em `CustomRadialSelector` +72, medido na build 25535041
     //  (offset absoluto medido: 0x818; confianca media)
     void*& CurrentMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 72); }
@@ -1038,19 +1038,19 @@ struct AShooterHUD
     BrzCampoPonteiro CurrentRadialSelectorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CurrentRadialSelector")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +8, medido na build 25090264
+    //  ancorado em `CustomRadialSelector` +8, medido na build 25535041
     //  (offset absoluto medido: 0x7D8; confianca media)
     void*& CurrentRespawnUIField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +8, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +8, medido na build 25535041
     //  (offset absoluto medido: 0xDB0; confianca media)
     void*& CurrentSpawnMenuField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 8); }
     int& CurrentTargetIndexField() const
     { return *GetNativePointerField<int*>(this, "AShooterHUD.CurrentTargetIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +8, medido na build 25090264
+    //  ancorado em `TutorialUI` +8, medido na build 25535041
     //  (offset absoluto medido: 0xEE8; confianca alta)
     void*& CurrentTutorialIndexField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 8); }
@@ -1095,7 +1095,7 @@ struct AShooterHUD
     BrzCampoPonteiro EmoteRadialSelectorTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.EmoteRadialSelectorTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +192, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +192, medido na build 25535041
     //  (offset absoluto medido: 0xE68; confianca baixa)
     void*& ExtraHitTestInvisibleHiddenUIsField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 192); }
@@ -1120,12 +1120,12 @@ struct AShooterHUD
     BrzCampoPonteiro HUDAssets02TextureAtlasField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HUDAssets02TextureAtlas")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +12, medido na build 25090264
+    //  ancorado em `SpeechBubble` +12, medido na build 25535041
     //  (offset absoluto medido: 0x994; confianca alta)
     void*& HUDDarkField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +8, medido na build 25090264
+    //  ancorado em `SpeechBubble` +8, medido na build 25535041
     //  (offset absoluto medido: 0x990; confianca alta)
     void*& HUDLightField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 8); }
@@ -1134,7 +1134,7 @@ struct AShooterHUD
     BrzCampoPonteiro HUDNotificationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HUDNotifications")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +24, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +24, medido na build 25535041
     //  (offset absoluto medido: 0xD28; confianca alta)
     void*& HideChatBoxHandleField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 24); }
@@ -1143,12 +1143,12 @@ struct AShooterHUD
     BrzCampoPonteiro HitNotifyCrosshairField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HitNotifyCrosshair")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +232, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +232, medido na build 25535041
     //  (offset absoluto medido: 0xBE8; confianca baixa)
     void*& HitNotifyDataField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +48, medido na build 25090264
+    //  ancorado em `SpeechBubble` +48, medido na build 25535041
     //  (offset absoluto medido: 0x9B8; confianca media)
     void*& HitNotifyDisplayTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 48); }
@@ -1157,7 +1157,7 @@ struct AShooterHUD
     BrzCampoPonteiro HitNotifyTextureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HitNotifyTexture")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +16, medido na build 25090264
+    //  ancorado em `TutorialUI` +16, medido na build 25535041
     //  (offset absoluto medido: 0xEF0; confianca alta)
     void*& HitchStringField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 16); }
@@ -1166,12 +1166,12 @@ struct AShooterHUD
     BrzCampoPonteiro HurtCameraShakeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HurtCameraShake")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +56, medido na build 25090264
+    //  ancorado em `CustomRadialSelector` +56, medido na build 25535041
     //  (offset absoluto medido: 0x808; confianca media)
     void*& IconMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +368, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +368, medido na build 25535041
     //  (offset absoluto medido: 0xC70; confianca baixa)
     void*& InfoItemsField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 368); }
@@ -1204,14 +1204,14 @@ struct AShooterHUD
     BrzCampoPonteiro KilledIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.KilledIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +36, medido na build 25090264
+    //  ancorado em `TutorialUI` +36, medido na build 25535041
     //  (offset absoluto medido: 0xF04; confianca media)
     void*& KingHitchField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 36); }
     double& LastActorForceReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastActorForceReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CachedFloatingOverlaps` +16, medido na build 25090264
+    //  ancorado em `CachedFloatingOverlaps` +16, medido na build 25535041
     //  (offset absoluto medido: 0xF20; confianca alta)
     void*& LastCachedOverlapsFrameField() const
     { return BrzCampoAncorado<void*>(this, "CachedFloatingOverlaps", 16); }
@@ -1220,32 +1220,32 @@ struct AShooterHUD
     double& LastExitStasisTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastExitStasisTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +52, medido na build 25090264
+    //  ancorado em `SpeechBubble` +52, medido na build 25535041
     //  (offset absoluto medido: 0x9BC; confianca media)
     void*& LastFilterEmoteNameField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +216, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +216, medido na build 25535041
     //  (offset absoluto medido: 0xE80; confianca baixa)
     void*& LastHUDTargetChangedTimeField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +40, medido na build 25090264
+    //  ancorado em `SpeechBubble` +40, medido na build 25535041
     //  (offset absoluto medido: 0x9B0; confianca media)
     double& LastHitTimeField() const
     { return BrzCampoAncorado<double>(this, "SpeechBubble", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +32, medido na build 25090264
+    //  ancorado em `TutorialUI` +32, medido na build 25535041
     //  (offset absoluto medido: 0xF00; confianca alta)
     void*& LastHitchField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +40, medido na build 25090264
+    //  ancorado em `TutorialUI` +40, medido na build 25535041
     //  (offset absoluto medido: 0xF08; confianca media)
     void*& LastNumLocalPlayersField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowAllPlayersWhenSpectatingLocal` +6, medido na build 25090264
+    //  ancorado em `bShowAllPlayersWhenSpectatingLocal` +6, medido na build 25535041
     //  (offset absoluto medido: 0x5A8; confianca alta)
     void*& LastPlayerInfoRequestTimeField() const
     { return BrzCampoAncorado<void*>(this, "bShowAllPlayersWhenSpectatingLocal", 6); }
@@ -1254,7 +1254,7 @@ struct AShooterHUD
     double& LastPreReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastPreReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +224, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +224, medido na build 25535041
     //  (offset absoluto medido: 0xE88; confianca baixa)
     void*& LastReceivedChatMessagesField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 224); }
@@ -1265,7 +1265,7 @@ struct AShooterHUD
     double& LastThrottledTickTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastThrottledTickTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bMultiUseIsDrawingUIHUD` +8, medido na build 25090264
+    //  ancorado em `bMultiUseIsDrawingUIHUD` +8, medido na build 25535041
     //  (offset absoluto medido: 0xD78; confianca alta)
     void*& LastTorpidityIncreaseTimeField() const
     { return BrzCampoAncorado<void*>(this, "bMultiUseIsDrawingUIHUD", 8); }
@@ -1292,7 +1292,7 @@ struct AShooterHUD
     BrzCampoPonteiro MissionListUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.MissionListUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +192, medido na build 25090264
+    //  ancorado em `CustomRadialSelector` +192, medido na build 25535041
     //  (offset absoluto medido: 0x890; confianca baixa)
     void*& MultiUseActionLocationField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 192); }
@@ -1349,24 +1349,24 @@ struct AShooterHUD
     TObjectPtr<AActor>& NetworkSpatializationParentField() const
     { return *GetNativePointerField<TObjectPtr<AActor>*>(this, "AShooterHUD.NetworkSpatializationParent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +32, medido na build 25090264
+    //  ancorado em `SpeechBubble` +32, medido na build 25535041
     //  (offset absoluto medido: 0x9A8; confianca alta)
     void*& NoAmmoFadeOutTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +16, medido na build 25090264
+    //  ancorado em `SpeechBubble` +16, medido na build 25535041
     //  (offset absoluto medido: 0x998; confianca alta)
     void*& NoAmmoNotifyTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 16); }
     BrzCampoPonteiro NormalFontField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.NormalFont")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +224, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +224, medido na build 25535041
     //  (offset absoluto medido: 0xBE0; confianca baixa)
     void*& OffsetField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +96, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +96, medido na build 25535041
     //  (offset absoluto medido: 0xB60; confianca media)
     void*& OffsetsField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 96); }
@@ -1385,7 +1385,7 @@ struct AShooterHUD
     BrzCampoPonteiro OnMatineeUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.OnMatineeUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SingletonHUDNotifications` +16, medido na build 25090264
+    //  ancorado em `SingletonHUDNotifications` +16, medido na build 25535041
     //  (offset absoluto medido: 0xCB0; confianca alta)
     void*& OnPlayerTalkingStateChangedDelegateField() const
     { return BrzCampoAncorado<void*>(this, "SingletonHUDNotifications", 16); }
@@ -1438,7 +1438,7 @@ struct AShooterHUD
     FActorTickFunction& PrimaryActorTickField() const
     { return *GetNativePointerField<FActorTickFunction*>(this, "AShooterHUD.PrimaryActorTick"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +28, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +28, medido na build 25535041
     //  (offset absoluto medido: 0xB1C; confianca media)
     void*& PulseValueField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 28); }
@@ -1461,12 +1461,12 @@ struct AShooterHUD
     BrzCampoPonteiro SavingOverlayUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.SavingOverlayUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +24, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +24, medido na build 25535041
     //  (offset absoluto medido: 0xB18; confianca media)
     void*& ScaleUIField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +32, medido na build 25090264
+    //  ancorado em `HitNotifyCrosshair` +32, medido na build 25535041
     //  (offset absoluto medido: 0xB20; confianca media)
     void*& ShadowedFontField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 32); }
@@ -1489,7 +1489,7 @@ struct AShooterHUD
     TArray<TWeakObjectPtr<void>>& StasisUnRegisteredComponentsField() const
     { return *GetNativePointerField<TArray<TWeakObjectPtr<void>>*>(this, "AShooterHUD.StasisUnRegisteredComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +16, medido na build 25090264
+    //  ancorado em `CustomRadialSelector` +16, medido na build 25535041
     //  (offset absoluto medido: 0x7E0; confianca media)
     void*& StringMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 16); }
@@ -1506,7 +1506,7 @@ struct AShooterHUD
     BrzCampoPonteiro TeamPingWheelSettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.TeamPingWheelSettings")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +16, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +16, medido na build 25535041
     //  (offset absoluto medido: 0xDB8; confianca media)
     void*& TempChatMsgField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 16); }
@@ -1515,7 +1515,7 @@ struct AShooterHUD
     float& TimeToHideChatField() const
     { return *GetNativePointerField<float*>(this, "AShooterHUD.TimeToHideChat"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +16, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +16, medido na build 25535041
     //  (offset absoluto medido: 0xD20; confianca alta)
     void*& TimerHandle_DoShowSpawnUIField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 16); }
@@ -1524,7 +1524,7 @@ struct AShooterHUD
     BrzCampoPonteiro TopOverlayHUDUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.TopOverlayHUDUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +208, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +208, medido na build 25535041
     //  (offset absoluto medido: 0xE78; confianca baixa)
     void*& TorpidityOpacityField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 208); }
@@ -1537,7 +1537,7 @@ struct AShooterHUD
     BrzCampoPonteiro TribeWarUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.TribeWarUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +304, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +304, medido na build 25535041
     //  (offset absoluto medido: 0xED8; confianca baixa)
     void*& TutorialEndTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 304); }
@@ -1553,318 +1553,336 @@ struct AShooterHUD
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.WhistleRadialSelector")); }
     BrzCampoPonteiro WhistleRadialSelectorTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.WhistleRadialSelectorTemplate")); }
-    BitFieldValue<bool, unsigned __int32> bActorEnableCollision()
-    { return { (void*)this, "bActorEnableCollision" }; }
-    BitFieldValue<bool, unsigned __int32> bActorIsBeingDestroyed()
-    { return { (void*)this, "bActorIsBeingDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bActorPreventPhysicsSceneRegistration()
-    { return { (void*)this, "bActorPreventPhysicsSceneRegistration" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowReceiveTickEventOnDedicatedServer()
-    { return { (void*)this, "bAllowReceiveTickEventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowTickBeforeBeginPlay()
-    { return { (void*)this, "bAllowTickBeforeBeginPlay" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysCreatePhysicsState()
-    { return { (void*)this, "bAlwaysCreatePhysicsState" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevant()
-    { return { (void*)this, "bAlwaysRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysRelevantPrimalStructure()
-    { return { (void*)this, "bAlwaysRelevantPrimalStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bAsyncPhysicsTickEnabled()
-    { return { (void*)this, "bAsyncPhysicsTickEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bAttachmentReplicationUseNetworkParent()
-    { return { (void*)this, "bAttachmentReplicationUseNetworkParent" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoDestroyWhenFinished()
-    { return { (void*)this, "bAutoDestroyWhenFinished" }; }
+    BrzCampoPonteiro bActorEnableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bActorEnableCollision")); }
+    BrzCampoPonteiro bActorIsBeingDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bActorIsBeingDestroyed")); }
+    BrzCampoPonteiro bActorPreventPhysicsSceneRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bActorPreventPhysicsSceneRegistration")); }
+    BrzCampoPonteiro bAllowReceiveTickEventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAllowReceiveTickEventOnDedicatedServer")); }
+    BrzCampoPonteiro bAllowTickBeforeBeginPlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAllowTickBeforeBeginPlay")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bAlwaysRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAlwaysRelevant")); }
+    BrzCampoPonteiro bAlwaysRelevantPrimalStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAlwaysRelevantPrimalStructure")); }
+    BrzCampoPonteiro bAsyncPhysicsTickEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAsyncPhysicsTickEnabled")); }
+    BrzCampoPonteiro bAttachmentReplicationUseNetworkParentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAttachmentReplicationUseNetworkParent")); }
+    BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAutoDestroyWhenFinished")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +72, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +72, medido na build 25535041
     //  (offset absoluto medido: 0xD58; confianca media)
     void*& bAutoShowChatField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 72); }
-    BitFieldValue<bool, unsigned __int32> bAutoStasis()
-    { return { (void*)this, "bAutoStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bBPInventoryItemUsedHandlesDurability()
-    { return { (void*)this, "bBPInventoryItemUsedHandlesDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPostInitializeComponents()
-    { return { (void*)this, "bBPPostInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBPPreInitializeComponents()
-    { return { (void*)this, "bBPPreInitializeComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bBlockInput()
-    { return { (void*)this, "bBlockInput" }; }
-    BitFieldValue<bool, unsigned __int32> bBlueprintMultiUseEntries()
-    { return { (void*)this, "bBlueprintMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplication()
-    { return { (void*)this, "bCallPreReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bCallPreReplicationForReplay()
-    { return { (void*)this, "bCallPreReplicationForReplay" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeDamaged()
-    { return { (void*)this, "bCanBeDamaged" }; }
-    BitFieldValue<bool, unsigned __int32> bCanBeInCluster()
-    { return { (void*)this, "bCanBeInCluster" }; }
+    BrzCampoPonteiro bAutoStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAutoStasis")); }
+    BrzCampoPonteiro bBPInventoryItemUsedHandlesDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bBPInventoryItemUsedHandlesDurability")); }
+    BrzCampoPonteiro bBPPostInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bBPPostInitializeComponents")); }
+    BrzCampoPonteiro bBPPreInitializeComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bBPPreInitializeComponents")); }
+    BrzCampoPonteiro bBlockInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bBlockInput")); }
+    BrzCampoPonteiro bBlueprintMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bBlueprintMultiUseEntries")); }
+    BrzCampoPonteiro bCallPreReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bCallPreReplication")); }
+    BrzCampoPonteiro bCallPreReplicationForReplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bCallPreReplicationForReplay")); }
+    BrzCampoPonteiro bCanBeDamagedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bCanBeDamaged")); }
+    BrzCampoPonteiro bCanBeInClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bCanBeInCluster")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +212, medido na build 25090264
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +212, medido na build 25535041
     //  (offset absoluto medido: 0xE7C; confianca baixa)
     void*& bChatVisibleField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 212); }
-    BitFieldValue<bool, unsigned __int32> bClimbable()
-    { return { (void*)this, "bClimbable" }; }
-    BitFieldValue<bool, unsigned __int32> bCollideWhenPlacing()
-    { return { (void*)this, "bCollideWhenPlacing" }; }
-    BitFieldValue<bool, unsigned __int32> bDesiredRepGraphBehaviorHasBeenSet()
-    { return { (void*)this, "bDesiredRepGraphBehaviorHasBeenSet" }; }
-    BitFieldValue<bool, unsigned __int32> bDestroyDontClearNetworkChildren()
-    { return { (void*)this, "bDestroyDontClearNetworkChildren" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableRigidBodyAnimNodes()
-    { return { (void*)this, "bDisableRigidBodyAnimNodes" }; }
-    BitFieldValue<bool, unsigned __int32> bEditorOnlyActorShowInPIE()
-    { return { (void*)this, "bEditorOnlyActorShowInPIE" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
-    { return { (void*)this, "bEnableAutoLODGeneration" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableDebugTextShadow()
-    { return { (void*)this, "bEnableDebugTextShadow" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableMultiUse()
-    { return { (void*)this, "bEnableMultiUse" }; }
-    BitFieldValue<bool, unsigned __int32> bExchangedRoles()
-    { return { (void*)this, "bExchangedRoles" }; }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bClimbable")); }
+    BrzCampoPonteiro bCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bCollideWhenPlacing")); }
+    BrzCampoPonteiro bDefeatedBossPreventingSpawnUICreationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bDefeatedBossPreventingSpawnUICreation")); }
+    BrzCampoPonteiro bDesiredRepGraphBehaviorHasBeenSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bDesiredRepGraphBehaviorHasBeenSet")); }
+    BrzCampoPonteiro bDestroyDontClearNetworkChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bDestroyDontClearNetworkChildren")); }
+    BrzCampoPonteiro bDisableRigidBodyAnimNodesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bDisableRigidBodyAnimNodes")); }
+    BrzCampoPonteiro bEditorOnlyActorShowInPIEField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bEditorOnlyActorShowInPIE")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bEnableDebugTextShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bEnableDebugTextShadow")); }
+    BrzCampoPonteiro bEnableMultiUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bEnableMultiUse")); }
+    BrzCampoPonteiro bExchangedRolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bExchangedRoles")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +79, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +79, medido na build 25535041
     //  (offset absoluto medido: 0xD5F; confianca media)
     void*& bExtraConsoleHideHUDField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 79); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +78, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +78, medido na build 25535041
     //  (offset absoluto medido: 0xD5E; confianca media)
     void*& bExtraHideHUDField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 78); }
-    BitFieldValue<bool, unsigned __int32> bFindCameraComponentWhenViewTarget()
-    { return { (void*)this, "bFindCameraComponentWhenViewTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowNetMulticast()
-    { return { (void*)this, "bForceAllowNetMulticast" }; }
+    BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bFindCameraComponentWhenViewTarget")); }
+    BrzCampoPonteiro bForceAllowNetMulticastField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceAllowNetMulticast")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +77, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +77, medido na build 25535041
     //  (offset absoluto medido: 0xD5D; confianca media)
     void*& bForceHUDHiddenField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 77); }
-    BitFieldValue<bool, unsigned __int32> bForceHiddenReplication()
-    { return { (void*)this, "bForceHiddenReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHighQualityViewerReplication()
-    { return { (void*)this, "bForceHighQualityViewerReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInfiniteDrawDistance()
-    { return { (void*)this, "bForceInfiniteDrawDistance" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetAddressable()
-    { return { (void*)this, "bForceNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNetworkSpatialization()
-    { return { (void*)this, "bForceNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bForceNonBlockingHits()
-    { return { (void*)this, "bForceNonBlockingHits" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventSeamlessTravel()
-    { return { (void*)this, "bForcePreventSeamlessTravel" }; }
-    BitFieldValue<bool, unsigned __int32> bForceReplicateDormantChildrenWithoutSpatialRelevancy()
-    { return { (void*)this, "bForceReplicateDormantChildrenWithoutSpatialRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bForcedHudDrawingRequiresSameTeam()
-    { return { (void*)this, "bForcedHudDrawingRequiresSameTeam" }; }
+    BrzCampoPonteiro bForceHiddenReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceHiddenReplication")); }
+    BrzCampoPonteiro bForceHighQualityViewerReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceHighQualityViewerReplication")); }
+    BrzCampoPonteiro bForceInfiniteDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceInfiniteDrawDistance")); }
+    BrzCampoPonteiro bForceNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceNetAddressable")); }
+    BrzCampoPonteiro bForceNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceNetworkSpatialization")); }
+    BrzCampoPonteiro bForceNonBlockingHitsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceNonBlockingHits")); }
+    BrzCampoPonteiro bForcePreventSeamlessTravelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForcePreventSeamlessTravel")); }
+    BrzCampoPonteiro bForceReplicateDormantChildrenWithoutSpatialRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceReplicateDormantChildrenWithoutSpatialRelevancy")); }
+    BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForcedHudDrawingRequiresSameTeam")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowingMinimapTooltip` +1, medido na build 25090264
+    //  ancorado em `bShowingMinimapTooltip` +1, medido na build 25535041
     //  (offset absoluto medido: 0xF2A; confianca alta)
     void*& bFrameGenDisabledBecauseUIField() const
     { return BrzCampoAncorado<void*>(this, "bShowingMinimapTooltip", 1); }
-    BitFieldValue<bool, unsigned __int32> bGenerateOverlapEventsDuringLevelStreaming()
-    { return { (void*)this, "bGenerateOverlapEventsDuringLevelStreaming" }; }
-    BitFieldValue<bool, unsigned __int32> bHasHighVolumeRPCs()
-    { return { (void*)this, "bHasHighVolumeRPCs" }; }
-    BitFieldValue<bool, unsigned __int32> bHibernateChange()
-    { return { (void*)this, "bHibernateChange" }; }
-    BitFieldValue<bool, unsigned __int32> bHidden()
-    { return { (void*)this, "bHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNetworkRangeScaling()
-    { return { (void*)this, "bIgnoreNetworkRangeScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoredByCharacterEncroachment()
-    { return { (void*)this, "bIgnoredByCharacterEncroachment" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoresOriginShifting()
-    { return { (void*)this, "bIgnoresOriginShifting" }; }
+    BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bGenerateOverlapEventsDuringLevelStreaming")); }
+    BrzCampoPonteiro bHUDHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bHUDHidden")); }
+    BrzCampoPonteiro bHasHighVolumeRPCsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bHasHighVolumeRPCs")); }
+    BrzCampoPonteiro bHibernateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bHibernateChange")); }
+    BrzCampoPonteiro bHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bHidden")); }
+    BrzCampoPonteiro bHudHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bHUDHidden")); }
+    BrzCampoPonteiro bIgnoreNetworkRangeScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIgnoreNetworkRangeScaling")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIgnoresOriginShiftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIgnoresOriginShifting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +76, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +76, medido na build 25535041
     //  (offset absoluto medido: 0xD5C; confianca media)
     void*& bInitializedUIScenesField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 76); }
-    BitFieldValue<bool, unsigned __int32> bIsDestroyedFromChildActorComponent()
-    { return { (void*)this, "bIsDestroyedFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnlyActor()
-    { return { (void*)this, "bIsEditorOnlyActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsFromChildActorComponent()
-    { return { (void*)this, "bIsFromChildActorComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bIsInvincible()
-    { return { (void*)this, "bIsInvincible" }; }
-    BitFieldValue<bool, unsigned __int32> bIsMapActor()
-    { return { (void*)this, "bIsMapActor" }; }
-    BitFieldValue<bool, unsigned __int32> bIsValidUnstasisCaster()
-    { return { (void*)this, "bIsValidUnstasisCaster" }; }
+    BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsDestroyedFromChildActorComponent")); }
+    BrzCampoPonteiro bIsEditorOnlyActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsEditorOnlyActor")); }
+    BrzCampoPonteiro bIsFromChildActorComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsFromChildActorComponent")); }
+    BrzCampoPonteiro bIsInvincibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsInvincible")); }
+    BrzCampoPonteiro bIsMapActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsMapActor")); }
+    BrzCampoPonteiro bIsValidUnstasisCasterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsValidUnstasisCaster")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowingMinimapTooltip` +2, medido na build 25090264
+    //  ancorado em `bShowingMinimapTooltip` +2, medido na build 25535041
     //  (offset absoluto medido: 0xF2B; confianca alta)
     void*& bLastFrameGenDisabledBecauseUIField() const
     { return BrzCampoAncorado<void*>(this, "bShowingMinimapTooltip", 2); }
-    BitFieldValue<bool, unsigned __int32> bLoadedFromSaveGame()
-    { return { (void*)this, "bLoadedFromSaveGame" }; }
-    BitFieldValue<bool, unsigned __int32> bLostFocusPaused()
-    { return { (void*)this, "bLostFocusPaused" }; }
-    BitFieldValue<bool, unsigned __int32> bMultiUseCenterHUD()
-    { return { (void*)this, "bMultiUseCenterHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bNetCritical()
-    { return { (void*)this, "bNetCritical" }; }
-    BitFieldValue<bool, unsigned __int32> bNetLoadOnClient()
-    { return { (void*)this, "bNetLoadOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bNetTemporary()
-    { return { (void*)this, "bNetTemporary" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseClientRelevancy()
-    { return { (void*)this, "bNetUseClientRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetUseOwnerRelevancy()
-    { return { (void*)this, "bNetUseOwnerRelevancy" }; }
-    BitFieldValue<bool, unsigned __int32> bNetworkSpatializationForceRelevancyCheck()
-    { return { (void*)this, "bNetworkSpatializationForceRelevancyCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyReplicateOnNetForcedUpdate()
-    { return { (void*)this, "bOnlyReplicateOnNetForcedUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventActorStasis()
-    { return { (void*)this, "bPreventActorStasis" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasing()
-    { return { (void*)this, "bPreventCharacterBasing" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCharacterBasingAllowSteppingUp()
-    { return { (void*)this, "bPreventCharacterBasingAllowSteppingUp" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCliffPlatforms()
-    { return { (void*)this, "bPreventCliffPlatforms" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventLevelBoundsRelevant()
-    { return { (void*)this, "bPreventLevelBoundsRelevant" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventNPCSpawnFloor()
-    { return { (void*)this, "bPreventNPCSpawnFloor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventRegularForceNetUpdate()
-    { return { (void*)this, "bPreventRegularForceNetUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSaving()
-    { return { (void*)this, "bPreventSaving" }; }
+    BrzCampoPonteiro bLoadedFromSaveGameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bLoadedFromSaveGame")); }
+    BrzCampoPonteiro bLostFocusPausedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bLostFocusPaused")); }
+    BrzCampoPonteiro bMultiUseCenterHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bMultiUseCenterHUD")); }
+    BrzCampoPonteiro bMultiUseIsDrawingUIHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bMultiUseIsDrawingUIHUD")); }
+    BrzCampoPonteiro bNetCriticalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bNetCritical")); }
+    BrzCampoPonteiro bNetLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bNetLoadOnClient")); }
+    BrzCampoPonteiro bNetTemporaryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bNetTemporary")); }
+    BrzCampoPonteiro bNetUseClientRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bNetUseClientRelevancy")); }
+    BrzCampoPonteiro bNetUseOwnerRelevancyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bNetUseOwnerRelevancy")); }
+    BrzCampoPonteiro bNetworkSpatializationForceRelevancyCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bNetworkSpatializationForceRelevancyCheck")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOnlyReplicateOnNetForcedUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bOnlyReplicateOnNetForcedUpdate")); }
+    BrzCampoPonteiro bPreventActorStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventActorStasis")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventCharacterBasingAllowSteppingUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventCharacterBasingAllowSteppingUp")); }
+    BrzCampoPonteiro bPreventCliffPlatformsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventCliffPlatforms")); }
+    BrzCampoPonteiro bPreventLevelBoundsRelevantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventLevelBoundsRelevant")); }
+    BrzCampoPonteiro bPreventNPCSpawnFloorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventNPCSpawnFloor")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventRegularForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventRegularForceNetUpdate")); }
+    BrzCampoPonteiro bPreventSavingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventSaving")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +12, medido na build 25090264
+    //  ancorado em `TutorialUI` +12, medido na build 25535041
     //  (offset absoluto medido: 0xEEC; confianca alta)
     void*& bPreventShowChatBoxField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 12); }
-    BitFieldValue<bool, unsigned __int32> bRealtimeThrottledTickUseNativeTick()
-    { return { (void*)this, "bRealtimeThrottledTickUseNativeTick" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForLevelBounds()
-    { return { (void*)this, "bRelevantForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bRelevantForNetworkReplays()
-    { return { (void*)this, "bRelevantForNetworkReplays" }; }
+    BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bRealtimeThrottledTickUseNativeTick")); }
+    BrzCampoPonteiro bRelevantForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bRelevantForLevelBounds")); }
+    BrzCampoPonteiro bRelevantForNetworkReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bRelevantForNetworkReplays")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowAllPlayersWhenSpectating` +1, medido na build 25090264
+    //  ancorado em `bShowAllPlayersWhenSpectating` +1, medido na build 25535041
     //  (offset absoluto medido: 0x5A1; confianca alta)
     void*& bRemovedPrimalGameplayHudsField() const
     { return BrzCampoAncorado<void*>(this, "bShowAllPlayersWhenSpectating", 1); }
-    BitFieldValue<bool, unsigned __int32> bReplayRewindable()
-    { return { (void*)this, "bReplayRewindable" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateHidden()
-    { return { (void*)this, "bReplicateHidden" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateMovement()
-    { return { (void*)this, "bReplicateMovement" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bSavedWhenStasised()
-    { return { (void*)this, "bSavedWhenStasised" }; }
-    BitFieldValue<bool, unsigned __int32> bShowDebugInfo()
-    { return { (void*)this, "bShowDebugInfo" }; }
-    BitFieldValue<bool, unsigned __int32> bShowHUD()
-    { return { (void*)this, "bShowHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bShowHitBoxDebugInfo()
-    { return { (void*)this, "bShowHitBoxDebugInfo" }; }
-    BitFieldValue<bool, unsigned __int32> bShowOverlays()
-    { return { (void*)this, "bShowOverlays" }; }
+    BrzCampoPonteiro bReplayRewindableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bReplayRewindable")); }
+    BrzCampoPonteiro bReplicateHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bReplicateHidden")); }
+    BrzCampoPonteiro bReplicateMovementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bReplicateMovement")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bReplicates")); }
+    BrzCampoPonteiro bSavedWhenStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bSavedWhenStasised")); }
+    BrzCampoPonteiro bShowAllPlayersWhenSpectatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowAllPlayersWhenSpectating")); }
+    BrzCampoPonteiro bShowAllPlayersWhenSpectatingLocalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowAllPlayersWhenSpectatingLocal")); }
+    BrzCampoPonteiro bShowChatBoxByDefaultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowChatBoxByDefault")); }
+    BrzCampoPonteiro bShowChatPopupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowChatPopup")); }
+    BrzCampoPonteiro bShowDebugInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowDebugInfo")); }
+    BrzCampoPonteiro bShowHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowHUD")); }
+    BrzCampoPonteiro bShowHitBoxDebugInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowHitBoxDebugInfo")); }
+    BrzCampoPonteiro bShowOverlaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowOverlays")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ItemRemovedNotificationIconColor` +16, medido na build 25090264
+    //  ancorado em `ItemRemovedNotificationIconColor` +16, medido na build 25535041
     //  (offset absoluto medido: 0x918; confianca alta)
     void*& bShowedKnockedNotificationField() const
     { return BrzCampoAncorado<void*>(this, "ItemRemovedNotificationIconColor", 16); }
-    BitFieldValue<bool, unsigned __int32> bStasisComponentRadiusForceDistanceCheck()
-    { return { (void*)this, "bStasisComponentRadiusForceDistanceCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bStasised()
-    { return { (void*)this, "bStasised" }; }
+    BrzCampoPonteiro bShowingMinimapTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowingMinimapTooltip")); }
+    BrzCampoPonteiro bStasisComponentRadiusForceDistanceCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bStasisComponentRadiusForceDistanceCheck")); }
+    BrzCampoPonteiro bStasisedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bStasised")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +73, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +73, medido na build 25535041
     //  (offset absoluto medido: 0xD59; confianca media)
     void*& bTargetHarvestableField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 73); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +74, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +74, medido na build 25535041
     //  (offset absoluto medido: 0xD5A; confianca media)
     void*& bTargetHarvestableAllowedField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 74); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +75, medido na build 25090264
+    //  ancorado em `TeamPingTypes` +75, medido na build 25535041
     //  (offset absoluto medido: 0xD5B; confianca media)
     void*& bTargetHarvestableIsUsableField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 75); }
-    BitFieldValue<bool, unsigned __int32> bTearOff()
-    { return { (void*)this, "bTearOff" }; }
-    BitFieldValue<bool, unsigned __int32> bUnstreamComponentsUseEndOverlap()
-    { return { (void*)this, "bUnstreamComponentsUseEndOverlap" }; }
-    BitFieldValue<bool, unsigned __int32> bUseActorNotifyCustomEventBP()
-    { return { (void*)this, "bUseActorNotifyCustomEventBP" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAttachmentReplication()
-    { return { (void*)this, "bUseAttachmentReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowActorSpawn()
-    { return { (void*)this, "bUseBPAllowActorSpawn" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPChangedActorTeam()
-    { return { (void*)this, "bUseBPChangedActorTeam" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCheckForErrors()
-    { return { (void*)this, "bUseBPCheckForErrors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCustomIsRelevantForClient()
-    { return { (void*)this, "bUseBPCustomIsRelevantForClient" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPDrawEntry()
-    { return { (void*)this, "bUseBPDrawEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPFilterMultiUseEntries()
-    { return { (void*)this, "bUseBPFilterMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPForceAllowsInventoryUse()
-    { return { (void*)this, "bUseBPForceAllowsInventoryUse" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetBonesToHideOnAllocation()
-    { return { (void*)this, "bUseBPGetBonesToHideOnAllocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetCameraCollisionIgnoreActors()
-    { return { (void*)this, "bUseBPGetCameraCollisionIgnoreActors" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetHUDDrawLocationOffset()
-    { return { (void*)this, "bUseBPGetHUDDrawLocationOffset" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterText()
-    { return { (void*)this, "bUseBPGetMultiUseCenterText" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetMultiUseCenterTextWithName()
-    { return { (void*)this, "bUseBPGetMultiUseCenterTextWithName" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOrbitCamTargetLocation()
-    { return { (void*)this, "bUseBPGetOrbitCamTargetLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetShowDebugAnimationComponents()
-    { return { (void*)this, "bUseBPGetShowDebugAnimationComponents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemDropped()
-    { return { (void*)this, "bUseBPInventoryItemDropped" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryItemUsed()
-    { return { (void*)this, "bUseBPInventoryItemUsed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideTargetingLocation()
-    { return { (void*)this, "bUseBPOverrideTargetingLocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideUILocation()
-    { return { (void*)this, "bUseBPOverrideUILocation" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPPreventAttachments()
-    { return { (void*)this, "bUseBPPreventAttachments" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCanMoveThroughActor()
-    { return { (void*)this, "bUseCanMoveThroughActor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseNetworkSpatialization()
-    { return { (void*)this, "bUseNetworkSpatialization" }; }
-    BitFieldValue<bool, unsigned __int32> bUseOnlyPointForLevelBounds()
-    { return { (void*)this, "bUseOnlyPointForLevelBounds" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStasisGrid()
-    { return { (void*)this, "bUseStasisGrid" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPerformanceThrottledTick()
-    { return { (void*)this, "bWantsPerformanceThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsRealtimeThrottledTick()
-    { return { (void*)this, "bWantsRealtimeThrottledTick" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsServerThrottledTick()
-    { return { (void*)this, "bWantsServerThrottledTick" }; }
+    BrzCampoPonteiro bTearOffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bTearOff")); }
+    BrzCampoPonteiro bUnstreamComponentsUseEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUnstreamComponentsUseEndOverlap")); }
+    BrzCampoPonteiro bUseActorNotifyCustomEventBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseActorNotifyCustomEventBP")); }
+    BrzCampoPonteiro bUseAttachmentReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseAttachmentReplication")); }
+    BrzCampoPonteiro bUseBPAllowActorSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPAllowActorSpawn")); }
+    BrzCampoPonteiro bUseBPChangedActorTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPChangedActorTeam")); }
+    BrzCampoPonteiro bUseBPCheckForErrorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPCheckForErrors")); }
+    BrzCampoPonteiro bUseBPCustomIsRelevantForClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPCustomIsRelevantForClient")); }
+    BrzCampoPonteiro bUseBPDrawEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPDrawEntry")); }
+    BrzCampoPonteiro bUseBPFilterMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPFilterMultiUseEntries")); }
+    BrzCampoPonteiro bUseBPForceAllowsInventoryUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPForceAllowsInventoryUse")); }
+    BrzCampoPonteiro bUseBPGetBonesToHideOnAllocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetBonesToHideOnAllocation")); }
+    BrzCampoPonteiro bUseBPGetCameraCollisionIgnoreActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetCameraCollisionIgnoreActors")); }
+    BrzCampoPonteiro bUseBPGetHUDDrawLocationOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetHUDDrawLocationOffset")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetMultiUseCenterText")); }
+    BrzCampoPonteiro bUseBPGetMultiUseCenterTextWithNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetMultiUseCenterTextWithName")); }
+    BrzCampoPonteiro bUseBPGetOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bUseBPGetShowDebugAnimationComponentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPGetShowDebugAnimationComponents")); }
+    BrzCampoPonteiro bUseBPInventoryItemDroppedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPInventoryItemDropped")); }
+    BrzCampoPonteiro bUseBPInventoryItemUsedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPInventoryItemUsed")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPOverrideTargetingLocation")); }
+    BrzCampoPonteiro bUseBPOverrideUILocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPOverrideUILocation")); }
+    BrzCampoPonteiro bUseBPPreventAttachmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseBPPreventAttachments")); }
+    BrzCampoPonteiro bUseCanMoveThroughActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseCanMoveThroughActor")); }
+    BrzCampoPonteiro bUseNetworkSpatializationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseNetworkSpatialization")); }
+    BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseOnlyPointForLevelBounds")); }
+    BrzCampoPonteiro bUseStasisGridField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bUseStasisGrid")); }
+    BrzCampoPonteiro bWantsPerformanceThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bWantsPerformanceThrottledTick")); }
+    BrzCampoPonteiro bWantsRealtimeThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bWantsRealtimeThrottledTick")); }
+    BrzCampoPonteiro bWantsServerThrottledTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bWantsServerThrottledTick")); }
     BitFieldValue<bool, unsigned __int32> bDefeatedBossPreventingSpawnUICreation()
     { return { (void*)this, "bDefeatedBossPreventingSpawnUICreation" }; }
     BitFieldValue<bool, unsigned __int32> bHUDHidden()

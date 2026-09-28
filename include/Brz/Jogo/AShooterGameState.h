@@ -57,7 +57,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.AddRelevantPOIActor(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=110]]
+    // endereco: casamento de bytes com a build de referencia
     void AddRelevantPOIActor(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.AddRelevantPOIActor(AActor*)", a0);
@@ -105,7 +105,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.AllowTribeManager(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=79]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowTribeManager(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AShooterGameState.AllowTribeManager(AShooterPlayerController*)", a0);
@@ -121,7 +121,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterGameState.BPDrawGameStateHUD(AShooterHUD*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPDrawGameStateHUD(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.BPDrawGameStateHUD(AShooterHUD*)", a0);
@@ -281,7 +281,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOProcessTArrayForClassAndChildren<FString>(UClass*,FName,ECDOArrayModificati
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOProcessTArrayForClassAndChildren_FString_(void* a0, unsigned long long a1, int a2, void* a3, void* a4, void* a5, void* a6, bool a7, bool a8, bool a9, bool a10) const
     {
         return NativeCall<void*, void*, unsigned long long, int, void*, void*, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOProcessTArrayForClassAndChildren<FString>(UClass*,FName,ECDOArrayModificationType,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<FString,TSizedDefaultAllocator<32>>&,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
@@ -289,7 +289,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOProcessTArrayForClassAndChildren<UE.Math.TVector<double>>(UClass*,FName,ECD
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOProcessTArrayForClassAndChildren_UE_Math_TVector_double__(void* a0, unsigned long long a1, int a2, void* a3, void* a4, void* a5, void* a6, bool a7, bool a8, bool a9, bool a10) const
     {
         return NativeCall<void*, void*, unsigned long long, int, void*, void*, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOProcessTArrayForClassAndChildren<UE.Math.TVector<double>>(UClass*,FName,ECDOArrayModificationType,TArray<uint,TSizedDefaultAllocator<32>>&,TArray<uint,TSizedDefaultAllocator<32>>&,TArray<UE::Math::TVector<double>,TSizedDefaultAllocator<32>>&,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
@@ -297,7 +297,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOProcessTArrayForClassAndChildren<bool>(UClass*,FName,ECDOArrayModificationT
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOProcessTArrayForClassAndChildren_bool_(void* a0, unsigned long long a1, int a2, void* a3, void* a4, void* a5, void* a6, bool a7, bool a8, bool a9, bool a10) const
     {
         return NativeCall<void*, void*, unsigned long long, int, void*, void*, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOProcessTArrayForClassAndChildren<bool>(UClass*,FName,ECDOArrayModificationType,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<bool,TSizedDefaultAllocator<32>>&,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
@@ -305,7 +305,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOProcessTArrayForClassAndChildren<double>(UClass*,FName,ECDOArrayModificatio
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOProcessTArrayForClassAndChildren_double_(void* a0, unsigned long long a1, int a2, void* a3, void* a4, void* a5, void* a6, bool a7, bool a8, bool a9, bool a10) const
     {
         return NativeCall<void*, void*, unsigned long long, int, void*, void*, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOProcessTArrayForClassAndChildren<double>(UClass*,FName,ECDOArrayModificationType,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<double,TSizedDefaultAllocator<32>>&,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
@@ -313,7 +313,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOProcessTArrayForClassAndChildren<float>(UClass*,FName,ECDOArrayModification
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOProcessTArrayForClassAndChildren_float_(void* a0, unsigned long long a1, int a2, void* a3, void* a4, void* a5, void* a6, bool a7, bool a8, bool a9, bool a10) const
     {
         return NativeCall<void*, void*, unsigned long long, int, void*, void*, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOProcessTArrayForClassAndChildren<float>(UClass*,FName,ECDOArrayModificationType,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<float,TSizedDefaultAllocator<32>>&,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
@@ -321,7 +321,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOProcessTArrayForClassAndChildren<int>(UClass*,FName,ECDOArrayModificationTy
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOProcessTArrayForClassAndChildren_int_(void* a0, unsigned long long a1, int a2, void* a3, void* a4, void* a5, void* a6, bool a7, bool a8, bool a9, bool a10) const
     {
         return NativeCall<void*, void*, unsigned long long, int, void*, void*, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOProcessTArrayForClassAndChildren<int>(UClass*,FName,ECDOArrayModificationType,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<unsignedint,TSizedDefaultAllocator<32>>&,TArray<int,TSizedDefaultAllocator<32>>&,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
@@ -369,7 +369,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOUpdateSingleValueForClassAndChildren<UE.Math.TRotator<double>>(UClass*,FNam
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOUpdateSingleValueForClassAndChildren_UE_Math_TRotator_double__(void* a0, unsigned long long a1, void* a2, void* a3, bool a4, bool a5, bool a6, bool a7) const
     {
         return NativeCall<void*, void*, unsigned long long, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOUpdateSingleValueForClassAndChildren<UE.Math.TRotator<double>>(UClass*,FName,UE::Math::TRotator<double>,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -377,7 +377,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOUpdateSingleValueForClassAndChildren<UE.Math.TVector<double>>(UClass*,FName
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOUpdateSingleValueForClassAndChildren_UE_Math_TVector_double__(void* a0, unsigned long long a1, void* a2, void* a3, bool a4, bool a5, bool a6, bool a7) const
     {
         return NativeCall<void*, void*, unsigned long long, void*, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOUpdateSingleValueForClassAndChildren<UE.Math.TVector<double>>(UClass*,FName,UE::Math::TVector<double>,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -393,7 +393,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOUpdateSingleValueForClassAndChildren<double>(UClass*,FName,double,TMap<UCla
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOUpdateSingleValueForClassAndChildren_double_(void* a0, unsigned long long a1, double a2, void* a3, bool a4, bool a5, bool a6, bool a7) const
     {
         return NativeCall<void*, void*, unsigned long long, double, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOUpdateSingleValueForClassAndChildren<double>(UClass*,FName,double,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -401,7 +401,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.CDOUpdateSingleValueForClassAndChildren<float>(UClass*,FName,float,TMap<UClass
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CDOUpdateSingleValueForClassAndChildren_float_(void* a0, unsigned long long a1, float a2, void* a3, bool a4, bool a5, bool a6, bool a7) const
     {
         return NativeCall<void*, void*, unsigned long long, float, void*, bool, bool, bool, bool>(this, "AShooterGameState.CDOUpdateSingleValueForClassAndChildren<float>(UClass*,FName,float,TMap<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<UClass*,TMap<FString,FString,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<FString,FString,0>>,0>>&,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -433,7 +433,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.CreateCustomGameUI(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=261]]
+    // endereco: casamento de bytes com a build de referencia
     void CreateCustomGameUI(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.CreateCustomGameUI(AShooterPlayerController*)", a0);
@@ -449,7 +449,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.DecrementThrallTargetingTeamCount(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DecrementThrallTargetingTeamCount(int a0) const
     {
         NativeCall<void, int>(this, "AShooterGameState.DecrementThrallTargetingTeamCount(int)", a0);
@@ -489,7 +489,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.FindPlayerStateFromHashedUniqueID(unsignedint)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FindPlayerStateFromHashedUniqueID(unsigned int a0) const
     {
         return NativeCall<void*, unsigned int>(this, "AShooterGameState.FindPlayerStateFromHashedUniqueID(unsignedint)", a0);
@@ -497,7 +497,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.GetBunkerAmountForTeam(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetBunkerAmountForTeam(int a0) const
     {
         return NativeCall<int, int>(this, "AShooterGameState.GetBunkerAmountForTeam(int)", a0);
@@ -545,7 +545,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.GetGamePhase()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned char GetGamePhase() const
     {
         return NativeCall<unsigned char>(this, "AShooterGameState.GetGamePhase()");
@@ -581,7 +581,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=708/708]]
+    // endereco: casamento de bytes com a build de referencia
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -629,7 +629,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.GetOfflineDamagePreventionTime(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetOfflineDamagePreventionTime(int a0) const
     {
         return NativeCall<float, int>(this, "AShooterGameState.GetOfflineDamagePreventionTime(int)", a0);
@@ -637,31 +637,31 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.GetPlayerHeatLevel(UE::Math::TVector<double>&)
-    // endereco: cache_pdb_25090264
-    static BrzPonteiro GetPlayerHeatLevel(void* a0)
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro GetPlayerHeatLevel(void* a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "AShooterGameState.GetPlayerHeatLevel(UE::Math::TVector<double>&)", a0);
+        return NativeCall<void*, void*>(this, "AShooterGameState.GetPlayerHeatLevel(UE::Math::TVector<double>&)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.GetPlayerHeatLevel(UE::Math::TVector<double>&,TArray<TArray<uchar,TSizedDefaul
     // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
-    static BrzPonteiro GetPlayerHeatLevel(void* a0, void* a1)
+    BrzPonteiro GetPlayerHeatLevel(void* a0, void* a1) const
     {
-        return NativeCall<void*, void*, void*>(nullptr, "AShooterGameState.GetPlayerHeatLevel(UE::Math::TVector<double>&,TArray<TArray<uchar,TSizedDefaultAllocator<32>>,TSizedDefaultAllocator<32>>&)", a0, a1);
+        return NativeCall<void*, void*, void*>(this, "AShooterGameState.GetPlayerHeatLevel(UE::Math::TVector<double>&,TArray<TArray<uchar,TSizedDefaultAllocator<32>>,TSizedDefaultAllocator<32>>&)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.GetPlayerUnderwaterHeatLevel(UE::Math::TVector<double>&)
-    // endereco: cache_pdb_25090264
-    static BrzPonteiro GetPlayerUnderwaterHeatLevel(void* a0)
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro GetPlayerUnderwaterHeatLevel(void* a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "AShooterGameState.GetPlayerUnderwaterHeatLevel(UE::Math::TVector<double>&)", a0);
+        return NativeCall<void*, void*>(this, "AShooterGameState.GetPlayerUnderwaterHeatLevel(UE::Math::TVector<double>&)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.GetServerFramerate()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetServerFramerate() const
     {
         return NativeCall<void*>(this, "AShooterGameState.GetServerFramerate()");
@@ -669,7 +669,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.GetStartTimeHour()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetStartTimeHour() const
     {
         return NativeCall<int>(this, "AShooterGameState.GetStartTimeHour()");
@@ -677,7 +677,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.HTTPPostRequest(FString,FString)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void HTTPPostRequest(const FString& a0, const FString& a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterGameState.HTTPPostRequest(FString,FString)", const_cast<FString*>(&a0), const_cast<FString*>(&a1));
@@ -697,7 +697,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.InitPlayerHeatMap()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro InitPlayerHeatMap() const
     {
         return NativeCall<void*>(this, "AShooterGameState.InitPlayerHeatMap()");
@@ -705,7 +705,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.InitializedGameState()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=840+grafo=12/12]]
+    // endereco: casamento de bytes com a build de referencia
     void InitializedGameState() const
     {
         NativeCall<void>(this, "AShooterGameState.InitializedGameState()");
@@ -713,7 +713,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.IsClusterServer()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsClusterServer() const
     {
         return NativeCall<bool>(this, "AShooterGameState.IsClusterServer()");
@@ -761,7 +761,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.IsSupportedLiveTuningProperty(FProperty*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool IsSupportedLiveTuningProperty(void* a0, bool a1)
     {
         return NativeCall<bool, void*, bool>(nullptr, "AShooterGameState.IsSupportedLiveTuningProperty(FProperty*,bool)", a0, a1);
@@ -769,7 +769,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.IsTeamIDInvincible(int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsTeamIDInvincible(int a0, bool a1) const
     {
         return NativeCall<bool, int, bool>(this, "AShooterGameState.IsTeamIDInvincible(int,bool)", a0, a1);
@@ -777,7 +777,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.IsUnderBunkerTribeLimit(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsUnderBunkerTribeLimit(int a0) const
     {
         return NativeCall<bool, int>(this, "AShooterGameState.IsUnderBunkerTribeLimit(int)", a0);
@@ -793,7 +793,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.IsValidMassTeleportData(FMassTeleportData&)
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsValidMassTeleportData(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterGameState.IsValidMassTeleportData(FMassTeleportData&)", a0);
@@ -833,7 +833,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.NetUpdateOfflinePvPExpiringTeams_Implementation(TArray<int,TSizedDefaultAlloca
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=63]]
+    // endereco: casamento de bytes com a build de referencia
     void NetUpdateOfflinePvPExpiringTeams_Implementation(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterGameState.NetUpdateOfflinePvPExpiringTeams_Implementation(TArray<int,TSizedDefaultAllocator<32>>&,TArray<float,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -849,7 +849,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.NetUpdateOfflinePvPLiveTeams_Implementation(TArray<int,TSizedDefaultAllocator<
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetUpdateOfflinePvPLiveTeams_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.NetUpdateOfflinePvPLiveTeams_Implementation(TArray<int,TSizedDefaultAllocator<32>>&)", a0);
@@ -857,7 +857,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.NotifyPlayerDied(AShooterCharacter*,AShooterPlayerController*,APawn*,AActor*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=274+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     void NotifyPlayerDied(void* a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, void*, void*, void*, void*>(this, "AShooterGameState.NotifyPlayerDied(AShooterCharacter*,AShooterPlayerController*,APawn*,AActor*)", a0, a1, a2, a3);
@@ -881,7 +881,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.OnNewClassInitialized(UClass*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnNewClassInitialized(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.OnNewClassInitialized(UClass*)", a0);
@@ -921,7 +921,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.OnRep_SupportedSpawnRegions()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=151+grafo=3/3]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_SupportedSpawnRegions() const
     {
         NativeCall<void>(this, "AShooterGameState.OnRep_SupportedSpawnRegions()");
@@ -929,10 +929,11 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=82+grafo=4/4]]
+    // classe: a funcao mora em AGameState, e AShooterGameState herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "AShooterGameState.PostInitializeComponents()");
+        NativeCall<void>(this, "AGameState.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -953,7 +954,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.PrintCDODebugForChar(APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PrintCDODebugForChar(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.PrintCDODebugForChar(APrimalCharacter*)", a0);
@@ -985,7 +986,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.RemoveIrrelevantBiomeBuffs(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveIrrelevantBiomeBuffs(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.RemoveIrrelevantBiomeBuffs(APrimalCharacter*)", a0);
@@ -1041,7 +1042,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.ServerProcessDefaultPropertyValueUpdates(UShooterGameInstance*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void ServerProcessDefaultPropertyValueUpdates(void* a0)
     {
         NativeCall<void, void*>(nullptr, "AShooterGameState.ServerProcessDefaultPropertyValueUpdates(UShooterGameInstance*)", a0);
@@ -1049,7 +1050,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterGameState.ServerUpdateSpawnPropRandomIndex()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerUpdateSpawnPropRandomIndex() const
     {
         NativeCall<void>(this, "AShooterGameState.ServerUpdateSpawnPropRandomIndex()");
@@ -1113,7 +1114,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.StaticRegisterNativesAShooterGameState()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesAShooterGameState()
     {
         NativeCall<void>(nullptr, "AShooterGameState.StaticRegisterNativesAShooterGameState()");
@@ -1161,7 +1162,7 @@ struct AShooterGameState : public AGameState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterGameState.UpdateActiveMissionTags()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateActiveMissionTags() const
     {
         return NativeCall<void*>(this, "AShooterGameState.UpdateActiveMissionTags()");
@@ -1213,7 +1214,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.WorldCompositionRescan()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void WorldCompositionRescan() const
     {
         NativeCall<void>(this, "AShooterGameState.WorldCompositionRescan()");
@@ -1237,22 +1238,22 @@ struct AShooterGameState : public AGameState
     TArray<void*>& ActiveMissionTagsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.ActiveMissionTags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClusterId` +16, medido na build 25090264
+    //  ancorado em `ClusterId` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA50; confianca alta)
     FString& AmazonS3AccessKeyIDField() const
     { return BrzCampoAncorado<FString>(this, "ClusterId", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClusterId` +48, medido na build 25090264
+    //  ancorado em `ClusterId` +48, medido na build 25535041
     //  (offset absoluto medido: 0xA70; confianca media)
     FString& AmazonS3BucketNameField() const
     { return BrzCampoAncorado<FString>(this, "ClusterId", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClusterId` +32, medido na build 25090264
+    //  ancorado em `ClusterId` +32, medido na build 25535041
     //  (offset absoluto medido: 0xA60; confianca alta)
     FString& AmazonS3SecretAccessKeyField() const
     { return BrzCampoAncorado<FString>(this, "ClusterId", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessCraftingRangeOverride` +4, medido na build 25090264
+    //  ancorado em `WirelessCraftingRangeOverride` +4, medido na build 25535041
     //  (offset absoluto medido: 0xB60; confianca alta)
     int& AmbientSoundCheckIncrementField() const
     { return BrzCampoAncorado<int>(this, "WirelessCraftingRangeOverride", 4); }
@@ -1263,7 +1264,7 @@ struct AShooterGameState : public AGameState
     float& BaseHexagonRewardMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.BaseHexagonRewardMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bAllowLowGravitySpin` +8, medido na build 25090264
+    //  ancorado em `bAllowLowGravitySpin` +8, medido na build 25535041
     //  (offset absoluto medido: 0xD58; confianca alta)
     TArray<void*>& BiomeBuffTagsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bAllowLowGravitySpin", 8); }
@@ -1276,7 +1277,7 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro BunkersPerTribeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.BunkersPerTribe")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentDefaultPropertyValueUpdates` +16, medido na build 25090264
+    //  ancorado em `CurrentDefaultPropertyValueUpdates` +16, medido na build 25535041
     //  (offset absoluto medido: 0xEC8; confianca alta)
     void*& CDODebugDataField() const
     { return BrzCampoAncorado<void*>(this, "CurrentDefaultPropertyValueUpdates", 16); }
@@ -1285,7 +1286,7 @@ struct AShooterGameState : public AGameState
     FString& ClusterIdField() const
     { return *GetNativePointerField<FString*>(this, "AShooterGameState.ClusterId"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +80, medido na build 25090264
+    //  ancorado em `NetBanlistedMods` +80, medido na build 25535041
     //  (offset absoluto medido: 0xF48; confianca media)
     void*& ClusterPaintingDataField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 80); }
@@ -1314,7 +1315,7 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro DataLayerMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.DataLayerMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +56, medido na build 25090264
+    //  ancorado em `NetBanlistedMods` +56, medido na build 25535041
     //  (offset absoluto medido: 0xF30; confianca media)
     void*& DataLayerWatcherPtrField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 56); }
@@ -1327,7 +1328,7 @@ struct AShooterGameState : public AGameState
     float& DayTimeSpeedScaleField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.DayTimeSpeedScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +48, medido na build 25090264
+    //  ancorado em `NetBanlistedMods` +48, medido na build 25535041
     //  (offset absoluto medido: 0xF28; confianca media)
     int& DedicatedWorldPartitionTicksField() const
     { return BrzCampoAncorado<int>(this, "NetBanlistedMods", 48); }
@@ -1350,7 +1351,7 @@ struct AShooterGameState : public AGameState
     int& EnvironmentIndexField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.EnvironmentIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +55, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +55, medido na build 25535041
     //  (offset absoluto medido: 0x7E0; confianca media)
     void*& ExpensiveFunctionsField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 55); }
@@ -1371,7 +1372,7 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro FloatingPlatformProfileNameColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.FloatingPlatformProfileNameColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +4, medido na build 25090264
+    //  ancorado em `MaxPersonalTamedDinos` +4, medido na build 25535041
     //  (offset absoluto medido: 0xA28; confianca alta)
     TArray<void*>& FloatingTextEntriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MaxPersonalTamedDinos", 4); }
@@ -1398,22 +1399,22 @@ struct AShooterGameState : public AGameState
     float& ItemStackSizeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.ItemStackSizeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +16, medido na build 25090264
+    //  ancorado em `DynamicMusicAudioComponent2` +16, medido na build 25535041
     //  (offset absoluto medido: 0x810; confianca alta)
     double& LastHadMusicTimeField() const
     { return BrzCampoAncorado<double>(this, "DynamicMusicAudioComponent2", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +24, medido na build 25090264
+    //  ancorado em `DynamicMusicAudioComponent2` +24, medido na build 25535041
     //  (offset absoluto medido: 0x818; confianca alta)
     void*& LastNetDynamicMusicField() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +7, medido na build 25090264
+    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +7, medido na build 25535041
     //  (offset absoluto medido: 0xB00; confianca alta)
     double& LastPlayedDynamicMusic1Field() const
     { return BrzCampoAncorado<double>(this, "bCrossARKAllowForeignDinoDownloads", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +15, medido na build 25090264
+    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +15, medido na build 25535041
     //  (offset absoluto medido: 0xB08; confianca alta)
     double& LastPlayedDynamicMusic2Field() const
     { return BrzCampoAncorado<double>(this, "bCrossARKAllowForeignDinoDownloads", 15); }
@@ -1422,7 +1423,7 @@ struct AShooterGameState : public AGameState
     TArray<void*>& LevelExperienceRampOverridesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.LevelExperienceRampOverrides"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DisableRailgunPVP` +88, medido na build 25090264
+    //  ancorado em `DisableRailgunPVP` +88, medido na build 25535041
     //  (offset absoluto medido: 0x708; confianca media)
     void*& LevelNameHashField() const
     { return BrzCampoAncorado<void*>(this, "DisableRailgunPVP", 88); }
@@ -1443,12 +1444,12 @@ struct AShooterGameState : public AGameState
     int& LiveTuningReplicatedChunkSizeField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.LiveTuningReplicatedChunkSize"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventTribeAlliances` +8, medido na build 25090264
+    //  ancorado em `bPreventTribeAlliances` +8, medido na build 25535041
     //  (offset absoluto medido: 0xA98; confianca alta)
     FString& LoadForceRespawnDinosTagField() const
     { return BrzCampoAncorado<FString>(this, "bPreventTribeAlliances", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIgnorePVPMountedWeaponryRestrictions` +1, medido na build 25090264
+    //  ancorado em `bIgnorePVPMountedWeaponryRestrictions` +1, medido na build 25535041
     //  (offset absoluto medido: 0xE50; confianca alta)
     void*& LoadedDataLayersField() const
     { return BrzCampoAncorado<void*>(this, "bIgnorePVPMountedWeaponryRestrictions", 1); }
@@ -1457,12 +1458,12 @@ struct AShooterGameState : public AGameState
     TArray<void*>& MassTeleportQueueField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.MassTeleportQueue"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MassTeleportQueue` +32, medido na build 25090264
+    //  ancorado em `MassTeleportQueue` +32, medido na build 25535041
     //  (offset absoluto medido: 0xCA0; confianca alta)
     TArray<void*>& MassTeleportQueueToAddField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MassTeleportQueue", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MassTeleportQueue` +16, medido na build 25090264
+    //  ancorado em `MassTeleportQueue` +16, medido na build 25535041
     //  (offset absoluto medido: 0xC90; confianca alta)
     TArray<AActor*>& MassTeleportQueueToRemoveField() const
     { return BrzCampoAncorado<TArray<AActor*>>(this, "MassTeleportQueue", 16); }
@@ -1484,6 +1485,8 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<int*>(this, "AShooterGameState.MaxTamedDinos"); }
     int& MaxTamedDinos_SoftTameLimit_CountdownForDeletionDurationField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.MaxTamedDinos_SoftTameLimit_CountdownForDeletionDuration"); }
+    BrzCampoPonteiro MaxTamedDinos_SoftTameLimit_HasDoneInitialSearchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.MaxTamedDinos_SoftTameLimit_HasDoneInitialSearch")); }
     int& MaxTamedDinos_SoftTameLimit_NumTamedDinos_OverLimitField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.MaxTamedDinos_SoftTameLimit_NumTamedDinos_OverLimit"); }
     int& MaxTamedDinos_SoftTameLimit_NumTamedDinos_UnderLimitField() const
@@ -1507,7 +1510,7 @@ struct AShooterGameState : public AGameState
     int& NetUTCField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.NetUTC"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessCraftingRangeOverride` +12, medido na build 25090264
+    //  ancorado em `WirelessCraftingRangeOverride` +12, medido na build 25535041
     //  (offset absoluto medido: 0xB68; confianca alta)
     float& NetUTCCacheField() const
     { return BrzCampoAncorado<float>(this, "WirelessCraftingRangeOverride", 12); }
@@ -1527,6 +1530,8 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<int*>(this, "AShooterGameState.NumDeadNPC"); }
     int& NumHibernatedNPCField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.NumHibernatedNPC"); }
+    int& NumHibernatedStructuresField() const
+    { return *GetNativePointerField<int*>(this, "AShooterGameState.NumHibernatedStructures"); }
     int& NumNPCField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.NumNPC"); }
     int& NumPlayerActorsField() const
@@ -1560,7 +1565,7 @@ struct AShooterGameState : public AGameState
     TArray<void*>& OverrideItemMaxQuantityField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.OverrideItemMaxQuantity"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DisableRailgunPVP` +8, medido na build 25090264
+    //  ancorado em `DisableRailgunPVP` +8, medido na build 25535041
     //  (offset absoluto medido: 0x6B8; confianca media)
     void*& OverrideItemMaxQuantityMapField() const
     { return BrzCampoAncorado<void*>(this, "DisableRailgunPVP", 8); }
@@ -1581,7 +1586,7 @@ struct AShooterGameState : public AGameState
     float& PerPlatformMaxStructuresMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.PerPlatformMaxStructuresMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +31, medido na build 25090264
+    //  ancorado em `bShowCreativeMode` +31, medido na build 25535041
     //  (offset absoluto medido: 0xC10; confianca alta)
     int& PerformanceThrottledTicksModField() const
     { return BrzCampoAncorado<int>(this, "bShowCreativeMode", 31); }
@@ -1594,49 +1599,49 @@ struct AShooterGameState : public AGameState
     float& PlayerFloatingHUDOffsetScreenYField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.PlayerFloatingHUDOffsetScreenY"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +3, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +3, medido na build 25535041
     //  (offset absoluto medido: 0x7AC; confianca alta)
     void*& PlayerHeatCellSizeField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +7, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +7, medido na build 25535041
     //  (offset absoluto medido: 0x7B0; confianca alta)
     void*& PlayerHeatMapGridSizeXField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +11, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +11, medido na build 25535041
     //  (offset absoluto medido: 0x7B4; confianca alta)
     void*& PlayerHeatMapGridSizeYField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +15, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +15, medido na build 25535041
     //  (offset absoluto medido: 0x7B8; confianca alta)
     void*& PlayerHeatMapWorldWidthXField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +19, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +19, medido na build 25535041
     //  (offset absoluto medido: 0x7BC; confianca alta)
     void*& PlayerHeatMapWorldWidthYField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 19); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +23, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +23, medido na build 25535041
     //  (offset absoluto medido: 0x7C0; confianca alta)
     void*& PlayerHeatmapField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 23); }
     FString& PlayerListStringField() const
     { return *GetNativePointerField<FString*>(this, "AShooterGameState.PlayerListString"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +27, medido na build 25090264
+    //  ancorado em `bShowCreativeMode` +27, medido na build 25535041
     //  (offset absoluto medido: 0xC0C; confianca alta)
     int& PlayerListThrottledModField() const
     { return BrzCampoAncorado<int>(this, "bShowCreativeMode", 27); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +7, medido na build 25090264
+    //  ancorado em `bShowCreativeMode` +7, medido na build 25535041
     //  (offset absoluto medido: 0xBF8; confianca alta)
     TArray<void*>& PlayerLocatorEffectMapsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bShowCreativeMode", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +39, medido na build 25090264
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +39, medido na build 25535041
     //  (offset absoluto medido: 0x7D0; confianca media)
     void*& PlayerUnderwaterHeatmapField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 39); }
@@ -1647,7 +1652,7 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro PreventDisableDefaultDinoTameClassNamesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.PreventDisableDefaultDinoTameClassNames")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +35, medido na build 25090264
+    //  ancorado em `bShowCreativeMode` +35, medido na build 25535041
     //  (offset absoluto medido: 0xC14; confianca media)
     float& PreventOfflinePvPConnectionInvincibleIntervalField() const
     { return BrzCampoAncorado<float>(this, "bShowCreativeMode", 35); }
@@ -1656,14 +1661,14 @@ struct AShooterGameState : public AGameState
     TArray<void*>& PreventOfflinePvPExpiringTimesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.PreventOfflinePvPExpiringTimes"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventOfflinePvPExpiringTimes` +96, medido na build 25090264
+    //  ancorado em `PreventOfflinePvPExpiringTimes` +96, medido na build 25535041
     //  (offset absoluto medido: 0x9D0; confianca media)
     void*& PreventOfflinePvPFirstLiveTimeField() const
     { return BrzCampoAncorado<void*>(this, "PreventOfflinePvPExpiringTimes", 96); }
     TArray<void*>& PreventOfflinePvPLiveTeamsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.PreventOfflinePvPLiveTeams"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventOfflinePvPExpiringTimes` +16, medido na build 25090264
+    //  ancorado em `PreventOfflinePvPExpiringTimes` +16, medido na build 25535041
     //  (offset absoluto medido: 0x980; confianca media)
     void*& PreventOfflinePvPLiveTimesField() const
     { return BrzCampoAncorado<void*>(this, "PreventOfflinePvPExpiringTimes", 16); }
@@ -1686,19 +1691,19 @@ struct AShooterGameState : public AGameState
     float& RadiusStructuresInSmallRadiusField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.RadiusStructuresInSmallRadius"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RealtimeThrottledTickTimeAmount` +8, medido na build 25090264
+    //  ancorado em `RealtimeThrottledTickTimeAmount` +8, medido na build 25535041
     //  (offset absoluto medido: 0xEA8; confianca alta)
     int& RealtimeThrottledTickOffsetField() const
     { return BrzCampoAncorado<int>(this, "RealtimeThrottledTickTimeAmount", 8); }
     double& RealtimeThrottledTickTimeAmountField() const
     { return *GetNativePointerField<double*>(this, "AShooterGameState.RealtimeThrottledTickTimeAmount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +32, medido na build 25090264
+    //  ancorado em `NetBanlistedMods` +32, medido na build 25535041
     //  (offset absoluto medido: 0xF18; confianca media)
     void*& S3UploadersField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessCraftingRangeOverride` +8, medido na build 25090264
+    //  ancorado em `WirelessCraftingRangeOverride` +8, medido na build 25535041
     //  (offset absoluto medido: 0xB64; confianca alta)
     int& STASISAUTODESTROY_CheckIncrementField() const
     { return BrzCampoAncorado<int>(this, "WirelessCraftingRangeOverride", 8); }
@@ -1719,7 +1724,7 @@ struct AShooterGameState : public AGameState
     USoundBase*& StaticOverrideMusicField() const
     { return *GetNativePointerField<USoundBase**>(this, "AShooterGameState.StaticOverrideMusic"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MassTeleportQueue` +48, medido na build 25090264
+    //  ancorado em `MassTeleportQueue` +48, medido na build 25535041
     //  (offset absoluto medido: 0xCB0; confianca media)
     void*& StreamingDataLayersField() const
     { return BrzCampoAncorado<void*>(this, "MassTeleportQueue", 48); }
@@ -1736,7 +1741,7 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro ThrallTargetingTeamCountField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.ThrallTargetingTeamCount")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +23, medido na build 25090264
+    //  ancorado em `bShowCreativeMode` +23, medido na build 25535041
     //  (offset absoluto medido: 0xC08; confianca alta)
     int& ThrottledTicksModField() const
     { return BrzCampoAncorado<int>(this, "bShowCreativeMode", 23); }
@@ -1745,7 +1750,7 @@ struct AShooterGameState : public AGameState
     float& TribeNameChangeCooldownField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.TribeNameChangeCooldown"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +16, medido na build 25090264
+    //  ancorado em `NetBanlistedMods` +16, medido na build 25535041
     //  (offset absoluto medido: 0xF08; confianca media)
     void*& TribeRenameQueueField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 16); }
@@ -1779,6 +1784,12 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAdminLogging"); }
     bool& bAllowAnyoneBabyImprintCuddleField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowAnyoneBabyImprintCuddle"); }
+    BrzCampoPonteiro bAllowBunkerModulesAboveGroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowBunkerModulesAboveGround")); }
+    BrzCampoPonteiro bAllowBunkerModulesInPreventionZonesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowBunkerModulesInPreventionZones")); }
+    BrzCampoPonteiro bAllowBunkersInPreventionZonesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowBunkersInPreventionZones")); }
     bool& bAllowCaveBuildingPvEField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowCaveBuildingPvE"); }
     bool& bAllowCaveBuildingPvPField() const
@@ -1791,25 +1802,39 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowCustomRecipes"); }
     bool& bAllowFlyerSpeedLevelingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowFlyerSpeedLeveling"); }
+    BrzCampoPonteiro bAllowForceNetUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowForceNetUpdate")); }
     bool& bAllowHideDamageSourceFromLogsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowHideDamageSourceFromLogs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRecipeSkillMultiplier` +4, medido na build 25090264
+    //  ancorado em `CustomRecipeSkillMultiplier` +4, medido na build 25535041
     //  (offset absoluto medido: 0x8DC; confianca alta)
     void*& bAllowHostMessagesField() const
     { return BrzCampoAncorado<void*>(this, "CustomRecipeSkillMultiplier", 4); }
+    BrzCampoPonteiro bAllowLowGravitySpinField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowLowGravitySpin")); }
     bool& bAllowMultipleAttachedC4Field() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowMultipleAttachedC4"); }
+    BrzCampoPonteiro bAllowPaintingWithoutResourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowPaintingWithoutResources")); }
     bool& bAllowPlatformSaddleMultiFloorsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowPlatformSaddleMultiFloors"); }
     bool& bAllowRaidDinoFeedingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowRaidDinoFeeding"); }
+    BrzCampoPonteiro bAllowSpawnPointSelectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowSpawnPointSelection")); }
     bool& bAllowSpeedLevelingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowSpeedLeveling"); }
+    BrzCampoPonteiro bAllowTeslaCoilCaveBuildingPVPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowTeslaCoilCaveBuildingPVP")); }
+    BrzCampoPonteiro bAllowThirdPersonPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowThirdPersonPlayer")); }
     bool& bAllowUnclaimDinosField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowUnclaimDinos"); }
+    BrzCampoPonteiro bAllowUnclaimDinosConfigField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowUnclaimDinosConfig")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRecipeSkillMultiplier` +5, medido na build 25090264
+    //  ancorado em `CustomRecipeSkillMultiplier` +5, medido na build 25535041
     //  (offset absoluto medido: 0x8DD; confianca alta)
     bool& bAlwaysAllowHostMessagesField() const
     { return BrzCampoAncorado<bool>(this, "CustomRecipeSkillMultiplier", 5); }
@@ -1817,10 +1842,14 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAlwaysAllowStructurePickup"); }
     bool& bAutoPvEField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAutoPvE"); }
+    BrzCampoPonteiro bCharacterPaintingOnlySameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bCharacterPaintingOnlySameTeam")); }
     bool& bCrossARKAllowForeignDinoDownloadsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bCrossARKAllowForeignDinoDownloads"); }
     bool& bDisableCustomFoldersInTributeInventoriesField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisableCustomFoldersInTributeInventories"); }
+    BrzCampoPonteiro bDisableDefaultDinoTamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bDisableDefaultDinoTaming")); }
     bool& bDisableDinoDecayClaimingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisableDinoDecayClaiming"); }
     bool& bDisableDinoDecayPvEField() const
@@ -1839,6 +1868,8 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisablePvEGamma"); }
     bool& bDisableRailgunPVPField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisableRailgunPVP"); }
+    BrzCampoPonteiro bDisableSpawnAnimationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bDisableSpawnAnimations")); }
     bool& bDisableStructureDecayPvEField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisableStructureDecayPvE"); }
     bool& bDisableStructurePlacementCollisionField() const
@@ -1853,8 +1884,14 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisableWirelessCraftingForPlayers"); }
     bool& bDisableWirelessCraftingForStructuresField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDisableWirelessCraftingForStructures"); }
+    BrzCampoPonteiro bDoAutomatedModValidationModerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bDoAutomatedModValidationModeration")); }
+    BrzCampoPonteiro bDoCustomCosmeticValidationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bDoCustomCosmeticValidation")); }
     bool& bDoExtinctionEventField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bDoExtinctionEvent"); }
+    BrzCampoPonteiro bDontEnforceMilestoneTaskOrderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bDontEnforceMilestoneTaskOrder")); }
     bool& bEnableDeathTeamSpectatorField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bEnableDeathTeamSpectator"); }
     bool& bEnableExtraStructurePreventionVolumesField() const
@@ -1868,7 +1905,7 @@ struct AShooterGameState : public AGameState
     bool& bEnableServerDestroyTamesAboveSoftTameLimitField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bEnableServerDestroyTamesAboveSoftTameLimit"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventTribeAlliances` +25, medido na build 25090264
+    //  ancorado em `bPreventTribeAlliances` +25, medido na build 25535041
     //  (offset absoluto medido: 0xAA9; confianca alta)
     bool& bFastDecayUnsnappedCoreStructuresField() const
     { return BrzCampoAncorado<bool>(this, "bPreventTribeAlliances", 25); }
@@ -1878,10 +1915,12 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bForceAllStructureLocking"); }
     bool& bForceAllowAllStructuresField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bForceAllowAllStructures"); }
+    BrzCampoPonteiro bForceGachaUnhappyInCavesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bForceGachaUnhappyInCaves")); }
     bool& bForceUseInventoryAppendsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bForceUseInventoryAppends"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LiveTuningOverloadChunks` +16, medido na build 25090264
+    //  ancorado em `LiveTuningOverloadChunks` +16, medido na build 25535041
     //  (offset absoluto medido: 0xDD8; confianca alta)
     void*& bHasAppliedLiveTuningOverloadsField() const
     { return BrzCampoAncorado<void*>(this, "LiveTuningOverloadChunks", 16); }
@@ -1889,22 +1928,28 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bHexStoreAllowOnlyEngramTradeOption"); }
     bool& bIgnoreLimitMaxStructuresInRangeTypeFlagField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bIgnoreLimitMaxStructuresInRangeTypeFlag"); }
+    BrzCampoPonteiro bIgnorePVPMountedWeaponryRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bIgnorePVPMountedWeaponryRestrictions")); }
     bool& bIgnoreStructuresPreventionVolumesField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bIgnoreStructuresPreventionVolumes"); }
     bool& bIsArkDownloadsAllowedField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bIsArkDownloadsAllowed"); }
+    BrzCampoPonteiro bIsArkTributeAvailableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bIsArkTributeAvailable")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +21, medido na build 25090264
+    //  ancorado em `MaxPersonalTamedDinos` +21, medido na build 25535041
     //  (offset absoluto medido: 0xA39; confianca alta)
     bool& bIsClientField() const
     { return BrzCampoAncorado<bool>(this, "MaxPersonalTamedDinos", 21); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +20, medido na build 25090264
+    //  ancorado em `MaxPersonalTamedDinos` +20, medido na build 25535041
     //  (offset absoluto medido: 0xA38; confianca alta)
     void*& bIsCustomMapField() const
     { return BrzCampoAncorado<void*>(this, "MaxPersonalTamedDinos", 20); }
+    BrzCampoPonteiro bIsDediServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bIsDediServer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +22, medido na build 25090264
+    //  ancorado em `MaxPersonalTamedDinos` +22, medido na build 25535041
     //  (offset absoluto medido: 0xA3A; confianca alta)
     void*& bIsDedicatedServerField() const
     { return BrzCampoAncorado<void*>(this, "MaxPersonalTamedDinos", 22); }
@@ -1916,34 +1961,38 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bIsOfficialServer"); }
     bool& bIsServerRunningOnConsoleField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bIsServerRunningOnConsole"); }
+    BrzCampoPonteiro bLimitBunkersPerTribeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bLimitBunkersPerTribe")); }
     bool& bLimitTurretsInRangeField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bLimitTurretsInRange"); }
     bool& bMapPlayerLocationField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bMapPlayerLocation"); }
+    BrzCampoPonteiro bNeedsPowerToActivateAquaticCompartmentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bNeedsPowerToActivateAquaticCompartments")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventTribeAlliances` +24, medido na build 25090264
+    //  ancorado em `bPreventTribeAlliances` +24, medido na build 25535041
     //  (offset absoluto medido: 0xAA8; confianca alta)
     bool& bOnlyDecayUnsnappedCoreStructuresField() const
     { return BrzCampoAncorado<bool>(this, "bPreventTribeAlliances", 24); }
     bool& bOverideStructurePlatformPreventionField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bOverideStructurePlatformPrevention"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +11, medido na build 25090264
+    //  ancorado em `DynamicMusicAudioComponent2` +11, medido na build 25535041
     //  (offset absoluto medido: 0x80B; confianca alta)
     void*& bOverrideCombatMusicField() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +8, medido na build 25090264
+    //  ancorado em `DynamicMusicAudioComponent2` +8, medido na build 25535041
     //  (offset absoluto medido: 0x808; confianca alta)
     void*& bPlayingDynamicMusicField() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +9, medido na build 25090264
+    //  ancorado em `DynamicMusicAudioComponent2` +9, medido na build 25535041
     //  (offset absoluto medido: 0x809; confianca alta)
     bool& bPlayingDynamicMusic1Field() const
     { return BrzCampoAncorado<bool>(this, "DynamicMusicAudioComponent2", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +10, medido na build 25090264
+    //  ancorado em `DynamicMusicAudioComponent2` +10, medido na build 25535041
     //  (offset absoluto medido: 0x80A; confianca alta)
     void*& bPlayingDynamicMusic2Field() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 10); }
@@ -1957,6 +2006,8 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bPreventDroppedItemPhysics"); }
     bool& bPreventMateBoostField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bPreventMateBoost"); }
+    BrzCampoPonteiro bPreventNonClusterCharacterUploadsWithItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bPreventNonClusterCharacterUploadsWithItems")); }
     bool& bPreventOfflinePvPField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bPreventOfflinePvP"); }
     bool& bPreventOutOfTribePinCodeUseField() const
@@ -1965,6 +2016,8 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bPreventSpawnAnimations"); }
     bool& bPreventStructurePaintingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bPreventStructurePainting"); }
+    BrzCampoPonteiro bPreventTemplateOnSaddleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bPreventTemplateOnSaddle")); }
     bool& bPreventTribeAlliancesField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bPreventTribeAlliances"); }
     bool& bPreventUploadDinosField() const
@@ -1999,14 +2052,22 @@ struct AShooterGameState : public AGameState
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bServerPVE"); }
     bool& bServerUseDinoListField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bServerUseDinoList"); }
+    BrzCampoPonteiro bServerUseLocalizedChatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bServerUseLocalizedChat")); }
+    BrzCampoPonteiro bServerUseProximityVoiceChatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bServerUseProximityVoiceChat")); }
     bool& bShowCreativeModeField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bShowCreativeMode"); }
+    BrzCampoPonteiro bUseCorpseLocatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bUseCorpseLocator")); }
     bool& bUseSingleplayerSettingsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bUseSingleplayerSettings"); }
     bool& bUseTameLimitForStructuresOnlyField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bUseTameLimitForStructuresOnly"); }
+    BrzCampoPonteiro bVesselSimpleInterpModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bVesselSimpleInterpMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +72, medido na build 25090264
+    //  ancorado em `NetBanlistedMods` +72, medido na build 25535041
     //  (offset absoluto medido: 0xF40; confianca media)
     void*& bWasInCaveField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 72); }

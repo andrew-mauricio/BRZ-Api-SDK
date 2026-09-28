@@ -37,8 +37,8 @@ struct UPrimalMissionDB
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMissionDB.CachedMissionData")); }
     BrzCampoPonteiro NativeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMissionDB.NativeClass")); }
-    BitFieldValue<bool, unsigned __int32> bForceRepopulateAll()
-    { return { (void*)this, "bForceRepopulateAll" }; }
+    BrzCampoPonteiro bForceRepopulateAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalMissionDB.bForceRepopulateAll")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALMISSIONDB_H

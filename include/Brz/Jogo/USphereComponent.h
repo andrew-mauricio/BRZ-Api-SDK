@@ -41,16 +41,15 @@ struct USphereComponent : public UShapeComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USphereComponent.CalcBoundingCylinder(float&,float&)
-    // classe: a funcao mora em USceneComponent, e USphereComponent herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=58]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CalcBoundingCylinder(void* a0, void* a1) const
     {
-        NativeCall<void, void*, void*>(this, "USceneComponent.CalcBoundingCylinder(float&,float&)", a0, a1);
+        NativeCall<void, void*, void*>(this, "USphereComponent.CalcBoundingCylinder(float&,float&)", a0, a1);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   USphereComponent.IsZeroExtent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsZeroExtent() const
     {
         return NativeCall<bool>(this, "USphereComponent.IsZeroExtent()");

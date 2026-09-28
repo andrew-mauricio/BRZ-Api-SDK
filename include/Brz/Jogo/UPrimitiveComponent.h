@@ -51,7 +51,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.AddImpulse(UE::Math::TVector<double>,FName,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void AddImpulse(void* a0, unsigned long long a1, bool a2) const
     {
         NativeCall<void, void*, unsigned long long, bool>(this, "UPrimitiveComponent.AddImpulse(UE::Math::TVector<double>,FName,bool)", a0, a1, a2);
@@ -115,7 +115,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "UPrimitiveComponent.BeginPlay()");
@@ -179,7 +179,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.CreateDynamicMaterialInstance(int,UMaterialInterface*,FName)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     UMaterialInstanceDynamic* CreateDynamicMaterialInstance(int a0, void* a1, unsigned long long a2) const
     {
         return NativeCall<UMaterialInstanceDynamic*, int, void*, unsigned long long>(this, "UPrimitiveComponent.CreateDynamicMaterialInstance(int,UMaterialInterface*,FName)", a0, a1, a2);
@@ -219,7 +219,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.DispatchOnClicked(FKey)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void DispatchOnClicked(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimitiveComponent.DispatchOnClicked(FKey)", a0);
@@ -267,7 +267,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetBodyInstance(FName,bool,int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBodyInstance(unsigned long long a0, bool a1, int a2) const
     {
         return NativeCall<void*, unsigned long long, bool, int>(this, "UPrimitiveComponent.GetBodyInstance(FName,bool,int)", a0, a1, a2);
@@ -283,7 +283,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetCollisionObjectType()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetCollisionObjectType() const
     {
         return NativeCall<int>(this, "UPrimitiveComponent.GetCollisionObjectType()");
@@ -299,7 +299,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetCollisionResponseToChannel(ECollisionChannel)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetCollisionResponseToChannel(int a0) const
     {
         return NativeCall<int, int>(this, "UPrimitiveComponent.GetCollisionResponseToChannel(ECollisionChannel)", a0);
@@ -307,7 +307,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetCustomPrimitiveDataIndexForScalarParameter(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     int GetCustomPrimitiveDataIndexForScalarParameter(unsigned long long a0) const
     {
         return NativeCall<int, unsigned long long>(this, "UPrimitiveComponent.GetCustomPrimitiveDataIndexForScalarParameter(FName)", a0);
@@ -315,7 +315,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetCustomPrimitiveDataIndexForVectorParameter(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=225]]
+    // endereco: casamento de bytes com a build de referencia
     int GetCustomPrimitiveDataIndexForVectorParameter(unsigned long long a0) const
     {
         return NativeCall<int, unsigned long long>(this, "UPrimitiveComponent.GetCustomPrimitiveDataIndexForVectorParameter(FName)", a0);
@@ -347,7 +347,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetMassScale(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=48]]
+    // endereco: casamento de bytes com a build de referencia
     float GetMassScale(unsigned long long a0) const
     {
         return NativeCall<float, unsigned long long>(this, "UPrimitiveComponent.GetMassScale(FName)", a0);
@@ -387,7 +387,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.GetStaticDepthPriorityGroup()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetStaticDepthPriorityGroup() const
     {
         return NativeCall<int>(this, "UPrimitiveComponent.GetStaticDepthPriorityGroup()");
@@ -427,7 +427,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.InvalidateLightingCacheDetailed(bool,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InvalidateLightingCacheDetailed(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "UPrimitiveComponent.InvalidateLightingCacheDetailed(bool,bool)", a0, a1);
@@ -443,7 +443,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.IsEditorOnly()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsEditorOnly() const
     {
         return NativeCall<bool>(this, "UPrimitiveComponent.IsEditorOnly()");
@@ -451,7 +451,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.IsGravityEnabled()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=51]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsGravityEnabled() const
     {
         return NativeCall<bool>(this, "UPrimitiveComponent.IsGravityEnabled()");
@@ -483,7 +483,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.IsWorldGeometry()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsWorldGeometry() const
     {
         return NativeCall<bool>(this, "UPrimitiveComponent.IsWorldGeometry()");
@@ -535,7 +535,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.OnActorEnableCollisionChanged()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void OnActorEnableCollisionChanged() const
     {
         NativeCall<void>(this, "UPrimitiveComponent.OnActorEnableCollisionChanged()");
@@ -575,7 +575,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.OnDestroyPhysicsState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=5/6]]
+    // endereco: casamento de bytes com a build de referencia
     void OnDestroyPhysicsState() const
     {
         NativeCall<void>(this, "UPrimitiveComponent.OnDestroyPhysicsState()");
@@ -607,7 +607,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.PostDuplicate(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostDuplicate(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.PostDuplicate(bool)", a0);
@@ -615,10 +615,11 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // classe: a funcao mora em UActorComponent, e UPrimitiveComponent herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostInitProperties() const
     {
-        NativeCall<void>(this, "UPrimitiveComponent.PostInitProperties()");
+        NativeCall<void>(this, "UActorComponent.PostInitProperties()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -679,7 +680,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetAllPhysicsAngularVelocityInRadians(UE::Math::TVector<double>&,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void SetAllPhysicsAngularVelocityInRadians(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "UPrimitiveComponent.SetAllPhysicsAngularVelocityInRadians(UE::Math::TVector<double>&,bool)", a0, a1);
@@ -695,7 +696,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetAllUseCCD(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAllUseCCD(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetAllUseCCD(bool)", a0);
@@ -703,7 +704,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetCastHiddenShadow(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCastHiddenShadow(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetCastHiddenShadow(bool)", a0);
@@ -743,7 +744,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetCustomDepthStencilValue(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCustomDepthStencilValue(int a0) const
     {
         NativeCall<void, int>(this, "UPrimitiveComponent.SetCustomDepthStencilValue(int)", a0);
@@ -759,7 +760,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetGenerateOverlapEvents(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetGenerateOverlapEvents(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetGenerateOverlapEvents(bool)", a0);
@@ -783,7 +784,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetNotifyRigidBodyCollision(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void SetNotifyRigidBodyCollision(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetNotifyRigidBodyCollision(bool)", a0);
@@ -791,7 +792,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetOnlyOwnerSee(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetOnlyOwnerSee(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetOnlyOwnerSee(bool)", a0);
@@ -799,7 +800,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetOwnerNoSee(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetOwnerNoSee(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetOwnerNoSee(bool)", a0);
@@ -807,7 +808,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetPhysMaterialOverride(UPhysicalMaterial*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetPhysMaterialOverride(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimitiveComponent.SetPhysMaterialOverride(UPhysicalMaterial*)", a0);
@@ -823,7 +824,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetSimulatePhysics(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetSimulatePhysics(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimitiveComponent.SetSimulatePhysics(bool)", a0);
@@ -831,7 +832,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.SetWalkableSlopeOverride(FWalkableSlopeOverride&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetWalkableSlopeOverride(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimitiveComponent.SetWalkableSlopeOverride(FWalkableSlopeOverride&)", a0);
@@ -855,7 +856,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.ShouldRenderSelected()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldRenderSelected() const
     {
         return NativeCall<bool>(this, "UPrimitiveComponent.ShouldRenderSelected()");
@@ -863,7 +864,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.StaticRegisterNativesUPrimitiveComponent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesUPrimitiveComponent()
     {
         NativeCall<void>(nullptr, "UPrimitiveComponent.StaticRegisterNativesUPrimitiveComponent()");
@@ -919,7 +920,7 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.WakeAllRigidBodies()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void WakeAllRigidBodies() const
     {
         NativeCall<void>(this, "UPrimitiveComponent.WakeAllRigidBodies()");
@@ -962,6 +963,10 @@ struct UPrimitiveComponent : public USceneComponent
     //    UPrimitiveComponent.GetOverlappingComponents(TSet<UPrimitiveComponent*,DefaultKeyFuncs<UPrimitiveComponent*,0>
     //      (colide com UPrimitiveComponent.GetOverlappingComponents(TArray<UPrimitiveComponent*,TSizedDefaultAllocator<)
 
+    BrzCampoPonteiro AlwaysLoadOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.AlwaysLoadOnClient")); }
+    BrzCampoPonteiro AlwaysLoadOnServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.AlwaysLoadOnServer")); }
     BrzCampoPonteiro BodyInstanceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.BodyInstance")); }
     float& BoundsScaleField() const
@@ -970,6 +975,8 @@ struct UPrimitiveComponent : public USceneComponent
     { return *GetNativePointerField<float*>(this, "UPrimitiveComponent.CachedMaxDrawDistance"); }
     BrzCampoPonteiro CanCharacterStepUpOnField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.CanCharacterStepUpOn")); }
+    BrzCampoPonteiro CastShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.CastShadow")); }
     int& CustomDepthStencilValueField() const
     { return *GetNativePointerField<int*>(this, "UPrimitiveComponent.CustomDepthStencilValue"); }
     BrzCampoPonteiro CustomDepthStencilWriteMaskField() const
@@ -981,7 +988,7 @@ struct UPrimitiveComponent : public USceneComponent
     BrzCampoPonteiro DepthPriorityGroupField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.DepthPriorityGroup")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnPrimalComponentPhysicsStatePreChange` +9, medido na build 25090264
+    //  ancorado em `OnPrimalComponentPhysicsStatePreChange` +9, medido na build 25535041
     //  (offset absoluto medido: 0x538; confianca alta)
     void*& DetachFenceField() const
     { return BrzCampoAncorado<void*>(this, "OnPrimalComponentPhysicsStatePreChange", 9); }
@@ -1000,7 +1007,7 @@ struct UPrimitiveComponent : public USceneComponent
     TObjectPtr<UPrimitiveComponent>& LODParentPrimitiveField() const
     { return *GetNativePointerField<TObjectPtr<UPrimitiveComponent>*>(this, "UPrimitiveComponent.LODParentPrimitive"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VirtualTextureRenderPassType` +1, medido na build 25090264
+    //  ancorado em `VirtualTextureRenderPassType` +1, medido na build 25535041
     //  (offset absoluto medido: 0x304; confianca alta)
     float& LastCheckedAllCollideableDescendantsTimeField() const
     { return BrzCampoAncorado<float>(this, "VirtualTextureRenderPassType", 1); }
@@ -1015,14 +1022,14 @@ struct UPrimitiveComponent : public USceneComponent
     TArray<void*>& MoveIgnoreComponentsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimitiveComponent.MoveIgnoreComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasCustomNavigableGeometry` +1, medido na build 25090264
+    //  ancorado em `bHasCustomNavigableGeometry` +1, medido na build 25535041
     //  (offset absoluto medido: 0x2AE; confianca alta)
     unsigned char& MoveIgnoreMaskField() const
     { return BrzCampoAncorado<unsigned char>(this, "bHasCustomNavigableGeometry", 1); }
     int& ObjectLayerField() const
     { return *GetNativePointerField<int*>(this, "UPrimitiveComponent.ObjectLayer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VirtualTextureRenderPassType` +5, medido na build 25090264
+    //  ancorado em `VirtualTextureRenderPassType` +5, medido na build 25535041
     //  (offset absoluto medido: 0x308; confianca alta)
     float& OcclusionBoundsSlackField() const
     { return BrzCampoAncorado<float>(this, "VirtualTextureRenderPassType", 5); }
@@ -1041,12 +1048,12 @@ struct UPrimitiveComponent : public USceneComponent
     BrzCampoPonteiro OnPrimalComponentPhysicsStatePreChangeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.OnPrimalComponentPhysicsStatePreChange")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MoveIgnoreComponents` +16, medido na build 25090264
+    //  ancorado em `MoveIgnoreComponents` +16, medido na build 25535041
     //  (offset absoluto medido: 0x378; confianca alta)
     TArray<void*>& OverlappingComponentsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MoveIgnoreComponents", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MoveIgnoreComponents` +32, medido na build 25090264
+    //  ancorado em `MoveIgnoreComponents` +32, medido na build 25535041
     //  (offset absoluto medido: 0x388; confianca alta)
     void*& OverlappingPrimitiveComponentsField() const
     { return BrzCampoAncorado<void*>(this, "MoveIgnoreComponents", 32); }
@@ -1076,8 +1083,160 @@ struct UPrimitiveComponent : public USceneComponent
     { return { (void*)this, "UPrimitiveComponent.VirtualTextureRenderPassType" }; }
     int& VisibilityIdField() const
     { return *GetNativePointerField<int*>(this, "UPrimitiveComponent.VisibilityId"); }
+    BrzCampoPonteiro bAffectDistanceFieldLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bAffectDistanceFieldLighting")); }
+    BrzCampoPonteiro bAffectDynamicIndirectLightingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bAffectDynamicIndirectLighting")); }
+    BrzCampoPonteiro bAffectIndirectLightingWhileHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bAffectIndirectLightingWhileHidden")); }
+    BrzCampoPonteiro bAllowCullDistanceVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bAllowCullDistanceVolume")); }
+    BrzCampoPonteiro bAlwaysCreatePhysicsStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bAlwaysCreatePhysicsState")); }
+    BrzCampoPonteiro bApplyImpulseOnDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bApplyImpulseOnDamage")); }
+    BrzCampoPonteiro bCastCinematicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastCinematicShadow")); }
+    BrzCampoPonteiro bCastContactShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastContactShadow")); }
+    BrzCampoPonteiro bCastDynamicShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastDynamicShadow")); }
+    BrzCampoPonteiro bCastFarShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastFarShadow")); }
+    BrzCampoPonteiro bCastHiddenShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastHiddenShadow")); }
+    BrzCampoPonteiro bCastInsetShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastInsetShadow")); }
+    BrzCampoPonteiro bCastShadowAsTwoSidedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastShadowAsTwoSided")); }
+    BrzCampoPonteiro bCastStaticShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastStaticShadow")); }
+    BrzCampoPonteiro bCastVolumetricTranslucentShadowField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bCastVolumetricTranslucentShadow")); }
+    BrzCampoPonteiro bClimbableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bClimbable")); }
+    BrzCampoPonteiro bEmissiveLightSourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bEmissiveLightSource")); }
+    BrzCampoPonteiro bEnableAutoLODGenerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bEnableAutoLODGeneration")); }
+    BrzCampoPonteiro bExcludeFromLevelBoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bExcludeFromLevelBounds")); }
+    BrzCampoPonteiro bExcludeFromLightAttachmentGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bExcludeFromLightAttachmentGroup")); }
+    BrzCampoPonteiro bFillCollisionUnderneathForNavmeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bFillCollisionUnderneathForNavmesh")); }
+    BrzCampoPonteiro bForceMipStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bForceMipStreaming")); }
+    BrzCampoPonteiro bForceOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bForceOverlapEvents")); }
+    BrzCampoPonteiro bForcePreventBlockingProjectilesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bForcePreventBlockingProjectiles")); }
+    BrzCampoPonteiro bGenerateOverlapEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bGenerateOverlapEvents")); }
     BrzCampoPonteiro bHasCustomNavigableGeometryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bHasCustomNavigableGeometry")); }
+    BrzCampoPonteiro bHasNoStreamableTexturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bHasNoStreamableTextures")); }
+    BrzCampoPonteiro bHasPerInstanceHitProxiesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bHasPerInstanceHitProxies")); }
+    BrzCampoPonteiro bHiddenInSceneCaptureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bHiddenInSceneCapture")); }
+    BrzCampoPonteiro bHoldoutField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bHoldout")); }
+    BrzCampoPonteiro bIgnoreRadialForceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIgnoreRadialForce")); }
+    BrzCampoPonteiro bIgnoreRadialImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIgnoreRadialImpulse")); }
+    BrzCampoPonteiro bIgnoreUpdatingOwnersLastRenderTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIgnoreUpdatingOwnersLastRenderTime")); }
+    BrzCampoPonteiro bIgnoredByCharacterEncroachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIgnoredByCharacterEncroachment")); }
+    BrzCampoPonteiro bIncludeBoundsRadiusInDrawDistancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIncludeBoundsRadiusInDrawDistances")); }
+    BrzCampoPonteiro bIsAbstractBasingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIsAbstractBasingComponent")); }
+    BrzCampoPonteiro bIsActorTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIsActorTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bIsBeingMovedByEditorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIsBeingMovedByEditor")); }
+    BrzCampoPonteiro bIsInForegroundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIsInForeground")); }
+    BrzCampoPonteiro bIsValidTextureStreamingBuiltDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bIsValidTextureStreamingBuiltData")); }
+    BrzCampoPonteiro bLightAsIfStaticField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bLightAsIfStatic")); }
+    BrzCampoPonteiro bLightAttachmentsAsGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bLightAttachmentsAsGroup")); }
+    BrzCampoPonteiro bMovableUseDynamicDrawDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bMovableUseDynamicDrawDistance")); }
+    BrzCampoPonteiro bMultiBodyOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bMultiBodyOverlap")); }
+    BrzCampoPonteiro bNeverDistanceCullField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bNeverDistanceCull")); }
+    BrzCampoPonteiro bOnlyOwnerSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bOnlyOwnerSee")); }
+    BrzCampoPonteiro bOwnerNoSeeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bOwnerNoSee")); }
+    BrzCampoPonteiro bPlaceholderBool1Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bPlaceholderBool1")); }
+    BrzCampoPonteiro bPreventCharacterBasingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bPreventCharacterBasing")); }
+    BrzCampoPonteiro bPreventDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bPreventDamage")); }
+    BrzCampoPonteiro bRayTracingFarFieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bRayTracingFarField")); }
+    BrzCampoPonteiro bReceiveMobileCSMShadowsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bReceiveMobileCSMShadows")); }
+    BrzCampoPonteiro bReceivesDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bReceivesDecals")); }
+    BrzCampoPonteiro bRegisterWithMaterialGPUMessageQueueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bRegisterWithMaterialGPUMessageQueue")); }
+    BrzCampoPonteiro bRenderCustomDepthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bRenderCustomDepth")); }
+    BrzCampoPonteiro bRenderInDepthPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bRenderInDepthPass")); }
+    BrzCampoPonteiro bRenderInMainPassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bRenderInMainPass")); }
+    BrzCampoPonteiro bReplicatePhysicsToAutonomousProxyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bReplicatePhysicsToAutonomousProxy")); }
+    BrzCampoPonteiro bReturnMaterialOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bReturnMaterialOnMove")); }
+    BrzCampoPonteiro bSelectableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bSelectable")); }
+    BrzCampoPonteiro bSelfShadowOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bSelfShadowOnly")); }
+    BrzCampoPonteiro bSingleSampleShadowFromStationaryLightsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bSingleSampleShadowFromStationaryLights")); }
+    BrzCampoPonteiro bStaticWhenNotMoveableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bStaticWhenNotMoveable")); }
+    BrzCampoPonteiro bTraceComplexOnMoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bTraceComplexOnMove")); }
+    BrzCampoPonteiro bTreatAsBackgroundForOcclusionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bTreatAsBackgroundForOcclusion")); }
+    BrzCampoPonteiro bUseAbsoluteMaxDrawDisatanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseAbsoluteMaxDrawDisatance")); }
+    BrzCampoPonteiro bUseAsOccluderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseAsOccluder")); }
+    BrzCampoPonteiro bUseAsUnfoggerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseAsUnfogger")); }
+    BrzCampoPonteiro bUseEditorCompositingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseEditorCompositing")); }
+    BrzCampoPonteiro bUseInternalOctreeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseInternalOctree")); }
+    BrzCampoPonteiro bUseInternalOctreeOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseInternalOctreeOnClient")); }
+    BrzCampoPonteiro bUseViewOwnerDepthPriorityGroupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bUseViewOwnerDepthPriorityGroup")); }
+    BrzCampoPonteiro bVisibleInRayTracingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bVisibleInRayTracing")); }
+    BrzCampoPonteiro bVisibleInRealTimeSkyCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bVisibleInRealTimeSkyCaptures")); }
+    BrzCampoPonteiro bVisibleInReflectionCapturesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bVisibleInReflectionCaptures")); }
+    BrzCampoPonteiro bVisibleInSceneCaptureOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bVisibleInSceneCaptureOnly")); }
+    BrzCampoPonteiro bWantsEditorEffectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.bWantsEditorEffects")); }
     BitFieldValue<bool, unsigned __int32> bEnableAutoLODGeneration()
     { return { (void*)this, "bEnableAutoLODGeneration" }; }
     BitFieldValue<bool, unsigned __int32> bIsActorTextureStreamingBuiltData()

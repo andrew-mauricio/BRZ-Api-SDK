@@ -81,6 +81,10 @@ struct UPrimalInventoryComponent_Market
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent_Market.CheatInventoryItems"); }
     BrzCampoPonteiro CloseInventorySoundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.CloseInventorySound")); }
+    BrzCampoPonteiro ColdStoredItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.ColdStoredItems")); }
+    BrzCampoPonteiro ColdStoredRichItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.ColdStoredRichItems")); }
     TArray<void*>& ComponentTagsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent_Market.ComponentTags"); }
     float& CraftingItemSpeedField() const
@@ -305,282 +309,286 @@ struct UPrimalInventoryComponent_Market
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent_Market.WeaponAsEquipmentAttachmentInfos"); }
     BrzCampoPonteiro WirelessExchangesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.WirelessExchanges")); }
-    BitFieldValue<bool, unsigned __int32> bAddMaxInventoryItemsToDefaultItems()
-    { return { (void*)this, "bAddMaxInventoryItemsToDefaultItems" }; }
-    BitFieldValue<bool, unsigned __int32> bAllDefaultInventoryIsEngrams()
-    { return { (void*)this, "bAllDefaultInventoryIsEngrams" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowAddingToArkTribute()
-    { return { (void*)this, "bAllowAddingToArkTribute" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowDeactivatedCrafting()
-    { return { (void*)this, "bAllowDeactivatedCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowItemStacking()
-    { return { (void*)this, "bAllowItemStacking" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRemoteCrafting()
-    { return { (void*)this, "bAllowRemoteCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRemoteInventory()
-    { return { (void*)this, "bAllowRemoteInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowRemoteRepairing()
-    { return { (void*)this, "bAllowRemoteRepairing" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowWorldSettingsInventoryComponentAppends()
-    { return { (void*)this, "bAllowWorldSettingsInventoryComponentAppends" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bBPAllowUseInInventory()
-    { return { (void*)this, "bBPAllowUseInInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bBPForceCustomRemoteInventoryAllowAddItems()
-    { return { (void*)this, "bBPForceCustomRemoteInventoryAllowAddItems" }; }
-    BitFieldValue<bool, unsigned __int32> bBPForceCustomRemoteInventoryAllowRemoveItems()
-    { return { (void*)this, "bBPForceCustomRemoteInventoryAllowRemoveItems" }; }
-    BitFieldValue<bool, unsigned __int32> bBPHandleAccessInventory()
-    { return { (void*)this, "bBPHandleAccessInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bBPNotifyItemAdded()
-    { return { (void*)this, "bBPNotifyItemAdded" }; }
-    BitFieldValue<bool, unsigned __int32> bBPNotifyItemQuantityUpdated()
-    { return { (void*)this, "bBPNotifyItemQuantityUpdated" }; }
-    BitFieldValue<bool, unsigned __int32> bBPNotifyItemRemoved()
-    { return { (void*)this, "bBPNotifyItemRemoved" }; }
-    BitFieldValue<bool, unsigned __int32> bBPOverrideItemMinimumUseInterval()
-    { return { (void*)this, "bBPOverrideItemMinimumUseInterval" }; }
-    BitFieldValue<bool, unsigned __int32> bBPRemoteInventoryAllowRemoveItems()
-    { return { (void*)this, "bBPRemoteInventoryAllowRemoveItems" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEquipItems()
-    { return { (void*)this, "bCanEquipItems" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bCanInventoryItems()
-    { return { (void*)this, "bCanInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bCanUseWeaponAsEquipment()
-    { return { (void*)this, "bCanUseWeaponAsEquipment" }; }
-    BitFieldValue<bool, unsigned __int32> bCheckForAutoCraftBlueprints()
-    { return { (void*)this, "bCheckForAutoCraftBlueprints" }; }
-    BitFieldValue<bool, unsigned __int32> bConsumeCraftingRepairingRequirementsOnStart()
-    { return { (void*)this, "bConsumeCraftingRepairingRequirementsOnStart" }; }
-    BitFieldValue<bool, unsigned __int32> bCraftingEnabled()
-    { return { (void*)this, "bCraftingEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bDataListPadMaxInventoryItems()
-    { return { (void*)this, "bDataListPadMaxInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bDeferCheckForAutoCraftBlueprintsOnInventoryChange()
-    { return { (void*)this, "bDeferCheckForAutoCraftBlueprintsOnInventoryChange" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableDropAllItems()
-    { return { (void*)this, "bDisableDropAllItems" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableTransferEquipmentOnTransferAll()
-    { return { (void*)this, "bDisableTransferEquipmentOnTransferAll" }; }
-    BitFieldValue<bool, unsigned __int32> bDropPhysicalInventoryDeposit()
-    { return { (void*)this, "bDropPhysicalInventoryDeposit" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableDediSortingInputs()
-    { return { (void*)this, "bEnableDediSortingInputs" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableSorting()
-    { return { (void*)this, "bEnableSorting" }; }
-    BitFieldValue<bool, unsigned __int32> bEnableSortingInputs()
-    { return { (void*)this, "bEnableSortingInputs" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentForceIgnoreExplicitOwnerClass()
-    { return { (void*)this, "bEquipmentForceIgnoreExplicitOwnerClass" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentMustRequireExplicitOwnerClass()
-    { return { (void*)this, "bEquipmentMustRequireExplicitOwnerClass" }; }
-    BitFieldValue<bool, unsigned __int32> bEquipmentPlayerForceRequireExplicitOwnerClass()
-    { return { (void*)this, "bEquipmentPlayerForceRequireExplicitOwnerClass" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowAllUseInInventory()
-    { return { (void*)this, "bForceAllowAllUseInInventory" }; }
+    BrzCampoPonteiro bAddMaxInventoryItemsToDefaultItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAddMaxInventoryItemsToDefaultItems")); }
+    BrzCampoPonteiro bAllDefaultInventoryIsEngramsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllDefaultInventoryIsEngrams")); }
+    BrzCampoPonteiro bAllowAddingToArkTributeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowAddingToArkTribute")); }
+    BrzCampoPonteiro bAllowDeactivatedCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowDeactivatedCrafting")); }
+    BrzCampoPonteiro bAllowItemColdStorageOnStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowItemColdStorageOnStasis")); }
+    BrzCampoPonteiro bAllowItemStackingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowItemStacking")); }
+    BrzCampoPonteiro bAllowRemoteCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowRemoteCrafting")); }
+    BrzCampoPonteiro bAllowRemoteInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowRemoteInventory")); }
+    BrzCampoPonteiro bAllowRemoteRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowRemoteRepairing")); }
+    BrzCampoPonteiro bAllowWorldSettingsInventoryComponentAppendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAllowWorldSettingsInventoryComponentAppends")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bAutoActivate")); }
+    BrzCampoPonteiro bBPAllowUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPAllowUseInInventory")); }
+    BrzCampoPonteiro bBPForceCustomRemoteInventoryAllowAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPForceCustomRemoteInventoryAllowAddItems")); }
+    BrzCampoPonteiro bBPForceCustomRemoteInventoryAllowRemoveItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPForceCustomRemoteInventoryAllowRemoveItems")); }
+    BrzCampoPonteiro bBPHandleAccessInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPHandleAccessInventory")); }
+    BrzCampoPonteiro bBPNotifyItemAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPNotifyItemAdded")); }
+    BrzCampoPonteiro bBPNotifyItemQuantityUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPNotifyItemQuantityUpdated")); }
+    BrzCampoPonteiro bBPNotifyItemRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPNotifyItemRemoved")); }
+    BrzCampoPonteiro bBPOverrideItemMinimumUseIntervalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPOverrideItemMinimumUseInterval")); }
+    BrzCampoPonteiro bBPRemoteInventoryAllowRemoveItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bBPRemoteInventoryAllowRemoveItems")); }
+    BrzCampoPonteiro bCanEquipItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bCanEquipItems")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCanInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bCanInventoryItems")); }
+    BrzCampoPonteiro bCanUseWeaponAsEquipmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bCanUseWeaponAsEquipment")); }
+    BrzCampoPonteiro bCheckForAutoCraftBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bCheckForAutoCraftBlueprints")); }
+    BrzCampoPonteiro bColdStorageDeferInflateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bColdStorageDeferInflate")); }
+    BrzCampoPonteiro bConsumeCraftingRepairingRequirementsOnStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bConsumeCraftingRepairingRequirementsOnStart")); }
+    BrzCampoPonteiro bCraftingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bCraftingEnabled")); }
+    BrzCampoPonteiro bDataListPadMaxInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bDataListPadMaxInventoryItems")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bDeferCheckForAutoCraftBlueprintsOnInventoryChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bDeferCheckForAutoCraftBlueprintsOnInventoryChange")); }
+    BrzCampoPonteiro bDisableDropAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bDisableDropAllItems")); }
+    BrzCampoPonteiro bDisableTransferEquipmentOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bDisableTransferEquipmentOnTransferAll")); }
+    BrzCampoPonteiro bDropPhysicalInventoryDepositField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bDropPhysicalInventoryDeposit")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEditableWhenInherited")); }
+    BrzCampoPonteiro bEnableDediSortingInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEnableDediSortingInputs")); }
+    BrzCampoPonteiro bEnableSortingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEnableSorting")); }
+    BrzCampoPonteiro bEnableSortingInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEnableSortingInputs")); }
+    BrzCampoPonteiro bEquipmentForceIgnoreExplicitOwnerClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEquipmentForceIgnoreExplicitOwnerClass")); }
+    BrzCampoPonteiro bEquipmentMustRequireExplicitOwnerClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEquipmentMustRequireExplicitOwnerClass")); }
+    BrzCampoPonteiro bEquipmentPlayerForceRequireExplicitOwnerClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bEquipmentPlayerForceRequireExplicitOwnerClass")); }
+    BrzCampoPonteiro bForceAllowAllUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bForceAllowAllUseInInventory")); }
     bool& bForceAllowCustomFoldersField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalInventoryComponent_Market.bForceAllowCustomFolders"); }
-    BitFieldValue<bool, unsigned __int32> bForceGenerateItemSets()
-    { return { (void*)this, "bForceGenerateItemSets" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInventoryBlueprints()
-    { return { (void*)this, "bForceInventoryBlueprints" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInventoryNonRemovable()
-    { return { (void*)this, "bForceInventoryNonRemovable" }; }
-    BitFieldValue<bool, unsigned __int32> bForceInventoryNotifyCraftingFinished()
-    { return { (void*)this, "bForceInventoryNotifyCraftingFinished" }; }
-    BitFieldValue<bool, unsigned __int32> bForcePreventDropInventory()
-    { return { (void*)this, "bForcePreventDropInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bFreeCraftingMode()
-    { return { (void*)this, "bFreeCraftingMode" }; }
-    BitFieldValue<bool, unsigned __int32> bGivesAchievementItems()
-    { return { (void*)this, "bGivesAchievementItems" }; }
-    BitFieldValue<bool, unsigned __int32> bGrinderCanGrindAll()
-    { return { (void*)this, "bGrinderCanGrindAll" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHideDefaultInventoryItemsFromDisplay()
-    { return { (void*)this, "bHideDefaultInventoryItemsFromDisplay" }; }
-    BitFieldValue<bool, unsigned __int32> bHideEnableSortingButton()
-    { return { (void*)this, "bHideEnableSortingButton" }; }
-    BitFieldValue<bool, unsigned __int32> bHideSaddleFromInventoryDisplay()
-    { return { (void*)this, "bHideSaddleFromInventoryDisplay" }; }
-    BitFieldValue<bool, unsigned __int32> bHideSlotCountFromHud()
-    { return { (void*)this, "bHideSlotCountFromHud" }; }
-    BitFieldValue<bool, unsigned __int32> bHideTributeUploadDinosPanel()
-    { return { (void*)this, "bHideTributeUploadDinosPanel" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreDLCEquipRestrictions()
-    { return { (void*)this, "bIgnoreDLCEquipRestrictions" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreEngramEquipRestrictions()
-    { return { (void*)this, "bIgnoreEngramEquipRestrictions" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreItemMaxDurabilityForItemRepair()
-    { return { (void*)this, "bIgnoreItemMaxDurabilityForItemRepair" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreItemRequiresInventoryForItemRepair()
-    { return { (void*)this, "bIgnoreItemRequiresInventoryForItemRepair" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreMaxInventoryItems()
-    { return { (void*)this, "bIgnoreMaxInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreNextItemUseCD()
-    { return { (void*)this, "bIgnoreNextItemUseCD" }; }
-    BitFieldValue<bool, unsigned __int32> bInitializedMe()
-    { return { (void*)this, "bInitializedMe" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bIsSecondaryInventory()
-    { return { (void*)this, "bIsSecondaryInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTaxidermyBase()
-    { return { (void*)this, "bIsTaxidermyBase" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTributeInventory()
-    { return { (void*)this, "bIsTributeInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bLastNotifyCraftingState()
-    { return { (void*)this, "bLastNotifyCraftingState" }; }
-    BitFieldValue<bool, unsigned __int32> bMaxInventoryWeightUseCharacterStatus()
-    { return { (void*)this, "bMaxInventoryWeightUseCharacterStatus" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bNotNearWirelessCrafting()
-    { return { (void*)this, "bNotNearWirelessCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bNotifyAddedOnClientReceive()
-    { return { (void*)this, "bNotifyAddedOnClientReceive" }; }
-    BitFieldValue<bool, unsigned __int32> bNotifyCraftingStateChanged()
-    { return { (void*)this, "bNotifyCraftingStateChanged" }; }
-    BitFieldValue<bool, unsigned __int32> bNotifyWirelessTribeGroupInventoryRankChanged()
-    { return { (void*)this, "bNotifyWirelessTribeGroupInventoryRankChanged" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyOneCraftQueueItem()
-    { return { (void*)this, "bOnlyOneCraftQueueItem" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideCraftingMinDurabilityRequirement()
-    { return { (void*)this, "bOverrideCraftingMinDurabilityRequirement" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideInventoryDepositClassDontForceDrop()
-    { return { (void*)this, "bOverrideInventoryDepositClassDontForceDrop" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventAutoDecreaseDurability()
-    { return { (void*)this, "bPreventAutoDecreaseDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventCraftingResourceConsumption()
-    { return { (void*)this, "bPreventCraftingResourceConsumption" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventDropInventoryDeposit()
-    { return { (void*)this, "bPreventDropInventoryDeposit" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventInventoryViewTrace()
-    { return { (void*)this, "bPreventInventoryViewTrace" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventSortingInputs()
-    { return { (void*)this, "bPreventSortingInputs" }; }
-    BitFieldValue<bool, unsigned __int32> bReceivingArkInventoryItems()
-    { return { (void*)this, "bReceivingArkInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bReceivingEquippedItems()
-    { return { (void*)this, "bReceivingEquippedItems" }; }
-    BitFieldValue<bool, unsigned __int32> bReceivingInventoryItems()
-    { return { (void*)this, "bReceivingInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bRemoteInventoryAllowAddItems()
-    { return { (void*)this, "bRemoteInventoryAllowAddItems" }; }
-    BitFieldValue<bool, unsigned __int32> bRemoteInventoryAllowRemoveItems()
-    { return { (void*)this, "bRemoteInventoryAllowRemoveItems" }; }
-    BitFieldValue<bool, unsigned __int32> bRemoteInventoryOnlyAllowSelf()
-    { return { (void*)this, "bRemoteInventoryOnlyAllowSelf" }; }
-    BitFieldValue<bool, unsigned __int32> bRemoteInventoryOnlyAllowTribe()
-    { return { (void*)this, "bRemoteInventoryOnlyAllowTribe" }; }
-    BitFieldValue<bool, unsigned __int32> bRemoteOnlyAllowBlueprintsOrItemClasses()
-    { return { (void*)this, "bRemoteOnlyAllowBlueprintsOrItemClasses" }; }
-    BitFieldValue<bool, unsigned __int32> bRepairingEnabled()
-    { return { (void*)this, "bRepairingEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateComponent()
-    { return { (void*)this, "bReplicateComponent" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bSetCraftingEnabledCheckForAutoCraftBlueprints()
-    { return { (void*)this, "bSetCraftingEnabledCheckForAutoCraftBlueprints" }; }
-    BitFieldValue<bool, unsigned __int32> bSetsRandomWithoutReplacement()
-    { return { (void*)this, "bSetsRandomWithoutReplacement" }; }
-    BitFieldValue<bool, unsigned __int32> bShowHiddenDefaultInventoryItemsDuringCrafting()
-    { return { (void*)this, "bShowHiddenDefaultInventoryItemsDuringCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bShowHiddenRemoteInventoryItems()
-    { return { (void*)this, "bShowHiddenRemoteInventoryItems" }; }
-    BitFieldValue<bool, unsigned __int32> bShowItemDefaultFolders()
-    { return { (void*)this, "bShowItemDefaultFolders" }; }
-    BitFieldValue<bool, unsigned __int32> bShowQuickSlotPanel()
-    { return { (void*)this, "bShowQuickSlotPanel" }; }
-    BitFieldValue<bool, unsigned __int32> bSpawnActorOnTopOfStructure()
-    { return { (void*)this, "bSpawnActorOnTopOfStructure" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bTriggerHotbarItemUsedEvent()
-    { return { (void*)this, "bTriggerHotbarItemUsedEvent" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowAddInventoryItem()
-    { return { (void*)this, "bUseBPAllowAddInventoryItem" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAllowRepairingItemInInventory()
-    { return { (void*)this, "bUseBPAllowRepairingItemInInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanGrindItems()
-    { return { (void*)this, "bUseBPCanGrindItems" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetExtraItemDisplay()
-    { return { (void*)this, "bUseBPGetExtraItemDisplay" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetExtraItemRepairResourceRequirements()
-    { return { (void*)this, "bUseBPGetExtraItemRepairResourceRequirements" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitializeInventory()
-    { return { (void*)this, "bUseBPInitializeInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInventoryRefresh()
-    { return { (void*)this, "bUseBPInventoryRefresh" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPIsCraftingAllowed()
-    { return { (void*)this, "bUseBPIsCraftingAllowed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPIsValidCraftingResource()
-    { return { (void*)this, "bUseBPIsValidCraftingResource" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPModifyCustomAutoDecreaseDurability()
-    { return { (void*)this, "bUseBPModifyCustomAutoDecreaseDurability" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnTransferAll()
-    { return { (void*)this, "bUseBPOnTransferAll" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideDropItemTransform()
-    { return { (void*)this, "bUseBPOverrideDropItemTransform" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRemoteInventoryAllowCrafting()
-    { return { (void*)this, "bUseBPRemoteInventoryAllowCrafting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRemoteInventoryAllowViewing()
-    { return { (void*)this, "bUseBPRemoteInventoryAllowViewing" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRemoteInventoryGetMaxVisibleSlots()
-    { return { (void*)this, "bUseBPRemoteInventoryGetMaxVisibleSlots" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPUseCraftQueueForItem()
-    { return { (void*)this, "bUseBPUseCraftQueueForItem" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCheatInventory()
-    { return { (void*)this, "bUseCheatInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCraftQueue()
-    { return { (void*)this, "bUseCraftQueue" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomSorting()
-    { return { (void*)this, "bUseCustomSorting" }; }
-    BitFieldValue<bool, unsigned __int32> bUseExtendedCharacterCraftingFunctionality()
-    { return { (void*)this, "bUseExtendedCharacterCraftingFunctionality" }; }
-    BitFieldValue<bool, unsigned __int32> bUseInventoryBPDrawItemIcon()
-    { return { (void*)this, "bUseInventoryBPDrawItemIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bUseItemCountInsteadOfInventory()
-    { return { (void*)this, "bUseItemCountInsteadOfInventory" }; }
-    BitFieldValue<bool, unsigned __int32> bUseItemQuantityUpdateEvents()
-    { return { (void*)this, "bUseItemQuantityUpdateEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bUseParentStructureIsValidCraftingResource()
-    { return { (void*)this, "bUseParentStructureIsValidCraftingResource" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSortingInputAmounts()
-    { return { (void*)this, "bUseSortingInputAmounts" }; }
+    BrzCampoPonteiro bForceGenerateItemSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bForceGenerateItemSets")); }
+    BrzCampoPonteiro bForceInventoryBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bForceInventoryBlueprints")); }
+    BrzCampoPonteiro bForceInventoryNonRemovableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bForceInventoryNonRemovable")); }
+    BrzCampoPonteiro bForceInventoryNotifyCraftingFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bForceInventoryNotifyCraftingFinished")); }
+    BrzCampoPonteiro bForcePreventDropInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bForcePreventDropInventory")); }
+    BrzCampoPonteiro bFreeCraftingModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bFreeCraftingMode")); }
+    BrzCampoPonteiro bGivesAchievementItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bGivesAchievementItems")); }
+    BrzCampoPonteiro bGrinderCanGrindAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bGrinderCanGrindAll")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHideDefaultInventoryItemsFromDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bHideDefaultInventoryItemsFromDisplay")); }
+    BrzCampoPonteiro bHideEnableSortingButtonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bHideEnableSortingButton")); }
+    BrzCampoPonteiro bHideSaddleFromInventoryDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bHideSaddleFromInventoryDisplay")); }
+    BrzCampoPonteiro bHideSlotCountFromHudField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bHideSlotCountFromHud")); }
+    BrzCampoPonteiro bHideTributeUploadDinosPanelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bHideTributeUploadDinosPanel")); }
+    BrzCampoPonteiro bIgnoreDLCEquipRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIgnoreDLCEquipRestrictions")); }
+    BrzCampoPonteiro bIgnoreEngramEquipRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIgnoreEngramEquipRestrictions")); }
+    BrzCampoPonteiro bIgnoreItemMaxDurabilityForItemRepairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIgnoreItemMaxDurabilityForItemRepair")); }
+    BrzCampoPonteiro bIgnoreItemRequiresInventoryForItemRepairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIgnoreItemRequiresInventoryForItemRepair")); }
+    BrzCampoPonteiro bIgnoreMaxInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIgnoreMaxInventoryItems")); }
+    BrzCampoPonteiro bIgnoreNextItemUseCDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIgnoreNextItemUseCD")); }
+    BrzCampoPonteiro bInitializedMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bInitializedMe")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsSecondaryInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIsSecondaryInventory")); }
+    BrzCampoPonteiro bIsTaxidermyBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIsTaxidermyBase")); }
+    BrzCampoPonteiro bIsTributeInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bIsTributeInventory")); }
+    BrzCampoPonteiro bLastNotifyCraftingStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bLastNotifyCraftingState")); }
+    BrzCampoPonteiro bMaxInventoryWeightUseCharacterStatusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bMaxInventoryWeightUseCharacterStatus")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bNetAddressable")); }
+    BrzCampoPonteiro bNotNearWirelessCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bNotNearWirelessCrafting")); }
+    BrzCampoPonteiro bNotifyAddedOnClientReceiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bNotifyAddedOnClientReceive")); }
+    BrzCampoPonteiro bNotifyCraftingStateChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bNotifyCraftingStateChanged")); }
+    BrzCampoPonteiro bNotifyWirelessTribeGroupInventoryRankChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bNotifyWirelessTribeGroupInventoryRankChanged")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyOneCraftQueueItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bOnlyOneCraftQueueItem")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bOverrideCraftingMinDurabilityRequirementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bOverrideCraftingMinDurabilityRequirement")); }
+    BrzCampoPonteiro bOverrideInventoryDepositClassDontForceDropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bOverrideInventoryDepositClassDontForceDrop")); }
+    BrzCampoPonteiro bPreventAutoDecreaseDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventAutoDecreaseDurability")); }
+    BrzCampoPonteiro bPreventCraftingResourceConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventCraftingResourceConsumption")); }
+    BrzCampoPonteiro bPreventDropInventoryDepositField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventDropInventoryDeposit")); }
+    BrzCampoPonteiro bPreventInventoryViewTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventInventoryViewTrace")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bPreventSortingInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bPreventSortingInputs")); }
+    BrzCampoPonteiro bReceivingArkInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bReceivingArkInventoryItems")); }
+    BrzCampoPonteiro bReceivingEquippedItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bReceivingEquippedItems")); }
+    BrzCampoPonteiro bReceivingInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bReceivingInventoryItems")); }
+    BrzCampoPonteiro bRemoteInventoryAllowAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bRemoteInventoryAllowAddItems")); }
+    BrzCampoPonteiro bRemoteInventoryAllowRemoveItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bRemoteInventoryAllowRemoveItems")); }
+    BrzCampoPonteiro bRemoteInventoryOnlyAllowSelfField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bRemoteInventoryOnlyAllowSelf")); }
+    BrzCampoPonteiro bRemoteInventoryOnlyAllowTribeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bRemoteInventoryOnlyAllowTribe")); }
+    BrzCampoPonteiro bRemoteOnlyAllowBlueprintsOrItemClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bRemoteOnlyAllowBlueprintsOrItemClasses")); }
+    BrzCampoPonteiro bRepairingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bRepairingEnabled")); }
+    BrzCampoPonteiro bReplicateComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bReplicateComponent")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bReplicates")); }
+    BrzCampoPonteiro bSetCraftingEnabledCheckForAutoCraftBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bSetCraftingEnabledCheckForAutoCraftBlueprints")); }
+    BrzCampoPonteiro bSetsRandomWithoutReplacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bSetsRandomWithoutReplacement")); }
+    BrzCampoPonteiro bShowHiddenDefaultInventoryItemsDuringCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bShowHiddenDefaultInventoryItemsDuringCrafting")); }
+    BrzCampoPonteiro bShowHiddenRemoteInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bShowHiddenRemoteInventoryItems")); }
+    BrzCampoPonteiro bShowItemDefaultFoldersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bShowItemDefaultFolders")); }
+    BrzCampoPonteiro bShowQuickSlotPanelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bShowQuickSlotPanel")); }
+    BrzCampoPonteiro bSpawnActorOnTopOfStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bSpawnActorOnTopOfStructure")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bTriggerHotbarItemUsedEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bTriggerHotbarItemUsedEvent")); }
+    BrzCampoPonteiro bUseBPAllowAddInventoryItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPAllowAddInventoryItem")); }
+    BrzCampoPonteiro bUseBPAllowRepairingItemInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPAllowRepairingItemInInventory")); }
+    BrzCampoPonteiro bUseBPCanGrindItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPCanGrindItems")); }
+    BrzCampoPonteiro bUseBPGetExtraItemDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPGetExtraItemDisplay")); }
+    BrzCampoPonteiro bUseBPGetExtraItemRepairResourceRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPGetExtraItemRepairResourceRequirements")); }
+    BrzCampoPonteiro bUseBPInitializeInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPInitializeInventory")); }
+    BrzCampoPonteiro bUseBPInventoryRefreshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPInventoryRefresh")); }
+    BrzCampoPonteiro bUseBPIsCraftingAllowedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPIsCraftingAllowed")); }
+    BrzCampoPonteiro bUseBPIsValidCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPIsValidCraftingResource")); }
+    BrzCampoPonteiro bUseBPModifyCustomAutoDecreaseDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPModifyCustomAutoDecreaseDurability")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseBPOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPOnTransferAll")); }
+    BrzCampoPonteiro bUseBPOverrideDropItemTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPOverrideDropItemTransform")); }
+    BrzCampoPonteiro bUseBPRemoteInventoryAllowCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPRemoteInventoryAllowCrafting")); }
+    BrzCampoPonteiro bUseBPRemoteInventoryAllowViewingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPRemoteInventoryAllowViewing")); }
+    BrzCampoPonteiro bUseBPRemoteInventoryGetMaxVisibleSlotsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPRemoteInventoryGetMaxVisibleSlots")); }
+    BrzCampoPonteiro bUseBPUseCraftQueueForItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseBPUseCraftQueueForItem")); }
+    BrzCampoPonteiro bUseCheatInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseCheatInventory")); }
+    BrzCampoPonteiro bUseCraftQueueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseCraftQueue")); }
+    BrzCampoPonteiro bUseCustomSortingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseCustomSorting")); }
+    BrzCampoPonteiro bUseExtendedCharacterCraftingFunctionalityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseExtendedCharacterCraftingFunctionality")); }
+    BrzCampoPonteiro bUseInventoryBPDrawItemIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseInventoryBPDrawItemIcon")); }
+    BrzCampoPonteiro bUseItemCountInsteadOfInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseItemCountInsteadOfInventory")); }
+    BrzCampoPonteiro bUseItemQuantityUpdateEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseItemQuantityUpdateEvents")); }
+    BrzCampoPonteiro bUseParentStructureIsValidCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseParentStructureIsValidCraftingResource")); }
+    BrzCampoPonteiro bUseSortingInputAmountsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_Market.bUseSortingInputAmounts")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALINVENTORYCOMPONENT_MARKET_H

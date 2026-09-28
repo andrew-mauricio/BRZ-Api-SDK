@@ -37,6 +37,8 @@ struct FDinoSpawnWeightMultiplier
 
     FName& DinoNameTagField() const
     { return *GetNativePointerField<FName*>(this, "FDinoSpawnWeightMultiplier.DinoNameTag"); }
+    BrzCampoPonteiro OverrideSpawnLimitPercentageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoSpawnWeightMultiplier.OverrideSpawnLimitPercentage")); }
     float& SpawnLimitPercentageField() const
     { return *GetNativePointerField<float*>(this, "FDinoSpawnWeightMultiplier.SpawnLimitPercentage"); }
     float& SpawnWeightMultiplierField() const

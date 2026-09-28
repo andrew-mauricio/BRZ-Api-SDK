@@ -48,6 +48,13 @@ struct FPrimalVariant
     {
         return NativeCall<void*, void*>(this, "FPrimalVariant.Serialize(FArchive&)", a0);
     }
+
+    BrzCampoPonteiro PODVariantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalVariant.PODVariant")); }
+    BrzCampoPonteiro StringVariantField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalVariant.StringVariant")); }
+    BrzCampoPonteiro VariantTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalVariant.VariantType")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALVARIANT_H

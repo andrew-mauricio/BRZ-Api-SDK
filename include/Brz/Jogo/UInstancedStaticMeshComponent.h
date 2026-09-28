@@ -164,7 +164,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.GetBodyInstance(FName,bool,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBodyInstance(unsigned long long a0, bool a1, int a2) const
     {
         return NativeCall<void*, unsigned long long, bool, int>(this, "UInstancedStaticMeshComponent.GetBodyInstance(FName,bool,int)", a0, a1, a2);
@@ -180,7 +180,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.GetInstanceCount()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetInstanceCount() const
     {
         return NativeCall<int>(this, "UInstancedStaticMeshComponent.GetInstanceCount()");
@@ -196,7 +196,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.GetInstanceVisibility(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool GetInstanceVisibility(int a0) const
     {
         return NativeCall<bool, int>(this, "UInstancedStaticMeshComponent.GetInstanceVisibility(int)", a0);
@@ -252,7 +252,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.GetRenderIndexForDynamicCustomData(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetRenderIndexForDynamicCustomData(int a0) const
     {
         return NativeCall<int, int>(this, "UInstancedStaticMeshComponent.GetRenderIndexForDynamicCustomData(int)", a0);
@@ -301,7 +301,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.IsValidInstance(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsValidInstance(int a0) const
     {
         return NativeCall<bool, int>(this, "UInstancedStaticMeshComponent.IsValidInstance(int)", a0);
@@ -430,7 +430,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.PostNetReceive()
     // classe: a funcao mora em USceneComponent, e UInstancedStaticMeshComponent herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     void PostNetReceive() const
     {
         NativeCall<void>(this, "USceneComponent.PostNetReceive()");
@@ -542,7 +542,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.SupportsRemoveSwap()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool SupportsRemoveSwap() const
     {
         return NativeCall<bool>(this, "UInstancedStaticMeshComponent.SupportsRemoveSwap()");
@@ -605,7 +605,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro CachedMappingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.CachedMappings")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReferencedAttachedComponentObjects` +16, medido na build 25090264
+    //  ancorado em `ReferencedAttachedComponentObjects` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA80; confianca alta)
     int& CurrentAttachedIndexField() const
     { return BrzCampoAncorado<int>(this, "ReferencedAttachedComponentObjects", 16); }
@@ -616,7 +616,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro FoliageTypeReferenceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.FoliageTypeReference")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +80, medido na build 25090264
+    //  ancorado em `InstanceReorderTable` +80, medido na build 25535041
     //  (offset absoluto medido: 0x848; confianca media)
     TArray<void*>& InstanceBodiesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "InstanceReorderTable", 80); }
@@ -625,7 +625,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro InstanceIdDataIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.InstanceIdDataIndex")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +112, medido na build 25090264
+    //  ancorado em `InstanceReorderTable` +112, medido na build 25535041
     //  (offset absoluto medido: 0x868; confianca media)
     void*& InstanceIdToInstanceIndexMapField() const
     { return BrzCampoAncorado<void*>(this, "InstanceReorderTable", 112); }
@@ -664,7 +664,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro PerInstanceCustomFlagDataIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.PerInstanceCustomFlagDataIndex")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +96, medido na build 25090264
+    //  ancorado em `InstanceReorderTable` +96, medido na build 25535041
     //  (offset absoluto medido: 0x858; confianca media)
     TArray<void*>& PerInstanceIdsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "InstanceReorderTable", 96); }
@@ -679,7 +679,7 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro PreviousComponentTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.PreviousComponentTransform")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +16, medido na build 25090264
+    //  ancorado em `InstanceReorderTable` +16, medido na build 25535041
     //  (offset absoluto medido: 0x808; confianca media)
     void*& ProxySizeField() const
     { return BrzCampoAncorado<void*>(this, "InstanceReorderTable", 16); }
@@ -691,6 +691,30 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     { return *GetNativePointerField<float*>(this, "UInstancedStaticMeshComponent.ScaleMinX"); }
     TObjectPtr<UStaticMesh>& TreeStumpMeshField() const
     { return *GetNativePointerField<TObjectPtr<UStaticMesh>*>(this, "UInstancedStaticMeshComponent.TreeStumpMesh"); }
+    BrzCampoPonteiro bDisableCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bDisableCollision")); }
+    BrzCampoPonteiro bDontScaleAttachedComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bDontScaleAttachedComponent")); }
+    BrzCampoPonteiro bIgnoreAutomaticBoundsWPODisableDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bIgnoreAutomaticBoundsWPODisableDistance")); }
+    BrzCampoPonteiro bIgnoreVisibilityCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bIgnoreVisibilityCheck")); }
+    BrzCampoPonteiro bIgnoreWPODisableDistanceScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bIgnoreWPODisableDistanceScaling")); }
+    BrzCampoPonteiro bInheritPerInstanceDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bInheritPerInstanceData")); }
+    BrzCampoPonteiro bInstanceRequiresPhysXCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bInstanceRequiresPhysXCollision")); }
+    BrzCampoPonteiro bIsFallingTreeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bIsFallingTree")); }
+    BrzCampoPonteiro bReplicateThisComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bReplicateThisComponent")); }
+    BrzCampoPonteiro bSupportGPUMessageInstanceIdField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bSupportGPUMessageInstanceId")); }
+    BrzCampoPonteiro bSupportPerInstanceCustomFlagsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bSupportPerInstanceCustomFlags")); }
+    BrzCampoPonteiro bUseGpuLodSelectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.bUseGpuLodSelection")); }
     BitFieldValue<bool, unsigned __int32> bIgnoreAutomaticBoundsWPODisableDistance()
     { return { (void*)this, "bIgnoreAutomaticBoundsWPODisableDistance" }; }
     BitFieldValue<bool, unsigned __int32> bIgnoreVisibilityCheck()

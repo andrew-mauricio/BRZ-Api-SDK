@@ -55,6 +55,14 @@ struct UShapeComponent : public UPrimitiveComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShapeComponent.ShapeBodySetup")); }
     BrzCampoPonteiro ShapeColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShapeComponent.ShapeColor")); }
+    BrzCampoPonteiro bDrawOnlyIfSelectedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShapeComponent.bDrawOnlyIfSelected")); }
+    BrzCampoPonteiro bDynamicObstacleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShapeComponent.bDynamicObstacle")); }
+    BrzCampoPonteiro bShouldCollideWhenPlacingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShapeComponent.bShouldCollideWhenPlacing")); }
+    BrzCampoPonteiro bUseSystemDefaultObstacleAreaClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShapeComponent.bUseSystemDefaultObstacleAreaClass")); }
     BitFieldValue<bool, unsigned __int32> bDrawOnlyIfSelected()
     { return { (void*)this, "bDrawOnlyIfSelected" }; }
     BitFieldValue<bool, unsigned __int32> bShouldCollideWhenPlacing()

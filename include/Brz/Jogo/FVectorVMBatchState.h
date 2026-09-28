@@ -32,8 +32,37 @@ struct FVectorVMBatchState
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ChunkIdxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.ChunkIdx")); }
+    BrzCampoPonteiro ChunkLocalDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.ChunkLocalData")); }
+    BrzCampoPonteiro CountersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.Counters")); }
+    BrzCampoPonteiro ExtFnDecodedRegField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.ExtFnDecodedReg")); }
+    BrzCampoPonteiro NumInstancesThisChunkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.NumInstancesThisChunk")); }
+    BrzCampoPonteiro NumOutputPerDataSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.NumOutputPerDataSet")); }
+    BrzCampoPonteiro OutputMaskIdxField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.OutputMaskIdx")); }
+    BrzCampoPonteiro RandCountersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.RandCounters")); }
+    BrzCampoPonteiro RandStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.RandState")); }
     BrzCampoPonteiro RandStreamField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.RandStream")); }
+    BrzCampoPonteiro RegIncTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.RegIncTable")); }
+    BrzCampoPonteiro RegPtrTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.RegPtrTable")); }
+    BrzCampoPonteiro RegisterDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.RegisterData")); }
+    BrzCampoPonteiro StartInstanceThisChunkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.StartInstanceThisChunk")); }
+    BrzCampoPonteiro StartingOutputIdxPerDataSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMBatchState.StartingOutputIdxPerDataSet")); }
     int& StateField() const
     { return *GetNativePointerField<int*>(this, "FVectorVMBatchState.State"); }
 };

@@ -32,10 +32,23 @@ struct FWorldTileLayer
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro CachedNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.CachedName")); }
+    BrzCampoPonteiro DistanceStreamingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.DistanceStreamingEnabled")); }
     FString& NameField() const
     { return *GetNativePointerField<FString*>(this, "FWorldTileLayer.Name"); }
-    BitFieldValue<bool, unsigned __int32> bForcedHidden()
-    { return { (void*)this, "bForcedHidden" }; }
+    BrzCampoPonteiro Reserved0Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.Reserved0")); }
+    BrzCampoPonteiro Reserved1Field() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.Reserved1")); }
+    BrzCampoPonteiro StreamingDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.StreamingDistance")); }
+    BrzCampoPonteiro bForcedHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.bForcedHidden")); }
+    BrzCampoPonteiro bForcedLevelAsDistanceStreamingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldTileLayer.bForcedLevelAsDistanceStreamingEnabled")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDTILELAYER_H

@@ -54,7 +54,7 @@ struct UPrimalCheatManagerExtension
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCheatManagerExtension.GetPlayerCharacter()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=90]]
+    // endereco: casamento de bytes com a build de referencia
     static AShooterCharacter* GetPlayerCharacter()
     {
         return NativeCall<AShooterCharacter*>(nullptr, "UPrimalCheatManagerExtension.GetPlayerCharacter()");
@@ -62,7 +62,7 @@ struct UPrimalCheatManagerExtension
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCheatManagerExtension.GetRidingDino()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=102]]
+    // endereco: casamento de bytes com a build de referencia
     static APrimalDinoCharacter* GetRidingDino()
     {
         return NativeCall<APrimalDinoCharacter*>(nullptr, "UPrimalCheatManagerExtension.GetRidingDino()");
@@ -70,7 +70,7 @@ struct UPrimalCheatManagerExtension
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCheatManagerExtension.GetTargetActor()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=191]]
+    // endereco: casamento de bytes com a build de referencia
     static BrzPonteiro GetTargetActor()
     {
         return NativeCall<void*>(nullptr, "UPrimalCheatManagerExtension.GetTargetActor()");

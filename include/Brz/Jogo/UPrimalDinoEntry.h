@@ -51,6 +51,8 @@ struct UPrimalDinoEntry
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoEntry.DinoMaterial")); }
     FName& DinoNameTagField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoEntry.DinoNameTag"); }
+    BrzCampoPonteiro bRequiresKillField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoEntry.bRequiresKill")); }
     BitFieldValue<bool, unsigned __int32> bRequiresKill()
     { return { (void*)this, "bRequiresKill" }; }
 

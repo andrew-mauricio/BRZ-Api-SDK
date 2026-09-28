@@ -100,9 +100,9 @@ struct AGameSession : public AInfo
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameSession.KickPlayer(APlayerController*,FText&)
     // endereco: casamento de bytes com a build de referencia
-    static bool KickPlayer(void* a0, void* a1)
+    bool KickPlayer(void* a0, void* a1) const
     {
-        return NativeCall<bool, void*, void*>(nullptr, "AGameSession.KickPlayer(APlayerController*,FText&)", a0, a1);
+        return NativeCall<bool, void*, void*>(this, "AGameSession.KickPlayer(APlayerController*,FText&)", a0, a1);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -127,7 +127,7 @@ struct AGameSession : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameSession.RegisterPlayer(APlayerController*,FUniqueNetIdRepl&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=121]]
+    // endereco: casamento de bytes com a build de referencia
     void RegisterPlayer(void* a0, void* a1, bool a2) const
     {
         NativeCall<void, void*, void*, bool>(this, "AGameSession.RegisterPlayer(APlayerController*,FUniqueNetIdRepl&,bool)", a0, a1, a2);
@@ -135,7 +135,7 @@ struct AGameSession : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameSession.RequiresPushToTalk()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool RequiresPushToTalk() const
     {
         return NativeCall<bool>(this, "AGameSession.RequiresPushToTalk()");

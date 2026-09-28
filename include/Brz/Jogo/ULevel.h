@@ -37,9 +37,9 @@ struct ULevel : public UObject
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.AddReferencedObjects(UObject*,FReferenceCollector&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddReferencedObjects(void* a0, void* a1)
+    BrzPonteiro AddReferencedObjects(void* a0, void* a1) const
     {
-        return NativeCall<void*, void*, void*>(nullptr, "ULevel.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
+        return NativeCall<void*, void*, void*>(this, "ULevel.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -60,7 +60,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.BuildStreamingData(UWorld*,ULevel*,UTexture2D*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BuildStreamingData(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "ULevel.BuildStreamingData(UWorld*,ULevel*,UTexture2D*)", a0, a1, a2);
@@ -84,7 +84,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.ClearActorsSeamlessTraveledFlag()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClearActorsSeamlessTraveledFlag() const
     {
         return NativeCall<void*>(this, "ULevel.ClearActorsSeamlessTraveledFlag()");
@@ -116,7 +116,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.CreateReplicatedDestructionInfo(AActor*const)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=117]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CreateReplicatedDestructionInfo(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ULevel.CreateReplicatedDestructionInfo(AActor*const)", a0);
@@ -132,7 +132,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetDestroyedReplicatedStaticActors()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDestroyedReplicatedStaticActors() const
     {
         return NativeCall<void*>(this, "ULevel.GetDestroyedReplicatedStaticActors()");
@@ -140,7 +140,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetEstimatedAddToWorldWorkUnitsRemaining()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEstimatedAddToWorldWorkUnitsRemaining() const
     {
         return NativeCall<void*>(this, "ULevel.GetEstimatedAddToWorldWorkUnitsRemaining()");
@@ -148,7 +148,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetEstimatedAddToWorldWorkUnitsTotal()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetEstimatedAddToWorldWorkUnitsTotal() const
     {
         return NativeCall<void*>(this, "ULevel.GetEstimatedAddToWorldWorkUnitsTotal()");
@@ -156,7 +156,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetLevelScriptActor()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelScriptActor() const
     {
         return NativeCall<void*>(this, "ULevel.GetLevelScriptActor()");
@@ -164,7 +164,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetWorld()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "ULevel.GetWorld()");
@@ -172,7 +172,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetWorldDataLayers()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldDataLayers() const
     {
         return NativeCall<void*>(this, "ULevel.GetWorldDataLayers()");
@@ -180,7 +180,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetWorldPartition()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetWorldPartition() const
     {
         return NativeCall<void*>(this, "ULevel.GetWorldPartition()");
@@ -196,7 +196,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.GetWorldSettings(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AWorldSettings* GetWorldSettings(bool a0) const
     {
         return NativeCall<AWorldSettings*, bool>(this, "ULevel.GetWorldSettings(bool)", a0);
@@ -212,7 +212,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.HasVisibilityChangeRequestPending()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasVisibilityChangeRequestPending() const
     {
         return NativeCall<void*>(this, "ULevel.HasVisibilityChangeRequestPending()");
@@ -260,7 +260,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.InvalidateModelSurface()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InvalidateModelSurface() const
     {
         return NativeCall<void*>(this, "ULevel.InvalidateModelSurface()");
@@ -276,7 +276,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.IsInstancedLevel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsInstancedLevel() const
     {
         return NativeCall<void*>(this, "ULevel.IsInstancedLevel()");
@@ -292,7 +292,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.IsPersistentLevel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsPersistentLevel() const
     {
         return NativeCall<void*>(this, "ULevel.IsPersistentLevel()");
@@ -388,7 +388,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.ResetRouteActorInitializationState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetRouteActorInitializationState() const
     {
         return NativeCall<void*>(this, "ULevel.ResetRouteActorInitializationState()");
@@ -420,7 +420,7 @@ struct ULevel : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevel.SetWorldDataLayers(AWorldDataLayers*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetWorldDataLayers(void* a0) const
     {
         return NativeCall<void*, void*>(this, "ULevel.SetWorldDataLayers(AWorldDataLayers*)", a0);
@@ -471,39 +471,39 @@ struct ULevel : public UObject
     TArray<void*>& AssetUserDataField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "ULevel.AssetUserData"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldPartitionRuntimeCell` +40, medido na build 25090264
+    //  ancorado em `WorldPartitionRuntimeCell` +40, medido na build 25535041
     //  (offset absoluto medido: 0x3C8; confianca media)
     void*& CachedLevelCollectionField() const
     { return BrzCampoAncorado<void*>(this, "WorldPartitionRuntimeCell", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +32, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +32, medido na build 25535041
     //  (offset absoluto medido: 0x330; confianca alta)
     void*& CurrentActorIndexForIncrementalUpdateField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +36, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +36, medido na build 25535041
     //  (offset absoluto medido: 0x334; confianca media)
     void*& CurrentActorIndexForUnregisterComponentsField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 36); }
     BrzCampoPonteiro DestroyedReplicatedStaticActorsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.DestroyedReplicatedStaticActors")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +28, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +28, medido na build 25535041
     //  (offset absoluto medido: 0x32C; confianca alta)
     void*& IncrementalComponentStateField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +96, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +96, medido na build 25535041
     //  (offset absoluto medido: 0x370; confianca media)
     void*& InstancedFoliageActorField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +88, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +88, medido na build 25535041
     //  (offset absoluto medido: 0x368; confianca media)
     void*& LevelBoundsActorField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +104, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +104, medido na build 25535041
     //  (offset absoluto medido: 0x378; confianca media)
     void*& LevelBoundsActorUpdatedEventField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 104); }
@@ -532,12 +532,12 @@ struct ULevel : public UObject
     int& NumTextureStreamingUnbuiltComponentsField() const
     { return *GetNativePointerField<int*>(this, "ULevel.NumTextureStreamingUnbuiltComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +40, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +40, medido na build 25535041
     //  (offset absoluto medido: 0x338; confianca media)
     void*& OnApplyLevelTransformField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +64, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +64, medido na build 25535041
     //  (offset absoluto medido: 0x350; confianca media)
     void*& OnCleanupLevelField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 64); }
@@ -546,32 +546,32 @@ struct ULevel : public UObject
     unsigned int& PackedTextureStreamingQualityLevelFeatureLevelField() const
     { return *GetNativePointerField<unsigned int*>(this, "ULevel.PackedTextureStreamingQualityLevelFeatureLevel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AssetUserData` +16, medido na build 25090264
+    //  ancorado em `AssetUserData` +16, medido na build 25535041
     //  (offset absoluto medido: 0x3E0; confianca alta)
     void*& PendingAutoReceiveInputActorsField() const
     { return BrzCampoAncorado<void*>(this, "AssetUserData", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +16, medido na build 25090264
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +16, medido na build 25535041
     //  (offset absoluto medido: 0x248; confianca media)
     void*& PrecomputedLightVolumeField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +32, medido na build 25090264
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +32, medido na build 25535041
     //  (offset absoluto medido: 0x258; confianca media)
     void*& PrecomputedVisibilityHandlerField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +88, medido na build 25090264
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +88, medido na build 25535041
     //  (offset absoluto medido: 0x290; confianca media)
     void*& PrecomputedVolumeDistanceFieldField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +24, medido na build 25090264
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +24, medido na build 25535041
     //  (offset absoluto medido: 0x250; confianca media)
     void*& PrecomputedVolumetricLightmapField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +184, medido na build 25090264
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +184, medido na build 25535041
     //  (offset absoluto medido: 0x2F0; confianca baixa)
     void*& RemoveFromSceneFenceField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 184); }
@@ -584,12 +584,12 @@ struct ULevel : public UObject
     BrzCampoPonteiro StreamingTexturesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.StreamingTextures")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +8, medido na build 25090264
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +8, medido na build 25535041
     //  (offset absoluto medido: 0x240; confianca media)
     void*& TickTaskLevelField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +16, medido na build 25090264
+    //  ancorado em `LightBuildLevelOffset` +16, medido na build 25535041
     //  (offset absoluto medido: 0x320; confianca alta)
     void*& VolumetricLightmapGridManagerField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 16); }
@@ -599,6 +599,16 @@ struct ULevel : public UObject
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.WorldPartitionRuntimeCell")); }
     BrzCampoPonteiro WorldSettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.WorldSettings")); }
+    BrzCampoPonteiro bIsLightingScenarioField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.bIsLightingScenario")); }
+    BrzCampoPonteiro bIsPartitionedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.bIsPartitioned")); }
+    BrzCampoPonteiro bIsVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.bIsVisible")); }
+    BrzCampoPonteiro bStaticComponentsRegisteredInStreamingManagerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.bStaticComponentsRegisteredInStreamingManager")); }
+    BrzCampoPonteiro bTextureStreamingRotationChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.bTextureStreamingRotationChanged")); }
     BitFieldValue<bool, unsigned __int32> bIsLightingScenario()
     { return { (void*)this, "bIsLightingScenario" }; }
     BitFieldValue<bool, unsigned __int32> bIsPartitioned()

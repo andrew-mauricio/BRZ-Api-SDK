@@ -51,7 +51,7 @@ struct ADroppedItemMission : public ADroppedItem
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADroppedItemMission.OnItemPickedUp(APlayerController*,UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     void OnItemPickedUp(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "ADroppedItemMission.OnItemPickedUp(APlayerController*,UPrimalItem*)", a0, a1);
@@ -59,6 +59,10 @@ struct ADroppedItemMission : public ADroppedItem
 
     AMissionType*& OwnerMissionField() const
     { return *GetNativePointerField<AMissionType**>(this, "ADroppedItemMission.OwnerMission"); }
+    BrzCampoPonteiro bPickupOnlyAllowMissionPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItemMission.bPickupOnlyAllowMissionPlayers")); }
+    BrzCampoPonteiro bShowHUDMissionInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItemMission.bShowHUDMissionInfo")); }
     BitFieldValue<bool, unsigned __int32> bPickupOnlyAllowMissionPlayers()
     { return { (void*)this, "bPickupOnlyAllowMissionPlayers" }; }
     BitFieldValue<bool, unsigned __int32> bShowHUDMissionInfo()

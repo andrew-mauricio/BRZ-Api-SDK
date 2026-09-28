@@ -47,13 +47,13 @@ struct FStringCurve
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FStringCurve.StaticStruct()
     // endereco: casamento de bytes com a build de referencia
-    static UScriptStruct* StaticStruct()
+    UScriptStruct* StaticStruct() const
     {
-        return NativeCall<UScriptStruct*>(nullptr, "FStringCurve.StaticStruct()");
+        return NativeCall<UScriptStruct*>(this, "FStringCurve.StaticStruct()");
     }
 
-    BitFieldValue<bool, unsigned __int32> DefaultValue()
-    { return { (void*)this, "DefaultValue" }; }
+    BrzCampoPonteiro DefaultValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringCurve.DefaultValue")); }
     BrzCampoPonteiro KeysField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringCurve.Keys")); }
 };

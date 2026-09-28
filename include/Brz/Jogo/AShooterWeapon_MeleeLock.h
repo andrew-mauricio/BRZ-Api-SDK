@@ -33,7 +33,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "AShooterWeapon_MeleeLock.BeginPlay()");
@@ -41,7 +41,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.DealDamage(FHitResult&,UE::Math::TVector<double>&,int,TSubclassOf<UDama
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=41]]
+    // endereco: casamento de bytes com a build de referencia
     void DealDamage(void* a0, void* a1, int a2, void* a3, float a4) const
     {
         NativeCall<void, void*, void*, int, void*, float>(this, "AShooterWeapon_MeleeLock.DealDamage(FHitResult&,UE::Math::TVector<double>&,int,TSubclassOf<UDamageType>,float)", a0, a1, a2, a3, a4);
@@ -49,7 +49,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=281]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "AShooterWeapon_MeleeLock.Destroyed()");
@@ -65,7 +65,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.EndMeleeAttack()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void EndMeleeAttack() const
     {
         NativeCall<void>(this, "AShooterWeapon_MeleeLock.EndMeleeAttack()");
@@ -73,7 +73,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.GetWeaponAttackPlayRate()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=86]]
+    // endereco: casamento de bytes com a build de referencia
     float GetWeaponAttackPlayRate() const
     {
         return NativeCall<float>(this, "AShooterWeapon_MeleeLock.GetWeaponAttackPlayRate()");
@@ -81,7 +81,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.OnRep_LockValue()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_LockValue() const
     {
         NativeCall<void>(this, "AShooterWeapon_MeleeLock.OnRep_LockValue()");
@@ -89,7 +89,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.PreMeleeAttackCheck()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     void PreMeleeAttackCheck() const
     {
         NativeCall<void>(this, "AShooterWeapon_MeleeLock.PreMeleeAttackCheck()");
@@ -114,21 +114,23 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
     unsigned char& DamageCurveField() const
     { return *GetNativePointerField<unsigned char*>(this, "AShooterWeapon_MeleeLock.DamageCurve"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +16, medido na build 25090264
+    //  ancorado em `MaxPowerThreshold` +16, medido na build 25535041
     //  (offset absoluto medido: 0x1204; confianca alta)
     float& GetPullRangeField() const
     { return BrzCampoAncorado<float>(this, "MaxPowerThreshold", 16); }
+    BrzCampoPonteiro HitThisAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_MeleeLock.HitThisAttack")); }
     double& LastAttackTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterWeapon_MeleeLock.LastAttackTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +4, medido na build 25090264
+    //  ancorado em `MaxPowerThreshold` +4, medido na build 25535041
     //  (offset absoluto medido: 0x11F8; confianca alta)
     TWeakObjectPtr<void>& LastHitActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "MaxPowerThreshold", 4); }
     double& LastHitTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterWeapon_MeleeLock.LastHitTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +20, medido na build 25090264
+    //  ancorado em `MaxPowerThreshold` +20, medido na build 25535041
     //  (offset absoluto medido: 0x1208; confianca alta)
     float& LastSentLockValueField() const
     { return BrzCampoAncorado<float>(this, "MaxPowerThreshold", 20); }
@@ -149,7 +151,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
     float& MaxDamageMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_MeleeLock.MaxDamageMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +12, medido na build 25090264
+    //  ancorado em `MaxPowerThreshold` +12, medido na build 25535041
     //  (offset absoluto medido: 0x1200; confianca alta)
     float& MaxLockAngleCosField() const
     { return BrzCampoAncorado<float>(this, "MaxPowerThreshold", 12); }
@@ -173,6 +175,8 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_MeleeLock.TargetAngle"); }
     BrzCampoPonteiro TargetBuff_MaxDamageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_MeleeLock.TargetBuff_MaxDamage")); }
+    BrzCampoPonteiro bSteppingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_MeleeLock.bSteppingEnabled")); }
     BitFieldValue<bool, unsigned __int32> HitThisAttack()
     { return { (void*)this, "HitThisAttack" }; }
     BitFieldValue<bool, unsigned __int32> bSteppingEnabled()

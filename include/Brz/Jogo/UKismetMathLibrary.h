@@ -67,7 +67,7 @@ struct UKismetMathLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetMathLibrary.FlattenVector(UE::Math::TVector<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro FlattenVector(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UKismetMathLibrary.FlattenVector(UE::Math::TVector<double>)", a0);
@@ -155,7 +155,7 @@ struct UKismetMathLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetMathLibrary.MapRangeClamped(double,double,double,double,double)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro MapRangeClamped(double a0, double a1, double a2, double a3, double a4)
     {
         return NativeCall<void*, double, double, double, double, double>(nullptr, "UKismetMathLibrary.MapRangeClamped(double,double,double,double,double)", a0, a1, a2, a3, a4);
@@ -243,7 +243,7 @@ struct UKismetMathLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetMathLibrary.SafeDivide(double,double)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro SafeDivide(double a0, double a1)
     {
         return NativeCall<void*, double, double>(nullptr, "UKismetMathLibrary.SafeDivide(double,double)", a0, a1);
@@ -251,7 +251,7 @@ struct UKismetMathLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetMathLibrary.StaticRegisterNativesUKismetMathLibrary()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro StaticRegisterNativesUKismetMathLibrary()
     {
         return NativeCall<void*>(nullptr, "UKismetMathLibrary.StaticRegisterNativesUKismetMathLibrary()");

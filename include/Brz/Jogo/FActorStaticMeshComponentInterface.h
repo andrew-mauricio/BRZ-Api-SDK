@@ -35,7 +35,7 @@ struct FActorStaticMeshComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorStaticMeshComponentInterface.GetPrimitiveComponentInterface()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetPrimitiveComponentInterface()
     {
         return NativeCall<void*>(nullptr, "FActorStaticMeshComponentInterface.GetPrimitiveComponentInterface()");
@@ -43,7 +43,7 @@ struct FActorStaticMeshComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorStaticMeshComponentInterface.GetStaticMesh()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=41]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetStaticMesh()
     {
         return NativeCall<void*>(nullptr, "FActorStaticMeshComponentInterface.GetStaticMesh()");

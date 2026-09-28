@@ -122,7 +122,7 @@ struct UPrimalDinoToolTipWidget
     float& DPIScalerField() const
     { return *GetNativePointerField<float*>(this, "UPrimalDinoToolTipWidget.DPIScaler"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +244, medido na build 25090264
+    //  ancorado em `NoGenderColor` +244, medido na build 25535041
     //  (offset absoluto medido: 0x5E8; confianca baixa)
     void*& DamageBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 244); }
@@ -131,33 +131,33 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro DesiredFocusWidgetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.DesiredFocusWidget")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +148, medido na build 25090264
+    //  ancorado em `NoGenderColor` +148, medido na build 25535041
     //  (offset absoluto medido: 0x588; confianca baixa)
     void*& DinoFoodTypeImageField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 148); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +140, medido na build 25090264
+    //  ancorado em `NoGenderColor` +140, medido na build 25535041
     //  (offset absoluto medido: 0x580; confianca baixa)
     void*& DinoIconImageField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 140); }
     FString& DinoIconImageNameField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalDinoToolTipWidget.DinoIconImageName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +44, medido na build 25090264
+    //  ancorado em `NoGenderColor` +44, medido na build 25535041
     //  (offset absoluto medido: 0x520; confianca media)
     void*& DinoNameLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 44); }
     FString& DinoNameLabelNameField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalDinoToolTipWidget.DinoNameLabelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +132, medido na build 25090264
+    //  ancorado em `NoGenderColor` +132, medido na build 25535041
     //  (offset absoluto medido: 0x578; confianca baixa)
     void*& DinoTamingPanelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 132); }
     FName& DinoTamingPanelNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.DinoTamingPanelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +124, medido na build 25090264
+    //  ancorado em `NoGenderColor` +124, medido na build 25535041
     //  (offset absoluto medido: 0x570; confianca media)
     void*& DinoUnconsciousPanelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 124); }
@@ -170,14 +170,14 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro FlowDirectionPreferenceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.FlowDirectionPreference")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +204, medido na build 25090264
+    //  ancorado em `NoGenderColor` +204, medido na build 25535041
     //  (offset absoluto medido: 0x5C0; confianca baixa)
     void*& FoodBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 204); }
     BrzCampoPonteiro FoodBarDefaultBackgroundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.FoodBarDefaultBackground")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +284, medido na build 25090264
+    //  ancorado em `NoGenderColor` +284, medido na build 25535041
     //  (offset absoluto medido: 0x610; confianca baixa)
     void*& FoodBarDefaultDisplayStringField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 284); }
@@ -192,40 +192,40 @@ struct UPrimalDinoToolTipWidget
     float& GamepadSelectClosestDistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalDinoToolTipWidget.GamepadSelectClosestDistanceMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +60, medido na build 25090264
+    //  ancorado em `NoGenderColor` +60, medido na build 25535041
     //  (offset absoluto medido: 0x530; confianca media)
     void*& GenderLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 60); }
     FString& GenderLabelNameField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalDinoToolTipWidget.GenderLabelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +276, medido na build 25090264
+    //  ancorado em `NoGenderColor` +276, medido na build 25535041
     //  (offset absoluto medido: 0x608; confianca baixa)
     void*& GenderSwitcherField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 276); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +116, medido na build 25090264
+    //  ancorado em `NoGenderColor` +116, medido na build 25535041
     //  (offset absoluto medido: 0x568; confianca media)
     void*& GeneTraitsLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 116); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.HandleVisibilityWithInput")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +188, medido na build 25090264
+    //  ancorado em `NoGenderColor` +188, medido na build 25535041
     //  (offset absoluto medido: 0x5B0; confianca baixa)
     void*& HealthBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 188); }
     FName& HealthBarNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.HealthBarName"); }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.Highlightable")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +84, medido na build 25090264
+    //  ancorado em `NoGenderColor` +84, medido na build 25535041
     //  (offset absoluto medido: 0x548; confianca media)
     void*& InfoLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 84); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +92, medido na build 25090264
+    //  ancorado em `NoGenderColor` +92, medido na build 25535041
     //  (offset absoluto medido: 0x550; confianca media)
     void*& InfoLabel2Field() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 92); }
@@ -234,7 +234,7 @@ struct UPrimalDinoToolTipWidget
     FString& InfoLabelNameField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalDinoToolTipWidget.InfoLabelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +300, medido na build 25090264
+    //  ancorado em `NoGenderColor` +300, medido na build 25535041
     //  (offset absoluto medido: 0x620; confianca baixa)
     void*& InfoPanelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 300); }
@@ -243,27 +243,27 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro MaleColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.MaleColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +100, medido na build 25090264
+    //  ancorado em `NoGenderColor` +100, medido na build 25535041
     //  (offset absoluto medido: 0x558; confianca media)
     void*& MatingTimeLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 100); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +156, medido na build 25090264
+    //  ancorado em `NoGenderColor` +156, medido na build 25535041
     //  (offset absoluto medido: 0x590; confianca baixa)
     void*& MaxInventoryImageField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 156); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +268, medido na build 25090264
+    //  ancorado em `NoGenderColor` +268, medido na build 25535041
     //  (offset absoluto medido: 0x600; confianca baixa)
     void*& MultiUseActionWidget_UIField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 268); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +164, medido na build 25090264
+    //  ancorado em `NoGenderColor` +164, medido na build 25535041
     //  (offset absoluto medido: 0x598; confianca baixa)
     void*& MutagenIconField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 164); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +16, medido na build 25090264
+    //  ancorado em `NoGenderColor` +16, medido na build 25535041
     //  (offset absoluto medido: 0x504; confianca media)
     void*& MyDinoField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 16); }
@@ -278,7 +278,7 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro OnVisibilityChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.OnVisibilityChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +236, medido na build 25090264
+    //  ancorado em `NoGenderColor` +236, medido na build 25535041
     //  (offset absoluto medido: 0x5E0; confianca baixa)
     void*& OxygenBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 236); }
@@ -299,12 +299,12 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro RenderTransformPivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.RenderTransformPivot")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +260, medido na build 25090264
+    //  ancorado em `NoGenderColor` +260, medido na build 25535041
     //  (offset absoluto medido: 0x5F8; confianca baixa)
     void*& RepairBoxField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 260); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +108, medido na build 25090264
+    //  ancorado em `NoGenderColor` +108, medido na build 25535041
     //  (offset absoluto medido: 0x560; confianca media)
     void*& RepairRequerimentLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 108); }
@@ -313,14 +313,14 @@ struct UPrimalDinoToolTipWidget
     int& SlotField() const
     { return *GetNativePointerField<int*>(this, "UPrimalDinoToolTipWidget.Slot"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +252, medido na build 25090264
+    //  ancorado em `NoGenderColor` +252, medido na build 25535041
     //  (offset absoluto medido: 0x5F0; confianca baixa)
     void*& SpeedBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 252); }
     FName& SpeedBarNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.SpeedBarName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +196, medido na build 25090264
+    //  ancorado em `NoGenderColor` +196, medido na build 25535041
     //  (offset absoluto medido: 0x5B8; confianca baixa)
     void*& StaminaBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 196); }
@@ -329,26 +329,26 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro StoppedSequencePlayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.StoppedSequencePlayers")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +52, medido na build 25090264
+    //  ancorado em `NoGenderColor` +52, medido na build 25535041
     //  (offset absoluto medido: 0x528; confianca media)
     void*& TamedLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 52); }
     FString& TamedLabelNameField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalDinoToolTipWidget.TamedLabelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +68, medido na build 25090264
+    //  ancorado em `NoGenderColor` +68, medido na build 25535041
     //  (offset absoluto medido: 0x538; confianca media)
     void*& TamingDescriptionLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +180, medido na build 25090264
+    //  ancorado em `NoGenderColor` +180, medido na build 25535041
     //  (offset absoluto medido: 0x5A8; confianca baixa)
     void*& TamingProgressBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 180); }
     FName& TamingProgressBarNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.TamingProgressBarName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +28, medido na build 25090264
+    //  ancorado em `NoGenderColor` +28, medido na build 25535041
     //  (offset absoluto medido: 0x510; confianca media)
     void*& TextInfoArrayField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 28); }
@@ -365,28 +365,28 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro ToolTipWidgetDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.ToolTipWidgetDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +228, medido na build 25090264
+    //  ancorado em `NoGenderColor` +228, medido na build 25535041
     //  (offset absoluto medido: 0x5D8; confianca baixa)
     void*& TorpidityBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 228); }
     FName& TorpidityBarNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.TorpidityBarName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +172, medido na build 25090264
+    //  ancorado em `NoGenderColor` +172, medido na build 25535041
     //  (offset absoluto medido: 0x5A0; confianca baixa)
     void*& TorpidityProgressBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 172); }
     FName& TorpidityProgressBarNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.TorpidityProgressBarName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +76, medido na build 25090264
+    //  ancorado em `NoGenderColor` +76, medido na build 25535041
     //  (offset absoluto medido: 0x540; confianca media)
     void*& UnconsciousDescriptionLabelField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 76); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UPrimalDinoToolTipWidget.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -394,7 +394,7 @@ struct UPrimalDinoToolTipWidget
     BrzCampoPonteiro VisibilityKBMInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.VisibilityKBMInput")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +212, medido na build 25090264
+    //  ancorado em `NoGenderColor` +212, medido na build 25535041
     //  (offset absoluto medido: 0x5C8; confianca baixa)
     void*& WeightBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 212); }
@@ -407,50 +407,52 @@ struct UPrimalDinoToolTipWidget
     int& WidgetWidthField() const
     { return *GetNativePointerField<int*>(this, "UPrimalDinoToolTipWidget.WidgetWidth"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NoGenderColor` +220, medido na build 25090264
+    //  ancorado em `NoGenderColor` +220, medido na build 25535041
     //  (offset absoluto medido: 0x5D0; confianca baixa)
     void*& XPBarField() const
     { return BrzCampoAncorado<void*>(this, "NoGenderColor", 220); }
     FName& XPBarNameField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalDinoToolTipWidget.XPBarName"); }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoOverlayFade()
-    { return { (void*)this, "bDoOverlayFade" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoOverlayFadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bDoOverlayFade")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bDontRenderHighlight")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitToolTip()
-    { return { (void*)this, "bUseBPInitToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPUpdateToolTip()
-    { return { (void*)this, "bUseBPUpdateToolTip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bIsFocusable")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bIsVolatile")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bShowExtendedInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bShowExtendedInfo")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bUseBPInitToolTip")); }
+    BrzCampoPonteiro bUseBPUpdateToolTipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bUseBPUpdateToolTip")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoToolTipWidget.bUseWindowClippingForHighlight")); }
     BitFieldValue<bool, unsigned __int32> bShowExtendedInfo()
     { return { (void*)this, "bShowExtendedInfo" }; }
 

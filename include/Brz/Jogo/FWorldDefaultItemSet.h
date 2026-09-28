@@ -41,6 +41,12 @@ struct FWorldDefaultItemSet
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDefaultItemSet.ItemsToGive")); }
     FString& MapNameField() const
     { return *GetNativePointerField<FString*>(this, "FWorldDefaultItemSet.MapName"); }
+    BrzCampoPonteiro bEquipOnNewPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDefaultItemSet.bEquipOnNewPawn")); }
+    BrzCampoPonteiro bFirstTimeEquipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDefaultItemSet.bFirstTimeEquip")); }
+    BrzCampoPonteiro bOnlyGiveItemSetOnceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldDefaultItemSet.bOnlyGiveItemSetOnce")); }
     BitFieldValue<bool, unsigned __int32> bEquipOnNewPawn()
     { return { (void*)this, "bEquipOnNewPawn" }; }
     BitFieldValue<bool, unsigned __int32> bFirstTimeEquip()

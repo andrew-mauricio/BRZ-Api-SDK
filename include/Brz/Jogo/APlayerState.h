@@ -37,7 +37,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.CopyProperties(APlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=211]]
+    // endereco: casamento de bytes com a build de referencia
     void CopyProperties(void* a0) const
     {
         NativeCall<void, void*>(this, "APlayerState.CopyProperties(APlayerState*)", a0);
@@ -77,7 +77,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.GetPingInMilliseconds()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetPingInMilliseconds() const
     {
         return NativeCall<void*>(this, "APlayerState.GetPingInMilliseconds()");
@@ -85,15 +85,15 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.GetPlayerController()
-    // endereco: thunk
-    static APlayerController* GetPlayerController()
+    // endereco: casamento de bytes com a build de referencia
+    APlayerController* GetPlayerController() const
     {
-        return NativeCall<APlayerController*>(nullptr, "APlayerState.GetPlayerController()");
+        return NativeCall<APlayerController*>(this, "APlayerState.GetPlayerController()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.GetPlayerName()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void GetPlayerName(void* retorno) const
     {
         NativeCall<void, void*>(this, "APlayerState.GetPlayerName()", retorno);
@@ -133,7 +133,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.OverrideWith(APlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void OverrideWith(void* a0) const
     {
         NativeCall<void, void*>(this, "APlayerState.OverrideWith(APlayerState*)", a0);
@@ -149,7 +149,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.RecalculateAvgPing()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RecalculateAvgPing() const
     {
         NativeCall<void>(this, "APlayerState.RecalculateAvgPing()");
@@ -165,7 +165,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.Reset()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=50]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Reset() const
     {
         return NativeCall<void*>(this, "APlayerState.Reset()");
@@ -173,7 +173,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.SeamlessTravelTo(APlayerState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=104]]
+    // endereco: casamento de bytes com a build de referencia
     void SeamlessTravelTo(void* a0) const
     {
         NativeCall<void, void*>(this, "APlayerState.SeamlessTravelTo(APlayerState*)", a0);
@@ -181,7 +181,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.SetIsFromPreviousLevel(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsFromPreviousLevel(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APlayerState.SetIsFromPreviousLevel(bool)", a0);
@@ -189,7 +189,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.SetIsInactive(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsInactive(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APlayerState.SetIsInactive(bool)", a0);
@@ -197,7 +197,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.SetIsOnlyASpectator(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsOnlyASpectator(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APlayerState.SetIsOnlyASpectator(bool)", a0);
@@ -205,7 +205,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.SetIsSpectator(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetIsSpectator(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APlayerState.SetIsSpectator(bool)", a0);
@@ -213,7 +213,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.SetPawnPrivate(APawn*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void SetPawnPrivate(void* a0) const
     {
         NativeCall<void, void*>(this, "APlayerState.SetPawnPrivate(APawn*)", a0);
@@ -221,7 +221,7 @@ struct APlayerState : public AInfo
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APlayerState.SetPlayerId(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetPlayerId(int a0) const
     {
         return NativeCall<void*, int>(this, "APlayerState.SetPlayerId(int)", a0);
@@ -229,7 +229,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.SetPlayerName(FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=232+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void SetPlayerName(const FString& a0) const
     {
         NativeCall<void, void*>(this, "APlayerState.SetPlayerName(FString&)", const_cast<FString*>(&a0));
@@ -241,7 +241,7 @@ struct APlayerState : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerState.SetUniqueId(FUniqueNetIdRepl&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetUniqueId(void* a0) const
     {
         NativeCall<void, void*>(this, "APlayerState.SetUniqueId(FUniqueNetIdRepl&)", a0);
@@ -274,19 +274,19 @@ struct APlayerState : public AInfo
     unsigned char& CompressedPingField() const
     { return *GetNativePointerField<unsigned char*>(this, "APlayerState.CompressedPing"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CompressedPing` +1, medido na build 25090264
+    //  ancorado em `CompressedPing` +1, medido na build 25535041
     //  (offset absoluto medido: 0x499; confianca alta)
     unsigned char& CurPingBucketField() const
     { return BrzCampoAncorado<unsigned char>(this, "CompressedPing", 1); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PawnPrivate` +24, medido na build 25090264
+    //  ancorado em `PawnPrivate` +24, medido na build 25535041
     //  (offset absoluto medido: 0x520; confianca alta)
     float& CurPingBucketTimestampField() const
     { return BrzCampoAncorado<float>(this, "PawnPrivate", 24); }
     BrzCampoPonteiro EngineMessageClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.EngineMessageClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EngineMessageClass` +8, medido na build 25090264
+    //  ancorado em `EngineMessageClass` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4D8; confianca alta)
     float& ExactPingField() const
     { return BrzCampoAncorado<float>(this, "EngineMessageClass", 8); }
@@ -295,7 +295,7 @@ struct APlayerState : public AInfo
     TObjectPtr<APawn>& PawnPrivateField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "APlayerState.PawnPrivate"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PawnPrivate` +8, medido na build 25090264
+    //  ancorado em `PawnPrivate` +8, medido na build 25535041
     //  (offset absoluto medido: 0x510; confianca alta)
     void*& PingBucketField() const
     { return BrzCampoAncorado<void*>(this, "PawnPrivate", 8); }
@@ -310,7 +310,7 @@ struct APlayerState : public AInfo
     float& ScoreField() const
     { return *GetNativePointerField<float*>(this, "APlayerState.score"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedNetworkAddress` +16, medido na build 25090264
+    //  ancorado em `SavedNetworkAddress` +16, medido na build 25535041
     //  (offset absoluto medido: 0x4F0; confianca alta)
     FName& SessionNameField() const
     { return BrzCampoAncorado<FName>(this, "SavedNetworkAddress", 16); }
@@ -320,6 +320,18 @@ struct APlayerState : public AInfo
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.UniqueID")); }
     BrzCampoPonteiro UniqueIdField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.UniqueID")); }
+    BrzCampoPonteiro bFromPreviousLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.bFromPreviousLevel")); }
+    BrzCampoPonteiro bIsABotField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.bIsABot")); }
+    BrzCampoPonteiro bIsInactiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.bIsInactive")); }
+    BrzCampoPonteiro bIsSpectatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.bIsSpectator")); }
+    BrzCampoPonteiro bOnlySpectatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.bOnlySpectator")); }
+    BrzCampoPonteiro bShouldUpdateReplicatedPingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.bShouldUpdateReplicatedPing")); }
     float& scoreField() const
     { return *GetNativePointerField<float*>(this, "APlayerState.score"); }
     BitFieldValue<bool, unsigned __int32> bShouldUpdateReplicatedPing()

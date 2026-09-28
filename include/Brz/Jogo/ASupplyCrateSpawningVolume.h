@@ -139,7 +139,7 @@ struct ASupplyCrateSpawningVolume : public AActor
     float& NoValidSpawnReCheckIntervalField() const
     { return *GetNativePointerField<float*>(this, "ASupplyCrateSpawningVolume.NoValidSpawnReCheckInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LinkedSupplyCrateEntries` +16, medido na build 25090264
+    //  ancorado em `LinkedSupplyCrateEntries` +16, medido na build 25535041
     //  (offset absoluto medido: 0x4F0; confianca alta)
     TArray<void*>& OriginalSupplyCrateEntriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "LinkedSupplyCrateEntries", 16); }
@@ -159,6 +159,18 @@ struct ASupplyCrateSpawningVolume : public AActor
     { return *GetNativePointerField<float*>(this, "ASupplyCrateSpawningVolume.SP_NoValidSpawnRecheckInterval"); }
     int& ZoneVolumeMaxNumberOfNPCBufferField() const
     { return *GetNativePointerField<int*>(this, "ASupplyCrateSpawningVolume.ZoneVolumeMaxNumberOfNPCBuffer"); }
+    BrzCampoPonteiro bDoSpawnCrateOnTopOfStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningVolume.bDoSpawnCrateOnTopOfStructures")); }
+    BrzCampoPonteiro bForcePreventCrateOnTopOfStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningVolume.bForcePreventCrateOnTopOfStructures")); }
+    BrzCampoPonteiro bForceRandomSupplyCratePointsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningVolume.bForceRandomSupplyCratePoints")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningVolume.bIsEnabled")); }
+    BrzCampoPonteiro bReallyUseCrateRequiresLoadedLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningVolume.bReallyUseCrateRequiresLoadedLevel")); }
+    BrzCampoPonteiro bUseSpawnPointWeightsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ASupplyCrateSpawningVolume.bUseSpawnPointWeights")); }
     BitFieldValue<bool, unsigned __int32> bIsEnabled()
     { return { (void*)this, "bIsEnabled" }; }
     BitFieldValue<bool, unsigned __int32> bUseSpawnPointWeights()

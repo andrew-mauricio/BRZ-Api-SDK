@@ -46,7 +46,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ActivePlayerInventoryTick(float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=94+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     void ActivePlayerInventoryTick(float a0) const
     {
         NativeCall<void, float>(this, "UPrimalInventoryComponent.ActivePlayerInventoryTick(float)", a0);
@@ -114,7 +114,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.AddToCraftQueue(UPrimalItem*,AShooterPlayerController*,bool,bool,float
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void AddToCraftQueue(void* a0, void* a1, bool a2, bool a3, float a4, float a5) const
     {
         NativeCall<void, void*, void*, bool, bool, float, float>(this, "UPrimalInventoryComponent.AddToCraftQueue(UPrimalItem*,AShooterPlayerController*,bool,bool,float,float)", a0, a1, a2, a3, a4, a5);
@@ -162,7 +162,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.AllowAddingToArkTribute()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowAddingToArkTribute() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.AllowAddingToArkTribute()");
@@ -170,7 +170,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.AllowBlueprintCraftingRequirement(TSubclassOf<UPrimalItem>,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=47+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro AllowBlueprintCraftingRequirement(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "UPrimalInventoryComponent.AllowBlueprintCraftingRequirement(TSubclassOf<UPrimalItem>,int)", a0, a1);
@@ -194,7 +194,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.AllowOwnerStasis()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowOwnerStasis() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.AllowOwnerStasis()");
@@ -226,7 +226,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.BPAllowRepairingItemInInventory(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPAllowRepairingItemInInventory(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.BPAllowRepairingItemInInventory(UPrimalItem*)", a0);
@@ -422,7 +422,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   UPrimalInventoryComponent.BPNotifyItemRemoved(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNotifyItemRemoved(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalInventoryComponent.BPNotifyItemRemoved(UPrimalItem*)", a0);
@@ -470,7 +470,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.BPPreventEquipItemType(EPrimalEquipmentType::Type)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=2]]
     BrzPonteiro BPPreventEquipItemType(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalInventoryComponent.BPPreventEquipItemType(EPrimalEquipmentType::Type)", a0);
@@ -550,7 +550,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.CanEquipItem(UPrimalItem*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool CanEquipItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.CanEquipItem(UPrimalItem*)", a0);
@@ -558,7 +558,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.CanEquipItems()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanEquipItems() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.CanEquipItems()");
@@ -566,7 +566,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.CanGrindItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanGrindItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.CanGrindItem(UPrimalItem*)", a0);
@@ -574,7 +574,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.CanGrindItems(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanGrindItems(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.CanGrindItems(AShooterPlayerController*)", a0);
@@ -582,7 +582,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.CanInventoryItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CanInventoryItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.CanInventoryItem(UPrimalItem*)", a0);
@@ -590,7 +590,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.CanInventoryItems()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanInventoryItems() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.CanInventoryItems()");
@@ -606,7 +606,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.CheckForAutoCraftBlueprints()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void CheckForAutoCraftBlueprints() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.CheckForAutoCraftBlueprints()");
@@ -614,7 +614,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.CheckFullInventoryConditionForItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CheckFullInventoryConditionForItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.CheckFullInventoryConditionForItem(UPrimalItem*)", a0);
@@ -646,7 +646,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ClearCraftQueue(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ClearCraftQueue(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimalInventoryComponent.ClearCraftQueue(bool)", a0);
@@ -654,7 +654,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.ClientFinishReceivingItems(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=22]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClientFinishReceivingItems(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UPrimalInventoryComponent.ClientFinishReceivingItems(bool)", a0);
@@ -838,7 +838,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.FindArkTributeItem(FItemNetID&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPrimalItem* FindArkTributeItem(void* a0) const
     {
         return NativeCall<UPrimalItem*, void*>(this, "UPrimalInventoryComponent.FindArkTributeItem(FItemNetID&)", a0);
@@ -846,7 +846,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.FindArkTributeItemBP(FItemNetID)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindArkTributeItemBP(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalInventoryComponent.FindArkTributeItemBP(FItemNetID)", a0);
@@ -878,7 +878,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.FinishedLoadingArkItems()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FinishedLoadingArkItems() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.FinishedLoadingArkItems()");
@@ -886,7 +886,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.ForceUpdateWirelessResources(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ForceUpdateWirelessResources(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimalInventoryComponent.ForceUpdateWirelessResources(bool)", a0);
@@ -910,7 +910,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetAbsoluteMaxInventoryItems(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetAbsoluteMaxInventoryItems(bool a0) const
     {
         return NativeCall<int, bool>(this, "UPrimalInventoryComponent.GetAbsoluteMaxInventoryItems(bool)", a0);
@@ -1018,7 +1018,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.GetEquippedItemOfType(EPrimalEquipmentType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     UPrimalItem* GetEquippedItemOfType(int a0) const
     {
         return NativeCall<UPrimalItem*, int>(this, "UPrimalInventoryComponent.GetEquippedItemOfType(EPrimalEquipmentType::Type)", a0);
@@ -1062,7 +1062,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.GetGrinderSettings_Implementation(int&,float&,int&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetGrinderSettings_Implementation(void* a0, void* a1, void* a2) const
     {
         NativeCall<void, void*, void*, void*>(this, "UPrimalInventoryComponent.GetGrinderSettings_Implementation(int&,float&,int&)", a0, a1, a2);
@@ -1071,9 +1071,9 @@ struct UPrimalInventoryComponent : public UActorComponent
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.GetGroundLocation(UE::Math::TVector<double>&,UE::Math::TVector<double>
     // endereco: casamento de bytes com a build de referencia
-    static bool GetGroundLocation(void* a0, void* a1, void* a2, void* a3, void* a4, bool a5, void* a6, bool a7)
+    bool GetGroundLocation(void* a0, void* a1, void* a2, void* a3, void* a4, bool a5, void* a6, bool a7) const
     {
-        return NativeCall<bool, void*, void*, void*, void*, void*, bool, void*, bool>(nullptr, "UPrimalInventoryComponent.GetGroundLocation(UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,APrimalStructure**,AActor*,bool,UPrimitiveComponent**,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
+        return NativeCall<bool, void*, void*, void*, void*, void*, bool, void*, bool>(this, "UPrimalInventoryComponent.GetGroundLocation(UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,APrimalStructure**,AActor*,bool,UPrimitiveComponent**,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -1086,7 +1086,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetInventoryUpdatedFrame()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetInventoryUpdatedFrame() const
     {
         return NativeCall<int>(this, "UPrimalInventoryComponent.GetInventoryUpdatedFrame()");
@@ -1102,7 +1102,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetItemInSlot(int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     UObject* GetItemInSlot(int a0, bool a1) const
     {
         return NativeCall<UObject*, int, bool>(this, "UPrimalInventoryComponent.GetItemInSlot(int,bool)", a0, a1);
@@ -1134,7 +1134,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.GetItemsToSerialize(bool,TArray<TSubclassOf<UPrimalItem>,TSizedDefault
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetItemsToSerialize(bool a0, void* a1) const
     {
         return NativeCall<void*, bool, void*>(this, "UPrimalInventoryComponent.GetItemsToSerialize(bool,TArray<TSubclassOf<UPrimalItem>,TSizedDefaultAllocator<32>>)", a0, a1);
@@ -1142,7 +1142,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.GetLastItemSlot()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UPrimalItem* GetLastItemSlot() const
     {
         return NativeCall<UPrimalItem*>(this, "UPrimalInventoryComponent.GetLastItemSlot()");
@@ -1150,7 +1150,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetLastItemSlotIndex()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetLastItemSlotIndex() const
     {
         return NativeCall<int>(this, "UPrimalInventoryComponent.GetLastItemSlotIndex()");
@@ -1158,7 +1158,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.GetLatestItemClassUseTime(TSubclassOf<UPrimalItem>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=194]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetLatestItemClassUseTime(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalInventoryComponent.GetLatestItemClassUseTime(TSubclassOf<UPrimalItem>)", a0);
@@ -1174,7 +1174,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.GetMaxInventoryItems(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     int GetMaxInventoryItems(bool a0) const
     {
         return NativeCall<int, bool>(this, "UPrimalInventoryComponent.GetMaxInventoryItems(bool)", a0);
@@ -1198,7 +1198,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetNumItems(bool,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetNumItems(bool a0, bool a1) const
     {
         return NativeCall<int, bool, bool>(this, "UPrimalInventoryComponent.GetNumItems(bool,bool)", a0, a1);
@@ -1206,7 +1206,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetNumNonVanityItems()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetNumNonVanityItems() const
     {
         return NativeCall<int>(this, "UPrimalInventoryComponent.GetNumNonVanityItems()");
@@ -1222,7 +1222,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.GetNumVanityItems()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetNumVanityItems() const
     {
         return NativeCall<int>(this, "UPrimalInventoryComponent.GetNumVanityItems()");
@@ -1238,7 +1238,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.GetRole()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRole() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.GetRole()");
@@ -1286,7 +1286,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.GrindItem(FItemNetID,bool,AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GrindItem(unsigned long long a0, bool a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, bool, void*>(this, "UPrimalInventoryComponent.GrindItem(FItemNetID,bool,AShooterPlayerController*)", a0, a1, a2);
@@ -1326,7 +1326,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.HideEquippedItemTypeInStatsPanel(EPrimalEquipmentType::Type)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HideEquippedItemTypeInStatsPanel(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalInventoryComponent.HideEquippedItemTypeInStatsPanel(EPrimalEquipmentType::Type)", a0);
@@ -1334,7 +1334,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.ImpersonateOwnerClass()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     UClass* ImpersonateOwnerClass() const
     {
         return NativeCall<UClass*>(this, "UPrimalInventoryComponent.ImpersonateOwnerClass()");
@@ -1342,7 +1342,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.IncreaseAbsoluteMaxInventoryItems(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IncreaseAbsoluteMaxInventoryItems(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UPrimalInventoryComponent.IncreaseAbsoluteMaxInventoryItems(bool)", a0);
@@ -1366,7 +1366,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.InitDefaultInventory()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=68]]
+    // endereco: casamento de bytes com a build de referencia
     void InitDefaultInventory() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.InitDefaultInventory()");
@@ -1430,7 +1430,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsAtMaxInventoryItems()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=71]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsAtMaxInventoryItems() const
     {
         return NativeCall<bool>(this, "UPrimalInventoryComponent.IsAtMaxInventoryItems()");
@@ -1438,7 +1438,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsCraftingAllowed(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=64]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsCraftingAllowed(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.IsCraftingAllowed(UPrimalItem*)", a0);
@@ -1462,7 +1462,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.IsItemSkin(UPrimalItem*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsItemSkin(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalInventoryComponent.IsItemSkin(UPrimalItem*)", a0);
@@ -1470,7 +1470,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsLocal()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=117]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsLocal() const
     {
         return NativeCall<bool>(this, "UPrimalInventoryComponent.IsLocal()");
@@ -1478,7 +1478,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsLocalToPlayer(AShooterPlayerController*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool IsLocalToPlayer(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalInventoryComponent.IsLocalToPlayer(AShooterPlayerController*)", a0);
@@ -1486,7 +1486,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsOnCraftRequestCooldown()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=128+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsOnCraftRequestCooldown() const
     {
         return NativeCall<bool>(this, "UPrimalInventoryComponent.IsOnCraftRequestCooldown()");
@@ -1502,7 +1502,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsRepairingAllowed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=70]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsRepairingAllowed() const
     {
         return NativeCall<bool>(this, "UPrimalInventoryComponent.IsRepairingAllowed()");
@@ -1510,7 +1510,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.IsServerCustomFolder(int)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsServerCustomFolder(int a0) const
     {
         return NativeCall<bool, int>(this, "UPrimalInventoryComponent.IsServerCustomFolder(int)", a0);
@@ -1518,7 +1518,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.IsValidCraftingResource(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsValidCraftingResource(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalInventoryComponent.IsValidCraftingResource(UPrimalItem*)", a0);
@@ -1550,7 +1550,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.LocalUseItemSlot(int,bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=40]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void LocalUseItemSlot(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "UPrimalInventoryComponent.LocalUseItemSlot(int,bool)", a0, a1);
@@ -1558,7 +1558,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.LocalUseItemSlotAfterHold(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro LocalUseItemSlotAfterHold(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalInventoryComponent.LocalUseItemSlotAfterHold(int)", a0);
@@ -1566,7 +1566,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.MulticastUpdateNearbyWirelessCrafting()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MulticastUpdateNearbyWirelessCrafting() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.MulticastUpdateNearbyWirelessCrafting()");
@@ -1574,7 +1574,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.MulticastUpdateNearbyWirelessCrafting_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void MulticastUpdateNearbyWirelessCrafting_Implementation() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.MulticastUpdateNearbyWirelessCrafting_Implementation()");
@@ -1698,7 +1698,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.OnComponentCreated()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=25]]
+    // endereco: casamento de bytes com a build de referencia
     void OnComponentCreated() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.OnComponentCreated()");
@@ -1714,7 +1714,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.OnDeserializedByGame(EOnDeserializationType::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=95/95]]
+    // endereco: casamento de bytes com a build de referencia
     void OnDeserializedByGame(int a0) const
     {
         NativeCall<void, int>(this, "UPrimalInventoryComponent.OnDeserializedByGame(EOnDeserializationType::Type)", a0);
@@ -1722,10 +1722,11 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.OnRegister()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=92+grafo=3/3]]
+    // classe: a funcao mora em UActorComponent, e UPrimalInventoryComponent herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void OnRegister() const
     {
-        NativeCall<void>(this, "UPrimalInventoryComponent.OnRegister()");
+        NativeCall<void>(this, "UActorComponent.OnRegister()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -1738,7 +1739,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.OverrideBlueprintCraftingRequirement(TSubclassOf<UPrimalItem>,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=47+chamadores=4]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro OverrideBlueprintCraftingRequirement(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "UPrimalInventoryComponent.OverrideBlueprintCraftingRequirement(TSubclassOf<UPrimalItem>,int)", a0, a1);
@@ -1762,7 +1763,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.OwnerDied()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OwnerDied() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.OwnerDied()");
@@ -1830,7 +1831,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.RemoteInventoryAllowAddItems(AShooterPlayerController*,UPrimalItem*,in
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1705+chamadores=11+grafo=9/9]]
+    // endereco: casamento de bytes com a build de referencia
     bool RemoteInventoryAllowAddItems(void* a0, void* a1, void* a2, bool a3, float a4) const
     {
         return NativeCall<bool, void*, void*, void*, bool, float>(this, "UPrimalInventoryComponent.RemoteInventoryAllowAddItems(AShooterPlayerController*,UPrimalItem*,int*,bool,float)", a0, a1, a2, a3, a4);
@@ -1838,7 +1839,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.RemoteInventoryAllowCraftingItems(AShooterPlayerController*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool RemoteInventoryAllowCraftingItems(void* a0, bool a1) const
     {
         return NativeCall<bool, void*, bool>(this, "UPrimalInventoryComponent.RemoteInventoryAllowCraftingItems(AShooterPlayerController*,bool)", a0, a1);
@@ -1854,7 +1855,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.RemoteInventoryAllowRepairingItems(AShooterPlayerController*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool RemoteInventoryAllowRepairingItems(void* a0, bool a1) const
     {
         return NativeCall<bool, void*, bool>(this, "UPrimalInventoryComponent.RemoteInventoryAllowRepairingItems(AShooterPlayerController*,bool)", a0, a1);
@@ -1914,7 +1915,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.RemoveWirelessBlueprintSharingSupplier(APrimalStructureItemContainer*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=649+grafo=14/14]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveWirelessBlueprintSharingSupplier(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalInventoryComponent.RemoveWirelessBlueprintSharingSupplier(APrimalStructureItemContainer*)", a0);
@@ -1930,7 +1931,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.ResetCraftingTickOnUnstasis()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetCraftingTickOnUnstasis() const
     {
         return NativeCall<void*>(this, "UPrimalInventoryComponent.ResetCraftingTickOnUnstasis()");
@@ -1938,11 +1939,10 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.Serialize(FArchive&)
-    // classe: a funcao mora em UActorComponent, e UPrimalInventoryComponent herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Serialize(void* a0) const
     {
-        return NativeCall<void*, void*>(this, "UActorComponent.Serialize(FArchive&)", a0);
+        return NativeCall<void*, void*>(this, "UPrimalInventoryComponent.Serialize(FArchive&)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -1979,7 +1979,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ServerAddItemToSlot_Implementation(FItemNetID,int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=169]]
+    // endereco: casamento de bytes com a build de referencia
     void ServerAddItemToSlot_Implementation(unsigned long long a0, int a1, bool a2) const
     {
         NativeCall<void, unsigned long long, int, bool>(this, "UPrimalInventoryComponent.ServerAddItemToSlot_Implementation(FItemNetID,int,bool)", a0, a1, a2);
@@ -2083,7 +2083,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ServerRemoveItemFromSlot(FItemNetID)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerRemoveItemFromSlot(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "UPrimalInventoryComponent.ServerRemoveItemFromSlot(FItemNetID)", a0);
@@ -2135,7 +2135,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ServerSplitItemStack(FItemNetID,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=6]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerSplitItemStack(unsigned long long a0, int a1) const
     {
         NativeCall<void, unsigned long long, int>(this, "UPrimalInventoryComponent.ServerSplitItemStack(FItemNetID,int)", a0, a1);
@@ -2143,7 +2143,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ServerSplitItemStack_Implementation(FItemNetID,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSplitItemStack_Implementation(unsigned long long a0, int a1) const
     {
         NativeCall<void, unsigned long long, int>(this, "UPrimalInventoryComponent.ServerSplitItemStack_Implementation(FItemNetID,int)", a0, a1);
@@ -2175,7 +2175,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.ServerViewRemoteInventory(AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerViewRemoteInventory(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalInventoryComponent.ServerViewRemoteInventory(AShooterPlayerController*)", a0);
@@ -2183,7 +2183,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.SetCraftingEnabled(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetCraftingEnabled(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimalInventoryComponent.SetCraftingEnabled(bool)", a0);
@@ -2191,7 +2191,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.SetEquippedItemsOwnerNoSee(bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=219]]
+    // endereco: casamento de bytes com a build de referencia
     void SetEquippedItemsOwnerNoSee(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "UPrimalInventoryComponent.SetEquippedItemsOwnerNoSee(bool,bool)", a0, a1);
@@ -2199,7 +2199,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.SetFirstPersonMasterPoseComponent(USkeletalMeshComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetFirstPersonMasterPoseComponent(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalInventoryComponent.SetFirstPersonMasterPoseComponent(USkeletalMeshComponent*)", a0);
@@ -2207,7 +2207,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.SetNextItemConsumptionID(FItemNetID)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetNextItemConsumptionID(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalInventoryComponent.SetNextItemConsumptionID(FItemNetID)", a0);
@@ -2215,7 +2215,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.SetNextItemConsumptionID_Implementation(FItemNetID)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetNextItemConsumptionID_Implementation(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "UPrimalInventoryComponent.SetNextItemConsumptionID_Implementation(FItemNetID)", a0);
@@ -2223,7 +2223,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalInventoryComponent.SetNextItemSpoilingID(FItemNetID)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetNextItemSpoilingID(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "UPrimalInventoryComponent.SetNextItemSpoilingID(FItemNetID)", a0);
@@ -2231,7 +2231,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.SetNextItemSpoilingID_Implementation(FItemNetID)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetNextItemSpoilingID_Implementation(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "UPrimalInventoryComponent.SetNextItemSpoilingID_Implementation(FItemNetID)", a0);
@@ -2287,7 +2287,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.StaticRegisterNativesUPrimalInventoryComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=34]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesUPrimalInventoryComponent()
     {
         NativeCall<void>(nullptr, "UPrimalInventoryComponent.StaticRegisterNativesUPrimalInventoryComponent()");
@@ -2295,7 +2295,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.StopAllCraftingRepairing()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=99]]
+    // endereco: casamento de bytes com a build de referencia
     void StopAllCraftingRepairing() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.StopAllCraftingRepairing()");
@@ -2315,7 +2315,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.SwapInventoryItems(FItemNetID&,FItemNetID&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SwapInventoryItems(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UPrimalInventoryComponent.SwapInventoryItems(FItemNetID&,FItemNetID&)", a0, a1);
@@ -2331,7 +2331,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.TickCraftQueue(float,AShooterGameState*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void TickCraftQueue(float a0, void* a1) const
     {
         NativeCall<void, float, void*>(this, "UPrimalInventoryComponent.TickCraftQueue(float,AShooterGameState*)", a0, a1);
@@ -2419,7 +2419,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.Unstasised()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Unstasised() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.Unstasised()");
@@ -2435,7 +2435,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.UpdateSlotMagicNumber()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateSlotMagicNumber() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.UpdateSlotMagicNumber()");
@@ -2518,7 +2518,7 @@ struct UPrimalInventoryComponent : public UActorComponent
     TArray<UPrimalItem*>& ArkTributeItemsField() const
     { return *GetNativePointerField<TArray<UPrimalItem*>*>(this, "UPrimalInventoryComponent.ArkTributeItems"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WeaponAsEquipmentAttachmentInfos` +16, medido na build 25090264
+    //  ancorado em `WeaponAsEquipmentAttachmentInfos` +16, medido na build 25535041
     //  (offset absoluto medido: 0x478; confianca alta)
     void*& CC_CosmeticControllerField() const
     { return BrzCampoAncorado<void*>(this, "WeaponAsEquipmentAttachmentInfos", 16); }
@@ -2526,6 +2526,10 @@ struct UPrimalInventoryComponent : public UActorComponent
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent.CheatInventoryItems"); }
     BrzCampoPonteiro CloseInventorySoundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.CloseInventorySound")); }
+    BrzCampoPonteiro ColdStoredItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.ColdStoredItems")); }
+    BrzCampoPonteiro ColdStoredRichItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.ColdStoredRichItems")); }
     float& CraftingItemSpeedField() const
     { return *GetNativePointerField<float*>(this, "UPrimalInventoryComponent.CraftingItemSpeed"); }
     TArray<UPrimalItem*>& CraftingItemsField() const
@@ -2579,7 +2583,7 @@ struct UPrimalInventoryComponent : public UActorComponent
     TArray<void*>& DefaultSlotItemsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent.DefaultSlotItems"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamedDinoForceConsiderFoodTypes` +16, medido na build 25090264
+    //  ancorado em `TamedDinoForceConsiderFoodTypes` +16, medido na build 25535041
     //  (offset absoluto medido: 0x5D0; confianca alta)
     TArray<UPrimalItem*>& DinoAutoHealingItemsField() const
     { return BrzCampoAncorado<TArray<UPrimalItem*>>(this, "TamedDinoForceConsiderFoodTypes", 16); }
@@ -2606,7 +2610,7 @@ struct UPrimalInventoryComponent : public UActorComponent
     float& ExtraMaxInventoryWeightField() const
     { return *GetNativePointerField<float*>(this, "UPrimalInventoryComponent.ExtraMaxInventoryWeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverrideCraftingFinishedSound` +16, medido na build 25090264
+    //  ancorado em `OverrideCraftingFinishedSound` +16, medido na build 25535041
     //  (offset absoluto medido: 0x5F0; confianca alta)
     FString& ForceAddToFolderField() const
     { return BrzCampoAncorado<FString>(this, "OverrideCraftingFinishedSound", 16); }
@@ -2655,12 +2659,12 @@ struct UPrimalInventoryComponent : public UActorComponent
     TArray<void*>& ItemSpoilingTimeMultipliersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent.ItemSpoilingTimeMultipliers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverrideCraftingFinishedSound` +8, medido na build 25090264
+    //  ancorado em `OverrideCraftingFinishedSound` +8, medido na build 25535041
     //  (offset absoluto medido: 0x5E8; confianca alta)
     double& LastAddToCraftQueueSoundTimeField() const
     { return BrzCampoAncorado<double>(this, "OverrideCraftingFinishedSound", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureCraftingItemSpeedModifier` +4, medido na build 25090264
+    //  ancorado em `StructureCraftingItemSpeedModifier` +4, medido na build 25535041
     //  (offset absoluto medido: 0x7D8; confianca alta)
     void*& LastCachedItemWeightFrameField() const
     { return BrzCampoAncorado<void*>(this, "StructureCraftingItemSpeedModifier", 4); }
@@ -2669,7 +2673,7 @@ struct UPrimalInventoryComponent : public UActorComponent
     double& LastInventoryRefreshTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalInventoryComponent.LastInventoryRefreshTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraMaxInventoryWeight` +4, medido na build 25090264
+    //  ancorado em `ExtraMaxInventoryWeight` +4, medido na build 25535041
     //  (offset absoluto medido: 0x7E8; confianca alta)
     void*& LastLoadedUserCosmeticField() const
     { return BrzCampoAncorado<void*>(this, "ExtraMaxInventoryWeight", 4); }
@@ -2678,12 +2682,12 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro LastWirelessCraftingCheckLocField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.LastWirelessCraftingCheckLoc")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessExchanges` +104, medido na build 25090264
+    //  ancorado em `WirelessExchanges` +104, medido na build 25535041
     //  (offset absoluto medido: 0x780; confianca media)
     int& LastWirelessUpdateFrameField() const
     { return BrzCampoAncorado<int>(this, "WirelessExchanges", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessExchanges` +96, medido na build 25090264
+    //  ancorado em `WirelessExchanges` +96, medido na build 25535041
     //  (offset absoluto medido: 0x778; confianca media)
     double& LastWirelessUpdateTimeField() const
     { return BrzCampoAncorado<double>(this, "WirelessExchanges", 96); }
@@ -2712,19 +2716,19 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro MultiUseButtonStyleOverridesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.MultiUseButtonStyleOverrides")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRefreshCheckItemTime` +20, medido na build 25090264
+    //  ancorado em `LastRefreshCheckItemTime` +20, medido na build 25535041
     //  (offset absoluto medido: 0x4B4; confianca alta)
     FItemNetID& NextItemConsumptionIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "LastRefreshCheckItemTime", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRefreshCheckItemTime` +12, medido na build 25090264
+    //  ancorado em `LastRefreshCheckItemTime` +12, medido na build 25535041
     //  (offset absoluto medido: 0x4AC; confianca alta)
     FItemNetID& NextItemSpoilingIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "LastRefreshCheckItemTime", 12); }
     float& NumItemSetsPowerField() const
     { return *GetNativePointerField<float*>(this, "UPrimalInventoryComponent.NumItemSetsPower"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxNumberOfSortingInputs` +8, medido na build 25090264
+    //  ancorado em `MaxNumberOfSortingInputs` +8, medido na build 25535041
     //  (offset absoluto medido: 0x7D0; confianca alta)
     void*& NumSharedBlueprintsField() const
     { return BrzCampoAncorado<void*>(this, "MaxNumberOfSortingInputs", 8); }
@@ -2765,7 +2769,7 @@ struct UPrimalInventoryComponent : public UActorComponent
     int& SavedForceDefaultInventoryRefreshVersionField() const
     { return *GetNativePointerField<int*>(this, "UPrimalInventoryComponent.SavedForceDefaultInventoryRefreshVersion"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomFolderItems` +16, medido na build 25090264
+    //  ancorado em `CustomFolderItems` +16, medido na build 25535041
     //  (offset absoluto medido: 0x548; confianca alta)
     TArray<void*>& ServerCustomFolderField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "CustomFolderItems", 16); }
@@ -2794,22 +2798,258 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro WirelessExchangesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.WirelessExchanges")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessExchanges` +16, medido na build 25090264
+    //  ancorado em `WirelessExchanges` +16, medido na build 25535041
     //  (offset absoluto medido: 0x728; confianca alta)
     void*& WirelessResourceMapField() const
     { return BrzCampoAncorado<void*>(this, "WirelessExchanges", 16); }
+    BrzCampoPonteiro bAddMaxInventoryItemsToDefaultItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAddMaxInventoryItemsToDefaultItems")); }
+    BrzCampoPonteiro bAllDefaultInventoryIsEngramsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllDefaultInventoryIsEngrams")); }
+    BrzCampoPonteiro bAllowAddingToArkTributeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowAddingToArkTribute")); }
+    BrzCampoPonteiro bAllowDeactivatedCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowDeactivatedCrafting")); }
+    BrzCampoPonteiro bAllowItemColdStorageOnStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowItemColdStorageOnStasis")); }
+    BrzCampoPonteiro bAllowItemStackingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowItemStacking")); }
+    BrzCampoPonteiro bAllowRemoteCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowRemoteCrafting")); }
+    BrzCampoPonteiro bAllowRemoteInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowRemoteInventory")); }
+    BrzCampoPonteiro bAllowRemoteRepairingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowRemoteRepairing")); }
+    BrzCampoPonteiro bAllowWorldSettingsInventoryComponentAppendsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bAllowWorldSettingsInventoryComponentAppends")); }
+    BrzCampoPonteiro bBPAllowUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPAllowUseInInventory")); }
+    BrzCampoPonteiro bBPForceCustomRemoteInventoryAllowAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPForceCustomRemoteInventoryAllowAddItems")); }
+    BrzCampoPonteiro bBPForceCustomRemoteInventoryAllowRemoveItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPForceCustomRemoteInventoryAllowRemoveItems")); }
+    BrzCampoPonteiro bBPHandleAccessInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPHandleAccessInventory")); }
+    BrzCampoPonteiro bBPNotifyItemAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPNotifyItemAdded")); }
+    BrzCampoPonteiro bBPNotifyItemQuantityUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPNotifyItemQuantityUpdated")); }
+    BrzCampoPonteiro bBPNotifyItemRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPNotifyItemRemoved")); }
+    BrzCampoPonteiro bBPOverrideItemMinimumUseIntervalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPOverrideItemMinimumUseInterval")); }
+    BrzCampoPonteiro bBPRemoteInventoryAllowRemoveItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bBPRemoteInventoryAllowRemoveItems")); }
+    BrzCampoPonteiro bCanEquipItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bCanEquipItems")); }
+    BrzCampoPonteiro bCanInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bCanInventoryItems")); }
+    BrzCampoPonteiro bCanUseWeaponAsEquipmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bCanUseWeaponAsEquipment")); }
+    BrzCampoPonteiro bCheckForAutoCraftBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bCheckForAutoCraftBlueprints")); }
+    BrzCampoPonteiro bColdStorageDeferInflateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bColdStorageDeferInflate")); }
+    BrzCampoPonteiro bConsumeCraftingRepairingRequirementsOnStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bConsumeCraftingRepairingRequirementsOnStart")); }
+    BrzCampoPonteiro bCraftingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bCraftingEnabled")); }
+    BrzCampoPonteiro bDataListPadMaxInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bDataListPadMaxInventoryItems")); }
+    BrzCampoPonteiro bDeferCheckForAutoCraftBlueprintsOnInventoryChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bDeferCheckForAutoCraftBlueprintsOnInventoryChange")); }
+    BrzCampoPonteiro bDisableDropAllItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bDisableDropAllItems")); }
+    BrzCampoPonteiro bDisableTransferEquipmentOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bDisableTransferEquipmentOnTransferAll")); }
+    BrzCampoPonteiro bDropPhysicalInventoryDepositField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bDropPhysicalInventoryDeposit")); }
+    BrzCampoPonteiro bEnableDediSortingInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bEnableDediSortingInputs")); }
+    BrzCampoPonteiro bEnableSortingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bEnableSorting")); }
+    BrzCampoPonteiro bEnableSortingInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bEnableSortingInputs")); }
+    BrzCampoPonteiro bEquipmentForceIgnoreExplicitOwnerClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bEquipmentForceIgnoreExplicitOwnerClass")); }
+    BrzCampoPonteiro bEquipmentMustRequireExplicitOwnerClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bEquipmentMustRequireExplicitOwnerClass")); }
+    BrzCampoPonteiro bEquipmentPlayerForceRequireExplicitOwnerClassField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bEquipmentPlayerForceRequireExplicitOwnerClass")); }
+    BrzCampoPonteiro bForceAllowAllUseInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bForceAllowAllUseInInventory")); }
     bool& bForceAllowCustomFoldersField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalInventoryComponent.bForceAllowCustomFolders"); }
+    BrzCampoPonteiro bForceGenerateItemSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bForceGenerateItemSets")); }
+    BrzCampoPonteiro bForceInventoryBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bForceInventoryBlueprints")); }
+    BrzCampoPonteiro bForceInventoryNonRemovableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bForceInventoryNonRemovable")); }
+    BrzCampoPonteiro bForceInventoryNotifyCraftingFinishedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bForceInventoryNotifyCraftingFinished")); }
+    BrzCampoPonteiro bForcePreventDropInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bForcePreventDropInventory")); }
+    BrzCampoPonteiro bFreeCraftingModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bFreeCraftingMode")); }
+    BrzCampoPonteiro bGivesAchievementItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bGivesAchievementItems")); }
+    BrzCampoPonteiro bGrinderCanGrindAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bGrinderCanGrindAll")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DisplayDefaultItemInventoryCount` +4, medido na build 25090264
+    //  ancorado em `DisplayDefaultItemInventoryCount` +4, medido na build 25535041
     //  (offset absoluto medido: 0x494; confianca alta)
     void*& bHasBeenRegisteredField() const
     { return BrzCampoAncorado<void*>(this, "DisplayDefaultItemInventoryCount", 4); }
+    BrzCampoPonteiro bHideDefaultInventoryItemsFromDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bHideDefaultInventoryItemsFromDisplay")); }
+    BrzCampoPonteiro bHideEnableSortingButtonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bHideEnableSortingButton")); }
+    BrzCampoPonteiro bHideSaddleFromInventoryDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bHideSaddleFromInventoryDisplay")); }
+    BrzCampoPonteiro bHideSlotCountFromHudField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bHideSlotCountFromHud")); }
+    BrzCampoPonteiro bHideTributeUploadDinosPanelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bHideTributeUploadDinosPanel")); }
+    BrzCampoPonteiro bIgnoreDLCEquipRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIgnoreDLCEquipRestrictions")); }
+    BrzCampoPonteiro bIgnoreEngramEquipRestrictionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIgnoreEngramEquipRestrictions")); }
+    BrzCampoPonteiro bIgnoreItemMaxDurabilityForItemRepairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIgnoreItemMaxDurabilityForItemRepair")); }
+    BrzCampoPonteiro bIgnoreItemRequiresInventoryForItemRepairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIgnoreItemRequiresInventoryForItemRepair")); }
+    BrzCampoPonteiro bIgnoreMaxInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIgnoreMaxInventoryItems")); }
+    BrzCampoPonteiro bIgnoreNextItemUseCDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIgnoreNextItemUseCD")); }
+    BrzCampoPonteiro bInitializedMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bInitializedMe")); }
+    BrzCampoPonteiro bIsSecondaryInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIsSecondaryInventory")); }
+    BrzCampoPonteiro bIsTaxidermyBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIsTaxidermyBase")); }
+    BrzCampoPonteiro bIsTributeInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bIsTributeInventory")); }
+    BrzCampoPonteiro bLastNotifyCraftingStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bLastNotifyCraftingState")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRefreshCheckItemTime` +8, medido na build 25090264
+    //  ancorado em `LastRefreshCheckItemTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x4A8; confianca alta)
     void*& bLastPreventUseItemSpoilingTimeMultipliersField() const
     { return BrzCampoAncorado<void*>(this, "LastRefreshCheckItemTime", 8); }
+    BrzCampoPonteiro bMaxInventoryWeightUseCharacterStatusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bMaxInventoryWeightUseCharacterStatus")); }
+    BrzCampoPonteiro bNotNearWirelessCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bNotNearWirelessCrafting")); }
+    BrzCampoPonteiro bNotifyAddedOnClientReceiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bNotifyAddedOnClientReceive")); }
+    BrzCampoPonteiro bNotifyCraftingStateChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bNotifyCraftingStateChanged")); }
+    BrzCampoPonteiro bNotifyWirelessTribeGroupInventoryRankChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bNotifyWirelessTribeGroupInventoryRankChanged")); }
+    BrzCampoPonteiro bOnlyOneCraftQueueItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bOnlyOneCraftQueueItem")); }
+    BrzCampoPonteiro bOverrideCraftingMinDurabilityRequirementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bOverrideCraftingMinDurabilityRequirement")); }
+    BrzCampoPonteiro bOverrideInventoryDepositClassDontForceDropField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bOverrideInventoryDepositClassDontForceDrop")); }
+    BrzCampoPonteiro bPreventAutoDecreaseDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bPreventAutoDecreaseDurability")); }
+    BrzCampoPonteiro bPreventCraftingResourceConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bPreventCraftingResourceConsumption")); }
+    BrzCampoPonteiro bPreventDropInventoryDepositField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bPreventDropInventoryDeposit")); }
+    BrzCampoPonteiro bPreventInventoryViewTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bPreventInventoryViewTrace")); }
+    BrzCampoPonteiro bPreventSortingInputsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bPreventSortingInputs")); }
+    BrzCampoPonteiro bReceivingArkInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bReceivingArkInventoryItems")); }
+    BrzCampoPonteiro bReceivingEquippedItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bReceivingEquippedItems")); }
+    BrzCampoPonteiro bReceivingInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bReceivingInventoryItems")); }
+    BrzCampoPonteiro bRemoteInventoryAllowAddItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bRemoteInventoryAllowAddItems")); }
+    BrzCampoPonteiro bRemoteInventoryAllowRemoveItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bRemoteInventoryAllowRemoveItems")); }
+    BrzCampoPonteiro bRemoteInventoryOnlyAllowSelfField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bRemoteInventoryOnlyAllowSelf")); }
+    BrzCampoPonteiro bRemoteInventoryOnlyAllowTribeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bRemoteInventoryOnlyAllowTribe")); }
+    BrzCampoPonteiro bRemoteOnlyAllowBlueprintsOrItemClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bRemoteOnlyAllowBlueprintsOrItemClasses")); }
+    BrzCampoPonteiro bRepairingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bRepairingEnabled")); }
+    BrzCampoPonteiro bReplicateComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bReplicateComponent")); }
+    BrzCampoPonteiro bSetCraftingEnabledCheckForAutoCraftBlueprintsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bSetCraftingEnabledCheckForAutoCraftBlueprints")); }
+    BrzCampoPonteiro bSetsRandomWithoutReplacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bSetsRandomWithoutReplacement")); }
+    BrzCampoPonteiro bShowHiddenDefaultInventoryItemsDuringCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bShowHiddenDefaultInventoryItemsDuringCrafting")); }
+    BrzCampoPonteiro bShowHiddenRemoteInventoryItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bShowHiddenRemoteInventoryItems")); }
+    BrzCampoPonteiro bShowItemDefaultFoldersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bShowItemDefaultFolders")); }
+    BrzCampoPonteiro bShowQuickSlotPanelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bShowQuickSlotPanel")); }
+    BrzCampoPonteiro bSpawnActorOnTopOfStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bSpawnActorOnTopOfStructure")); }
+    BrzCampoPonteiro bTriggerHotbarItemUsedEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bTriggerHotbarItemUsedEvent")); }
+    BrzCampoPonteiro bUseBPAllowAddInventoryItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPAllowAddInventoryItem")); }
+    BrzCampoPonteiro bUseBPAllowRepairingItemInInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPAllowRepairingItemInInventory")); }
+    BrzCampoPonteiro bUseBPCanGrindItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPCanGrindItems")); }
+    BrzCampoPonteiro bUseBPGetExtraItemDisplayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPGetExtraItemDisplay")); }
+    BrzCampoPonteiro bUseBPGetExtraItemRepairResourceRequirementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPGetExtraItemRepairResourceRequirements")); }
+    BrzCampoPonteiro bUseBPInitializeInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPInitializeInventory")); }
+    BrzCampoPonteiro bUseBPInventoryRefreshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPInventoryRefresh")); }
+    BrzCampoPonteiro bUseBPIsCraftingAllowedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPIsCraftingAllowed")); }
+    BrzCampoPonteiro bUseBPIsValidCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPIsValidCraftingResource")); }
+    BrzCampoPonteiro bUseBPModifyCustomAutoDecreaseDurabilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPModifyCustomAutoDecreaseDurability")); }
+    BrzCampoPonteiro bUseBPOnTransferAllField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPOnTransferAll")); }
+    BrzCampoPonteiro bUseBPOverrideDropItemTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPOverrideDropItemTransform")); }
+    BrzCampoPonteiro bUseBPRemoteInventoryAllowCraftingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPRemoteInventoryAllowCrafting")); }
+    BrzCampoPonteiro bUseBPRemoteInventoryAllowViewingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPRemoteInventoryAllowViewing")); }
+    BrzCampoPonteiro bUseBPRemoteInventoryGetMaxVisibleSlotsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPRemoteInventoryGetMaxVisibleSlots")); }
+    BrzCampoPonteiro bUseBPUseCraftQueueForItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseBPUseCraftQueueForItem")); }
+    BrzCampoPonteiro bUseCheatInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseCheatInventory")); }
+    BrzCampoPonteiro bUseCraftQueueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseCraftQueue")); }
+    BrzCampoPonteiro bUseCustomSortingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseCustomSorting")); }
+    BrzCampoPonteiro bUseExtendedCharacterCraftingFunctionalityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseExtendedCharacterCraftingFunctionality")); }
+    BrzCampoPonteiro bUseInventoryBPDrawItemIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseInventoryBPDrawItemIcon")); }
+    BrzCampoPonteiro bUseItemCountInsteadOfInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseItemCountInsteadOfInventory")); }
+    BrzCampoPonteiro bUseItemQuantityUpdateEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseItemQuantityUpdateEvents")); }
+    BrzCampoPonteiro bUseParentStructureIsValidCraftingResourceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseParentStructureIsValidCraftingResource")); }
+    BrzCampoPonteiro bUseSortingInputAmountsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bUseSortingInputAmounts")); }
     BitFieldValue<bool, unsigned __int32> bInitializedMe()
     { return { (void*)this, "bInitializedMe" }; }
     BitFieldValue<bool, unsigned __int32> bReceivingEquippedItems()

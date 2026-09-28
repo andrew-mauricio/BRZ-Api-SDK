@@ -32,6 +32,9 @@ struct FPrimalCharacterStatusValueModifier
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    float& AmountToAddField() const
+    { return *GetNativePointerField<float*>(this, "FPrimalCharacterStatusValueModifier.AmountToAdd"); }
     float& BaseAmountToAddField() const
     { return *GetNativePointerField<float*>(this, "FPrimalCharacterStatusValueModifier.BaseAmountToAdd"); }
     TWeakObjectPtr<void>& InstigatorField() const
@@ -40,16 +43,18 @@ struct FPrimalCharacterStatusValueModifier
     { return *GetNativePointerField<float*>(this, "FPrimalCharacterStatusValueModifier.SpeedToAdd"); }
     int& StatusValueModifierDescriptionIndexField() const
     { return *GetNativePointerField<int*>(this, "FPrimalCharacterStatusValueModifier.StatusValueModifierDescriptionIndex"); }
+    FieldArray<char> StopOnValueNearMaxField() const
+    { return { (void*)this, "FPrimalCharacterStatusValueModifier.StopOnValueNearMax" }; }
     FieldArray<char> ValueTypeField() const
     { return { (void*)this, "FPrimalCharacterStatusValueModifier.ValueType" }; }
-    BitFieldValue<bool, unsigned __int32> bContinueOnUnchangedValue()
-    { return { (void*)this, "bContinueOnUnchangedValue" }; }
-    BitFieldValue<bool, unsigned __int32> bForceImmediateTick()
-    { return { (void*)this, "bForceImmediateTick" }; }
+    BrzCampoPonteiro bContinueOnUnchangedValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusValueModifier.bContinueOnUnchangedValue")); }
+    BrzCampoPonteiro bForceImmediateTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusValueModifier.bForceImmediateTick")); }
     bool& bMakeUntameableField() const
     { return *GetNativePointerField<bool*>(this, "FPrimalCharacterStatusValueModifier.bMakeUntameable"); }
-    BitFieldValue<bool, unsigned __int32> bSetAdditionalValue()
-    { return { (void*)this, "bSetAdditionalValue" }; }
+    BrzCampoPonteiro bSetAdditionalValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalCharacterStatusValueModifier.bSetAdditionalValue")); }
     bool& bSetValueField() const
     { return *GetNativePointerField<bool*>(this, "FPrimalCharacterStatusValueModifier.bSetValue"); }
 };

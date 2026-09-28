@@ -48,6 +48,9 @@ struct UObjectRedirector
     {
         return NativeCall<void*, void*>(this, "UObjectRedirector.Serialize(FArchive&)", a0);
     }
+
+    BrzCampoPonteiro DestinationObjectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectRedirector.DestinationObject")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UOBJECTREDIRECTOR_H

@@ -35,6 +35,10 @@ struct FHitGroupSystemRootConstants
 
     BrzCampoPonteiro ConfigField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitGroupSystemRootConstants.Config")); }
+    BrzCampoPonteiro FirstPrimitiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitGroupSystemRootConstants.FirstPrimitive")); }
+    BrzCampoPonteiro IndexBufferOffsetInBytesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitGroupSystemRootConstants.IndexBufferOffsetInBytes")); }
     BrzCampoPonteiro UserDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FHitGroupSystemRootConstants.UserData")); }
 };

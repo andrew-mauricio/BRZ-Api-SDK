@@ -48,6 +48,15 @@ struct FActorClusterReferenceProcessor
     {
         return NativeCall<void*, void*>(this, "FActorClusterReferenceProcessor.CanAddToCluster(UObject*)", a0);
     }
+
+    BrzCampoPonteiro ClusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorClusterReferenceProcessor.Cluster")); }
+    BrzCampoPonteiro ClusterRootIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorClusterReferenceProcessor.ClusterRootIndex")); }
+    BrzCampoPonteiro ParentLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorClusterReferenceProcessor.ParentLevel")); }
+    BrzCampoPonteiro ParentLevelPackageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorClusterReferenceProcessor.ParentLevelPackage")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORCLUSTERREFERENCEPROCESSOR_H

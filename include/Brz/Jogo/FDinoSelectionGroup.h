@@ -32,6 +32,9 @@ struct FDinoSelectionGroup
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro TheCharacters_3_939F02014B0717EC265861BBC320882CField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FDinoSelectionGroup.TheCharacters_3_939F02014B0717EC265861BBC320882C")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FDINOSELECTIONGROUP_H

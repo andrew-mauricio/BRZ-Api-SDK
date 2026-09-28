@@ -37,8 +37,8 @@ struct FTransformParameterNameAndValue
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformParameterNameAndValue.ParameterName")); }
     BrzCampoPonteiro RotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformParameterNameAndValue.Rotation")); }
-    BitFieldValue<bool, unsigned __int32> Scale()
-    { return { (void*)this, "Scale" }; }
+    BrzCampoPonteiro ScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformParameterNameAndValue.Scale")); }
     BrzCampoPonteiro TranslationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformParameterNameAndValue.Translation")); }
 };

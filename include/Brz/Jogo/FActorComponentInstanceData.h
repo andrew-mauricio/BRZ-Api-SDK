@@ -36,9 +36,9 @@ struct FActorComponentInstanceData
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorComponentInstanceData.AddReferencedObjects(FReferenceCollector&)
     // endereco: casamento de bytes com a build de referencia
-    static BrzPonteiro AddReferencedObjects(void* a0)
+    BrzPonteiro AddReferencedObjects(void* a0) const
     {
-        return NativeCall<void*, void*>(nullptr, "FActorComponentInstanceData.AddReferencedObjects(FReferenceCollector&)", a0);
+        return NativeCall<void*, void*>(this, "FActorComponentInstanceData.AddReferencedObjects(FReferenceCollector&)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.

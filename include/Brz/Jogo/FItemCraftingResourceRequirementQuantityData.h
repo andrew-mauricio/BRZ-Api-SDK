@@ -39,6 +39,8 @@ struct FItemCraftingResourceRequirementQuantityData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemCraftingResourceRequirementQuantityData.RequiredQuantity")); }
     BrzCampoPonteiro WirelessQuantityField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemCraftingResourceRequirementQuantityData.WirelessQuantity")); }
+    BrzCampoPonteiro bHasEnoughResourcesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemCraftingResourceRequirementQuantityData.bHasEnoughResources")); }
     BitFieldValue<bool, unsigned __int32> bHasEnoughResources()
     { return { (void*)this, "bHasEnoughResources" }; }
 

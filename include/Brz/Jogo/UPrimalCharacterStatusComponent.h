@@ -61,7 +61,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.AllowTaming()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=55]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AllowTaming() const
     {
         return NativeCall<void*>(this, "UPrimalCharacterStatusComponent.AllowTaming()");
@@ -117,7 +117,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.BPDirectSetCurrentStatusValue(EPrimalCharacterStatusValue::Type,
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPDirectSetCurrentStatusValue(int a0, float a1) const
     {
         NativeCall<void, int, float>(this, "UPrimalCharacterStatusComponent.BPDirectSetCurrentStatusValue(EPrimalCharacterStatusValue::Type,float)", a0, a1);
@@ -125,7 +125,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.BPDirectSetMaxStatusValue(EPrimalCharacterStatusValue::Type,floa
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPDirectSetMaxStatusValue(int a0, float a1) const
     {
         return NativeCall<void*, int, float>(this, "UPrimalCharacterStatusComponent.BPDirectSetMaxStatusValue(EPrimalCharacterStatusValue::Type,float)", a0, a1);
@@ -141,7 +141,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.BPGetAmountMaxGainedPerLevelUpValue(EPrimalCharacterStatusValue:
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPGetAmountMaxGainedPerLevelUpValue(int a0, bool a1) const
     {
         return NativeCall<void*, int, bool>(this, "UPrimalCharacterStatusComponent.BPGetAmountMaxGainedPerLevelUpValue(EPrimalCharacterStatusValue::Type,bool)", a0, a1);
@@ -149,7 +149,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.BPGetCurrentStatusValue(EPrimalCharacterStatusValue::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float BPGetCurrentStatusValue(int a0) const
     {
         return NativeCall<float, int>(this, "UPrimalCharacterStatusComponent.BPGetCurrentStatusValue(EPrimalCharacterStatusValue::Type)", a0);
@@ -221,7 +221,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.BPSetRecoveryRateStatusValue(EPrimalCharacterStatusValue::Type,f
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPSetRecoveryRateStatusValue(int a0, float a1) const
     {
         return NativeCall<void*, int, float>(this, "UPrimalCharacterStatusComponent.BPSetRecoveryRateStatusValue(EPrimalCharacterStatusValue::Type,float)", a0, a1);
@@ -261,7 +261,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.ClearAllLevelUpPoints(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClearAllLevelUpPoints(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimalCharacterStatusComponent.ClearAllLevelUpPoints(bool)", a0);
@@ -269,7 +269,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.ClearAllMutationPoints()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClearAllMutationPoints() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.ClearAllMutationPoints()");
@@ -277,7 +277,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.ClientSyncMaxStatusValues(TArray<float,TSizedDefaultAllocator<32
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=295+bytes40+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=295+bytes40+chamadores=3]]
     void ClientSyncMaxStatusValues(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UPrimalCharacterStatusComponent.ClientSyncMaxStatusValues(TArray<float,TSizedDefaultAllocator<32>>&,TArray<float,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -285,7 +285,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.ClientSyncMaxStatusValues_Implementation(TArray<float,TSizedDefa
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSyncMaxStatusValues_Implementation(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UPrimalCharacterStatusComponent.ClientSyncMaxStatusValues_Implementation(TArray<float,TSizedDefaultAllocator<32>>&,TArray<float,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -317,7 +317,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.GetBaseLevelFromLevelUpPoints(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetBaseLevelFromLevelUpPoints(bool a0) const
     {
         return NativeCall<int, bool>(this, "UPrimalCharacterStatusComponent.GetBaseLevelFromLevelUpPoints(bool)", a0);
@@ -325,7 +325,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.GetCanLevelUpValue(EPrimalCharacterStatusValue::Type)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCanLevelUpValue(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalCharacterStatusComponent.GetCanLevelUpValue(EPrimalCharacterStatusValue::Type)", a0);
@@ -333,7 +333,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.GetCharacterLevel()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetCharacterLevel() const
     {
         return NativeCall<int>(this, "UPrimalCharacterStatusComponent.GetCharacterLevel()");
@@ -341,7 +341,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.GetCraftingSpeedModifier()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetCraftingSpeedModifier() const
     {
         return NativeCall<float>(this, "UPrimalCharacterStatusComponent.GetCraftingSpeedModifier()");
@@ -381,7 +381,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.GetDontUseValue(EPrimalCharacterStatusValue::Type)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDontUseValue(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalCharacterStatusComponent.GetDontUseValue(EPrimalCharacterStatusValue::Type)", a0);
@@ -397,7 +397,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.GetExperienceRequiredForNextLevelUp()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetExperienceRequiredForNextLevelUp() const
     {
         return NativeCall<float>(this, "UPrimalCharacterStatusComponent.GetExperienceRequiredForNextLevelUp()");
@@ -413,7 +413,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.GetExtraCharacterLevel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetExtraCharacterLevel() const
     {
         return NativeCall<int>(this, "UPrimalCharacterStatusComponent.GetExtraCharacterLevel()");
@@ -429,7 +429,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.GetLevelUpPoints(EPrimalCharacterStatusValue::Type,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetLevelUpPoints(int a0, bool a1) const
     {
         return NativeCall<void*, int, bool>(this, "UPrimalCharacterStatusComponent.GetLevelUpPoints(EPrimalCharacterStatusValue::Type,bool)", a0, a1);
@@ -469,7 +469,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.GetMutationPoints(EPrimalCharacterStatusValue::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMutationPoints(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalCharacterStatusComponent.GetMutationPoints(EPrimalCharacterStatusValue::Type)", a0);
@@ -485,7 +485,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.GetRawStatusValueRecoveryRate(EPrimalCharacterStatusValue::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetRawStatusValueRecoveryRate(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalCharacterStatusComponent.GetRawStatusValueRecoveryRate(EPrimalCharacterStatusValue::Type)", a0);
@@ -493,7 +493,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.GetStatusCompUsesStat(int,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool GetStatusCompUsesStat(int a0, bool a1) const
     {
         return NativeCall<bool, int, bool>(this, "UPrimalCharacterStatusComponent.GetStatusCompUsesStat(int,bool)", a0, a1);
@@ -557,7 +557,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.IsAlignedWithTeam(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsAlignedWithTeam(int a0) const
     {
         return NativeCall<void*, int>(this, "UPrimalCharacterStatusComponent.IsAlignedWithTeam(int)", a0);
@@ -605,7 +605,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.NetSetMaxTamingEffectivenessBaseLevelMultiplier_Implementation(f
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NetSetMaxTamingEffectivenessBaseLevelMultiplier_Implementation(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalCharacterStatusComponent.NetSetMaxTamingEffectivenessBaseLevelMultiplier_Implementation(float)", a0);
@@ -613,7 +613,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.NetSyncMaxStatusValues(TArray<float,TSizedDefaultAllocator<32>>&
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=295+bytes40+chamadores=6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=295+bytes40+chamadores=7]]
     void NetSyncMaxStatusValues(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UPrimalCharacterStatusComponent.NetSyncMaxStatusValues(TArray<float,TSizedDefaultAllocator<32>>&,TArray<float,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -637,7 +637,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.OnMaxStatusValueChanged()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1122+grafo=22/22]]
+    // endereco: casamento de bytes com a build de referencia
     void OnMaxStatusValueChanged() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.OnMaxStatusValueChanged()");
@@ -645,7 +645,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.OnRep_CurrentStatusValues()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_CurrentStatusValues() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.OnRep_CurrentStatusValues()");
@@ -653,7 +653,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.OnRep_GlobalBaseLevelMaxStatusValues()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_GlobalBaseLevelMaxStatusValues() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.OnRep_GlobalBaseLevelMaxStatusValues()");
@@ -661,7 +661,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.OnRep_GlobalCurrentStatusValues()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_GlobalCurrentStatusValues() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.OnRep_GlobalCurrentStatusValues()");
@@ -669,7 +669,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.OnRep_GlobalMaxStatusValues()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_GlobalMaxStatusValues() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.OnRep_GlobalMaxStatusValues()");
@@ -677,7 +677,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.OnRep_ReplicatedExperiencePoints()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedExperiencePoints() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.OnRep_ReplicatedExperiencePoints()");
@@ -789,7 +789,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.SetAllStatsToMaximum()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAllStatsToMaximum() const
     {
         NativeCall<void>(this, "UPrimalCharacterStatusComponent.SetAllStatsToMaximum()");
@@ -829,7 +829,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.SetBaseLevelNoStatChange(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetBaseLevelNoStatChange(int a0) const
     {
         NativeCall<void, int>(this, "UPrimalCharacterStatusComponent.SetBaseLevelNoStatChange(int)", a0);
@@ -837,7 +837,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalCharacterStatusComponent.SetExtraCharacterLevel(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetExtraCharacterLevel(int a0) const
     {
         NativeCall<void, int>(this, "UPrimalCharacterStatusComponent.SetExtraCharacterLevel(int)", a0);
@@ -845,7 +845,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.SetLevelUpPoints(EPrimalCharacterStatusValue::Type,bool,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetLevelUpPoints(int a0, bool a1, int a2) const
     {
         return NativeCall<void*, int, bool, int>(this, "UPrimalCharacterStatusComponent.SetLevelUpPoints(EPrimalCharacterStatusValue::Type,bool,int)", a0, a1, a2);
@@ -869,7 +869,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalCharacterStatusComponent.SetMutationPoints(EPrimalCharacterStatusValue::Type,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetMutationPoints(int a0, int a1) const
     {
         return NativeCall<void*, int, int>(this, "UPrimalCharacterStatusComponent.SetMutationPoints(EPrimalCharacterStatusValue::Type,int)", a0, a1);
@@ -909,7 +909,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.UpdateInventoryWeight(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateInventoryWeight(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalCharacterStatusComponent.UpdateInventoryWeight(APrimalCharacter*)", a0);
@@ -941,7 +941,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalCharacterStatusComponent.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocat
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=1344+grafo=32/32]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1344+grafo=16/16]]
     void ValidateGeneratedRepEnums(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalCharacterStatusComponent.ValidateGeneratedRepEnums(TArray<FRepRecord,TSizedDefaultAllocator<32>>&)", a0);
@@ -992,7 +992,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& DefaultHypothermicInsulationField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.DefaultHypothermicInsulation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +12, medido na build 25090264
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +12, medido na build 25535041
     //  (offset absoluto medido: 0xB78; confianca alta)
     float& DefaultMaxOxygenField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 12); }
@@ -1029,7 +1029,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     unsigned short& ExtraCharacterLevelField() const
     { return *GetNativePointerField<unsigned short*>(this, "UPrimalCharacterStatusComponent.ExtraCharacterLevel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +8, medido na build 25090264
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +8, medido na build 25535041
     //  (offset absoluto medido: 0xB74; confianca alta)
     float& ExtraFoodConsumptionMultiplierField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 8); }
@@ -1040,7 +1040,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& ExtraTamedHealthMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.ExtraTamedHealthMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +4, medido na build 25090264
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +4, medido na build 25535041
     //  (offset absoluto medido: 0xB70; confianca alta)
     float& ExtraWaterConsumptionMultiplierField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 4); }
@@ -1113,12 +1113,12 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& KnockedOutTorpidityRecoveryRateMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.KnockedOutTorpidityRecoveryRateMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +12, medido na build 25090264
+    //  ancorado em `CurrentStatusStates` +12, medido na build 25535041
     //  (offset absoluto medido: 0x9B0; confianca media)
     void*& LastDecreasedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +300, medido na build 25090264
+    //  ancorado em `CurrentStatusStates` +300, medido na build 25535041
     //  (offset absoluto medido: 0xAD0; confianca baixa)
     void*& LastDepletedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 300); }
@@ -1127,17 +1127,17 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& LastHypothermalCharacterInsulationValueField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.LastHypothermalCharacterInsulationValue"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +108, medido na build 25090264
+    //  ancorado em `CurrentStatusStates` +108, medido na build 25535041
     //  (offset absoluto medido: 0xA10; confianca media)
     void*& LastIncreasedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +204, medido na build 25090264
+    //  ancorado em `CurrentStatusStates` +204, medido na build 25535041
     //  (offset absoluto medido: 0xA70; confianca baixa)
     void*& LastMaxedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 204); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +20, medido na build 25090264
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +20, medido na build 25535041
     //  (offset absoluto medido: 0xB80; confianca alta)
     double& LastReplicatedCurrentStatusValuesTimeField() const
     { return BrzCampoAncorado<double>(this, "SwimmingStaminaRecoveryRateMultiplier", 20); }
@@ -1172,7 +1172,7 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     FieldArray<unsigned char> NumberOfMutationsAppliedTamedField() const
     { return { (void*)this, "UPrimalCharacterStatusComponent.NumberOfMutationsAppliedTamed" }; }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +32, medido na build 25090264
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +32, medido na build 25535041
     //  (offset absoluto medido: 0xB8C; confianca alta)
     float& OriginalMaxTorporField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 32); }
@@ -1292,6 +1292,94 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.WindedSpeedModifierSwimmingOrFlying"); }
     float& XPEarnedPerStaminaConsumedField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.XPEarnedPerStaminaConsumed"); }
+    BrzCampoPonteiro bAddExperienceAutomaticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bAddExperienceAutomatically")); }
+    BrzCampoPonteiro bAllowLevelUpsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bAllowLevelUps")); }
+    BrzCampoPonteiro bAllowSharingXPWithTribeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bAllowSharingXPWithTribe")); }
+    BrzCampoPonteiro bAlsoUseLevelUpAnimWhenSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bAlsoUseLevelUpAnimWhenSwimming")); }
+    BrzCampoPonteiro bApplyingStatusValueModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bApplyingStatusValueModifiers")); }
+    BrzCampoPonteiro bAutomaticallyUpdateTemperatureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bAutomaticallyUpdateTemperature")); }
+    BrzCampoPonteiro bCanGetHungryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bCanGetHungry")); }
+    BrzCampoPonteiro bCanSuffocateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bCanSuffocate")); }
+    BrzCampoPonteiro bCanSuffocateIfTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bCanSuffocateIfTamed")); }
+    BrzCampoPonteiro bCheatStatusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bCheatStatus")); }
+    BrzCampoPonteiro bConsumeFoodAutomaticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bConsumeFoodAutomatically")); }
+    BrzCampoPonteiro bConsumeWaterAutomaticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bConsumeWaterAutomatically")); }
+    BrzCampoPonteiro bDontScaleMeleeDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bDontScaleMeleeDamage")); }
+    BrzCampoPonteiro bDontUseSpeedMultipleAsSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bDontUseSpeedMultipleAsSpeed")); }
+    BrzCampoPonteiro bForceAllowStatusModifierSortingWhenTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bForceAllowStatusModifierSortingWhenTamed")); }
+    BrzCampoPonteiro bForceDefaultSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bForceDefaultSpeed")); }
+    BrzCampoPonteiro bForceGainOxygenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bForceGainOxygen")); }
+    BrzCampoPonteiro bForceRefreshWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bForceRefreshWeight")); }
+    BrzCampoPonteiro bFreezeStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bFreezeStatusValues")); }
+    BrzCampoPonteiro bHideFoodStatusFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bHideFoodStatusFromHUD")); }
+    BrzCampoPonteiro bHideStaminaStatusFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bHideStaminaStatusFromHUD")); }
+    BrzCampoPonteiro bHideXPStatusFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bHideXPStatusFromHUD")); }
+    BrzCampoPonteiro bIgnoreStatusSpeedModifierIfSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bIgnoreStatusSpeedModifierIfSwimming")); }
+    BrzCampoPonteiro bInfiniteFoodField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bInfiniteFood")); }
+    BrzCampoPonteiro bInfiniteStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bInfiniteStats")); }
+    BrzCampoPonteiro bInitializedBaseLevelMaxStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bInitializedBaseLevelMaxStatusValues")); }
+    BrzCampoPonteiro bNeverAllowXPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bNeverAllowXP")); }
+    BrzCampoPonteiro bNoStaminaRecoveryWhenStarvingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bNoStaminaRecoveryWhenStarving")); }
+    BrzCampoPonteiro bPreventJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bPreventJump")); }
+    BrzCampoPonteiro bPreventTamedStatReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bPreventTamedStatReplication")); }
+    BrzCampoPonteiro bReplicateGlobalStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bReplicateGlobalStatusValues")); }
+    BrzCampoPonteiro bRunningConsumesStaminaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bRunningConsumesStamina")); }
+    BrzCampoPonteiro bRunningUseDefaultSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bRunningUseDefaultSpeed")); }
+    BrzCampoPonteiro bServerFirstInitializedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bServerFirstInitialized")); }
+    BrzCampoPonteiro bStatusSpeedModifierOnlyFullOrNoneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bStatusSpeedModifierOnlyFullOrNone")); }
+    BrzCampoPonteiro bUseBPAdjustStatusValueModificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseBPAdjustStatusValueModification")); }
+    BrzCampoPonteiro bUseBPCanLevelUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseBPCanLevelUp")); }
+    BrzCampoPonteiro bUseBPGetOverrideMaxStatusValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseBPGetOverrideMaxStatusValue")); }
+    BrzCampoPonteiro bUseBPGetStatusNameStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseBPGetStatusNameString")); }
+    BrzCampoPonteiro bUseBPModifyMaxLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseBPModifyMaxLevel")); }
+    BrzCampoPonteiro bUseBPOverrideShouldSkipWildLevelUpValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseBPOverrideShouldSkipWildLevelUpValue")); }
+    BrzCampoPonteiro bUseStaminaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseStamina")); }
+    BrzCampoPonteiro bUseStatusSpeedModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bUseStatusSpeedModifiers")); }
+    BrzCampoPonteiro bWalkingConsumesStaminaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalCharacterStatusComponent.bWalkingConsumesStamina")); }
     BitFieldValue<bool, unsigned __int32> bCanSuffocate()
     { return { (void*)this, "bCanSuffocate" }; }
     BitFieldValue<bool, unsigned __int32> bCanSuffocateIfTamed()

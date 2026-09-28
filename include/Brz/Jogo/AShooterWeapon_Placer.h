@@ -36,7 +36,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAn
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=345+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void AnimNotifyCustomEvent(unsigned long long a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, unsigned long long, void*, void*, void*>(this, "AShooterWeapon_Placer.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNotify*)", a0, a1, a2, a3);
@@ -44,7 +44,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.AttachOtherMeshes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=23]]
+    // endereco: casamento de bytes com a build de referencia
     void AttachOtherMeshes() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.AttachOtherMeshes()");
@@ -52,7 +52,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Placer.BPPrefireAction()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPPrefireAction() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.BPPrefireAction()");
@@ -60,7 +60,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Placer.BPSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=61]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPSecondaryAction() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Placer.BPSecondaryAction()");
@@ -68,7 +68,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.CanFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=114]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanFire(bool a0) const
     {
         return NativeCall<bool, bool>(this, "AShooterWeapon_Placer.CanFire(bool)", a0);
@@ -76,7 +76,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.ConfirmStructurePlacement(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ConfirmStructurePlacement(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Placer.ConfirmStructurePlacement(bool)", a0);
@@ -84,7 +84,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.DetachOtherMeshes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void DetachOtherMeshes() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.DetachOtherMeshes()");
@@ -100,7 +100,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.FireWeapon()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void FireWeapon() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.FireWeapon()");
@@ -108,7 +108,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.GetPlacementOrigin(UE::Math::TVector<double>&,UE::Math::TRotator<double>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetPlacementOrigin(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AShooterWeapon_Placer.GetPlacementOrigin(UE::Math::TVector<double>&,UE::Math::TRotator<double>&)", a0, a1);
@@ -125,15 +125,15 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.PlaceStructure()
-    // endereco: cache_pdb_25090264
-    static void PlaceStructure()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    void PlaceStructure() const
     {
-        NativeCall<void>(nullptr, "AShooterWeapon_Placer.PlaceStructure()");
+        NativeCall<void>(this, "AShooterWeapon_Placer.PlaceStructure()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Placer.PlaceStructureWithSecondaryAction()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlaceStructureWithSecondaryAction() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.PlaceStructureWithSecondaryAction()");
@@ -141,7 +141,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.RefreshLeftArmVisibility()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RefreshLeftArmVisibility() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.RefreshLeftArmVisibility()");
@@ -149,7 +149,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Placer.ServerDetonateExplosives()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerDetonateExplosives() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.ServerDetonateExplosives()");
@@ -157,7 +157,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.ServerDetonateExplosives_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerDetonateExplosives_Implementation() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.ServerDetonateExplosives_Implementation()");
@@ -165,7 +165,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.SetItemVisibility(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetItemVisibility(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Placer.SetItemVisibility(bool)", a0);
@@ -174,7 +174,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.StartFire(bool)
     // classe: a funcao mora em AShooterWeapon, e AShooterWeapon_Placer herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon.StartFire(bool)", a0);
@@ -206,7 +206,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.UnHideLeftArm()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UnHideLeftArm() const
     {
         NativeCall<void>(this, "AShooterWeapon_Placer.UnHideLeftArm()");
@@ -214,7 +214,7 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.UpdateFirstPersonMeshes(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=80]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateFirstPersonMeshes(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Placer.UpdateFirstPersonMeshes(bool)", a0);
@@ -222,12 +222,14 @@ struct AShooterWeapon_Placer : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Placer.UseAmmo(int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=406+grafo=7/7]]
+    // endereco: casamento de bytes com a build de referencia
     void UseAmmo(int a0) const
     {
         NativeCall<void, int>(this, "AShooterWeapon_Placer.UseAmmo(int)", a0);
     }
 
+    BrzCampoPonteiro ChangeMaterialDiffrentBehaviourField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.ChangeMaterialDiffrentBehaviour")); }
     float& DetonateExplosivesMaxRadiusField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_Placer.DetonateExplosivesMaxRadius"); }
     BrzCampoPonteiro EquipItemAnimField() const
@@ -252,13 +254,35 @@ struct AShooterWeapon_Placer : public AShooterWeapon
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_Placer.TimeToHideLeftArmFPV"); }
     BrzCampoPonteiro UnableToPlaceAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.UnableToPlaceAnim")); }
+    BrzCampoPonteiro bCanDetonateExplosivesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bCanDetonateExplosives")); }
+    BrzCampoPonteiro bDontPlaceStructureOnFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bDontPlaceStructureOnFire")); }
     bool& bHiddenExplosiveField() const
     { return *GetNativePointerField<bool*>(this, "AShooterWeapon_Placer.bHiddenExplosive"); }
+    BrzCampoPonteiro bHideLeftArmFPVWhenNoAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bHideLeftArmFPVWhenNoAmmo")); }
+    BrzCampoPonteiro bModifyDetonatorMaterialField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bModifyDetonatorMaterial")); }
+    BrzCampoPonteiro bPlacingStructureConsumeItemAmmoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bPlacingStructureConsumeItemAmmo")); }
+    BrzCampoPonteiro bPlaySecondaryActionAnimField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bPlaySecondaryActionAnim")); }
+    BrzCampoPonteiro bSkipStartPlacingCheatCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bSkipStartPlacingCheatCheck")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bWaitingForPlacement` +1, medido na build 25090264
+    //  ancorado em `bWaitingForPlacement` +1, medido na build 25535041
     //  (offset absoluto medido: 0x119F; confianca alta)
     bool& bStructureCanBePlacedField() const
     { return BrzCampoAncorado<bool>(this, "bWaitingForPlacement", 1); }
+    BrzCampoPonteiro bUseAnimNotifyToPlaceStructureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bUseAnimNotifyToPlaceStructure")); }
+    BrzCampoPonteiro bUseBPPreFireActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bUseBPPreFireAction")); }
+    BrzCampoPonteiro bUseBPSecondaryActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bUseBPSecondaryAction")); }
+    BrzCampoPonteiro bWaitingForPlacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bWaitingForPlacement")); }
     BitFieldValue<bool, unsigned __int32> bCanDetonateExplosives()
     { return { (void*)this, "bCanDetonateExplosives" }; }
     BitFieldValue<bool, unsigned __int32> bHideLeftArmFPVWhenNoAmmo()

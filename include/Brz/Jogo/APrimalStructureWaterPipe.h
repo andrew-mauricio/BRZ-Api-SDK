@@ -35,7 +35,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.AddedLinkedStructure(APrimalStructure*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=292]]
+    // endereco: casamento de bytes com a build de referencia
     void AddedLinkedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureWaterPipe.AddedLinkedStructure(APrimalStructure*)", a0);
@@ -51,7 +51,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=32]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.BeginPlay()");
@@ -99,7 +99,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.Internal_CheckForNonPipeLink()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool Internal_CheckForNonPipeLink() const
     {
         return NativeCall<bool>(this, "APrimalStructureWaterPipe.Internal_CheckForNonPipeLink()");
@@ -115,7 +115,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureWaterPipe.OnRep_HasWater(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=78]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_HasWater(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureWaterPipe.OnRep_HasWater(bool)", a0);
@@ -131,7 +131,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.ParseGraphForWater(TArray<APrimalStructure*,TSizedDefaultAllocator<32>
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=69]]
+    // endereco: casamento de bytes com a build de referencia
     void ParseGraphForWater(void* a0, void* a1, void* a2) const
     {
         NativeCall<void, void*, void*, void*>(this, "APrimalStructureWaterPipe.ParseGraphForWater(TArray<APrimalStructure*,TSizedDefaultAllocator<32>>&,TArray<APrimalStructure*,TSizedDefaultAllocator<32>>&,APrimalStructureWaterPipe*)", a0, a1, a2);
@@ -139,7 +139,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.PlayDying(float,FDamageEvent&,APawn*,AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void PlayDying(float a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, float, void*, void*, void*>(this, "APrimalStructureWaterPipe.PlayDying(float,FDamageEvent&,APawn*,AActor*)", a0, a1, a2, a3);
@@ -148,7 +148,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.PostInitializeComponents()
     // classe: a funcao mora em APrimalStructure, e APrimalStructureWaterPipe herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=282+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APrimalStructure.PostInitializeComponents()");
@@ -156,7 +156,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.PreLinkedStructure()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=86]]
+    // endereco: casamento de bytes com a build de referencia
     void PreLinkedStructure() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.PreLinkedStructure()");
@@ -172,7 +172,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.RefreshLinkedToNonPipeState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshLinkedToNonPipeState() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.RefreshLinkedToNonPipeState()");
@@ -180,7 +180,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.RefreshWaterState()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=484+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void RefreshWaterState() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.RefreshWaterState()");
@@ -188,7 +188,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureWaterPipe.RemovedLinkedStructure(APrimalStructure*,APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=101]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RemovedLinkedStructure(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureWaterPipe.RemovedLinkedStructure(APrimalStructure*,APlayerController*)", a0, a1);
@@ -196,7 +196,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.SetHasWater(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void SetHasWater(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureWaterPipe.SetHasWater(bool)", a0);
@@ -242,6 +242,22 @@ struct APrimalStructureWaterPipe : public APrimalStructure
     { return *GetNativePointerField<UMaterialInterface**>(this, "APrimalStructureWaterPipe.NoWaterMaterial"); }
     int& WaterMaterialIndexField() const
     { return *GetNativePointerField<int*>(this, "APrimalStructureWaterPipe.WaterMaterialIndex"); }
+    BrzCampoPonteiro bAlwaysHasWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bAlwaysHasWater")); }
+    BrzCampoPonteiro bCanHideMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bCanHideMesh")); }
+    BrzCampoPonteiro bConnectedToNonPipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bConnectedToNonPipe")); }
+    BrzCampoPonteiro bHasWaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bHasWater")); }
+    BrzCampoPonteiro bIsMeshHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bIsMeshHidden")); }
+    BrzCampoPonteiro bIsWaterPipeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bIsWaterPipe")); }
+    BrzCampoPonteiro bUseBPOnRefreshPipeMaterialsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bUseBPOnRefreshPipeMaterials")); }
+    BrzCampoPonteiro bUseBPOnWaterStateChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureWaterPipe.bUseBPOnWaterStateChange")); }
     BitFieldValue<bool, unsigned __int32> bAlwaysHasWater()
     { return { (void*)this, "bAlwaysHasWater" }; }
     BitFieldValue<bool, unsigned __int32> bHasWater()

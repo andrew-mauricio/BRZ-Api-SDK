@@ -55,7 +55,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.AttachOtherMeshes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void AttachOtherMeshes() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.AttachOtherMeshes()");
@@ -63,7 +63,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterWeapon_Projectile.BPGetProjectileSpawnTransform(UE::Math::TVector<double>&,UE::Math::TVe
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPGetProjectileSpawnTransform(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterWeapon_Projectile.BPGetProjectileSpawnTransform(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
@@ -119,7 +119,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.CustomEventUnHideProjectile()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void CustomEventUnHideProjectile() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.CustomEventUnHideProjectile()");
@@ -175,7 +175,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Projectile.GetProjectileGravityModifier()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=577+grafo=12/12]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=577+grafo=9/9]]
     float GetProjectileGravityModifier() const
     {
         return NativeCall<float>(this, "AShooterWeapon_Projectile.GetProjectileGravityModifier()");
@@ -191,7 +191,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Projectile.GetProjectileSpeedModifier()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=577+grafo=12/12]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=577+grafo=9/9]]
     float GetProjectileSpeedModifier() const
     {
         return NativeCall<float>(this, "AShooterWeapon_Projectile.GetProjectileSpeedModifier()");
@@ -215,7 +215,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Projectile.Listener_LockOn_Stop()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void Listener_LockOn_Stop() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.Listener_LockOn_Stop()");
@@ -240,7 +240,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.OnHideProjectile()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnHideProjectile() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.OnHideProjectile()");
@@ -248,7 +248,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.PostAttachOtherMeshes()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostAttachOtherMeshes() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.PostAttachOtherMeshes()");
@@ -256,7 +256,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "AShooterWeapon_Projectile.PostInitializeComponents()");
@@ -296,7 +296,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.SetLockedTarget_Implementation(AActor*,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     void SetLockedTarget_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterWeapon_Projectile.SetLockedTarget_Implementation(AActor*,bool)", a0, a1);
@@ -362,10 +362,24 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_Projectile.ServerMaxProjectileAngleError"); }
     float& ServerMaxProjectileOriginErrorField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_Projectile.ServerMaxProjectileOriginError"); }
+    BrzCampoPonteiro bCallBPCustomSpawningEventOnProjectileSpawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bCallBPCustomSpawningEventOnProjectileSpawn")); }
+    BrzCampoPonteiro bHasLockedTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bHasLockedTarget")); }
+    BrzCampoPonteiro bServerFireProjectileForceUpdateAimActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bServerFireProjectileForceUpdateAimActors")); }
+    BrzCampoPonteiro bSpawnProjectileOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bSpawnProjectileOnClient")); }
+    BrzCampoPonteiro bUseAmmoOnFireProjectileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bUseAmmoOnFireProjectile")); }
     bool& bUseBPSelectProjectileToFireField() const
     { return *GetNativePointerField<bool*>(this, "AShooterWeapon_Projectile.bUseBPSelectProjectileToFire"); }
+    BrzCampoPonteiro bUseHideProjectileAnimEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bUseHideProjectileAnimEvents")); }
+    BrzCampoPonteiro bUseLockOnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bUseLockOn")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileAttachPoint3P` +8, medido na build 25090264
+    //  ancorado em `ProjectileAttachPoint3P` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1158; confianca alta)
     int& trashFramesField() const
     { return BrzCampoAncorado<int>(this, "ProjectileAttachPoint3P", 8); }

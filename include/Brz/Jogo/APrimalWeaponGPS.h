@@ -40,7 +40,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNot
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=402+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void AnimNotifyCustomEvent(unsigned long long a0, void* a1, void* a2, void* a3) const
     {
         NativeCall<void, unsigned long long, void*, void*, void*>(this, "APrimalWeaponGPS.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNotify*)", a0, a1, a2, a3);
@@ -48,7 +48,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.AttachOtherMeshes()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=728+grafo=14/14]]
+    // endereco: casamento de bytes com a build de referencia
     void AttachOtherMeshes() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.AttachOtherMeshes()");
@@ -56,7 +56,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=448+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.BeginPlay()");
@@ -64,7 +64,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.DetachOtherMeshes()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=102]]
+    // endereco: casamento de bytes com a build de referencia
     void DetachOtherMeshes() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.DetachOtherMeshes()");
@@ -80,7 +80,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.HideGPS1P()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=67]]
+    // endereco: casamento de bytes com a build de referencia
     void HideGPS1P() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.HideGPS1P()");
@@ -88,7 +88,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWeaponGPS.IsShowingGPS()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsShowingGPS() const
     {
         return NativeCall<void*>(this, "APrimalWeaponGPS.IsShowingGPS()");
@@ -96,7 +96,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWeaponGPS.IsShowingMap()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsShowingMap() const
     {
         return NativeCall<void*>(this, "APrimalWeaponGPS.IsShowingMap()");
@@ -104,7 +104,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.OnEquip()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=28]]
+    // endereco: casamento de bytes com a build de referencia
     void OnEquip() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.OnEquip()");
@@ -136,7 +136,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWeaponGPS.RefreshUseCompass()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RefreshUseCompass() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.RefreshUseCompass()");
@@ -144,7 +144,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.RemoveMarkersFromView()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=42]]
+    // endereco: casamento de bytes com a build de referencia
     void RemoveMarkersFromView() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.RemoveMarkersFromView()");
@@ -152,7 +152,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWeaponGPS.SelectMeleeAttackAnim(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SelectMeleeAttackAnim(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalWeaponGPS.SelectMeleeAttackAnim(int)", a0);
@@ -168,7 +168,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.ServerSetUseCompassInsteadOfGPS_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetUseCompassInsteadOfGPS_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponGPS.ServerSetUseCompassInsteadOfGPS_Implementation(bool)", a0);
@@ -184,7 +184,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.SetAndShowCompass()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAndShowCompass() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.SetAndShowCompass()");
@@ -192,7 +192,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.SetAndShowGPS()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAndShowGPS() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.SetAndShowGPS()");
@@ -200,7 +200,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.SetGPSMeshHidden()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetGPSMeshHidden() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.SetGPSMeshHidden()");
@@ -208,7 +208,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.SetMapMeshHidden()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetMapMeshHidden() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.SetMapMeshHidden()");
@@ -216,7 +216,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.SetUseCompass(bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=330+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void SetUseCompass(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponGPS.SetUseCompass(bool)", a0);
@@ -240,7 +240,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.ShowMapOnly()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ShowMapOnly() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.ShowMapOnly()");
@@ -248,7 +248,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.ShowNone()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void ShowNone() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.ShowNone()");
@@ -257,7 +257,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.StartFire(bool)
     // classe: a funcao mora em AShooterWeapon, e APrimalWeaponGPS herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon.StartFire(bool)", a0);
@@ -275,7 +275,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.StartSecondaryAction()
     // classe: a funcao mora em AShooterWeapon_Melee, e APrimalWeaponGPS herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=136]]
+    // endereco: casamento de bytes com a build de referencia
     void StartSecondaryAction() const
     {
         NativeCall<void>(this, "AShooterWeapon_Melee.StartSecondaryAction()");
@@ -283,7 +283,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.StopFire()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopFire() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.StopFire()");
@@ -291,7 +291,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.StopSecondaryAction()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopSecondaryAction() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.StopSecondaryAction()");
@@ -331,7 +331,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.UpdateFirstPersonMeshes(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=433]]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateFirstPersonMeshes(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponGPS.UpdateFirstPersonMeshes(bool)", a0);
@@ -339,7 +339,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGPS.UpdateMapTextureParameters()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void UpdateMapTextureParameters() const
     {
         NativeCall<void>(this, "APrimalWeaponGPS.UpdateMapTextureParameters()");
@@ -392,7 +392,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     UStaticMeshComponent*& ItemBalloonMarkerComponentField() const
     { return *GetNativePointerField<UStaticMeshComponent**>(this, "APrimalWeaponGPS.ItemBalloonMarkerComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerLocationMArkerComponent` +8, medido na build 25090264
+    //  ancorado em `PlayerLocationMArkerComponent` +8, medido na build 25535041
     //  (offset absoluto medido: 0x11E0; confianca alta)
     void*& LastPlayerMarkerLocationField() const
     { return BrzCampoAncorado<void*>(this, "PlayerLocationMArkerComponent", 8); }
@@ -431,7 +431,7 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     FName& MapAttachPoint3PField() const
     { return *GetNativePointerField<FName*>(this, "APrimalWeaponGPS.MapAttachPoint3P"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MarkerComponents` +16, medido na build 25090264
+    //  ancorado em `MarkerComponents` +16, medido na build 25535041
     //  (offset absoluto medido: 0x11C8; confianca alta)
     TArray<void*>& MapMarkersField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MarkerComponents", 16); }
@@ -509,6 +509,18 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.ZoomOutGPSAnim")); }
     BrzCampoPonteiro ZoomOutMapAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.ZoomOutMapAnim")); }
+    BrzCampoPonteiro bShowGPSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.bShowGPS")); }
+    BrzCampoPonteiro bShowMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.bShowMap")); }
+    BrzCampoPonteiro bUseCompassInsteadOfGPSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.bUseCompassInsteadOfGPS")); }
+    BrzCampoPonteiro bWasFirstPersonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.bWasFirstPerson")); }
+    BrzCampoPonteiro bZoomInGPSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.bZoomInGPS")); }
+    BrzCampoPonteiro bZoomInMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGPS.bZoomInMap")); }
     BitFieldValue<bool, unsigned __int32> bShowMap()
     { return { (void*)this, "bShowMap" }; }
     BitFieldValue<bool, unsigned __int32> bShowGPS()

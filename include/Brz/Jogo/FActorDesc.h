@@ -55,6 +55,10 @@ struct FActorDesc
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDesc.NativeClass")); }
     BrzCampoPonteiro RuntimeGridField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDesc.RuntimeGrid")); }
+    BrzCampoPonteiro bActorIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDesc.bActorIsEditorOnly")); }
+    BrzCampoPonteiro bIsSpatiallyLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorDesc.bIsSpatiallyLoaded")); }
     BitFieldValue<bool, unsigned __int32> bActorIsEditorOnly()
     { return { (void*)this, "bActorIsEditorOnly" }; }
     BitFieldValue<bool, unsigned __int32> bIsSpatiallyLoaded()

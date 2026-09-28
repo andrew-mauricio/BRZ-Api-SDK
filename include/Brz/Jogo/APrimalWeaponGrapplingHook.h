@@ -36,10 +36,11 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // classe: a funcao mora em AShooterWeapon, e APrimalWeaponGrapplingHook herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
-        NativeCall<void>(this, "APrimalWeaponGrapplingHook.BeginPlay()");
+        NativeCall<void>(this, "AShooterWeapon.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -52,7 +53,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.CanReload()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanReload() const
     {
         return NativeCall<bool>(this, "APrimalWeaponGrapplingHook.CanReload()");
@@ -60,7 +61,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.CanTarget()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=87]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanTarget() const
     {
         return NativeCall<bool>(this, "APrimalWeaponGrapplingHook.CanTarget()");
@@ -68,7 +69,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=72]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APrimalWeaponGrapplingHook.Destroyed()");
@@ -92,7 +93,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.OnEquip()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=144]]
+    // endereco: casamento de bytes com a build de referencia
     void OnEquip() const
     {
         NativeCall<void>(this, "APrimalWeaponGrapplingHook.OnEquip()");
@@ -100,7 +101,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.PlayReloadAnimation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=115]]
+    // endereco: casamento de bytes com a build de referencia
     float PlayReloadAnimation() const
     {
         return NativeCall<float>(this, "APrimalWeaponGrapplingHook.PlayReloadAnimation()");
@@ -108,7 +109,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.StartFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=275]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalWeaponGrapplingHook.StartFire(bool)", a0);
@@ -116,7 +117,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.StartSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=277+grafo=4/4]]
+    // endereco: casamento de bytes com a build de referencia
     void StartSecondaryAction() const
     {
         NativeCall<void>(this, "APrimalWeaponGrapplingHook.StartSecondaryAction()");
@@ -124,7 +125,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.StartUnequip_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=73]]
+    // endereco: casamento de bytes com a build de referencia
     void StartUnequip_Implementation() const
     {
         NativeCall<void>(this, "APrimalWeaponGrapplingHook.StartUnequip_Implementation()");
@@ -132,7 +133,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.StopFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=132]]
+    // endereco: casamento de bytes com a build de referencia
     void StopFire() const
     {
         NativeCall<void>(this, "APrimalWeaponGrapplingHook.StopFire()");
@@ -140,7 +141,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.StopSecondaryAction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=197]]
+    // endereco: casamento de bytes com a build de referencia
     void StopSecondaryAction() const
     {
         NativeCall<void>(this, "APrimalWeaponGrapplingHook.StopSecondaryAction()");
@@ -148,7 +149,7 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=196]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalWeaponGrapplingHook.Tick(float)", a0);
@@ -164,8 +165,12 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
     { return *GetNativePointerField<USoundCue**>(this, "APrimalWeaponGrapplingHook.ReelInSoundCue"); }
     USoundCue*& ReelOutSoundCueField() const
     { return *GetNativePointerField<USoundCue**>(this, "APrimalWeaponGrapplingHook.ReelOutSoundCue"); }
+    BrzCampoPonteiro bDetachGrapHookOnUnequipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrapplingHook.bDetachGrapHookOnUnequip")); }
     bool& bPreventReelingField() const
     { return *GetNativePointerField<bool*>(this, "APrimalWeaponGrapplingHook.bPreventReeling"); }
+    BrzCampoPonteiro bPullingRopeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrapplingHook.bPullingRope")); }
     BitFieldValue<bool, unsigned __int32> bDetachGrapHookOnUnequip()
     { return { (void*)this, "bDetachGrapHookOnUnequip" }; }
     BitFieldValue<bool, unsigned __int32> bPreventReeling()

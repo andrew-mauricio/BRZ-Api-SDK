@@ -32,6 +32,9 @@ struct FWorldConditionItem
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro CachedResultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionItem.CachedResult")); }
     BrzCampoPonteiro NextExpressionDepthField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldConditionItem.NextExpressionDepth")); }
     BrzCampoPonteiro OperatorField() const

@@ -67,7 +67,7 @@ struct UPrimalWordFilter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalWordFilter.HasBadParseCharacter(FString&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasBadParseCharacter(const FString& a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "UPrimalWordFilter.HasBadParseCharacter(FString&,bool)", const_cast<FString*>(&a0), a1);
@@ -115,6 +115,10 @@ struct UPrimalWordFilter
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWordFilter.CensoredWords")); }
     BrzCampoPonteiro NativeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWordFilter.NativeClass")); }
+    BrzCampoPonteiro dontCheckLetterRepeatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWordFilter.dontCheckLetterRepeats")); }
+    BrzCampoPonteiro wordsNeedSpacesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWordFilter.wordsNeedSpaces")); }
     BitFieldValue<bool, unsigned __int32> dontCheckLetterRepeats()
     { return { (void*)this, "dontCheckLetterRepeats" }; }
     BitFieldValue<bool, unsigned __int32> wordsNeedSpaces()

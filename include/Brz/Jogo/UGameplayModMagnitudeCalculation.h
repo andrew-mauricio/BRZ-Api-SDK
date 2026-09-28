@@ -43,6 +43,8 @@ struct UGameplayModMagnitudeCalculation
 
     BrzCampoPonteiro RelevantAttributesToCaptureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayModMagnitudeCalculation.RelevantAttributesToCapture")); }
+    BrzCampoPonteiro bAllowNonNetAuthorityDependencyRegistrationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayModMagnitudeCalculation.bAllowNonNetAuthorityDependencyRegistration")); }
     BitFieldValue<bool, unsigned __int32> bAllowNonNetAuthorityDependencyRegistration()
     { return { (void*)this, "bAllowNonNetAuthorityDependencyRegistration" }; }
 

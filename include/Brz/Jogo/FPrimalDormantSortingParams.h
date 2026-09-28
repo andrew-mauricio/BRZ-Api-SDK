@@ -32,6 +32,19 @@ struct FPrimalDormantSortingParams
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro LastConditionalGatherFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalDormantSortingParams.LastConditionalGatherFrame")); }
+    BrzCampoPonteiro MSBWarmupTicksRemainingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalDormantSortingParams.MSBWarmupTicksRemaining")); }
+    BrzCampoPonteiro ResortTicksRemainingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalDormantSortingParams.ResortTicksRemaining")); }
+    BrzCampoPonteiro ScratchDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalDormantSortingParams.ScratchData")); }
+    BrzCampoPonteiro SortingPassToExecuteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalDormantSortingParams.SortingPassToExecute")); }
+    BrzCampoPonteiro bNeedsMSBWarmupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FPrimalDormantSortingParams.bNeedsMSBWarmup")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FPRIMALDORMANTSORTINGPARAMS_H

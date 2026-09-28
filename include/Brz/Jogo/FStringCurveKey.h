@@ -35,8 +35,8 @@ struct FStringCurveKey
 
     float& TimeField() const
     { return *GetNativePointerField<float*>(this, "FStringCurveKey.Time"); }
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringCurveKey.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGCURVEKEY_H

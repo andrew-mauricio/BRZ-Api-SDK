@@ -100,7 +100,7 @@ struct AGameMode : public AGameModeBase
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.GetNumPlayers()
     // classe: a funcao mora em AGameModeBase, e AGameMode herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=123]]
+    // endereco: casamento de bytes com a build de referencia
     int GetNumPlayers() const
     {
         return NativeCall<int>(this, "AGameModeBase.GetNumPlayers()");
@@ -109,7 +109,7 @@ struct AGameMode : public AGameModeBase
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.GetNumSpectators()
     // classe: a funcao mora em AGameModeBase, e AGameMode herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=123]]
+    // endereco: casamento de bytes com a build de referencia
     int GetNumSpectators() const
     {
         return NativeCall<int>(this, "AGameModeBase.GetNumSpectators()");
@@ -117,7 +117,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.HandleDisconnect(UWorld*,UNetDriver*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void HandleDisconnect(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AGameMode.HandleDisconnect(UWorld*,UNetDriver*)", a0, a1);
@@ -141,7 +141,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.HandleMatchIsWaitingToStart()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=74]]
+    // endereco: casamento de bytes com a build de referencia
     void HandleMatchIsWaitingToStart() const
     {
         NativeCall<void>(this, "AGameMode.HandleMatchIsWaitingToStart()");
@@ -157,7 +157,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.HandleStartingNewPlayer_Implementation(APlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=142]]
+    // endereco: casamento de bytes com a build de referencia
     void HandleStartingNewPlayer_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AGameMode.HandleStartingNewPlayer_Implementation(APlayerController*)", a0);
@@ -185,7 +185,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.IsHandlingReplays()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=54]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsHandlingReplays() const
     {
         return NativeCall<bool>(this, "AGameMode.IsHandlingReplays()");
@@ -225,7 +225,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.PostSeamlessTravel()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=6]]
+    // endereco: casamento de bytes com a build de referencia
     void PostSeamlessTravel() const
     {
         NativeCall<void>(this, "AGameMode.PostSeamlessTravel()");
@@ -233,7 +233,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.ReadyToStartMatch()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool ReadyToStartMatch() const
     {
         return NativeCall<bool>(this, "AGameMode.ReadyToStartMatch()");
@@ -241,7 +241,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.ReadyToStartMatch_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ReadyToStartMatch_Implementation() const
     {
         return NativeCall<bool>(this, "AGameMode.ReadyToStartMatch_Implementation()");
@@ -249,7 +249,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.RestartGame()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void RestartGame() const
     {
         NativeCall<void>(this, "AGameMode.RestartGame()");
@@ -257,7 +257,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.Say(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Say(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AGameMode.Say(FString&)", const_cast<FString*>(&a0));
@@ -269,7 +269,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.SetMatchState(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void SetMatchState(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AGameMode.SetMatchState(FName)", a0);
@@ -285,7 +285,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.StartMatch()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=73]]
+    // endereco: casamento de bytes com a build de referencia
     void StartMatch() const
     {
         NativeCall<void>(this, "AGameMode.StartMatch()");
@@ -293,7 +293,7 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.StartPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=93]]
+    // endereco: casamento de bytes com a build de referencia
     void StartPlay() const
     {
         NativeCall<void>(this, "AGameMode.StartPlay()");
@@ -301,10 +301,11 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=80]]
+    // classe: a funcao mora em AActor, e AGameMode herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
-        NativeCall<void, float>(this, "AGameMode.Tick(float)", a0);
+        NativeCall<void, float>(this, "AActor.Tick(float)", a0);
     }
 
     BrzCampoPonteiro EngineMessageClassField() const
@@ -327,6 +328,10 @@ struct AGameMode : public AGameModeBase
     { return *GetNativePointerField<int*>(this, "AGameMode.NumSpectators"); }
     int& NumTravellingPlayersField() const
     { return *GetNativePointerField<int*>(this, "AGameMode.NumTravellingPlayers"); }
+    BrzCampoPonteiro bDelayedStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameMode.bDelayedStart")); }
+    BrzCampoPonteiro bHandleDedicatedServerReplaysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameMode.bHandleDedicatedServerReplays")); }
     BitFieldValue<bool, unsigned __int32> bDelayedStart()
     { return { (void*)this, "bDelayedStart" }; }
     BitFieldValue<bool, unsigned __int32> bHandleDedicatedServerReplays()

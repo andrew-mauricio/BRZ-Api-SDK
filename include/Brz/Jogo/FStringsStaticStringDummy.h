@@ -32,6 +32,11 @@ struct FStringsStaticStringDummy
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro DisplayAnsiField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringsStaticStringDummy.DisplayAnsi")); }
+    BrzCampoPonteiro DisplayWideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringsStaticStringDummy.DisplayWide")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGSSTATICSTRINGDUMMY_H

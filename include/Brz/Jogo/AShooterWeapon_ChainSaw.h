@@ -36,7 +36,7 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_ChainSaw.ClientSimulateChangeFireAnim()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSimulateChangeFireAnim() const
     {
         NativeCall<void>(this, "AShooterWeapon_ChainSaw.ClientSimulateChangeFireAnim()");
@@ -68,7 +68,7 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_ChainSaw.PlayFireAnimation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=199]]
+    // endereco: casamento de bytes com a build de referencia
     void PlayFireAnimation() const
     {
         NativeCall<void>(this, "AShooterWeapon_ChainSaw.PlayFireAnimation()");
@@ -84,7 +84,7 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_ChainSaw.ServerHit()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerHit() const
     {
         NativeCall<void>(this, "AShooterWeapon_ChainSaw.ServerHit()");
@@ -100,7 +100,7 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_ChainSaw.SetWeaponState(EWeaponState::Type)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=101]]
+    // endereco: casamento de bytes com a build de referencia
     void SetWeaponState(int a0) const
     {
         NativeCall<void, int>(this, "AShooterWeapon_ChainSaw.SetWeaponState(EWeaponState::Type)", a0);
@@ -116,16 +116,15 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_ChainSaw.SimulateWeaponFire()
-    // classe: a funcao mora em AShooterWeapon, e AShooterWeapon_ChainSaw herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void SimulateWeaponFire() const
     {
-        NativeCall<void>(this, "AShooterWeapon.SimulateWeaponFire()");
+        NativeCall<void>(this, "AShooterWeapon_ChainSaw.SimulateWeaponFire()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_ChainSaw.StopFireAnim()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=131]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopFireAnim() const
     {
         NativeCall<void>(this, "AShooterWeapon_ChainSaw.StopFireAnim()");
@@ -133,7 +132,7 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_ChainSaw.StopOwnerEffects()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=107]]
+    // endereco: casamento de bytes com a build de referencia
     void StopOwnerEffects() const
     {
         NativeCall<void>(this, "AShooterWeapon_ChainSaw.StopOwnerEffects()");
@@ -141,7 +140,7 @@ struct AShooterWeapon_ChainSaw : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_ChainSaw.StopSimulatingWeaponFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=181]]
+    // endereco: casamento de bytes com a build de referencia
     void StopSimulatingWeaponFire() const
     {
         NativeCall<void>(this, "AShooterWeapon_ChainSaw.StopSimulatingWeaponFire()");

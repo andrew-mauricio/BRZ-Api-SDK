@@ -99,6 +99,12 @@ struct UNetDriver : public UObject
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetDriver.World")); }
     BrzCampoPonteiro WorldPackageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetDriver.WorldPackage")); }
+    BrzCampoPonteiro bClampListenServerTickRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetDriver.bClampListenServerTickRate")); }
+    BrzCampoPonteiro bNeverApplyNetworkEmulationSettingsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetDriver.bNeverApplyNetworkEmulationSettings")); }
+    BrzCampoPonteiro bNoTimeoutsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetDriver.bNoTimeouts")); }
     BitFieldValue<bool, unsigned __int32> bClampListenServerTickRate()
     { return { (void*)this, "bClampListenServerTickRate" }; }
     BitFieldValue<bool, unsigned __int32> bNeverApplyNetworkEmulationSettings()

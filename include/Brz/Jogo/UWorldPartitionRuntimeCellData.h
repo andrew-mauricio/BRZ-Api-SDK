@@ -43,7 +43,7 @@ struct UWorldPartitionRuntimeCellData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCellData.GetCellBounds()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCellBounds() const
     {
         return NativeCall<void*>(this, "UWorldPartitionRuntimeCellData.GetCellBounds()");
@@ -59,7 +59,7 @@ struct UWorldPartitionRuntimeCellData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCellData.ResetStreamingSourceInfo(FWorldPartitionStreamingContext&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ResetStreamingSourceInfo(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorldPartitionRuntimeCellData.ResetStreamingSourceInfo(FWorldPartitionStreamingContext&)", a0);
@@ -67,7 +67,7 @@ struct UWorldPartitionRuntimeCellData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeCellData.SortCompare(UWorldPartitionRuntimeCellData*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SortCompare(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorldPartitionRuntimeCellData.SortCompare(UWorldPartitionRuntimeCellData*)", a0);

@@ -129,8 +129,8 @@ struct UWorldPartitionLevelStreamingPolicy
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionLevelStreamingPolicy.SubObjectsToExternalStreamingObjectsRemapping")); }
     BrzCampoPonteiro TargetStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionLevelStreamingPolicy.TargetState")); }
-    BitFieldValue<bool, unsigned __int32> bShouldMergeStreamingSourceInfo()
-    { return { (void*)this, "bShouldMergeStreamingSourceInfo" }; }
+    BrzCampoPonteiro bShouldMergeStreamingSourceInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionLevelStreamingPolicy.bShouldMergeStreamingSourceInfo")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UWORLDPARTITIONLEVELSTREAMINGPOLICY_H

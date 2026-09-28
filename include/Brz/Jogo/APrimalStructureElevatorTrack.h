@@ -59,7 +59,7 @@ struct APrimalStructureElevatorTrack : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorTrack.CanBeActivated()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=90]]
+    // endereco: casamento de bytes com a build de referencia
     bool CanBeActivated() const
     {
         return NativeCall<bool>(this, "APrimalStructureElevatorTrack.CanBeActivated()");
@@ -75,7 +75,7 @@ struct APrimalStructureElevatorTrack : public APrimalStructureItemContainer
 
     // dump_sobre_sdk_287a0
     //   APrimalStructureElevatorTrack.GetElevatorPlatformEx(TArray<APrimalStructureElevatorTrack*,TSized
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=428+chamadores=7]]
+    // endereco: casamento de bytes com a build de referencia
     void** GetElevatorPlatformEx(void* a0) const
     {
         return NativeCall<void**, void*>(this, "APrimalStructureElevatorTrack.GetElevatorPlatformEx(TArray<APrimalStructureElevatorTrack*,TSizedDefaultAllocator<32>>)", a0);
@@ -115,7 +115,7 @@ struct APrimalStructureElevatorTrack : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorTrack.IsPoweredEx(TArray<APrimalStructureElevatorTrack*,TSizedDefaultAll
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     char IsPoweredEx(void* a0) const
     {
         return NativeCall<char, void*>(this, "APrimalStructureElevatorTrack.IsPoweredEx(TArray<APrimalStructureElevatorTrack*,TSizedDefaultAllocator<32>>)", a0);
@@ -147,7 +147,7 @@ struct APrimalStructureElevatorTrack : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorTrack.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=30]]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalStructureElevatorTrack.Tick(float)", a0);
@@ -167,6 +167,12 @@ struct APrimalStructureElevatorTrack : public APrimalStructureItemContainer
     { return *GetNativePointerField<float*>(this, "APrimalStructureElevatorTrack.TrackBottomPoint"); }
     float& TrackTopPointField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructureElevatorTrack.TrackTopPoint"); }
+    BrzCampoPonteiro bAddElevatorMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorTrack.bAddElevatorMultiUseEntries")); }
+    BrzCampoPonteiro bHasBaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorTrack.bHasBase")); }
+    BrzCampoPonteiro bRequiresPowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureElevatorTrack.bRequiresPower")); }
     BitFieldValue<bool, unsigned __int32> bAddElevatorMultiUseEntries()
     { return { (void*)this, "bAddElevatorMultiUseEntries" }; }
     BitFieldValue<bool, unsigned __int32> bRequiresPower()

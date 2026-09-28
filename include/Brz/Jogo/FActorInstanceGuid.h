@@ -67,7 +67,7 @@ struct FActorInstanceGuid
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorInstanceGuid.ReleaseLevelInstanceGuid(ULevel*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ReleaseLevelInstanceGuid(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FActorInstanceGuid.ReleaseLevelInstanceGuid(ULevel*)", a0);
@@ -91,6 +91,8 @@ struct FActorInstanceGuid
 
     BrzCampoPonteiro ActorGuidField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorInstanceGuid.ActorGuid")); }
+    BrzCampoPonteiro ActorInstanceGuidField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorInstanceGuid.ActorInstanceGuid")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORINSTANCEGUID_H

@@ -63,10 +63,10 @@ struct UPrimalAIStateDinoSpineyLizardTailRangeState
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.ChildStates")); }
     float& ClampAngleField() const
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.ClampAngle"); }
-    BitFieldValue<bool, unsigned __int32> IsInAnimationState()
-    { return { (void*)this, "IsInAnimationState" }; }
-    BitFieldValue<bool, unsigned __int32> IsInAttackState()
-    { return { (void*)this, "IsInAttackState" }; }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.IsInAttackState")); }
     BrzCampoPonteiro ParentStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.ParentState")); }
     TObjectPtr<APawn>& PawnField() const
@@ -77,34 +77,34 @@ struct UPrimalAIStateDinoSpineyLizardTailRangeState
     { return *GetNativePointerField<float*>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.SpreadOffset"); }
     BrzCampoPonteiro WorldGeometryTargetLocOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.WorldGeometryTargetLocOffset")); }
-    BitFieldValue<bool, unsigned __int32> bBPCanUseState()
-    { return { (void*)this, "bBPCanUseState" }; }
-    BitFieldValue<bool, unsigned __int32> bGetTargetDirection()
-    { return { (void*)this, "bGetTargetDirection" }; }
-    BitFieldValue<bool, unsigned __int32> bLeadTarget()
-    { return { (void*)this, "bLeadTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleProjDamageByDinoDamage()
-    { return { (void*)this, "bScaleProjDamageByDinoDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldResetInLosingTarget()
-    { return { (void*)this, "bShouldResetInLosingTarget" }; }
-    BitFieldValue<bool, unsigned __int32> bUseAimSocket()
-    { return { (void*)this, "bUseAimSocket" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanAttack()
-    { return { (void*)this, "bUseBPCanAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanInterrupt()
-    { return { (void*)this, "bUseBPCanInterrupt" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideAttackWeight()
-    { return { (void*)this, "bUseBPOverrideAttackWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRangedAttack()
-    { return { (void*)this, "bUseBPRangedAttack" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPRangedAttackOnBegin()
-    { return { (void*)this, "bUseBPRangedAttackOnBegin" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipIntervalCheck()
-    { return { (void*)this, "bUseBPSkipIntervalCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPSkipRangeCheck()
-    { return { (void*)this, "bUseBPSkipRangeCheck" }; }
-    BitFieldValue<bool, unsigned __int32> bUseRangedSockets()
-    { return { (void*)this, "bUseRangedSockets" }; }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bBPCanUseState")); }
+    BrzCampoPonteiro bGetTargetDirectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bGetTargetDirection")); }
+    BrzCampoPonteiro bLeadTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bLeadTarget")); }
+    BrzCampoPonteiro bScaleProjDamageByDinoDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bScaleProjDamageByDinoDamage")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseAimSocketField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseAimSocket")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPRangedAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPRangedAttack")); }
+    BrzCampoPonteiro bUseBPRangedAttackOnBeginField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPRangedAttackOnBegin")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseBPSkipRangeCheck")); }
+    BrzCampoPonteiro bUseRangedSocketsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpineyLizardTailRangeState.bUseRangedSockets")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALAISTATEDINOSPINEYLIZARDTAILRANGESTATE_H

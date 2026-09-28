@@ -61,8 +61,8 @@ struct UCheatFunctionInfoEntryButton
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.BackgroundColor")); }
     unsigned char& ClickMethodField() const
     { return *GetNativePointerField<unsigned char*>(this, "UCheatFunctionInfoEntryButton.ClickMethod"); }
-    BitFieldValue<bool, unsigned __int32> ClipChildren()
-    { return { (void*)this, "ClipChildren" }; }
+    BrzCampoPonteiro ClipChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.ClipChildren")); }
     BrzCampoPonteiro ClippingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.Clipping")); }
     BrzCampoPonteiro ColorAndOpacityField() const
@@ -111,12 +111,12 @@ struct UCheatFunctionInfoEntryButton
     { return *GetNativePointerField<FName*>(this, "UCheatFunctionInfoEntryButton.FunctionName"); }
     float& GamepadSelectClosestDistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UCheatFunctionInfoEntryButton.GamepadSelectClosestDistanceMultiplier"); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
-    BitFieldValue<bool, unsigned __int32> IsFocusable()
-    { return { (void*)this, "IsFocusable" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.HandleVisibilityWithInput")); }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.Highlightable")); }
+    BrzCampoPonteiro IsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.IsFocusable")); }
     BrzCampoPonteiro ItemIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.ItemIcon")); }
     BrzCampoPonteiro MyDataListEntryWidgetField() const
@@ -191,10 +191,10 @@ struct UCheatFunctionInfoEntryButton
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.ToolTipWidgetDelegate")); }
     unsigned char& TouchMethodField() const
     { return *GetNativePointerField<unsigned char*>(this, "UCheatFunctionInfoEntryButton.TouchMethod"); }
-    BitFieldValue<bool, unsigned __int32> UseScaledRenderClipForHUDChildren()
-    { return { (void*)this, "UseScaledRenderClipForHUDChildren" }; }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro UseScaledRenderClipForHUDChildrenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.UseScaledRenderClipForHUDChildren")); }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
@@ -205,90 +205,94 @@ struct UCheatFunctionInfoEntryButton
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.WidgetStyle")); }
     BrzCampoPonteiro WrappedTextSpacingAdjustField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.WrappedTextSpacingAdjust")); }
-    BitFieldValue<bool, unsigned __int32> bAllowClickingWhenNoEntry()
-    { return { (void*)this, "bAllowClickingWhenNoEntry" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowExtraIcon()
-    { return { (void*)this, "bAllowExtraIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bCanNavigateToDifferentPanel()
-    { return { (void*)this, "bCanNavigateToDifferentPanel" }; }
-    BitFieldValue<bool, unsigned __int32> bClickable()
-    { return { (void*)this, "bClickable" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDataListAutomaticallyOverrideEnabled()
-    { return { (void*)this, "bDataListAutomaticallyOverrideEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bDataListAutomaticallyOverrideText()
-    { return { (void*)this, "bDataListAutomaticallyOverrideText" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayStringCenterX()
-    { return { (void*)this, "bDisplayStringCenterX" }; }
-    BitFieldValue<bool, unsigned __int32> bDisplayStringCenterY()
-    { return { (void*)this, "bDisplayStringCenterY" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bDraggable()
-    { return { (void*)this, "bDraggable" }; }
+    BrzCampoPonteiro bAllowClickingWhenNoEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bAllowClickingWhenNoEntry")); }
+    BrzCampoPonteiro bAllowExtraIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bAllowExtraIcon")); }
+    BrzCampoPonteiro bCanNavigateToDifferentPanelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bCanNavigateToDifferentPanel")); }
+    BrzCampoPonteiro bCenterDisplayNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bCenterDisplayName")); }
+    BrzCampoPonteiro bClickableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bClickable")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDataListAutomaticallyOverrideEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDataListAutomaticallyOverrideEnabled")); }
+    BrzCampoPonteiro bDataListAutomaticallyOverrideTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDataListAutomaticallyOverrideText")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDisplayStringCenterXField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDisplayStringCenterX")); }
+    BrzCampoPonteiro bDisplayStringCenterYField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDisplayStringCenterY")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDontRenderHighlight")); }
+    BrzCampoPonteiro bDraggableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bDraggable")); }
     bool& bEnabledField() const
     { return *GetNativePointerField<bool*>(this, "UCheatFunctionInfoEntryButton.bEnabled"); }
-    BitFieldValue<bool, unsigned __int32> bForceDraggingDisabled()
-    { return { (void*)this, "bForceDraggingDisabled" }; }
-    BitFieldValue<bool, unsigned __int32> bForceHandleMouseDown()
-    { return { (void*)this, "bForceHandleMouseDown" }; }
-    BitFieldValue<bool, unsigned __int32> bHasEngram()
-    { return { (void*)this, "bHasEngram" }; }
-    BitFieldValue<bool, unsigned __int32> bHighlightInsteadOfChild()
-    { return { (void*)this, "bHighlightInsteadOfChild" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreParentAlpha()
-    { return { (void*)this, "bIgnoreParentAlpha" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bForceDraggingDisabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bForceDraggingDisabled")); }
+    BrzCampoPonteiro bForceHandleMouseDownField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bForceHandleMouseDown")); }
+    BrzCampoPonteiro bHasEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bHasEngram")); }
+    BrzCampoPonteiro bHighlightInsteadOfChildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bHighlightInsteadOfChild")); }
+    BrzCampoPonteiro bIgnoreParentAlphaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bIgnoreParentAlpha")); }
+    BrzCampoPonteiro bIsCustomField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bIsCustom")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bKnownEngram()
-    { return { (void*)this, "bKnownEngram" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideScreenCanvasProjection()
-    { return { (void*)this, "bOverrideScreenCanvasProjection" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideStlye()
-    { return { (void*)this, "bOverrideStlye" }; }
-    BitFieldValue<bool, unsigned __int32> bOverrideTintColor()
-    { return { (void*)this, "bOverrideTintColor" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bRedirectGamepadPressToClick()
-    { return { (void*)this, "bRedirectGamepadPressToClick" }; }
-    BitFieldValue<bool, unsigned __int32> bSelected()
-    { return { (void*)this, "bSelected" }; }
-    BitFieldValue<bool, unsigned __int32> bSetIndexPlusOneToDisplayString()
-    { return { (void*)this, "bSetIndexPlusOneToDisplayString" }; }
-    BitFieldValue<bool, unsigned __int32> bShowDisplayStringWhenHasItem()
-    { return { (void*)this, "bShowDisplayStringWhenHasItem" }; }
-    BitFieldValue<bool, unsigned __int32> bToggleButton()
-    { return { (void*)this, "bToggleButton" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTextColor()
-    { return { (void*)this, "bUseCustomTextColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDataProviderCustomColor()
-    { return { (void*)this, "bUseDataProviderCustomColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDisabledStyle()
-    { return { (void*)this, "bUseDisabledStyle" }; }
-    BitFieldValue<bool, unsigned __int32> bUseDisplayString()
-    { return { (void*)this, "bUseDisplayString" }; }
-    BitFieldValue<bool, unsigned __int32> bUseHoverSound()
-    { return { (void*)this, "bUseHoverSound" }; }
-    BitFieldValue<bool, unsigned __int32> bUseSelectedBackgroundColor()
-    { return { (void*)this, "bUseSelectedBackgroundColor" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bWrapText()
-    { return { (void*)this, "bWrapText" }; }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bIsVolatile")); }
+    BrzCampoPonteiro bKnownEngramField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bKnownEngram")); }
+    BrzCampoPonteiro bOverrideScreenCanvasProjectionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bOverrideScreenCanvasProjection")); }
+    BrzCampoPonteiro bOverrideStlyeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bOverrideStlye")); }
+    BrzCampoPonteiro bOverrideTintColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bOverrideTintColor")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bOverride_Cursor")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bRedirectGamepadPressToClickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bRedirectGamepadPressToClick")); }
+    BrzCampoPonteiro bSelectedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bSelected")); }
+    BrzCampoPonteiro bSetIndexPlusOneToDisplayStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bSetIndexPlusOneToDisplayString")); }
+    BrzCampoPonteiro bShowDisplayStringWhenHasItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bShowDisplayStringWhenHasItem")); }
+    BrzCampoPonteiro bToggleButtonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bToggleButton")); }
+    BrzCampoPonteiro bUseCustomTextColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseCustomTextColor")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseDataProviderCustomColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseDataProviderCustomColor")); }
+    BrzCampoPonteiro bUseDisabledStyleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseDisabledStyle")); }
+    BrzCampoPonteiro bUseDisplayStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseDisplayString")); }
+    BrzCampoPonteiro bUseHoverSoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseHoverSound")); }
+    BrzCampoPonteiro bUseSelectedBackgroundColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseSelectedBackgroundColor")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bUseWindowClippingForHighlight")); }
+    BrzCampoPonteiro bWrapTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.bWrapText")); }
     BrzCampoPonteiro functionNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatFunctionInfoEntryButton.FunctionName")); }
     BitFieldValue<bool, unsigned __int32> bCenterDisplayName()

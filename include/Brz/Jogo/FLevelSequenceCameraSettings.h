@@ -35,6 +35,8 @@ struct FLevelSequenceCameraSettings
 
     BrzCampoPonteiro AspectRatioAxisConstraintField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceCameraSettings.AspectRatioAxisConstraint")); }
+    BrzCampoPonteiro bOverrideAspectRatioAxisConstraintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelSequenceCameraSettings.bOverrideAspectRatioAxisConstraint")); }
     BitFieldValue<bool, unsigned __int32> bOverrideAspectRatioAxisConstraint()
     { return { (void*)this, "bOverrideAspectRatioAxisConstraint" }; }
 

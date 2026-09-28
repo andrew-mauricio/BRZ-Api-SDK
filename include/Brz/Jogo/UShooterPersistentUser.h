@@ -79,6 +79,8 @@ struct UShooterPersistentUser
     { return *GetNativePointerField<int*>(this, "UShooterPersistentUser.RocketsFired"); }
     int& WinsField() const
     { return *GetNativePointerField<int*>(this, "UShooterPersistentUser.Wins"); }
+    BrzCampoPonteiro bInvertedYAxisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterPersistentUser.bInvertedYAxis")); }
     BitFieldValue<bool, unsigned __int32> bInvertedYAxis()
     { return { (void*)this, "bInvertedYAxis" }; }
 

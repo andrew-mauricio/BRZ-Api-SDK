@@ -49,7 +49,7 @@ struct AGameNetworkManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameNetworkManager.ExceedsAllowablePositionError(UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool ExceedsAllowablePositionError(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AGameNetworkManager.ExceedsAllowablePositionError(UE::Math::TVector<double>)", a0);
@@ -57,7 +57,7 @@ struct AGameNetworkManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameNetworkManager.NetworkVelocityNearZero(UE::Math::TVector<double>)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     bool NetworkVelocityNearZero(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AGameNetworkManager.NetworkVelocityNearZero(UE::Math::TVector<double>)", a0);
@@ -87,6 +87,8 @@ struct AGameNetworkManager : public AInfo
     { return *GetNativePointerField<int*>(this, "AGameNetworkManager.BadPingThreshold"); }
     float& CLIENTADJUSTUPDATECOSTField() const
     { return *GetNativePointerField<float*>(this, "AGameNetworkManager.CLIENTADJUSTUPDATECOST"); }
+    BrzCampoPonteiro ClientAuthorativePositionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameNetworkManager.ClientAuthorativePosition")); }
     float& ClientErrorUpdateRateLimitField() const
     { return *GetNativePointerField<float*>(this, "AGameNetworkManager.ClientErrorUpdateRateLimit"); }
     float& ClientNetCamUpdateDeltaTimeField() const
@@ -153,8 +155,16 @@ struct AGameNetworkManager : public AInfo
     { return *GetNativePointerField<float*>(this, "AGameNetworkManager.StandbyTxCheatTime"); }
     int& TotalNetBandwidthField() const
     { return *GetNativePointerField<int*>(this, "AGameNetworkManager.TotalNetBandwidth"); }
+    BrzCampoPonteiro bHasStandbyCheatTriggeredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameNetworkManager.bHasStandbyCheatTriggered")); }
+    BrzCampoPonteiro bIsStandbyCheckingEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameNetworkManager.bIsStandbyCheckingEnabled")); }
     bool& bMovementTimeDiscrepancyDetectionField() const
     { return *GetNativePointerField<bool*>(this, "AGameNetworkManager.bMovementTimeDiscrepancyDetection"); }
+    BrzCampoPonteiro bMovementTimeDiscrepancyForceCorrectionsDuringResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameNetworkManager.bMovementTimeDiscrepancyForceCorrectionsDuringResolution")); }
+    BrzCampoPonteiro bMovementTimeDiscrepancyResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameNetworkManager.bMovementTimeDiscrepancyResolution")); }
     bool& bUseDistanceBasedRelevancyField() const
     { return *GetNativePointerField<bool*>(this, "AGameNetworkManager.bUseDistanceBasedRelevancy"); }
     BitFieldValue<bool, unsigned __int32> bIsStandbyCheckingEnabled()

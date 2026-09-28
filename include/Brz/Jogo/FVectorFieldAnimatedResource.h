@@ -32,8 +32,13 @@ struct FVectorFieldAnimatedResource
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro AnimatedVectorFieldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldAnimatedResource.AnimatedVectorField")); }
     double& FrameTimeField() const
     { return *GetNativePointerField<double*>(this, "FVectorFieldAnimatedResource.FrameTime"); }
+    BrzCampoPonteiro VolumeTextureUAVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldAnimatedResource.VolumeTextureUAV")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDANIMATEDRESOURCE_H

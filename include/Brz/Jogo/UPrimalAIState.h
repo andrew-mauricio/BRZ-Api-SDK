@@ -77,7 +77,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.EndAnimationState(FName,ENetRole)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EndAnimationState(unsigned long long a0, int a1) const
     {
         return NativeCall<void*, unsigned long long, int>(this, "UPrimalAIState.EndAnimationState(FName,ENetRole)", a0, a1);
@@ -93,7 +93,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.OnBegin(UPrimalAIState*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnBegin(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalAIState.OnBegin(UPrimalAIState*)", a0);
@@ -101,7 +101,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.OnCanUseStateEvent()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=61+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=61+chamadores=3]]
     BrzPonteiro OnCanUseStateEvent() const
     {
         return NativeCall<void*>(this, "UPrimalAIState.OnCanUseStateEvent()");
@@ -109,7 +109,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.OnEnd()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnEnd() const
     {
         return NativeCall<void*>(this, "UPrimalAIState.OnEnd()");
@@ -117,7 +117,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.OnTick(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnTick(float a0) const
     {
         return NativeCall<void*, float>(this, "UPrimalAIState.OnTick(float)", a0);
@@ -133,7 +133,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.SetInAnimationStateActive(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetInAnimationStateActive(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UPrimalAIState.SetInAnimationStateActive(bool)", a0);
@@ -141,7 +141,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.SetLastAttackTime()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=28]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro SetLastAttackTime() const
     {
         return NativeCall<void*>(this, "UPrimalAIState.SetLastAttackTime()");
@@ -149,7 +149,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.StartAnimationState(FName,ENetRole)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StartAnimationState(unsigned long long a0, int a1) const
     {
         return NativeCall<void*, unsigned long long, int>(this, "UPrimalAIState.StartAnimationState(FName,ENetRole)", a0, a1);
@@ -157,7 +157,7 @@ struct UPrimalAIState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIState.TickAnimationState(float,FName,ENetRole)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TickAnimationState(float a0, unsigned long long a1, int a2) const
     {
         return NativeCall<void*, float, unsigned long long, int>(this, "UPrimalAIState.TickAnimationState(float,FName,ENetRole)", a0, a1, a2);
@@ -175,10 +175,28 @@ struct UPrimalAIState
     { return *GetNativePointerField<FName*>(this, "UPrimalAIState.AnimationCustomName"); }
     BrzCampoPonteiro ChildStatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.ChildStates")); }
+    BrzCampoPonteiro IsInAnimationStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.IsInAnimationState")); }
+    BrzCampoPonteiro IsInAttackStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.IsInAttackState")); }
     BrzCampoPonteiro ParentStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.ParentState")); }
     TObjectPtr<APawn>& PawnField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "UPrimalAIState.Pawn"); }
+    BrzCampoPonteiro bBPCanUseStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bBPCanUseState")); }
+    BrzCampoPonteiro bShouldResetInLosingTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bShouldResetInLosingTarget")); }
+    BrzCampoPonteiro bUseBPCanAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bUseBPCanAttack")); }
+    BrzCampoPonteiro bUseBPCanInterruptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bUseBPCanInterrupt")); }
+    BrzCampoPonteiro bUseBPOverrideAttackWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bUseBPOverrideAttackWeight")); }
+    BrzCampoPonteiro bUseBPSkipIntervalCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bUseBPSkipIntervalCheck")); }
+    BrzCampoPonteiro bUseBPSkipRangeCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIState.bUseBPSkipRangeCheck")); }
     BitFieldValue<bool, unsigned __int32> IsInAnimationState()
     { return { (void*)this, "IsInAnimationState" }; }
     BitFieldValue<bool, unsigned __int32> IsInAttackState()

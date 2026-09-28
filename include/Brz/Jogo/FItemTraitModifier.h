@@ -37,8 +37,8 @@ struct FItemTraitModifier
     { return *GetNativePointerField<FString*>(this, "FItemTraitModifier.Name"); }
     BrzCampoPonteiro StackingTypeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemTraitModifier.StackingType")); }
-    BitFieldValue<bool, unsigned __int32> Value()
-    { return { (void*)this, "Value" }; }
+    BrzCampoPonteiro ValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemTraitModifier.Value")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FITEMTRAITMODIFIER_H

@@ -37,7 +37,7 @@ struct UObjectElementObjectInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectElementObjectInterface.GetObject(FTypedElementHandle&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static UObject* GetObject(void* a0)
     {
         return NativeCall<UObject*, void*>(nullptr, "UObjectElementObjectInterface.GetObject(FTypedElementHandle&)", a0);

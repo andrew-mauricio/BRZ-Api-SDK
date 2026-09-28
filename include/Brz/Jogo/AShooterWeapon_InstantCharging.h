@@ -33,11 +33,10 @@ struct AShooterWeapon_InstantCharging : public AShooterWeapon_Instant
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_InstantCharging.FireWeapon()
-    // classe: a funcao mora em AShooterWeapon_Instant, e AShooterWeapon_InstantCharging herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     void FireWeapon() const
     {
-        NativeCall<void>(this, "AShooterWeapon_Instant.FireWeapon()");
+        NativeCall<void>(this, "AShooterWeapon_InstantCharging.FireWeapon()");
     }
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
@@ -50,7 +49,7 @@ struct AShooterWeapon_InstantCharging : public AShooterWeapon_Instant
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_InstantCharging.ServerSetCharging_Implementation(double)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetCharging_Implementation(double a0) const
     {
         NativeCall<void, double>(this, "AShooterWeapon_InstantCharging.ServerSetCharging_Implementation(double)", a0);
@@ -58,7 +57,7 @@ struct AShooterWeapon_InstantCharging : public AShooterWeapon_Instant
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_InstantCharging.StartFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=334+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void StartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_InstantCharging.StartFire(bool)", a0);
@@ -66,7 +65,7 @@ struct AShooterWeapon_InstantCharging : public AShooterWeapon_Instant
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_InstantCharging.StopFire()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=262]]
+    // endereco: casamento de bytes com a build de referencia
     void StopFire() const
     {
         NativeCall<void>(this, "AShooterWeapon_InstantCharging.StopFire()");
@@ -74,6 +73,8 @@ struct AShooterWeapon_InstantCharging : public AShooterWeapon_Instant
 
     double& ChargeStartTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterWeapon_InstantCharging.ChargeStartTime"); }
+    BrzCampoPonteiro bDidFireWeaponField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_InstantCharging.bDidFireWeapon")); }
     BitFieldValue<bool, unsigned __int32> bDidFireWeapon()
     { return { (void*)this, "bDidFireWeapon" }; }
 

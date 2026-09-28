@@ -35,15 +35,16 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.BeginDestroy()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=47]]
+    // classe: a funcao mora em UStreamableRenderAsset, e UTexture herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void BeginDestroy() const
     {
-        NativeCall<void>(this, "UTexture.BeginDestroy()");
+        NativeCall<void>(this, "UStreamableRenderAsset.BeginDestroy()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.BeginFinalReleaseResource()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=119+grafo=5/5]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginFinalReleaseResource() const
     {
         NativeCall<void>(this, "UTexture.BeginFinalReleaseResource()");
@@ -51,7 +52,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.CancelPendingTextureStreaming()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=201+grafo=3/3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=201+chamadores=2+grafo=3/3]]
     static void CancelPendingTextureStreaming()
     {
         NativeCall<void>(nullptr, "UTexture.CancelPendingTextureStreaming()");
@@ -67,7 +68,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.GetAssetUserDataArray()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAssetUserDataArray() const
     {
         return NativeCall<void*>(this, "UTexture.GetAssetUserDataArray()");
@@ -83,7 +84,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.GetMaterialType()
-    // endereco: INFERIDO, com segunda evidencia [string_aprovado [tam=58]]
+    // endereco: casamento de bytes com a build de referencia
     int GetMaterialType() const
     {
         return NativeCall<int>(this, "UTexture.GetMaterialType()");
@@ -115,7 +116,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.GetResourcePostInitState(FTexturePlatformData*,bool,int,int,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void GetResourcePostInitState(void* retorno, void* a0, bool a1, int a2, int a3, bool a4) const
     {
         NativeCall<void, void*, void*, bool, int, int, bool>(this, "UTexture.GetResourcePostInitState(FTexturePlatformData*,bool,int,int,bool)", retorno, a0, a1, a2, a3, a4);
@@ -123,7 +124,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.HasPendingLODTransition()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasPendingLODTransition() const
     {
         return NativeCall<bool>(this, "UTexture.HasPendingLODTransition()");
@@ -131,7 +132,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.HasPendingRenderResourceInitialization()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasPendingRenderResourceInitialization() const
     {
         return NativeCall<bool>(this, "UTexture.HasPendingRenderResourceInitialization()");
@@ -139,7 +140,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.InvalidateLastRenderTimeForStreaming()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InvalidateLastRenderTimeForStreaming() const
     {
         NativeCall<void>(this, "UTexture.InvalidateLastRenderTimeForStreaming()");
@@ -155,7 +156,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.PostCDOContruct()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostCDOContruct() const
     {
         NativeCall<void>(this, "UTexture.PostCDOContruct()");
@@ -180,7 +181,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // dump_sobre_sdk_287a0
     //   UTexture.SerializeCookedPlatformData(FArchive&,bool)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=36]]
+    // endereco: casamento de bytes com a build de referencia
     void SerializeCookedPlatformData(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "UTexture.SerializeCookedPlatformData(FArchive&,bool)", a0, a1);
@@ -188,7 +189,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.ShouldMipLevelsBeForcedResident()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldMipLevelsBeForcedResident() const
     {
         return NativeCall<bool>(this, "UTexture.ShouldMipLevelsBeForcedResident()");
@@ -200,6 +201,8 @@ struct UTexture : public UStreamableRenderAsset
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.Availability")); }
     BrzCampoPonteiro CompressionSettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.CompressionSettings")); }
+    BrzCampoPonteiro CompressionYCoCgField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.CompressionYCoCg")); }
     unsigned char& CookPlatformTilingSettingsField() const
     { return *GetNativePointerField<unsigned char*>(this, "UTexture.CookPlatformTilingSettings"); }
     BrzCampoPonteiro DownscaleField() const
@@ -218,6 +221,18 @@ struct UTexture : public UStreamableRenderAsset
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.LightingGuid")); }
     BrzCampoPonteiro MipLoadOptionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.MipLoadOptions")); }
+    BrzCampoPonteiro SRGBField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.SRGB")); }
+    BrzCampoPonteiro VirtualTextureStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.VirtualTextureStreaming")); }
+    BrzCampoPonteiro bAsyncResourceReleaseHasBeenStartedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.bAsyncResourceReleaseHasBeenStarted")); }
+    BrzCampoPonteiro bNoTilingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.bNoTiling")); }
+    BrzCampoPonteiro bNotOfflineProcessedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.bNotOfflineProcessed")); }
+    BrzCampoPonteiro bOodlePreserveExtremesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture.bOodlePreserveExtremes")); }
     BitFieldValue<bool, unsigned __int32> SRGB()
     { return { (void*)this, "SRGB" }; }
     BitFieldValue<bool, unsigned __int32> bNoTiling()

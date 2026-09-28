@@ -52,7 +52,7 @@ struct APrimalProjectileArrow : public AShooterProjectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalProjectileArrow.PickUpCheck()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void PickUpCheck() const
     {
         NativeCall<void>(this, "APrimalProjectileArrow.PickUpCheck()");
@@ -68,7 +68,7 @@ struct APrimalProjectileArrow : public AShooterProjectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalProjectileArrow.PickedUp(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=128]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PickedUp(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalProjectileArrow.PickedUp(AShooterCharacter*)", a0);

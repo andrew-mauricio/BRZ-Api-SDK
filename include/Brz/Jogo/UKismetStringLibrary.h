@@ -47,7 +47,7 @@ struct UKismetStringLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetStringLibrary.Conv_StringToInt(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro Conv_StringToInt(const FString& a0)
     {
         return NativeCall<void*, void*>(nullptr, "UKismetStringLibrary.Conv_StringToInt(FString&)", const_cast<FString*>(&a0));
@@ -59,7 +59,7 @@ struct UKismetStringLibrary
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UKismetStringLibrary.StaticRegisterNativesUKismetStringLibrary()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro StaticRegisterNativesUKismetStringLibrary()
     {
         return NativeCall<void*>(nullptr, "UKismetStringLibrary.StaticRegisterNativesUKismetStringLibrary()");

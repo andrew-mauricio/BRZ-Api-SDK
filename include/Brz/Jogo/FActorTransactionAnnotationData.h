@@ -35,6 +35,12 @@ struct FActorTransactionAnnotationData
 
     BrzCampoPonteiro ActorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorTransactionAnnotationData.Actor")); }
+    BrzCampoPonteiro ComponentInstanceDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorTransactionAnnotationData.ComponentInstanceData")); }
+    BrzCampoPonteiro RootComponentDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorTransactionAnnotationData.RootComponentData")); }
+    BrzCampoPonteiro bRootComponentDataCachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorTransactionAnnotationData.bRootComponentDataCached")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORTRANSACTIONANNOTATIONDATA_H

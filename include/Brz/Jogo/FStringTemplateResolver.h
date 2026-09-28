@@ -32,6 +32,13 @@ struct FStringTemplateResolver
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ChunkIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplateResolver.ChunkIndex")); }
+    BrzCampoPonteiro NamedParametersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplateResolver.NamedParameters")); }
+    BrzCampoPonteiro ResolvedStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplateResolver.ResolvedString")); }
     BrzCampoPonteiro TemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTemplateResolver.Template")); }
 };

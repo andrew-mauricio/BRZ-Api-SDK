@@ -58,7 +58,7 @@ struct UPrimalShipAnimInstance
     BrzCampoPonteiro CurrentSkeletonField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.CurrentSkeleton")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalShipOwner` +8, medido na build 25090264
+    //  ancorado em `PrimalShipOwner` +8, medido na build 25535041
     //  (offset absoluto medido: 0x3D0; confianca alta)
     void*& DayCycleManagerField() const
     { return BrzCampoAncorado<void*>(this, "PrimalShipOwner", 8); }
@@ -82,20 +82,20 @@ struct UPrimalShipAnimInstance
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.SlotGroupInertializationRequestDataMap")); }
     BrzCampoPonteiro WindFlowField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.WindFlow")); }
-    BitFieldValue<bool, unsigned __int32> bIsAnimSharingPaused()
-    { return { (void*)this, "bIsAnimSharingPaused" }; }
-    BitFieldValue<bool, unsigned __int32> bPropagateNotifiesToLinkedInstances()
-    { return { (void*)this, "bPropagateNotifiesToLinkedInstances" }; }
-    BitFieldValue<bool, unsigned __int32> bQueueMontageEvents()
-    { return { (void*)this, "bQueueMontageEvents" }; }
-    BitFieldValue<bool, unsigned __int32> bReceiveNotifiesFromLinkedInstances()
-    { return { (void*)this, "bReceiveNotifiesFromLinkedInstances" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMainInstanceMontageEvaluationData()
-    { return { (void*)this, "bUseMainInstanceMontageEvaluationData" }; }
-    BitFieldValue<bool, unsigned __int32> bUseMultiThreadedAnimationUpdate()
-    { return { (void*)this, "bUseMultiThreadedAnimationUpdate" }; }
-    BitFieldValue<bool, unsigned __int32> bUsingCopyPoseFromMesh()
-    { return { (void*)this, "bUsingCopyPoseFromMesh" }; }
+    BrzCampoPonteiro bIsAnimSharingPausedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bIsAnimSharingPaused")); }
+    BrzCampoPonteiro bPropagateNotifiesToLinkedInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bPropagateNotifiesToLinkedInstances")); }
+    BrzCampoPonteiro bQueueMontageEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bQueueMontageEvents")); }
+    BrzCampoPonteiro bReceiveNotifiesFromLinkedInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bReceiveNotifiesFromLinkedInstances")); }
+    BrzCampoPonteiro bUseMainInstanceMontageEvaluationDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bUseMainInstanceMontageEvaluationData")); }
+    BrzCampoPonteiro bUseMultiThreadedAnimationUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bUseMultiThreadedAnimationUpdate")); }
+    BrzCampoPonteiro bUsingCopyPoseFromMeshField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.bUsingCopyPoseFromMesh")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALSHIPANIMINSTANCE_H

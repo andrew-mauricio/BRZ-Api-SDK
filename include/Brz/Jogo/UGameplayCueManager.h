@@ -75,7 +75,7 @@ struct UGameplayCueManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueManager.FindExistingCueOnActor(AActor&,TSubclassOf<AGameplayCueNotify_Actor>&,FGamep
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro FindExistingCueOnActor(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void**, void*>(this, "UGameplayCueManager.FindExistingCueOnActor(AActor&,TSubclassOf<AGameplayCueNotify_Actor>&,FGameplayCueParameters&)", a0, &a1, a2);
@@ -179,7 +179,7 @@ struct UGameplayCueManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueManager.NotifyGameplayCueActorEndPlay(AGameplayCueNotify_Actor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=37]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro NotifyGameplayCueActorEndPlay(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UGameplayCueManager.NotifyGameplayCueActorEndPlay(AGameplayCueNotify_Actor*)", a0);
@@ -231,7 +231,7 @@ struct UGameplayCueManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayCueManager.ShouldSuppressGameplayCues(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldSuppressGameplayCues(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UGameplayCueManager.ShouldSuppressGameplayCues(AActor*)", a0);
@@ -240,7 +240,7 @@ struct UGameplayCueManager
     BrzCampoPonteiro EditorGameplayCueObjectLibraryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueManager.EditorGameplayCueObjectLibrary")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EditorGameplayCueObjectLibrary` +80, medido na build 25090264
+    //  ancorado em `EditorGameplayCueObjectLibrary` +80, medido na build 25535041
     //  (offset absoluto medido: 0xE8; confianca media)
     void*& GameplayCueAssetHandleField() const
     { return BrzCampoAncorado<void*>(this, "EditorGameplayCueObjectLibrary", 80); }
@@ -259,12 +259,12 @@ struct UGameplayCueManager
     BrzCampoPonteiro RuntimeGameplayCueObjectLibraryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueManager.RuntimeGameplayCueObjectLibrary")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EditorGameplayCueObjectLibrary` +96, medido na build 25090264
+    //  ancorado em `EditorGameplayCueObjectLibrary` +96, medido na build 25535041
     //  (offset absoluto medido: 0xF8; confianca media)
     void*& StreamableManagerField() const
     { return BrzCampoAncorado<void*>(this, "EditorGameplayCueObjectLibrary", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EditorGameplayCueObjectLibrary` +328, medido na build 25090264
+    //  ancorado em `EditorGameplayCueObjectLibrary` +328, medido na build 25535041
     //  (offset absoluto medido: 0x1E0; confianca baixa)
     void*& TranslationManagerField() const
     { return BrzCampoAncorado<void*>(this, "EditorGameplayCueObjectLibrary", 328); }

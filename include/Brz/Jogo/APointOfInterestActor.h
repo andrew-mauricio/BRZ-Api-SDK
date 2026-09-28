@@ -69,7 +69,7 @@ struct APointOfInterestActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APointOfInterestActor.GetPointCompanionBehaviorData_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=33]]
+    // endereco: casamento de bytes com a build de referencia
     void GetPointCompanionBehaviorData_Implementation(void* retorno) const
     {
         NativeCall<void, void*>(this, "APointOfInterestActor.GetPointCompanionBehaviorData_Implementation()", retorno);
@@ -85,7 +85,7 @@ struct APointOfInterestActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APointOfInterestActor.IsPointOfInterestValid()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPointOfInterestValid() const
     {
         return NativeCall<bool>(this, "APointOfInterestActor.IsPointOfInterestValid()");
@@ -101,7 +101,7 @@ struct APointOfInterestActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APointOfInterestActor.RefreshPointData_Implementation()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RefreshPointData_Implementation() const
     {
         NativeCall<void>(this, "APointOfInterestActor.RefreshPointData_Implementation()");
@@ -109,7 +109,7 @@ struct APointOfInterestActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APointOfInterestActor.SetPointTagUniqueState_Implementation(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetPointTagUniqueState_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "APointOfInterestActor.SetPointTagUniqueState_Implementation(bool)", a0);
@@ -143,6 +143,18 @@ struct APointOfInterestActor : public AActor
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.UseSphereLocOffset")); }
     float& UseSphereRadiusField() const
     { return *GetNativePointerField<float*>(this, "APointOfInterestActor.UseSphereRadius"); }
+    BrzCampoPonteiro bDebugPointActor_ClearDebugLinesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.bDebugPointActor_ClearDebugLines")); }
+    BrzCampoPonteiro bDebugPointActor_PersistentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.bDebugPointActor_Persistent")); }
+    BrzCampoPonteiro bDebugPointActor_SingleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.bDebugPointActor_Single")); }
+    BrzCampoPonteiro bHasBeenViewedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.bHasBeenViewed")); }
+    BrzCampoPonteiro bPreventViewMultiUseEntryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.bPreventViewMultiUseEntry")); }
+    BrzCampoPonteiro bSyncWithPointManagerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APointOfInterestActor.bSyncWithPointManager")); }
     BitFieldValue<bool, unsigned __int32> bHasBeenViewed()
     { return { (void*)this, "bHasBeenViewed" }; }
     BitFieldValue<bool, unsigned __int32> bSyncWithPointManager()

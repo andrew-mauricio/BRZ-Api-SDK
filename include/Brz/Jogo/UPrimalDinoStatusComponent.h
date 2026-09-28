@@ -365,136 +365,136 @@ struct UPrimalDinoStatusComponent
     { return *GetNativePointerField<float*>(this, "UPrimalDinoStatusComponent.WindedSpeedModifierSwimmingOrFlying"); }
     float& XPEarnedPerStaminaConsumedField() const
     { return *GetNativePointerField<float*>(this, "UPrimalDinoStatusComponent.XPEarnedPerStaminaConsumed"); }
-    BitFieldValue<bool, unsigned __int32> bAddExperienceAutomatically()
-    { return { (void*)this, "bAddExperienceAutomatically" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowLevelUps()
-    { return { (void*)this, "bAllowLevelUps" }; }
-    BitFieldValue<bool, unsigned __int32> bAllowSharingXPWithTribe()
-    { return { (void*)this, "bAllowSharingXPWithTribe" }; }
-    BitFieldValue<bool, unsigned __int32> bAlsoUseLevelUpAnimWhenSwimming()
-    { return { (void*)this, "bAlsoUseLevelUpAnimWhenSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bApplyingStatusValueModifiers()
-    { return { (void*)this, "bApplyingStatusValueModifiers" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyUpdateTemperature()
-    { return { (void*)this, "bAutomaticallyUpdateTemperature" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bCanGetHungry()
-    { return { (void*)this, "bCanGetHungry" }; }
-    BitFieldValue<bool, unsigned __int32> bCanSuffocate()
-    { return { (void*)this, "bCanSuffocate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanSuffocateIfTamed()
-    { return { (void*)this, "bCanSuffocateIfTamed" }; }
-    BitFieldValue<bool, unsigned __int32> bCheatStatus()
-    { return { (void*)this, "bCheatStatus" }; }
-    BitFieldValue<bool, unsigned __int32> bConsumeFoodAutomatically()
-    { return { (void*)this, "bConsumeFoodAutomatically" }; }
-    BitFieldValue<bool, unsigned __int32> bConsumeWaterAutomatically()
-    { return { (void*)this, "bConsumeWaterAutomatically" }; }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bDontScaleMeleeDamage()
-    { return { (void*)this, "bDontScaleMeleeDamage" }; }
-    BitFieldValue<bool, unsigned __int32> bDontUseSpeedMultipleAsSpeed()
-    { return { (void*)this, "bDontUseSpeedMultipleAsSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bForceAllowStatusModifierSortingWhenTamed()
-    { return { (void*)this, "bForceAllowStatusModifierSortingWhenTamed" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDefaultSpeed()
-    { return { (void*)this, "bForceDefaultSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bForceGainOxygen()
-    { return { (void*)this, "bForceGainOxygen" }; }
-    BitFieldValue<bool, unsigned __int32> bForceRefreshWeight()
-    { return { (void*)this, "bForceRefreshWeight" }; }
-    BitFieldValue<bool, unsigned __int32> bFreezeStatusValues()
-    { return { (void*)this, "bFreezeStatusValues" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bHideFoodStatusFromHUD()
-    { return { (void*)this, "bHideFoodStatusFromHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bHideStaminaStatusFromHUD()
-    { return { (void*)this, "bHideStaminaStatusFromHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bHideXPStatusFromHUD()
-    { return { (void*)this, "bHideXPStatusFromHUD" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreStatusSpeedModifierIfSwimming()
-    { return { (void*)this, "bIgnoreStatusSpeedModifierIfSwimming" }; }
-    BitFieldValue<bool, unsigned __int32> bInfiniteFood()
-    { return { (void*)this, "bInfiniteFood" }; }
-    BitFieldValue<bool, unsigned __int32> bInfiniteStats()
-    { return { (void*)this, "bInfiniteStats" }; }
-    BitFieldValue<bool, unsigned __int32> bInitializedBaseLevelMaxStatusValues()
-    { return { (void*)this, "bInitializedBaseLevelMaxStatusValues" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bNeverAllowXP()
-    { return { (void*)this, "bNeverAllowXP" }; }
-    BitFieldValue<bool, unsigned __int32> bNoStaminaRecoveryWhenStarving()
-    { return { (void*)this, "bNoStaminaRecoveryWhenStarving" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventJump()
-    { return { (void*)this, "bPreventJump" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventTamedStatReplication()
-    { return { (void*)this, "bPreventTamedStatReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateGlobalStatusValues()
-    { return { (void*)this, "bReplicateGlobalStatusValues" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bRunningConsumesStamina()
-    { return { (void*)this, "bRunningConsumesStamina" }; }
-    BitFieldValue<bool, unsigned __int32> bRunningUseDefaultSpeed()
-    { return { (void*)this, "bRunningUseDefaultSpeed" }; }
-    BitFieldValue<bool, unsigned __int32> bServerFirstInitialized()
-    { return { (void*)this, "bServerFirstInitialized" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bStatusSpeedModifierOnlyFullOrNone()
-    { return { (void*)this, "bStatusSpeedModifierOnlyFullOrNone" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPAdjustStatusValueModification()
-    { return { (void*)this, "bUseBPAdjustStatusValueModification" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPCanLevelUp()
-    { return { (void*)this, "bUseBPCanLevelUp" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetOverrideMaxStatusValue()
-    { return { (void*)this, "bUseBPGetOverrideMaxStatusValue" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPGetStatusNameString()
-    { return { (void*)this, "bUseBPGetStatusNameString" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPModifyMaxLevel()
-    { return { (void*)this, "bUseBPModifyMaxLevel" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOverrideShouldSkipWildLevelUpValue()
-    { return { (void*)this, "bUseBPOverrideShouldSkipWildLevelUpValue" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStamina()
-    { return { (void*)this, "bUseStamina" }; }
-    BitFieldValue<bool, unsigned __int32> bUseStatusSpeedModifiers()
-    { return { (void*)this, "bUseStatusSpeedModifiers" }; }
-    BitFieldValue<bool, unsigned __int32> bWalkingConsumesStamina()
-    { return { (void*)this, "bWalkingConsumesStamina" }; }
+    BrzCampoPonteiro bAddExperienceAutomaticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAddExperienceAutomatically")); }
+    BrzCampoPonteiro bAllowLevelUpsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAllowLevelUps")); }
+    BrzCampoPonteiro bAllowSharingXPWithTribeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAllowSharingXPWithTribe")); }
+    BrzCampoPonteiro bAlsoUseLevelUpAnimWhenSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAlsoUseLevelUpAnimWhenSwimming")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bApplyingStatusValueModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bApplyingStatusValueModifiers")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAutoActivate")); }
+    BrzCampoPonteiro bAutomaticallyUpdateTemperatureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bAutomaticallyUpdateTemperature")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bCanGetHungryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bCanGetHungry")); }
+    BrzCampoPonteiro bCanSuffocateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bCanSuffocate")); }
+    BrzCampoPonteiro bCanSuffocateIfTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bCanSuffocateIfTamed")); }
+    BrzCampoPonteiro bCheatStatusField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bCheatStatus")); }
+    BrzCampoPonteiro bConsumeFoodAutomaticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bConsumeFoodAutomatically")); }
+    BrzCampoPonteiro bConsumeWaterAutomaticallyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bConsumeWaterAutomatically")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bDontScaleMeleeDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bDontScaleMeleeDamage")); }
+    BrzCampoPonteiro bDontUseSpeedMultipleAsSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bDontUseSpeedMultipleAsSpeed")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bForceAllowStatusModifierSortingWhenTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bForceAllowStatusModifierSortingWhenTamed")); }
+    BrzCampoPonteiro bForceDefaultSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bForceDefaultSpeed")); }
+    BrzCampoPonteiro bForceGainOxygenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bForceGainOxygen")); }
+    BrzCampoPonteiro bForceRefreshWeightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bForceRefreshWeight")); }
+    BrzCampoPonteiro bFreezeStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bFreezeStatusValues")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bHideFoodStatusFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bHideFoodStatusFromHUD")); }
+    BrzCampoPonteiro bHideStaminaStatusFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bHideStaminaStatusFromHUD")); }
+    BrzCampoPonteiro bHideXPStatusFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bHideXPStatusFromHUD")); }
+    BrzCampoPonteiro bIgnoreStatusSpeedModifierIfSwimmingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bIgnoreStatusSpeedModifierIfSwimming")); }
+    BrzCampoPonteiro bInfiniteFoodField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bInfiniteFood")); }
+    BrzCampoPonteiro bInfiniteStatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bInfiniteStats")); }
+    BrzCampoPonteiro bInitializedBaseLevelMaxStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bInitializedBaseLevelMaxStatusValues")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bNetAddressable")); }
+    BrzCampoPonteiro bNeverAllowXPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bNeverAllowXP")); }
+    BrzCampoPonteiro bNoStaminaRecoveryWhenStarvingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bNoStaminaRecoveryWhenStarving")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bPreventJump")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bPreventTamedStatReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bPreventTamedStatReplication")); }
+    BrzCampoPonteiro bReplicateGlobalStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bReplicateGlobalStatusValues")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bReplicates")); }
+    BrzCampoPonteiro bRunningConsumesStaminaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bRunningConsumesStamina")); }
+    BrzCampoPonteiro bRunningUseDefaultSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bRunningUseDefaultSpeed")); }
+    BrzCampoPonteiro bServerFirstInitializedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bServerFirstInitialized")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bStatusSpeedModifierOnlyFullOrNoneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bStatusSpeedModifierOnlyFullOrNone")); }
+    BrzCampoPonteiro bUseBPAdjustStatusValueModificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPAdjustStatusValueModification")); }
+    BrzCampoPonteiro bUseBPCanLevelUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPCanLevelUp")); }
+    BrzCampoPonteiro bUseBPGetOverrideMaxStatusValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPGetOverrideMaxStatusValue")); }
+    BrzCampoPonteiro bUseBPGetStatusNameStringField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPGetStatusNameString")); }
+    BrzCampoPonteiro bUseBPModifyMaxLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPModifyMaxLevel")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseBPOverrideShouldSkipWildLevelUpValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseBPOverrideShouldSkipWildLevelUpValue")); }
+    BrzCampoPonteiro bUseStaminaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseStamina")); }
+    BrzCampoPonteiro bUseStatusSpeedModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bUseStatusSpeedModifiers")); }
+    BrzCampoPonteiro bWalkingConsumesStaminaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalDinoStatusComponent.bWalkingConsumesStamina")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALDINOSTATUSCOMPONENT_H

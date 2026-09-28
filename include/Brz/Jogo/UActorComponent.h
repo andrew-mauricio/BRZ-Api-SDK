@@ -63,7 +63,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.AddReplicatedSubObject(UObject*,ELifetimeCondition)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddReplicatedSubObject(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "UActorComponent.AddReplicatedSubObject(UObject*,ELifetimeCondition)", a0, a1);
@@ -71,7 +71,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.AddTickPrerequisiteActor(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddTickPrerequisiteActor(void* a0) const
     {
         NativeCall<void, void*>(this, "UActorComponent.AddTickPrerequisiteActor(AActor*)", a0);
@@ -79,7 +79,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.AddTickPrerequisiteComponent(UActorComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddTickPrerequisiteComponent(void* a0) const
     {
         NativeCall<void, void*>(this, "UActorComponent.AddTickPrerequisiteComponent(UActorComponent*)", a0);
@@ -135,7 +135,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.ComponentHasTag(FName)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ComponentHasTag(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "UActorComponent.ComponentHasTag(FName)", a0);
@@ -151,7 +151,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.CreateRenderState_Concurrent(FRegisterComponentContext*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CreateRenderState_Concurrent(void* a0) const
     {
         NativeCall<void, void*>(this, "UActorComponent.CreateRenderState_Concurrent(FRegisterComponentContext*)", a0);
@@ -183,7 +183,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.DestroyRenderState_Concurrent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DestroyRenderState_Concurrent() const
     {
         NativeCall<void>(this, "UActorComponent.DestroyRenderState_Concurrent()");
@@ -231,7 +231,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.GetFunctionCallspace(UFunction*,FFrame*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetFunctionCallspace(void* a0, void* a1) const
     {
         return NativeCall<int, void*, void*>(this, "UActorComponent.GetFunctionCallspace(UFunction*,FFrame*)", a0, a1);
@@ -263,7 +263,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.GetOwnerRole()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetOwnerRole() const
     {
         return NativeCall<void*>(this, "UActorComponent.GetOwnerRole()");
@@ -279,7 +279,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.GetReplicationCondition()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=56]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetReplicationCondition() const
     {
         return NativeCall<int>(this, "UActorComponent.GetReplicationCondition()");
@@ -287,7 +287,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.GetScene()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetScene() const
     {
         return NativeCall<void*>(this, "UActorComponent.GetScene()");
@@ -303,7 +303,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.GetWorld()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UActorComponent.GetWorld()");
@@ -319,7 +319,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.InitializeComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitializeComponent() const
     {
         NativeCall<void>(this, "UActorComponent.InitializeComponent()");
@@ -327,7 +327,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.IsComponentTickEnabled()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsComponentTickEnabled() const
     {
         return NativeCall<bool>(this, "UActorComponent.IsComponentTickEnabled()");
@@ -335,7 +335,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.IsCreatedByConstructionScript()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsCreatedByConstructionScript() const
     {
         return NativeCall<void*>(this, "UActorComponent.IsCreatedByConstructionScript()");
@@ -343,7 +343,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.IsEditableWhenInherited()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsEditableWhenInherited() const
     {
         return NativeCall<void*>(this, "UActorComponent.IsEditableWhenInherited()");
@@ -359,7 +359,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.IsOwnerRunningUserConstructionScript()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsOwnerRunningUserConstructionScript() const
     {
         return NativeCall<void*>(this, "UActorComponent.IsOwnerRunningUserConstructionScript()");
@@ -391,7 +391,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.MarkRenderDynamicDataDirty()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MarkRenderDynamicDataDirty() const
     {
         return NativeCall<void*>(this, "UActorComponent.MarkRenderDynamicDataDirty()");
@@ -399,7 +399,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.MarkRenderInstancesDirty()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MarkRenderInstancesDirty() const
     {
         return NativeCall<void*>(this, "UActorComponent.MarkRenderInstancesDirty()");
@@ -415,7 +415,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.MarkRenderTransformDirty()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MarkRenderTransformDirty() const
     {
         return NativeCall<void*>(this, "UActorComponent.MarkRenderTransformDirty()");
@@ -423,7 +423,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.NeedsInitialization()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NeedsInitialization() const
     {
         return NativeCall<void*>(this, "UActorComponent.NeedsInitialization()");
@@ -463,7 +463,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.OnDestroyPhysicsState()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnDestroyPhysicsState() const
     {
         NativeCall<void>(this, "UActorComponent.OnDestroyPhysicsState()");
@@ -487,7 +487,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.OnRep_IsActive()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_IsActive() const
     {
         NativeCall<void>(this, "UActorComponent.OnRep_IsActive()");
@@ -503,7 +503,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.OwnerNeedsInitialization()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OwnerNeedsInitialization() const
     {
         return NativeCall<void*>(this, "UActorComponent.OwnerNeedsInitialization()");
@@ -535,7 +535,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.ReadyForReplication()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ReadyForReplication() const
     {
         NativeCall<void>(this, "UActorComponent.ReadyForReplication()");
@@ -591,7 +591,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.RegisterComponentWithWorld(UWorld*,FRegisterComponentContext*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RegisterComponentWithWorld(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UActorComponent.RegisterComponentWithWorld(UWorld*,FRegisterComponentContext*)", a0, a1);
@@ -599,7 +599,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.RemoveReplicatedSubObject(UObject*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveReplicatedSubObject(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UActorComponent.RemoveReplicatedSubObject(UObject*)", a0);
@@ -607,7 +607,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.RemoveTickPrerequisiteActor(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemoveTickPrerequisiteActor(void* a0) const
     {
         NativeCall<void, void*>(this, "UActorComponent.RemoveTickPrerequisiteActor(AActor*)", a0);
@@ -615,7 +615,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.RemoveTickPrerequisiteComponent(UActorComponent*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemoveTickPrerequisiteComponent(void* a0) const
     {
         NativeCall<void, void*>(this, "UActorComponent.RemoveTickPrerequisiteComponent(UActorComponent*)", a0);
@@ -655,7 +655,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.SendRenderDynamicData_Concurrent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SendRenderDynamicData_Concurrent() const
     {
         return NativeCall<void*>(this, "UActorComponent.SendRenderDynamicData_Concurrent()");
@@ -663,7 +663,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.SendRenderInstanceData_Concurrent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SendRenderInstanceData_Concurrent() const
     {
         NativeCall<void>(this, "UActorComponent.SendRenderInstanceData_Concurrent()");
@@ -671,7 +671,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.SendRenderTransform_Concurrent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SendRenderTransform_Concurrent() const
     {
         NativeCall<void>(this, "UActorComponent.SendRenderTransform_Concurrent()");
@@ -687,7 +687,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.SetActive(bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetActive(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "UActorComponent.SetActive(bool,bool)", a0, a1);
@@ -695,7 +695,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.SetActiveFlag(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetActiveFlag(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UActorComponent.SetActiveFlag(bool)", a0);
@@ -703,7 +703,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.SetAutoActivate(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAutoActivate(bool a0) const
     {
         NativeCall<void, bool>(this, "UActorComponent.SetAutoActivate(bool)", a0);
@@ -735,7 +735,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.SetComponentTickIntervalAndCooldown(float)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     void SetComponentTickIntervalAndCooldown(float a0) const
     {
         NativeCall<void, float>(this, "UActorComponent.SetComponentTickIntervalAndCooldown(float)", a0);
@@ -751,7 +751,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.SetIsReplicatedByDefault(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetIsReplicatedByDefault(bool a0) const
     {
         NativeCall<void, bool>(this, "UActorComponent.SetIsReplicatedByDefault(bool)", a0);
@@ -759,7 +759,7 @@ struct UActorComponent : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UActorComponent.SetTickGroup(ETickingGroup)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetTickGroup(int a0) const
     {
         return NativeCall<void*, int>(this, "UActorComponent.SetTickGroup(ETickingGroup)", a0);
@@ -791,7 +791,7 @@ struct UActorComponent : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UActorComponent.UninitializeComponent()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UninitializeComponent() const
     {
         NativeCall<void>(this, "UActorComponent.UninitializeComponent()");
@@ -816,7 +816,7 @@ struct UActorComponent : public UObject
     FName& CustomTagField() const
     { return *GetNativePointerField<FName*>(this, "UActorComponent.CustomTag"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AssetUserData` +16, medido na build 25090264
+    //  ancorado em `AssetUserData` +16, medido na build 25535041
     //  (offset absoluto medido: 0xA0; confianca alta)
     int& MarkedForEndOfFrameUpdateArrayIndexField() const
     { return BrzCampoAncorado<int>(this, "AssetUserData", 16); }
@@ -825,7 +825,7 @@ struct UActorComponent : public UObject
     BrzCampoPonteiro OnComponentDeactivatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.OnComponentDeactivated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnComponentDeactivated` +1, medido na build 25090264
+    //  ancorado em `OnComponentDeactivated` +1, medido na build 25535041
     //  (offset absoluto medido: 0xB0; confianca alta)
     AActor*& OwnerPrivateField() const
     { return BrzCampoAncorado<AActor*>(this, "OnComponentDeactivated", 1); }
@@ -834,12 +834,52 @@ struct UActorComponent : public UObject
     int& UCSSerializationIndexField() const
     { return *GetNativePointerField<int*>(this, "UActorComponent.UCSSerializationIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnComponentDeactivated` +9, medido na build 25090264
+    //  ancorado em `OnComponentDeactivated` +9, medido na build 25535041
     //  (offset absoluto medido: 0xB8; confianca alta)
     UWorld*& WorldPrivateField() const
     { return BrzCampoAncorado<UWorld*>(this, "OnComponentDeactivated", 9); }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bAutoActivate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bCanEverAffectNavigation")); }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bIsActive")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bNetAddressable")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bReplicates")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.bUseBPOnComponentTick")); }
     BitFieldValue<bool, unsigned __int32> bRegistered()
     { return { (void*)this, "bRegistered" }; }
     BitFieldValue<bool, unsigned __int32> bRenderStateCreated()

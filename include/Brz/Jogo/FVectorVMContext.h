@@ -51,12 +51,48 @@ struct FVectorVMContext
 
     BrzCampoPonteiro CodeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.Code")); }
+    BrzCampoPonteiro ConstantTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ConstantTable")); }
+    BrzCampoPonteiro ConstantTableCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ConstantTableCount")); }
+    BrzCampoPonteiro ConstantTableSizesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ConstantTableSizes")); }
+    BrzCampoPonteiro DataSetMetaTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.DataSetMetaTable")); }
+    BrzCampoPonteiro ExternalFunctionInstanceOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ExternalFunctionInstanceOffset")); }
+    BrzCampoPonteiro ExternalFunctionTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ExternalFunctionTable")); }
     BrzCampoPonteiro NumInstancesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.NumInstances")); }
+    BrzCampoPonteiro NumInstancesVectorFloatsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.NumInstancesVectorFloats")); }
     BrzCampoPonteiro NumTempRegistersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.NumTempRegisters")); }
+    BrzCampoPonteiro RandCountersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.RandCounters")); }
     BrzCampoPonteiro RandStreamField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.RandStream")); }
+    BrzCampoPonteiro StartInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.StartInstance")); }
+    BrzCampoPonteiro TempBufferSizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.TempBufferSize")); }
+    BrzCampoPonteiro TempRegTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.TempRegTable")); }
+    BrzCampoPonteiro TempRegisterSizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.TempRegisterSize")); }
+    BrzCampoPonteiro ThreadLocalTempDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ThreadLocalTempData")); }
+    BrzCampoPonteiro UserPtrTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.UserPtrTable")); }
+    BrzCampoPonteiro ValidInstanceCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ValidInstanceCount")); }
+    BrzCampoPonteiro ValidInstanceIndexStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ValidInstanceIndexStart")); }
+    BrzCampoPonteiro ValidInstanceUniformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.ValidInstanceUniform")); }
+    BrzCampoPonteiro bIsParallelExecutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMContext.bIsParallelExecution")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMCONTEXT_H

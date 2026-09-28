@@ -32,6 +32,9 @@ struct FWorldPartitionCanvasMultiLineTextItem
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro MultiLineTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionCanvasMultiLineTextItem.MultiLineText")); }
     BrzCampoPonteiro PositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionCanvasMultiLineTextItem.Position")); }
 };

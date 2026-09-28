@@ -37,7 +37,7 @@ struct APrimalStructureItemContainer_CropPlot_VisualItems : public APrimalStruct
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot_VisualItems.BeginPlay()
     // classe: a funcao mora em APrimalStructureItemContainer_CropPlot, e APrimalStructureItemContainer_CropPlot_VisualItems herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=171+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot.BeginPlay()");
@@ -45,7 +45,7 @@ struct APrimalStructureItemContainer_CropPlot_VisualItems : public APrimalStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot_VisualItems.UpdateVisuals()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateVisuals() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot_VisualItems.UpdateVisuals()");
@@ -59,6 +59,10 @@ struct APrimalStructureItemContainer_CropPlot_VisualItems : public APrimalStruct
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureItemContainer_CropPlot_VisualItems.ItemClassesToCheck"); }
     UStaticMeshComponent*& MyExtraStaticMeshField() const
     { return *GetNativePointerField<UStaticMeshComponent**>(this, "APrimalStructureItemContainer_CropPlot_VisualItems.MyExtraStaticMesh"); }
+    BrzCampoPonteiro bDoItemVisualsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot_VisualItems.bDoItemVisuals")); }
+    BrzCampoPonteiro bHasItemsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureItemContainer_CropPlot_VisualItems.bHasItems")); }
     BitFieldValue<bool, unsigned __int32> bHasItems()
     { return { (void*)this, "bHasItems" }; }
     BitFieldValue<bool, unsigned __int32> bDoItemVisuals()

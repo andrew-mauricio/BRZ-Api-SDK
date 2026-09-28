@@ -129,6 +129,10 @@ struct UMeshComponent : public UPrimitiveComponent
     { return *GetNativePointerField<float*>(this, "UMeshComponent.OverlayMaterialMaxDrawDistance"); }
     TArray<void*>& OverrideMaterialsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UMeshComponent.OverrideMaterials"); }
+    BrzCampoPonteiro bDisablePerPixelPaintingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMeshComponent.bDisablePerPixelPainting")); }
+    BrzCampoPonteiro bEnableMaterialParameterCachingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMeshComponent.bEnableMaterialParameterCaching")); }
     BitFieldValue<bool, unsigned __int32> bEnableMaterialParameterCaching()
     { return { (void*)this, "bEnableMaterialParameterCaching" }; }
     BitFieldValue<bool, unsigned __int32> bCachedMaterialParameterIndicesAreDirty()

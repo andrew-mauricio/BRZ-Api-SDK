@@ -53,7 +53,7 @@ struct UWorldPartitionStreamingPolicy
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionStreamingPolicy.DrawRuntimeHash2D(FWorldPartitionDraw2DContext&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DrawRuntimeHash2D(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorldPartitionStreamingPolicy.DrawRuntimeHash2D(FWorldPartitionDraw2DContext&)", a0);
@@ -181,7 +181,7 @@ struct UWorldPartitionStreamingPolicy
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionStreamingPolicy.SetShouldMergeStreamingSourceInfo(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetShouldMergeStreamingSourceInfo(bool a0) const
     {
         return NativeCall<void*, bool>(this, "UWorldPartitionStreamingPolicy.SetShouldMergeStreamingSourceInfo(bool)", a0);
@@ -221,6 +221,8 @@ struct UWorldPartitionStreamingPolicy
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionStreamingPolicy.CurrentStreamingPerformance")); }
     BrzCampoPonteiro TargetStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionStreamingPolicy.TargetState")); }
+    BrzCampoPonteiro bShouldMergeStreamingSourceInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionStreamingPolicy.bShouldMergeStreamingSourceInfo")); }
     BitFieldValue<bool, unsigned __int32> bShouldMergeStreamingSourceInfo()
     { return { (void*)this, "bShouldMergeStreamingSourceInfo" }; }
 

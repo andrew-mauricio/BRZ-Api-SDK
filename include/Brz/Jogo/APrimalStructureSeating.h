@@ -38,7 +38,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.AllowPickupForItem(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=64]]
+    // endereco: casamento de bytes com a build de referencia
     bool AllowPickupForItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureSeating.AllowPickupForItem(AShooterPlayerController*)", a0);
@@ -46,7 +46,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureSeating.BPAllowSeating(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPAllowSeating(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureSeating.BPAllowSeating(AShooterPlayerController*)", a0);
@@ -54,7 +54,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureSeating.BPGetBestSeatNumberForBot(APrimalBotCharacter*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int BPGetBestSeatNumberForBot(void* a0, int a1) const
     {
         return NativeCall<int, void*, int>(this, "APrimalStructureSeating.BPGetBestSeatNumberForBot(APrimalBotCharacter*,int)", a0, a1);
@@ -70,7 +70,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureSeating.BPPreventReleaseSeatingStructure(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventReleaseSeatingStructure(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureSeating.BPPreventReleaseSeatingStructure(AShooterCharacter*)", a0);
@@ -78,7 +78,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalStructureSeating.BPReleasedPlayer(AShooterCharacter*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPReleasedPlayer(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "APrimalStructureSeating.BPReleasedPlayer(AShooterCharacter*,int)", a0, a1);
@@ -94,7 +94,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.BotControl(APrimalBotCharacter*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=168]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BotControl(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalStructureSeating.BotControl(APrimalBotCharacter*,int)", a0, a1);
@@ -102,7 +102,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.BotRelease(APrimalBotCharacter*,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BotRelease(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalStructureSeating.BotRelease(APrimalBotCharacter*,int)", a0, a1);
@@ -134,7 +134,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.ClearSeats()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=22]]
+    // endereco: casamento de bytes com a build de referencia
     void ClearSeats() const
     {
         NativeCall<void>(this, "APrimalStructureSeating.ClearSeats()");
@@ -168,7 +168,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.GetBotSeatingComponent()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=256+chamadores=8]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetBotSeatingComponent() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating.GetBotSeatingComponent()");
@@ -176,7 +176,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.GetHandIKEnabled(bool&,bool&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetHandIKEnabled(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureSeating.GetHandIKEnabled(bool&,bool&)", a0, a1);
@@ -184,7 +184,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.GetHandsSocketsTransforms(UE::Math::TTransform<double>&,UE::Math::TTrans
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetHandsSocketsTransforms(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureSeating.GetHandsSocketsTransforms(UE::Math::TTransform<double>&,UE::Math::TTransform<double>&)", a0, a1);
@@ -192,7 +192,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocat
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=331+grafo=10/10]]
+    // endereco: casamento de bytes com a build de referencia
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureSeating.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -248,7 +248,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.GetOrbitCamZoomParams(float&,float&,float&,float&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=287]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetOrbitCamZoomParams(void* a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, void*, void*, void*, void*>(this, "APrimalStructureSeating.GetOrbitCamZoomParams(float&,float&,float&,float&)", a0, a1, a2, a3);
@@ -288,7 +288,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureSeating.HasAvailableSeat()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=125]]
+    // endereco: casamento de bytes com a build de referencia
     bool HasAvailableSeat() const
     {
         return NativeCall<bool>(this, "APrimalStructureSeating.HasAvailableSeat()");
@@ -312,7 +312,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.OnRep_CharacterPerSeat()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_CharacterPerSeat() const
     {
         NativeCall<void>(this, "APrimalStructureSeating.OnRep_CharacterPerSeat()");
@@ -320,7 +320,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.OnRep_SeatedCharacter()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=162]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_SeatedCharacter() const
     {
         NativeCall<void>(this, "APrimalStructureSeating.OnRep_SeatedCharacter()");
@@ -336,7 +336,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.OverrideBotIdleFidgetAnimation_Implementation(UAnimMontage*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OverrideBotIdleFidgetAnimation_Implementation(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalStructureSeating.OverrideBotIdleFidgetAnimation_Implementation(UAnimMontage*,int)", a0, a1);
@@ -368,7 +368,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.Release(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=66]]
+    // endereco: casamento de bytes com a build de referencia
     void Release(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureSeating.Release(AShooterCharacter*)", a0);
@@ -436,10 +436,64 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
     { return *GetNativePointerField<float*>(this, "APrimalStructureSeating.UnboardDistance"); }
     USoundCue*& UnrideSoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "APrimalStructureSeating.UnrideSound"); }
-    BitFieldValue<bool, unsigned __int32> bAllowDinoCompanionAttachment()
-    { return { (void*)this, "bAllowDinoCompanionAttachment" }; }
+    BrzCampoPonteiro bAdjustForLegLengthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAdjustForLegLength")); }
+    BrzCampoPonteiro bAdjustForLegLengthStandingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAdjustForLegLengthStanding")); }
+    BrzCampoPonteiro bAllowAnyTeamToSitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAllowAnyTeamToSit")); }
+    BrzCampoPonteiro bAllowCrouchProneToSitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAllowCrouchProneToSit")); }
+    BrzCampoPonteiro bAllowDinoCompanionAttachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAllowDinoCompanionAttachment")); }
+    BrzCampoPonteiro bAllowFPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAllowFPV")); }
+    BrzCampoPonteiro bAllowOrbitCamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAllowOrbitCam")); }
+    BrzCampoPonteiro bAllowSleepingPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bAllowSleepingPlayers")); }
+    BrzCampoPonteiro bBendForwardWithIKField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bBendForwardWithIK")); }
+    BrzCampoPonteiro bEnableSeatedFreeLookField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bEnableSeatedFreeLook")); }
+    BrzCampoPonteiro bFreeLookActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bFreeLookActive")); }
+    BrzCampoPonteiro bHideCharacterInFPVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bHideCharacterInFPV")); }
+    BrzCampoPonteiro bHideLegacyStructureAmmoHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bHideLegacyStructureAmmoHUD")); }
+    BrzCampoPonteiro bJumpOnDetachField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bJumpOnDetach")); }
+    BrzCampoPonteiro bOnlyUseHandIKForFirstSeatField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bOnlyUseHandIKForFirstSeat")); }
+    BrzCampoPonteiro bOverrideOrbitCamTargetLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bOverrideOrbitCamTargetLocation")); }
+    BrzCampoPonteiro bPreventBotIdleFidgetAnimationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bPreventBotIdleFidgetAnimations")); }
+    BrzCampoPonteiro bPreventHandcuffLockedSeatingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bPreventHandcuffLockedSeating")); }
+    BrzCampoPonteiro bPreventSeatingWhenHandcuffedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bPreventSeatingWhenHandcuffed")); }
+    BrzCampoPonteiro bReleaseFindsGroundPlacementField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bReleaseFindsGroundPlacement")); }
     bool& bRestrictTPVCameraYawField() const
     { return *GetNativePointerField<bool*>(this, "APrimalStructureSeating.bRestrictTPVCameraYaw"); }
+    BrzCampoPonteiro bSupportDynamicSeatingChangesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bSupportDynamicSeatingChanges")); }
+    BrzCampoPonteiro bTraceToUnboardLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bTraceToUnboardLocation")); }
+    BrzCampoPonteiro bUseGetSeatingAnimOverrideBPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bUseGetSeatingAnimOverrideBP")); }
+    BrzCampoPonteiro bUseHandIkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bUseHandIk")); }
+    BrzCampoPonteiro bUsesAltFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bUsesAltFire")); }
+    BrzCampoPonteiro bUsesItemSlotKeysField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bUsesItemSlotKeys")); }
+    BrzCampoPonteiro bUsesPrimaryFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bUsesPrimaryFire")); }
+    BrzCampoPonteiro bUsesTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating.bUsesTargeting")); }
     BitFieldValue<bool, unsigned __int32> bAdjustForLegLength()
     { return { (void*)this, "bAdjustForLegLength" }; }
     BitFieldValue<bool, unsigned __int32> bRestrictTPVCameraYaw()

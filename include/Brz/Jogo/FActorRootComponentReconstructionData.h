@@ -39,12 +39,20 @@ struct FActorRootComponentReconstructionData
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.Actor")); }
     TObjectPtr<USceneComponent>& AttachParentField() const
     { return *GetNativePointerField<TObjectPtr<USceneComponent>*>(this, "FActorRootComponentReconstructionData.AttachParent"); }
+    BrzCampoPonteiro AttachParentNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.AttachParentName")); }
+    BrzCampoPonteiro AttachedParentInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.AttachedParentInfo")); }
+    BrzCampoPonteiro AttachedToInfoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.AttachedToInfo")); }
     BrzCampoPonteiro RelativeTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.RelativeTransform")); }
     BrzCampoPonteiro SocketNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.SocketName")); }
     BrzCampoPonteiro TransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.Transform")); }
+    BrzCampoPonteiro TransformRotationCacheField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRootComponentReconstructionData.TransformRotationCache")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORROOTCOMPONENTRECONSTRUCTIONDATA_H

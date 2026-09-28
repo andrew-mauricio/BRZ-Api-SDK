@@ -35,7 +35,7 @@ struct APrimalWorldModifier : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWorldModifier.BPPostFoliageScan()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPPostFoliageScan() const
     {
         NativeCall<void>(this, "APrimalWorldModifier.BPPostFoliageScan()");
@@ -43,7 +43,7 @@ struct APrimalWorldModifier : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWorldModifier.BPPreFoliageScan()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPPreFoliageScan() const
     {
         NativeCall<void>(this, "APrimalWorldModifier.BPPreFoliageScan()");
@@ -51,7 +51,7 @@ struct APrimalWorldModifier : public AActor
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalWorldModifier.BPSkinFoliage(UHierarchicalInstancedStaticMeshComponent*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=53]]
+    // endereco: casamento de bytes com a build de referencia
     void BPSkinFoliage(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalWorldModifier.BPSkinFoliage(UHierarchicalInstancedStaticMeshComponent*)", a0);
@@ -67,7 +67,7 @@ struct APrimalWorldModifier : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWorldModifier.DoRescanForSublevelLoaded()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoRescanForSublevelLoaded() const
     {
         NativeCall<void>(this, "APrimalWorldModifier.DoRescanForSublevelLoaded()");
@@ -131,7 +131,7 @@ struct APrimalWorldModifier : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWorldModifier.TryStaticMeshActorReskin(AStaticMeshActor*,FSublevelOverrideGroup&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro TryStaticMeshActorReskin(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalWorldModifier.TryStaticMeshActorReskin(AStaticMeshActor*,FSublevelOverrideGroup&)", a0, a1);
@@ -159,6 +159,8 @@ struct APrimalWorldModifier : public AActor
     { return *GetNativePointerField<TArray<AStaticMeshActor*>*>(this, "APrimalWorldModifier.ReskinnedLevelStaticMeshTrackingList"); }
     BrzCampoPonteiro SublevelOverrideGroupsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldModifier.SublevelOverrideGroups")); }
+    BrzCampoPonteiro bUseMapExclusionListAsExclusiveListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldModifier.bUseMapExclusionListAsExclusiveList")); }
     BitFieldValue<bool, unsigned __int32> bUseMapExclusionListAsExclusiveList()
     { return { (void*)this, "bUseMapExclusionListAsExclusiveList" }; }
 

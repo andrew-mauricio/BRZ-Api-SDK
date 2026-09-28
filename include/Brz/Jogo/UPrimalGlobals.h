@@ -75,7 +75,7 @@ struct UPrimalGlobals : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGlobals.EqualEqual_DoubleDouble(double,double)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool EqualEqual_DoubleDouble(double a0, double a1) const
     {
         return NativeCall<bool, double, double>(this, "UPrimalGlobals.EqualEqual_DoubleDouble(double,double)", a0, a1);
@@ -83,7 +83,7 @@ struct UPrimalGlobals : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGlobals.FinishLoadGameMedia()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void FinishLoadGameMedia() const
     {
         NativeCall<void>(this, "UPrimalGlobals.FinishLoadGameMedia()");
@@ -99,7 +99,7 @@ struct UPrimalGlobals : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGlobals.FlushLevelStreamingOnNextCameraUpdate(UWorld*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void FlushLevelStreamingOnNextCameraUpdate(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalGlobals.FlushLevelStreamingOnNextCameraUpdate(UWorld*)", a0);
@@ -131,7 +131,7 @@ struct UPrimalGlobals : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGlobals.GetSOTFNotificationManager(UWorld*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static ASOTFNotification* GetSOTFNotificationManager(void* a0)
     {
         return NativeCall<ASOTFNotification*, void*>(nullptr, "UPrimalGlobals.GetSOTFNotificationManager(UWorld*)", a0);
@@ -139,7 +139,7 @@ struct UPrimalGlobals : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalGlobals.GetShooterPlayerCameraManager(UWorld*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     UObject* GetShooterPlayerCameraManager(void* a0) const
     {
         return NativeCall<UObject*, void*>(this, "UPrimalGlobals.GetShooterPlayerCameraManager(UWorld*)", a0);
@@ -208,7 +208,7 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro CachedDBsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.CachedDBs")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +32, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +32, medido na build 25535041
     //  (offset absoluto medido: 0x280; confianca media)
     void*& CompletedDialogField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 32); }
@@ -243,7 +243,7 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro GlobalGenericConfirmationDialogField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.GlobalGenericConfirmationDialog")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +16, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +16, medido na build 25535041
     //  (offset absoluto medido: 0x270; confianca media)
     unsigned long long& LoadedTotalConversionField() const
     { return BrzCampoAncorado<unsigned long long>(this, "TriggerEffectLibrary", 16); }
@@ -274,7 +274,7 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro RagdollKinematicActorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.RagdollKinematicActorClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +24, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +24, medido na build 25535041
     //  (offset absoluto medido: 0x278; confianca media)
     int& SavingFilesCounterField() const
     { return BrzCampoAncorado<int>(this, "TriggerEffectLibrary", 24); }
@@ -283,7 +283,7 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro SpawnMenuUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.SpawnMenuUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +48, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +48, medido na build 25535041
     //  (offset absoluto medido: 0x290; confianca media)
     void*& StreamableManagerField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 48); }
@@ -294,7 +294,7 @@ struct UPrimalGlobals : public UObject
     TArray<void*>& UIOnlyShowModIDsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGlobals.UIOnlyShowModIDs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +8, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +8, medido na build 25535041
     //  (offset absoluto medido: 0x268; confianca media)
     void*& UseLangOfflineField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 8); }
@@ -302,21 +302,25 @@ struct UPrimalGlobals : public UObject
     { return *GetNativePointerField<UMaterialInstanceConstant**>(this, "UPrimalGlobals.VertexViz"); }
     bool& bAllowNonDedicatedHostField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalGlobals.bAllowNonDedicatedHost"); }
+    BrzCampoPonteiro bAllowSingleplayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.bAllowSingleplayer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +11, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +11, medido na build 25535041
     //  (offset absoluto medido: 0x26B; confianca media)
     bool& bContentStrippedForDedicatedField() const
     { return BrzCampoAncorado<bool>(this, "TriggerEffectLibrary", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +9, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +9, medido na build 25535041
     //  (offset absoluto medido: 0x269; confianca media)
     bool& bGameMediaLoadedField() const
     { return BrzCampoAncorado<bool>(this, "TriggerEffectLibrary", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +10, medido na build 25090264
+    //  ancorado em `TriggerEffectLibrary` +10, medido na build 25535041
     //  (offset absoluto medido: 0x26A; confianca media)
     void*& bStartedAsyncLoadField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 10); }
+    BrzCampoPonteiro bTotalConversionShowUnofficialServersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.bTotalConversionShowUnofficialServers")); }
     BitFieldValue<bool, unsigned __int32> bAllowNonDedicatedHost()
     { return { (void*)this, "bAllowNonDedicatedHost" }; }
     BitFieldValue<bool, unsigned __int32> bAllowSingleplayer()

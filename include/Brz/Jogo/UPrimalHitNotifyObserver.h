@@ -57,12 +57,12 @@ struct UPrimalHitNotifyObserver
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHitNotifyObserver.ObservedType")); }
     BrzCampoPonteiro ProcessingPhaseField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHitNotifyObserver.ProcessingPhase")); }
-    BitFieldValue<bool, unsigned __int32> bAutoRegisterWithObserverRegistry()
-    { return { (void*)this, "bAutoRegisterWithObserverRegistry" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoRegisterWithProcessingPhases()
-    { return { (void*)this, "bAutoRegisterWithProcessingPhases" }; }
-    BitFieldValue<bool, unsigned __int32> bRequiresGameThreadExecution()
-    { return { (void*)this, "bRequiresGameThreadExecution" }; }
+    BrzCampoPonteiro bAutoRegisterWithObserverRegistryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHitNotifyObserver.bAutoRegisterWithObserverRegistry")); }
+    BrzCampoPonteiro bAutoRegisterWithProcessingPhasesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHitNotifyObserver.bAutoRegisterWithProcessingPhases")); }
+    BrzCampoPonteiro bRequiresGameThreadExecutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHitNotifyObserver.bRequiresGameThreadExecution")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALHITNOTIFYOBSERVER_H

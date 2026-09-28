@@ -37,7 +37,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.ClickedButton(UWidget*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ClickedButton(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UInventoryStatsPanel.ClickedButton(UWidget*)", a0);
@@ -45,7 +45,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.GetCurrentlyViewingInventory()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetCurrentlyViewingInventory() const
     {
         return NativeCall<void*>(this, "UInventoryStatsPanel.GetCurrentlyViewingInventory()");
@@ -53,7 +53,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.GetParentPrimalUI()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetParentPrimalUI() const
     {
         return NativeCall<void*>(this, "UInventoryStatsPanel.GetParentPrimalUI()");
@@ -61,7 +61,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.GotoNextTab()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GotoNextTab() const
     {
         return NativeCall<void*>(this, "UInventoryStatsPanel.GotoNextTab()");
@@ -69,7 +69,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.Init(UUI_Inventory*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=642+grafo=11/11]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Init(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UInventoryStatsPanel.Init(UUI_Inventory*)", a0);
@@ -85,7 +85,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.RefreshPanelHeight()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=21]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro RefreshPanelHeight() const
     {
         return NativeCall<void*>(this, "UInventoryStatsPanel.RefreshPanelHeight()");
@@ -101,7 +101,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.SetupSpecialWidgetAdjacents(UWidget*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetupSpecialWidgetAdjacents(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UInventoryStatsPanel.SetupSpecialWidgetAdjacents(UWidget*)", a0);
@@ -117,7 +117,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.ShowLocalStats()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowLocalStats() const
     {
         return NativeCall<void*>(this, "UInventoryStatsPanel.ShowLocalStats()");
@@ -125,7 +125,7 @@ struct UInventoryStatsPanel
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UInventoryStatsPanel.ShowRemoteStats()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro ShowRemoteStats() const
     {
         return NativeCall<void*>(this, "UInventoryStatsPanel.ShowRemoteStats()");
@@ -199,10 +199,10 @@ struct UInventoryStatsPanel
     { return *GetNativePointerField<float*>(this, "UInventoryStatsPanel.GamepadSelectClosestDistanceMultiplier"); }
     BrzCampoPonteiro HTTPGetResponseEventField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.HTTPGetResponseEvent")); }
-    BitFieldValue<bool, unsigned __int32> HandleVisibilityWithInput()
-    { return { (void*)this, "HandleVisibilityWithInput" }; }
+    BrzCampoPonteiro HandleVisibilityWithInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.HandleVisibilityWithInput")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +88, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +88, medido na build 25535041
     //  (offset absoluto medido: 0x8C8; confianca media)
     void*& HeaderPanelField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 88); }
@@ -210,12 +210,12 @@ struct UInventoryStatsPanel
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.HeaderPanelName"); }
     unsigned char& HighlightStartPointTypeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UInventoryStatsPanel.HighlightStartPointType"); }
-    BitFieldValue<bool, unsigned __int32> Highlightable()
-    { return { (void*)this, "Highlightable" }; }
+    BrzCampoPonteiro HighlightableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.Highlightable")); }
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UInventoryStatsPanel.InputComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +16, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +16, medido na build 25535041
     //  (offset absoluto medido: 0x880; confianca alta)
     void*& InventoryUIField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 16); }
@@ -239,28 +239,28 @@ struct UInventoryStatsPanel
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.OriginalUnStretchedAnchors")); }
     BrzCampoPonteiro OriginalUnstretchedSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.OriginalUnstretchedSize")); }
-    BitFieldValue<bool, unsigned __int32> OverrideButtonSounds()
-    { return { (void*)this, "OverrideButtonSounds" }; }
+    BrzCampoPonteiro OverrideButtonSoundsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.OverrideButtonSounds")); }
     BrzCampoPonteiro PaddingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.Padding")); }
     BrzCampoPonteiro PixelSnappingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.PixelSnapping")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +72, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +72, medido na build 25535041
     //  (offset absoluto medido: 0x8B8; confianca media)
     void*& PlayerEnabledEffectField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 72); }
     FName& PlayerEnabledEffectNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.PlayerEnabledEffectName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +32, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +32, medido na build 25535041
     //  (offset absoluto medido: 0x890; confianca alta)
     void*& PlayerStatsPanelField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 32); }
     FName& PlayerStatsPanelNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.PlayerStatsPanelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +48, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +48, medido na build 25535041
     //  (offset absoluto medido: 0x8A0; confianca media)
     void*& PlayerStatsTabButtonField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 48); }
@@ -271,7 +271,7 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro QueuedWidgetAnimationTransitionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.QueuedWidgetAnimationTransitions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +80, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +80, medido na build 25535041
     //  (offset absoluto medido: 0x8C0; confianca media)
     void*& RemoteEnabledEffectField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 80); }
@@ -280,14 +280,14 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro RemoteStatsPanelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.RemoteStatsPanel")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +56, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +56, medido na build 25535041
     //  (offset absoluto medido: 0x8A8; confianca media)
     void*& RemoteStatsTabButtonField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 56); }
     FName& RemoteStatsTabButtonNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.RemoteStatsTabButtonName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +64, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +64, medido na build 25535041
     //  (offset absoluto medido: 0x8B0; confianca media)
     void*& RemoteStatsTabNameField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 64); }
@@ -300,7 +300,7 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro RenderTransformPivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.RenderTransformPivot")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +96, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +96, medido na build 25535041
     //  (offset absoluto medido: 0x8D0; confianca media)
     void*& RootSizeBoxField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 96); }
@@ -308,8 +308,8 @@ struct UInventoryStatsPanel
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.RootSizeBoxName"); }
     int& SceneStackPriorityField() const
     { return *GetNativePointerField<int*>(this, "UInventoryStatsPanel.SceneStackPriority"); }
-    BitFieldValue<bool, unsigned __int32> ShouldStretchMainScreenWhenHandheld()
-    { return { (void*)this, "ShouldStretchMainScreenWhenHandheld" }; }
+    BrzCampoPonteiro ShouldStretchMainScreenWhenHandheldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.ShouldStretchMainScreenWhenHandheld")); }
     BrzCampoPonteiro SizeBoxHandheldSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.SizeBoxHandheldSize")); }
     int& SlotField() const
@@ -317,7 +317,7 @@ struct UInventoryStatsPanel
     float& SplitscreenDPIScalerField() const
     { return *GetNativePointerField<float*>(this, "UInventoryStatsPanel.SplitscreenDPIScaler"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +24, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +24, medido na build 25535041
     //  (offset absoluto medido: 0x888; confianca alta)
     void*& StatsWidgetSwitcherField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 24); }
@@ -336,7 +336,7 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro SwitcherTextInactiveColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.SwitcherTextInactiveColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +40, medido na build 25090264
+    //  ancorado em `SwitcherTextInactiveColor` +40, medido na build 25535041
     //  (offset absoluto medido: 0x898; confianca media)
     void*& TabBgSwitcherField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 40); }
@@ -354,126 +354,126 @@ struct UInventoryStatsPanel
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.ToolTipWidgetDelegate")); }
     int& ViewportZOrderField() const
     { return *GetNativePointerField<int*>(this, "UInventoryStatsPanel.ViewportZOrder"); }
-    BitFieldValue<bool, unsigned __int32> Visibility()
-    { return { (void*)this, "Visibility" }; }
+    BrzCampoPonteiro VisibilityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.Visibility")); }
     BrzCampoPonteiro VisibilityDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.VisibilityDelegate")); }
     BrzCampoPonteiro VisibilityGamepadInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.VisibilityGamepadInput")); }
     BrzCampoPonteiro VisibilityKBMInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.VisibilityKBMInput")); }
-    BitFieldValue<bool, unsigned __int32> WasInHandheldMode()
-    { return { (void*)this, "WasInHandheldMode" }; }
+    BrzCampoPonteiro WasInHandheldModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.WasInHandheldMode")); }
     BrzCampoPonteiro WidgetTreeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.WidgetTree")); }
     BrzCampoPonteiro XBoxFooterUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.XBoxFooterUITemplate")); }
-    BitFieldValue<bool, unsigned __int32> bAutoProcessSplitscreenScaling()
-    { return { (void*)this, "bAutoProcessSplitscreenScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bAutomaticallyRegisterInputOnConstruction()
-    { return { (void*)this, "bAutomaticallyRegisterInputOnConstruction" }; }
-    BitFieldValue<bool, unsigned __int32> bCachedIsGamepadActive()
-    { return { (void*)this, "bCachedIsGamepadActive" }; }
-    BitFieldValue<bool, unsigned __int32> bCaptureMouseInput()
-    { return { (void*)this, "bCaptureMouseInput" }; }
-    BitFieldValue<bool, unsigned __int32> bClickClosesMenu()
-    { return { (void*)this, "bClickClosesMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bCloseOnPlayerDie()
-    { return { (void*)this, "bCloseOnPlayerDie" }; }
-    BitFieldValue<bool, unsigned __int32> bConstrainVirtualCursor()
-    { return { (void*)this, "bConstrainVirtualCursor" }; }
-    BitFieldValue<bool, unsigned __int32> bCreatedByConstructionScript()
-    { return { (void*)this, "bCreatedByConstructionScript" }; }
-    BitFieldValue<bool, unsigned __int32> bDisableAxisOrientedSweepTestOnMe()
-    { return { (void*)this, "bDisableAxisOrientedSweepTestOnMe" }; }
-    BitFieldValue<bool, unsigned __int32> bDoExtraDataListButtonPanelFilteringChecks()
-    { return { (void*)this, "bDoExtraDataListButtonPanelFilteringChecks" }; }
-    BitFieldValue<bool, unsigned __int32> bDontRenderHighlight()
-    { return { (void*)this, "bDontRenderHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bEscapeClosesMenu()
-    { return { (void*)this, "bEscapeClosesMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bEscapeOpensPauseMenu()
-    { return { (void*)this, "bEscapeOpensPauseMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bForceDisableFrameGen()
-    { return { (void*)this, "bForceDisableFrameGen" }; }
-    BitFieldValue<bool, unsigned __int32> bForceFullscreenVirtualCursor()
-    { return { (void*)this, "bForceFullscreenVirtualCursor" }; }
-    BitFieldValue<bool, unsigned __int32> bForceVirtualCursorEnabled()
-    { return { (void*)this, "bForceVirtualCursorEnabled" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedPaint()
-    { return { (void*)this, "bHasScriptImplementedPaint" }; }
-    BitFieldValue<bool, unsigned __int32> bHasScriptImplementedTick()
-    { return { (void*)this, "bHasScriptImplementedTick" }; }
-    BitFieldValue<bool, unsigned __int32> bIgnoreUIScaling()
-    { return { (void*)this, "bIgnoreUIScaling" }; }
-    BitFieldValue<bool, unsigned __int32> bIsClosing()
-    { return { (void*)this, "bIsClosing" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEnabled()
-    { return { (void*)this, "bIsEnabled" }; }
+    BrzCampoPonteiro bAutoProcessSplitscreenScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bAutoProcessSplitscreenScaling")); }
+    BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bAutomaticallyRegisterInputOnConstruction")); }
+    BrzCampoPonteiro bCachedIsGamepadActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bCachedIsGamepadActive")); }
+    BrzCampoPonteiro bCaptureMouseInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bCaptureMouseInput")); }
+    BrzCampoPonteiro bClickClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bClickClosesMenu")); }
+    BrzCampoPonteiro bCloseOnPlayerDieField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bCloseOnPlayerDie")); }
+    BrzCampoPonteiro bConstrainVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bConstrainVirtualCursor")); }
+    BrzCampoPonteiro bCreatedByConstructionScriptField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bCreatedByConstructionScript")); }
+    BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bDisableAxisOrientedSweepTestOnMe")); }
+    BrzCampoPonteiro bDoExtraDataListButtonPanelFilteringChecksField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bDoExtraDataListButtonPanelFilteringChecks")); }
+    BrzCampoPonteiro bDontRenderHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bDontRenderHighlight")); }
+    BrzCampoPonteiro bEscapeClosesMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bEscapeClosesMenu")); }
+    BrzCampoPonteiro bEscapeOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bEscapeOpensPauseMenu")); }
+    BrzCampoPonteiro bForceDisableFrameGenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bForceDisableFrameGen")); }
+    BrzCampoPonteiro bForceFullscreenVirtualCursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bForceFullscreenVirtualCursor")); }
+    BrzCampoPonteiro bForceVirtualCursorEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bForceVirtualCursorEnabled")); }
+    BrzCampoPonteiro bHasScriptImplementedPaintField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bHasScriptImplementedPaint")); }
+    BrzCampoPonteiro bHasScriptImplementedTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bHasScriptImplementedTick")); }
+    BrzCampoPonteiro bIgnoreUIScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIgnoreUIScaling")); }
+    BrzCampoPonteiro bIsClosingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsClosing")); }
+    BrzCampoPonteiro bIsEnabledField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsEnabled")); }
     BrzCampoPonteiro bIsEnabledDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsEnabledDelegate")); }
-    BitFieldValue<bool, unsigned __int32> bIsFocusable()
-    { return { (void*)this, "bIsFocusable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsGameplayUI()
-    { return { (void*)this, "bIsGameplayUI" }; }
-    BitFieldValue<bool, unsigned __int32> bIsTopUI()
-    { return { (void*)this, "bIsTopUI" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVariable()
-    { return { (void*)this, "bIsVariable" }; }
-    BitFieldValue<bool, unsigned __int32> bIsVolatile()
-    { return { (void*)this, "bIsVolatile" }; }
-    BitFieldValue<bool, unsigned __int32> bMenuSupportSlomo()
-    { return { (void*)this, "bMenuSupportSlomo" }; }
-    BitFieldValue<bool, unsigned __int32> bOverride_Cursor()
-    { return { (void*)this, "bOverride_Cursor" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventGamepadDpadNavegation()
-    { return { (void*)this, "bPreventGamepadDpadNavegation" }; }
-    BitFieldValue<bool, unsigned __int32> bPrimalSetupSpecialAdjacents()
-    { return { (void*)this, "bPrimalSetupSpecialAdjacents" }; }
-    BitFieldValue<bool, unsigned __int32> bScaleScreenResolution()
-    { return { (void*)this, "bScaleScreenResolution" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldValidateInputOnRemove()
-    { return { (void*)this, "bShouldValidateInputOnRemove" }; }
-    BitFieldValue<bool, unsigned __int32> bShowAcceptIcon()
-    { return { (void*)this, "bShowAcceptIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowBumpersIcon()
-    { return { (void*)this, "bShowBumpersIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowCancelIcon()
-    { return { (void*)this, "bShowCancelIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnBottomIcon()
-    { return { (void*)this, "bShowFaceBtnBottomIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnLeftIcon()
-    { return { (void*)this, "bShowFaceBtnLeftIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnRightIcon()
-    { return { (void*)this, "bShowFaceBtnRightIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowFaceBtnTopIcon()
-    { return { (void*)this, "bShowFaceBtnTopIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLStickIcon()
-    { return { (void*)this, "bShowLStickIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLTBtnIcon()
-    { return { (void*)this, "bShowLTBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowLeftShoulderBtnIcon()
-    { return { (void*)this, "bShowLeftShoulderBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowRStickIcon()
-    { return { (void*)this, "bShowRStickIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowRTBtnIcon()
-    { return { (void*)this, "bShowRTBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowStartBtnIcon()
-    { return { (void*)this, "bShowStartBtnIcon" }; }
-    BitFieldValue<bool, unsigned __int32> bShowXBoxFooter()
-    { return { (void*)this, "bShowXBoxFooter" }; }
-    BitFieldValue<bool, unsigned __int32> bSpecialRightOpensPauseMenu()
-    { return { (void*)this, "bSpecialRightOpensPauseMenu" }; }
-    BitFieldValue<bool, unsigned __int32> bStopAction()
-    { return { (void*)this, "bStopAction" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPInitForObjects()
-    { return { (void*)this, "bUseBPInitForObjects" }; }
-    BitFieldValue<bool, unsigned __int32> bUseCustomTooltip()
-    { return { (void*)this, "bUseCustomTooltip" }; }
-    BitFieldValue<bool, unsigned __int32> bUseWindowClippingForHighlight()
-    { return { (void*)this, "bUseWindowClippingForHighlight" }; }
-    BitFieldValue<bool, unsigned __int32> bWantsPrimalItemNotifications()
-    { return { (void*)this, "bWantsPrimalItemNotifications" }; }
+    BrzCampoPonteiro bIsFocusableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsFocusable")); }
+    BrzCampoPonteiro bIsGameplayUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsGameplayUI")); }
+    BrzCampoPonteiro bIsTopUIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsTopUI")); }
+    BrzCampoPonteiro bIsVariableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsVariable")); }
+    BrzCampoPonteiro bIsVolatileField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bIsVolatile")); }
+    BrzCampoPonteiro bMenuSupportSlomoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bMenuSupportSlomo")); }
+    BrzCampoPonteiro bOverride_CursorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bOverride_Cursor")); }
+    BrzCampoPonteiro bPreventGamepadDpadNavegationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bPreventGamepadDpadNavegation")); }
+    BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bPrimalSetupSpecialAdjacents")); }
+    BrzCampoPonteiro bScaleScreenResolutionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bScaleScreenResolution")); }
+    BrzCampoPonteiro bShouldValidateInputOnRemoveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShouldValidateInputOnRemove")); }
+    BrzCampoPonteiro bShowAcceptIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowAcceptIcon")); }
+    BrzCampoPonteiro bShowBumpersIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowBumpersIcon")); }
+    BrzCampoPonteiro bShowCancelIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowCancelIcon")); }
+    BrzCampoPonteiro bShowFaceBtnBottomIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowFaceBtnBottomIcon")); }
+    BrzCampoPonteiro bShowFaceBtnLeftIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowFaceBtnLeftIcon")); }
+    BrzCampoPonteiro bShowFaceBtnRightIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowFaceBtnRightIcon")); }
+    BrzCampoPonteiro bShowFaceBtnTopIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowFaceBtnTopIcon")); }
+    BrzCampoPonteiro bShowLStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowLStickIcon")); }
+    BrzCampoPonteiro bShowLTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowLTBtnIcon")); }
+    BrzCampoPonteiro bShowLeftShoulderBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowLeftShoulderBtnIcon")); }
+    BrzCampoPonteiro bShowRStickIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowRStickIcon")); }
+    BrzCampoPonteiro bShowRTBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowRTBtnIcon")); }
+    BrzCampoPonteiro bShowStartBtnIconField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowStartBtnIcon")); }
+    BrzCampoPonteiro bShowXBoxFooterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bShowXBoxFooter")); }
+    BrzCampoPonteiro bSpecialRightOpensPauseMenuField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bSpecialRightOpensPauseMenu")); }
+    BrzCampoPonteiro bStopActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bStopAction")); }
+    BrzCampoPonteiro bUseBPInitForObjectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bUseBPInitForObjects")); }
+    BrzCampoPonteiro bUseCustomTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bUseCustomTooltip")); }
+    BrzCampoPonteiro bUseWindowClippingForHighlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bUseWindowClippingForHighlight")); }
+    BrzCampoPonteiro bWantsPrimalItemNotificationsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.bWantsPrimalItemNotifications")); }
     int& virtualCursorFramesField() const
     { return *GetNativePointerField<int*>(this, "UInventoryStatsPanel.virtualCursorFrames"); }
 };

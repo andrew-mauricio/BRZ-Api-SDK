@@ -36,7 +36,7 @@ struct UField : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UField.AddCppProperty(FProperty*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddCppProperty(void* a0) const
     {
         NativeCall<void, void*>(this, "UField.AddCppProperty(FProperty*)", a0);

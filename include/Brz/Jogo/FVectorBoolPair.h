@@ -33,6 +33,8 @@ struct FVectorBoolPair
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
 
+    BrzCampoPonteiro BoolValField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorBoolPair.BoolVal")); }
     BrzCampoPonteiro VectorValField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorBoolPair.VectorVal")); }
     BitFieldValue<bool, unsigned __int32> BoolVal()

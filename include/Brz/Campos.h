@@ -38,6 +38,7 @@
 #define BRZ_SDK_CAMPOS_H
 
 #include <string>
+#include <cstring>
 #include <utility>
 
 #include "Base.h"
@@ -138,11 +139,26 @@ RT GetNativeField(const void* _this, const std::string& field_name)
     return *p;
 }
 
+//  ── E O ACESSOR DO HEADER DESREFERENCIAVA O NULO MESMO ASSIM ──────────────
+//
+//  Os 24.365 acessores gerados sao `{ return *GetNativePointerField<T*>(...); }`.
+//  Devolver nulo aqui so' mudava o lugar da queda: o `*` do acessor lia o
+//  endereco 0 do mesmo jeito. Achado em 28/09/2026, convertendo os plugins para
+//  os headers — um campo que a build nova renomeie derrubaria o servidor no
+//  primeiro acesso, sem nome.
+//
+//  Agora o campo ausente devolve o VAZIO zerado (`BrzVazioZerado`, o mesmo do
+//  campo ancorado, logo abaixo): le'-se zero, escreve-se num bloco que ninguem
+//  le', e o nome do campo ja' foi ao log por `GetAddress`. Quem precisa SABER
+//  se o campo existe pergunta `GetAddress(obj, chave)` antes — ou, num bit,
+//  `Estado()`.
+inline unsigned char* BrzVazioZerado();
+
 template <typename RT>
 RT GetNativePointerField(const void* _this, const std::string& field_name)
 {
     DWORD64 e = GetAddress(_this, field_name);
-    if (!e) return RT();          // idem
+    if (!e) return reinterpret_cast<RT>(BrzVazioZerado());   // o nome ja' foi ao log
     return reinterpret_cast<RT>(e);
 }
 
@@ -198,6 +214,15 @@ public:
     BitFieldValue(void* pai, const char* campo) : pai_(pai), campo_(campo) {}
     RT operator()() const { return GetNativeBitField<RT, T>(pai_, campo_); }
     RT Get() const        { return (*this)(); }
+    //  -1 = o campo nao existe nesta build (ou o layout do bool nao foi medido);
+    //   0 / 1 = o valor. Para quem precisa RECUSAR na duvida — o Vault nao
+    //  deposita o que nao sabe se e' engrama (13/09/2026: 163 engramas).
+    int Estado() const
+    {
+        const BitField bf = GetBitField(pai_, campo_);
+        if (!bf.offset || bf.num_bits <= 0) return -1;
+        return (*this)() ? 1 : 0;
+    }
     void Set(RT v) const  { SetNativeBitField<RT, T>(pai_, campo_, v); }
     //  `pc->bIsAdmin() = true;` — a forma que os plugins escrevem para escrever.
     const BitFieldValue& operator=(RT v) const { Set(v); return *this; }
@@ -295,16 +320,26 @@ private:
 //  nao seria aceitavel e' devolver um endereco inventado dentro do objeto real.
 //  O tamanho cobre com folga qualquer campo do jogo; um tipo maior que isso
 //  simplesmente le' e escreve dentro do bloco, sem tocar em memoria alheia.
+//  28/09/2026: 4 KB (era 1 KB — a frase acima so' valia para tipo menor que o
+//  bloco) e ZERADO a cada falha, porque agora os acessores comuns tambem caem
+//  aqui: o que um escreveu nao pode aparecer como valor lido pelo proximo.
 inline unsigned char* BrzVazioBruto()
 {
-    static unsigned char vazio[1024] = { 0 };
+    static unsigned char vazio[4096] = { 0 };
     return vazio;
+}
+
+inline unsigned char* BrzVazioZerado()
+{
+    unsigned char* v = BrzVazioBruto();
+    std::memset(v, 0, 4096);
+    return v;
 }
 
 template <typename T>
 inline T& BrzVazioDe()
 {
-    return *reinterpret_cast<T*>(BrzVazioBruto());
+    return *reinterpret_cast<T*>(BrzVazioZerado());
 }
 
 template <typename T>

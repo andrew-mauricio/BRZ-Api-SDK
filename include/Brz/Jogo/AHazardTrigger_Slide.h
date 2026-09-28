@@ -54,7 +54,7 @@ struct AHazardTrigger_Slide : public AHazardTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger_Slide.Deactivate()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=42]]
+    // endereco: casamento de bytes com a build de referencia
     void Deactivate() const
     {
         NativeCall<void>(this, "AHazardTrigger_Slide.Deactivate()");
@@ -62,7 +62,7 @@ struct AHazardTrigger_Slide : public AHazardTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger_Slide.OnCharacterEnter_Implementation(APrimalCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void OnCharacterEnter_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AHazardTrigger_Slide.OnCharacterEnter_Implementation(APrimalCharacter*)", a0);
@@ -78,7 +78,7 @@ struct AHazardTrigger_Slide : public AHazardTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger_Slide.SpawnProjectile_Implementation(UE::Math::TVector<double>,UE::Math::TVector<
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=649+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void SpawnProjectile_Implementation(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "AHazardTrigger_Slide.SpawnProjectile_Implementation(UE::Math::TVector<double>,UE::Math::TVector<double>)", a0, a1);
@@ -94,7 +94,7 @@ struct AHazardTrigger_Slide : public AHazardTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger_Slide.SpawnWarningFX_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=24]]
+    // endereco: casamento de bytes com a build de referencia
     void SpawnWarningFX_Implementation() const
     {
         NativeCall<void>(this, "AHazardTrigger_Slide.SpawnWarningFX_Implementation()");
@@ -110,7 +110,7 @@ struct AHazardTrigger_Slide : public AHazardTrigger
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AHazardTrigger_Slide.UpdateActive(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void UpdateActive(float a0) const
     {
         NativeCall<void, float>(this, "AHazardTrigger_Slide.UpdateActive(float)", a0);

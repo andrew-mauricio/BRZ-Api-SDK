@@ -159,6 +159,14 @@ struct UPrimalClimbingSettings
     { return *GetNativePointerField<float*>(this, "UPrimalClimbingSettings.WallTraceDistance"); }
     float& WallTraceRadiusField() const
     { return *GetNativePointerField<float*>(this, "UPrimalClimbingSettings.WallTraceRadius"); }
+    BrzCampoPonteiro bAllowInputClimbingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalClimbingSettings.bAllowInputClimbing")); }
+    BrzCampoPonteiro bAllowSlidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalClimbingSettings.bAllowSliding")); }
+    BrzCampoPonteiro bDebugField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalClimbingSettings.bDebug")); }
+    BrzCampoPonteiro bUseExtendedLandTraceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalClimbingSettings.bUseExtendedLandTrace")); }
     BitFieldValue<bool, unsigned __int32> bAllowInputClimbing()
     { return { (void*)this, "bAllowInputClimbing" }; }
     BitFieldValue<bool, unsigned __int32> bAllowSliding()

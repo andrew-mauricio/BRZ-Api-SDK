@@ -69,7 +69,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.BoxTraceMultiByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVector
-    // endereco: thunk
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=684+grafo=9/9]]
     static bool BoxTraceMultiByProfile(void* a0, void* a1, void* a2, void* a3, void* a4, unsigned long long a5, bool a6, void* a7, int a8, void* a9, bool a10, void* a11, void* a12, float a13)
     {
         return NativeCall<bool, void*, void*, void*, void*, void*, unsigned long long, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.BoxTraceMultiByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,UE::Math::TVector<double>,UE::Math::TRotator<double>,FName,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,TArray<FHitResult,TSizedDefaultAllocator<32>>&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
@@ -93,7 +93,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.BoxTraceSingleByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVecto
-    // endereco: thunk
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=684+grafo=9/9]]
     static bool BoxTraceSingleByProfile(void* a0, void* a1, void* a2, void* a3, void* a4, unsigned long long a5, bool a6, void* a7, int a8, void* a9, bool a10, void* a11, void* a12, float a13)
     {
         return NativeCall<bool, void*, void*, void*, void*, void*, unsigned long long, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.BoxTraceSingleByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,UE::Math::TVector<double>,UE::Math::TRotator<double>,FName,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,FHitResult&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
@@ -117,7 +117,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.CanLaunchURL(FString&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool CanLaunchURL(const FString& a0)
     {
         return NativeCall<bool, void*>(nullptr, "UKismetSystemLibrary.CanLaunchURL(FString&)", const_cast<FString*>(&a0));
@@ -145,7 +145,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.CapsuleTraceSingle(UObject*,UE::Math::TVector<double>,UE::Math::TVector<dou
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool CapsuleTraceSingle(void* a0, void* a1, void* a2, float a3, float a4, int a5, bool a6, void* a7, int a8, void* a9, bool a10, void* a11, void* a12, float a13)
     {
         return NativeCall<bool, void*, void*, void*, float, float, int, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.CapsuleTraceSingle(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,float,float,ETraceTypeQuery,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,FHitResult&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
@@ -285,7 +285,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.K2_IsTimerActiveDelegate(FTimerDynamicDelegate)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool K2_IsTimerActiveDelegate(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UKismetSystemLibrary.K2_IsTimerActiveDelegate(FTimerDynamicDelegate)", a0);
@@ -293,7 +293,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.K2_IsTimerPausedDelegate(FTimerDynamicDelegate)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool K2_IsTimerPausedDelegate(void* a0)
     {
         return NativeCall<bool, void*>(nullptr, "UKismetSystemLibrary.K2_IsTimerPausedDelegate(FTimerDynamicDelegate)", a0);
@@ -341,7 +341,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.LineTraceMulti(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LineTraceMulti(void* a0, void* a1, void* a2, int a3, bool a4, void* a5, int a6, void* a7, bool a8, void* a9, void* a10, float a11)
     {
         return NativeCall<bool, void*, void*, void*, int, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.LineTraceMulti(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,ETraceTypeQuery,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,TArray<FHitResult,TSizedDefaultAllocator<32>>&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
@@ -349,7 +349,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.LineTraceMultiByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVecto
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LineTraceMultiByProfile(void* a0, void* a1, void* a2, unsigned long long a3, bool a4, void* a5, int a6, void* a7, bool a8, void* a9, void* a10, float a11)
     {
         return NativeCall<bool, void*, void*, void*, unsigned long long, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.LineTraceMultiByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,FName,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,TArray<FHitResult,TSizedDefaultAllocator<32>>&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
@@ -357,7 +357,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.LineTraceMultiForObjects(UObject*,UE::Math::TVector<double>,UE::Math::TVect
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LineTraceMultiForObjects(void* a0, void* a1, void* a2, void* a3, bool a4, void* a5, int a6, void* a7, bool a8, void* a9, void* a10, float a11)
     {
         return NativeCall<bool, void*, void*, void*, void*, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.LineTraceMultiForObjects(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,TArray<TEnumAsByte<EObjectTypeQuery>,TSizedDefaultAllocator<32>>&,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,TArray<FHitResult,TSizedDefaultAllocator<32>>&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
@@ -365,7 +365,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.LineTraceSingle(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LineTraceSingle(void* a0, void* a1, void* a2, int a3, bool a4, void* a5, int a6, void* a7, bool a8, void* a9, void* a10, float a11)
     {
         return NativeCall<bool, void*, void*, void*, int, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.LineTraceSingle(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,ETraceTypeQuery,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,FHitResult&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
@@ -373,7 +373,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.LineTraceSingleByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVect
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LineTraceSingleByProfile(void* a0, void* a1, void* a2, unsigned long long a3, bool a4, void* a5, int a6, void* a7, bool a8, void* a9, void* a10, float a11)
     {
         return NativeCall<bool, void*, void*, void*, unsigned long long, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.LineTraceSingleByProfile(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,FName,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,FHitResult&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
@@ -381,7 +381,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.LineTraceSingleForObjects(UObject*,UE::Math::TVector<double>,UE::Math::TVec
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool LineTraceSingleForObjects(void* a0, void* a1, void* a2, void* a3, bool a4, void* a5, int a6, void* a7, bool a8, void* a9, void* a10, float a11)
     {
         return NativeCall<bool, void*, void*, void*, void*, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.LineTraceSingleForObjects(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,TArray<TEnumAsByte<EObjectTypeQuery>,TSizedDefaultAllocator<32>>&,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,FHitResult&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
@@ -437,7 +437,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.SetUserActivity(FUserActivity&)
-    // endereco: thunk
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void SetUserActivity(void* a0)
     {
         NativeCall<void, void*>(nullptr, "UKismetSystemLibrary.SetUserActivity(FUserActivity&)", a0);
@@ -485,7 +485,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.SphereTraceMultiForObjects(UObject*,UE::Math::TVector<double>,UE::Math::TVe
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo+string_aprovado]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static bool SphereTraceMultiForObjects(void* a0, void* a1, void* a2, float a3, void* a4, bool a5, void* a6, int a7, void* a8, bool a9, void* a10, void* a11, float a12)
     {
         return NativeCall<bool, void*, void*, void*, float, void*, bool, void*, int, void*, bool, void*, void*, float>(nullptr, "UKismetSystemLibrary.SphereTraceMultiForObjects(UObject*,UE::Math::TVector<double>,UE::Math::TVector<double>,float,TArray<TEnumAsByte<EObjectTypeQuery>,TSizedDefaultAllocator<32>>&,bool,TArray<AActor*,TSizedDefaultAllocator<32>>&,EDrawDebugTrace::Type,TArray<FHitResult,TSizedDefaultAllocator<32>>&,bool,FLinearColor,FLinearColor,float)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
@@ -493,7 +493,7 @@ struct UKismetSystemLibrary
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UKismetSystemLibrary.StaticRegisterNativesUKismetSystemLibrary()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void StaticRegisterNativesUKismetSystemLibrary()
     {
         NativeCall<void>(nullptr, "UKismetSystemLibrary.StaticRegisterNativesUKismetSystemLibrary()");

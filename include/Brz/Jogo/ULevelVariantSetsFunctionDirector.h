@@ -40,6 +40,9 @@ struct ULevelVariantSetsFunctionDirector
     {
         return NativeCall<void*>(this, "ULevelVariantSetsFunctionDirector.BeginDestroy()");
     }
+
+    BrzCampoPonteiro OnDestroyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelVariantSetsFunctionDirector.OnDestroy")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELVARIANTSETSFUNCTIONDIRECTOR_H

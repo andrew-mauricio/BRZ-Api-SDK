@@ -69,7 +69,7 @@ struct FTransformCollection
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FTransformCollection.Reset()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro Reset() const
     {
         return NativeCall<void*>(this, "FTransformCollection.Reset()");
@@ -82,6 +82,9 @@ struct FTransformCollection
     {
         return NativeCall<void*, void*>(this, "FTransformCollection.Serialize(Chaos::FChaosArchive&)", a0);
     }
+
+    BrzCampoPonteiro BoneColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformCollection.BoneColor")); }
     FName& BoneNameField() const
     { return *GetNativePointerField<FName*>(this, "FTransformCollection.BoneName"); }
     TArray<void*>& ChildrenField() const

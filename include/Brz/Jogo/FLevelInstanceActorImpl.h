@@ -56,6 +56,11 @@ struct FLevelInstanceActorImpl
     {
         return NativeCall<void*>(this, "FLevelInstanceActorImpl.UnregisterLevelInstance()");
     }
+
+    BrzCampoPonteiro LevelInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceActorImpl.LevelInstance")); }
+    BrzCampoPonteiro LevelInstanceIDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FLevelInstanceActorImpl.LevelInstanceID")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FLEVELINSTANCEACTORIMPL_H

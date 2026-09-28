@@ -32,6 +32,9 @@ struct FVector3VertexDeclaration
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro VertexDeclarationRHIField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVector3VertexDeclaration.VertexDeclarationRHI")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTOR3VERTEXDECLARATION_H

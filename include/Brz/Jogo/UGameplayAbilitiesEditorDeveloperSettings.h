@@ -37,6 +37,10 @@ struct UGameplayAbilitiesEditorDeveloperSettings
     { return *GetNativePointerField<float*>(this, "UGameplayAbilitiesEditorDeveloperSettings.AbilitySystemGlobalScaler"); }
     float& DebugDrawMaxDistanceField() const
     { return *GetNativePointerField<float*>(this, "UGameplayAbilitiesEditorDeveloperSettings.DebugDrawMaxDistance"); }
+    BrzCampoPonteiro bIgnoreCooldownsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesEditorDeveloperSettings.bIgnoreCooldowns")); }
+    BrzCampoPonteiro bIgnoreCostsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbilitiesEditorDeveloperSettings.bIgnoreCosts")); }
     BitFieldValue<bool, unsigned __int32> bIgnoreCooldowns()
     { return { (void*)this, "bIgnoreCooldowns" }; }
     BitFieldValue<bool, unsigned __int32> bIgnoreCosts()

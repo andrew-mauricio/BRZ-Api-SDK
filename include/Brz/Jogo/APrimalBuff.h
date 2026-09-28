@@ -59,7 +59,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.AddBuffLifetime(float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=140+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     void AddBuffLifetime(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.AddBuffLifetime(float)", a0);
@@ -75,7 +75,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.AddStacks(int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void AddStacks(int a0) const
     {
         NativeCall<void, int>(this, "APrimalBuff.AddStacks(int)", a0);
@@ -91,7 +91,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.AllowPostProcessEffect()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=112]]
+    // endereco: casamento de bytes com a build de referencia
     bool AllowPostProcessEffect() const
     {
         return NativeCall<bool>(this, "APrimalBuff.AllowPostProcessEffect()");
@@ -423,7 +423,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPForceEnableTickFunction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=332+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void BPForceEnableTickFunction() const
     {
         NativeCall<void>(this, "APrimalBuff.BPForceEnableTickFunction()");
@@ -463,7 +463,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPGetBabyImprintingSpeedMultiplier()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     float BPGetBabyImprintingSpeedMultiplier() const
     {
         return NativeCall<float>(this, "APrimalBuff.BPGetBabyImprintingSpeedMultiplier()");
@@ -519,7 +519,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPHandleOnStartAltFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPHandleOnStartAltFire(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.BPHandleOnStartAltFire(bool)", a0);
@@ -527,7 +527,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPHandleOnStartFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPHandleOnStartFire(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.BPHandleOnStartFire(bool)", a0);
@@ -535,7 +535,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPHandleOnStopAltFire(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPHandleOnStopAltFire(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.BPHandleOnStopAltFire(bool)", a0);
@@ -559,7 +559,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPInstigatorDied(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorDied(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPInstigatorDied(AActor*)", a0);
@@ -567,7 +567,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPInstigatorDisconnected()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorDisconnected() const
     {
         NativeCall<void>(this, "APrimalBuff.BPInstigatorDisconnected()");
@@ -575,7 +575,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPInstigatorLocalPossessed(AShooterPlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorLocalPossessed(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPInstigatorLocalPossessed(AShooterPlayerController*)", a0);
@@ -583,7 +583,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPInstigatorPossessed(AController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorPossessed(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPInstigatorPossessed(AController*)", a0);
@@ -591,7 +591,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPInstigatorReceivedKillingDamage()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorReceivedKillingDamage() const
     {
         NativeCall<void>(this, "APrimalBuff.BPInstigatorReceivedKillingDamage()");
@@ -599,7 +599,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPInstigatorSleeped(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BPInstigatorSleeped(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.BPInstigatorSleeped(bool)", a0);
@@ -607,7 +607,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPInstigatorStartedRiding()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorStartedRiding() const
     {
         NativeCall<void>(this, "APrimalBuff.BPInstigatorStartedRiding()");
@@ -615,7 +615,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPInstigatorStoppedRiding(APrimalDinoCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorStoppedRiding(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPInstigatorStoppedRiding(APrimalDinoCharacter*)", a0);
@@ -623,7 +623,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPInstigatorUnpossessed()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPInstigatorUnpossessed() const
     {
         NativeCall<void>(this, "APrimalBuff.BPInstigatorUnpossessed()");
@@ -631,7 +631,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPInterceptWeaponToggle()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPInterceptWeaponToggle() const
     {
         return NativeCall<bool>(this, "APrimalBuff.BPInterceptWeaponToggle()");
@@ -639,7 +639,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPIsCharacterHardAttached()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=61]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPIsCharacterHardAttached() const
     {
         return NativeCall<bool>(this, "APrimalBuff.BPIsCharacterHardAttached()");
@@ -647,7 +647,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.BPModifyAimOffsetNoTarget(UE::Math::TRotator<double>&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=117+chamadores=2]]
     BrzPonteiro BPModifyAimOffsetNoTarget(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff.BPModifyAimOffsetNoTarget(UE::Math::TRotator<double>&)", a0);
@@ -671,7 +671,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPNofityMontagePlay(UAnimMontage*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNofityMontagePlay(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPNofityMontagePlay(UAnimMontage*)", a0);
@@ -703,7 +703,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPNotifyLevelUpAvailable()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNotifyLevelUpAvailable() const
     {
         NativeCall<void>(this, "APrimalBuff.BPNotifyLevelUpAvailable()");
@@ -711,7 +711,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPNotifyOtherBuffActivated(APrimalBuff*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNotifyOtherBuffActivated(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPNotifyOtherBuffActivated(APrimalBuff*)", a0);
@@ -719,7 +719,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPNotifyOtherBuffActivatedToThisBuffClass(APrimalBuff*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNotifyOtherBuffActivatedToThisBuffClass(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPNotifyOtherBuffActivatedToThisBuffClass(APrimalBuff*)", a0);
@@ -727,7 +727,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPNotifyOtherBuffDeactivated(APrimalBuff*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNotifyOtherBuffDeactivated(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPNotifyOtherBuffDeactivated(APrimalBuff*)", a0);
@@ -759,7 +759,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPOnDestroyInstigator()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPOnDestroyInstigator() const
     {
         NativeCall<void>(this, "APrimalBuff.BPOnDestroyInstigator()");
@@ -935,7 +935,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPOverrideMaxUseDistance(AActor*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     float BPOverrideMaxUseDistance(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalBuff.BPOverrideMaxUseDistance(AActor*)", a0);
@@ -1015,7 +1015,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPPreServerUpload(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPPreServerUpload(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.BPPreServerUpload(AShooterPlayerController*)", a0);
@@ -1071,7 +1071,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPPreventFirstPerson()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=61+chamadores=2]]
     bool BPPreventFirstPerson() const
     {
         return NativeCall<bool>(this, "APrimalBuff.BPPreventFirstPerson()");
@@ -1079,7 +1079,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPPreventOnStartJump()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool BPPreventOnStartJump() const
     {
         return NativeCall<bool>(this, "APrimalBuff.BPPreventOnStartJump()");
@@ -1087,7 +1087,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPPreventRidingInstigator(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=66]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventRidingInstigator(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.BPPreventRidingInstigator(APrimalCharacter*)", a0);
@@ -1095,7 +1095,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPPreventThrowingItem(UPrimalItem*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventThrowingItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.BPPreventThrowingItem(UPrimalItem*)", a0);
@@ -1111,7 +1111,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPResetBuffStart()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPResetBuffStart() const
     {
         NativeCall<void>(this, "APrimalBuff.BPResetBuffStart()");
@@ -1147,7 +1147,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.BPValueToAddPerSecondIsManualModification(EPrimalCharacterStatusValue::Type)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro BPValueToAddPerSecondIsManualModification(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalBuff.BPValueToAddPerSecondIsManualModification(EPrimalCharacterStatusValue::Type)", a0);
@@ -1179,7 +1179,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BP_OverrideMoveForwardInput(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float BP_OverrideMoveForwardInput(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalBuff.BP_OverrideMoveForwardInput(float)", a0);
@@ -1211,7 +1211,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BuffOverrideInventoryAccessInput(AController*,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=151+chamadores=5]]
     bool BuffOverrideInventoryAccessInput(void* a0, bool a1) const
     {
         return NativeCall<bool, void*, bool>(this, "APrimalBuff.BuffOverrideInventoryAccessInput(AController*,bool)", a0, a1);
@@ -1243,7 +1243,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.CalculateNumStacksFromLifetime()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     int CalculateNumStacksFromLifetime() const
     {
         return NativeCall<int>(this, "APrimalBuff.CalculateNumStacksFromLifetime()");
@@ -1251,7 +1251,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ClientReceiveRelatedMissionData_Implementation(AMissionType*,bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientReceiveRelatedMissionData_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "APrimalBuff.ClientReceiveRelatedMissionData_Implementation(AMissionType*,bool)", a0, a1);
@@ -1267,7 +1267,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=100+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APrimalBuff.Destroyed()");
@@ -1275,7 +1275,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.DinoInstigatorClearedBotRider(APrimalBotCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DinoInstigatorClearedBotRider(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.DinoInstigatorClearedBotRider(APrimalBotCharacter*)", a0);
@@ -1283,7 +1283,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.DinoInstigatorClearedRider(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DinoInstigatorClearedRider(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.DinoInstigatorClearedRider(AShooterCharacter*)", a0);
@@ -1291,7 +1291,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.DinoInstigatorPreReceivedRider(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=53]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DinoInstigatorPreReceivedRider(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.DinoInstigatorPreReceivedRider(AShooterCharacter*)", a0);
@@ -1299,7 +1299,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.DinoInstigatorReceivedBotRider(APrimalBotCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DinoInstigatorReceivedBotRider(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.DinoInstigatorReceivedBotRider(APrimalBotCharacter*)", a0);
@@ -1323,7 +1323,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.DirectSetBuffDuration(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void DirectSetBuffDuration(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.DirectSetBuffDuration(float)", a0);
@@ -1331,7 +1331,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.DoTeleporterHaptics(APlayerController*,UE::Math::TVector<double>&,float)
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro DoTeleporterHaptics(void* a0, void* a1, float a2) const
     {
         return NativeCall<void*, void*, void*, float>(this, "APrimalBuff.DoTeleporterHaptics(APlayerController*,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -1347,7 +1347,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.EnableTickFunction()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=31]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro EnableTickFunction() const
     {
         return NativeCall<void*>(this, "APrimalBuff.EnableTickFunction()");
@@ -1355,7 +1355,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ExcludeAoEActor(AActor*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1308+bytes40+grafo=8/8]]
+    // endereco: casamento de bytes com a build de referencia
     bool ExcludeAoEActor(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.ExcludeAoEActor(AActor*)", a0);
@@ -1363,7 +1363,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ExcludePostProcessBlendableMaterial(UMaterialInterface*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ExcludePostProcessBlendableMaterial(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.ExcludePostProcessBlendableMaterial(UMaterialInterface*)", a0);
@@ -1371,7 +1371,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ExtendBuffTime(float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=649+grafo=13/13]]
+    // endereco: casamento de bytes com a build de referencia
     bool ExtendBuffTime(float a0) const
     {
         return NativeCall<bool, float>(this, "APrimalBuff.ExtendBuffTime(float)", a0);
@@ -1379,7 +1379,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.FinalLoadedFromSaveGame()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=320]]
+    // endereco: casamento de bytes com a build de referencia
     void FinalLoadedFromSaveGame() const
     {
         NativeCall<void>(this, "APrimalBuff.FinalLoadedFromSaveGame()");
@@ -1403,7 +1403,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.GetBuffPOIs(TArray<FPointOfInterestData_ForCompanion,TSizedDefaultAllocator<32>>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBuffPOIs(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff.GetBuffPOIs(TArray<FPointOfInterestData_ForCompanion,TSizedDefaultAllocator<32>>&)", a0);
@@ -1411,7 +1411,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetBuffPostprocessIntensity()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetBuffPostprocessIntensity() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetBuffPostprocessIntensity()");
@@ -1419,7 +1419,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // jogo_confirmou_dump
     //   APrimalBuff.GetBuffPostprocessMaterial(AShooterPlayerController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=729+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     UMaterialInstanceDynamic* GetBuffPostprocessMaterial(void* a0) const
     {
         return NativeCall<UMaterialInstanceDynamic*, void*>(this, "APrimalBuff.GetBuffPostprocessMaterial(AShooterPlayerController*)", a0);
@@ -1435,7 +1435,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetBuffTickServerDeltaTime()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=77]]
+    // endereco: casamento de bytes com a build de referencia
     float GetBuffTickServerDeltaTime() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetBuffTickServerDeltaTime()");
@@ -1443,7 +1443,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetBuffType()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
+    // endereco: casamento de bytes com a build de referencia
     int GetBuffType() const
     {
         return NativeCall<int>(this, "APrimalBuff.GetBuffType()");
@@ -1467,7 +1467,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetDeactivationTime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     double GetDeactivationTime() const
     {
         return NativeCall<double>(this, "APrimalBuff.GetDeactivationTime()");
@@ -1483,7 +1483,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.GetEnabledGestationMonitoringTargets()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=178+bytes40+chamadores=2]]
     void GetEnabledGestationMonitoringTargets(void* retorno) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.GetEnabledGestationMonitoringTargets()", retorno);
@@ -1507,7 +1507,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.GetGravityZScale(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetGravityZScale(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalBuff.GetGravityZScale(float)", a0);
@@ -1515,7 +1515,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.GetHUDElements(APlayerController*,TArray<FHUDElement,TSizedDefaultAllocator<32>>&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetHUDElements(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "APrimalBuff.GetHUDElements(APlayerController*,TArray<FHUDElement,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -1523,7 +1523,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetHUDProgressBarPercent()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=113]]
+    // endereco: casamento de bytes com a build de referencia
     float GetHUDProgressBarPercent() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetHUDProgressBarPercent()");
@@ -1547,7 +1547,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetNumStacks()
-    // endereco: thunk
+    // endereco: casamento de bytes com a build de referencia
     int GetNumStacks() const
     {
         return NativeCall<int>(this, "APrimalBuff.GetNumStacks()");
@@ -1555,7 +1555,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetOverrideWaterJumpVelocity(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     float GetOverrideWaterJumpVelocity(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalBuff.GetOverrideWaterJumpVelocity(float)", a0);
@@ -1571,7 +1571,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetRemainingTimeInTopStack()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=144]]
+    // endereco: casamento de bytes com a build de referencia
     float GetRemainingTimeInTopStack() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetRemainingTimeInTopStack()");
@@ -1595,7 +1595,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetStackDuration()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetStackDuration() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetStackDuration()");
@@ -1619,7 +1619,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.GetValueToAddPerSecond(TEnumAsByte<EPrimalCharacterStatusValue::Type>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetValueToAddPerSecond(unsigned char a0) const
     {
         return NativeCall<void*, unsigned char>(this, "APrimalBuff.GetValueToAddPerSecond(TEnumAsByte<EPrimalCharacterStatusValue::Type>)", a0);
@@ -1627,7 +1627,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.HideBuffFromHUD()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool HideBuffFromHUD() const
     {
         return NativeCall<bool>(this, "APrimalBuff.HideBuffFromHUD()");
@@ -1635,7 +1635,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.HideBuffFromHUD_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HideBuffFromHUD_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff.HideBuffFromHUD_Implementation()");
@@ -1643,7 +1643,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.InitializeStackDuration()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=22]]
+    // endereco: casamento de bytes com a build de referencia
     void InitializeStackDuration() const
     {
         NativeCall<void>(this, "APrimalBuff.InitializeStackDuration()");
@@ -1651,7 +1651,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.InstigatorDie()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=45+chamadores=2]]
     void InstigatorDie() const
     {
         NativeCall<void>(this, "APrimalBuff.InstigatorDie()");
@@ -1659,7 +1659,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.InstigatorJumped()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InstigatorJumped() const
     {
         NativeCall<void>(this, "APrimalBuff.InstigatorJumped()");
@@ -1667,7 +1667,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.InterceptInstigatorPlayerEmoteAnim(UAnimMontage*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool InterceptInstigatorPlayerEmoteAnim(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.InterceptInstigatorPlayerEmoteAnim(UAnimMontage*)", a0);
@@ -1683,7 +1683,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.IsNetRelevantFor(AActor*,AActor*,UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=95]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsNetRelevantFor(void* a0, void* a1, void* a2) const
     {
         return NativeCall<bool, void*, void*, void*>(this, "APrimalBuff.IsNetRelevantFor(AActor*,AActor*,UE::Math::TVector<double>&)", a0, a1, a2);
@@ -1708,7 +1708,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ModifyBuffMPCValues(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void ModifyBuffMPCValues(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.ModifyBuffMPCValues(bool)", a0);
@@ -1716,7 +1716,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.Multi_SyncBuffLifetime(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=54+chamadores=2]]
     void Multi_SyncBuffLifetime(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.Multi_SyncBuffLifetime(float)", a0);
@@ -1724,7 +1724,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.Multi_SyncBuffLifetime_Implementation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Multi_SyncBuffLifetime_Implementation(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.Multi_SyncBuffLifetime_Implementation(float)", a0);
@@ -1740,7 +1740,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.NetResetBuffStart()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetResetBuffStart() const
     {
         NativeCall<void>(this, "APrimalBuff.NetResetBuffStart()");
@@ -1748,7 +1748,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.NetResetBuffStart_Implementation()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     void NetResetBuffStart_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff.NetResetBuffStart_Implementation()");
@@ -1756,7 +1756,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.NetSyncBuffLifetime()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetSyncBuffLifetime() const
     {
         NativeCall<void>(this, "APrimalBuff.NetSyncBuffLifetime()");
@@ -1764,7 +1764,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.NetUpdateStackingBuffLifetime_Implementation(float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NetUpdateStackingBuffLifetime_Implementation(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalBuff.NetUpdateStackingBuffLifetime_Implementation(float)", a0);
@@ -1772,7 +1772,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.NotifyBumpedPawn(APrimalCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=128]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyBumpedPawn(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.NotifyBumpedPawn(APrimalCharacter*)", a0);
@@ -1788,7 +1788,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OnBuffLifetimeUpdated()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=76]]
+    // endereco: casamento de bytes com a build de referencia
     void OnBuffLifetimeUpdated() const
     {
         NativeCall<void>(this, "APrimalBuff.OnBuffLifetimeUpdated()");
@@ -1844,7 +1844,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OnOwnerTeleported()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnOwnerTeleported() const
     {
         NativeCall<void>(this, "APrimalBuff.OnOwnerTeleported()");
@@ -1860,7 +1860,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.OverrideAttackerDamageImpactFX(FName,APrimalCharacter*,APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool OverrideAttackerDamageImpactFX(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<bool, unsigned long long, void*, void*>(this, "APrimalBuff.OverrideAttackerDamageImpactFX(FName,APrimalCharacter*,APrimalCharacter*)", a0, a1, a2);
@@ -1868,7 +1868,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.OverrideAttackerDamageImpactFXAsVictim(FName,APrimalCharacter*,APrimalCharacter*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool OverrideAttackerDamageImpactFXAsVictim(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<bool, unsigned long long, void*, void*>(this, "APrimalBuff.OverrideAttackerDamageImpactFXAsVictim(FName,APrimalCharacter*,APrimalCharacter*)", a0, a1, a2);
@@ -1876,7 +1876,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterFlyingVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=62]]
+    // endereco: casamento de bytes com a build de referencia
     void OverrideCharacterFlyingVelocity(void* a0, void* a1, float a2) const
     {
         NativeCall<void, void*, void*, float>(this, "APrimalBuff.OverrideCharacterFlyingVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -1884,7 +1884,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterNewFallVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void OverrideCharacterNewFallVelocity(void* a0, void* a1, float a2) const
     {
         NativeCall<void, void*, void*, float>(this, "APrimalBuff.OverrideCharacterNewFallVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -1900,7 +1900,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterWalkingVelocity(UE::Math::TVector<double>&,float&,float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=62]]
+    // endereco: casamento de bytes com a build de referencia
     void OverrideCharacterWalkingVelocity(void* a0, void* a1, float a2) const
     {
         NativeCall<void, void*, void*, float>(this, "APrimalBuff.OverrideCharacterWalkingVelocity(UE::Math::TVector<double>&,float&,float)", a0, a1, a2);
@@ -1916,7 +1916,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.PreventActorTargeting(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=141]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventActorTargeting(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.PreventActorTargeting(AActor*)", a0);
@@ -1924,7 +1924,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.PreventActorTargeting_Implementation(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=751]]
+    // endereco: casamento de bytes com a build de referencia
     bool PreventActorTargeting_Implementation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.PreventActorTargeting_Implementation(AActor*)", a0);
@@ -1948,7 +1948,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.PreventFlight()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreventFlight() const
     {
         return NativeCall<void*>(this, "APrimalBuff.PreventFlight()");
@@ -1956,7 +1956,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.PreventInstigatorAttack(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventInstigatorAttack(int a0) const
     {
         return NativeCall<bool, int>(this, "APrimalBuff.PreventInstigatorAttack(int)", a0);
@@ -1964,7 +1964,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.PreventInstigatorMovementMode(EMovementMode,unsignedchar)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PreventInstigatorMovementMode(int a0, unsigned char a1) const
     {
         return NativeCall<void*, int, unsigned char>(this, "APrimalBuff.PreventInstigatorMovementMode(EMovementMode,unsignedchar)", a0, a1);
@@ -1972,7 +1972,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.PreventJump()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventJump() const
     {
         return NativeCall<bool>(this, "APrimalBuff.PreventJump()");
@@ -1980,7 +1980,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.PreventRunning()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventRunning() const
     {
         return NativeCall<bool>(this, "APrimalBuff.PreventRunning()");
@@ -1988,7 +1988,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ProcessStaticPathing(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ProcessStaticPathing(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.ProcessStaticPathing(bool)", a0);
@@ -1996,7 +1996,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ReduceBuffTime(float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=695+chamadores=2+grafo=14/14]]
+    // endereco: casamento de bytes com a build de referencia
     bool ReduceBuffTime(float a0) const
     {
         return NativeCall<bool, float>(this, "APrimalBuff.ReduceBuffTime(float)", a0);
@@ -2020,7 +2020,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ServerRequestRelatedMissionData()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestRelatedMissionData() const
     {
         NativeCall<void>(this, "APrimalBuff.ServerRequestRelatedMissionData()");
@@ -2028,7 +2028,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ServerRequestRelatedMissionData_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestRelatedMissionData_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff.ServerRequestRelatedMissionData_Implementation()");
@@ -2036,7 +2036,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.SetBuffCauser(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=53]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=4]]
     void SetBuffCauser(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.SetBuffCauser(AActor*)", a0);
@@ -2060,7 +2060,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.SetValueToAddPerSecond(TEnumAsByte<EPrimalCharacterStatusValue::Type>,float)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetValueToAddPerSecond(unsigned char a0, float a1) const
     {
         return NativeCall<void*, unsigned char, float>(this, "APrimalBuff.SetValueToAddPerSecond(TEnumAsByte<EPrimalCharacterStatusValue::Type>,float)", a0, a1);
@@ -2076,7 +2076,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ShouldForceOwnerDedicatedMovementTickPerFrame()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldForceOwnerDedicatedMovementTickPerFrame() const
     {
         return NativeCall<bool>(this, "APrimalBuff.ShouldForceOwnerDedicatedMovementTickPerFrame()");
@@ -2132,7 +2132,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.Unstasis()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=73]]
+    // endereco: casamento de bytes com a build de referencia
     void Unstasis() const
     {
         NativeCall<void>(this, "APrimalBuff.Unstasis()");
@@ -2140,7 +2140,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.UpdateAltInventoryState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateAltInventoryState() const
     {
         NativeCall<void>(this, "APrimalBuff.UpdateAltInventoryState()");
@@ -2156,7 +2156,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.UpdateBuffLifetime(float,bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void UpdateBuffLifetime(float a0, bool a1) const
     {
         NativeCall<void, float, bool>(this, "APrimalBuff.UpdateBuffLifetime(float,bool)", a0, a1);
@@ -2184,6 +2184,14 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzPonteiro UpdateStaticPathingDestination(void* a0, float a1, bool a2, bool a3, void* a4, float a5) const
     {
         return NativeCall<void*, void*, float, bool, bool, void*, float>(this, "APrimalBuff.UpdateStaticPathingDestination(UE::Math::TVector<double>,float,bool,bool,UE::Math::TRotator<double>,float)", a0, a1, a2, a3, a4, a5);
+    }
+
+    // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
+    //   APrimalBuff.`vcall'{3672,{flat}}()
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
+    BrzPonteiro _vcall__3672__flat__() const
+    {
+        return NativeCall<void*>(this, "APrimalBuff.`vcall'{3672,{flat}}()");
     }
 
     float& AOEBuffIntervalMaxField() const
@@ -2251,7 +2259,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro BuffToGiveOnDeactivationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.BuffToGiveOnDeactivation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostprocessBlendablesToExclude` +16, medido na build 25090264
+    //  ancorado em `PostprocessBlendablesToExclude` +16, medido na build 25535041
     //  (offset absoluto medido: 0x858; confianca alta)
     TArray<TWeakObjectPtr<void>>& BuffedCharactersField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "PostprocessBlendablesToExclude", 16); }
@@ -2276,7 +2284,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& DeactivateAfterTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.DeactivateAfterTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CharacterStatusValueModifiers` +16, medido na build 25090264
+    //  ancorado em `CharacterStatusValueModifiers` +16, medido na build 25535041
     //  (offset absoluto medido: 0x788; confianca alta)
     void*& DeactivateHandleField() const
     { return BrzCampoAncorado<void*>(this, "CharacterStatusValueModifiers", 16); }
@@ -2287,7 +2295,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& DepleteInstigatorItemDurabilityPerSecondField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.DepleteInstigatorItemDurabilityPerSecond"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverrideInventoryItemClassWeightMultipliers` +16, medido na build 25090264
+    //  ancorado em `OverrideInventoryItemClassWeightMultipliers` +16, medido na build 25535041
     //  (offset absoluto medido: 0x6F8; confianca alta)
     void*& DesiredDinoColorsField() const
     { return BrzCampoAncorado<void*>(this, "OverrideInventoryItemClassWeightMultipliers", 16); }
@@ -2302,7 +2310,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     USoundBase*& ExtraActivationSoundToPlayField() const
     { return *GetNativePointerField<USoundBase**>(this, "APrimalBuff.ExtraActivationSoundToPlay"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaximumVelocityZForSlowingFall` +4, medido na build 25090264
+    //  ancorado em `MaximumVelocityZForSlowingFall` +4, medido na build 25535041
     //  (offset absoluto medido: 0xA9C; confianca alta)
     int& FNameIntField() const
     { return BrzCampoAncorado<int>(this, "MaximumVelocityZForSlowingFall", 4); }
@@ -2315,7 +2323,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     int& ForceNetworkSpatializationMaxLimitBuffTypeFlagField() const
     { return *GetNativePointerField<int*>(this, "APrimalBuff.ForceNetworkSpatializationMaxLimitBuffTypeFlag"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BuffStartTime` +8, medido na build 25090264
+    //  ancorado em `BuffStartTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x798; confianca alta)
     TWeakObjectPtr<void>& ForcedOnSpectatorPlayerControllerField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "BuffStartTime", 8); }
@@ -2336,17 +2344,17 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& InsulationRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.InsulationRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDestroyWhenUnpossessed` +3, medido na build 25090264
+    //  ancorado em `bDestroyWhenUnpossessed` +3, medido na build 25535041
     //  (offset absoluto medido: 0x9F8; confianca alta)
     double& LastAoEApplyDamageTimeField() const
     { return BrzCampoAncorado<double>(this, "bDestroyWhenUnpossessed", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +11, medido na build 25090264
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +11, medido na build 25535041
     //  (offset absoluto medido: 0xA30; confianca alta)
     double& LastBuffTickTimeClientField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +3, medido na build 25090264
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +3, medido na build 25535041
     //  (offset absoluto medido: 0xA28; confianca alta)
     double& LastBuffTickTimeServerField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 3); }
@@ -2371,12 +2379,12 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     UPrimalBuffPersistentData*& MyBuffPersistentDataField() const
     { return *GetNativePointerField<UPrimalBuffPersistentData**>(this, "APrimalBuff.MyBuffPersistentData"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +27, medido na build 25090264
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +27, medido na build 25535041
     //  (offset absoluto medido: 0xA40; confianca alta)
     double& NextBuffTickTimeClientField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 27); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +19, medido na build 25090264
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +19, medido na build 25535041
     //  (offset absoluto medido: 0xA38; confianca alta)
     double& NextBuffTickTimeServerField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 19); }
@@ -2419,7 +2427,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& StackDurationField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.StackDuration"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AltNumStacks` +8, medido na build 25090264
+    //  ancorado em `AltNumStacks` +8, medido na build 25535041
     //  (offset absoluto medido: 0xB68; confianca alta)
     void*& StackUpdateHandleField() const
     { return BrzCampoAncorado<void*>(this, "AltNumStacks", 8); }
@@ -2450,12 +2458,12 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& TargetingTooltipCheckRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.TargetingTooltipCheckRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `staticPathingDestination` +24, medido na build 25090264
+    //  ancorado em `staticPathingDestination` +24, medido na build 25535041
     //  (offset absoluto medido: 0x910; confianca alta)
     double& TickingDeactivationTimeField() const
     { return BrzCampoAncorado<double>(this, "staticPathingDestination", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostprocessMaterialAdjusters` +24, medido na build 25090264
+    //  ancorado em `PostprocessMaterialAdjusters` +24, medido na build 25535041
     //  (offset absoluto medido: 0xA88; confianca alta)
     double& TimeForNextAOECheckField() const
     { return BrzCampoAncorado<double>(this, "PostprocessMaterialAdjusters", 24); }
@@ -2465,6 +2473,10 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     { return *GetNativePointerField<float*>(this, "APrimalBuff.UnsubmergedMaxSpeedModifier"); }
     float& UnsubmergedRotationRateModifierField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.UnsubmergedRotationRateModifier"); }
+    BrzCampoPonteiro UseBPAdjustOutputDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.UseBPAdjustOutputDamage")); }
+    BrzCampoPonteiro UseBPAdjustOutputDamageForNonMeleePlayerDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.UseBPAdjustOutputDamageForNonMeleePlayerDamage")); }
     FieldArray<float> ValuesToAddPerSecondField() const
     { return { (void*)this, "APrimalBuff.ValuesToAddPerSecond" }; }
     float& ViewMaxExposureMultiplierField() const
@@ -2479,59 +2491,661 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     { return *GetNativePointerField<float*>(this, "APrimalBuff.XPtoAdd"); }
     float& XPtoAddRateField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.XPtoAddRate"); }
+    BrzCampoPonteiro bAOEApplyOtherBuffIgnoreSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAOEApplyOtherBuffIgnoreSameTeam")); }
+    BrzCampoPonteiro bAOEApplyOtherBuffOnDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAOEApplyOtherBuffOnDinos")); }
+    BrzCampoPonteiro bAOEApplyOtherBuffOnPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAOEApplyOtherBuffOnPlayers")); }
+    BrzCampoPonteiro bAOEApplyOtherBuffRequireSameTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAOEApplyOtherBuffRequireSameTeam")); }
+    BrzCampoPonteiro bAOEBuffCarnosOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAOEBuffCarnosOnly")); }
+    BrzCampoPonteiro bAOEOnlyApplyOtherBuffToWildDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAOEOnlyApplyOtherBuffToWildDinos")); }
+    BrzCampoPonteiro bAddCharacterValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAddCharacterValues")); }
+    BrzCampoPonteiro bAddExtendBuffTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAddExtendBuffTime")); }
+    BrzCampoPonteiro bAddReactivatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAddReactivates")); }
+    BrzCampoPonteiro bAddRequireSameDamageCauserField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAddRequireSameDamageCauser")); }
+    BrzCampoPonteiro bAddResetsBuffTimeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAddResetsBuffTime")); }
+    BrzCampoPonteiro bAddStackResetsBuffStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAddStackResetsBuffStart")); }
     bool& bAddTPVCameraOffsetField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bAddTPVCameraOffset"); }
+    BrzCampoPonteiro bAdditionalExperienceMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAdditionalExperienceMultiplier")); }
+    BrzCampoPonteiro bAdditionalTamingSpeedMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAdditionalTamingSpeedMultiplier")); }
+    BrzCampoPonteiro bAllowBuffStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAllowBuffStasis")); }
+    BrzCampoPonteiro bAllowBuffWhenInstigatorDeadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAllowBuffWhenInstigatorDead")); }
+    BrzCampoPonteiro bAllowMultiUseEntriesFromSelfField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAllowMultiUseEntriesFromSelf")); }
+    BrzCampoPonteiro bAllowOnlyCustomFallDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAllowOnlyCustomFallDamage")); }
+    BrzCampoPonteiro bAllowTurretsToTargetInstigatorIfTraceHitsBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAllowTurretsToTargetInstigatorIfTraceHitsBuff")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalRidingDistance` +4, medido na build 25090264
+    //  ancorado em `AdditionalRidingDistance` +4, medido na build 25535041
     //  (offset absoluto medido: 0xB1C; confianca alta)
     void*& bAlreadyRequestedRelatedMissionDataField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalRidingDistance", 4); }
+    BrzCampoPonteiro bAlwaysShowBuffDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAlwaysShowBuffDescription")); }
+    BrzCampoPonteiro bAoEApplyDamageAllTargetablesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAoEApplyDamageAllTargetables")); }
+    BrzCampoPonteiro bAoEBuffAllowIfAlreadyBuffedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAoEBuffAllowIfAlreadyBuffed")); }
+    BrzCampoPonteiro bAoEIgnoreDinosTargetingInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAoEIgnoreDinosTargetingInstigator")); }
+    BrzCampoPonteiro bAoEOnlyOnDinosTargetingInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAoEOnlyOnDinosTargetingInstigator")); }
+    BrzCampoPonteiro bAoETraceToTargetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAoETraceToTargets")); }
+    BrzCampoPonteiro bApplyOneMaxSpeedModifierPerStackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bApplyOneMaxSpeedModifierPerStack")); }
+    BrzCampoPonteiro bApplyStatModifierToDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bApplyStatModifierToDinos")); }
+    BrzCampoPonteiro bApplyStatModifierToPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bApplyStatModifierToPlayers")); }
+    BrzCampoPonteiro bBPAddMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPAddMultiUseEntries")); }
+    BrzCampoPonteiro bBPAdjustStatusValueModificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPAdjustStatusValueModification")); }
+    BrzCampoPonteiro bBPDrawBuffStatusHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPDrawBuffStatusHUD")); }
+    BrzCampoPonteiro bBPFilterMultiUseFilterTargetEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPFilterMultiUseFilterTargetEntries")); }
+    BrzCampoPonteiro bBPModifyAimOffsetNoTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPModifyAimOffsetNoTarget")); }
+    BrzCampoPonteiro bBPModifyCharacterFOVField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPModifyCharacterFOV")); }
+    BrzCampoPonteiro bBPOverrideActorForTargetingTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPOverrideActorForTargetingTooltip")); }
+    BrzCampoPonteiro bBPOverrideCharacterFlyingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPOverrideCharacterFlyingVelocity")); }
+    BrzCampoPonteiro bBPOverrideCharacterNewFallVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPOverrideCharacterNewFallVelocity")); }
+    BrzCampoPonteiro bBPOverrideCharacterSwimmingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPOverrideCharacterSwimmingVelocity")); }
+    BrzCampoPonteiro bBPOverrideCharacterWalkVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPOverrideCharacterWalkVelocity")); }
+    BrzCampoPonteiro bBPOverrideWeaponBobField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPOverrideWeaponBob")); }
+    BrzCampoPonteiro bBPUseBumpedByPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPUseBumpedByPawn")); }
+    BrzCampoPonteiro bBPUseBumpedPawnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBPUseBumpedPawn")); }
+    BrzCampoPonteiro bBuffDrawFloatingHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffDrawFloatingHUD")); }
+    BrzCampoPonteiro bBuffDrawFloatingHUDRemotePlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffDrawFloatingHUDRemotePlayers")); }
+    BrzCampoPonteiro bBuffForceNoTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffForceNoTick")); }
+    BrzCampoPonteiro bBuffForceNoTickDedicatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffForceNoTickDedicated")); }
+    BrzCampoPonteiro bBuffHandleInstigatorMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffHandleInstigatorMultiUseEntries")); }
+    BrzCampoPonteiro bBuffHidesNonWeaponHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffHidesNonWeaponHUD")); }
+    BrzCampoPonteiro bBuffPreSerializeForInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreSerializeForInstigator")); }
+    BrzCampoPonteiro bBuffPreventsApplyingLevelUpsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreventsApplyingLevelUps")); }
+    BrzCampoPonteiro bBuffPreventsCryoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreventsCryo")); }
+    BrzCampoPonteiro bBuffPreventsInventoryAccessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreventsInventoryAccess")); }
+    BrzCampoPonteiro bBuffPreventsInventoryAccessAllowMissionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreventsInventoryAccessAllowMissions")); }
+    BrzCampoPonteiro bBuffPreventsMountedWeaponryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreventsMountedWeaponry")); }
+    BrzCampoPonteiro bBuffPreventsPlayerDropAllInventoryField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bBuffPreventsPlayerDropAllInventory")); }
+    BrzCampoPonteiro bCallRiderChangeWeaponsOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bCallRiderChangeWeaponsOnClient")); }
+    BrzCampoPonteiro bCallRiderNotifiesOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bCallRiderNotifiesOnClient")); }
+    BrzCampoPonteiro bCausesCryoSicknessField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bCausesCryoSickness")); }
+    BrzCampoPonteiro bCheckPreventInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bCheckPreventInput")); }
+    BrzCampoPonteiro bCompleteCustomDepthStencilOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bCompleteCustomDepthStencilOverride")); }
     bool& bContinueTickingClientAfterDeactivateField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bContinueTickingClientAfterDeactivate"); }
+    BrzCampoPonteiro bContinueTickingServerAfterDeactivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bContinueTickingServerAfterDeactivate")); }
+    BrzCampoPonteiro bCustomDepthStencilIgnoreHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bCustomDepthStencilIgnoreHealth")); }
+    BrzCampoPonteiro bDeactivateAfterAddingXPField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDeactivateAfterAddingXP")); }
+    BrzCampoPonteiro bDeactivateOnJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDeactivateOnJump")); }
+    BrzCampoPonteiro bDeactivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDeactivated")); }
+    BrzCampoPonteiro bDeactivatedSoundOnlyLocalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDeactivatedSoundOnlyLocal")); }
+    BrzCampoPonteiro bDediServerUseBPModifyPlayerBoneModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDediServerUseBPModifyPlayerBoneModifiers")); }
+    BrzCampoPonteiro bDestroyOnTargetStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDestroyOnTargetStasis")); }
     bool& bDestroyWhenUnpossessedField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bDestroyWhenUnpossessed"); }
+    BrzCampoPonteiro bDinoIgnoreBuffPostprocessEffectWhenRiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDinoIgnoreBuffPostprocessEffectWhenRidden")); }
     bool& bDisableBloomField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bDisableBloom"); }
+    BrzCampoPonteiro bDisableFaceRotationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDisableFaceRotation")); }
+    BrzCampoPonteiro bDisableFootstepsParticlesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDisableFootstepsParticles")); }
+    BrzCampoPonteiro bDisableIfCharacterUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDisableIfCharacterUnderwater")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bBPModifyCharacterFOV` +1, medido na build 25090264
+    //  ancorado em `bBPModifyCharacterFOV` +1, medido na build 25535041
     //  (offset absoluto medido: 0xA5B; confianca alta)
     bool& bDisableLightShaftsField() const
     { return BrzCampoAncorado<bool>(this, "bBPModifyCharacterFOV", 1); }
+    BrzCampoPonteiro bDisplayHUDProgressBarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDisplayHUDProgressBar")); }
+    BrzCampoPonteiro bDoCharacterDetachmentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDoCharacterDetachment")); }
+    BrzCampoPonteiro bDoCharacterDetachmentIncludeCarryingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDoCharacterDetachmentIncludeCarrying")); }
+    BrzCampoPonteiro bDoCharacterDetachmentIncludeRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDoCharacterDetachmentIncludeRiding")); }
+    BrzCampoPonteiro bDontPlayInstigatorActiveSoundOnDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDontPlayInstigatorActiveSoundOnDino")); }
+    BrzCampoPonteiro bEnableBuffStackingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bEnableBuffStacking")); }
+    BrzCampoPonteiro bEnableStaticPathingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bEnableStaticPathing")); }
+    BrzCampoPonteiro bEnableTargetingTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bEnableTargetingTooltip")); }
+    BrzCampoPonteiro bEnablesSpyglassEffectField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bEnablesSpyglassEffect")); }
+    BrzCampoPonteiro bFollowTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bFollowTarget")); }
+    BrzCampoPonteiro bForceAddUnderwaterCharacterStatusValuesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceAddUnderwaterCharacterStatusValues")); }
+    BrzCampoPonteiro bForceAllowAddingWithoutControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceAllowAddingWithoutController")); }
+    BrzCampoPonteiro bForceAllowWhileBuriedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceAllowWhileBuried")); }
+    BrzCampoPonteiro bForceAlwaysAllowBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceAlwaysAllowBuff")); }
+    BrzCampoPonteiro bForceCrosshairField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceCrosshair")); }
+    BrzCampoPonteiro bForceDrawMissionDinoTargetHealthbarsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceDrawMissionDinoTargetHealthbars")); }
+    BrzCampoPonteiro bForceHideFloatingNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceHideFloatingName")); }
+    BrzCampoPonteiro bForceInstigatorTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceInstigatorTick")); }
+    BrzCampoPonteiro bForceOverrideCharacterFlyingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceOverrideCharacterFlyingVelocity")); }
+    BrzCampoPonteiro bForceOverrideCharacterNewFallVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceOverrideCharacterNewFallVelocity")); }
+    BrzCampoPonteiro bForceOverrideCharacterSwimmingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceOverrideCharacterSwimmingVelocity")); }
+    BrzCampoPonteiro bForceOverrideCharacterWalkingVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceOverrideCharacterWalkingVelocity")); }
+    BrzCampoPonteiro bForcePlayerProneField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForcePlayerProne")); }
+    BrzCampoPonteiro bForceSelfTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceSelfTick")); }
+    BrzCampoPonteiro bForceShowFloatingNameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceShowFloatingName")); }
+    BrzCampoPonteiro bForceUsePreventTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceUsePreventTargeting")); }
+    BrzCampoPonteiro bForceUsePreventTargetingTurretField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceUsePreventTargetingTurret")); }
+    BrzCampoPonteiro bForceUseStackCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForceUseStackCount")); }
+    BrzCampoPonteiro bForcedOnSpectatorPlayerControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bForcedOnSpectatorPlayerController")); }
+    BrzCampoPonteiro bGetInstigatorChatMessagesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bGetInstigatorChatMessages")); }
+    BrzCampoPonteiro bHUDFormatTimerAsTimecodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bHUDFormatTimerAsTimecode")); }
+    BrzCampoPonteiro bHasRelatedMissionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bHasRelatedMission")); }
+    BrzCampoPonteiro bHideBuffFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bHideBuffFromHUD")); }
+    BrzCampoPonteiro bHideBuffFromHUDOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bHideBuffFromHUDOnly")); }
+    BrzCampoPonteiro bHideFootStepDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bHideFootStepDecals")); }
+    BrzCampoPonteiro bHideTimerFromHUDField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bHideTimerFromHUD")); }
+    BrzCampoPonteiro bIgnoreWeightWhenUsingExtraMaxSpeedModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIgnoreWeightWhenUsingExtraMaxSpeedModifier")); }
+    BrzCampoPonteiro bImmobilizeTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bImmobilizeTarget")); }
+    BrzCampoPonteiro bImmobilizeTargetPreventDismountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bImmobilizeTargetPreventDismount")); }
+    BrzCampoPonteiro bInterceptInputEventsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bInterceptInputEvents")); }
+    BrzCampoPonteiro bInterceptUseActionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bInterceptUseAction")); }
+    BrzCampoPonteiro bInterceptWeaponToggleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bInterceptWeaponToggle")); }
+    BrzCampoPonteiro bIsBuffPersistentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIsBuffPersistent")); }
+    BrzCampoPonteiro bIsCarryBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIsCarryBuff")); }
+    BrzCampoPonteiro bIsDiseaseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIsDisease")); }
+    BrzCampoPonteiro bIsFromSkillField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIsFromSkill")); }
+    BrzCampoPonteiro bIsHighRiskMissionBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIsHighRiskMissionBuff")); }
+    BrzCampoPonteiro bIsSkillBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bIsSkillBuff")); }
+    BrzCampoPonteiro bListenForInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bListenForInput")); }
+    BrzCampoPonteiro bModifyFrictionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bModifyFriction")); }
+    BrzCampoPonteiro bModifyMaxAccelerationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bModifyMaxAcceleration")); }
+    BrzCampoPonteiro bModifyMaxSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bModifyMaxSpeed")); }
+    BrzCampoPonteiro bModifyRotationRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bModifyRotationRate")); }
+    BrzCampoPonteiro bNetResetBuffStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bNetResetBuffStart")); }
+    BrzCampoPonteiro bNotifyDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bNotifyDamage")); }
+    BrzCampoPonteiro bNotifyExperienceGainedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bNotifyExperienceGained")); }
+    BrzCampoPonteiro bNotifyExperienceGained_AllowCountingAlphaKillsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bNotifyExperienceGained_AllowCountingAlphaKills")); }
+    BrzCampoPonteiro bNotifyExperienceGained_IncludeSmallAmountsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bNotifyExperienceGained_IncludeSmallAmounts")); }
+    BrzCampoPonteiro bOnlyActivateSoundForInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOnlyActivateSoundForInstigator")); }
+    BrzCampoPonteiro bOnlyAddCharacterValuesUnderwaterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOnlyAddCharacterValuesUnderwater")); }
     bool& bOnlyTickIfPlayerCharacterField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bOnlyTickIfPlayerCharacter"); }
+    BrzCampoPonteiro bOnlyTickWhenPossessedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOnlyTickWhenPossessed")); }
+    BrzCampoPonteiro bOnlyTickWhenVisibleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOnlyTickWhenVisible")); }
     bool& bOverrideBuffDescriptionField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bOverrideBuffDescription"); }
+    BrzCampoPonteiro bOverrideBuffTypeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideBuffType")); }
+    BrzCampoPonteiro bOverrideCharacterLandingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideCharacterLanding")); }
+    BrzCampoPonteiro bOverrideCharacterMovementInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideCharacterMovementInput")); }
+    BrzCampoPonteiro bOverrideInventoryWeightMultipliersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideInventoryWeightMultipliers")); }
+    BrzCampoPonteiro bOverrideRightShoulderOnPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideRightShoulderOnPlayer")); }
+    BrzCampoPonteiro bOverrideTPVCameraOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideTPVCameraOffset")); }
+    BrzCampoPonteiro bOverrideTPVCameraOffsetMultiplierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bOverrideTPVCameraOffsetMultiplier")); }
+    BrzCampoPonteiro bPersistentBuffSurvivesLevelUpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPersistentBuffSurvivesLevelUp")); }
+    BrzCampoPonteiro bPlayerIgnoreBuffPostprocessEffectWhenRidingDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPlayerIgnoreBuffPostprocessEffectWhenRidingDino")); }
+    BrzCampoPonteiro bPreventCarryCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventCarryCharacter")); }
+    BrzCampoPonteiro bPreventCarryOrPassengerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventCarryOrPassenger")); }
+    BrzCampoPonteiro bPreventClearRiderOnDinoImmobilizeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventClearRiderOnDinoImmobilize")); }
+    BrzCampoPonteiro bPreventDinoDismountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventDinoDismount")); }
+    BrzCampoPonteiro bPreventDinoRidingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventDinoRiding")); }
+    BrzCampoPonteiro bPreventFallDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventFallDamage")); }
+    BrzCampoPonteiro bPreventInputDoesOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventInputDoesOffset")); }
+    BrzCampoPonteiro bPreventInstigatorAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventInstigatorAttack")); }
+    BrzCampoPonteiro bPreventJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventJump")); }
+    BrzCampoPonteiro bPreventLogoutSleepingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventLogoutSleeping")); }
+    BrzCampoPonteiro bPreventOnBigDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnBigDino")); }
+    BrzCampoPonteiro bPreventOnBossDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnBossDino")); }
+    BrzCampoPonteiro bPreventOnDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnDino")); }
+    BrzCampoPonteiro bPreventOnPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnPlayer")); }
+    BrzCampoPonteiro bPreventOnRobotDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnRobotDino")); }
+    BrzCampoPonteiro bPreventOnSeatingStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnSeatingStructures")); }
+    BrzCampoPonteiro bPreventOnShipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnShip")); }
+    BrzCampoPonteiro bPreventOnWildDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bPreventOnWildDino")); }
+    BrzCampoPonteiro bReactivateWithNewDamageCauserField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bReactivateWithNewDamageCauser")); }
+    BrzCampoPonteiro bReactivationAddsNewStackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bReactivationAddsNewStack")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalRidingDistance` +5, medido na build 25090264
+    //  ancorado em `AdditionalRidingDistance` +5, medido na build 25535041
     //  (offset absoluto medido: 0xB1D; confianca alta)
     bool& bRelatedMissionWasInvalidField() const
     { return BrzCampoAncorado<bool>(this, "AdditionalRidingDistance", 5); }
+    BrzCampoPonteiro bRemoteForcedFleeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bRemoteForcedFlee")); }
+    BrzCampoPonteiro bRequireControllerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bRequireController")); }
+    BrzCampoPonteiro bResetTopStackTimeWhenAddingNewStackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bResetTopStackTimeWhenAddingNewStack")); }
+    BrzCampoPonteiro bSavePlayerDataOnSaveWorldField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSavePlayerDataOnSaveWorld")); }
+    BrzCampoPonteiro bShowBuffModifierDescriptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bShowBuffModifierDescription")); }
     bool& bShowMammalIncubationOptionsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bShowMammalIncubationOptions"); }
+    BrzCampoPonteiro bSkillAddBuffDeactivationTimeToCooldownField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSkillAddBuffDeactivationTimeToCooldown")); }
+    BrzCampoPonteiro bSkillAllowUseWhileEncumberedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSkillAllowUseWhileEncumbered")); }
+    BrzCampoPonteiro bSkillAllowUseWhileSeatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSkillAllowUseWhileSeated")); }
+    BrzCampoPonteiro bSkillBuffSetCooldownField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSkillBuffSetCooldown")); }
+    BrzCampoPonteiro bSkipInstigatorTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSkipInstigatorTick")); }
+    BrzCampoPonteiro bSlowInstigatorFallingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSlowInstigatorFalling")); }
+    BrzCampoPonteiro bStatusComponentUsingExtendedHUDTextField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bStatusComponentUsingExtendedHUDText")); }
+    BrzCampoPonteiro bSupportsCustomHexagonConversionShopField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSupportsCustomHexagonConversionShop")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +35, medido na build 25090264
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +35, medido na build 25535041
     //  (offset absoluto medido: 0xA48; confianca media)
     void*& bTickFunctionDisabledField() const
     { return BrzCampoAncorado<void*>(this, "bContinueTickingClientAfterDeactivate", 35); }
+    BrzCampoPonteiro bTriggerBPStasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bTriggerBPStasis")); }
+    BrzCampoPonteiro bTriggerBPUnstasisField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bTriggerBPUnstasis")); }
+    BrzCampoPonteiro bUseASACameraPivotLocationForOldCameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseASACameraPivotLocationForOldCamera")); }
+    BrzCampoPonteiro bUseActivateSoundFadeInDurationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseActivateSoundFadeInDuration")); }
+    BrzCampoPonteiro bUseBPActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPActivated")); }
+    BrzCampoPonteiro bUseBPAdjustCharacterMovementImpulseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPAdjustCharacterMovementImpulse")); }
+    BrzCampoPonteiro bUseBPAdjustImpulseFromDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPAdjustImpulseFromDamage")); }
+    BrzCampoPonteiro bUseBPAdjustRadialDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPAdjustRadialDamage")); }
+    BrzCampoPonteiro bUseBPAllowPlayMontageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPAllowPlayMontage")); }
+    BrzCampoPonteiro bUseBPBuffControllerKilledSomethingEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPBuffControllerKilledSomethingEvent")); }
+    BrzCampoPonteiro bUseBPBuffKilledSomethingEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPBuffKilledSomethingEvent")); }
+    BrzCampoPonteiro bUseBPBuffPreventBuildingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPBuffPreventBuilding")); }
+    BrzCampoPonteiro bUseBPBuffPreventsImmobilizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPBuffPreventsImmobilization")); }
+    BrzCampoPonteiro bUseBPBuffPreventsMultiuseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPBuffPreventsMultiuseEntries")); }
+    BrzCampoPonteiro bUseBPCanBeCarriedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPCanBeCarried")); }
+    BrzCampoPonteiro bUseBPCanFlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPCanFly")); }
+    BrzCampoPonteiro bUseBPChangeBuffStatusValueModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPChangeBuffStatusValueModifiers")); }
     bool& bUseBPCustomAllowAddBuffField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bUseBPCustomAllowAddBuff"); }
     bool& bUseBPDeactivatedField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bUseBPDeactivated"); }
+    BrzCampoPonteiro bUseBPDinoNameColorOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPDinoNameColorOverride")); }
+    BrzCampoPonteiro bUseBPDinoRefreshColorizationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPDinoRefreshColorization")); }
+    BrzCampoPonteiro bUseBPExcludeAoEActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPExcludeAoEActor")); }
+    BrzCampoPonteiro bUseBPForceCameraStyleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPForceCameraStyle")); }
+    BrzCampoPonteiro bUseBPForceOverrideWeaponFireTransformField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPForceOverrideWeaponFireTransform")); }
+    BrzCampoPonteiro bUseBPFullyHarvestedNodeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPFullyHarvestedNode")); }
+    BrzCampoPonteiro bUseBPGetAltInventoryForAmmoConsumptionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetAltInventoryForAmmoConsumption")); }
+    BrzCampoPonteiro bUseBPGetAttackAnimPlayRateModifierField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetAttackAnimPlayRateModifier")); }
+    BrzCampoPonteiro bUseBPGetBuffDamageCauserField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetBuffDamageCauser")); }
+    BrzCampoPonteiro bUseBPGetBuffDescriptionIconAlphaMultField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetBuffDescriptionIconAlphaMult")); }
+    BrzCampoPonteiro bUseBPGetBuffLevelUpStatOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetBuffLevelUpStatOverride")); }
+    BrzCampoPonteiro bUseBPGetCameraShakeScalarField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetCameraShakeScalar")); }
+    BrzCampoPonteiro bUseBPGetCrosshairColorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetCrosshairColor")); }
+    BrzCampoPonteiro bUseBPGetCustomTooltipActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetCustomTooltipActor")); }
+    BrzCampoPonteiro bUseBPGetGravityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetGravity")); }
+    BrzCampoPonteiro bUseBPGetHUDElementsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetHUDElements")); }
+    BrzCampoPonteiro bUseBPGetMoveAnimRateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetMoveAnimRate")); }
     bool& bUseBPGetPlayerFootStepSoundField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bUseBPGetPlayerFootStepSound"); }
+    BrzCampoPonteiro bUseBPGetWaypointsBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPGetWaypointsBuff")); }
+    BrzCampoPonteiro bUseBPHandleOnStartAltFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPHandleOnStartAltFire")); }
+    BrzCampoPonteiro bUseBPHandleOnStartFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPHandleOnStartFire")); }
+    BrzCampoPonteiro bUseBPHandleOnStopAltFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPHandleOnStopAltFire")); }
+    BrzCampoPonteiro bUseBPHandleOnStopFireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPHandleOnStopFire")); }
+    BrzCampoPonteiro bUseBPInformDamageCauserOfBuffAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPInformDamageCauserOfBuffAdded")); }
+    BrzCampoPonteiro bUseBPInitializedCharacterAnimScriptInstanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPInitializedCharacterAnimScriptInstance")); }
+    BrzCampoPonteiro bUseBPInstigatorAllowDinoTargetingRangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPInstigatorAllowDinoTargetingRange")); }
+    BrzCampoPonteiro bUseBPIsCharacterHardAttachedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPIsCharacterHardAttached")); }
+    BrzCampoPonteiro bUseBPIsValidUnstasisActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPIsValidUnstasisActor")); }
+    BrzCampoPonteiro bUseBPModifyArmorValueField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPModifyArmorValue")); }
+    BrzCampoPonteiro bUseBPModifyPlayerBoneModifiersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPModifyPlayerBoneModifiers")); }
+    BrzCampoPonteiro bUseBPNofityMontagePlayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNofityMontagePlay")); }
+    BrzCampoPonteiro bUseBPNonDedicatedPlayerPostAnimUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNonDedicatedPlayerPostAnimUpdate")); }
+    BrzCampoPonteiro bUseBPNotifyBuffWeaponFiredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyBuffWeaponFired")); }
+    BrzCampoPonteiro bUseBPNotifyItemAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyItemAdded")); }
+    BrzCampoPonteiro bUseBPNotifyItemQuantityUpdatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyItemQuantityUpdated")); }
+    BrzCampoPonteiro bUseBPNotifyItemRemovedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyItemRemoved")); }
+    BrzCampoPonteiro bUseBPNotifyOtherBuffActivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyOtherBuffActivated")); }
+    BrzCampoPonteiro bUseBPNotifyOtherBuffDeactivatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyOtherBuffDeactivated")); }
+    BrzCampoPonteiro bUseBPNotifyPreventDismountingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPNotifyPreventDismounting")); }
+    BrzCampoPonteiro bUseBPOnAoeBuffAddedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnAoeBuffAdded")); }
+    BrzCampoPonteiro bUseBPOnDestroyInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnDestroyInstigator")); }
+    BrzCampoPonteiro bUseBPOnHexagonCountChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnHexagonCountChanged")); }
+    BrzCampoPonteiro bUseBPOnInstigatorCapsuleComponentHitField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnInstigatorCapsuleComponentHit")); }
+    BrzCampoPonteiro bUseBPOnInstigatorLootedCrateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnInstigatorLootedCrate")); }
+    BrzCampoPonteiro bUseBPOnInstigatorMovementModeChangedNotifyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnInstigatorMovementModeChangedNotify")); }
+    BrzCampoPonteiro bUseBPOnOwnerMassTeleportEventField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnOwnerMassTeleportEvent")); }
+    BrzCampoPonteiro bUseBPOnPlayerShoulderMountDinoChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnPlayerShoulderMountDinoChange")); }
+    BrzCampoPonteiro bUseBPOnRiderChangeWeaponsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnRiderChangeWeapons")); }
+    BrzCampoPonteiro bUseBPOnTamedWildDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOnTamedWildDino")); }
+    BrzCampoPonteiro bUseBPOverrideAoEBuffDamageCauserField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideAoEBuffDamageCauser")); }
+    BrzCampoPonteiro bUseBPOverrideBloodDecalsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideBloodDecals")); }
+    BrzCampoPonteiro bUseBPOverrideBuffToGiveOnDeactivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideBuffToGiveOnDeactivation")); }
+    BrzCampoPonteiro bUseBPOverrideCameraArmLengthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCameraArmLength")); }
+    BrzCampoPonteiro bUseBPOverrideCameraArmLengthInterpParamsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCameraArmLengthInterpParams")); }
+    BrzCampoPonteiro bUseBPOverrideCameraDesiredPivotLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCameraDesiredPivotLocation")); }
+    BrzCampoPonteiro bUseBPOverrideCameraPivotLocationInterpParamsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCameraPivotLocationInterpParams")); }
+    BrzCampoPonteiro bUseBPOverrideCameraViewTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCameraViewTarget")); }
+    BrzCampoPonteiro bUseBPOverrideCharacterLocalControlZInterpSpeedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCharacterLocalControlZInterpSpeed")); }
+    BrzCampoPonteiro bUseBPOverrideCuddleFoodTypesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideCuddleFoodTypes")); }
+    BrzCampoPonteiro bUseBPOverrideDynamicMusicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideDynamicMusic")); }
+    BrzCampoPonteiro bUseBPOverrideIsImprintPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideIsImprintPlayer")); }
+    BrzCampoPonteiro bUseBPOverrideIsNetRelevantForField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideIsNetRelevantFor")); }
+    BrzCampoPonteiro bUseBPOverrideMaxInventoryAccessDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideMaxInventoryAccessDistance")); }
+    BrzCampoPonteiro bUseBPOverrideMaxUseDistanceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideMaxUseDistance")); }
+    BrzCampoPonteiro bUseBPOverrideTalkerCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideTalkerCharacter")); }
+    BrzCampoPonteiro bUseBPOverrideTargetStructureSettingsDamageAdjusterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideTargetStructureSettingsDamageAdjuster")); }
+    BrzCampoPonteiro bUseBPOverrideTargetingDesireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideTargetingDesire")); }
+    BrzCampoPonteiro bUseBPOverrideValuesToAddPerSecondField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideValuesToAddPerSecond")); }
+    BrzCampoPonteiro bUseBPOverrideWaterJumpVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPOverrideWaterJumpVelocity")); }
+    BrzCampoPonteiro bUseBPPassHarvestExperienceToActorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPassHarvestExperienceToActor")); }
+    BrzCampoPonteiro bUseBPPreClaimWildFollowerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreClaimWildFollower")); }
+    BrzCampoPonteiro bUseBPPreServerUploadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreServerUpload")); }
+    BrzCampoPonteiro bUseBPPreventAddingOtherBuffField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventAddingOtherBuff")); }
+    BrzCampoPonteiro bUseBPPreventEquipWeaponsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventEquipWeapons")); }
+    BrzCampoPonteiro bUseBPPreventFallDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventFallDamage")); }
+    BrzCampoPonteiro bUseBPPreventFirstPersonField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventFirstPerson")); }
+    BrzCampoPonteiro bUseBPPreventFlightField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventFlight")); }
+    BrzCampoPonteiro bUseBPPreventInstigatorAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventInstigatorAttack")); }
+    BrzCampoPonteiro bUseBPPreventInstigatorMovementModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventInstigatorMovementMode")); }
+    BrzCampoPonteiro bUseBPPreventNotifySoundField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventNotifySound")); }
+    BrzCampoPonteiro bUseBPPreventOnStartJumpField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventOnStartJump")); }
+    BrzCampoPonteiro bUseBPPreventRunningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventRunning")); }
+    BrzCampoPonteiro bUseBPPreventTekArmorBuffsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventTekArmorBuffs")); }
+    BrzCampoPonteiro bUseBPPreventThrowingItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPPreventThrowingItem")); }
+    BrzCampoPonteiro bUseBPSetupForInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPSetupForInstigator")); }
+    BrzCampoPonteiro bUseBPShouldForceOwnerDedicatedMovementTickPerFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBPShouldForceOwnerDedicatedMovementTickPerFrame")); }
+    BrzCampoPonteiro bUseBP_AdjustDamageExField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBP_AdjustDamageEx")); }
+    BrzCampoPonteiro bUseBP_OnOwnerDealtDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBP_OnOwnerDealtDamage")); }
+    BrzCampoPonteiro bUseBP_OnOwnerTeleportedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBP_OnOwnerTeleported")); }
+    BrzCampoPonteiro bUseBP_OverrideTerminalVelocityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBP_OverrideTerminalVelocity")); }
     bool& bUseBlueprintAnimNotificationsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bUseBlueprintAnimNotifications"); }
+    BrzCampoPonteiro bUseBuffOverrideFinalWanderLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBuffOverrideFinalWanderLocation")); }
+    BrzCampoPonteiro bUseBuffOverrideInventoryAccessInputField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBuffOverrideInventoryAccessInput")); }
     bool& bUseBuffTickClientField() const
     { return *GetNativePointerField<bool*>(this, "APrimalBuff.bUseBuffTickClient"); }
+    BrzCampoPonteiro bUseBuffTickServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseBuffTickServer")); }
+    BrzCampoPonteiro bUseCenteredTPVCameraField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseCenteredTPVCamera")); }
+    BrzCampoPonteiro bUseConsolidatedMultiUseWheelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseConsolidatedMultiUseWheel")); }
+    BrzCampoPonteiro bUseDinoRangeForTooltipField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseDinoRangeForTooltip")); }
+    BrzCampoPonteiro bUseFinalAdjustDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseFinalAdjustDamage")); }
+    BrzCampoPonteiro bUseForcedBuffAimOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseForcedBuffAimOverride")); }
+    BrzCampoPonteiro bUseGetGravityZScaleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseGetGravityZScale")); }
+    BrzCampoPonteiro bUseInstigatorItemField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseInstigatorItem")); }
+    BrzCampoPonteiro bUseInterceptInstigatorPlayerEmoteField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseInterceptInstigatorPlayerEmote")); }
+    BrzCampoPonteiro bUseInterceptItemSlotUseField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseInterceptItemSlotUse")); }
+    BrzCampoPonteiro bUseOnCarryCharacterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseOnCarryCharacter")); }
+    BrzCampoPonteiro bUsePostAdjustDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUsePostAdjustDamage")); }
+    BrzCampoPonteiro bUseRemoteClientTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseRemoteClientTick")); }
+    BrzCampoPonteiro bUseSetHiddenInGameFromInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseSetHiddenInGameFromInstigator")); }
+    BrzCampoPonteiro bUseShouldInterceptedInputEventOverwriteUsualFunctionality_Array_GamepadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseShouldInterceptedInputEventOverwriteUsualFunctionality_Array_Gamepad")); }
+    BrzCampoPonteiro bUseTickingDeactivationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUseTickingDeactivation")); }
+    BrzCampoPonteiro bUsesInstigatorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUsesInstigator")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +36, medido na build 25090264
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +36, medido na build 25535041
     //  (offset absoluto medido: 0xA49; confianca media)
     bool& bWasStasisedField() const
     { return BrzCampoAncorado<bool>(this, "bContinueTickingClientAfterDeactivate", 36); }
     BrzCampoPonteiro staticPathingDestinationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.staticPathingDestination")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalRidingDistance` +8, medido na build 25090264
+    //  ancorado em `AdditionalRidingDistance` +8, medido na build 25535041
     //  (offset absoluto medido: 0xB20; confianca alta)
     float& teleporterHapticTimeField() const
     { return BrzCampoAncorado<float>(this, "AdditionalRidingDistance", 8); }

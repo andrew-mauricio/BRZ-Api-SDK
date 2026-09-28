@@ -35,6 +35,10 @@ struct FVectorVMSerializeState
 
     BrzCampoPonteiro FlagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMSerializeState.Flags")); }
+    BrzCampoPonteiro FreeFnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMSerializeState.FreeFn")); }
+    BrzCampoPonteiro ReallocFnField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMSerializeState.ReallocFn")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMSERIALIZESTATE_H

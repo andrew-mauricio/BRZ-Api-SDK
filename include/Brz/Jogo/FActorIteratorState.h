@@ -43,14 +43,22 @@ struct FActorIteratorState
 
     BrzCampoPonteiro ActorArrayField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.ActorArray")); }
+    BrzCampoPonteiro ActorSpawnedDelegateHandleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.ActorSpawnedDelegateHandle")); }
+    BrzCampoPonteiro ConsideredCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.ConsideredCount")); }
     BrzCampoPonteiro CurrentActorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.CurrentActor")); }
     BrzCampoPonteiro CurrentWorldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.CurrentWorld")); }
     BrzCampoPonteiro DesiredClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.DesiredClass")); }
-    BitFieldValue<bool, unsigned __int32> Index()
-    { return { (void*)this, "Index" }; }
+    BrzCampoPonteiro IndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.Index")); }
+    BrzCampoPonteiro ReachedEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.ReachedEnd")); }
+    BrzCampoPonteiro SpawnedActorArrayField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorIteratorState.SpawnedActorArray")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORITERATORSTATE_H

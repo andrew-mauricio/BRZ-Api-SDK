@@ -32,8 +32,33 @@ struct FVectorVMExecContext
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro ConstantTableCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.ConstantTableCount")); }
+    BrzCampoPonteiro ConstantTableDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.ConstantTableData")); }
+    BrzCampoPonteiro ConstantTableNumBytesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.ConstantTableNumBytes")); }
+    BrzCampoPonteiro DataSetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.DataSets")); }
+    BrzCampoPonteiro ExtFunctionTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.ExtFunctionTable")); }
+    BrzCampoPonteiro InternalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.Internal")); }
+    BrzCampoPonteiro MaxChunksPerBatchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.MaxChunksPerBatch")); }
+    BrzCampoPonteiro MaxInstancesPerChunkField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.MaxInstancesPerChunk")); }
+    BrzCampoPonteiro NumBytesRequiredPerBatchField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.NumBytesRequiredPerBatch")); }
     BrzCampoPonteiro NumInstancesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.NumInstances")); }
+    BrzCampoPonteiro PerBatchRegisterDataBytesRequiredField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.PerBatchRegisterDataBytesRequired")); }
+    BrzCampoPonteiro UserPtrTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.UserPtrTable")); }
+    BrzCampoPonteiro VVMStateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorVMExecContext.VVMState")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORVMEXECCONTEXT_H

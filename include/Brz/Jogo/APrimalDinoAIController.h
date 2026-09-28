@@ -78,7 +78,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPForceTargetDinoRider(AShooterCharacter*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=2]]
     bool BPForceTargetDinoRider(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalDinoAIController.BPForceTargetDinoRider(AShooterCharacter*)", a0);
@@ -86,7 +86,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPNotifyTargetSet()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPNotifyTargetSet() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.BPNotifyTargetSet()");
@@ -94,7 +94,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.BPOnFleeEvent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=45]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPOnFleeEvent() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.BPOnFleeEvent()");
@@ -118,7 +118,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPPreventAddAggroOnTakeDamage(AActor*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=66]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPPreventAddAggroOnTakeDamage(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalDinoAIController.BPPreventAddAggroOnTakeDamage(AActor*)", a0);
@@ -134,7 +134,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPSetLastCharacterTargetTeam(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPSetLastCharacterTargetTeam(int a0) const
     {
         NativeCall<void, int>(this, "APrimalDinoAIController.BPSetLastCharacterTargetTeam(int)", a0);
@@ -142,7 +142,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPSetupFindTarget()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=45+chamadores=2]]
     void BPSetupFindTarget() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.BPSetupFindTarget()");
@@ -150,7 +150,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPShouldNotifyAnyNeighbor(APrimalDinoCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPShouldNotifyAnyNeighbor(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalDinoAIController.BPShouldNotifyAnyNeighbor(APrimalDinoCharacter*)", a0);
@@ -182,7 +182,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=231]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.BeginPlay()");
@@ -206,7 +206,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.CheckMoveAroundBlockadePoint(UE::Math::TVector<double>)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool CheckMoveAroundBlockadePoint(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalDinoAIController.CheckMoveAroundBlockadePoint(UE::Math::TVector<double>)", a0);
@@ -222,7 +222,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=96]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.Destroyed()");
@@ -246,7 +246,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.GetAcceptanceHeightOffset()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetAcceptanceHeightOffset() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAcceptanceHeightOffset()");
@@ -254,7 +254,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.GetAcceptanceRadiusOffset()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetAcceptanceRadiusOffset() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAcceptanceRadiusOffset()");
@@ -262,7 +262,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.GetAggroDesirability(AActor*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     float GetAggroDesirability(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalDinoAIController.GetAggroDesirability(AActor*)", a0);
@@ -270,7 +270,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAggroEntriesAttackerAtIndex(int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetAggroEntriesAttackerAtIndex(int a0) const
     {
         return NativeCall<UObject*, int>(this, "APrimalDinoAIController.GetAggroEntriesAttackerAtIndex(int)", a0);
@@ -286,7 +286,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAggroLastHitTime(AActor*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     float GetAggroLastHitTime(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalDinoAIController.GetAggroLastHitTime(AActor*)", a0);
@@ -294,7 +294,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAggroNotifyNeighborsRange()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     float GetAggroNotifyNeighborsRange() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAggroNotifyNeighborsRange()");
@@ -302,7 +302,7 @@ struct APrimalDinoAIController : public AAIController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalDinoAIController.GetAggroNotifyNeighborsRange_Implementation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAggroNotifyNeighborsRange_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalDinoAIController.GetAggroNotifyNeighborsRange_Implementation()");
@@ -310,7 +310,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAttackInterval()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetAttackInterval() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAttackInterval()");
@@ -318,7 +318,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAttackRange()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetAttackRange() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAttackRange()");
@@ -326,7 +326,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAttackRotationGroundSpeedMultiplier()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetAttackRotationGroundSpeedMultiplier() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAttackRotationGroundSpeedMultiplier()");
@@ -334,7 +334,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAttackRotationRangeDegrees()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetAttackRotationRangeDegrees() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetAttackRotationRangeDegrees()");
@@ -342,7 +342,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAttackRotationRate()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAttackRotationRate() const
     {
         return NativeCall<void*>(this, "APrimalDinoAIController.GetAttackRotationRate()");
@@ -366,7 +366,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetCurrentAttackIndex()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     unsigned char GetCurrentAttackIndex() const
     {
         return NativeCall<unsigned char>(this, "APrimalDinoAIController.GetCurrentAttackIndex()");
@@ -390,7 +390,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetLandingLocation()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=5419+bytes40+grafo=44/44]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=5419+bytes40+grafo=43/43]]
     BrzPonteiro GetLandingLocation() const
     {
         return NativeCall<void*>(this, "APrimalDinoAIController.GetLandingLocation()");
@@ -398,7 +398,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetMinAttackRange()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetMinAttackRange() const
     {
         return NativeCall<float>(this, "APrimalDinoAIController.GetMinAttackRange()");
@@ -422,7 +422,7 @@ struct APrimalDinoAIController : public AAIController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalDinoAIController.GetRandomWanderDestination(UE::Math::TVector<double>,float,bool,bool,UE:
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [grafo=214/214]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetRandomWanderDestination(void* a0, float a1, bool a2, bool a3, void* a4) const
     {
         return NativeCall<void*, void*, float, bool, bool, void*>(this, "APrimalDinoAIController.GetRandomWanderDestination(UE::Math::TVector<double>,float,bool,bool,UE::Math::TRotator<double>)", a0, a1, a2, a3, a4);
@@ -430,7 +430,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetTarget()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetTarget() const
     {
         return NativeCall<UObject*>(this, "APrimalDinoAIController.GetTarget()");
@@ -462,7 +462,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.IsForceTargetDinoRider(AShooterCharacter*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     bool IsForceTargetDinoRider(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalDinoAIController.IsForceTargetDinoRider(AShooterCharacter*)", a0);
@@ -470,7 +470,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.IsLogicPaused()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     bool IsLogicPaused() const
     {
         return NativeCall<bool>(this, "APrimalDinoAIController.IsLogicPaused()");
@@ -574,7 +574,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.RebootBrainComponent()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void RebootBrainComponent() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.RebootBrainComponent()");
@@ -590,7 +590,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.RemoveFromAggro(AActor*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RemoveFromAggro(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalDinoAIController.RemoveFromAggro(AActor*)", a0);
@@ -598,7 +598,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.ResetAccelerationFollowsRotation()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetAccelerationFollowsRotation() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.ResetAccelerationFollowsRotation()");
@@ -606,7 +606,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.ResetGroundSpeed()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetGroundSpeed() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.ResetGroundSpeed()");
@@ -614,7 +614,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.ResetRotationRate()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetRotationRate() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.ResetRotationRate()");
@@ -622,7 +622,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.ResetRotationUseAcceleration()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ResetRotationUseAcceleration() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.ResetRotationUseAcceleration()");
@@ -630,7 +630,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.RestartBrainComponent()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RestartBrainComponent() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.RestartBrainComponent()");
@@ -646,7 +646,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.SetAttackGroundSpeed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=89]]
+    // endereco: casamento de bytes com a build de referencia
     void SetAttackGroundSpeed() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.SetAttackGroundSpeed()");
@@ -654,7 +654,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.SetAttackRotationRate()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAttackRotationRate() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.SetAttackRotationRate()");
@@ -662,7 +662,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.SetDeferredTick(bool,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void SetDeferredTick(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "APrimalDinoAIController.SetDeferredTick(bool,bool)", a0, a1);
@@ -670,7 +670,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.SetHasAttackPriority(bool)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetHasAttackPriority(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalDinoAIController.SetHasAttackPriority(bool)", a0);
@@ -694,7 +694,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.ShouldForceFlee()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1743+bytes40+grafo=20/20]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldForceFlee() const
     {
         return NativeCall<bool>(this, "APrimalDinoAIController.ShouldForceFlee()");
@@ -702,7 +702,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.ShouldForceRunWhenAttacking()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=123]]
+    // endereco: casamento de bytes com a build de referencia
     bool ShouldForceRunWhenAttacking() const
     {
         return NativeCall<bool>(this, "APrimalDinoAIController.ShouldForceRunWhenAttacking()");
@@ -734,7 +734,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.StopBrainComponent(FString)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: casamento de bytes com a build de referencia
     void StopBrainComponent(const FString& a0) const
     {
         NativeCall<void, void*>(this, "APrimalDinoAIController.StopBrainComponent(FString)", const_cast<FString*>(&a0));
@@ -763,7 +763,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.UpdateAggro()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateAggro() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.UpdateAggro()");
@@ -771,7 +771,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.WantsAttackPriority()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool WantsAttackPriority() const
     {
         return NativeCall<bool>(this, "APrimalDinoAIController.WantsAttackPriority()");
@@ -782,17 +782,17 @@ struct APrimalDinoAIController : public AAIController
     float& AboveDeltaZAttackRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.AboveDeltaZAttackRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +16, medido na build 25090264
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x8F0; confianca alta)
     float& AccumulatedBehaviorDeltaField() const
     { return BrzCampoAncorado<float>(this, "LastForcedAttackEnemyTeamTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +20, medido na build 25090264
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +20, medido na build 25535041
     //  (offset absoluto medido: 0x8F4; confianca alta)
     int& AccumulatedBehaviorFrameCountField() const
     { return BrzCampoAncorado<int>(this, "LastForcedAttackEnemyTeamTime", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bWildUseDeltaZTargetingForFlyerPawnOrBigDino` +4, medido na build 25090264
+    //  ancorado em `bWildUseDeltaZTargetingForFlyerPawnOrBigDino` +4, medido na build 25535041
     //  (offset absoluto medido: 0x6C8; confianca alta)
     TArray<void*>& AggroEntriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bWildUseDeltaZTargetingForFlyerPawnOrBigDino", 4); }
@@ -839,17 +839,17 @@ struct APrimalDinoAIController : public AAIController
     float& BeyondTargetingRangeAggroAdditionField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.BeyondTargetingRangeAggroAddition"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +16, medido na build 25090264
+    //  ancorado em `ForcedMoveToUntilTime` +16, medido na build 25535041
     //  (offset absoluto medido: 0x978; confianca alta)
     void*& CachedWanderDestinationField() const
     { return BrzCampoAncorado<void*>(this, "ForcedMoveToUntilTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +40, medido na build 25090264
+    //  ancorado em `ForcedMoveToUntilTime` +40, medido na build 25535041
     //  (offset absoluto medido: 0x990; confianca media)
     void*& CachedWanderFromLocationField() const
     { return BrzCampoAncorado<void*>(this, "ForcedMoveToUntilTime", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +64, medido na build 25090264
+    //  ancorado em `ForcedMoveToUntilTime` +64, medido na build 25535041
     //  (offset absoluto medido: 0x9A8; confianca media)
     void*& CachedWanderTimeField() const
     { return BrzCampoAncorado<void*>(this, "ForcedMoveToUntilTime", 64); }
@@ -915,6 +915,8 @@ struct APrimalDinoAIController : public AAIController
     { return *GetNativePointerField<double*>(this, "APrimalDinoAIController.ForcedMoveToUntilTime"); }
     float& GroundAttackSpeedOverrideField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.GroundAttackSpeedOverride"); }
+    BrzCampoPonteiro HasAttackPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.HasAttackPriority")); }
     UBehaviorTree*& HasEnemyTreeField() const
     { return *GetNativePointerField<UBehaviorTree**>(this, "APrimalDinoAIController.HasEnemyTree"); }
     float& HigherTamedTargetingRangeOverrideField() const
@@ -934,7 +936,7 @@ struct APrimalDinoAIController : public AAIController
     float& LastBlockadeWidthField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.LastBlockadeWidth"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +24, medido na build 25090264
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +24, medido na build 25535041
     //  (offset absoluto medido: 0x8F8; confianca alta)
     int& LastCharacterTargetTeamField() const
     { return BrzCampoAncorado<int>(this, "LastForcedAttackEnemyTeamTime", 24); }
@@ -949,7 +951,7 @@ struct APrimalDinoAIController : public AAIController
     double& LastExecutedAttackTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalDinoAIController.LastExecutedAttackTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFleeLocCheckTime` +8, medido na build 25090264
+    //  ancorado em `LastFleeLocCheckTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x938; confianca alta)
     void*& LastFleeLocCheckField() const
     { return BrzCampoAncorado<void*>(this, "LastFleeLocCheckTime", 8); }
@@ -960,7 +962,7 @@ struct APrimalDinoAIController : public AAIController
     double& LastForcedFleeTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalDinoAIController.LastForcedFleeTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +8, medido na build 25090264
+    //  ancorado em `ForcedMoveToUntilTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x970; confianca alta)
     double& LastHadAggroEntriesTimeField() const
     { return BrzCampoAncorado<double>(this, "ForcedMoveToUntilTime", 8); }
@@ -1001,7 +1003,7 @@ struct APrimalDinoAIController : public AAIController
     int& NumAlliesToAttackField() const
     { return *GetNativePointerField<int*>(this, "APrimalDinoAIController.NumAlliesToAttack"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +8, medido na build 25090264
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +8, medido na build 25535041
     //  (offset absoluto medido: 0x8E8; confianca alta)
     TWeakObjectPtr<void>& PawnPersistentReferenceField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "LastForcedAttackEnemyTeamTime", 8); }
@@ -1063,16 +1065,124 @@ struct APrimalDinoAIController : public AAIController
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalDinoAIController.WildTargetingDesireMultiplierClasses"); }
     TArray<void*>& WildTargetingDesireMultiplierValuesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalDinoAIController.WildTargetingDesireMultiplierValues"); }
+    BrzCampoPonteiro bAllowDinoToTargetShipsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bAllowDinoToTargetShips")); }
+    BrzCampoPonteiro bAllowForceFleeToSameTargetingTeamField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bAllowForceFleeToSameTargetingTeam")); }
+    BrzCampoPonteiro bAllowSwimWanderingForLandDinosField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bAllowSwimWanderingForLandDinos")); }
+    BrzCampoPonteiro bAlwaysStartledWhenAggroedByNeighborField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bAlwaysStartledWhenAggroedByNeighbor")); }
+    BrzCampoPonteiro bAttackForcesRunningField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bAttackForcesRunning")); }
+    BrzCampoPonteiro bCanUseAttackStateOnTargetChangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bCanUseAttackStateOnTargetChange")); }
+    BrzCampoPonteiro bCheckBuffTargetingDesireOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bCheckBuffTargetingDesireOverride")); }
+    BrzCampoPonteiro bDeferredTickModeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bDeferredTickMode")); }
+    BrzCampoPonteiro bDisableForceFleeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bDisableForceFlee")); }
+    BrzCampoPonteiro bDontWanderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bDontWander")); }
+    BrzCampoPonteiro bFleeOnCriticalHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bFleeOnCriticalHealth")); }
+    BrzCampoPonteiro bFlyerAllowWaterTargetingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bFlyerAllowWaterTargeting")); }
+    BrzCampoPonteiro bFlyerWanderDefaultToOriginField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bFlyerWanderDefaultToOrigin")); }
+    BrzCampoPonteiro bFlyingUseMoveAroundBlockadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bFlyingUseMoveAroundBlockade")); }
+    BrzCampoPonteiro bFocusOnTargetDuringAttackField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bFocusOnTargetDuringAttack")); }
+    BrzCampoPonteiro bForceOnlyTargetingPlayerOrTamedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bForceOnlyTargetingPlayerOrTamed")); }
+    BrzCampoPonteiro bForceOnlyTargetingPlayersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bForceOnlyTargetingPlayers")); }
+    BrzCampoPonteiro bForceTargetDinoRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bForceTargetDinoRider")); }
+    BrzCampoPonteiro bForceTargetingAllStructuresField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bForceTargetingAllStructures")); }
+    BrzCampoPonteiro bForcedAggroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bForcedAggro")); }
+    BrzCampoPonteiro bIgnoreMoveAroundBlockadeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bIgnoreMoveAroundBlockade")); }
+    BrzCampoPonteiro bIgnoreWaterOrAmphibiousTargetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bIgnoreWaterOrAmphibiousTargets")); }
+    BrzCampoPonteiro bIsMissionDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bIsMissionDino")); }
+    BrzCampoPonteiro bNotAllowedToFindTargetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bNotAllowedToFindTargets")); }
+    BrzCampoPonteiro bNotifyBPTargetSetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bNotifyBPTargetSet")); }
     bool& bNotifyNeighborsWithoutDamageField() const
     { return *GetNativePointerField<bool*>(this, "APrimalDinoAIController.bNotifyNeighborsWithoutDamage"); }
+    BrzCampoPonteiro bOnlyForceFleeUnderHealthPercentageIfWildField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bOnlyForceFleeUnderHealthPercentageIfWild")); }
     bool& bOnlyOverlapTargetCorpsesUnlessHasTargetField() const
     { return *GetNativePointerField<bool*>(this, "APrimalDinoAIController.bOnlyOverlapTargetCorpsesUnlessHasTarget"); }
+    BrzCampoPonteiro bOnlyTargetShipsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bOnlyTargetShips")); }
+    BrzCampoPonteiro bRequireAbsoluteDamageForNeighborNotificationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bRequireAbsoluteDamageForNeighborNotification")); }
+    BrzCampoPonteiro bRidingDinoTargetPlayerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bRidingDinoTargetPlayer")); }
+    BrzCampoPonteiro bRidingPlayerTargetDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bRidingPlayerTargetDino")); }
+    BrzCampoPonteiro bStopMassMovingWithTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bStopMassMovingWithTarget")); }
+    BrzCampoPonteiro bTargetChangedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bTargetChanged")); }
+    BrzCampoPonteiro bTotallyIgnoreWaterTargetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bTotallyIgnoreWaterTargets")); }
+    BrzCampoPonteiro bUseAggroField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseAggro")); }
     bool& bUseAlternateMovePointField() const
     { return *GetNativePointerField<bool*>(this, "APrimalDinoAIController.bUseAlternateMovePoint"); }
+    BrzCampoPonteiro bUseBPAdjustTargetingDesireForActorOutOfLimitVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPAdjustTargetingDesireForActorOutOfLimitVolume")); }
+    BrzCampoPonteiro bUseBPForceAlternateAttackPointField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPForceAlternateAttackPoint")); }
+    BrzCampoPonteiro bUseBPForceTargetDinoRiderField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPForceTargetDinoRider")); }
+    BrzCampoPonteiro bUseBPOnSetHasAttackPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPOnSetHasAttackPriority")); }
+    BrzCampoPonteiro bUseBPOverrideIgnoredByWildDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPOverrideIgnoredByWildDino")); }
+    BrzCampoPonteiro bUseBPPreventStartleField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPPreventStartle")); }
+    BrzCampoPonteiro bUseBPSetupFindTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPSetupFindTarget")); }
     bool& bUseBPShouldNotifyAnyNeighborField() const
     { return *GetNativePointerField<bool*>(this, "APrimalDinoAIController.bUseBPShouldNotifyAnyNeighbor"); }
+    BrzCampoPonteiro bUseBPShouldNotifyNeighborField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPShouldNotifyNeighbor")); }
+    BrzCampoPonteiro bUseBPTargetingDesireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPTargetingDesire")); }
+    BrzCampoPonteiro bUseBPUpdateBestTargetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPUpdateBestTarget")); }
+    BrzCampoPonteiro bUseBPWantsAttackPriorityField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBPWantsAttackPriority")); }
+    BrzCampoPonteiro bUseBP_TamedOverrideHorizontalLandingRangeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseBP_TamedOverrideHorizontalLandingRange")); }
+    BrzCampoPonteiro bUseCombatMoveTowardsTargetOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseCombatMoveTowardsTargetOffset")); }
+    BrzCampoPonteiro bUseFlyingTargetOffsetsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseFlyingTargetOffsets")); }
+    BrzCampoPonteiro bUseGeometryInsteadOfStationObjForFreeDepthTestField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseGeometryInsteadOfStationObjForFreeDepthTest")); }
+    BrzCampoPonteiro bUseImprovedAggroFalloffBehaviorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseImprovedAggroFalloffBehavior")); }
+    BrzCampoPonteiro bUseOverlapTargetCheckField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseOverlapTargetCheck")); }
+    BrzCampoPonteiro bUseOverlapTargetCheckTracesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUseOverlapTargetCheckTraces")); }
+    BrzCampoPonteiro bUse_BPOverrideLandingLocationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bUse_BPOverrideLandingLocation")); }
     bool& bWaterDinoAllowUnsubmergedTargetsField() const
     { return *GetNativePointerField<bool*>(this, "APrimalDinoAIController.bWaterDinoAllowUnsubmergedTargets"); }
+    BrzCampoPonteiro bWildUseDeltaZTargetingForFlyerPawnOrBigDinoField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalDinoAIController.bWildUseDeltaZTargetingForFlyerPawnOrBigDino")); }
     BitFieldValue<bool, unsigned __int32> bForcedAggro()
     { return { (void*)this, "bForcedAggro" }; }
     BitFieldValue<bool, unsigned __int32> bDeferredTickMode()

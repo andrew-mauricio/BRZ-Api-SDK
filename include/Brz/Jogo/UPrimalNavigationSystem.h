@@ -87,24 +87,24 @@ struct UPrimalNavigationSystem
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.SupportedAgents")); }
     BrzCampoPonteiro SupportedAgentsMaskField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.SupportedAgentsMask")); }
-    BitFieldValue<bool, unsigned __int32> bAllowClientSideNavigation()
-    { return { (void*)this, "bAllowClientSideNavigation" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoCreateNavigationData()
-    { return { (void*)this, "bAutoCreateNavigationData" }; }
-    BitFieldValue<bool, unsigned __int32> bGenerateNavigationOnlyAroundNavigationInvokers()
-    { return { (void*)this, "bGenerateNavigationOnlyAroundNavigationInvokers" }; }
-    BitFieldValue<bool, unsigned __int32> bInitialBuildingLocked()
-    { return { (void*)this, "bInitialBuildingLocked" }; }
-    BitFieldValue<bool, unsigned __int32> bShouldDiscardSubLevelNavData()
-    { return { (void*)this, "bShouldDiscardSubLevelNavData" }; }
-    BitFieldValue<bool, unsigned __int32> bSkipAgentHeightCheckWhenPickingNavData()
-    { return { (void*)this, "bSkipAgentHeightCheckWhenPickingNavData" }; }
-    BitFieldValue<bool, unsigned __int32> bSpawnNavDataInNavBoundsLevel()
-    { return { (void*)this, "bSpawnNavDataInNavBoundsLevel" }; }
-    BitFieldValue<bool, unsigned __int32> bSupportRebuilding()
-    { return { (void*)this, "bSupportRebuilding" }; }
-    BitFieldValue<bool, unsigned __int32> bTickWhilePaused()
-    { return { (void*)this, "bTickWhilePaused" }; }
+    BrzCampoPonteiro bAllowClientSideNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bAllowClientSideNavigation")); }
+    BrzCampoPonteiro bAutoCreateNavigationDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bAutoCreateNavigationData")); }
+    BrzCampoPonteiro bGenerateNavigationOnlyAroundNavigationInvokersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bGenerateNavigationOnlyAroundNavigationInvokers")); }
+    BrzCampoPonteiro bInitialBuildingLockedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bInitialBuildingLocked")); }
+    BrzCampoPonteiro bShouldDiscardSubLevelNavDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bShouldDiscardSubLevelNavData")); }
+    BrzCampoPonteiro bSkipAgentHeightCheckWhenPickingNavDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bSkipAgentHeightCheckWhenPickingNavData")); }
+    BrzCampoPonteiro bSpawnNavDataInNavBoundsLevelField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bSpawnNavDataInNavBoundsLevel")); }
+    BrzCampoPonteiro bSupportRebuildingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bSupportRebuilding")); }
+    BrzCampoPonteiro bTickWhilePausedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalNavigationSystem.bTickWhilePaused")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALNAVIGATIONSYSTEM_H

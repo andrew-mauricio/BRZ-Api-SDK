@@ -61,6 +61,8 @@ struct UPrimalProgressionTreeAsset
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalProgressionTreeAsset.ProgressionGraphClass")); }
     FName& SkillTreeTagField() const
     { return *GetNativePointerField<FName*>(this, "UPrimalProgressionTreeAsset.SkillTreeTag"); }
+    BrzCampoPonteiro bUsesDedicatedSkillPointPoolField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalProgressionTreeAsset.bUsesDedicatedSkillPointPool")); }
     BitFieldValue<bool, unsigned __int32> bUsesDedicatedSkillPointPool()
     { return { (void*)this, "bUsesDedicatedSkillPointPool" }; }
 

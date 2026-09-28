@@ -36,7 +36,7 @@ struct ABaseBoxTrigger : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABaseBoxTrigger.BeginPlay()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=546+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "ABaseBoxTrigger.BeginPlay()");
@@ -52,7 +52,7 @@ struct ABaseBoxTrigger : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABaseBoxTrigger.OnTriggerEndOverlap(UPrimitiveComponent*,AActor*,UPrimitiveComponent*,int)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnTriggerEndOverlap(void* a0, void* a1, void* a2, int a3) const
     {
         NativeCall<void, void*, void*, void*, int>(this, "ABaseBoxTrigger.OnTriggerEndOverlap(UPrimitiveComponent*,AActor*,UPrimitiveComponent*,int)", a0, a1, a2, a3);
@@ -62,6 +62,10 @@ struct ABaseBoxTrigger : public AActor
     { return *GetNativePointerField<USceneComponent**>(this, "ABaseBoxTrigger.SceneComp"); }
     UBoxComponent*& TriggerBoxField() const
     { return *GetNativePointerField<UBoxComponent**>(this, "ABaseBoxTrigger.TriggerBox"); }
+    BrzCampoPonteiro bUseBPOnTriggerBeginOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABaseBoxTrigger.bUseBPOnTriggerBeginOverlap")); }
+    BrzCampoPonteiro bUseBPOnTriggerEndOverlapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABaseBoxTrigger.bUseBPOnTriggerEndOverlap")); }
     BitFieldValue<bool, unsigned __int32> bUseBPOnTriggerBeginOverlap()
     { return { (void*)this, "bUseBPOnTriggerBeginOverlap" }; }
     BitFieldValue<bool, unsigned __int32> bUseBPOnTriggerEndOverlap()

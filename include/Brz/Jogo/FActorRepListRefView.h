@@ -59,7 +59,7 @@ struct FActorRepListRefView
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorRepListRefView.Contains(AActor*&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Contains(void* a0) const
     {
         return NativeCall<void*, void*>(this, "FActorRepListRefView.Contains(AActor*&)", a0);
@@ -112,6 +112,15 @@ struct FActorRepListRefView
     {
         return NativeCall<void*, void*>(this, "FActorRepListRefView.operator=(FActorRepListRefView&&)", a0);
     }
+
+    BrzCampoPonteiro RepListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListRefView.RepList")); }
+    BrzCampoPonteiro SetOfActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListRefView.SetOfActors")); }
+    BrzCampoPonteiro SetOfNetCriticalActorsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListRefView.SetOfNetCriticalActors")); }
+    BrzCampoPonteiro WeakRepListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FActorRepListRefView.WeakRepList")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FACTORREPLISTREFVIEW_H

@@ -135,7 +135,7 @@ struct UWorldComposition
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldComposition.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=50]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PostInitProperties() const
     {
         return NativeCall<void*>(this, "UWorldComposition.PostInitProperties()");
@@ -205,6 +205,10 @@ struct UWorldComposition
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldComposition.TilesStreaming")); }
     double& TilesStreamingTimeThresholdField() const
     { return *GetNativePointerField<double*>(this, "UWorldComposition.TilesStreamingTimeThreshold"); }
+    BrzCampoPonteiro bLoadAllTilesDuringCinematicField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldComposition.bLoadAllTilesDuringCinematic")); }
+    BrzCampoPonteiro bRebaseOriginIn3DSpaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldComposition.bRebaseOriginIn3DSpace")); }
     BitFieldValue<bool, unsigned __int32> bLoadAllTilesDuringCinematic()
     { return { (void*)this, "bLoadAllTilesDuringCinematic" }; }
     BitFieldValue<bool, unsigned __int32> bRebaseOriginIn3DSpace()

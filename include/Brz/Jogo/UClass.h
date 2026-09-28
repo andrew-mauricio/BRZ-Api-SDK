@@ -151,7 +151,7 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.GetArchetypeForSparseClassData()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetArchetypeForSparseClassData() const
     {
         return NativeCall<void*>(this, "UClass.GetArchetypeForSparseClassData()");
@@ -168,9 +168,9 @@ struct UClass : public UStruct
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.GetDefaultObject(bool)
     // endereco: casamento de bytes com a build de referencia
-    static UObject* GetDefaultObject(bool a0)
+    UObject* GetDefaultObject(bool a0) const
     {
-        return NativeCall<UObject*, bool>(nullptr, "UClass.GetDefaultObject(bool)", a0);
+        return NativeCall<UObject*, bool>(this, "UClass.GetDefaultObject(bool)", a0);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -191,7 +191,7 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.GetDefaultPropertiesFeedbackContext()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=137+grafo=3/3]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetDefaultPropertiesFeedbackContext()
     {
         return NativeCall<void*>(nullptr, "UClass.GetDefaultPropertiesFeedbackContext()");
@@ -231,7 +231,7 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.GetSparseClassData(EGetSparseClassDataMethod)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSparseClassData(int a0) const
     {
         return NativeCall<void*, int>(this, "UClass.GetSparseClassData(EGetSparseClassDataMethod)", a0);
@@ -239,7 +239,7 @@ struct UClass : public UStruct
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UClass.GetSparseClassDataArchetypeStruct()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSparseClassDataArchetypeStruct() const
     {
         return NativeCall<void*>(this, "UClass.GetSparseClassDataArchetypeStruct()");
@@ -263,7 +263,7 @@ struct UClass : public UStruct
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UClass.InternalCreateDefaultObjectWrapper()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro InternalCreateDefaultObjectWrapper() const
     {
         return NativeCall<void*>(this, "UClass.InternalCreateDefaultObjectWrapper()");
@@ -271,7 +271,7 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.IsStructTrashed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsStructTrashed() const
     {
         return NativeCall<bool>(this, "UClass.IsStructTrashed()");
@@ -279,10 +279,11 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.Link(FArchive&,bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // classe: a funcao mora em UStruct, e UClass herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void Link(void* a0, bool a1) const
     {
-        NativeCall<void, void*, bool>(this, "UClass.Link(FArchive&,bool)", a0, a1);
+        NativeCall<void, void*, bool>(this, "UStruct.Link(FArchive&,bool)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -295,23 +296,25 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.PostInitProperties()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // classe: a funcao mora em UObject, e UClass herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostInitProperties() const
     {
-        NativeCall<void>(this, "UClass.PostInitProperties()");
+        NativeCall<void>(this, "UObject.PostInitProperties()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.PostLoad()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // classe: a funcao mora em UStruct, e UClass herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void PostLoad() const
     {
-        NativeCall<void>(this, "UClass.PostLoad()");
+        NativeCall<void>(this, "UStruct.PostLoad()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.PostLoadDefaultObject(UObject*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostLoadDefaultObject(void* a0) const
     {
         NativeCall<void, void*>(this, "UClass.PostLoadDefaultObject(UObject*)", a0);
@@ -463,8 +466,57 @@ struct UClass : public UStruct
     //  Para chamar uma destas, use `NativeCall` direto com a chave:
     //    UClass.SerializeDefaultObject(UObject*,FStructuredArchiveSlot)
     //      (colide com UClass.SerializeDefaultObject(UObject*,FArchive&))
+
+    BrzCampoPonteiro AllFunctionsCacheField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.AllFunctionsCache")); }
+    BrzCampoPonteiro AllFunctionsCacheLockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.AllFunctionsCacheLock")); }
+    int& ClassCastFlagsField() const
+    { return *GetNativePointerField<int*>(this, "UClass.ClassCastFlags"); }
+    FName& ClassConfigNameField() const
+    { return *GetNativePointerField<FName*>(this, "UClass.ClassConfigName"); }
+    BrzCampoPonteiro ClassConstructorField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.ClassConstructor")); }
+    UObject*& ClassDefaultObjectField() const
+    { return *GetNativePointerField<UObject**>(this, "UClass.ClassDefaultObject"); }
+    int& ClassFlagsField() const
+    { return *GetNativePointerField<int*>(this, "UClass.ClassFlags"); }
+    TArray<void*>& ClassRepsField() const
+    { return *GetNativePointerField<TArray<void*>*>(this, "UClass.ClassReps"); }
+    int& ClassUniqueField() const
+    { return *GetNativePointerField<int*>(this, "UClass.ClassUnique"); }
+    BrzCampoPonteiro ClassVTableHelperCtorCallerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.ClassVTableHelperCtorCaller")); }
+    UClass*& ClassWithinField() const
+    { return *GetNativePointerField<UClass**>(this, "UClass.ClassWithin"); }
+    BrzCampoPonteiro CppClassStaticFunctionsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.CppClassStaticFunctions")); }
+    int& FirstOwnedClassRepField() const
+    { return *GetNativePointerField<int*>(this, "UClass.FirstOwnedClassRep"); }
+    BrzCampoPonteiro FuncMapField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.FuncMap")); }
+    BrzCampoPonteiro FuncMapLockField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.FuncMapLock")); }
     BrzCampoPonteiro InterfacesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.Interfaces")); }
+    BrzCampoPonteiro LiveTunableContainerPtrField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.LiveTunableContainerPtr")); }
+    BrzCampoPonteiro NativeFunctionLookupTableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.NativeFunctionLookupTable")); }
+    TArray<UField*>& NetFieldsField() const
+    { return *GetNativePointerField<TArray<UField*>*>(this, "UClass.NetFields"); }
+    BrzCampoPonteiro ReferenceSchemaField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.ReferenceSchema")); }
+    BrzCampoPonteiro SparseClassDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.SparseClassData")); }
+    BrzCampoPonteiro SparseClassDataBackupField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.SparseClassDataBackup")); }
+    UScriptStruct*& SparseClassDataStructField() const
+    { return *GetNativePointerField<UScriptStruct**>(this, "UClass.SparseClassDataStruct"); }
+    BrzCampoPonteiro bCookedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UClass.bCooked")); }
+    bool& bLayoutChangingField() const
+    { return *GetNativePointerField<bool*>(this, "UClass.bLayoutChanging"); }
     BitFieldValue<bool, unsigned __int32> bIsGameClass()
     { return { (void*)this, "bIsGameClass" }; }
     BitFieldValue<bool, unsigned __int32> bCheckedForLocalize()

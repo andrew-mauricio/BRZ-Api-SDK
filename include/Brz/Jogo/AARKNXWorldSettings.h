@@ -33,7 +33,7 @@ struct AARKNXWorldSettings : public AWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AARKNXWorldSettings.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+string_aprovado]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "AARKNXWorldSettings.BeginPlay()");
@@ -41,7 +41,7 @@ struct AARKNXWorldSettings : public AWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AARKNXWorldSettings.Tick(float)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "AARKNXWorldSettings.Tick(float)", a0);

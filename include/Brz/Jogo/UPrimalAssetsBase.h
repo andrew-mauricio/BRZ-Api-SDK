@@ -30,6 +30,9 @@ struct UPrimalAssetsBase : public UObject
 {
     static UClass* StaticClass()
     { return BrzClassePorNome("UPrimalAssetsBase"); }
+
+    BrzCampoPonteiro OnHitchedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAssetsBase.OnHitched")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UPRIMALASSETSBASE_H

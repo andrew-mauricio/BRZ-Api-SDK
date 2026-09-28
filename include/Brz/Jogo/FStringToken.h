@@ -32,8 +32,15 @@ struct FStringToken
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro CharacterIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringToken.CharacterIndex")); }
     BrzCampoPonteiro LineNumberField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringToken.LineNumber")); }
+    BrzCampoPonteiro TokenEndField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringToken.TokenEnd")); }
+    BrzCampoPonteiro TokenStartField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringToken.TokenStart")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGTOKEN_H

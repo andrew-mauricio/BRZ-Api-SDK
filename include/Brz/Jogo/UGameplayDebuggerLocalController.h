@@ -35,7 +35,7 @@ struct UGameplayDebuggerLocalController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayDebuggerLocalController.BeginDestroy()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=55]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro BeginDestroy() const
     {
         return NativeCall<void*>(this, "UGameplayDebuggerLocalController.BeginDestroy()");

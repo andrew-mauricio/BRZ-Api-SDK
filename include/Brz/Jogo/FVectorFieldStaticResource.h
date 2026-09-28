@@ -40,6 +40,9 @@ struct FVectorFieldStaticResource
     {
         return NativeCall<void*, void*>(this, "FVectorFieldStaticResource.InitRHI(FRHICommandListBase&)", a0);
     }
+
+    BrzCampoPonteiro VolumeDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldStaticResource.VolumeData")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDSTATICRESOURCE_H

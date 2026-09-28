@@ -51,7 +51,7 @@ struct AGameState : public AGameStateBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameState.GetPlayerRespawnDelay(AController*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=248]]
+    // endereco: casamento de bytes com a build de referencia
     float GetPlayerRespawnDelay(void* a0) const
     {
         return NativeCall<float, void*>(this, "AGameState.GetPlayerRespawnDelay(AController*)", a0);
@@ -59,7 +59,7 @@ struct AGameState : public AGameStateBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameState.GetPlayerStartTime(AController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetPlayerStartTime(void* a0) const
     {
         return NativeCall<float, void*>(this, "AGameState.GetPlayerStartTime(AController*)", a0);
@@ -67,7 +67,7 @@ struct AGameState : public AGameStateBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameState.HandleMatchHasStarted()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=47]]
+    // endereco: casamento de bytes com a build de referencia
     void HandleMatchHasStarted() const
     {
         NativeCall<void>(this, "AGameState.HandleMatchHasStarted()");
@@ -83,7 +83,7 @@ struct AGameState : public AGameStateBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameState.OnRep_MatchState()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=153]]
+    // endereco: casamento de bytes com a build de referencia
     void OnRep_MatchState() const
     {
         NativeCall<void>(this, "AGameState.OnRep_MatchState()");
@@ -107,7 +107,7 @@ struct AGameState : public AGameStateBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AGameState.SetMatchState(FName)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetMatchState(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "AGameState.SetMatchState(FName)", a0);

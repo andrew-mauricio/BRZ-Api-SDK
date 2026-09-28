@@ -33,7 +33,7 @@ struct APhysicsVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APhysicsVolume.Destroyed()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=43]]
+    // endereco: casamento de bytes com a build de referencia
     void Destroyed() const
     {
         NativeCall<void>(this, "APhysicsVolume.Destroyed()");
@@ -49,7 +49,7 @@ struct APhysicsVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APhysicsVolume.GetGravityZ()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=79]]
+    // endereco: casamento de bytes com a build de referencia
     float GetGravityZ() const
     {
         return NativeCall<float>(this, "APhysicsVolume.GetGravityZ()");
@@ -57,7 +57,7 @@ struct APhysicsVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APhysicsVolume.GetVolumeZAtPosition(UE::Math::TVector2<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetVolumeZAtPosition(void* a0) const
     {
         return NativeCall<float, void*>(this, "APhysicsVolume.GetVolumeZAtPosition(UE::Math::TVector2<double>)", a0);
@@ -65,7 +65,7 @@ struct APhysicsVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APhysicsVolume.GetVolumeZAtPosition2D(UE::Math::TVector2<double>)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetVolumeZAtPosition2D(void* a0) const
     {
         return NativeCall<float, void*>(this, "APhysicsVolume.GetVolumeZAtPosition2D(UE::Math::TVector2<double>)", a0);
@@ -81,7 +81,7 @@ struct APhysicsVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APhysicsVolume.PostInitializeComponents()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=75+grafo=3/3]]
+    // endereco: casamento de bytes com a build de referencia
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APhysicsVolume.PostInitializeComponents()");
@@ -99,6 +99,16 @@ struct APhysicsVolume : public AActor
     { return *GetNativePointerField<float*>(this, "APhysicsVolume.WaterDamping"); }
     float& WaterDensityField() const
     { return *GetNativePointerField<float*>(this, "APhysicsVolume.WaterDensity"); }
+    BrzCampoPonteiro bDontSetWaterNavCollisionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APhysicsVolume.bDontSetWaterNavCollision")); }
+    BrzCampoPonteiro bDynamicWaterVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APhysicsVolume.bDynamicWaterVolume")); }
+    BrzCampoPonteiro bPhysicsOnContactField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APhysicsVolume.bPhysicsOnContact")); }
+    BrzCampoPonteiro bPreventWaterSubmersionField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APhysicsVolume.bPreventWaterSubmersion")); }
+    BrzCampoPonteiro bWaterVolumeField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APhysicsVolume.bWaterVolume")); }
     BitFieldValue<bool, unsigned __int32> bWaterVolume()
     { return { (void*)this, "bWaterVolume" }; }
     BitFieldValue<bool, unsigned __int32> bPhysicsOnContact()

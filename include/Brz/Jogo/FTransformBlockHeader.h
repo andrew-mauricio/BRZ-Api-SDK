@@ -32,6 +32,13 @@ struct FTransformBlockHeader
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro BlockLocalIndexField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformBlockHeader.BlockLocalIndex")); }
+    BrzCampoPonteiro BlockTransformCountField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformBlockHeader.BlockTransformCount")); }
+    BrzCampoPonteiro BlockTransformOffsetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FTransformBlockHeader.BlockTransformOffset")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FTRANSFORMBLOCKHEADER_H

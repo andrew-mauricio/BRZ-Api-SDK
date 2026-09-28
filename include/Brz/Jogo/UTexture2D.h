@@ -33,11 +33,11 @@ struct UTexture2D : public UTexture
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture2D.BeginDestroy()
-    // classe: a funcao mora em UTexture, e UTexture2D herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=47]]
+    // classe: a funcao mora em UStreamableRenderAsset, e UTexture2D herda dela: o `this` e' compativel por construcao
+    // endereco: casamento de bytes com a build de referencia
     void BeginDestroy() const
     {
-        NativeCall<void>(this, "UTexture.BeginDestroy()");
+        NativeCall<void>(this, "UStreamableRenderAsset.BeginDestroy()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -106,7 +106,7 @@ struct UTexture2D : public UTexture
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture2D.IsCurrentlyVirtualTextured()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsCurrentlyVirtualTextured() const
     {
         return NativeCall<bool>(this, "UTexture2D.IsCurrentlyVirtualTextured()");
@@ -144,6 +144,8 @@ struct UTexture2D : public UTexture
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture2D.FirstResourceMemMip")); }
     BrzCampoPonteiro ImportedSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture2D.ImportedSize")); }
+    BrzCampoPonteiro bTemporarilyDisableStreamingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UTexture2D.bTemporarilyDisableStreaming")); }
     BitFieldValue<bool, unsigned __int32> bTemporarilyDisableStreaming()
     { return { (void*)this, "bTemporarilyDisableStreaming" }; }
 

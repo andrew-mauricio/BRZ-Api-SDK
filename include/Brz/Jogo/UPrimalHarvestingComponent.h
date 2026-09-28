@@ -78,7 +78,7 @@ struct UPrimalHarvestingComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalHarvestingComponent.GetCurrentHarvestHealth()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCurrentHarvestHealth() const
     {
         return NativeCall<void*>(this, "UPrimalHarvestingComponent.GetCurrentHarvestHealth()");
@@ -102,7 +102,7 @@ struct UPrimalHarvestingComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalHarvestingComponent.GetNumOfCustomDataValues()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNumOfCustomDataValues() const
     {
         return NativeCall<void*>(this, "UPrimalHarvestingComponent.GetNumOfCustomDataValues()");
@@ -134,7 +134,7 @@ struct UPrimalHarvestingComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalHarvestingComponent.ShouldAddToActorComponents()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldAddToActorComponents() const
     {
         return NativeCall<void*>(this, "UPrimalHarvestingComponent.ShouldAddToActorComponents()");
@@ -142,7 +142,7 @@ struct UPrimalHarvestingComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalHarvestingComponent.ShouldInstantHarvest()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldInstantHarvest() const
     {
         return NativeCall<void*>(this, "UPrimalHarvestingComponent.ShouldInstantHarvest()");
@@ -158,14 +158,14 @@ struct UPrimalHarvestingComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalHarvestingComponent.WantsInstanceRotation()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro WantsInstanceRotation() const
     {
         return NativeCall<void*>(this, "UPrimalHarvestingComponent.WantsInstanceRotation()");
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumOfPerInstanceCustomDataValues` +4, medido na build 25090264
+    //  ancorado em `NumOfPerInstanceCustomDataValues` +4, medido na build 25535041
     //  (offset absoluto medido: 0x1E0; confianca alta)
     void*& ActiveInstancedElementField() const
     { return BrzCampoAncorado<void*>(this, "NumOfPerInstanceCustomDataValues", 4); }
@@ -214,7 +214,7 @@ struct UPrimalHarvestingComponent
     float& ExhaustedDepletionTimeIntervalField() const
     { return *GetNativePointerField<float*>(this, "UPrimalHarvestingComponent.ExhaustedDepletionTimeInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHarvestHealth` +4, medido na build 25090264
+    //  ancorado em `MaxHarvestHealth` +4, medido na build 25535041
     //  (offset absoluto medido: 0x114; confianca alta)
     void*& ExtraHarvestingXPMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "MaxHarvestHealth", 4); }
@@ -251,7 +251,7 @@ struct UPrimalHarvestingComponent
     BrzCampoPonteiro OnComponentDeactivatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.OnComponentDeactivated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamedDinoHarvestGiveHealthMultiplier` +8, medido na build 25090264
+    //  ancorado em `TamedDinoHarvestGiveHealthMultiplier` +8, medido na build 25535041
     //  (offset absoluto medido: 0x1B0; confianca alta)
     void*& OnHarvestingDepletedField() const
     { return BrzCampoAncorado<void*>(this, "TamedDinoHarvestGiveHealthMultiplier", 8); }
@@ -263,6 +263,8 @@ struct UPrimalHarvestingComponent
     { return *GetNativePointerField<FActorComponentTickFunction*>(this, "UPrimalHarvestingComponent.PrimaryComponentTick"); }
     float& ReduceExhaustedDepletionSpeedField() const
     { return *GetNativePointerField<float*>(this, "UPrimalHarvestingComponent.ReduceExhaustedDepletionSpeed"); }
+    BrzCampoPonteiro ShouldReplenishField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.ShouldReplenish")); }
     float& TamedDinoHarvestGiveHealthMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalHarvestingComponent.TamedDinoHarvestGiveHealthMultiplier"); }
     int& UCSSerializationIndexField() const
@@ -275,50 +277,74 @@ struct UPrimalHarvestingComponent
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.UseHarvestDamageType")); }
     FString& UseHarvestStringField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalHarvestingComponent.UseHarvestString"); }
-    BitFieldValue<bool, unsigned __int32> bAlwaysReplicatePropertyConditional()
-    { return { (void*)this, "bAlwaysReplicatePropertyConditional" }; }
-    BitFieldValue<bool, unsigned __int32> bAutoActivate()
-    { return { (void*)this, "bAutoActivate" }; }
-    BitFieldValue<bool, unsigned __int32> bCanEverAffectNavigation()
-    { return { (void*)this, "bCanEverAffectNavigation" }; }
+    BrzCampoPonteiro bAllowForcedRepopulationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bAllowForcedRepopulation")); }
+    BrzCampoPonteiro bAllowHarvestHealthScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bAllowHarvestHealthScaling")); }
+    BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bAlwaysReplicatePropertyConditional")); }
+    BrzCampoPonteiro bAssignedToTribeHarvestOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bAssignedToTribeHarvestOnly")); }
+    BrzCampoPonteiro bAutoActivateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bAutoActivate")); }
+    BrzCampoPonteiro bCanEverAffectNavigationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bCanEverAffectNavigation")); }
     bool& bClampResourceHarvestDamageField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalHarvestingComponent.bClampResourceHarvestDamage"); }
-    BitFieldValue<bool, unsigned __int32> bDedicatedForceTickingEveryFrame()
-    { return { (void*)this, "bDedicatedForceTickingEveryFrame" }; }
-    BitFieldValue<bool, unsigned __int32> bEditableWhenInherited()
-    { return { (void*)this, "bEditableWhenInherited" }; }
-    BitFieldValue<bool, unsigned __int32> bHasMultiUseEntries()
-    { return { (void*)this, "bHasMultiUseEntries" }; }
-    BitFieldValue<bool, unsigned __int32> bIsActive()
-    { return { (void*)this, "bIsActive" }; }
-    BitFieldValue<bool, unsigned __int32> bIsEditorOnly()
-    { return { (void*)this, "bIsEditorOnly" }; }
-    BitFieldValue<bool, unsigned __int32> bNetAddressable()
-    { return { (void*)this, "bNetAddressable" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyInitialReplication()
-    { return { (void*)this, "bOnlyInitialReplication" }; }
-    BitFieldValue<bool, unsigned __int32> bOnlyRelevantToOwner()
-    { return { (void*)this, "bOnlyRelevantToOwner" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnClient()
-    { return { (void*)this, "bPreventOnClient" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnConsoles()
-    { return { (void*)this, "bPreventOnConsoles" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnDedicatedServer()
-    { return { (void*)this, "bPreventOnDedicatedServer" }; }
-    BitFieldValue<bool, unsigned __int32> bPreventOnNonDedicatedHost()
-    { return { (void*)this, "bPreventOnNonDedicatedHost" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicateUsingRegisteredSubObjectList()
-    { return { (void*)this, "bReplicateUsingRegisteredSubObjectList" }; }
-    BitFieldValue<bool, unsigned __int32> bReplicates()
-    { return { (void*)this, "bReplicates" }; }
-    BitFieldValue<bool, unsigned __int32> bStasisPreventUnregister()
-    { return { (void*)this, "bStasisPreventUnregister" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentCreated()
-    { return { (void*)this, "bUseBPOnComponentCreated" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentDestroyed()
-    { return { (void*)this, "bUseBPOnComponentDestroyed" }; }
-    BitFieldValue<bool, unsigned __int32> bUseBPOnComponentTick()
-    { return { (void*)this, "bUseBPOnComponentTick" }; }
+    BrzCampoPonteiro bDedicatedForceTickingEveryFrameField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bDedicatedForceTickingEveryFrame")); }
+    BrzCampoPonteiro bEditableWhenInheritedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bEditableWhenInherited")); }
+    BrzCampoPonteiro bEnforceSingleInstantHarvestField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bEnforceSingleInstantHarvest")); }
+    BrzCampoPonteiro bHasMultiUseEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bHasMultiUseEntries")); }
+    BrzCampoPonteiro bIsActiveField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bIsActive")); }
+    BrzCampoPonteiro bIsDefaultHarvestingComponentField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bIsDefaultHarvestingComponent")); }
+    BrzCampoPonteiro bIsEditorOnlyField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bIsEditorOnly")); }
+    BrzCampoPonteiro bIsSingleUnitHarvestField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bIsSingleUnitHarvest")); }
+    BrzCampoPonteiro bIsUnharvestableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bIsUnharvestable")); }
+    BrzCampoPonteiro bNetAddressableField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bNetAddressable")); }
+    BrzCampoPonteiro bNonBlockingUsableHarvestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bNonBlockingUsableHarvesting")); }
+    BrzCampoPonteiro bOnlyInitialReplicationField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bOnlyInitialReplication")); }
+    BrzCampoPonteiro bOnlyRelevantToOwnerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bOnlyRelevantToOwner")); }
+    BrzCampoPonteiro bPreventOnClientField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bPreventOnClient")); }
+    BrzCampoPonteiro bPreventOnConsolesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bPreventOnConsoles")); }
+    BrzCampoPonteiro bPreventOnDedicatedServerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bPreventOnDedicatedServer")); }
+    BrzCampoPonteiro bPreventOnNonDedicatedHostField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bPreventOnNonDedicatedHost")); }
+    BrzCampoPonteiro bReplicateUsingRegisteredSubObjectListField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bReplicateUsingRegisteredSubObjectList")); }
+    BrzCampoPonteiro bReplicatesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bReplicates")); }
+    BrzCampoPonteiro bSetOwnerHealthToHarvestHealthField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bSetOwnerHealthToHarvestHealth")); }
+    BrzCampoPonteiro bStasisPreventUnregisterField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bStasisPreventUnregister")); }
+    BrzCampoPonteiro bUsableAllowHarvestHealthScalingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bUsableAllowHarvestHealthScaling")); }
+    BrzCampoPonteiro bUsableHarvestingField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bUsableHarvesting")); }
+    BrzCampoPonteiro bUseBPOnComponentCreatedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bUseBPOnComponentCreated")); }
+    BrzCampoPonteiro bUseBPOnComponentDestroyedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bUseBPOnComponentDestroyed")); }
+    BrzCampoPonteiro bUseBPOnComponentTickField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bUseBPOnComponentTick")); }
+    BrzCampoPonteiro bUseBPRecieveComponentDamageField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.bUseBPRecieveComponentDamage")); }
     BitFieldValue<bool, unsigned __int32> ShouldReplenish()
     { return { (void*)this, "ShouldReplenish" }; }
     BitFieldValue<bool, unsigned __int32> bAllowForcedRepopulation()

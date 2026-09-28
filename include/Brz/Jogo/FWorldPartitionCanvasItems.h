@@ -37,6 +37,8 @@ struct FWorldPartitionCanvasItems
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionCanvasItems.Boxes")); }
     BrzCampoPonteiro LinesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionCanvasItems.Lines")); }
+    BrzCampoPonteiro MultiLineTextsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldPartitionCanvasItems.MultiLineTexts")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDPARTITIONCANVASITEMS_H

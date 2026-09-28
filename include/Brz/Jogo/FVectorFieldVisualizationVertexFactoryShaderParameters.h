@@ -40,6 +40,11 @@ struct FVectorFieldVisualizationVertexFactoryShaderParameters
     {
         return NativeCall<void*, void*, void*, void*, int, int, void*, void*, void*, void*>(this, "FVectorFieldVisualizationVertexFactoryShaderParameters.GetElementShaderBindings(FSceneInterface*,FSceneView*,FMeshMaterialShader*,EVertexInputStreamType,ERHIFeatureLevel::Type,FVertexFactory*,FMeshBatchElement&,FMeshDrawSingleShaderBindings&,TArray<FVertexInputStream,TSizedInlineAllocator<7,32,TSizedDefaultAllocator<32>>>&)", a0, a1, a2, a3, a4, a5, a6, a7, a8);
     }
+
+    BrzCampoPonteiro VectorFieldTextureField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationVertexFactoryShaderParameters.VectorFieldTexture")); }
+    BrzCampoPonteiro VectorFieldTextureSamplerField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FVectorFieldVisualizationVertexFactoryShaderParameters.VectorFieldTextureSampler")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FVECTORFIELDVISUALIZATIONVERTEXFACTORYSHADERPARAMETERS_H

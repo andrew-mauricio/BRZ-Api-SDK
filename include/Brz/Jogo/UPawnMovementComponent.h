@@ -44,7 +44,7 @@ struct UPawnMovementComponent : public UMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPawnMovementComponent.GetController()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AController* GetController() const
     {
         return NativeCall<AController*>(this, "UPawnMovementComponent.GetController()");
@@ -52,7 +52,7 @@ struct UPawnMovementComponent : public UMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPawnMovementComponent.IsMoveInputIgnored()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsMoveInputIgnored() const
     {
         return NativeCall<bool>(this, "UPawnMovementComponent.IsMoveInputIgnored()");
@@ -60,7 +60,7 @@ struct UPawnMovementComponent : public UMovementComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPawnMovementComponent.MarkForClientCameraUpdate()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado+metodo_grafo]
+    // endereco: casamento de bytes com a build de referencia
     void MarkForClientCameraUpdate() const
     {
         NativeCall<void>(this, "UPawnMovementComponent.MarkForClientCameraUpdate()");

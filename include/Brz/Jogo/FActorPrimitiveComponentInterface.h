@@ -46,7 +46,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.CreateRenderState(FRegisterComponentContext*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro CreateRenderState(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "FActorPrimitiveComponentInterface.CreateRenderState(FRegisterComponentContext*)", a0);
@@ -62,7 +62,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.DestroyRenderState()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro DestroyRenderState()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.DestroyRenderState()");
@@ -70,7 +70,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetBounds()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetBounds()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.GetBounds()");
@@ -94,7 +94,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetOwner()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static UObject* GetOwner()
     {
         return NativeCall<UObject*>(nullptr, "FActorPrimitiveComponentInterface.GetOwner()");
@@ -102,7 +102,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetPrimitiveStats(FPrimitiveStats&)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetPrimitiveStats(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "FActorPrimitiveComponentInterface.GetPrimitiveStats(FPrimitiveStats&)", a0);
@@ -110,7 +110,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetSceneProxy()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetSceneProxy()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.GetSceneProxy()");
@@ -118,7 +118,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetTransform()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [bytes96]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetTransform()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.GetTransform()");
@@ -126,7 +126,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetUObject()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static UObject* GetUObject()
     {
         return NativeCall<UObject*>(nullptr, "FActorPrimitiveComponentInterface.GetUObject()");
@@ -134,7 +134,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetUsedMaterials(TArray<UMaterialInterface*,TSizedDefaultAlloc
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro GetUsedMaterials(void* a0, bool a1)
     {
         return NativeCall<void*, void*, bool>(nullptr, "FActorPrimitiveComponentInterface.GetUsedMaterials(TArray<UMaterialInterface*,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -142,7 +142,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.GetWorld()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static UWorld* GetWorld()
     {
         return NativeCall<UWorld*>(nullptr, "FActorPrimitiveComponentInterface.GetWorld()");
@@ -150,7 +150,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.IsRegistered()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=56]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsRegistered()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.IsRegistered()");
@@ -158,7 +158,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.IsRenderStateCreated()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsRenderStateCreated()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.IsRenderStateCreated()");
@@ -166,7 +166,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.IsRenderStateDirty()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsRenderStateDirty()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.IsRenderStateDirty()");
@@ -174,7 +174,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.IsUnreachable()
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsUnreachable()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.IsUnreachable()");
@@ -182,7 +182,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.PrecachePSOs()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [corpo-folha=64]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro PrecachePSOs()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.PrecachePSOs()");
@@ -190,7 +190,7 @@ struct FActorPrimitiveComponentInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   FActorPrimitiveComponentInterface.ShouldCreateRenderState()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro ShouldCreateRenderState()
     {
         return NativeCall<void*>(nullptr, "FActorPrimitiveComponentInterface.ShouldCreateRenderState()");

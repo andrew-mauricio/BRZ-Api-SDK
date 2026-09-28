@@ -83,7 +83,7 @@ struct ULevelInstanceSubsystem
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   ULevelInstanceSubsystem.OnUpdateStreamingState()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnUpdateStreamingState() const
     {
         return NativeCall<void*>(this, "ULevelInstanceSubsystem.OnUpdateStreamingState()");
@@ -120,8 +120,19 @@ struct ULevelInstanceSubsystem
     {
         return NativeCall<void*>(this, "ULevelInstanceSubsystem.UpdateStreamingStateInternal()");
     }
+
+    BrzCampoPonteiro LevelInstancesToLoadOrUpdateField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceSubsystem.LevelInstancesToLoadOrUpdate")); }
+    BrzCampoPonteiro LevelInstancesToUnloadField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceSubsystem.LevelInstancesToUnload")); }
     BrzCampoPonteiro LevelStreamingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceSubsystem.LevelStreaming")); }
+    BrzCampoPonteiro LoadedLevelInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceSubsystem.LoadedLevelInstances")); }
+    BrzCampoPonteiro LoadingLevelInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceSubsystem.LoadingLevelInstances")); }
+    BrzCampoPonteiro RegisteredLevelInstancesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelInstanceSubsystem.RegisteredLevelInstances")); }
 };
 
 #endif  // BRZ_SDK_JOGO_ULEVELINSTANCESUBSYSTEM_H

@@ -32,6 +32,9 @@ struct FItemInfo
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro NeedsVerticalWireField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FItemInfo.NeedsVerticalWire")); }
     int& ParentIndexField() const
     { return *GetNativePointerField<int*>(this, "FItemInfo.ParentIndex"); }
     BitFieldValue<bool, unsigned __int32> bHasChildren()

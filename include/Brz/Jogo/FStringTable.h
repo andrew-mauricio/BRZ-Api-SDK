@@ -116,10 +116,23 @@ struct FStringTable
     {
         return NativeCall<void*, void*>(this, "FStringTable.SetNamespace(FTextKey&)", a0);
     }
-    BitFieldValue<bool, unsigned __int32> bIsInternal()
-    { return { (void*)this, "bIsInternal" }; }
-    BitFieldValue<bool, unsigned __int32> bIsLoaded()
-    { return { (void*)this, "bIsLoaded" }; }
+
+    BrzCampoPonteiro KeyMappingCSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.KeyMappingCS")); }
+    BrzCampoPonteiro KeysToEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.KeysToEntries")); }
+    BrzCampoPonteiro KeysToMetaDataField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.KeysToMetaData")); }
+    BrzCampoPonteiro KeysToMetaDataCSField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.KeysToMetaDataCS")); }
+    BrzCampoPonteiro OwnerAssetField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.OwnerAsset")); }
+    BrzCampoPonteiro TableNamespaceField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.TableNamespace")); }
+    BrzCampoPonteiro bIsInternalField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.bIsInternal")); }
+    BrzCampoPonteiro bIsLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FStringTable.bIsLoaded")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FSTRINGTABLE_H

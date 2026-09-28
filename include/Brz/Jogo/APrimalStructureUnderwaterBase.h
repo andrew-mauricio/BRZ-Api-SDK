@@ -37,7 +37,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.AddedLinkedStructure(APrimalStructure*)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=68]]
+    // endereco: casamento de bytes com a build de referencia
     void AddedLinkedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureUnderwaterBase.AddedLinkedStructure(APrimalStructure*)", a0);
@@ -45,7 +45,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.ApplyPinCode(AShooterPlayerController*,int,bool,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=343+grafo=5/5]]
+    // endereco: casamento de bytes com a build de referencia
     bool ApplyPinCode(void* a0, int a1, bool a2, int a3) const
     {
         return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureUnderwaterBase.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
@@ -53,7 +53,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.AreBasesOpenToEachOther(APrimalStructureUnderwaterBase*,int,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1386+bytes40+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     bool AreBasesOpenToEachOther(void* a0, int a1, int a2) const
     {
         return NativeCall<bool, void*, int, int>(this, "APrimalStructureUnderwaterBase.AreBasesOpenToEachOther(APrimalStructureUnderwaterBase*,int,int)", a0, a1, a2);
@@ -61,7 +61,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.BeginPlay()
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=40]]
+    // endereco: casamento de bytes com a build de referencia
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalStructureUnderwaterBase.BeginPlay()");
@@ -77,7 +77,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureUnderwaterBase.ChangedCompartmentFloodState()
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=45]]
+    // endereco: casamento de bytes com a build de referencia
     void ChangedCompartmentFloodState() const
     {
         NativeCall<void>(this, "APrimalStructureUnderwaterBase.ChangedCompartmentFloodState()");
@@ -93,7 +93,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.DoSetPortholeState(int,int)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=48]]
+    // endereco: casamento de bytes com a build de referencia
     void DoSetPortholeState(int a0, int a1) const
     {
         NativeCall<void, int, int>(this, "APrimalStructureUnderwaterBase.DoSetPortholeState(int,int)", a0, a1);
@@ -102,7 +102,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureUnderwaterBase.GetInstanceWaterPlacementMinimumWaterHeight()
     // classe: a funcao mora em APrimalStructure, e APrimalStructureUnderwaterBase herda dela: o `this` e' compativel por construcao
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=26]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetInstanceWaterPlacementMinimumWaterHeight() const
     {
         return NativeCall<void*>(this, "APrimalStructure.GetInstanceWaterPlacementMinimumWaterHeight()");
@@ -110,7 +110,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.GetLinkedBaseByPortholeIndex(int,int&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1094+bytes40+chamadores=3+grafo=6/6]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro GetLinkedBaseByPortholeIndex(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "APrimalStructureUnderwaterBase.GetLinkedBaseByPortholeIndex(int,int&)", a0, a1);
@@ -126,7 +126,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureUnderwaterBase.IsInsideBase_Implementation(UE::Math::TVector<double>&)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=67]]
+    // endereco: casamento de bytes com a build de referencia
     BrzPonteiro IsInsideBase_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureUnderwaterBase.IsInsideBase_Implementation(UE::Math::TVector<double>&)", a0);
@@ -142,7 +142,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.OnRep_IsFrameHidden()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=199+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=199+bytes40+chamadores=2]]
     void OnRep_IsFrameHidden() const
     {
         NativeCall<void>(this, "APrimalStructureUnderwaterBase.OnRep_IsFrameHidden()");
@@ -166,7 +166,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureUnderwaterBase.RemovedLinkedStructure(APrimalStructure*,APlayerController*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemovedLinkedStructure(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureUnderwaterBase.RemovedLinkedStructure(APrimalStructure*,APlayerController*)", a0, a1);
@@ -182,7 +182,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.SetPortholeState(int,int)
-    // endereco: INFERIDO, com segunda evidencia [metodo_grafo [tam=57]]
+    // endereco: casamento de bytes com a build de referencia
     void SetPortholeState(int a0, int a1) const
     {
         NativeCall<void, int, int>(this, "APrimalStructureUnderwaterBase.SetPortholeState(int,int)", a0, a1);
@@ -190,7 +190,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // dump_sobre_sdk_287a0
     //   APrimalStructureUnderwaterBase.SetStructureCollisionChannels(bool)
-    // endereco: INFERIDO, com segunda evidencia [cerco_aprovado [tam=29]]
+    // endereco: casamento de bytes com a build de referencia
     void SetStructureCollisionChannels(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureUnderwaterBase.SetStructureCollisionChannels(bool)", a0);
@@ -282,6 +282,12 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureUnderwaterBase.UnfloodedEmitter")); }
     USoundBase*& UnfreezePortholeSoundField() const
     { return *GetNativePointerField<USoundBase**>(this, "APrimalStructureUnderwaterBase.UnfreezePortholeSound"); }
+    BrzCampoPonteiro bIsFloodedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureUnderwaterBase.bIsFlooded")); }
+    BrzCampoPonteiro bIsFrameHiddenField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureUnderwaterBase.bIsFrameHidden")); }
+    BrzCampoPonteiro bPreventAddingPortholeMUEntriesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureUnderwaterBase.bPreventAddingPortholeMUEntries")); }
     BitFieldValue<bool, unsigned __int32> bIsFlooded()
     { return { (void*)this, "bIsFlooded" }; }
     BitFieldValue<bool, unsigned __int32> bIsFrameHidden()

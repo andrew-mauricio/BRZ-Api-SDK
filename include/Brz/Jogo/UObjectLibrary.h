@@ -127,6 +127,12 @@ struct UObjectLibrary
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectLibrary.Objects")); }
     BrzCampoPonteiro WeakObjectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectLibrary.WeakObjects")); }
+    BrzCampoPonteiro bHasBlueprintClassesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectLibrary.bHasBlueprintClasses")); }
+    BrzCampoPonteiro bIsFullyLoadedField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectLibrary.bIsFullyLoaded")); }
+    BrzCampoPonteiro bUseWeakReferencesField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UObjectLibrary.bUseWeakReferences")); }
     BitFieldValue<bool, unsigned __int32> bHasBlueprintClasses()
     { return { (void*)this, "bHasBlueprintClasses" }; }
     BitFieldValue<bool, unsigned __int32> bIsFullyLoaded()

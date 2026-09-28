@@ -45,6 +45,8 @@ struct UGameplayCueNotify_Static
     { return *GetNativePointerField<FName*>(this, "UGameplayCueNotify_Static.GameplayCueName"); }
     BrzCampoPonteiro GameplayCueTagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_Static.GameplayCueTag")); }
+    BrzCampoPonteiro IsOverrideField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueNotify_Static.IsOverride")); }
     BitFieldValue<bool, unsigned __int32> IsOverride()
     { return { (void*)this, "IsOverride" }; }
 

@@ -71,7 +71,7 @@ struct UWorldPartitionRuntimeHash
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorldPartitionRuntimeHash.GetStreamingPerformanceForCell(UWorldPartitionRuntimeCell*)
-    // endereco: cache_pdb_25090264
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetStreamingPerformanceForCell(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UWorldPartitionRuntimeHash.GetStreamingPerformanceForCell(UWorldPartitionRuntimeCell*)", a0);
@@ -111,6 +111,8 @@ struct UWorldPartitionRuntimeHash
 
     BrzCampoPonteiro CellsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeHash.Cells")); }
+    BrzCampoPonteiro InjectedExternalStreamingObjectsField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeHash.InjectedExternalStreamingObjects")); }
 };
 
 #endif  // BRZ_SDK_JOGO_UWORLDPARTITIONRUNTIMEHASH_H

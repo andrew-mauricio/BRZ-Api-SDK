@@ -32,6 +32,9 @@ struct FWorldInGamePerformanceTrackers
 
     bool IsA(UClass* classe) const
     { return BrzEhDaClasse(this, classe); }
+
+    BrzCampoPonteiro InGamePerformanceTrackersField() const
+    { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "FWorldInGamePerformanceTrackers.InGamePerformanceTrackers")); }
 };
 
 #endif  // BRZ_SDK_JOGO_FWORLDINGAMEPERFORMANCETRACKERS_H
