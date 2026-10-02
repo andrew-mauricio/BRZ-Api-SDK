@@ -250,8 +250,8 @@ struct UInventoryArkCreaturesPanel
     BrzCampoPonteiro DinoSlotButtonTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.DinoSlotButtonTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x840; confianca alta)
+    //  ancorado em `DinoSlotButtonTemplate` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x840; confianca alta)
     void*& DownloadCreatureButtonField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 32); }
     FName& DownloadCreatureButtonNameField() const
@@ -279,15 +279,15 @@ struct UInventoryArkCreaturesPanel
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UInventoryArkCreaturesPanel.InputComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x828; confianca alta)
+    //  ancorado em `DinoSlotButtonTemplate` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x828; confianca alta)
     void*& InventoryUIField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 8); }
     TWeakObjectPtr<void>& ItemContainerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "UInventoryArkCreaturesPanel.ItemContainer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x830; confianca alta)
+    //  ancorado em `DinoSlotButtonTemplate` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x830; confianca alta)
     void*& LocalCreatureListField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 16); }
     FName& LocalCreatureListNameField() const
@@ -353,15 +353,15 @@ struct UInventoryArkCreaturesPanel
     BrzCampoPonteiro ToolTipWidgetDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryArkCreaturesPanel.ToolTipWidgetDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x848; confianca media)
+    //  ancorado em `DinoSlotButtonTemplate` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x848; confianca media)
     void*& UploadCreatureButtonField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 40); }
     FName& UploadCreatureButtonNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryArkCreaturesPanel.UploadCreatureButtonName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DinoSlotButtonTemplate` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x838; confianca alta)
+    //  ancorado em `DinoSlotButtonTemplate` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x838; confianca alta)
     void*& UploadedCreatureListField() const
     { return BrzCampoAncorado<void*>(this, "DinoSlotButtonTemplate", 24); }
     FName& UploadedCreatureListNameField() const

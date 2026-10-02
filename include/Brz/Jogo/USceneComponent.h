@@ -595,15 +595,15 @@ struct USceneComponent : public UActorComponent
     int& AttachmentChangedIncrementerField() const
     { return *GetNativePointerField<int*>(this, "USceneComponent.AttachmentChangedIncrementer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientAttachedChildren` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x120; confianca alta)
+    //  ancorado em `ClientAttachedChildren` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x120; confianca alta)
     void*& BoundsField() const
     { return BrzCampoAncorado<void*>(this, "ClientAttachedChildren", 24); }
     TArray<void*>& ClientAttachedChildrenField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "USceneComponent.ClientAttachedChildren"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsVolumeChangedDelegate` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x210; confianca media)
+    //  ancorado em `PhysicsVolumeChangedDelegate` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x210; confianca media)
     void*& ComponentToWorldField() const
     { return BrzCampoAncorado<void*>(this, "PhysicsVolumeChangedDelegate", 72); }
     BrzCampoPonteiro ComponentVelocityField() const
@@ -613,13 +613,13 @@ struct USceneComponent : public UActorComponent
     BrzCampoPonteiro MobilityField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.Mobility")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientAttachedChildren` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x118; confianca alta)
+    //  ancorado em `ClientAttachedChildren` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x118; confianca alta)
     USceneComponent*& NetOldAttachParentField() const
     { return BrzCampoAncorado<USceneComponent*>(this, "ClientAttachedChildren", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AttachSocketName` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xF0; confianca alta)
+    //  ancorado em `AttachSocketName` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF0; confianca alta)
     FName& NetOldAttachSocketNameField() const
     { return BrzCampoAncorado<FName>(this, "AttachSocketName", 8); }
     TWeakObjectPtr<void>& PhysicsVolumeField() const
@@ -631,15 +631,15 @@ struct USceneComponent : public UActorComponent
     BrzCampoPonteiro RelativeRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.RelativeRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsVolumeChangedDelegate` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x200; confianca media)
+    //  ancorado em `PhysicsVolumeChangedDelegate` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x200; confianca media)
     void*& RelativeRotationCacheField() const
     { return BrzCampoAncorado<void*>(this, "PhysicsVolumeChangedDelegate", 56); }
     BrzCampoPonteiro RelativeScale3DField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USceneComponent.RelativeScale3D")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsVolumeChangedDelegate` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x1F8; confianca media)
+    //  ancorado em `PhysicsVolumeChangedDelegate` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1F8; confianca media)
     void*& WorldRotationCacheField() const
     { return BrzCampoAncorado<void*>(this, "PhysicsVolumeChangedDelegate", 48); }
     BrzCampoPonteiro bAbsoluteLocationField() const

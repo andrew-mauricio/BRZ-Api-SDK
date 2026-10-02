@@ -615,11 +615,10 @@ struct UPrimitiveComponent : public USceneComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimitiveComponent.PostInitProperties()
-    // classe: a funcao mora em UActorComponent, e UPrimitiveComponent herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitProperties() const
     {
-        NativeCall<void>(this, "UActorComponent.PostInitProperties()");
+        NativeCall<void>(this, "UPrimitiveComponent.PostInitProperties()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -988,8 +987,8 @@ struct UPrimitiveComponent : public USceneComponent
     BrzCampoPonteiro DepthPriorityGroupField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.DepthPriorityGroup")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnPrimalComponentPhysicsStatePreChange` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x538; confianca alta)
+    //  ancorado em `OnPrimalComponentPhysicsStatePreChange` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x538; confianca alta)
     void*& DetachFenceField() const
     { return BrzCampoAncorado<void*>(this, "OnPrimalComponentPhysicsStatePreChange", 9); }
     BrzCampoPonteiro ExcludeFromHLODLevelsField() const
@@ -1007,8 +1006,8 @@ struct UPrimitiveComponent : public USceneComponent
     TObjectPtr<UPrimitiveComponent>& LODParentPrimitiveField() const
     { return *GetNativePointerField<TObjectPtr<UPrimitiveComponent>*>(this, "UPrimitiveComponent.LODParentPrimitive"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VirtualTextureRenderPassType` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x304; confianca alta)
+    //  ancorado em `VirtualTextureRenderPassType` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x304; confianca alta)
     float& LastCheckedAllCollideableDescendantsTimeField() const
     { return BrzCampoAncorado<float>(this, "VirtualTextureRenderPassType", 1); }
     BrzCampoPonteiro LightingChannelsField() const
@@ -1022,15 +1021,15 @@ struct UPrimitiveComponent : public USceneComponent
     TArray<void*>& MoveIgnoreComponentsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimitiveComponent.MoveIgnoreComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasCustomNavigableGeometry` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x2AE; confianca alta)
+    //  ancorado em `bHasCustomNavigableGeometry` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AE; confianca alta)
     unsigned char& MoveIgnoreMaskField() const
     { return BrzCampoAncorado<unsigned char>(this, "bHasCustomNavigableGeometry", 1); }
     int& ObjectLayerField() const
     { return *GetNativePointerField<int*>(this, "UPrimitiveComponent.ObjectLayer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VirtualTextureRenderPassType` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x308; confianca alta)
+    //  ancorado em `VirtualTextureRenderPassType` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x308; confianca alta)
     float& OcclusionBoundsSlackField() const
     { return BrzCampoAncorado<float>(this, "VirtualTextureRenderPassType", 5); }
     BrzCampoPonteiro OnComponentBeginOverlapField() const
@@ -1048,13 +1047,13 @@ struct UPrimitiveComponent : public USceneComponent
     BrzCampoPonteiro OnPrimalComponentPhysicsStatePreChangeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimitiveComponent.OnPrimalComponentPhysicsStatePreChange")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MoveIgnoreComponents` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x378; confianca alta)
+    //  ancorado em `MoveIgnoreComponents` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x378; confianca alta)
     TArray<void*>& OverlappingComponentsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MoveIgnoreComponents", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MoveIgnoreComponents` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x388; confianca alta)
+    //  ancorado em `MoveIgnoreComponents` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x388; confianca alta)
     void*& OverlappingPrimitiveComponentsField() const
     { return BrzCampoAncorado<void*>(this, "MoveIgnoreComponents", 32); }
     float& OverrideStepHeightField() const

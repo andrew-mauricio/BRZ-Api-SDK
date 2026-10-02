@@ -1214,13 +1214,13 @@ struct UShooterGameInstance
     FName& ActiveEventField() const
     { return *GetNativePointerField<FName*>(this, "UShooterGameInstance.ActiveEvent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +336, medido na build 25535041
-    //  (offset absoluto medido: 0xA88; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +336 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA88; confianca baixa)
     void*& ActiveSettingsCommandArgumentsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 336); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +240, medido na build 25535041
-    //  (offset absoluto medido: 0xA28; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +240 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA28; confianca baixa)
     void*& ActivityRequestedHandleField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 240); }
     BrzCampoPonteiro AsyncLoadededAssetReferencesField() const
@@ -1230,120 +1230,120 @@ struct UShooterGameInstance
     BrzCampoPonteiro BackblazeCloudStorageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.BackblazeCloudStorage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +304, medido na build 25535041
-    //  (offset absoluto medido: 0xA68; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +304 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA68; confianca baixa)
     void*& BannedServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 304); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x9B8; confianca media)
+    //  ancorado em `WorldModifierConfigOverride` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B8; confianca media)
     void*& CacheOwnedPremiumModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +280, medido na build 25535041
-    //  (offset absoluto medido: 0xA50; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +280 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA50; confianca baixa)
     void*& CanBindActivityField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 280); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x290; confianca media)
+    //  ancorado em `OnAsyncAssetLoaded` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x290; confianca media)
     void*& Client_BlockedUserIdsField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +248, medido na build 25535041
-    //  (offset absoluto medido: 0xA30; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +248 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA30; confianca baixa)
     void*& CurrentActivityField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 248); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x9F0; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9F0; confianca baixa)
     void*& DinoIKCooldownTimerField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x9F8; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9F8; confianca baixa)
     void*& DinoIKDistanceMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3A0; confianca media)
+    //  ancorado em `WorldModifiersContainer` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3A0; confianca media)
     void*& EnabledModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +324, medido na build 25535041
-    //  (offset absoluto medido: 0xA7C; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +324 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA7C; confianca baixa)
     void*& FailedAttemptsToGetBannerServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 324); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +320, medido na build 25535041
-    //  (offset absoluto medido: 0xA78; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +320 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA78; confianca baixa)
     void*& FailedAttemptsToGetOfficialServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 320); }
     BrzCampoPonteiro GlobalTradeData_ClientField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.GlobalTradeData_Client")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x948; confianca media)
+    //  ancorado em `WorldModifierConfigOverride` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x948; confianca media)
     void*& InputPreprocessorPtrField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +216, medido na build 25535041
-    //  (offset absoluto medido: 0xA10; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA10; confianca baixa)
     void*& InvitePasswordField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +200, medido na build 25535041
-    //  (offset absoluto medido: 0xA00; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA00; confianca baixa)
     void*& InvitePasswordUIField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +272, medido na build 25535041
-    //  (offset absoluto medido: 0x330; confianca baixa)
+    //  ancorado em `OnAsyncAssetLoaded` +272 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x330; confianca baixa)
     void*& ListenServerVoiceLobbyIdField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 272); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x968; confianca media)
+    //  ancorado em `WorldModifierConfigOverride` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x968; confianca media)
     void*& LocalOwnedPremiumModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 48); }
     BrzCampoPonteiro LocalPlayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.LocalPlayers")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x2E0; confianca baixa)
+    //  ancorado em `OnAsyncAssetLoaded` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2E0; confianca baixa)
     void*& MainMenuBlockedUserResultsField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 192); }
     FString& MainMenuMapField() const
     { return *GetNativePointerField<FString*>(this, "UShooterGameInstance.MainMenuMap"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xAA8; confianca alta)
+    //  ancorado em `BackblazeCloudStorage` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAA8; confianca alta)
     void*& ModBrowserManagementActorRefField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 8); }
     BrzCampoPonteiro MusicPlayerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.MusicPlayer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +176, medido na build 25535041
-    //  (offset absoluto medido: 0x9E8; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9E8; confianca baixa)
     void*& NumDinoIKThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +196, medido na build 25535041
-    //  (offset absoluto medido: 0x9FC; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +196 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9FC; confianca baixa)
     void*& NumDinoIKThisFrameTargetField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 196); }
     BrzCampoPonteiro ObjectsPendingTimeShiftField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.ObjectsPendingTimeShift")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +288, medido na build 25535041
-    //  (offset absoluto medido: 0xA58; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +288 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA58; confianca baixa)
     void*& OfficialServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 288); }
     BrzCampoPonteiro OnAsyncAssetLoadedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.OnAsyncAssetLoaded")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x958; confianca media)
+    //  ancorado em `WorldModifierConfigOverride` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x958; confianca media)
     void*& OnAutoUpdatingModsCompleteField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 32); }
     BrzCampoPonteiro OnInputDeviceConnectionChangeField() const
@@ -1351,8 +1351,8 @@ struct UShooterGameInstance
     BrzCampoPonteiro OnPawnControllerChangedDelegatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.OnPawnControllerChangedDelegates")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x230; confianca media)
+    //  ancorado em `OnAsyncAssetLoaded` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x230; confianca media)
     void*& OnPossessBlockPlayerNotificationField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 16); }
     BrzCampoPonteiro OnUserInputDevicePairingChangeField() const
@@ -1362,55 +1362,55 @@ struct UShooterGameInstance
     BrzCampoPonteiro OpenColorIOObjectField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.OpenColorIOObject")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x9C8; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9C8; confianca baixa)
     void*& PMXMField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x3F0; confianca media)
+    //  ancorado em `WorldModifiersContainer` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3F0; confianca media)
     void*& PassiveModsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +264, medido na build 25535041
-    //  (offset absoluto medido: 0xA40; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +264 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA40; confianca baixa)
     void*& PendingActivityChangeField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 264); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPgoSweepInterval` +232, medido na build 25535041
-    //  (offset absoluto medido: 0x558; confianca baixa)
+    //  ancorado em `AutoPgoSweepInterval` +232 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x558; confianca baixa)
     void*& PendingInviteField() const
     { return BrzCampoAncorado<void*>(this, "AutoPgoSweepInterval", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPgoSweepInterval` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x510; confianca baixa)
+    //  ancorado em `AutoPgoSweepInterval` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x510; confianca baixa)
     void*& PendingMessageAfterReachingStateField() const
     { return BrzCampoAncorado<void*>(this, "AutoPgoSweepInterval", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +352, medido na build 25535041
-    //  (offset absoluto medido: 0xA98; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +352 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA98; confianca baixa)
     void*& PendingModDeeplinkField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 352); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xAB8; confianca alta)
+    //  ancorado em `BackblazeCloudStorage` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAB8; confianca alta)
     void*& PreviewAudienceHandleField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x9D8; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9D8; confianca baixa)
     void*& PrimalCinematicActorField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x9E0; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9E0; confianca baixa)
     void*& PrimalLevelSequenceDirectorHidingUIField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 168); }
     BrzCampoPonteiro ReferencedObjectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.ReferencedObjects")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAsyncAssetLoaded` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x240; confianca media)
+    //  ancorado em `OnAsyncAssetLoaded` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x240; confianca media)
     void*& Server_BlockedUserMapField() const
     { return BrzCampoAncorado<void*>(this, "OnAsyncAssetLoaded", 32); }
     FString& WelcomeScreenMapField() const
@@ -1420,45 +1420,45 @@ struct UShooterGameInstance
     BrzCampoPonteiro WorldModifiersContainerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.WorldModifiersContainer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +329, medido na build 25535041
-    //  (offset absoluto medido: 0xA81; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +329 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA81; confianca baixa)
     void*& bBusyGettingBannedServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 329); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +328, medido na build 25535041
-    //  (offset absoluto medido: 0xA80; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +328 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA80; confianca baixa)
     void*& bBusyGettingOfficialServerIPsField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 328); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xAB0; confianca alta)
+    //  ancorado em `BackblazeCloudStorage` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAB0; confianca alta)
     void*& bForceCallToBeginMainMenuStateField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x440; confianca baixa)
+    //  ancorado em `WorldModifiersContainer` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x440; confianca baixa)
     void*& bForceDefaultMainMenuField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifiersContainer` +169, medido na build 25535041
-    //  (offset absoluto medido: 0x441; confianca baixa)
+    //  ancorado em `WorldModifiersContainer` +169 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x441; confianca baixa)
     void*& bForceStateChangeField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifiersContainer", 169); }
     BrzCampoPonteiro bHasPlayedMainMenuIntroOnceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameInstance.bHasPlayedMainMenuIntroOnce")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackblazeCloudStorage` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xAC0; confianca alta)
+    //  ancorado em `BackblazeCloudStorage` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAC0; confianca alta)
     void*& bIsPreviewAuthenticatedField() const
     { return BrzCampoAncorado<void*>(this, "BackblazeCloudStorage", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPgoSweepInterval` +224, medido na build 25535041
-    //  (offset absoluto medido: 0x550; confianca baixa)
+    //  ancorado em `AutoPgoSweepInterval` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x550; confianca baixa)
     void*& bShouldShowMessageAfterReachingStateField() const
     { return BrzCampoAncorado<void*>(this, "AutoPgoSweepInterval", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldModifierConfigOverride` +330, medido na build 25535041
-    //  (offset absoluto medido: 0xA82; confianca baixa)
+    //  ancorado em `WorldModifierConfigOverride` +330 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA82; confianca baixa)
     void*& bTransferringMapsFromBlueprintCallField() const
     { return BrzCampoAncorado<void*>(this, "WorldModifierConfigOverride", 330); }
     BitFieldValue<bool, unsigned __int32> bHasPlayedMainMenuIntroOnce()

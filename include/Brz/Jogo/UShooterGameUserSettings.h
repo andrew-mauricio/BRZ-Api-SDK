@@ -588,8 +588,8 @@ struct UShooterGameUserSettings
     int& DesiredScreenWidthField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameUserSettings.DesiredScreenWidth"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableVirtualCursor` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x6C1; confianca alta)
+    //  ancorado em `bDisableVirtualCursor` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C1; confianca alta)
     void*& DetailGraphicsField() const
     { return BrzCampoAncorado<void*>(this, "bDisableVirtualCursor", 1); }
     BrzCampoPonteiro DisableCosmeticsDynamicDownloadingField() const
@@ -875,8 +875,8 @@ struct UShooterGameUserSettings
     BrzCampoPonteiro agreedToTermsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.agreedToTerms")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectedMainMenuIntro` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x355; confianca alta)
+    //  ancorado em `SelectedMainMenuIntro` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x355; confianca alta)
     void*& bAssociateIDWithOverwolfRunningField() const
     { return BrzCampoAncorado<void*>(this, "SelectedMainMenuIntro", 1); }
     BrzCampoPonteiro bAutomaticallyCreatePOIOnDeathField() const
@@ -972,15 +972,15 @@ struct UShooterGameUserSettings
     bool& bForceTPVCameraOffsetField() const
     { return *GetNativePointerField<bool*>(this, "UShooterGameUserSettings.bForceTPVCameraOffset"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bAutomaticallyCreatePOIOnDeath` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x77E; confianca alta)
+    //  ancorado em `bAutomaticallyCreatePOIOnDeath` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x77E; confianca alta)
     void*& bHasCFAuthCFForClientSessionField() const
     { return BrzCampoAncorado<void*>(this, "bAutomaticallyCreatePOIOnDeath", 1); }
     BrzCampoPonteiro bHasCompletedGen2Field() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bHasCompletedGen2")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectedMainMenuIntro` +2, medido na build 25535041
-    //  (offset absoluto medido: 0x356; confianca alta)
+    //  ancorado em `SelectedMainMenuIntro` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x356; confianca alta)
     void*& bHasEmptyStoreField() const
     { return BrzCampoAncorado<void*>(this, "SelectedMainMenuIntro", 2); }
     BrzCampoPonteiro bHasInitializedScreenPercentageField() const
@@ -1016,8 +1016,8 @@ struct UShooterGameUserSettings
     BrzCampoPonteiro bInvertLookYField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bInvertLookY")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SuperResolutionQualityLevel` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x7E8; confianca alta)
+    //  ancorado em `SuperResolutionQualityLevel` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7E8; confianca alta)
     void*& bIsInUISpawnField() const
     { return BrzCampoAncorado<void*>(this, "SuperResolutionQualityLevel", 4); }
     BrzCampoPonteiro bJoinNotificationsField() const
@@ -1047,8 +1047,8 @@ struct UShooterGameUserSettings
     BrzCampoPonteiro bPreventCrosshairField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameUserSettings.bPreventCrosshair")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MarketFilterType` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x284; confianca alta)
+    //  ancorado em `MarketFilterType` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x284; confianca alta)
     void*& bPreventDinoNameTagsField() const
     { return BrzCampoAncorado<void*>(this, "MarketFilterType", 4); }
     BrzCampoPonteiro bPreventHitMarkersField() const
@@ -1160,8 +1160,8 @@ struct UShooterGameUserSettings
     float& radialSelectionSpeedField() const
     { return *GetNativePointerField<float*>(this, "UShooterGameUserSettings.radialSelectionSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `radialSelectionSpeed` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6BC; confianca alta)
+    //  ancorado em `radialSelectionSpeed` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6BC; confianca alta)
     void*& radialSelectionSpeedConstantField() const
     { return BrzCampoAncorado<void*>(this, "radialSelectionSpeed", 4); }
     float& virtualCursorSensitivityField() const

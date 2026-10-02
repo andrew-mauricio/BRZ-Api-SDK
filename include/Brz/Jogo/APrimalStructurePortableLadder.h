@@ -62,7 +62,7 @@ struct APrimalStructurePortableLadder : public APrimalStructureLadder
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructurePortableLadder.ClearSkeletalMeshes()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ClearSkeletalMeshes() const
     {
         return NativeCall<void*>(this, "APrimalStructurePortableLadder.ClearSkeletalMeshes()");

@@ -244,7 +244,7 @@ struct UCheatManager : public AShooterPlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UCheatManager.GetWorld()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UCheatManager.GetWorld()");
@@ -453,13 +453,13 @@ struct UCheatManager : public AShooterPlayerController
     TArray<void*>& CheatManagerExtensionsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UCheatManager.CheatManagerExtensions"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x70; confianca media)
+    //  ancorado em `DebugCameraControllerClass` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x70; confianca media)
     int& CurrentTraceIndexField() const
     { return BrzCampoAncorado<int>(this, "DebugCameraControllerClass", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x74; confianca media)
+    //  ancorado em `DebugCameraControllerClass` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x74; confianca media)
     int& CurrentTracePawnIndexField() const
     { return BrzCampoAncorado<int>(this, "DebugCameraControllerClass", 68); }
     BrzCampoPonteiro DebugCameraControllerClassField() const
@@ -467,38 +467,38 @@ struct UCheatManager : public AShooterPlayerController
     BrzCampoPonteiro DebugCameraControllerRefField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCheatManager.DebugCameraControllerRef")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x40; confianca alta)
+    //  ancorado em `DebugCameraControllerClass` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40; confianca alta)
     float& DebugCapsuleHalfHeightField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x44; confianca alta)
+    //  ancorado em `DebugCameraControllerClass` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x44; confianca alta)
     float& DebugCapsuleRadiusField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x4C; confianca alta)
+    //  ancorado em `DebugCameraControllerClass` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4C; confianca alta)
     void*& DebugTraceChannelField() const
     { return BrzCampoAncorado<void*>(this, "DebugCameraControllerClass", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x3C; confianca alta)
+    //  ancorado em `DebugCameraControllerClass` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3C; confianca alta)
     float& DebugTraceDistanceField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x48; confianca alta)
+    //  ancorado em `DebugCameraControllerClass` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x48; confianca alta)
     float& DebugTraceDrawNormalLengthField() const
     { return BrzCampoAncorado<float>(this, "DebugCameraControllerClass", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x50; confianca alta)
+    //  ancorado em `DebugCameraControllerClass` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x50; confianca alta)
     void*& DebugTraceInfoListField() const
     { return BrzCampoAncorado<void*>(this, "DebugCameraControllerClass", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DebugCameraControllerClass` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x60; confianca media)
+    //  ancorado em `DebugCameraControllerClass` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x60; confianca media)
     void*& DebugTracePawnInfoListField() const
     { return BrzCampoAncorado<void*>(this, "DebugCameraControllerClass", 48); }
     BitFieldValue<bool, unsigned __int32> bDebugCapsuleSweep()

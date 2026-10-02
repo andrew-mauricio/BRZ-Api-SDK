@@ -301,7 +301,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPIgnoreAttachedSoundMultipliers(USoundBase*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=7]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=6]]
     bool BPIgnoreAttachedSoundMultipliers(void* a0) const
     {
         return NativeCall<bool, void*>(this, "UPrimalActor.BPIgnoreAttachedSoundMultipliers(USoundBase*)", a0);
@@ -325,7 +325,7 @@ struct UPrimalActor : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalActor.BPOverrideUILocation(APlayerController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=101+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=101+chamadores=2]]
     BrzPonteiro BPOverrideUILocation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalActor.BPOverrideUILocation(APlayerController*)", a0);
@@ -1002,29 +1002,29 @@ struct UPrimalActor : public UObject
     int& DefaultUnstasisedOctreeFlagsField() const
     { return *GetNativePointerField<int*>(this, "UPrimalActor.DefaultUnstasisedOctreeFlags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StasisCheckComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x128; confianca alta)
+    //  ancorado em `StasisCheckComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x128; confianca alta)
     UMovementComponent*& DeferredMovementComponentField() const
     { return BrzCampoAncorado<UMovementComponent*>(this, "StasisCheckComponent", 8); }
     unsigned char& DesiredRepGraphBehaviorField() const
     { return *GetNativePointerField<unsigned char*>(this, "UPrimalActor.DesiredRepGraphBehavior"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultUnstasisedOctreeFlags` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1C8; confianca alta)
+    //  ancorado em `DefaultUnstasisedOctreeFlags` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1C8; confianca alta)
     int& ForceImmediateReplicationFrameField() const
     { return BrzCampoAncorado<int>(this, "DefaultUnstasisedOctreeFlags", 8); }
     double& ForceMaximumReplicationRateUntilTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.ForceMaximumReplicationRateUntilTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorFlags` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1AC; confianca alta)
+    //  ancorado em `CustomActorFlags` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1AC; confianca alta)
     int& LastActorForceReplicationFrameField() const
     { return BrzCampoAncorado<int>(this, "CustomActorFlags", 4); }
     double& LastActorForceReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.LastActorForceReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OriginalCreationTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x170; confianca alta)
+    //  ancorado em `OriginalCreationTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x170; confianca alta)
     long long& LastActorUnstasisedCycleField() const
     { return BrzCampoAncorado<long long>(this, "OriginalCreationTime", 8); }
     double& LastEnterStasisTimeField() const
@@ -1032,18 +1032,18 @@ struct UPrimalActor : public UObject
     double& LastExitStasisTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.LastExitStasisTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorFlags` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1B4; confianca alta)
+    //  ancorado em `CustomActorFlags` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B4; confianca alta)
     int& LastFrameCalculatedNetworkRangeMultiplierField() const
     { return BrzCampoAncorado<int>(this, "CustomActorFlags", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OriginalCreationTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x178; confianca alta)
+    //  ancorado em `OriginalCreationTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x178; confianca alta)
     unsigned long long& LastFrameUnStasisField() const
     { return BrzCampoAncorado<unsigned long long>(this, "OriginalCreationTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetCriticalPriorityAdjustment` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1D0; confianca alta)
+    //  ancorado em `NetCriticalPriorityAdjustment` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D0; confianca alta)
     void*& LastOnlyInitialReplicationPreReplicationFrameField() const
     { return BrzCampoAncorado<void*>(this, "NetCriticalPriorityAdjustment", 4); }
     TWeakObjectPtr<void>& LastPostProcessVolumeSoundField() const
@@ -1055,8 +1055,8 @@ struct UPrimalActor : public UObject
     double& LastThrottledTickTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalActor.LastThrottledTickTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultUnstasisedOctreeFlags` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1C4; confianca alta)
+    //  ancorado em `DefaultUnstasisedOctreeFlags` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1C4; confianca alta)
     void*& LastUnstasisFrameCounterField() const
     { return BrzCampoAncorado<void*>(this, "DefaultUnstasisedOctreeFlags", 4); }
     int& NetCriticalPriorityAdjustmentField() const
@@ -1066,8 +1066,8 @@ struct UPrimalActor : public UObject
     float& NetworkAndStasisRangeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalActor.NetworkAndStasisRangeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorFlags` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1B0; confianca alta)
+    //  ancorado em `CustomActorFlags` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B0; confianca alta)
     int& NetworkDormantChildrenOpIdxField() const
     { return BrzCampoAncorado<int>(this, "CustomActorFlags", 8); }
     float& NetworkRangeMultiplierField() const
@@ -1083,8 +1083,8 @@ struct UPrimalActor : public UObject
     BrzCampoPonteiro OnMatineeUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.OnMatineeUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnMatineeUpdated` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xD0; confianca alta)
+    //  ancorado em `OnMatineeUpdated` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD0; confianca alta)
     void*& OnMatineeUpdatedRawField() const
     { return BrzCampoAncorado<void*>(this, "OnMatineeUpdated", 16); }
     BrzCampoPonteiro OnSemaphoreTakenField() const
@@ -1092,8 +1092,8 @@ struct UPrimalActor : public UObject
     BrzCampoPonteiro OnTargetingTeamChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalActor.OnTargetingTeamChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnTargetingTeamChanged` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA8; confianca alta)
+    //  ancorado em `OnTargetingTeamChanged` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA8; confianca alta)
     void*& OnTeamChangedForActorField() const
     { return BrzCampoAncorado<void*>(this, "OnTargetingTeamChanged", 16); }
     double& OriginalCreationTimeField() const
@@ -1101,13 +1101,13 @@ struct UPrimalActor : public UObject
     float& OverrideStasisComponentRadiusField() const
     { return *GetNativePointerField<float*>(this, "UPrimalActor.OverrideStasisComponentRadius"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OriginalCreationTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x180; confianca alta)
+    //  ancorado em `OriginalCreationTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x180; confianca alta)
     void*& PlayerScaledNetworkAndStasisRangeMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "OriginalCreationTime", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetCullDistanceSquaredDormant` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x190; confianca alta)
+    //  ancorado em `NetCullDistanceSquaredDormant` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x190; confianca alta)
     void*& PreviousStasisRangeMultField() const
     { return BrzCampoAncorado<void*>(this, "NetCullDistanceSquaredDormant", 4); }
     BrzCampoPonteiro RepGraphBehaviorField() const
@@ -1121,8 +1121,8 @@ struct UPrimalActor : public UObject
     int& TargetingTeamField() const
     { return *GetNativePointerField<int*>(this, "UPrimalActor.TargetingTeam"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPostProcessVolumeSound` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x78; confianca alta)
+    //  ancorado em `LastPostProcessVolumeSound` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x78; confianca alta)
     TArray<void*>& TimerStasisStoreField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "LastPostProcessVolumeSound", 8); }
     double& UnstasisLastInRangeTimeField() const

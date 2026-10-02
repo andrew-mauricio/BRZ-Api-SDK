@@ -87,7 +87,7 @@ struct APrimalStructureTurretAOE
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretAOE.ChangeAttackType(int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ChangeAttackType(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureTurretAOE.ChangeAttackType(int)", a0);
@@ -175,7 +175,7 @@ struct APrimalStructureTurretAOE
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretAOE.OnRep_CurrAttackTypeIndex()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnRep_CurrAttackTypeIndex() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretAOE.OnRep_CurrAttackTypeIndex()");
@@ -290,8 +290,8 @@ struct APrimalStructureTurretAOE
     TArray<void*>& BoneDamageAdjustersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructureTurretAOE.BoneDamageAdjusters"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x16A8; confianca media)
+    //  ancorado em `ChangeAttackTypeIcon` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A8; confianca media)
     void*& BounceTargetsRelativeOffsetField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 112); }
     FString& BoxNameField() const
@@ -329,8 +329,8 @@ struct APrimalStructureTurretAOE
     int& CurrAttackTypeIndexField() const
     { return *GetNativePointerField<int*>(this, "APrimalStructureTurretAOE.CurrAttackTypeIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x1690; confianca media)
+    //  ancorado em `ChangeAttackTypeIcon` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1690; confianca media)
     void*& CurrBounceIndexField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 88); }
     BrzCampoPonteiro CurrentBounceTargetsField() const
@@ -536,8 +536,8 @@ struct APrimalStructureTurretAOE
     double& LastPreReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalStructureTurretAOE.LastPreReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x16C0; confianca baixa)
+    //  ancorado em `ChangeAttackTypeIcon` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C0; confianca baixa)
     void*& LastRelativeImpactPointField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 136); }
     FString& LastSelectedWindSourceComponentNameField() const
@@ -547,8 +547,8 @@ struct APrimalStructureTurretAOE
     double& LastSolarRefreshTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalStructureTurretAOE.LastSolarRefreshTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x16B8; confianca media)
+    //  ancorado em `ChangeAttackTypeIcon` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16B8; confianca media)
     void*& LastSpawnedTrailEffectField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 128); }
     double& LastThrottledTickTimeField() const
@@ -864,8 +864,8 @@ struct APrimalStructureTurretAOE
     BrzCampoPonteiro SpawnCollisionHandlingMethodField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurretAOE.SpawnCollisionHandlingMethod")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ChangeAttackTypeIcon` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x1698; confianca media)
+    //  ancorado em `ChangeAttackTypeIcon` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1698; confianca media)
     void*& SpawnedBounceTrailEffectsField() const
     { return BrzCampoAncorado<void*>(this, "ChangeAttackTypeIcon", 96); }
     TObjectPtr<UPrimitiveComponent>& StasisCheckComponentField() const

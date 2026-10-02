@@ -581,7 +581,7 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -929,11 +929,10 @@ struct AShooterGameState : public AGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterGameState.PostInitializeComponents()
-    // classe: a funcao mora em AGameState, e AShooterGameState herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "AGameState.PostInitializeComponents()");
+        NativeCall<void>(this, "AShooterGameState.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -1238,23 +1237,23 @@ struct AShooterGameState : public AGameState
     TArray<void*>& ActiveMissionTagsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.ActiveMissionTags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClusterId` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA50; confianca alta)
+    //  ancorado em `ClusterId` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA50; confianca alta)
     FString& AmazonS3AccessKeyIDField() const
     { return BrzCampoAncorado<FString>(this, "ClusterId", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClusterId` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xA70; confianca media)
+    //  ancorado em `ClusterId` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA70; confianca media)
     FString& AmazonS3BucketNameField() const
     { return BrzCampoAncorado<FString>(this, "ClusterId", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClusterId` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xA60; confianca alta)
+    //  ancorado em `ClusterId` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA60; confianca alta)
     FString& AmazonS3SecretAccessKeyField() const
     { return BrzCampoAncorado<FString>(this, "ClusterId", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessCraftingRangeOverride` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xB60; confianca alta)
+    //  ancorado em `WirelessCraftingRangeOverride` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB60; confianca alta)
     int& AmbientSoundCheckIncrementField() const
     { return BrzCampoAncorado<int>(this, "WirelessCraftingRangeOverride", 4); }
     int& AnchoredVesselCheckRadiusField() const
@@ -1264,8 +1263,8 @@ struct AShooterGameState : public AGameState
     float& BaseHexagonRewardMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.BaseHexagonRewardMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bAllowLowGravitySpin` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xD58; confianca alta)
+    //  ancorado em `bAllowLowGravitySpin` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD58; confianca alta)
     TArray<void*>& BiomeBuffTagsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bAllowLowGravitySpin", 8); }
     float& BloodforgeReinforceExtraDurabilityField() const
@@ -1277,8 +1276,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro BunkersPerTribeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.BunkersPerTribe")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentDefaultPropertyValueUpdates` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xEC8; confianca alta)
+    //  ancorado em `CurrentDefaultPropertyValueUpdates` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEC8; confianca alta)
     void*& CDODebugDataField() const
     { return BrzCampoAncorado<void*>(this, "CurrentDefaultPropertyValueUpdates", 16); }
     FString& CachedSessionOwnerIdField() const
@@ -1286,8 +1285,8 @@ struct AShooterGameState : public AGameState
     FString& ClusterIdField() const
     { return *GetNativePointerField<FString*>(this, "AShooterGameState.ClusterId"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xF48; confianca media)
+    //  ancorado em `NetBanlistedMods` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF48; confianca media)
     void*& ClusterPaintingDataField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 80); }
     float& CompanionsDeathCooldownField() const
@@ -1315,8 +1314,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro DataLayerMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.DataLayerMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +56, medido na build 25535041
-    //  (offset absoluto medido: 0xF30; confianca media)
+    //  ancorado em `NetBanlistedMods` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF30; confianca media)
     void*& DataLayerWatcherPtrField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 56); }
     float& DayCycleSpeedScaleField() const
@@ -1328,8 +1327,8 @@ struct AShooterGameState : public AGameState
     float& DayTimeSpeedScaleField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.DayTimeSpeedScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xF28; confianca media)
+    //  ancorado em `NetBanlistedMods` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF28; confianca media)
     int& DedicatedWorldPartitionTicksField() const
     { return BrzCampoAncorado<int>(this, "NetBanlistedMods", 48); }
     TArray<void*>& DeferredExplorerNoteUnlockQueueField() const
@@ -1351,8 +1350,8 @@ struct AShooterGameState : public AGameState
     int& EnvironmentIndexField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.EnvironmentIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +55, medido na build 25535041
-    //  (offset absoluto medido: 0x7E0; confianca media)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +55 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7E0; confianca media)
     void*& ExpensiveFunctionsField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 55); }
     float& ExtinctionEventPercentField() const
@@ -1372,8 +1371,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro FloatingPlatformProfileNameColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.FloatingPlatformProfileNameColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xA28; confianca alta)
+    //  ancorado em `MaxPersonalTamedDinos` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA28; confianca alta)
     TArray<void*>& FloatingTextEntriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MaxPersonalTamedDinos", 4); }
     TArray<TWeakObjectPtr<void>>& ForcedRelevantPOIActorsField() const
@@ -1399,23 +1398,23 @@ struct AShooterGameState : public AGameState
     float& ItemStackSizeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.ItemStackSizeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x810; confianca alta)
+    //  ancorado em `DynamicMusicAudioComponent2` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x810; confianca alta)
     double& LastHadMusicTimeField() const
     { return BrzCampoAncorado<double>(this, "DynamicMusicAudioComponent2", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x818; confianca alta)
+    //  ancorado em `DynamicMusicAudioComponent2` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x818; confianca alta)
     void*& LastNetDynamicMusicField() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +7, medido na build 25535041
-    //  (offset absoluto medido: 0xB00; confianca alta)
+    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB00; confianca alta)
     double& LastPlayedDynamicMusic1Field() const
     { return BrzCampoAncorado<double>(this, "bCrossARKAllowForeignDinoDownloads", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +15, medido na build 25535041
-    //  (offset absoluto medido: 0xB08; confianca alta)
+    //  ancorado em `bCrossARKAllowForeignDinoDownloads` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB08; confianca alta)
     double& LastPlayedDynamicMusic2Field() const
     { return BrzCampoAncorado<double>(this, "bCrossARKAllowForeignDinoDownloads", 15); }
     double& LastServerSaveTimeField() const
@@ -1423,8 +1422,8 @@ struct AShooterGameState : public AGameState
     TArray<void*>& LevelExperienceRampOverridesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.LevelExperienceRampOverrides"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DisableRailgunPVP` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x708; confianca media)
+    //  ancorado em `DisableRailgunPVP` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x708; confianca media)
     void*& LevelNameHashField() const
     { return BrzCampoAncorado<void*>(this, "DisableRailgunPVP", 88); }
     int& LimitBunkersPerTribeNumField() const
@@ -1444,13 +1443,13 @@ struct AShooterGameState : public AGameState
     int& LiveTuningReplicatedChunkSizeField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.LiveTuningReplicatedChunkSize"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventTribeAlliances` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xA98; confianca alta)
+    //  ancorado em `bPreventTribeAlliances` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA98; confianca alta)
     FString& LoadForceRespawnDinosTagField() const
     { return BrzCampoAncorado<FString>(this, "bPreventTribeAlliances", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIgnorePVPMountedWeaponryRestrictions` +1, medido na build 25535041
-    //  (offset absoluto medido: 0xE50; confianca alta)
+    //  ancorado em `bIgnorePVPMountedWeaponryRestrictions` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE50; confianca alta)
     void*& LoadedDataLayersField() const
     { return BrzCampoAncorado<void*>(this, "bIgnorePVPMountedWeaponryRestrictions", 1); }
     float& LocalizedChatRadiusUnconsiousScaleField() const
@@ -1458,13 +1457,13 @@ struct AShooterGameState : public AGameState
     TArray<void*>& MassTeleportQueueField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.MassTeleportQueue"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MassTeleportQueue` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xCA0; confianca alta)
+    //  ancorado em `MassTeleportQueue` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCA0; confianca alta)
     TArray<void*>& MassTeleportQueueToAddField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MassTeleportQueue", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MassTeleportQueue` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xC90; confianca alta)
+    //  ancorado em `MassTeleportQueue` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC90; confianca alta)
     TArray<AActor*>& MassTeleportQueueToRemoveField() const
     { return BrzCampoAncorado<TArray<AActor*>>(this, "MassTeleportQueue", 16); }
     int& MaxAlliancesPerTribeField() const
@@ -1510,8 +1509,8 @@ struct AShooterGameState : public AGameState
     int& NetUTCField() const
     { return *GetNativePointerField<int*>(this, "AShooterGameState.NetUTC"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessCraftingRangeOverride` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xB68; confianca alta)
+    //  ancorado em `WirelessCraftingRangeOverride` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB68; confianca alta)
     float& NetUTCCacheField() const
     { return BrzCampoAncorado<float>(this, "WirelessCraftingRangeOverride", 12); }
     double& NetworkTimeField() const
@@ -1565,8 +1564,8 @@ struct AShooterGameState : public AGameState
     TArray<void*>& OverrideItemMaxQuantityField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.OverrideItemMaxQuantity"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DisableRailgunPVP` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x6B8; confianca media)
+    //  ancorado em `DisableRailgunPVP` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6B8; confianca media)
     void*& OverrideItemMaxQuantityMapField() const
     { return BrzCampoAncorado<void*>(this, "DisableRailgunPVP", 8); }
     int& OverrideMaxExperiencePointsDinoField() const
@@ -1586,8 +1585,8 @@ struct AShooterGameState : public AGameState
     float& PerPlatformMaxStructuresMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.PerPlatformMaxStructuresMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +31, medido na build 25535041
-    //  (offset absoluto medido: 0xC10; confianca alta)
+    //  ancorado em `bShowCreativeMode` +31 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC10; confianca alta)
     int& PerformanceThrottledTicksModField() const
     { return BrzCampoAncorado<int>(this, "bShowCreativeMode", 31); }
     float& PhotoModeRangeLimitField() const
@@ -1599,50 +1598,50 @@ struct AShooterGameState : public AGameState
     float& PlayerFloatingHUDOffsetScreenYField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.PlayerFloatingHUDOffsetScreenY"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +3, medido na build 25535041
-    //  (offset absoluto medido: 0x7AC; confianca alta)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7AC; confianca alta)
     void*& PlayerHeatCellSizeField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x7B0; confianca alta)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B0; confianca alta)
     void*& PlayerHeatMapGridSizeXField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +11, medido na build 25535041
-    //  (offset absoluto medido: 0x7B4; confianca alta)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +11 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B4; confianca alta)
     void*& PlayerHeatMapGridSizeYField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +15, medido na build 25535041
-    //  (offset absoluto medido: 0x7B8; confianca alta)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B8; confianca alta)
     void*& PlayerHeatMapWorldWidthXField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +19, medido na build 25535041
-    //  (offset absoluto medido: 0x7BC; confianca alta)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +19 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7BC; confianca alta)
     void*& PlayerHeatMapWorldWidthYField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 19); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +23, medido na build 25535041
-    //  (offset absoluto medido: 0x7C0; confianca alta)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +23 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7C0; confianca alta)
     void*& PlayerHeatmapField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 23); }
     FString& PlayerListStringField() const
     { return *GetNativePointerField<FString*>(this, "AShooterGameState.PlayerListString"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +27, medido na build 25535041
-    //  (offset absoluto medido: 0xC0C; confianca alta)
+    //  ancorado em `bShowCreativeMode` +27 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC0C; confianca alta)
     int& PlayerListThrottledModField() const
     { return BrzCampoAncorado<int>(this, "bShowCreativeMode", 27); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +7, medido na build 25535041
-    //  (offset absoluto medido: 0xBF8; confianca alta)
+    //  ancorado em `bShowCreativeMode` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBF8; confianca alta)
     TArray<void*>& PlayerLocatorEffectMapsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bShowCreativeMode", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +39, medido na build 25535041
-    //  (offset absoluto medido: 0x7D0; confianca media)
+    //  ancorado em `bNeedsPowerToActivateAquaticCompartments` +39 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7D0; confianca media)
     void*& PlayerUnderwaterHeatmapField() const
     { return BrzCampoAncorado<void*>(this, "bNeedsPowerToActivateAquaticCompartments", 39); }
     TArray<void*>& PreventBreedingForClassNamesField() const
@@ -1652,8 +1651,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro PreventDisableDefaultDinoTameClassNamesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.PreventDisableDefaultDinoTameClassNames")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +35, medido na build 25535041
-    //  (offset absoluto medido: 0xC14; confianca media)
+    //  ancorado em `bShowCreativeMode` +35 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC14; confianca media)
     float& PreventOfflinePvPConnectionInvincibleIntervalField() const
     { return BrzCampoAncorado<float>(this, "bShowCreativeMode", 35); }
     TArray<void*>& PreventOfflinePvPExpiringTeamsField() const
@@ -1661,15 +1660,15 @@ struct AShooterGameState : public AGameState
     TArray<void*>& PreventOfflinePvPExpiringTimesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.PreventOfflinePvPExpiringTimes"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventOfflinePvPExpiringTimes` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x9D0; confianca media)
+    //  ancorado em `PreventOfflinePvPExpiringTimes` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9D0; confianca media)
     void*& PreventOfflinePvPFirstLiveTimeField() const
     { return BrzCampoAncorado<void*>(this, "PreventOfflinePvPExpiringTimes", 96); }
     TArray<void*>& PreventOfflinePvPLiveTeamsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterGameState.PreventOfflinePvPLiveTeams"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventOfflinePvPExpiringTimes` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x980; confianca media)
+    //  ancorado em `PreventOfflinePvPExpiringTimes` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x980; confianca media)
     void*& PreventOfflinePvPLiveTimesField() const
     { return BrzCampoAncorado<void*>(this, "PreventOfflinePvPExpiringTimes", 16); }
     TArray<void*>& PreventTransferForClassNamesField() const
@@ -1691,20 +1690,20 @@ struct AShooterGameState : public AGameState
     float& RadiusStructuresInSmallRadiusField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.RadiusStructuresInSmallRadius"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RealtimeThrottledTickTimeAmount` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xEA8; confianca alta)
+    //  ancorado em `RealtimeThrottledTickTimeAmount` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEA8; confianca alta)
     int& RealtimeThrottledTickOffsetField() const
     { return BrzCampoAncorado<int>(this, "RealtimeThrottledTickTimeAmount", 8); }
     double& RealtimeThrottledTickTimeAmountField() const
     { return *GetNativePointerField<double*>(this, "AShooterGameState.RealtimeThrottledTickTimeAmount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xF18; confianca media)
+    //  ancorado em `NetBanlistedMods` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF18; confianca media)
     void*& S3UploadersField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessCraftingRangeOverride` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB64; confianca alta)
+    //  ancorado em `WirelessCraftingRangeOverride` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB64; confianca alta)
     int& STASISAUTODESTROY_CheckIncrementField() const
     { return BrzCampoAncorado<int>(this, "WirelessCraftingRangeOverride", 8); }
     float& ServerFramerateField() const
@@ -1724,8 +1723,8 @@ struct AShooterGameState : public AGameState
     USoundBase*& StaticOverrideMusicField() const
     { return *GetNativePointerField<USoundBase**>(this, "AShooterGameState.StaticOverrideMusic"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MassTeleportQueue` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xCB0; confianca media)
+    //  ancorado em `MassTeleportQueue` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCB0; confianca media)
     void*& StreamingDataLayersField() const
     { return BrzCampoAncorado<void*>(this, "MassTeleportQueue", 48); }
     float& StructureDamageRepairCooldownField() const
@@ -1741,8 +1740,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro ThrallTargetingTeamCountField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.ThrallTargetingTeamCount")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowCreativeMode` +23, medido na build 25535041
-    //  (offset absoluto medido: 0xC08; confianca alta)
+    //  ancorado em `bShowCreativeMode` +23 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC08; confianca alta)
     int& ThrottledTicksModField() const
     { return BrzCampoAncorado<int>(this, "bShowCreativeMode", 23); }
     unsigned int& TimeUTCField() const
@@ -1750,8 +1749,8 @@ struct AShooterGameState : public AGameState
     float& TribeNameChangeCooldownField() const
     { return *GetNativePointerField<float*>(this, "AShooterGameState.TribeNameChangeCooldown"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xF08; confianca media)
+    //  ancorado em `NetBanlistedMods` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF08; confianca media)
     void*& TribeRenameQueueField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 16); }
     float& TribeSlotReuseCooldownField() const
@@ -1807,8 +1806,8 @@ struct AShooterGameState : public AGameState
     bool& bAllowHideDamageSourceFromLogsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bAllowHideDamageSourceFromLogs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRecipeSkillMultiplier` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x8DC; confianca alta)
+    //  ancorado em `CustomRecipeSkillMultiplier` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8DC; confianca alta)
     void*& bAllowHostMessagesField() const
     { return BrzCampoAncorado<void*>(this, "CustomRecipeSkillMultiplier", 4); }
     BrzCampoPonteiro bAllowLowGravitySpinField() const
@@ -1834,8 +1833,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro bAllowUnclaimDinosConfigField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bAllowUnclaimDinosConfig")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRecipeSkillMultiplier` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x8DD; confianca alta)
+    //  ancorado em `CustomRecipeSkillMultiplier` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8DD; confianca alta)
     bool& bAlwaysAllowHostMessagesField() const
     { return BrzCampoAncorado<bool>(this, "CustomRecipeSkillMultiplier", 5); }
     bool& bAlwaysAllowStructurePickupField() const
@@ -1905,8 +1904,8 @@ struct AShooterGameState : public AGameState
     bool& bEnableServerDestroyTamesAboveSoftTameLimitField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bEnableServerDestroyTamesAboveSoftTameLimit"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventTribeAlliances` +25, medido na build 25535041
-    //  (offset absoluto medido: 0xAA9; confianca alta)
+    //  ancorado em `bPreventTribeAlliances` +25 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAA9; confianca alta)
     bool& bFastDecayUnsnappedCoreStructuresField() const
     { return BrzCampoAncorado<bool>(this, "bPreventTribeAlliances", 25); }
     bool& bFlyerPlatformAllowUnalignedDinoBasingField() const
@@ -1920,8 +1919,8 @@ struct AShooterGameState : public AGameState
     bool& bForceUseInventoryAppendsField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bForceUseInventoryAppends"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LiveTuningOverloadChunks` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xDD8; confianca alta)
+    //  ancorado em `LiveTuningOverloadChunks` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xDD8; confianca alta)
     void*& bHasAppliedLiveTuningOverloadsField() const
     { return BrzCampoAncorado<void*>(this, "LiveTuningOverloadChunks", 16); }
     bool& bHexStoreAllowOnlyEngramTradeOptionField() const
@@ -1937,20 +1936,20 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro bIsArkTributeAvailableField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bIsArkTributeAvailable")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +21, medido na build 25535041
-    //  (offset absoluto medido: 0xA39; confianca alta)
+    //  ancorado em `MaxPersonalTamedDinos` +21 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA39; confianca alta)
     bool& bIsClientField() const
     { return BrzCampoAncorado<bool>(this, "MaxPersonalTamedDinos", 21); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +20, medido na build 25535041
-    //  (offset absoluto medido: 0xA38; confianca alta)
+    //  ancorado em `MaxPersonalTamedDinos` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA38; confianca alta)
     void*& bIsCustomMapField() const
     { return BrzCampoAncorado<void*>(this, "MaxPersonalTamedDinos", 20); }
     BrzCampoPonteiro bIsDediServerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bIsDediServer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPersonalTamedDinos` +22, medido na build 25535041
-    //  (offset absoluto medido: 0xA3A; confianca alta)
+    //  ancorado em `MaxPersonalTamedDinos` +22 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA3A; confianca alta)
     void*& bIsDedicatedServerField() const
     { return BrzCampoAncorado<void*>(this, "MaxPersonalTamedDinos", 22); }
     bool& bIsLegacyServerField() const
@@ -1970,30 +1969,30 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro bNeedsPowerToActivateAquaticCompartmentsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bNeedsPowerToActivateAquaticCompartments")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventTribeAlliances` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xAA8; confianca alta)
+    //  ancorado em `bPreventTribeAlliances` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAA8; confianca alta)
     bool& bOnlyDecayUnsnappedCoreStructuresField() const
     { return BrzCampoAncorado<bool>(this, "bPreventTribeAlliances", 24); }
     bool& bOverideStructurePlatformPreventionField() const
     { return *GetNativePointerField<bool*>(this, "AShooterGameState.bOverideStructurePlatformPrevention"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +11, medido na build 25535041
-    //  (offset absoluto medido: 0x80B; confianca alta)
+    //  ancorado em `DynamicMusicAudioComponent2` +11 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x80B; confianca alta)
     void*& bOverrideCombatMusicField() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca alta)
+    //  ancorado em `DynamicMusicAudioComponent2` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca alta)
     void*& bPlayingDynamicMusicField() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x809; confianca alta)
+    //  ancorado em `DynamicMusicAudioComponent2` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x809; confianca alta)
     bool& bPlayingDynamicMusic1Field() const
     { return BrzCampoAncorado<bool>(this, "DynamicMusicAudioComponent2", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicMusicAudioComponent2` +10, medido na build 25535041
-    //  (offset absoluto medido: 0x80A; confianca alta)
+    //  ancorado em `DynamicMusicAudioComponent2` +10 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x80A; confianca alta)
     void*& bPlayingDynamicMusic2Field() const
     { return BrzCampoAncorado<void*>(this, "DynamicMusicAudioComponent2", 10); }
     bool& bPreventDownloadDinosField() const
@@ -2067,8 +2066,8 @@ struct AShooterGameState : public AGameState
     BrzCampoPonteiro bVesselSimpleInterpModeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterGameState.bVesselSimpleInterpMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetBanlistedMods` +72, medido na build 25535041
-    //  (offset absoluto medido: 0xF40; confianca media)
+    //  ancorado em `NetBanlistedMods` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF40; confianca media)
     void*& bWasInCaveField() const
     { return BrzCampoAncorado<void*>(this, "NetBanlistedMods", 72); }
     BitFieldValue<bool, unsigned __int32> DisableRailgunPVP()

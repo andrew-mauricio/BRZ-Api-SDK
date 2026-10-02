@@ -35,7 +35,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.AddedLinkedStructure(APrimalStructure*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddedLinkedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureWaterPipe.AddedLinkedStructure(APrimalStructure*)", a0);
@@ -115,7 +115,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureWaterPipe.OnRep_HasWater(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_HasWater(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureWaterPipe.OnRep_HasWater(bool)", a0);
@@ -131,7 +131,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.ParseGraphForWater(TArray<APrimalStructure*,TSizedDefaultAllocator<32>
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ParseGraphForWater(void* a0, void* a1, void* a2) const
     {
         NativeCall<void, void*, void*, void*>(this, "APrimalStructureWaterPipe.ParseGraphForWater(TArray<APrimalStructure*,TSizedDefaultAllocator<32>>&,TArray<APrimalStructure*,TSizedDefaultAllocator<32>>&,APrimalStructureWaterPipe*)", a0, a1, a2);
@@ -148,7 +148,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.PostInitializeComponents()
     // classe: a funcao mora em APrimalStructure, e APrimalStructureWaterPipe herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APrimalStructure.PostInitializeComponents()");
@@ -156,7 +156,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.PreLinkedStructure()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PreLinkedStructure() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.PreLinkedStructure()");
@@ -172,7 +172,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.RefreshLinkedToNonPipeState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void RefreshLinkedToNonPipeState() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.RefreshLinkedToNonPipeState()");
@@ -180,7 +180,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.RefreshWaterState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=484+grafo=3/3]]
     void RefreshWaterState() const
     {
         NativeCall<void>(this, "APrimalStructureWaterPipe.RefreshWaterState()");
@@ -188,7 +188,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureWaterPipe.RemovedLinkedStructure(APrimalStructure*,APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemovedLinkedStructure(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureWaterPipe.RemovedLinkedStructure(APrimalStructure*,APlayerController*)", a0, a1);
@@ -196,7 +196,7 @@ struct APrimalStructureWaterPipe : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureWaterPipe.SetHasWater(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetHasWater(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureWaterPipe.SetHasWater(bool)", a0);

@@ -106,7 +106,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.ClientRequestItemsForClass(TSubclassOf<UPrimalItem>,AShooterPlayerC
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro ClientRequestItemsForClass(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalBuff_StorageInterface.ClientRequestItemsForClass(TSubclassOf<UPrimalItem>,AShooterPlayerController*)", a0, a1);
@@ -130,7 +130,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.ClientRequestLocateItemClass(TSubclassOf<UPrimalItem>,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=112+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=112+chamadores=2]]
     BrzPonteiro ClientRequestLocateItemClass(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalBuff_StorageInterface.ClientRequestLocateItemClass(TSubclassOf<UPrimalItem>,bool)", a0, a1);
@@ -186,7 +186,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.ClientRequestWithdrawAllItemsOfClass_Implementation(TSubclassOf<UPr
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientRequestWithdrawAllItemsOfClass_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_StorageInterface.ClientRequestWithdrawAllItemsOfClass_Implementation(TSubclassOf<UPrimalItem>)", a0);
@@ -210,7 +210,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.ClientRequestWithdrawItemsOfClass_Implementation(TSubclassOf<UPrima
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientRequestWithdrawItemsOfClass_Implementation(void* a0, int a1, bool a2, bool a3) const
     {
         return NativeCall<void*, void*, int, bool, bool>(this, "APrimalBuff_StorageInterface.ClientRequestWithdrawItemsOfClass_Implementation(TSubclassOf<UPrimalItem>,int,bool,bool)", a0, a1, a2, a3);
@@ -234,7 +234,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.GetBuffPOIs(TArray<FPointOfInterestData_ForCompanion,TSizedDefaultA
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetBuffPOIs(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_StorageInterface.GetBuffPOIs(TArray<FPointOfInterestData_ForCompanion,TSizedDefaultAllocator<32>>&)", a0);
@@ -302,7 +302,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.LinkedContainerViewingItemInstancesClassUpdated()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1030+grafo=21/21]]
     BrzPonteiro LinkedContainerViewingItemInstancesClassUpdated() const
     {
         return NativeCall<void*>(this, "APrimalBuff_StorageInterface.LinkedContainerViewingItemInstancesClassUpdated()");
@@ -342,7 +342,7 @@ struct APrimalBuff_StorageInterface
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_StorageInterface.RequestLocateItemsUpdate()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RequestLocateItemsUpdate() const
     {
         return NativeCall<void*>(this, "APrimalBuff_StorageInterface.RequestLocateItemsUpdate()");
@@ -525,8 +525,8 @@ struct APrimalBuff_StorageInterface
     double& CreationTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalBuff_StorageInterface.CreationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIItemNameOverrides` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xCE0; confianca media)
+    //  ancorado em `POIItemNameOverrides` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCE0; confianca media)
     void*& CurrentItemLocatorPOIsField() const
     { return BrzCampoAncorado<void*>(this, "POIItemNameOverrides", 80); }
     int& CustomActorFlagsField() const
@@ -622,18 +622,18 @@ struct APrimalBuff_StorageInterface
     double& LastItemDurabilityDepletionTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalBuff_StorageInterface.LastItemDurabilityDepletionTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIItemNameOverrides` +120, medido na build 25535041
-    //  (offset absoluto medido: 0xD08; confianca media)
+    //  ancorado em `POIItemNameOverrides` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD08; confianca media)
     void*& LastLocateItemRequestedTimeField() const
     { return BrzCampoAncorado<void*>(this, "POIItemNameOverrides", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIItemNameOverrides` +104, medido na build 25535041
-    //  (offset absoluto medido: 0xCF8; confianca media)
+    //  ancorado em `POIItemNameOverrides` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCF8; confianca media)
     void*& LastLocatedItemClassField() const
     { return BrzCampoAncorado<void*>(this, "POIItemNameOverrides", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIItemNameOverrides` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xCF0; confianca media)
+    //  ancorado em `POIItemNameOverrides` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCF0; confianca media)
     void*& LastLocatedItemIDField() const
     { return BrzCampoAncorado<void*>(this, "POIItemNameOverrides", 96); }
     TWeakObjectPtr<void>& LastPostProcessVolumeSoundField() const
@@ -653,8 +653,8 @@ struct APrimalBuff_StorageInterface
     BrzCampoPonteiro LinkedContainerInventoryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_StorageInterface.LinkedContainerInventory")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIItemNameOverrides` +128, medido na build 25535041
-    //  (offset absoluto medido: 0xD10; confianca media)
+    //  ancorado em `POIItemNameOverrides` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD10; confianca media)
     void*& LocateItemsUpdateTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "POIItemNameOverrides", 128); }
     BrzCampoPonteiro MPCAdjustersField() const
@@ -752,8 +752,8 @@ struct APrimalBuff_StorageInterface
     TWeakObjectPtr<void>& ParentComponentField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalBuff_StorageInterface.ParentComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedWirelessItems` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xC40; confianca media)
+    //  ancorado em `ReplicatedWirelessItems` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC40; confianca media)
     void*& PartialItemClassesToUpdateField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedWirelessItems", 80); }
     BrzCampoPonteiro ParticleSystemComponentField() const
@@ -1271,8 +1271,8 @@ struct APrimalBuff_StorageInterface
     BrzCampoPonteiro bIsValidUnstasisCasterField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_StorageInterface.bIsValidUnstasisCaster")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIItemNameOverrides` +112, medido na build 25535041
-    //  (offset absoluto medido: 0xD00; confianca media)
+    //  ancorado em `POIItemNameOverrides` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD00; confianca media)
     void*& bLastLocatedItemClassWasDediOnlyField() const
     { return BrzCampoAncorado<void*>(this, "POIItemNameOverrides", 112); }
     BrzCampoPonteiro bListenForInputField() const

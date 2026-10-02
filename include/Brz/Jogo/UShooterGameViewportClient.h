@@ -577,46 +577,46 @@ struct UShooterGameViewportClient
     BrzCampoPonteiro GameInstanceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.GameInstance")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatingModsUI` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x424; confianca alta)
+    //  ancorado em `UpdatingModsUI` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x424; confianca alta)
     void*& IncrementedUpdatingModsField() const
     { return BrzCampoAncorado<void*>(this, "UpdatingModsUI", 12); }
     BrzCampoPonteiro InfoFontField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.InfoFont")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ViewPortWidgets` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3D0; confianca alta)
+    //  ancorado em `ViewPortWidgets` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3D0; confianca alta)
     void*& InputProcessorPtrField() const
     { return BrzCampoAncorado<void*>(this, "ViewPortWidgets", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x404; confianca alta)
+    //  ancorado em `InfoFont` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x404; confianca alta)
     void*& LastGarbageCollectionTimeField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3F8; confianca alta)
+    //  ancorado em `InfoFont` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3F8; confianca alta)
     void*& LastTimeLocalPlayerRemovedField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 16); }
     BrzCampoPonteiro LoadingMusicField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.LoadingMusic")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x408; confianca alta)
+    //  ancorado em `InfoFont` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x408; confianca alta)
     void*& LoadingScreenWidgetField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 32); }
     int& MaxSplitscreenPlayersField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameViewportClient.MaxSplitscreenPlayers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x400; confianca alta)
+    //  ancorado em `InfoFont` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x400; confianca alta)
     void*& NumInventoryOpensWithoutGCField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 24); }
     int& NumReplaySecondsToStoreField() const
     { return *GetNativePointerField<int*>(this, "UShooterGameViewportClient.NumReplaySecondsToStore"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatingModsUI` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x420; confianca alta)
+    //  ancorado em `UpdatingModsUI` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x420; confianca alta)
     void*& UpdatingModsNumField() const
     { return BrzCampoAncorado<void*>(this, "UpdatingModsUI", 8); }
     BrzCampoPonteiro UpdatingModsUIField() const
@@ -630,18 +630,18 @@ struct UShooterGameViewportClient
     BrzCampoPonteiro WorldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterGameViewportClient.World")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x3F1; confianca alta)
+    //  ancorado em `InfoFont` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3F1; confianca alta)
     void*& bActiveScreenFadeField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InfoFont` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3F0; confianca alta)
+    //  ancorado em `InfoFont` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3F0; confianca alta)
     void*& bDisplayedStartupTutorialField() const
     { return BrzCampoAncorado<void*>(this, "InfoFont", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatingModsUI` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x428; confianca alta)
+    //  ancorado em `UpdatingModsUI` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x428; confianca alta)
     void*& bSettingModsCounterField() const
     { return BrzCampoAncorado<void*>(this, "UpdatingModsUI", 16); }
     BitFieldValue<bool, unsigned __int32> VideoReplayEnabled()

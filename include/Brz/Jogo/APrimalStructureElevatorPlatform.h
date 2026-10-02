@@ -36,7 +36,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.Activate(APlayerController*,bool,EPrimalStructureElevatorState,
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Activate(void* a0, bool a1, int a2, float a3) const
     {
         NativeCall<void, void*, bool, int, float>(this, "APrimalStructureElevatorPlatform.Activate(APlayerController*,bool,EPrimalStructureElevatorState,float)", a0, a1, a2, a3);
@@ -52,7 +52,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.AllowStructureAccess(APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool AllowStructureAccess(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureElevatorPlatform.AllowStructureAccess(APlayerController*)", a0);
@@ -76,11 +76,10 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorPlatform.BeginPlay()
-    // classe: a funcao mora em APrimalStructure, e APrimalStructureElevatorPlatform herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
-        NativeCall<void>(this, "APrimalStructure.BeginPlay()");
+        NativeCall<void>(this, "APrimalStructureElevatorPlatform.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -221,7 +220,7 @@ struct APrimalStructureElevatorPlatform : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureElevatorPlatform.RemoveLiftedActor(APrimalCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro RemoveLiftedActor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureElevatorPlatform.RemoveLiftedActor(APrimalCharacter*)", a0);

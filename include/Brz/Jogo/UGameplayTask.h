@@ -192,37 +192,37 @@ struct UGameplayTask
     BrzCampoPonteiro ChildTaskField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask.ChildTask")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x42; confianca alta)
+    //  ancorado em `ResourceOverlapPolicy` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x42; confianca alta)
     void*& ClaimedResourcesField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 8); }
     FName& InstanceNameField() const
     { return *GetNativePointerField<FName*>(this, "UGameplayTask.InstanceName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceName` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x38; confianca alta)
+    //  ancorado em `InstanceName` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x38; confianca alta)
     int& PriorityField() const
     { return BrzCampoAncorado<int>(this, "InstanceName", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +6, medido na build 25535041
-    //  (offset absoluto medido: 0x40; confianca alta)
+    //  ancorado em `ResourceOverlapPolicy` +6 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40; confianca alta)
     void*& RequiredResourcesField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 6); }
     BrzCampoPonteiro ResourceOverlapPolicyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTask.ResourceOverlapPolicy")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +14, medido na build 25535041
-    //  (offset absoluto medido: 0x48; confianca alta)
+    //  ancorado em `ResourceOverlapPolicy` +14 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x48; confianca alta)
     void*& TaskOwnerField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 14); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceName` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x39; confianca alta)
+    //  ancorado em `InstanceName` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x39; confianca alta)
     void*& TaskStateField() const
     { return BrzCampoAncorado<void*>(this, "InstanceName", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ResourceOverlapPolicy` +30, medido na build 25535041
-    //  (offset absoluto medido: 0x58; confianca alta)
+    //  ancorado em `ResourceOverlapPolicy` +30 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x58; confianca alta)
     void*& TasksComponentField() const
     { return BrzCampoAncorado<void*>(this, "ResourceOverlapPolicy", 30); }
 };

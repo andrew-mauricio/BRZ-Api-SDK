@@ -429,8 +429,8 @@ struct UNetConnection : public UObject
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x1A0; confianca media)
+    //  ancorado em `PlayerID` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A0; confianca media)
     FString& ChallengeField() const
     { return BrzCampoAncorado<FString>(this, "PlayerID", 56); }
     TArray<void*>& ChannelsToTickField() const
@@ -438,25 +438,25 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro ChildrenField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.Children")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +108, medido na build 25535041
-    //  (offset absoluto medido: 0x1D4; confianca media)
+    //  ancorado em `PlayerID` +108 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D4; confianca media)
     int& ClientLoginStateField() const
     { return BrzCampoAncorado<int>(this, "PlayerID", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultMaxChannelSize` +368, medido na build 25535041
-    //  (offset absoluto medido: 0x1570; confianca baixa)
+    //  ancorado em `DefaultMaxChannelSize` +368 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1570; confianca baixa)
     void*& ClientMakingVisibleLevelNamesField() const
     { return BrzCampoAncorado<void*>(this, "DefaultMaxChannelSize", 368); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x1B0; confianca media)
+    //  ancorado em `PlayerID` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B0; confianca media)
     FString& ClientResponseField() const
     { return BrzCampoAncorado<FString>(this, "PlayerID", 72); }
     int& DefaultMaxChannelSizeField() const
     { return *GetNativePointerField<int*>(this, "UNetConnection.DefaultMaxChannelSize"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultMaxChannelSize` +288, medido na build 25535041
-    //  (offset absoluto medido: 0x1520; confianca baixa)
+    //  ancorado em `DefaultMaxChannelSize` +288 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1520; confianca baixa)
     void*& DestroyedStartupOrDormantActorGUIDsField() const
     { return BrzCampoAncorado<void*>(this, "DefaultMaxChannelSize", 288); }
     TObjectPtr<UNetDriver>& DriverField() const
@@ -464,8 +464,8 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro InternalAckField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.InternalAck")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultMaxChannelSize` +448, medido na build 25535041
-    //  (offset absoluto medido: 0x15C0; confianca baixa)
+    //  ancorado em `DefaultMaxChannelSize` +448 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x15C0; confianca baixa)
     void*& KeepProcessingActorChannelBunchesMapField() const
     { return BrzCampoAncorado<void*>(this, "DefaultMaxChannelSize", 448); }
     double& LastReceiveTimeField() const
@@ -473,28 +473,28 @@ struct UNetConnection : public UObject
     int& MaxPacketField() const
     { return *GetNativePointerField<int*>(this, "UNetConnection.MaxPacket"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x138; confianca baixa)
+    //  ancorado em `MaxPacket` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x138; confianca baixa)
     int& MaxPacketHandlerBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x130; confianca baixa)
+    //  ancorado em `MaxPacket` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x130; confianca baixa)
     int& NumAckBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +132, medido na build 25535041
-    //  (offset absoluto medido: 0x12C; confianca baixa)
+    //  ancorado em `MaxPacket` +132 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12C; confianca baixa)
     int& NumBunchBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 132); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x128; confianca media)
+    //  ancorado em `MaxPacket` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x128; confianca media)
     int& NumPacketIdBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +140, medido na build 25535041
-    //  (offset absoluto medido: 0x134; confianca baixa)
+    //  ancorado em `MaxPacket` +140 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x134; confianca baixa)
     int& NumPaddingBitsField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 140); }
     TArray<void*>& OpenChannelsField() const
@@ -506,8 +506,8 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro PackageMapClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.PackageMapClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x198; confianca media)
+    //  ancorado em `PlayerID` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x198; confianca media)
     int& PacketOverheadField() const
     { return BrzCampoAncorado<int>(this, "PlayerID", 48); }
     BrzCampoPonteiro PlayerIDField() const
@@ -515,20 +515,20 @@ struct UNetConnection : public UObject
     BrzCampoPonteiro PlayerIdField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UNetConnection.PlayerID")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x1C0; confianca media)
+    //  ancorado em `PlayerID` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1C0; confianca media)
     FString& RequestURLField() const
     { return BrzCampoAncorado<FString>(this, "PlayerID", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerID` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x1D0; confianca media)
+    //  ancorado em `PlayerID` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D0; confianca media)
     int& ResponseIdField() const
     { return BrzCampoAncorado<int>(this, "PlayerID", 104); }
     TArray<void*>& SentTemporariesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UNetConnection.SentTemporaries"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPacket` +148, medido na build 25535041
-    //  (offset absoluto medido: 0x13C; confianca baixa)
+    //  ancorado em `MaxPacket` +148 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x13C; confianca baixa)
     int& StateField() const
     { return BrzCampoAncorado<int>(this, "MaxPacket", 148); }
     TObjectPtr<AActor>& ViewTargetField() const

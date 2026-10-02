@@ -53,11 +53,10 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.EndPlay(EEndPlayReason::Type)
-    // classe: a funcao mora em AActor, e ABiomeZoneVolume herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndPlay(int a0) const
     {
-        NativeCall<void, int>(this, "AActor.EndPlay(EEndPlayReason::Type)", a0);
+        NativeCall<void, int>(this, "ABiomeZoneVolume.EndPlay(EEndPlayReason::Type)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -118,11 +117,10 @@ struct ABiomeZoneVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ABiomeZoneVolume.PostInitializeComponents()
-    // classe: a funcao mora em AActor, e ABiomeZoneVolume herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "AActor.PostInitializeComponents()");
+        NativeCall<void>(this, "ABiomeZoneVolume.PostInitializeComponents()");
     }
 
     float& AboveTemperatureOffsetExponentField() const

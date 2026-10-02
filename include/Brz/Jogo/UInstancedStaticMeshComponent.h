@@ -429,11 +429,10 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UInstancedStaticMeshComponent.PostNetReceive()
-    // classe: a funcao mora em USceneComponent, e UInstancedStaticMeshComponent herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostNetReceive() const
     {
-        NativeCall<void>(this, "USceneComponent.PostNetReceive()");
+        NativeCall<void>(this, "UInstancedStaticMeshComponent.PostNetReceive()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -605,8 +604,8 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro CachedMappingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.CachedMappings")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReferencedAttachedComponentObjects` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA80; confianca alta)
+    //  ancorado em `ReferencedAttachedComponentObjects` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA80; confianca alta)
     int& CurrentAttachedIndexField() const
     { return BrzCampoAncorado<int>(this, "ReferencedAttachedComponentObjects", 16); }
     BrzCampoPonteiro DestroyedMeshActorClassField() const
@@ -616,8 +615,8 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro FoliageTypeReferenceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.FoliageTypeReference")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x848; confianca media)
+    //  ancorado em `InstanceReorderTable` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x848; confianca media)
     TArray<void*>& InstanceBodiesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "InstanceReorderTable", 80); }
     int& InstanceEndCullDistanceField() const
@@ -625,8 +624,8 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro InstanceIdDataIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.InstanceIdDataIndex")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x868; confianca media)
+    //  ancorado em `InstanceReorderTable` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x868; confianca media)
     void*& InstanceIdToInstanceIndexMapField() const
     { return BrzCampoAncorado<void*>(this, "InstanceReorderTable", 112); }
     BrzCampoPonteiro InstanceLODDistanceScaleField() const
@@ -664,8 +663,8 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro PerInstanceCustomFlagDataIndexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.PerInstanceCustomFlagDataIndex")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x858; confianca media)
+    //  ancorado em `InstanceReorderTable` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x858; confianca media)
     TArray<void*>& PerInstanceIdsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "InstanceReorderTable", 96); }
     TArray<void*>& PerInstancePrevTransformField() const
@@ -679,8 +678,8 @@ struct UInstancedStaticMeshComponent : public UStaticMeshComponent
     BrzCampoPonteiro PreviousComponentTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInstancedStaticMeshComponent.PreviousComponentTransform")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InstanceReorderTable` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca media)
+    //  ancorado em `InstanceReorderTable` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca media)
     void*& ProxySizeField() const
     { return BrzCampoAncorado<void*>(this, "InstanceReorderTable", 16); }
     TArray<void*>& ReferencedAttachedComponentObjectsField() const

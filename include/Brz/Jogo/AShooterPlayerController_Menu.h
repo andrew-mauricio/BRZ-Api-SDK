@@ -303,8 +303,8 @@ struct AShooterPlayerController_Menu
     FString& DiscordRefreshTokenField() const
     { return *GetNativePointerField<FString*>(this, "AShooterPlayerController_Menu.DiscordRefreshToken"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Discord` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB40; confianca alta)
+    //  ancorado em `Discord` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB40; confianca alta)
     void*& DiscordStatusField() const
     { return BrzCampoAncorado<void*>(this, "Discord", 8); }
     float& ForceFeedbackScaleField() const

@@ -162,7 +162,7 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Climb.ClimbTrace(FHitResult&,unsignedchar,UE::Math::TVector<double>,ECollisionCha
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=9825+bytes40+chamadores=2+grafo=117/117]]
     bool ClimbTrace(void* a0, unsigned char a1, void* a2, int a3) const
     {
         return NativeCall<bool, void*, unsigned char, void*, int>(this, "AShooterWeapon_Climb.ClimbTrace(FHitResult&,unsignedchar,UE::Math::TVector<double>,ECollisionChannel)", a0, a1, a2, a3);
@@ -517,8 +517,8 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
     BrzCampoPonteiro ClimbingAnchorPositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Climb.ClimbingAnchorPosition")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClimbingAnchorNormal` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1178; confianca alta)
+    //  ancorado em `ClimbingAnchorNormal` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1178; confianca alta)
     TWeakObjectPtr<void>& ClimbingAttachedActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "ClimbingAnchorNormal", 24); }
     BrzCampoPonteiro ClimbingDirectionField() const
@@ -550,8 +550,8 @@ struct AShooterWeapon_Climb : public AShooterWeapon_Melee
     UAnimSequence*& InventoryRightClimbHangAnimationField() const
     { return *GetNativePointerField<UAnimSequence**>(this, "AShooterWeapon_Climb.InventoryRightClimbHangAnimation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClimbingLastAttachedStartedTime` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1854; confianca alta)
+    //  ancorado em `ClimbingLastAttachedStartedTime` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1854; confianca alta)
     float& LastDistanceField() const
     { return BrzCampoAncorado<float>(this, "ClimbingLastAttachedStartedTime", 12); }
     BrzCampoPonteiro LeftClimbImpactEffectsField() const

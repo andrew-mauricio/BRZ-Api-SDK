@@ -41,7 +41,7 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_MeleeLock.DealDamage(FHitResult&,UE::Math::TVector<double>&,int,TSubclassOf<UDama
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DealDamage(void* a0, void* a1, int a2, void* a3, float a4) const
     {
         NativeCall<void, void*, void*, int, void*, float>(this, "AShooterWeapon_MeleeLock.DealDamage(FHitResult&,UE::Math::TVector<double>&,int,TSubclassOf<UDamageType>,float)", a0, a1, a2, a3, a4);
@@ -114,8 +114,8 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
     unsigned char& DamageCurveField() const
     { return *GetNativePointerField<unsigned char*>(this, "AShooterWeapon_MeleeLock.DamageCurve"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1204; confianca alta)
+    //  ancorado em `MaxPowerThreshold` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1204; confianca alta)
     float& GetPullRangeField() const
     { return BrzCampoAncorado<float>(this, "MaxPowerThreshold", 16); }
     BrzCampoPonteiro HitThisAttackField() const
@@ -123,15 +123,15 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
     double& LastAttackTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterWeapon_MeleeLock.LastAttackTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x11F8; confianca alta)
+    //  ancorado em `MaxPowerThreshold` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11F8; confianca alta)
     TWeakObjectPtr<void>& LastHitActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "MaxPowerThreshold", 4); }
     double& LastHitTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterWeapon_MeleeLock.LastHitTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x1208; confianca alta)
+    //  ancorado em `MaxPowerThreshold` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1208; confianca alta)
     float& LastSentLockValueField() const
     { return BrzCampoAncorado<float>(this, "MaxPowerThreshold", 20); }
     float& LockDecayValueField() const
@@ -151,8 +151,8 @@ struct AShooterWeapon_MeleeLock : public AShooterWeapon_Melee
     float& MaxDamageMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_MeleeLock.MaxDamageMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPowerThreshold` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1200; confianca alta)
+    //  ancorado em `MaxPowerThreshold` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1200; confianca alta)
     float& MaxLockAngleCosField() const
     { return BrzCampoAncorado<float>(this, "MaxPowerThreshold", 12); }
     float& MaxLockTimeField() const

@@ -58,8 +58,8 @@ struct UPrimalShipAnimInstance
     BrzCampoPonteiro CurrentSkeletonField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipAnimInstance.CurrentSkeleton")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalShipOwner` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3D0; confianca alta)
+    //  ancorado em `PrimalShipOwner` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3D0; confianca alta)
     void*& DayCycleManagerField() const
     { return BrzCampoAncorado<void*>(this, "PrimalShipOwner", 8); }
     BrzCampoPonteiro NotifyQueueField() const

@@ -284,20 +284,20 @@ struct APrimalCinematicActor
     TObjectPtr<USceneComponent>& RootComponentField() const
     { return *GetNativePointerField<TObjectPtr<USceneComponent>*>(this, "APrimalCinematicActor.RootComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FetchedLevelSequence` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1E70; confianca alta)
+    //  ancorado em `FetchedLevelSequence` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E70; confianca alta)
     void*& SavedFogShowFlagField() const
     { return BrzCampoAncorado<void*>(this, "FetchedLevelSequence", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FetchedLevelSequence` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x1E74; confianca alta)
+    //  ancorado em `FetchedLevelSequence` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E74; confianca alta)
     void*& SavedFogShowFlagViewportClientField() const
     { return BrzCampoAncorado<void*>(this, "FetchedLevelSequence", 20); }
     BrzCampoPonteiro SavedSelectionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCinematicActor.SavedSelections")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FetchedLevelSequence` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1E6C; confianca alta)
+    //  ancorado em `FetchedLevelSequence` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E6C; confianca alta)
     void*& SavedSeparateTranslucencyField() const
     { return BrzCampoAncorado<void*>(this, "FetchedLevelSequence", 12); }
     BrzCampoPonteiro SettingsField() const
@@ -395,8 +395,8 @@ struct APrimalCinematicActor
     BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCinematicActor.bFindCameraComponentWhenViewTarget")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FetchedLevelSequence` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1E68; confianca alta)
+    //  ancorado em `FetchedLevelSequence` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E68; confianca alta)
     void*& bFirstTickField() const
     { return BrzCampoAncorado<void*>(this, "FetchedLevelSequence", 8); }
     BrzCampoPonteiro bForceAllowNetMulticastField() const
@@ -514,8 +514,8 @@ struct APrimalCinematicActor
     BrzCampoPonteiro bSavedWhenStasisedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCinematicActor.bSavedWhenStasised")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FetchedLevelSequence` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1E78; confianca alta)
+    //  ancorado em `FetchedLevelSequence` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E78; confianca alta)
     void*& bSequenceEndedAllPlayField() const
     { return BrzCampoAncorado<void*>(this, "FetchedLevelSequence", 24); }
     BrzCampoPonteiro bSolidWhenSelectedField() const

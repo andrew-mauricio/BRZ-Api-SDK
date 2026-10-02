@@ -648,8 +648,8 @@ struct APlayerCameraManager
     BrzCampoPonteiro CameraLensEffectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.CameraLensEffects")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TransformComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4A0; confianca alta)
+    //  ancorado em `TransformComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A0; confianca alta)
     void*& CameraStyleField() const
     { return BrzCampoAncorado<void*>(this, "TransformComponent", 8); }
     TArray<void*>& ChildrenField() const
@@ -687,18 +687,18 @@ struct APlayerCameraManager
     unsigned char& DesiredRepGraphBehaviorField() const
     { return *GetNativePointerField<unsigned char*>(this, "APlayerCameraManager.DesiredRepGraphBehavior"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAudioFadeChangeEvent` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2BA8; confianca alta)
+    //  ancorado em `OnAudioFadeChangeEvent` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2BA8; confianca alta)
     void*& FadeAlphaField() const
     { return BrzCampoAncorado<void*>(this, "OnAudioFadeChangeEvent", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAudioFadeChangeEvent` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2BB8; confianca alta)
+    //  ancorado em `OnAudioFadeChangeEvent` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2BB8; confianca alta)
     void*& FadeTimeField() const
     { return BrzCampoAncorado<void*>(this, "OnAudioFadeChangeEvent", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnAudioFadeChangeEvent` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x2BBC; confianca media)
+    //  ancorado em `OnAudioFadeChangeEvent` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2BBC; confianca media)
     void*& FadeTimeRemainingField() const
     { return BrzCampoAncorado<void*>(this, "OnAudioFadeChangeEvent", 36); }
     double& ForceMaximumReplicationRateUntilTimeField() const
@@ -738,13 +738,13 @@ struct APlayerCameraManager
     TArray<void*>& LayersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APlayerCameraManager.Layers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultFOV` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x4AC; confianca alta)
+    //  ancorado em `DefaultFOV` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4AC; confianca alta)
     void*& LockedFOVField() const
     { return BrzCampoAncorado<void*>(this, "DefaultFOV", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultOrthoWidth` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x4B4; confianca alta)
+    //  ancorado em `DefaultOrthoWidth` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4B4; confianca alta)
     void*& LockedOrthoWidthField() const
     { return BrzCampoAncorado<void*>(this, "DefaultOrthoWidth", 4); }
     float& MinNetUpdateFrequencyField() const
@@ -820,13 +820,13 @@ struct APlayerCameraManager
     BrzCampoPonteiro PostProcessBlendCacheField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerCameraManager.PostProcessBlendCache")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostProcessBlendCache` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2C38; confianca alta)
+    //  ancorado em `PostProcessBlendCache` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C38; confianca alta)
     void*& PostProcessBlendCacheOrdersField() const
     { return BrzCampoAncorado<void*>(this, "PostProcessBlendCache", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostProcessBlendCache` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2C28; confianca alta)
+    //  ancorado em `PostProcessBlendCache` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C28; confianca alta)
     void*& PostProcessBlendCacheWeightsField() const
     { return BrzCampoAncorado<void*>(this, "PostProcessBlendCache", 16); }
     FActorTickFunction& PrimaryActorTickField() const
@@ -854,8 +854,8 @@ struct APlayerCameraManager
     TArray<TWeakObjectPtr<void>>& StasisUnRegisteredComponentsField() const
     { return *GetNativePointerField<TArray<TWeakObjectPtr<void>>*>(this, "APlayerCameraManager.StasisUnRegisteredComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerUpdateCameraTimeout` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2CA0; confianca alta)
+    //  ancorado em `ServerUpdateCameraTimeout` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2CA0; confianca alta)
     void*& SwapPendingViewTargetWhenUsingClientSideCameraUpdatesTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "ServerUpdateCameraTimeout", 8); }
     float& TPVCameraCollisionHeightScalerField() const
@@ -867,8 +867,8 @@ struct APlayerCameraManager
     int& TargetingTeamField() const
     { return *GetNativePointerField<int*>(this, "APlayerCameraManager.TargetingTeam"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ViewRollMax` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2C94; confianca alta)
+    //  ancorado em `ViewRollMax` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C94; confianca alta)
     void*& TimeSinceLastServerUpdateCameraField() const
     { return BrzCampoAncorado<void*>(this, "ViewRollMax", 4); }
     TObjectPtr<USceneComponent>& TransformComponentField() const

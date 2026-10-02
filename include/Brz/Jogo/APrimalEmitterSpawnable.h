@@ -60,7 +60,7 @@ struct APrimalEmitterSpawnable : public AActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalEmitterSpawnable.Deactivate()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=762+grafo=4/4]]
     BrzPonteiro Deactivate() const
     {
         return NativeCall<void*>(this, "APrimalEmitterSpawnable.Deactivate()");
@@ -262,8 +262,8 @@ struct APrimalEmitterSpawnable : public AActor
     BrzCampoPonteiro bUseBPCustomApplyColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalEmitterSpawnable.bUseBPCustomApplyColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ColorParameter` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x55C; confianca alta)
+    //  ancorado em `ColorParameter` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x55C; confianca alta)
     void*& bUseNiagaraComponentField() const
     { return BrzCampoAncorado<void*>(this, "ColorParameter", 16); }
     BrzCampoPonteiro bUseNiagaraDestroyOnSystemFinishField() const

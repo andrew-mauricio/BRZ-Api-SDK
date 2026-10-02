@@ -73,7 +73,7 @@ struct UPrimalUserWidget
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalUserWidget.GetOverrideHighligteableWidgetBP()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetOverrideHighligteableWidgetBP() const
     {
         return NativeCall<void*>(this, "UPrimalUserWidget.GetOverrideHighligteableWidgetBP()");

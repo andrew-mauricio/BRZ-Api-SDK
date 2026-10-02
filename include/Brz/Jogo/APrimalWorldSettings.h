@@ -54,11 +54,10 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWorldSettings.AddReferencedObjects(UObject*,FReferenceCollector&)
-    // classe: a funcao mora em AActor, e APrimalWorldSettings herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void AddReferencedObjects(void* a0, void* a1)
     {
-        NativeCall<void, void*, void*>(nullptr, "AActor.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
+        NativeCall<void, void*, void*>(nullptr, "APrimalWorldSettings.AddReferencedObjects(UObject*,FReferenceCollector&)", a0, a1);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -318,25 +317,25 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
     float& DinosLerpToMaxRandomBaseLevelField() const
     { return *GetNativePointerField<float*>(this, "APrimalWorldSettings.DinosLerpToMaxRandomBaseLevel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +336, medido na build 25535041
-    //  (offset absoluto medido: 0x2260; confianca baixa)
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +336 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2260; confianca baixa)
     TArray<APrimalBuff*>& DisableFootstepParticlesBuffsField() const
     { return BrzCampoAncorado<TArray<APrimalBuff*>>(this, "NonPlayerFacingMissionsMetaData", 336); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatTeleportLocations` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x1DD8; confianca media)
+    //  ancorado em `CheatTeleportLocations` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1DD8; confianca media)
     void*& DynamicExclusionRegionsField() const
     { return BrzCampoAncorado<void*>(this, "CheatTeleportLocations", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatTeleportLocations` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x1DE8; confianca media)
+    //  ancorado em `CheatTeleportLocations` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1DE8; confianca media)
     void*& DynamicNoBuildRegionsField() const
     { return BrzCampoAncorado<void*>(this, "CheatTeleportLocations", 112); }
     TArray<UObject*>& DynamicResourceRefsField() const
     { return *GetNativePointerField<TArray<UObject*>*>(this, "APrimalWorldSettings.DynamicResourceRefs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatTeleportLocations` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x1DC8; confianca media)
+    //  ancorado em `CheatTeleportLocations` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1DC8; confianca media)
     TArray<void*>& DynamicUndermeshRegionsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "CheatTeleportLocations", 80); }
     BrzCampoPonteiro EventNameToActiveEventOverrideObjectField() const
@@ -392,18 +391,18 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
     float& HerbivoreNaturalTargetingRangeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "APrimalWorldSettings.HerbivoreNaturalTargetingRangeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x2168; confianca media)
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2168; confianca media)
     void*& HumanFemaleAnimMontageOverridesField() const
     { return BrzCampoAncorado<void*>(this, "NonPlayerFacingMissionsMetaData", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +248, medido na build 25535041
-    //  (offset absoluto medido: 0x2208; confianca baixa)
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +248 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2208; confianca baixa)
     void*& HumanMaleAnimMontageOverridesField() const
     { return BrzCampoAncorado<void*>(this, "NonPlayerFacingMissionsMetaData", 248); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NonPlayerFacingMissionsMetaData` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x21B8; confianca baixa)
+    //  ancorado em `NonPlayerFacingMissionsMetaData` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x21B8; confianca baixa)
     void*& HumanMaleAnimSequenceOverridesField() const
     { return BrzCampoAncorado<void*>(this, "NonPlayerFacingMissionsMetaData", 168); }
     int& IntroExplorerNoteIDField() const
@@ -603,13 +602,13 @@ struct APrimalWorldSettings : public AARKNXWorldSettings
     BrzCampoPonteiro bAllowStartMissionsFromAnywhereField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWorldSettings.bAllowStartMissionsFromAnywhere")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MatineeManager` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x1D18; confianca media)
+    //  ancorado em `MatineeManager` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D18; confianca media)
     void*& bAssignedUnderwaterReverbField() const
     { return BrzCampoAncorado<void*>(this, "MatineeManager", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GlobalDinoCountValue` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2270; confianca alta)
+    //  ancorado em `GlobalDinoCountValue` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2270; confianca alta)
     void*& bDidPreGameplaySetupField() const
     { return BrzCampoAncorado<void*>(this, "GlobalDinoCountValue", 8); }
     BrzCampoPonteiro bDisableAllASAFluidSimField() const

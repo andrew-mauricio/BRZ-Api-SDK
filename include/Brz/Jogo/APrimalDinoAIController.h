@@ -78,7 +78,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPForceTargetDinoRider(AShooterCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool BPForceTargetDinoRider(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalDinoAIController.BPForceTargetDinoRider(AShooterCharacter*)", a0);
@@ -142,7 +142,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.BPSetupFindTarget()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=45+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BPSetupFindTarget() const
     {
         NativeCall<void>(this, "APrimalDinoAIController.BPSetupFindTarget()");
@@ -262,7 +262,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalDinoAIController.GetAggroDesirability(AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float GetAggroDesirability(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalDinoAIController.GetAggroDesirability(AActor*)", a0);
@@ -286,7 +286,7 @@ struct APrimalDinoAIController : public AAIController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalDinoAIController.GetAggroLastHitTime(AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float GetAggroLastHitTime(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalDinoAIController.GetAggroLastHitTime(AActor*)", a0);
@@ -782,18 +782,18 @@ struct APrimalDinoAIController : public AAIController
     float& AboveDeltaZAttackRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.AboveDeltaZAttackRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x8F0; confianca alta)
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8F0; confianca alta)
     float& AccumulatedBehaviorDeltaField() const
     { return BrzCampoAncorado<float>(this, "LastForcedAttackEnemyTeamTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x8F4; confianca alta)
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8F4; confianca alta)
     int& AccumulatedBehaviorFrameCountField() const
     { return BrzCampoAncorado<int>(this, "LastForcedAttackEnemyTeamTime", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bWildUseDeltaZTargetingForFlyerPawnOrBigDino` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6C8; confianca alta)
+    //  ancorado em `bWildUseDeltaZTargetingForFlyerPawnOrBigDino` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C8; confianca alta)
     TArray<void*>& AggroEntriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bWildUseDeltaZTargetingForFlyerPawnOrBigDino", 4); }
     float& AggroFactorDamagePercentageMultiplierField() const
@@ -839,18 +839,18 @@ struct APrimalDinoAIController : public AAIController
     float& BeyondTargetingRangeAggroAdditionField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.BeyondTargetingRangeAggroAddition"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x978; confianca alta)
+    //  ancorado em `ForcedMoveToUntilTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x978; confianca alta)
     void*& CachedWanderDestinationField() const
     { return BrzCampoAncorado<void*>(this, "ForcedMoveToUntilTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x990; confianca media)
+    //  ancorado em `ForcedMoveToUntilTime` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x990; confianca media)
     void*& CachedWanderFromLocationField() const
     { return BrzCampoAncorado<void*>(this, "ForcedMoveToUntilTime", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x9A8; confianca media)
+    //  ancorado em `ForcedMoveToUntilTime` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9A8; confianca media)
     void*& CachedWanderTimeField() const
     { return BrzCampoAncorado<void*>(this, "ForcedMoveToUntilTime", 64); }
     float& CombatFlyingCorpseTargetingZOffsetField() const
@@ -936,8 +936,8 @@ struct APrimalDinoAIController : public AAIController
     float& LastBlockadeWidthField() const
     { return *GetNativePointerField<float*>(this, "APrimalDinoAIController.LastBlockadeWidth"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x8F8; confianca alta)
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8F8; confianca alta)
     int& LastCharacterTargetTeamField() const
     { return BrzCampoAncorado<int>(this, "LastForcedAttackEnemyTeamTime", 24); }
     BrzCampoPonteiro LastCheckAttackRangeClosestPointField() const
@@ -951,8 +951,8 @@ struct APrimalDinoAIController : public AAIController
     double& LastExecutedAttackTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalDinoAIController.LastExecutedAttackTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFleeLocCheckTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x938; confianca alta)
+    //  ancorado em `LastFleeLocCheckTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x938; confianca alta)
     void*& LastFleeLocCheckField() const
     { return BrzCampoAncorado<void*>(this, "LastFleeLocCheckTime", 8); }
     double& LastFleeLocCheckTimeField() const
@@ -962,8 +962,8 @@ struct APrimalDinoAIController : public AAIController
     double& LastForcedFleeTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalDinoAIController.LastForcedFleeTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedMoveToUntilTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x970; confianca alta)
+    //  ancorado em `ForcedMoveToUntilTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x970; confianca alta)
     double& LastHadAggroEntriesTimeField() const
     { return BrzCampoAncorado<double>(this, "ForcedMoveToUntilTime", 8); }
     AActor*& LastMovingAroundBlockadeActorField() const
@@ -1003,8 +1003,8 @@ struct APrimalDinoAIController : public AAIController
     int& NumAlliesToAttackField() const
     { return *GetNativePointerField<int*>(this, "APrimalDinoAIController.NumAlliesToAttack"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastForcedAttackEnemyTeamTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x8E8; confianca alta)
+    //  ancorado em `LastForcedAttackEnemyTeamTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8E8; confianca alta)
     TWeakObjectPtr<void>& PawnPersistentReferenceField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "LastForcedAttackEnemyTeamTime", 8); }
     float& PercentageTorporForFleeingField() const

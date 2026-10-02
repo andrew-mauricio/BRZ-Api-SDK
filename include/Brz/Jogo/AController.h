@@ -427,15 +427,15 @@ struct AController : public AActor
     BrzCampoPonteiro ControlRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AController.ControlRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Pawn` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4D8; confianca alta)
+    //  ancorado em `Pawn` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D8; confianca alta)
     TWeakObjectPtr<void>& OldPawnField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "Pawn", 8); }
     BrzCampoPonteiro OnInstigatedAnyDamageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AController.OnInstigatedAnyDamage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TransformComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4F0; confianca alta)
+    //  ancorado em `TransformComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F0; confianca alta)
     void*& OnNewPawnField() const
     { return BrzCampoAncorado<void*>(this, "TransformComponent", 8); }
     BrzCampoPonteiro OnPossessedPawnChangedField() const
@@ -445,8 +445,8 @@ struct AController : public AActor
     TObjectPtr<APlayerState>& PlayerStateField() const
     { return *GetNativePointerField<TObjectPtr<APlayerState>*>(this, "AController.PlayerState"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerState` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4A0; confianca alta)
+    //  ancorado em `PlayerState` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A0; confianca alta)
     TWeakObjectPtr<void>& StartSpotField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "PlayerState", 8); }
     FName& StateNameField() const

@@ -131,15 +131,15 @@ struct ABasePrimalWorldSettings : public AInfo
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableSplitscreen` +486, medido na build 25535041
-    //  (offset absoluto medido: 0x6C8; confianca baixa)
+    //  ancorado em `bDisableSplitscreen` +486 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C8; confianca baixa)
     void*& AtomicActorUnstasisListCountField() const
     { return BrzCampoAncorado<void*>(this, "bDisableSplitscreen", 486); }
     float& BaseNetStasisDistanceField() const
     { return *GetNativePointerField<float*>(this, "ABasePrimalWorldSettings.BaseNetStasisDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableSplitscreen` +510, medido na build 25535041
-    //  (offset absoluto medido: 0x6E0; confianca baixa)
+    //  ancorado em `bDisableSplitscreen` +510 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6E0; confianca baixa)
     void*& CurrentUnStasisedIndexField() const
     { return BrzCampoAncorado<void*>(this, "bDisableSplitscreen", 510); }
     TObjectPtr<APostProcessVolume>& GlobalPostProcessVolumeField() const
@@ -155,13 +155,13 @@ struct ABasePrimalWorldSettings : public AInfo
     BrzCampoPonteiro PlatformGrassQualitiesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePrimalWorldSettings.PlatformGrassQualities")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BaseNetStasisDistance` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6E8; confianca alta)
+    //  ancorado em `BaseNetStasisDistance` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6E8; confianca alta)
     void*& PlayerCharacterUnstasisViewpointTimestampsField() const
     { return BrzCampoAncorado<void*>(this, "BaseNetStasisDistance", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDisableSplitscreen` +494, medido na build 25535041
-    //  (offset absoluto medido: 0x6D0; confianca baixa)
+    //  ancorado em `bDisableSplitscreen` +494 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6D0; confianca baixa)
     TArray<TWeakObjectPtr<void>>& QuickTickUnstasisListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "bDisableSplitscreen", 494); }
     BrzCampoPonteiro StructureIDMapField() const

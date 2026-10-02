@@ -41,11 +41,10 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.ApplyPinCode(AShooterPlayerController*,int,bool,int)
-    // classe: a funcao mora em APrimalStructureItemContainer, e APrimalStructureTurret herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ApplyPinCode(void* a0, int a1, bool a2, int a3) const
     {
-        return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureItemContainer.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
+        return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureTurret.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -74,7 +73,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.CanFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanFire() const
     {
         return NativeCall<bool>(this, "APrimalStructureTurret.CanFire()");
@@ -98,7 +97,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.ConsumeAmmo()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ConsumeAmmo() const
     {
         NativeCall<void>(this, "APrimalStructureTurret.ConsumeAmmo()");
@@ -210,7 +209,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.GetSkeletalMeshComponent()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     USkeletalMeshComponent* GetSkeletalMeshComponent() const
     {
         return NativeCall<USkeletalMeshComponent*>(this, "APrimalStructureTurret.GetSkeletalMeshComponent()");
@@ -362,7 +361,7 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurret.UpdateNumBullets()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void UpdateNumBullets() const
     {
         NativeCall<void>(this, "APrimalStructureTurret.UpdateNumBullets()");
@@ -543,8 +542,8 @@ struct APrimalStructureTurret : public APrimalStructureItemContainer
     BrzCampoPonteiro bFireProjectilesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureTurret.bFireProjectiles")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MySkinSkeletalMeshComp` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1510; confianca alta)
+    //  ancorado em `MySkinSkeletalMeshComp` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1510; confianca alta)
     void*& bHasNearbyAmmoContainerField() const
     { return BrzCampoAncorado<void*>(this, "MySkinSkeletalMeshComp", 16); }
     BrzCampoPonteiro bHasOmniDirectionalFireField() const

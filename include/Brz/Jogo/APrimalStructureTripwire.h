@@ -71,7 +71,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.DisconnectMe_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DisconnectMe_Implementation() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.DisconnectMe_Implementation()");
@@ -119,7 +119,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.IsWireComponentValid()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsWireComponentValid() const
     {
         return NativeCall<bool>(this, "APrimalStructureTripwire.IsWireComponentValid()");
@@ -127,7 +127,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalStructureTripwire.Multicast_ConnectedTo(APrimalStructureTripwire*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=8]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=4]]
     void Multicast_ConnectedTo(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.Multicast_ConnectedTo(APrimalStructureTripwire*)", a0);
@@ -135,7 +135,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.Multicast_ConnectedTo_Implementation(APrimalStructureTripwire*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Multicast_ConnectedTo_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.Multicast_ConnectedTo_Implementation(APrimalStructureTripwire*)", a0);
@@ -143,7 +143,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.NetUpdateBoxName(FString&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=167+bytes40+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=167+bytes40+chamadores=2]]
     void NetUpdateBoxName(const FString& a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTripwire.NetUpdateBoxName(FString&)", const_cast<FString*>(&a0));
@@ -167,7 +167,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.OnRep_ConnectedTo()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ConnectedTo() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.OnRep_ConnectedTo()");
@@ -175,7 +175,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.OnRep_UnwiredTrap()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_UnwiredTrap() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.OnRep_UnwiredTrap()");
@@ -199,7 +199,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.PostInitProperties()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitProperties() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.PostInitProperties()");
@@ -227,7 +227,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.SetStaticMobility()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetStaticMobility() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.SetStaticMobility()");
@@ -235,7 +235,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.SetUnwiredTrap(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetUnwiredTrap(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureTripwire.SetUnwiredTrap(bool)", a0);
@@ -243,7 +243,7 @@ struct APrimalStructureTripwire : public APrimalStructureExplosive
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTripwire.ShowWireComponent()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ShowWireComponent() const
     {
         NativeCall<void>(this, "APrimalStructureTripwire.ShowWireComponent()");

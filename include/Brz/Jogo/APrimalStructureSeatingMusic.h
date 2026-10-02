@@ -54,7 +54,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.OnAltFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnAltFire() const
     {
         NativeCall<void>(this, "APrimalStructureSeatingMusic.OnAltFire()");
@@ -62,7 +62,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.OnPrimaryFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnPrimaryFire() const
     {
         NativeCall<void>(this, "APrimalStructureSeatingMusic.OnPrimaryFire()");
@@ -70,7 +70,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.OnUseKey(int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnUseKey(int a0) const
     {
         NativeCall<void, int>(this, "APrimalStructureSeatingMusic.OnUseKey(int)", a0);
@@ -78,7 +78,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.PostInitializeComponents()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APrimalStructureSeatingMusic.PostInitializeComponents()");
@@ -86,7 +86,7 @@ struct APrimalStructureSeatingMusic : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeatingMusic.Release(AShooterCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Release(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureSeatingMusic.Release(AShooterCharacter*)", a0);

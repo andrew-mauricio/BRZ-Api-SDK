@@ -35,7 +35,7 @@ struct UPrimalStaticData
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalStaticData.GetPrimalStaticData(TSubclassOf<UPrimalStaticData>)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=227+chamadores=6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=227+chamadores=5]]
     static BrzPonteiro GetPrimalStaticData(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UPrimalStaticData.GetPrimalStaticData(TSubclassOf<UPrimalStaticData>)", a0);

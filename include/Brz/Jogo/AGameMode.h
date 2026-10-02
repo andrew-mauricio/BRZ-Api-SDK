@@ -301,11 +301,10 @@ struct AGameMode : public AGameModeBase
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameMode.Tick(float)
-    // classe: a funcao mora em AActor, e AGameMode herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
-        NativeCall<void, float>(this, "AActor.Tick(float)", a0);
+        NativeCall<void, float>(this, "AGameMode.Tick(float)", a0);
     }
 
     BrzCampoPonteiro EngineMessageClassField() const

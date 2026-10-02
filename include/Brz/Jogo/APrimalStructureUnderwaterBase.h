@@ -53,7 +53,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.AreBasesOpenToEachOther(APrimalStructureUnderwaterBase*,int,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1386+bytes40+grafo=6/6]]
     bool AreBasesOpenToEachOther(void* a0, int a1, int a2) const
     {
         return NativeCall<bool, void*, int, int>(this, "APrimalStructureUnderwaterBase.AreBasesOpenToEachOther(APrimalStructureUnderwaterBase*,int,int)", a0, a1, a2);
@@ -61,7 +61,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.BeginPlay()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalStructureUnderwaterBase.BeginPlay()");
@@ -77,7 +77,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureUnderwaterBase.ChangedCompartmentFloodState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ChangedCompartmentFloodState() const
     {
         NativeCall<void>(this, "APrimalStructureUnderwaterBase.ChangedCompartmentFloodState()");
@@ -93,7 +93,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.DoSetPortholeState(int,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DoSetPortholeState(int a0, int a1) const
     {
         NativeCall<void, int, int>(this, "APrimalStructureUnderwaterBase.DoSetPortholeState(int,int)", a0, a1);
@@ -110,7 +110,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.GetLinkedBaseByPortholeIndex(int,int&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1094+bytes40+chamadores=3+grafo=6/6]]
     BrzPonteiro GetLinkedBaseByPortholeIndex(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "APrimalStructureUnderwaterBase.GetLinkedBaseByPortholeIndex(int,int&)", a0, a1);
@@ -126,7 +126,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureUnderwaterBase.IsInsideBase_Implementation(UE::Math::TVector<double>&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsInsideBase_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureUnderwaterBase.IsInsideBase_Implementation(UE::Math::TVector<double>&)", a0);
@@ -142,7 +142,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.OnRep_IsFrameHidden()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=199+bytes40+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void OnRep_IsFrameHidden() const
     {
         NativeCall<void>(this, "APrimalStructureUnderwaterBase.OnRep_IsFrameHidden()");
@@ -182,7 +182,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.SetPortholeState(int,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetPortholeState(int a0, int a1) const
     {
         NativeCall<void, int, int>(this, "APrimalStructureUnderwaterBase.SetPortholeState(int,int)", a0, a1);
@@ -190,7 +190,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // dump_sobre_sdk_287a0
     //   APrimalStructureUnderwaterBase.SetStructureCollisionChannels(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetStructureCollisionChannels(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureUnderwaterBase.SetStructureCollisionChannels(bool)", a0);
@@ -214,7 +214,7 @@ struct APrimalStructureUnderwaterBase : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureUnderwaterBase.UpdateFrameState(APlayerController*,bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void UpdateFrameState(void* a0, bool a1, bool a2) const
     {
         NativeCall<void, void*, bool, bool>(this, "APrimalStructureUnderwaterBase.UpdateFrameState(APlayerController*,bool,bool)", a0, a1, a2);

@@ -392,8 +392,8 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     UStaticMeshComponent*& ItemBalloonMarkerComponentField() const
     { return *GetNativePointerField<UStaticMeshComponent**>(this, "APrimalWeaponGPS.ItemBalloonMarkerComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerLocationMArkerComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x11E0; confianca alta)
+    //  ancorado em `PlayerLocationMArkerComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11E0; confianca alta)
     void*& LastPlayerMarkerLocationField() const
     { return BrzCampoAncorado<void*>(this, "PlayerLocationMArkerComponent", 8); }
     UMaterialInstanceDynamic*& LatitudeDigit1_MIField() const
@@ -431,8 +431,8 @@ struct APrimalWeaponGPS : public AShooterWeapon_Melee
     FName& MapAttachPoint3PField() const
     { return *GetNativePointerField<FName*>(this, "APrimalWeaponGPS.MapAttachPoint3P"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MarkerComponents` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x11C8; confianca alta)
+    //  ancorado em `MarkerComponents` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11C8; confianca alta)
     TArray<void*>& MapMarkersField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MarkerComponents", 16); }
     int& MapMaterialIndexField() const

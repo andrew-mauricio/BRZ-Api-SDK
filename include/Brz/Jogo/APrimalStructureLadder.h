@@ -84,7 +84,7 @@ struct APrimalStructureLadder : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureLadder.GetLadderClimbRotation(AShooterCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+bytes40+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+bytes40+chamadores=2]]
     BrzPonteiro GetLadderClimbRotation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureLadder.GetLadderClimbRotation(AShooterCharacter*)", a0);

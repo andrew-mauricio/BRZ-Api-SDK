@@ -38,7 +38,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.AllowPickupForItem(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowPickupForItem(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureSeating.AllowPickupForItem(AShooterPlayerController*)", a0);
@@ -94,7 +94,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.BotControl(APrimalBotCharacter*,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BotControl(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalStructureSeating.BotControl(APrimalBotCharacter*,int)", a0, a1);
@@ -102,7 +102,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.BotRelease(APrimalBotCharacter*,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro BotRelease(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalStructureSeating.BotRelease(APrimalBotCharacter*,int)", a0, a1);
@@ -134,7 +134,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.ClearSeats()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClearSeats() const
     {
         NativeCall<void>(this, "APrimalStructureSeating.ClearSeats()");
@@ -184,7 +184,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.GetHandsSocketsTransforms(UE::Math::TTransform<double>&,UE::Math::TTrans
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetHandsSocketsTransforms(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureSeating.GetHandsSocketsTransforms(UE::Math::TTransform<double>&,UE::Math::TTransform<double>&)", a0, a1);
@@ -192,7 +192,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocat
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=331+grafo=10/10]]
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureSeating.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -248,7 +248,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating.GetOrbitCamZoomParams(float&,float&,float&,float&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetOrbitCamZoomParams(void* a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, void*, void*, void*, void*>(this, "APrimalStructureSeating.GetOrbitCamZoomParams(float&,float&,float&,float&)", a0, a1, a2, a3);
@@ -288,7 +288,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureSeating.HasAvailableSeat()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasAvailableSeat() const
     {
         return NativeCall<bool>(this, "APrimalStructureSeating.HasAvailableSeat()");
@@ -312,7 +312,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.OnRep_CharacterPerSeat()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_CharacterPerSeat() const
     {
         NativeCall<void>(this, "APrimalStructureSeating.OnRep_CharacterPerSeat()");
@@ -320,7 +320,7 @@ struct APrimalStructureSeating : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSeating.OnRep_SeatedCharacter()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_SeatedCharacter() const
     {
         NativeCall<void>(this, "APrimalStructureSeating.OnRep_SeatedCharacter()");

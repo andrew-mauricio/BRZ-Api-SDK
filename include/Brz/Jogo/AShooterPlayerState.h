@@ -59,7 +59,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.AddToTribe(FTribeData&,bool,bool,bool,APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool AddToTribe(void* a0, bool a1, bool a2, bool a3, void* a4) const
     {
         return NativeCall<bool, void*, bool, bool, bool, void*>(this, "AShooterPlayerState.AddToTribe(FTribeData&,bool,bool,bool,APlayerController*)", a0, a1, a2, a3, a4);
@@ -123,7 +123,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ClearTribe(bool,bool,APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ClearTribe(bool a0, bool a1, void* a2) const
     {
         NativeCall<void, bool, bool, void*>(this, "AShooterPlayerState.ClearTribe(bool,bool,APlayerController*)", a0, a1, a2);
@@ -203,7 +203,7 @@ struct AShooterPlayerState : public APlayerState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerState.ClientReceiveSpawnPoints(TArray<FSpawnPointInfo,TSizedDefaultAllocator<32>>&
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=207+bytes40+chamadores=2]]
     BrzPonteiro ClientReceiveSpawnPoints(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerState.ClientReceiveSpawnPoints(TArray<FSpawnPointInfo,TSizedDefaultAllocator<32>>&)", a0);
@@ -243,7 +243,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ClientUpdateNewRallyPoint_Implementation(bool,FTeamPingData)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientUpdateNewRallyPoint_Implementation(bool a0, void* a1) const
     {
         NativeCall<void, bool, void*>(this, "AShooterPlayerState.ClientUpdateNewRallyPoint_Implementation(bool,FTeamPingData)", a0, a1);
@@ -483,7 +483,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.IsAllowedToCopySettings()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsAllowedToCopySettings() const
     {
         return NativeCall<bool>(this, "AShooterPlayerState.IsAllowedToCopySettings()");
@@ -491,7 +491,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsDinoClassInOrderGroup(int,TSubclassOf<APrimalDinoCharacter>)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsDinoClassInOrderGroup(int a0, void* a1) const
     {
         return NativeCall<bool, int, void*>(this, "AShooterPlayerState.IsDinoClassInOrderGroup(int,TSubclassOf<APrimalDinoCharacter>)", a0, a1);
@@ -547,7 +547,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.IsInTribeWar(int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsInTribeWar(int a0) const
     {
         return NativeCall<bool, int>(this, "AShooterPlayerState.IsInTribeWar(int)", a0);
@@ -595,7 +595,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.NotifyAllianceChanged_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NotifyAllianceChanged_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerState.NotifyAllianceChanged_Implementation()");
@@ -747,7 +747,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.PromoteToTribeAdmin(APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PromoteToTribeAdmin(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.PromoteToTribeAdmin(APlayerController*)", a0);
@@ -763,7 +763,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerState.RefreshNextAllowCopySettingsTime()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void RefreshNextAllowCopySettingsTime() const
     {
         NativeCall<void>(this, "AShooterPlayerState.RefreshNextAllowCopySettingsTime()");
@@ -835,7 +835,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerDeclareTribeWar_Implementation(int,int,int,float,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerDeclareTribeWar_Implementation(int a0, int a1, int a2, float a3, float a4) const
     {
         NativeCall<void, int, int, int, float, float>(this, "AShooterPlayerState.ServerDeclareTribeWar_Implementation(int,int,int,float,float)", a0, a1, a2, a3, a4);
@@ -875,7 +875,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerState.ServerDinoOrderGroup_Clear(int,bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=2]]
     void ServerDinoOrderGroup_Clear(int a0, bool a1, bool a2) const
     {
         NativeCall<void, int, bool, bool>(this, "AShooterPlayerState.ServerDinoOrderGroup_Clear(int,bool,bool)", a0, a1, a2);
@@ -1139,7 +1139,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestLeaveTribe_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestLeaveTribe_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerState.ServerRequestLeaveTribe_Implementation()");
@@ -1259,7 +1259,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.ServerRequestSetTribeGovernment_Implementation(FTribeGovernment)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestSetTribeGovernment_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.ServerRequestSetTribeGovernment_Implementation(FTribeGovernment)", a0);
@@ -1323,7 +1323,7 @@ struct AShooterPlayerState : public APlayerState
 
     // dump_sobre_sdk_287a0
     //   AShooterPlayerState.ServerSetDefaultItemSlotClass_Implementation(int,TSubclassOf<UPrimalItem>,bo
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetDefaultItemSlotClass_Implementation(int a0, void* a1, bool a2, unsigned long long a3) const
     {
         NativeCall<void, int, void*, bool, unsigned long long>(this, "AShooterPlayerState.ServerSetDefaultItemSlotClass_Implementation(int,TSubclassOf<UPrimalItem>,bool,FName)", a0, a1, a2, a3);
@@ -1475,7 +1475,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.SetTribeData(FTribeData&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetTribeData(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerState.SetTribeData(FTribeData&)", a0);
@@ -1515,7 +1515,7 @@ struct AShooterPlayerState : public APlayerState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerState.UpdatedPlayerData()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdatedPlayerData() const
     {
         NativeCall<void>(this, "AShooterPlayerState.UpdatedPlayerData()");
@@ -1540,18 +1540,18 @@ struct AShooterPlayerState : public APlayerState
     float& AllowedRespawnIntervalField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerState.AllowedRespawnInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x13C0; confianca media)
+    //  ancorado em `NextAllowTurretCopySettingsTime` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x13C0; confianca media)
     void*& CachedPlayerIPAddressField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x13B8; confianca media)
+    //  ancorado em `NextAllowTurretCopySettingsTime` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x13B8; confianca media)
     void*& CachedPlayerPlatformField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1388; confianca alta)
+    //  ancorado em `NextAllowTurretCopySettingsTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1388; confianca alta)
     void*& CachedPlayerUniqueNetIdField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 24); }
     TArray<void*>& CachedSpawnPointInfosField() const
@@ -1577,8 +1577,8 @@ struct AShooterPlayerState : public APlayerState
     unsigned int& HashedUniqueIDField() const
     { return *GetNativePointerField<unsigned int*>(this, "AShooterPlayerState.HashedUniqueID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1380; confianca alta)
+    //  ancorado em `NextAllowTurretCopySettingsTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1380; confianca alta)
     void*& LastChangedPlayerDataTimeField() const
     { return BrzCampoAncorado<void*>(this, "NextAllowTurretCopySettingsTime", 16); }
     double& LastTimeDiedToEnemyTeamField() const
@@ -1586,8 +1586,8 @@ struct AShooterPlayerState : public APlayerState
     BrzCampoPonteiro LastTribeInviteDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerState.LastTribeInviteData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextAllowTurretCopySettingsTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1378; confianca alta)
+    //  ancorado em `NextAllowTurretCopySettingsTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1378; confianca alta)
     double& LastTribeRequestTimeField() const
     { return BrzCampoAncorado<double>(this, "NextAllowTurretCopySettingsTime", 8); }
     UPrimalPlayerData*& MyPlayerDataField() const
@@ -1601,33 +1601,33 @@ struct AShooterPlayerState : public APlayerState
     double& NextAllowedRespawnTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerState.NextAllowedRespawnTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +504, medido na build 25535041
-    //  (offset absoluto medido: 0x10D0; confianca baixa)
+    //  ancorado em `LastTribeInviteData` +504 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10D0; confianca baixa)
     void*& OnClientAdminInfoPlayerAdministratorRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 504); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +488, medido na build 25535041
-    //  (offset absoluto medido: 0x10C0; confianca baixa)
+    //  ancorado em `LastTribeInviteData` +488 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C0; confianca baixa)
     void*& OnClientAdminInfoPlayerBannedRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 488); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +456, medido na build 25535041
-    //  (offset absoluto medido: 0x10A0; confianca baixa)
+    //  ancorado em `LastTribeInviteData` +456 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10A0; confianca baixa)
     void*& OnClientAdminInfoPlayerConnectedRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 456); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTribeInviteData` +472, medido na build 25535041
-    //  (offset absoluto medido: 0x10B0; confianca baixa)
+    //  ancorado em `LastTribeInviteData` +472 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10B0; confianca baixa)
     void*& OnClientServerOptionsInfoRecivedField() const
     { return BrzCampoAncorado<void*>(this, "LastTribeInviteData", 472); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultItemSlotSkills` +84, medido na build 25535041
-    //  (offset absoluto medido: 0xD00; confianca media)
+    //  ancorado em `DefaultItemSlotSkills` +84 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD00; confianca media)
     void*& OwnedDLCsField() const
     { return BrzCampoAncorado<void*>(this, "DefaultItemSlotSkills", 84); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EngramItemBlueprints` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1118; confianca alta)
+    //  ancorado em `EngramItemBlueprints` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1118; confianca alta)
     void*& ServerEngramItemBlueprintsSetField() const
     { return BrzCampoAncorado<void*>(this, "EngramItemBlueprints", 16); }
     int& TotalEngramPointsField() const

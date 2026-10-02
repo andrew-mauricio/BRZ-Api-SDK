@@ -48,7 +48,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.AddAttachments(AActor*,bool,USkeletalMeshComponent*,bool,bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [chamadores=12+grafo=263/264]]
     void AddAttachments(void* a0, bool a1, void* a2, bool a3, bool a4, bool a5) const
     {
         NativeCall<void, void*, bool, void*, bool, bool, bool>(this, "UPrimalItem.AddAttachments(AActor*,bool,USkeletalMeshComponent*,bool,bool,bool)", a0, a1, a2, a3, a4, a5);
@@ -96,7 +96,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.AddToInventory(UPrimalInventoryComponent*,bool,bool,FItemNetID*,bool,bool,bool,bool,
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddToInventory(void* a0, bool a1, bool a2, void* a3, bool a4, bool a5, bool a6, bool a7, bool a8, bool a9) const
     {
         NativeCall<void, void*, bool, bool, void*, bool, bool, bool, bool, bool, bool>(this, "UPrimalItem.AddToInventory(UPrimalInventoryComponent*,bool,bool,FItemNetID*,bool,bool,bool,bool,bool,bool)", a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
@@ -184,7 +184,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.ApplyColorsFromStructure(APrimalStructure*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ApplyColorsFromStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.ApplyColorsFromStructure(APrimalStructure*)", a0);
@@ -192,7 +192,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.ApplyCustomCosmeticBuff()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ApplyCustomCosmeticBuff() const
     {
         return NativeCall<void*>(this, "UPrimalItem.ApplyCustomCosmeticBuff()");
@@ -340,7 +340,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetCropTendingWindowBeforeLosingEffectiveness()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float BPGetCropTendingWindowBeforeLosingEffectiveness() const
     {
         return NativeCall<float>(this, "UPrimalItem.BPGetCropTendingWindowBeforeLosingEffectiveness()");
@@ -416,7 +416,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.BPGetItemDurabilityPercentage()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=62+chamadores=3]]
     float BPGetItemDurabilityPercentage() const
     {
         return NativeCall<float>(this, "UPrimalItem.BPGetItemDurabilityPercentage()");
@@ -576,7 +576,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BPNotifyDropped(APrimalCharacter*,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BPNotifyDropped(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "UPrimalItem.BPNotifyDropped(APrimalCharacter*,bool)", a0, a1);
@@ -608,7 +608,7 @@ struct UPrimalItem : public UObject
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   UPrimalItem.BPOnItemAddedToInventory(UPrimalInventoryComponent*,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BPOnItemAddedToInventory(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "UPrimalItem.BPOnItemAddedToInventory(UPrimalInventoryComponent*,bool)", a0, a1);
@@ -928,11 +928,10 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.BeginDestroy()
-    // classe: a funcao mora em UObject, e UPrimalItem herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BeginDestroy() const
     {
-        NativeCall<void>(this, "UObject.BeginDestroy()");
+        NativeCall<void>(this, "UPrimalItem.BeginDestroy()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -2153,7 +2152,7 @@ struct UPrimalItem : public UObject
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalItem.GetUnderwearOverrideTag()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=145+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     unsigned long long GetUnderwearOverrideTag() const
     {
         return NativeCall<unsigned long long>(this, "UPrimalItem.GetUnderwearOverrideTag()");
@@ -2161,7 +2160,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetUnreplicatedEggData(FUnreplicatedEggData&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1740+bytes40+chamadores=2+grafo=3/3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1740+bytes40+grafo=3/3]]
     void GetUnreplicatedEggData(void* a0) const
     {
         NativeCall<void, void*>(this, "UPrimalItem.GetUnreplicatedEggData(FUnreplicatedEggData&)", a0);
@@ -2193,7 +2192,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.GetWorld()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UWorld* GetWorld() const
     {
         return NativeCall<UWorld*>(this, "UPrimalItem.GetWorld()");
@@ -2321,7 +2320,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.InventoryRefreshCheckItem()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InventoryRefreshCheckItem() const
     {
         NativeCall<void>(this, "UPrimalItem.InventoryRefreshCheckItem()");
@@ -2461,7 +2460,7 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.IsUnlockedCosmetic()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=188+chamadores=18]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=188+chamadores=17]]
     BrzPonteiro IsUnlockedCosmetic() const
     {
         return NativeCall<void*>(this, "UPrimalItem.IsUnlockedCosmetic()");
@@ -2653,11 +2652,10 @@ struct UPrimalItem : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalItem.PostInitProperties()
-    // classe: a funcao mora em UObject, e UPrimalItem herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PostInitProperties() const
     {
-        return NativeCall<void*>(this, "UObject.PostInitProperties()");
+        return NativeCall<void*>(this, "UPrimalItem.PostInitProperties()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -3154,7 +3152,7 @@ struct UPrimalItem : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalItem.Use(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void Use(bool a0) const
     {
         NativeCall<void, bool>(this, "UPrimalItem.Use(bool)", a0);
@@ -3300,15 +3298,15 @@ struct UPrimalItem : public UObject
     TArray<void*>& CachedStructuresToBuildField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.CachedStructuresToBuild"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSpoilingTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x9A0; confianca alta)
+    //  ancorado em `LastSpoilingTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9A0; confianca alta)
     double& ClusterSpoilingTimeUTCField() const
     { return BrzCampoAncorado<double>(this, "LastSpoilingTime", 8); }
     BrzCampoPonteiro CostumeDinoSaddleOverrideMeshMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.CostumeDinoSaddleOverrideMeshMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyItemTraits` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3E0; confianca alta)
+    //  ancorado em `MyItemTraits` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3E0; confianca alta)
     void*& CostumeDinoSaddleOverrideRefsField() const
     { return BrzCampoAncorado<void*>(this, "MyItemTraits", 16); }
     unsigned short& CraftQueueField() const
@@ -3324,8 +3322,8 @@ struct UPrimalItem : public UObject
     TArray<void*>& CraftingRequiresInventoryComponentField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.CraftingRequiresInventoryComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WheelItemsAmmo` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x330; confianca alta)
+    //  ancorado em `WheelItemsAmmo` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x330; confianca alta)
     TArray<void*>& CraftingResourceRequirementsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "WheelItemsAmmo", 16); }
     float& CraftingSkillField() const
@@ -3387,8 +3385,8 @@ struct UPrimalItem : public UObject
     FString& DurabilityStringShortField() const
     { return *GetNativePointerField<FString*>(this, "UPrimalItem.DurabilityStringShort"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActorClassAttachmentInfos` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x240; confianca alta)
+    //  ancorado em `ActorClassAttachmentInfos` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x240; confianca alta)
     TArray<void*>& DynamicItemAttachmentInfosField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "ActorClassAttachmentInfos", 24); }
     float& EggAlertDinosAggroRadiusField() const
@@ -3426,8 +3424,8 @@ struct UPrimalItem : public UObject
     float& EggTamedIneffectivenessModifierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalItem.EggTamedIneffectivenessModifier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticAuthVars` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x798; confianca media)
+    //  ancorado em `CustomCosmeticAuthVars` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x798; confianca media)
     void*& EquipAnimationTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticAuthVars", 88); }
     TArray<void*>& EquipRequiresExplicitOwnerClassesField() const
@@ -3443,30 +3441,30 @@ struct UPrimalItem : public UObject
     float& ExtraEggLoseDurabilityPerSecondMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalItem.ExtraEggLoseDurabilityPerSecondMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x8D8; confianca alta)
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8D8; confianca alta)
     UTexture2D*& FPVHandsMeshTextureMaskField() const
     { return BrzCampoAncorado<UTexture2D*>(this, "BlueprintBackgroundOverrideTexture", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +20, medido na build 25535041
-    //  (offset absoluto medido: 0xA74; confianca alta)
+    //  ancorado em `StructureToBuildIndex` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA74; confianca alta)
     int& FPVHandsMeshTextureMaskMaterialIndexField() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xA78; confianca alta)
+    //  ancorado em `StructureToBuildIndex` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA78; confianca alta)
     int& FPVHandsMeshTextureMaskMaterialIndex2Field() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CrafterTribeName` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x620; confianca alta)
+    //  ancorado em `CrafterTribeName` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x620; confianca alta)
     FName& FPVHandsMeshTextureMaskParamNameField() const
     { return BrzCampoAncorado<FName>(this, "CrafterTribeName", 32); }
     UMaterialInstanceDynamic*& HUDIconMaterialField() const
     { return *GetNativePointerField<UMaterialInstanceDynamic**>(this, "UPrimalItem.HUDIconMaterial"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActorClassAttachmentInfos` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x238; confianca alta)
+    //  ancorado em `ActorClassAttachmentInfos` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x238; confianca alta)
     void*& ItemAttachmentInfosField() const
     { return BrzCampoAncorado<void*>(this, "ActorClassAttachmentInfos", 16); }
     FieldArray<short> ItemColorIDField() const
@@ -3526,20 +3524,20 @@ struct UPrimalItem : public UObject
     double& LastAutoDurabilityDecreaseTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalItem.LastAutoDurabilityDecreaseTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CropMaxFruits` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xA88; confianca alta)
+    //  ancorado em `CropMaxFruits` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA88; confianca alta)
     int& LastCalculatedTotalAmmoInvUpdatedFrameField() const
     { return BrzCampoAncorado<int>(this, "CropMaxFruits", 4); }
     double& LastEquippedReduceDurabilityTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalItem.LastEquippedReduceDurabilityTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastEquippedReduceDurabilityTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x9B0; confianca alta)
+    //  ancorado em `LastEquippedReduceDurabilityTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B0; confianca alta)
     double& LastItemAdditionTimeField() const
     { return BrzCampoAncorado<double>(this, "LastEquippedReduceDurabilityTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastUseTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x988; confianca alta)
+    //  ancorado em `LastUseTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x988; confianca alta)
     double& LastLocalUseTimeField() const
     { return BrzCampoAncorado<double>(this, "LastUseTime", 8); }
     int& LastMarketIDField() const
@@ -3595,23 +3593,23 @@ struct UPrimalItem : public UObject
     TArray<void*>& OnlyUsableOnSpecificClassesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.OnlyUsableOnSpecificClasses"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x8D0; confianca alta)
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8D0; confianca alta)
     void*& OriginalGenderPlayerMeshNoItemDefaultTextureMaskField() const
     { return BrzCampoAncorado<void*>(this, "BlueprintBackgroundOverrideTexture", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA70; confianca alta)
+    //  ancorado em `StructureToBuildIndex` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA70; confianca alta)
     void*& OriginalGenderPlayerMeshTextureMaskMaterialIndexAltField() const
     { return BrzCampoAncorado<void*>(this, "StructureToBuildIndex", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xA6C; confianca alta)
+    //  ancorado em `StructureToBuildIndex` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA6C; confianca alta)
     void*& OriginalGenderPlayerMeshTextureMaskMaterialIndexNewField() const
     { return BrzCampoAncorado<void*>(this, "StructureToBuildIndex", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CrafterTribeName` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x618; confianca alta)
+    //  ancorado em `CrafterTribeName` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x618; confianca alta)
     void*& OriginalGenderPlayerMeshTextureMaskParamNameField() const
     { return BrzCampoAncorado<void*>(this, "CrafterTribeName", 24); }
     BrzCampoPonteiro OriginalItemDropLocationField() const
@@ -3629,28 +3627,28 @@ struct UPrimalItem : public UObject
     BrzCampoPonteiro PendingSkinRefundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.PendingSkinRefund")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x8C8; confianca alta)
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8C8; confianca alta)
     UTexture2D*& PlayerMeshNoItemDefaultTextureMaskField() const
     { return BrzCampoAncorado<UTexture2D*>(this, "BlueprintBackgroundOverrideTexture", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x8C0; confianca alta)
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8C0; confianca alta)
     UTexture2D*& PlayerMeshTextureMaskField() const
     { return BrzCampoAncorado<UTexture2D*>(this, "BlueprintBackgroundOverrideTexture", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xA68; confianca alta)
+    //  ancorado em `StructureToBuildIndex` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA68; confianca alta)
     int& PlayerMeshTextureMaskMaterialIndexAltField() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureToBuildIndex` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xA64; confianca alta)
+    //  ancorado em `StructureToBuildIndex` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA64; confianca alta)
     int& PlayerMeshTextureMaskMaterialIndexNewField() const
     { return BrzCampoAncorado<int>(this, "StructureToBuildIndex", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CrafterTribeName` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x610; confianca alta)
+    //  ancorado em `CrafterTribeName` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x610; confianca alta)
     FName& PlayerMeshTextureMaskParamNameField() const
     { return BrzCampoAncorado<FName>(this, "CrafterTribeName", 16); }
     FieldArray<short> PreSkinItemColorIDField() const
@@ -3690,8 +3688,8 @@ struct UPrimalItem : public UObject
     int& TempSlotIndexField() const
     { return *GetNativePointerField<int*>(this, "UPrimalItem.TempSlotIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastEquippedReduceDurabilityTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x9B8; confianca alta)
+    //  ancorado em `LastEquippedReduceDurabilityTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B8; confianca alta)
     double& UploadEarliestValidTimeField() const
     { return BrzCampoAncorado<double>(this, "LastEquippedReduceDurabilityTime", 16); }
     TArray<void*>& UseItemAddCharacterStatusValuesField() const
@@ -3699,8 +3697,8 @@ struct UPrimalItem : public UObject
     TArray<void*>& UseRequiresOwnerActorClassesField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalItem.UseRequiresOwnerActorClasses"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BlueprintBackgroundOverrideTexture` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x8E0; confianca media)
+    //  ancorado em `BlueprintBackgroundOverrideTexture` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8E0; confianca media)
     UPrimalItem*& WeaponAmmoOverrideItemCDOField() const
     { return BrzCampoAncorado<UPrimalItem*>(this, "BlueprintBackgroundOverrideTexture", 40); }
     int& WeaponClipAmmoField() const
@@ -3710,8 +3708,8 @@ struct UPrimalItem : public UObject
     BrzCampoPonteiro WeaponTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItem.WeaponTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CropMaxFruits` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xA8C; confianca alta)
+    //  ancorado em `CropMaxFruits` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA8C; confianca alta)
     int& WeaponTotalAmmoField() const
     { return BrzCampoAncorado<int>(this, "CropMaxFruits", 8); }
     TArray<void*>& WheelItemsAmmoField() const

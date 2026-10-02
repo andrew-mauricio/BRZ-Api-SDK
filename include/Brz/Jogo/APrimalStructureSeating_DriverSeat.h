@@ -62,7 +62,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.AreAnyRowersNPCs()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AreAnyRowersNPCs() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.AreAnyRowersNPCs()");
@@ -174,7 +174,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.CanRow()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro CanRow() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.CanRow()");
@@ -190,7 +190,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.CanUseAutoPilot()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro CanUseAutoPilot() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.CanUseAutoPilot()");
@@ -422,7 +422,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetActiveDriverCount()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetActiveDriverCount() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetActiveDriverCount()");
@@ -438,7 +438,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetCameraPivotOverride(UE::Math::TVector<double>&,float&,bool
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCameraPivotOverride(void* a0, void* a1, void* a2) const
     {
         return NativeCall<void*, void*, void*, void*>(this, "APrimalStructureSeating_DriverSeat.GetCameraPivotOverride(UE::Math::TVector<double>&,float&,bool&)", a0, a1, a2);
@@ -494,7 +494,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetNextRowingAnim()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetNextRowingAnim() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetNextRowingAnim()");
@@ -518,7 +518,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetRowingInput_Seat(int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetRowingInput_Seat(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureSeating_DriverSeat.GetRowingInput_Seat(int)", a0);
@@ -542,7 +542,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.GetValidDriverCount()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetValidDriverCount() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.GetValidDriverCount()");
@@ -550,7 +550,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.HasActivePlayer()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro HasActivePlayer() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.HasActivePlayer()");
@@ -558,7 +558,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.HideAmmoGroupHighlight()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HideAmmoGroupHighlight() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.HideAmmoGroupHighlight()");
@@ -582,7 +582,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.LocalSetShouldDrawFloatingHUD(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro LocalSetShouldDrawFloatingHUD(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalStructureSeating_DriverSeat.LocalSetShouldDrawFloatingHUD(bool)", a0);
@@ -734,7 +734,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnHoldingReload()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=673+grafo=7/7]]
     BrzPonteiro OnHoldingReload() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnHoldingReload()");
@@ -742,7 +742,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnPressReload()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=365+grafo=5/5]]
     BrzPonteiro OnPressReload() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnPressReload()");
@@ -766,7 +766,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnStopRowing()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStopRowing() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnStopRowing()");
@@ -774,7 +774,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.OnStopShowAllGroupIcons()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro OnStopShowAllGroupIcons() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.OnStopShowAllGroupIcons()");
@@ -782,7 +782,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.PlayNextRowingAnim()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro PlayNextRowingAnim() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.PlayNextRowingAnim()");
@@ -870,7 +870,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.ToggleLadders()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ToggleLadders() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.ToggleLadders()");
@@ -918,7 +918,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.UpdateWindSourceActorRef()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro UpdateWindSourceActorRef() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.UpdateWindSourceActorRef()");
@@ -926,7 +926,7 @@ struct APrimalStructureSeating_DriverSeat
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureSeating_DriverSeat.WeaponAllowCommand()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro WeaponAllowCommand() const
     {
         return NativeCall<void*>(this, "APrimalStructureSeating_DriverSeat.WeaponAllowCommand()");
@@ -1979,13 +1979,13 @@ struct APrimalStructureSeating_DriverSeat
     BrzCampoPonteiro bIgnoresOriginShiftingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructureSeating_DriverSeat.bIgnoresOriginShifting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MusicPlayer` +10, medido na build 25535041
-    //  (offset absoluto medido: 0x1622; confianca alta)
+    //  ancorado em `MusicPlayer` +10 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1622; confianca alta)
     void*& bInGamepadLoweringAnchorField() const
     { return BrzCampoAncorado<void*>(this, "MusicPlayer", 10); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MusicPlayer` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x1621; confianca alta)
+    //  ancorado em `MusicPlayer` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1621; confianca alta)
     void*& bInGamepadZoomingStateField() const
     { return BrzCampoAncorado<void*>(this, "MusicPlayer", 9); }
     BrzCampoPonteiro bInventoryForcePreventItemAppendsField() const

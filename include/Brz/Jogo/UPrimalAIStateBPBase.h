@@ -69,7 +69,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.DealMeleeDamage(AActor*,FHitResult&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro DealMeleeDamage(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalAIStateBPBase.DealMeleeDamage(AActor*,FHitResult&)", a0, a1);
@@ -77,7 +77,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.DealMeleeDamageDirect(AActor*,UE::Math::TVector<double>,float,float,TSubcla
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro DealMeleeDamageDirect(void* a0, void* a1, float a2, float a3, void* a4, bool a5, bool a6) const
     {
         return NativeCall<void*, void*, void*, float, float, void*, bool, bool>(this, "UPrimalAIStateBPBase.DealMeleeDamageDirect(AActor*,UE::Math::TVector<double>,float,float,TSubclassOf<UDamageType>,bool,bool)", a0, a1, a2, a3, a4, a5, a6);
@@ -85,7 +85,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.EndAnimationState(FName,ENetRole)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro EndAnimationState(unsigned long long a0, int a1) const
     {
         return NativeCall<void*, unsigned long long, int>(this, "UPrimalAIStateBPBase.EndAnimationState(FName,ENetRole)", a0, a1);
@@ -173,7 +173,7 @@ struct UPrimalAIStateBPBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateBPBase.SetLastAttackTime()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetLastAttackTime() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateBPBase.SetLastAttackTime()");

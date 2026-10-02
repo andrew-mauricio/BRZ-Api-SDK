@@ -235,8 +235,8 @@ struct UPrimalShipCannonComponent
     TObjectPtr<UPrimitiveComponent>& LODParentPrimitiveField() const
     { return *GetNativePointerField<TObjectPtr<UPrimitiveComponent>*>(this, "UPrimalShipCannonComponent.LODParentPrimitive"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LocalAimDelta` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x7D8; confianca alta)
+    //  ancorado em `LocalAimDelta` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7D8; confianca alta)
     double& LastFireTimeField() const
     { return BrzCampoAncorado<double>(this, "LocalAimDelta", 24); }
     BrzCampoPonteiro LightingChannelsField() const

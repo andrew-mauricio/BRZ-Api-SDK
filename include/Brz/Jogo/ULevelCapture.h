@@ -62,8 +62,8 @@ struct ULevelCapture
     FString& InheritedCommandLineArgumentsField() const
     { return *GetNativePointerField<FString*>(this, "ULevelCapture.InheritedCommandLineArguments"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bAutoStartCapture` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x23C; confianca alta)
+    //  ancorado em `bAutoStartCapture` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x23C; confianca alta)
     void*& PrerequisiteActorField() const
     { return BrzCampoAncorado<void*>(this, "bAutoStartCapture", 4); }
     BrzCampoPonteiro PrerequisiteActorIdField() const

@@ -162,127 +162,127 @@ struct UPrimalWorld : public UObject
     BrzCampoPonteiro ConsoleVariableSinkDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWorld.ConsoleVariableSinkDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x30; confianca media)
+    //  ancorado em `FrameCounter` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x30; confianca media)
     FString& CurrentDayTimeField() const
     { return BrzCampoAncorado<FString>(this, "FrameCounter", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x90; confianca media)
+    //  ancorado em `FrameCounter` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x90; confianca media)
     void*& CurrentSaveIncrementorField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2C; confianca media)
+    //  ancorado em `FrameCounter` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C; confianca media)
     int& DinosDestroyedThisFrameField() const
     { return BrzCampoAncorado<int>(this, "FrameCounter", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x58; confianca media)
+    //  ancorado em `FrameCounter` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x58; confianca media)
     double& ForceBlockLoadTimeoutField() const
     { return BrzCampoAncorado<double>(this, "FrameCounter", 48); }
     int& FrameCounterField() const
     { return *GetNativePointerField<int*>(this, "UPrimalWorld.FrameCounter"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +136, medido na build 25535041
-    //  (offset absoluto medido: 0xB0; confianca baixa)
+    //  ancorado em `FrameCounter` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB0; confianca baixa)
     double& IgnoreForcedLevelAsDistanceStreamingEnabledUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "FrameCounter", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x88; confianca media)
+    //  ancorado em `FrameCounter` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x88; confianca media)
     void*& LastUnstasisCountField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +168, medido na build 25535041
-    //  (offset absoluto medido: 0xD0; confianca baixa)
+    //  ancorado em `FrameCounter` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD0; confianca baixa)
     void*& LinkedProxyMeshesField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x48; confianca media)
+    //  ancorado em `FrameCounter` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x48; confianca media)
     double& LoadedAtPersistentTimeField() const
     { return BrzCampoAncorado<double>(this, "FrameCounter", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x40; confianca media)
+    //  ancorado em `FrameCounter` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40; confianca media)
     double& LoadedAtTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "FrameCounter", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +100, medido na build 25535041
-    //  (offset absoluto medido: 0x8C; confianca media)
+    //  ancorado em `FrameCounter` +100 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8C; confianca media)
     void*& LoadedSaveIncrementorField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 100); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x98; confianca media)
+    //  ancorado em `FrameCounter` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x98; confianca media)
     TArray<TWeakObjectPtr<void>>& LocalStasisActorsField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "FrameCounter", 112); }
     BrzCampoPonteiro MaterialQualityChangedDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalWorld.MaterialQualityChangedDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x50; confianca media)
+    //  ancorado em `FrameCounter` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x50; confianca media)
     double& PersistentTimeField() const
     { return BrzCampoAncorado<double>(this, "FrameCounter", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +152, medido na build 25535041
-    //  (offset absoluto medido: 0xC0; confianca baixa)
+    //  ancorado em `FrameCounter` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC0; confianca baixa)
     TArray<TWeakObjectPtr<void>>& PreviousPostVolumesField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "FrameCounter", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +92, medido na build 25535041
-    //  (offset absoluto medido: 0x84; confianca media)
+    //  ancorado em `FrameCounter` +92 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x84; confianca media)
     float& StasisMaxResetTimerField() const
     { return BrzCampoAncorado<float>(this, "FrameCounter", 92); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x68; confianca media)
+    //  ancorado em `FrameCounter` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x68; confianca media)
     void*& StasisOssilationThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x80; confianca media)
+    //  ancorado em `FrameCounter` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x80; confianca media)
     float& StasisOssilationThisFrameAvgField() const
     { return BrzCampoAncorado<float>(this, "FrameCounter", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +76, medido na build 25535041
-    //  (offset absoluto medido: 0x74; confianca media)
+    //  ancorado em `FrameCounter` +76 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x74; confianca media)
     void*& StasisOssilationThisFrameMaxField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 76); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x60; confianca media)
+    //  ancorado em `FrameCounter` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x60; confianca media)
     void*& StasisThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x78; confianca media)
+    //  ancorado em `FrameCounter` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x78; confianca media)
     float& StasisThisFrameAvgField() const
     { return BrzCampoAncorado<float>(this, "FrameCounter", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x6C; confianca media)
+    //  ancorado em `FrameCounter` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C; confianca media)
     void*& StasisThisFrameMaxField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +60, medido na build 25535041
-    //  (offset absoluto medido: 0x64; confianca media)
+    //  ancorado em `FrameCounter` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x64; confianca media)
     void*& UnStasisThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +84, medido na build 25535041
-    //  (offset absoluto medido: 0x7C; confianca media)
+    //  ancorado em `FrameCounter` +84 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7C; confianca media)
     float& UnStasisThisFrameAvgField() const
     { return BrzCampoAncorado<float>(this, "FrameCounter", 84); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x70; confianca media)
+    //  ancorado em `FrameCounter` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x70; confianca media)
     void*& UnStasisThisFrameMaxField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FrameCounter` +144, medido na build 25535041
-    //  (offset absoluto medido: 0xB8; confianca baixa)
+    //  ancorado em `FrameCounter` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB8; confianca baixa)
     void*& bFlushingLevelStreamingField() const
     { return BrzCampoAncorado<void*>(this, "FrameCounter", 144); }
     BrzCampoPonteiro bUseSimpleWorldField() const

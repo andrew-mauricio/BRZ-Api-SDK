@@ -125,7 +125,7 @@ struct AShooterWeapon : public AActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon.BPAdjustAmmoPerShot()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=60+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=60+chamadores=3]]
     int BPAdjustAmmoPerShot() const
     {
         return NativeCall<int>(this, "AShooterWeapon.BPAdjustAmmoPerShot()");
@@ -165,7 +165,7 @@ struct AShooterWeapon : public AActor
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterWeapon.BPAnimNotifyCustomState_Tick(FName,USkeletalMeshComponent*,UAnimSequenceBase*,flo
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void BPAnimNotifyCustomState_Tick(unsigned long long a0, void* a1, void* a2, float a3, void* a4) const
     {
         NativeCall<void, unsigned long long, void*, void*, float, void*>(this, "AShooterWeapon.BPAnimNotifyCustomState_Tick(FName,USkeletalMeshComponent*,UAnimSequenceBase*,float,UAnimNotifyState*)", a0, a1, a2, a3, a4);
@@ -1979,18 +1979,18 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro AssociatedPrimalItemField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.AssociatedPrimalItem")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bLastMeleeHitStationary` +3, medido na build 25535041
-    //  (offset absoluto medido: 0xE84; confianca alta)
+    //  ancorado em `bLastMeleeHitStationary` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE84; confianca alta)
     float& AutoReloadTimerField() const
     { return BrzCampoAncorado<float>(this, "bLastMeleeHitStationary", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AmmoReloadState` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1078; confianca alta)
+    //  ancorado em `AmmoReloadState` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1078; confianca alta)
     void*& CachedSelectedMeleeAnimField() const
     { return BrzCampoAncorado<void*>(this, "AmmoReloadState", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InsulationRange` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xE70; confianca alta)
+    //  ancorado em `InsulationRange` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE70; confianca alta)
     void*& CheckForMeleeAttackHandleField() const
     { return BrzCampoAncorado<void*>(this, "InsulationRange", 8); }
     unsigned char& ColorizeMuzzleVFXUseColorRegionField() const
@@ -2002,23 +2002,23 @@ struct AShooterWeapon : public AActor
     float& CurrentFiringSpreadField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon.CurrentFiringSpread"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProneTPVTargetingReloadAnim` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xD00; confianca alta)
+    //  ancorado em `ProneTPVTargetingReloadAnim` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD00; confianca alta)
     int& CurrentStateField() const
     { return BrzCampoAncorado<int>(this, "ProneTPVTargetingReloadAnim", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AmmoReloadState` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1080; confianca alta)
+    //  ancorado em `AmmoReloadState` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1080; confianca alta)
     void*& CurrentWeaponCameraSettingsOverrideField() const
     { return BrzCampoAncorado<void*>(this, "AmmoReloadState", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastNotifyShotTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xD60; confianca alta)
+    //  ancorado em `LastNotifyShotTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD60; confianca alta)
     void*& DoHandleFiringHandleField() const
     { return BrzCampoAncorado<void*>(this, "LastNotifyShotTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AimAssistStrengthWeapon` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1040; confianca alta)
+    //  ancorado em `AimAssistStrengthWeapon` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1040; confianca alta)
     float& DraggingOffsetInterpField() const
     { return BrzCampoAncorado<float>(this, "AimAssistStrengthWeapon", 12); }
     float& DurabilityCostToEquipField() const
@@ -2030,8 +2030,8 @@ struct AShooterWeapon : public AActor
     float& EndDoMeleeSwingTimeField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon.EndDoMeleeSwingTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUseBlueprintAnimNotifications` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6F0; confianca alta)
+    //  ancorado em `bUseBlueprintAnimNotifications` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6F0; confianca alta)
     void*& EndMeleeSwingHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUseBlueprintAnimNotifications", 4); }
     BrzCampoPonteiro EquipAnimField() const
@@ -2045,8 +2045,8 @@ struct AShooterWeapon : public AActor
     FName& FPVAccessoryToggleComponentField() const
     { return *GetNativePointerField<FName*>(this, "AShooterWeapon.FPVAccessoryToggleComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +64, medido na build 25535041
-    //  (offset absoluto medido: 0xA08; confianca media)
+    //  ancorado em `LastSocketPositions` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA08; confianca media)
     FRotator& FPVAdditionalLookRotOffsetField() const
     { return BrzCampoAncorado<FRotator>(this, "LastSocketPositions", 64); }
     float& FPVEnterTargetingInterpSpeedField() const
@@ -2062,18 +2062,18 @@ struct AShooterWeapon : public AActor
     FVector& FPVInventoryReequipOffsetField() const
     { return *GetNativePointerField<FVector*>(this, "AShooterWeapon.FPVInventoryReequipOffset"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +88, medido na build 25535041
-    //  (offset absoluto medido: 0xA20; confianca media)
+    //  ancorado em `LastSocketPositions` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA20; confianca media)
     FVector& FPVLastLocOffsetField() const
     { return BrzCampoAncorado<FVector>(this, "LastSocketPositions", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +160, medido na build 25535041
-    //  (offset absoluto medido: 0xA68; confianca baixa)
+    //  ancorado em `LastSocketPositions` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA68; confianca baixa)
     FRotator& FPVLastRotOffsetField() const
     { return BrzCampoAncorado<FRotator>(this, "LastSocketPositions", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +112, medido na build 25535041
-    //  (offset absoluto medido: 0xA38; confianca media)
+    //  ancorado em `LastSocketPositions` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA38; confianca media)
     FVector& FPVLastVROffsetField() const
     { return BrzCampoAncorado<FVector>(this, "LastSocketPositions", 112); }
     FRotator& FPVLookAtInterpSpeedField() const
@@ -2109,8 +2109,8 @@ struct AShooterWeapon : public AActor
     FVector& FPVRelativeLocationField() const
     { return *GetNativePointerField<FVector*>(this, "AShooterWeapon.FPVRelativeLocation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +136, medido na build 25535041
-    //  (offset absoluto medido: 0xA50; confianca baixa)
+    //  ancorado em `LastSocketPositions` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA50; confianca baixa)
     FVector& FPVRelativeLocationOffscreenOffsetField() const
     { return BrzCampoAncorado<FVector>(this, "LastSocketPositions", 136); }
     FVector& FPVRelativeLocation_TargetingField() const
@@ -2120,8 +2120,8 @@ struct AShooterWeapon : public AActor
     FRotator& FPVRelativeRotation_TargetingField() const
     { return *GetNativePointerField<FRotator*>(this, "AShooterWeapon.FPVRelativeRotation_Targeting"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FPVMoveOffscreenWhenTurningMaxOffset` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xCB0; confianca alta)
+    //  ancorado em `FPVMoveOffscreenWhenTurningMaxOffset` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCB0; confianca alta)
     double& FPVStoppedTurningTimeField() const
     { return BrzCampoAncorado<double>(this, "FPVMoveOffscreenWhenTurningMaxOffset", 8); }
     BrzCampoPonteiro FinishBurstAnimField() const
@@ -2173,18 +2173,18 @@ struct AShooterWeapon : public AActor
     int& LastAmmoToConsumeField() const
     { return *GetNativePointerField<int*>(this, "AShooterWeapon.LastAmmoToConsume"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x9F0; confianca media)
+    //  ancorado em `LastSocketPositions` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9F0; confianca media)
     FRotator& LastCameraRotationField() const
     { return BrzCampoAncorado<FRotator>(this, "LastSocketPositions", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InsulationRange` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xE78; confianca alta)
+    //  ancorado em `InsulationRange` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE78; confianca alta)
     double& LastDurabilityConsumptionTimeField() const
     { return BrzCampoAncorado<double>(this, "InsulationRange", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x9E8; confianca media)
+    //  ancorado em `LastSocketPositions` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9E8; confianca media)
     double& LastFPVRenderTimeField() const
     { return BrzCampoAncorado<double>(this, "LastSocketPositions", 32); }
     double& LastFireTimeField() const
@@ -2198,8 +2198,8 @@ struct AShooterWeapon : public AActor
     FName& LeftHandIkSkeletalMeshSocketNameField() const
     { return *GetNativePointerField<FName*>(this, "AShooterWeapon.LeftHandIkSkeletalMeshSocketName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AimAssistStrengthWeapon` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1038; confianca alta)
+    //  ancorado em `AimAssistStrengthWeapon` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1038; confianca alta)
     double& LocalInventoryViewingSkippedEquipAnimTimeField() const
     { return BrzCampoAncorado<double>(this, "AimAssistStrengthWeapon", 4); }
     BrzCampoPonteiro LockToIconField() const
@@ -2243,13 +2243,13 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro MeleeNoAmmoClipAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.MeleeNoAmmoClipAnim")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MeleeAttackUsableHarvestDamageMultiplier` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xEB8; confianca alta)
+    //  ancorado em `MeleeAttackUsableHarvestDamageMultiplier` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEB8; confianca alta)
     void*& MeleeSwingHarvestableComponentListField() const
     { return BrzCampoAncorado<void*>(this, "MeleeAttackUsableHarvestDamageMultiplier", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSocketPositions` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x9D8; confianca media)
+    //  ancorado em `LastSocketPositions` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9D8; confianca media)
     void*& MeleeSwingHurtListField() const
     { return BrzCampoAncorado<void*>(this, "LastSocketPositions", 16); }
     TArray<void*>& MeleeSwingSocketsField() const
@@ -2275,8 +2275,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro MyPawnField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.MyPawn")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ScopedBuff` +40, medido na build 25535041
-    //  (offset absoluto medido: 0xFC8; confianca media)
+    //  ancorado em `ScopedBuff` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFC8; confianca media)
     TWeakObjectPtr<void>& MyScopedBuffField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "ScopedBuff", 40); }
     double& NextAllowedMeleeTimeField() const
@@ -2296,8 +2296,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro NoAmmoFireAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.NoAmmoFireAnim")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EquipTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4A0; confianca alta)
+    //  ancorado em `EquipTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A0; confianca alta)
     void*& OnEquipFinishedHandleField() const
     { return BrzCampoAncorado<void*>(this, "EquipTime", 8); }
     BrzCampoPonteiro OpenInventoryAnimField() const
@@ -2353,8 +2353,8 @@ struct AShooterWeapon : public AActor
     float& ReloadCameraShakeSpeedScaleField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon.ReloadCameraShakeSpeedScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EquipTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x4A8; confianca alta)
+    //  ancorado em `EquipTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A8; confianca alta)
     void*& ReloadWeaponHandleField() const
     { return BrzCampoAncorado<void*>(this, "EquipTime", 16); }
     BrzCampoPonteiro RemovalOptionsIconField() const
@@ -2384,8 +2384,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro ShieldHitAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.ShieldHitAnim")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentFiringSpread` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xF98; confianca alta)
+    //  ancorado em `CurrentFiringSpread` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF98; confianca alta)
     void*& SlowAccuracyResetHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentFiringSpread", 8); }
     BrzCampoPonteiro StartBurstAnimField() const
@@ -2429,8 +2429,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro ToggleAccessorySoundField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.ToggleAccessorySound")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EquipTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x4B0; confianca alta)
+    //  ancorado em `EquipTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4B0; confianca alta)
     void*& TriggerEffectField() const
     { return BrzCampoAncorado<void*>(this, "EquipTime", 24); }
     BrzCampoPonteiro UnequipAnimField() const
@@ -2526,8 +2526,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro bBPUseWeaponCanFireField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.bBPUseWeaponCanFire")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FinishBurstAnim` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1068; confianca alta)
+    //  ancorado em `FinishBurstAnim` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1068; confianca alta)
     void*& bBlockCameraAnimFPVField() const
     { return BrzCampoAncorado<void*>(this, "FinishBurstAnim", 16); }
     BrzCampoPonteiro bCanAccessoryBeSetOnField() const
@@ -2541,8 +2541,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro bCheckBuffOverrideWeaponFireTransformField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.bCheckBuffOverrideWeaponFireTransform")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bLastMeleeHitStationary` +1, medido na build 25535041
-    //  (offset absoluto medido: 0xE82; confianca alta)
+    //  ancorado em `bLastMeleeHitStationary` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE82; confianca alta)
     bool& bClientAlreadyReloadedField() const
     { return BrzCampoAncorado<bool>(this, "bLastMeleeHitStationary", 1); }
     BrzCampoPonteiro bClientTriggersHandleFiringField() const
@@ -2556,8 +2556,8 @@ struct AShooterWeapon : public AActor
     BrzCampoPonteiro bColorizeMuzzleFXField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon.bColorizeMuzzleFX")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MeleeAttackUsableHarvestDamageMultiplier` +84, medido na build 25535041
-    //  (offset absoluto medido: 0xF08; confianca media)
+    //  ancorado em `MeleeAttackUsableHarvestDamageMultiplier` +84 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF08; confianca media)
     void*& bColorizeRegionsField() const
     { return BrzCampoAncorado<void*>(this, "MeleeAttackUsableHarvestDamageMultiplier", 84); }
     BrzCampoPonteiro bConsiderWeaponScaleOnAttachField() const
@@ -2889,8 +2889,8 @@ struct AShooterWeapon : public AActor
     bool& bWasLastFireFromGamePadField() const
     { return *GetNativePointerField<bool*>(this, "AShooterWeapon.bWasLastFireFromGamePad"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetingFireAnim` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xCD0; confianca alta)
+    //  ancorado em `TargetingFireAnim` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCD0; confianca alta)
     void*& clientTrashFramesField() const
     { return BrzCampoAncorado<void*>(this, "TargetingFireAnim", 24); }
     BitFieldValue<bool, unsigned __int32> bUseDinoRangeForTooltip()

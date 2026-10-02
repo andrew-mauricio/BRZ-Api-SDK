@@ -1251,7 +1251,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GMBuff()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void GMBuff() const
     {
         NativeCall<void>(this, "UShooterCheatManager.GMBuff()");
@@ -1411,11 +1411,11 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.GetWorld()
-    // classe: a funcao mora em UCheatManager, e UShooterCheatManager herda dela: o `this` e' compativel por construcao
+    // classe: a funcao mora em AActor, e UShooterCheatManager herda dela: o `this` e' compativel por construcao
     // endereco: casamento de bytes com a build de referencia
     UWorld* GetWorld() const
     {
-        return NativeCall<UWorld*>(this, "UCheatManager.GetWorld()");
+        return NativeCall<UWorld*>(this, "AActor.GetWorld()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -2833,7 +2833,7 @@ struct UShooterCheatManager : public UCheatManager
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UShooterCheatManager.SetImprintQuality(float)
     // classe: a funcao mora em AShooterPlayerController, e UShooterCheatManager herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: conferida_thunk_vtable
     void SetImprintQuality(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.SetImprintQuality(float)", a0);
@@ -3353,7 +3353,7 @@ struct UShooterCheatManager : public UCheatManager
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UShooterCheatManager.StopPerformanceRecording()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopPerformanceRecording() const
     {
         NativeCall<void>(this, "UShooterCheatManager.StopPerformanceRecording()");
@@ -3826,25 +3826,25 @@ struct UShooterCheatManager : public UCheatManager
     BrzCampoPonteiro CheatManagerExtentionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCheatManager.CheatManagerExtentions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsRCONCheatManager` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB8; confianca alta)
+    //  ancorado em `bIsRCONCheatManager` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB8; confianca alta)
     AShooterPlayerController*& MyPCField() const
     { return BrzCampoAncorado<AShooterPlayerController*>(this, "bIsRCONCheatManager", 8); }
     BrzCampoPonteiro PaintModeTimerHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterCheatManager.PaintModeTimerHandle")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatManagerExtentions` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xA0; confianca alta)
+    //  ancorado em `CheatManagerExtentions` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA0; confianca alta)
     void*& PendingCheatCommandsField() const
     { return BrzCampoAncorado<void*>(this, "CheatManagerExtentions", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsRCONCheatManager` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xC0; confianca alta)
+    //  ancorado em `bIsRCONCheatManager` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC0; confianca alta)
     int& PendingTribeTeamIDField() const
     { return BrzCampoAncorado<int>(this, "bIsRCONCheatManager", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CheatManagerExtentions` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x98; confianca alta)
+    //  ancorado em `CheatManagerExtentions` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x98; confianca alta)
     void*& SpectatorTargetField() const
     { return BrzCampoAncorado<void*>(this, "CheatManagerExtentions", 16); }
     BrzCampoPonteiro bIsRCONCheatManagerField() const

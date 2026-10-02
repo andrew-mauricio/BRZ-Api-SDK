@@ -55,7 +55,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.ApplyPinCode(AShooterPlayerController*,int,bool,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ApplyPinCode(void* a0, int a1, bool a2, int a3) const
     {
         return NativeCall<bool, void*, int, bool, int>(this, "APrimalStructureDoor.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
@@ -87,11 +87,10 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.BeginPlay()
-    // classe: a funcao mora em APrimalStructure, e APrimalStructureDoor herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
-        NativeCall<void>(this, "APrimalStructure.BeginPlay()");
+        NativeCall<void>(this, "APrimalStructureDoor.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -168,7 +167,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureDoor.NetGotoDoorState(signedchar)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NetGotoDoorState(signed char a0) const
     {
         return NativeCall<void*, signed char>(this, "APrimalStructureDoor.NetGotoDoorState(signedchar)", a0);
@@ -184,7 +183,7 @@ struct APrimalStructureDoor : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureDoor.PreventCharacterBasing(AActor*,UPrimitiveComponent*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventCharacterBasing(void* a0, void* a1) const
     {
         return NativeCall<bool, void*, void*>(this, "APrimalStructureDoor.PreventCharacterBasing(AActor*,UPrimitiveComponent*)", a0, a1);

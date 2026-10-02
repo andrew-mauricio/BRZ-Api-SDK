@@ -113,7 +113,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.BeginPlay()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [chamadores=4+grafo=57/58]]
     void BeginPlay() const
     {
         NativeCall<void>(this, "AShooterProjectile.BeginPlay()");
@@ -217,7 +217,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.Destroy(bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool Destroy(bool a0, bool a1) const
     {
         return NativeCall<bool, bool, bool>(this, "AShooterProjectile.Destroy(bool,bool)", a0, a1);
@@ -241,7 +241,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.Explode(FHitResult&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=243+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=243+chamadores=2]]
     void Explode(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterProjectile.Explode(FHitResult&)", a0);
@@ -377,7 +377,7 @@ struct AShooterProjectile : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterProjectile.OnImpact_Implementation(FHitResult&,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void OnImpact_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterProjectile.OnImpact_Implementation(FHitResult&,bool)", a0, a1);
@@ -523,8 +523,8 @@ struct AShooterProjectile : public AActor
     float& CustomColorDesaturationField() const
     { return *GetNativePointerField<float*>(this, "AShooterProjectile.CustomColorDesaturation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +50, medido na build 25535041
-    //  (offset absoluto medido: 0x6F2; confianca media)
+    //  ancorado em `ProjectileBounceSound` +50 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6F2; confianca media)
     short& CustomColorIDField() const
     { return BrzCampoAncorado<short>(this, "ProjectileBounceSound", 50); }
     TWeakObjectPtr<void>& DamageCauserField() const
@@ -564,8 +564,8 @@ struct AShooterProjectile : public AActor
     double& LastFoliageTraceCheckTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterProjectile.LastFoliageTraceCheckTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x6C8; confianca alta)
+    //  ancorado em `ProjectileBounceSound` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C8; confianca alta)
     double& LastProjectileBounceSoundField() const
     { return BrzCampoAncorado<double>(this, "ProjectileBounceSound", 8); }
     BrzCampoPonteiro LastVelocityField() const
@@ -575,8 +575,8 @@ struct AShooterProjectile : public AActor
     BrzCampoPonteiro MyAmmoTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.MyAmmoTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ImpactEmitter` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4E8; confianca alta)
+    //  ancorado em `ImpactEmitter` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4E8; confianca alta)
     TWeakObjectPtr<void>& MyControllerField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "ImpactEmitter", 8); }
     BrzCampoPonteiro NiagaraParticleCompField() const
@@ -594,20 +594,20 @@ struct AShooterProjectile : public AActor
     float& PostExplosionKeepAliveLifeSpanField() const
     { return *GetNativePointerField<float*>(this, "AShooterProjectile.PostExplosionKeepAliveLifeSpan"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x6D0; confianca alta)
+    //  ancorado em `ProjectileBounceSound` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6D0; confianca alta)
     void*& PreviousLocationField() const
     { return BrzCampoAncorado<void*>(this, "ProjectileBounceSound", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomColorDesaturation` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x508; confianca alta)
+    //  ancorado em `CustomColorDesaturation` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x508; confianca alta)
     TArray<TWeakObjectPtr<void>>& PreviousNonBlockingHitComponentsField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CustomColorDesaturation", 8); }
     USoundCue*& ProjectileBounceSoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "AShooterProjectile.ProjectileBounceSound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x6E8; confianca media)
+    //  ancorado em `ProjectileBounceSound` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6E8; confianca media)
     int& RandIntSeedField() const
     { return BrzCampoAncorado<int>(this, "ProjectileBounceSound", 40); }
     FHitResult& ReplicatedHitInfoField() const
@@ -641,8 +641,8 @@ struct AShooterProjectile : public AActor
     BrzCampoPonteiro bClientTickWhenInAirAndCheckForNonBlockingHitImpactFXField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterProjectile.bClientTickWhenInAirAndCheckForNonBlockingHitImpactFX")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileBounceSound` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x6EC; confianca media)
+    //  ancorado em `ProjectileBounceSound` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6EC; confianca media)
     void*& bColorizeRegionsField() const
     { return BrzCampoAncorado<void*>(this, "ProjectileBounceSound", 44); }
     BrzCampoPonteiro bColorizeStructureOnImpactField() const

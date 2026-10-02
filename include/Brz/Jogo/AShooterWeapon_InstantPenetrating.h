@@ -57,11 +57,10 @@ struct AShooterWeapon_InstantPenetrating : public AShooterWeapon_Instant
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_InstantPenetrating.Serialize(FArchive&)
-    // classe: a funcao mora em AActor, e AShooterWeapon_InstantPenetrating herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Serialize(void* a0) const
     {
-        NativeCall<void, void*>(this, "AActor.Serialize(FArchive&)", a0);
+        NativeCall<void, void*>(this, "AShooterWeapon_InstantPenetrating.Serialize(FArchive&)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

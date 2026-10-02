@@ -36,7 +36,7 @@ struct APrimalProjectileArrow : public AShooterProjectile
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalProjectileArrow.BeginPlay()
     // classe: a funcao mora em AShooterProjectile, e APrimalProjectileArrow herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [chamadores=4+grafo=57/58]]
     void BeginPlay() const
     {
         NativeCall<void>(this, "AShooterProjectile.BeginPlay()");

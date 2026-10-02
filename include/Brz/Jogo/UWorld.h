@@ -833,7 +833,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UAutoDestroySubsystem>()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=2]]
     BrzPonteiro GetSubsystem_UAutoDestroySubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UAutoDestroySubsystem>()");
@@ -889,7 +889,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<ULevelInstanceSubsystem>()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetSubsystem_ULevelInstanceSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<ULevelInstanceSubsystem>()");
@@ -929,7 +929,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UMassEntitySubsystem>()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=6]]
     BrzPonteiro GetSubsystem_UMassEntitySubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UMassEntitySubsystem>()");
@@ -1001,7 +1001,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UPrimalMassSubsystem>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=7]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=4]]
     BrzPonteiro GetSubsystem_UPrimalMassSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UPrimalMassSubsystem>()");
@@ -1025,7 +1025,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.GetSubsystem<UWorldPartitionSubsystem>()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=113+chamadores=5]]
     BrzPonteiro GetSubsystem_UWorldPartitionSubsystem_() const
     {
         return NativeCall<void*>(this, "UWorld.GetSubsystem<UWorldPartitionSubsystem>()");
@@ -1305,7 +1305,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.LineTraceMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=135+chamadores=13]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro LineTraceMultiByChannel(void* a0, void* a1, void* a2, int a3, void* a4, void* a5) const
     {
         return NativeCall<void*, void*, void*, void*, int, void*, void*>(this, "UWorld.LineTraceMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,ECollisionChannel,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5);
@@ -1329,7 +1329,7 @@ struct UWorld : public UPrimalWorld
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UWorld.LineTraceSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=135+chamadores=164]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=135+chamadores=148]]
     bool LineTraceSingleByChannel(void* a0, void* a1, void* a2, int a3, void* a4, void* a5) const
     {
         return NativeCall<bool, void*, void*, void*, int, void*, void*>(this, "UWorld.LineTraceSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,ECollisionChannel,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5);
@@ -1957,7 +1957,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SweepMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<doub
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=24]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=22]]
     BrzPonteiro SweepMultiByChannel(void* a0, void* a1, void* a2, void* a3, int a4, void* a5, void* a6, void* a7) const
     {
         return NativeCall<void*, void*, void*, void*, void*, int, void*, void*, void*>(this, "UWorld.SweepMultiByChannel(TArray<FHitResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TQuat<double>&,ECollisionChannel,FCollisionShape&,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -1981,7 +1981,7 @@ struct UWorld : public UPrimalWorld
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UWorld.SweepSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=174]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=100+bytes40+chamadores=155]]
     BrzPonteiro SweepSingleByChannel(void* a0, void* a1, void* a2, void* a3, int a4, void* a5, void* a6, void* a7) const
     {
         return NativeCall<void*, void*, void*, void*, void*, int, void*, void*, void*>(this, "UWorld.SweepSingleByChannel(FHitResult&,UE::Math::TVector<double>&,UE::Math::TVector<double>&,UE::Math::TQuat<double>&,ECollisionChannel,FCollisionShape&,FCollisionQueryParams&,FCollisionResponseParams&)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -2089,42 +2089,42 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro AISystemField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.AISystem")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x468; confianca alta)
+    //  ancorado em `LevelCollections` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x468; confianca alta)
     int& ActiveLevelCollectionIndexField() const
     { return BrzCampoAncorado<int>(this, "LevelCollections", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x4A0; confianca media)
+    //  ancorado em `LevelCollections` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A0; confianca media)
     void*& AudioDeviceDestroyedHandleField() const
     { return BrzCampoAncorado<void*>(this, "LevelCollections", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x488; confianca media)
+    //  ancorado em `LevelCollections` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x488; confianca media)
     void*& AudioDeviceHandleField() const
     { return BrzCampoAncorado<void*>(this, "LevelCollections", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x9B0; confianca alta)
+    //  ancorado em `TimeSeconds` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B0; confianca alta)
     double& AudioTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 24); }
     TObjectPtr<AGameModeBase>& AuthorityGameModeField() const
     { return *GetNativePointerField<TObjectPtr<AGameModeBase>*>(this, "UWorld.AuthorityGameMode"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x4F8; confianca media)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F8; confianca media)
     void*& AutoCameraActorListField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 48); }
     BrzCampoPonteiro AvoidanceManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.AvoidanceManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x418; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x418; confianca media)
     int& BlockTillLevelStreamingCompletedEpochField() const
     { return BrzCampoAncorado<int>(this, "DefaultPhysicsVolume", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x3F0; confianca alta)
+    //  ancorado em `DefaultPhysicsVolume` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3F0; confianca alta)
     void*& CachedViewInfoRenderedLastFrameField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 32); }
     TObjectPtr<UCanvas>& CanvasForDrawMaterialToRenderTargetField() const
@@ -2132,13 +2132,13 @@ struct UWorld : public UPrimalWorld
     TObjectPtr<UCanvas>& CanvasForRenderingToTargetField() const
     { return *GetNativePointerField<TObjectPtr<UCanvas>*>(this, "UWorld.CanvasForRenderingToTarget"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +60, medido na build 25535041
-    //  (offset absoluto medido: 0xA4C; confianca media)
+    //  ancorado em `ContentBundleManager` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA4C; confianca media)
     void*& CleanupWorldTagField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xA40; confianca media)
+    //  ancorado em `ContentBundleManager` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA40; confianca media)
     FName& CommittedPersistentLevelNameField() const
     { return BrzCampoAncorado<FName>(this, "ContentBundleManager", 48); }
     TArray<void*>& ComponentsThatNeedEndOfFrameUpdateField() const
@@ -2150,8 +2150,8 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro ContentBundleManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.ContentBundleManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x4D8; confianca alta)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D8; confianca alta)
     TArray<TWeakObjectPtr<void>>& ControllerListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CanvasForDrawMaterialToRenderTarget", 16); }
     TObjectPtr<ULevel>& CurrentLevelPendingInvisibilityField() const
@@ -2159,25 +2159,25 @@ struct UWorld : public UPrimalWorld
     TObjectPtr<ULevel>& CurrentLevelPendingVisibilityField() const
     { return *GetNativePointerField<TObjectPtr<ULevel>*>(this, "UWorld.CurrentLevelPendingVisibility"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x530; confianca media)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x530; confianca media)
     void*& DefaultPhysicsScene_ChaosField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 104); }
     TObjectPtr<APhysicsVolume>& DefaultPhysicsVolumeField() const
     { return *GetNativePointerField<TObjectPtr<APhysicsVolume>*>(this, "UWorld.DefaultPhysicsVolume"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x9B8; confianca alta)
+    //  ancorado em `TimeSeconds` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B8; confianca alta)
     float& DeltaRealTimeSecondsField() const
     { return BrzCampoAncorado<float>(this, "TimeSeconds", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x9C0; confianca media)
+    //  ancorado em `TimeSeconds` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9C0; confianca media)
     void*& DeltaTimeAlterationField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x9BC; confianca media)
+    //  ancorado em `TimeSeconds` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9BC; confianca media)
     float& DeltaTimeSecondsField() const
     { return BrzCampoAncorado<float>(this, "TimeSeconds", 36); }
     BrzCampoPonteiro DemoNetDriverField() const
@@ -2185,13 +2185,13 @@ struct UWorld : public UPrimalWorld
     TArray<void*>& ExtraReferencedObjectsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UWorld.ExtraReferencedObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x408; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x408; confianca media)
     void*& FeatureLevelField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xA18; confianca media)
+    //  ancorado em `ContentBundleManager` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA18; confianca media)
     void*& FlushLevelStreamingTypeField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 8); }
     BrzCampoPonteiro ForegroundLineBatcherField() const
@@ -2199,18 +2199,18 @@ struct UWorld : public UPrimalWorld
     TObjectPtr<AGameStateBase>& GameStateField() const
     { return *GetNativePointerField<TObjectPtr<AGameStateBase>*>(this, "UWorld.GameState"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +176, medido na build 25535041
-    //  (offset absoluto medido: 0xAC0; confianca baixa)
+    //  ancorado em `ContentBundleManager` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAC0; confianca baixa)
     void*& GameStateSetEventField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x414; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x414; confianca media)
     void*& IsInBlockTillLevelStreamingCompletedField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x400; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x400; confianca media)
     double& LastRenderTimeField() const
     { return BrzCampoAncorado<double>(this, "DefaultPhysicsVolume", 48); }
     BrzCampoPonteiro LevelCollectionsField() const
@@ -2228,63 +2228,63 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro NetworkManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.NetworkManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +104, medido na build 25535041
-    //  (offset absoluto medido: 0xA00; confianca media)
+    //  ancorado em `TimeSeconds` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA00; confianca media)
     float& NextSwitchCountdownField() const
     { return BrzCampoAncorado<float>(this, "TimeSeconds", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +9, medido na build 25535041
-    //  (offset absoluto medido: 0xA19; confianca media)
+    //  ancorado em `ContentBundleManager` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA19; confianca media)
     void*& NextTravelTypeField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA20; confianca media)
+    //  ancorado em `ContentBundleManager` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA20; confianca media)
     FString& NextURLField() const
     { return BrzCampoAncorado<FString>(this, "ContentBundleManager", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x508; confianca media)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x508; confianca media)
     TArray<TWeakObjectPtr<void>>& NonDefaultPhysicsVolumeListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CanvasForDrawMaterialToRenderTarget", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +10, medido na build 25535041
-    //  (offset absoluto medido: 0xA1A; confianca media)
+    //  ancorado em `ContentBundleManager` +10 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA1A; confianca media)
     unsigned short& NumStreamingLevelsBeingLoadedField() const
     { return BrzCampoAncorado<unsigned short>(this, "ContentBundleManager", 10); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xA60; confianca media)
+    //  ancorado em `ContentBundleManager` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA60; confianca media)
     void*& OnActorsInitializedField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelCollections` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x470; confianca alta)
+    //  ancorado em `LevelCollections` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x470; confianca alta)
     void*& OnBeginPlayField() const
     { return BrzCampoAncorado<void*>(this, "LevelCollections", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +104, medido na build 25535041
-    //  (offset absoluto medido: 0xA78; confianca media)
+    //  ancorado em `ContentBundleManager` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA78; confianca media)
     void*& OnWorldBeginPlayField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +128, medido na build 25535041
-    //  (offset absoluto medido: 0xA90; confianca media)
+    //  ancorado em `ContentBundleManager` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA90; confianca media)
     void*& OnWorldMatchStartingField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +152, medido na build 25535041
-    //  (offset absoluto medido: 0xAA8; confianca baixa)
+    //  ancorado em `ContentBundleManager` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAA8; confianca baixa)
     void*& OnWorldPreBeginPlayField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x9D0; confianca media)
+    //  ancorado em `TimeSeconds` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9D0; confianca media)
     void*& OriginLocationField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x9E8; confianca media)
+    //  ancorado em `TimeSeconds` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9E8; confianca media)
     void*& OriginOffsetThisFrameField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 80); }
     TObjectPtr<UGameInstance>& OwningGameInstanceField() const
@@ -2294,20 +2294,20 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro ParameterCollectionInstancesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.ParameterCollectionInstances")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +72, medido na build 25535041
-    //  (offset absoluto medido: 0xA58; confianca media)
+    //  ancorado em `ContentBundleManager` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA58; confianca media)
     void*& ParticlePerfStatsField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x9C8; confianca media)
+    //  ancorado em `TimeSeconds` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9C8; confianca media)
     double& PauseDelayField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 48); }
     TArray<void*>& PerModuleDataObjectsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UWorld.PerModuleDataObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +64, medido na build 25535041
-    //  (offset absoluto medido: 0xA50; confianca media)
+    //  ancorado em `ContentBundleManager` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA50; confianca media)
     void*& PerfTrackersField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 64); }
     TObjectPtr<ULevel>& PersistentLevelField() const
@@ -2319,43 +2319,43 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro PhysicsFieldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.PhysicsField")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x518; confianca media)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x518; confianca media)
     void*& PhysicsSceneField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x520; confianca media)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x520; confianca media)
     void*& PhysicsScene_ChaosField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x4E8; confianca alta)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4E8; confianca alta)
     TArray<TWeakObjectPtr<void>>& PlayerControllerListField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "CanvasForDrawMaterialToRenderTarget", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ComponentsThatNeedEndOfFrameUpdate_OnGameThread` +496, medido na build 25535041
-    //  (offset absoluto medido: 0x798; confianca baixa)
+    //  ancorado em `ComponentsThatNeedEndOfFrameUpdate_OnGameThread` +496 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x798; confianca baixa)
     void*& PostTickDispatchEventField() const
     { return BrzCampoAncorado<void*>(this, "ComponentsThatNeedEndOfFrameUpdate_OnGameThread", 496); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xA30; confianca media)
+    //  ancorado em `ContentBundleManager` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA30; confianca media)
     TArray<void*>& PreparingLevelNamesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "ContentBundleManager", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x9A8; confianca alta)
+    //  ancorado em `TimeSeconds` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9A8; confianca alta)
     double& RealTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x9DC; confianca media)
+    //  ancorado em `TimeSeconds` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9DC; confianca media)
     void*& RequestedOriginLocationField() const
     { return BrzCampoAncorado<void*>(this, "TimeSeconds", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4D0; confianca alta)
+    //  ancorado em `CanvasForDrawMaterialToRenderTarget` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D0; confianca alta)
     void*& SceneField() const
     { return BrzCampoAncorado<void*>(this, "CanvasForDrawMaterialToRenderTarget", 8); }
     BrzCampoPonteiro ServerStreamingLevelsVisibilityField() const
@@ -2367,54 +2367,54 @@ struct UWorld : public UPrimalWorld
     BrzCampoPonteiro StreamingLevelsToConsiderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.StreamingLevelsToConsider")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +57, medido na build 25535041
-    //  (offset absoluto medido: 0x409; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +57 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x409; confianca media)
     unsigned char& TickGroupField() const
     { return BrzCampoAncorado<unsigned char>(this, "DefaultPhysicsVolume", 57); }
     double& TimeSecondsField() const
     { return *GetNativePointerField<double*>(this, "UWorld.TimeSeconds"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimeSeconds` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x9A0; confianca alta)
+    //  ancorado em `TimeSeconds` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9A0; confianca alta)
     double& UnpausedTimeSecondsField() const
     { return BrzCampoAncorado<double>(this, "TimeSeconds", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3E0; confianca alta)
+    //  ancorado em `DefaultPhysicsVolume` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3E0; confianca alta)
     TArray<void*>& ViewLocationsRenderedLastFrameField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "DefaultPhysicsVolume", 16); }
     BrzCampoPonteiro WorldCompositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.WorldComposition")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +58, medido na build 25535041
-    //  (offset absoluto medido: 0x40A; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +58 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40A; confianca media)
     void*& WorldTypeField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 58); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3D8; confianca alta)
+    //  ancorado em `DefaultPhysicsVolume` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3D8; confianca alta)
     void*& bAllowDeferredPhysicsStateCreationField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 8); }
     BrzCampoPonteiro bAreConstraintsDirtyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorld.bAreConstraintsDirty")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ContentBundleManager` +200, medido na build 25535041
-    //  (offset absoluto medido: 0xAD8; confianca baixa)
+    //  ancorado em `ContentBundleManager` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAD8; confianca baixa)
     void*& bBroadcastLevelsChangedEventIsEnabledField() const
     { return BrzCampoAncorado<void*>(this, "ContentBundleManager", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultPhysicsVolume` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x410; confianca media)
+    //  ancorado em `DefaultPhysicsVolume` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x410; confianca media)
     void*& bIsBeingCleanedUpField() const
     { return BrzCampoAncorado<void*>(this, "DefaultPhysicsVolume", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingLevelsPrefix` +18, medido na build 25535041
-    //  (offset absoluto medido: 0x3AA; confianca alta)
+    //  ancorado em `StreamingLevelsPrefix` +18 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3AA; confianca alta)
     void*& bSupportsMakingInvisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "StreamingLevelsPrefix", 18); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingLevelsPrefix` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3A8; confianca alta)
+    //  ancorado em `StreamingLevelsPrefix` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3A8; confianca alta)
     void*& bSupportsMakingVisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "StreamingLevelsPrefix", 16); }
     BitFieldValue<bool, unsigned __int32> bWorldWasLoadedThisTick()

@@ -227,8 +227,8 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Niagara_HarvestFX` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x11C8; confianca alta)
+    //  ancorado em `Niagara_HarvestFX` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11C8; confianca alta)
     TArray<void*>& CachedShotsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "Niagara_HarvestFX", 8); }
     TArray<void*>& DamageImpactPointsField() const
@@ -272,8 +272,8 @@ struct AShooterWeapon_FlameThrower : public AShooterWeapon
     float& ShotDelayField() const
     { return *GetNativePointerField<float*>(this, "AShooterWeapon_FlameThrower.ShotDelay"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShotDelay` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x11DC; confianca alta)
+    //  ancorado em `ShotDelay` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11DC; confianca alta)
     void*& bAllowLocalExecutionField() const
     { return BrzCampoAncorado<void*>(this, "ShotDelay", 4); }
     BrzCampoPonteiro bMuzzlePSC_IsTPVField() const

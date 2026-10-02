@@ -147,7 +147,7 @@ struct APrimalStructureElevatorTrack : public APrimalStructureItemContainer
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureElevatorTrack.Tick(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalStructureElevatorTrack.Tick(float)", a0);

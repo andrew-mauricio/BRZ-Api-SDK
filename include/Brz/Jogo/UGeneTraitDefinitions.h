@@ -33,7 +33,7 @@ struct UGeneTraitDefinitions : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UGeneTraitDefinitions.BPGetCustomBlueprintData(FName,FFunctionParams_NoArrays,FFunctionParams_No
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=299+bytes40+chamadores=23+grafo=10/10]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=299+bytes40+chamadores=22+grafo=10/10]]
     bool BPGetCustomBlueprintData(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<bool, unsigned long long, void*, void*>(this, "UGeneTraitDefinitions.BPGetCustomBlueprintData(FName,FFunctionParams_NoArrays,FFunctionParams_NoArrays&)", a0, a1, a2);

@@ -69,7 +69,7 @@ struct UPrimalPlayerData : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalPlayerData.ApplyPersistentBuffsFromPersistentDatas(AShooterCharacter*,AShooterPlayerContr
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1473+bytes40+grafo=14/14]]
     BrzPonteiro ApplyPersistentBuffsFromPersistentDatas(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "UPrimalPlayerData.ApplyPersistentBuffsFromPersistentDatas(AShooterCharacter*,AShooterPlayerController*)", a0, a1);
@@ -77,7 +77,7 @@ struct UPrimalPlayerData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalPlayerData.ApplyToPlayerCharacter(AShooterPlayerState*,AShooterCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ApplyToPlayerCharacter(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "UPrimalPlayerData.ApplyToPlayerCharacter(AShooterPlayerState*,AShooterCharacter*)", a0, a1);
@@ -253,7 +253,7 @@ struct UPrimalPlayerData : public UObject
 
     // jogo_confirmou_dump
     //   UPrimalPlayerData.RefreshPersistentBuffs(AShooterCharacter*,bool,bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void RefreshPersistentBuffs(void* a0, bool a1, bool a2, bool a3) const
     {
         NativeCall<void, void*, bool, bool, bool>(this, "UPrimalPlayerData.RefreshPersistentBuffs(AShooterCharacter*,bool,bool,bool)", a0, a1, a2, a3);
@@ -314,18 +314,18 @@ struct UPrimalPlayerData : public UObject
     BrzCampoPonteiro BossEngramReferenceMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalPlayerData.BossEngramReferenceMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x700; confianca alta)
+    //  ancorado em `MyPersistentBuffDatas` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x700; confianca alta)
     float& LastXPWritePercentField() const
     { return BrzCampoAncorado<float>(this, "MyPersistentBuffDatas", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x6FC; confianca alta)
+    //  ancorado em `MyPersistentBuffDatas` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6FC; confianca alta)
     int& LocalPlayerIndexField() const
     { return BrzCampoAncorado<int>(this, "MyPersistentBuffDatas", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x708; confianca alta)
+    //  ancorado em `MyPersistentBuffDatas` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x708; confianca alta)
     void*& MissionTagToLatestMissionScoreField() const
     { return BrzCampoAncorado<void*>(this, "MyPersistentBuffDatas", 32); }
     BrzCampoPonteiro MyDataField() const
@@ -339,8 +339,8 @@ struct UPrimalPlayerData : public UObject
     bool& bAllowArkSeasonPassItemsField() const
     { return *GetNativePointerField<bool*>(this, "UPrimalPlayerData.bAllowArkSeasonPassItems"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyPersistentBuffDatas` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x6F8; confianca alta)
+    //  ancorado em `MyPersistentBuffDatas` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6F8; confianca alta)
     bool& bIsLocalPlayerField() const
     { return BrzCampoAncorado<bool>(this, "MyPersistentBuffDatas", 16); }
     BitFieldValue<bool, unsigned __int32> bAllowArkSeasonPassItems()

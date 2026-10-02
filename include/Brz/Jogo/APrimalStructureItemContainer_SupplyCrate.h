@@ -55,7 +55,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.Destroyed()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Destroyed() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.Destroyed()");
@@ -95,7 +95,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.LoseHealth()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void LoseHealth() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.LoseHealth()");
@@ -119,7 +119,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.OnRep_FinishedCrateMovement_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_FinishedCrateMovement_Implementation() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.OnRep_FinishedCrateMovement_Implementation()");
@@ -135,7 +135,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_SupplyCrate.SetAppliedBuff(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetAppliedBuff(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureItemContainer_SupplyCrate.SetAppliedBuff(bool)", a0);
@@ -151,7 +151,7 @@ struct APrimalStructureItemContainer_SupplyCrate : public APrimalStructureItemCo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_SupplyCrate.StartLosingHealth()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=407+grafo=5/5]]
     void StartLosingHealth() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_SupplyCrate.StartLosingHealth()");

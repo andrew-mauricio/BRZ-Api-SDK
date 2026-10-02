@@ -383,18 +383,18 @@ struct UActorChannel
     BrzCampoPonteiro ActorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorChannel.Actor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x78; confianca media)
+    //  ancorado em `Actor` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x78; confianca media)
     void*& ActorNetGUIDField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xA0; confianca media)
+    //  ancorado em `Actor` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA0; confianca media)
     void*& ActorReplicatorField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x9C; confianca media)
+    //  ancorado em `Actor` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9C; confianca media)
     void*& ChannelSubObjectDirtyCountField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 44); }
     BrzCampoPonteiro ConnectionField() const
@@ -402,38 +402,38 @@ struct UActorChannel
     BrzCampoPonteiro CreateSubObjectsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorChannel.CreateSubObjects")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x80; confianca media)
+    //  ancorado em `Actor` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x80; confianca media)
     float& CustomTimeDilationField() const
     { return BrzCampoAncorado<float>(this, "Actor", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x90; confianca media)
+    //  ancorado em `Actor` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x90; confianca media)
     double& LastUpdateTimeField() const
     { return BrzCampoAncorado<double>(this, "Actor", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x118; confianca baixa)
+    //  ancorado em `Actor` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x118; confianca baixa)
     void*& PendingGuidResolvesField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x110; confianca baixa)
+    //  ancorado em `Actor` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x110; confianca baixa)
     void*& QueuedBunchStartTimeField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x100; confianca baixa)
+    //  ancorado em `Actor` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x100; confianca baixa)
     void*& QueuedBunchesField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x88; confianca media)
+    //  ancorado em `Actor` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x88; confianca media)
     void*& RelevantTimeField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Actor` +64, medido na build 25535041
-    //  (offset absoluto medido: 0xB0; confianca media)
+    //  ancorado em `Actor` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB0; confianca media)
     void*& ReplicationMapField() const
     { return BrzCampoAncorado<void*>(this, "Actor", 64); }
 };

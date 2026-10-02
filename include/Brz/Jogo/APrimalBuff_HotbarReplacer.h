@@ -65,7 +65,7 @@ struct APrimalBuff_HotbarReplacer
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_HotbarReplacer.DebugPrint(FString)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro DebugPrint(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_HotbarReplacer.DebugPrint(FString)", const_cast<FString*>(&a0));
@@ -290,8 +290,8 @@ struct APrimalBuff_HotbarReplacer
     float& FrictionModifierField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff_HotbarReplacer.FrictionModifier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SkillProviderObject` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xC50; confianca alta)
+    //  ancorado em `SkillProviderObject` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC50; confianca alta)
     void*& GenerateItemsTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "SkillProviderObject", 8); }
     float& HarvestQuantityMultiplierField() const

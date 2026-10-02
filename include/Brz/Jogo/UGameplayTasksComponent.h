@@ -188,8 +188,8 @@ struct UGameplayTasksComponent
     BrzCampoPonteiro SimulatedTasksField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTasksComponent.SimulatedTasks")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TaskPriorityQueue` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xF8; confianca alta)
+    //  ancorado em `TaskPriorityQueue` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF8; confianca alta)
     void*& TaskEventsField() const
     { return BrzCampoAncorado<void*>(this, "TaskPriorityQueue", 16); }
     BrzCampoPonteiro TaskPriorityQueueField() const

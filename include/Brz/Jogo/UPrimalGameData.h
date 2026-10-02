@@ -160,7 +160,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.CallGeneTrait_BPGetCustomBlueprintData(FName,FFunctionParams_NoArrays,FFunctionP
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=299+bytes40+chamadores=8+grafo=10/10]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=299+bytes40+chamadores=7+grafo=10/10]]
     bool CallGeneTrait_BPGetCustomBlueprintData(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<bool, unsigned long long, void*, void*>(this, "UPrimalGameData.CallGeneTrait_BPGetCustomBlueprintData(FName,FFunctionParams_NoArrays,FFunctionParams_NoArrays&)", a0, a1, a2);
@@ -176,7 +176,7 @@ struct UPrimalGameData : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalGameData.CanTeamDamage(int,int,AActor*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=226+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool CanTeamDamage(int a0, int a1, void* a2) const
     {
         return NativeCall<bool, int, int, void*>(this, "UPrimalGameData.CanTeamDamage(int,int,AActor*)", a0, a1, a2);
@@ -773,13 +773,13 @@ struct UPrimalGameData : public UObject
     TArray<void*>& AbilityDescriptionsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.AbilityDescriptions"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AbilityDescriptions` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3428; confianca alta)
+    //  ancorado em `AbilityDescriptions` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3428; confianca alta)
     void*& AbilityDescriptionsMapField() const
     { return BrzCampoAncorado<void*>(this, "AbilityDescriptions", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AchievementIDs` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2A80; confianca alta)
+    //  ancorado em `AchievementIDs` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A80; confianca alta)
     void*& AchievementIDSetField() const
     { return BrzCampoAncorado<void*>(this, "AchievementIDs", 16); }
     TArray<void*>& AchievementIDsField() const
@@ -907,18 +907,18 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro CDOLiveUpdatesDataClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.CDOLiveUpdatesDataClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +264, medido na build 25535041
-    //  (offset absoluto medido: 0x3748; confianca baixa)
+    //  ancorado em `LoadedCustomCosmeticSkins` +264 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3748; confianca baixa)
     void*& CacheOwnedCustomCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 264); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x36F8; confianca baixa)
+    //  ancorado em `LoadedCustomCosmeticSkins` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36F8; confianca baixa)
     void*& CachedBlacklistedCustomCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x36A8; confianca media)
+    //  ancorado em `LoadedCustomCosmeticSkins` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36A8; confianca media)
     void*& CachedValidatedWhitelistCustomCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 104); }
     BrzCampoPonteiro CarriedNotifyBuffField() const
@@ -1040,8 +1040,8 @@ struct UPrimalGameData : public UObject
     TArray<UPrimalDinoEntry*>& DinoEntriesObjectsField() const
     { return *GetNativePointerField<TArray<UPrimalDinoEntry*>*>(this, "UPrimalGameData.DinoEntriesObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DefaultDynamicMaterialByteColors` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2928; confianca alta)
+    //  ancorado em `DefaultDynamicMaterialByteColors` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2928; confianca alta)
     void*& DinoEntryMapField() const
     { return BrzCampoAncorado<void*>(this, "DefaultDynamicMaterialByteColors", 16); }
     TArray<void*>& DinoGestationSetupsField() const
@@ -1095,15 +1095,15 @@ struct UPrimalGameData : public UObject
     TArray<UGenericDataListEntry*>& ExplorerNoteEntriesObjectsField() const
     { return *GetNativePointerField<TArray<UGenericDataListEntry*>*>(this, "UPrimalGameData.ExplorerNoteEntriesObjects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalExplorerNoteSpawns` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x2CE0; confianca media)
+    //  ancorado em `AdditionalExplorerNoteSpawns` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2CE0; confianca media)
     void*& ExplorerNoteIndexToNameMapField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalExplorerNoteSpawns", 96); }
     TArray<void*>& ExplorerNoteIntroIDsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGameData.ExplorerNoteIntroIDs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalExplorerNoteSpawns` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2C90; confianca media)
+    //  ancorado em `AdditionalExplorerNoteSpawns` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C90; confianca media)
     void*& ExplorerNoteNameToIndexMapField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalExplorerNoteSpawns", 16); }
     BrzCampoPonteiro ExplorerNoteXPBuffField() const
@@ -1205,8 +1205,8 @@ struct UPrimalGameData : public UObject
     UTexture2D*& ItemButtonRecentlySelectedBackgroundField() const
     { return *GetNativePointerField<UTexture2D**>(this, "UPrimalGameData.ItemButtonRecentlySelectedBackground"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GenericBatteryItemClass` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3178; confianca alta)
+    //  ancorado em `GenericBatteryItemClass` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3178; confianca alta)
     void*& ItemEngramMapField() const
     { return BrzCampoAncorado<void*>(this, "GenericBatteryItemClass", 8); }
     TArray<void*>& ItemQualityDefinitionsField() const
@@ -1234,13 +1234,13 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro MainNameWordListField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.MainNameWordList")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostRespawnUISound` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x33E8; confianca alta)
+    //  ancorado em `PostRespawnUISound` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x33E8; confianca alta)
     TArray<void*>& MapMovieOrderHelperField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "PostRespawnUISound", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MasterDyeList` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2878; confianca alta)
+    //  ancorado em `MasterDyeList` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2878; confianca alta)
     TArray<void*>& MasterColorTableField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "MasterDyeList", 16); }
     BrzCampoPonteiro MasterDyeListField() const
@@ -1532,25 +1532,25 @@ struct UPrimalGameData : public UObject
     float& TribeXPSharePercentField() const
     { return *GetNativePointerField<float*>(this, "UPrimalGameData.TribeXPSharePercent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GenericDroppedItemTemplateLowQuality` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x10F0; confianca alta)
+    //  ancorado em `GenericDroppedItemTemplateLowQuality` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10F0; confianca alta)
     TArray<void*>& TutorialDefinitionsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "GenericDroppedItemTemplateLowQuality", 8); }
     USoundBase*& TutorialDisplaySoundField() const
     { return *GetNativePointerField<USoundBase**>(this, "UPrimalGameData.TutorialDisplaySound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticEyebrowsCollection` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x2FD0; confianca media)
+    //  ancorado em `CustomCosmeticEyebrowsCollection` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2FD0; confianca media)
     void*& UISelectionIndexEyebrowMapField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticEyebrowsCollection", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticEyebrowsCollection` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2FC0; confianca alta)
+    //  ancorado em `CustomCosmeticEyebrowsCollection` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2FC0; confianca alta)
     void*& UISelectionIndexFacialHairMapField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticEyebrowsCollection", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomCosmeticEyebrowsCollection` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2FB0; confianca alta)
+    //  ancorado em `CustomCosmeticEyebrowsCollection` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2FB0; confianca alta)
     void*& UISelectionIndexHeadHairMapField() const
     { return BrzCampoAncorado<void*>(this, "CustomCosmeticEyebrowsCollection", 16); }
     UTexture2D*& UnknownIconField() const
@@ -1578,8 +1578,8 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro WheelFolderColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.WheelFolderColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x3690; confianca media)
+    //  ancorado em `LoadedCustomCosmeticSkins` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3690; confianca media)
     void*& WhiteListedCustomCosmeticModSkinsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 80); }
     UTexture2D*& WhiteTextureField() const
@@ -1649,8 +1649,8 @@ struct UPrimalGameData : public UObject
     BrzCampoPonteiro bForceStepDamageOnlyFoliageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGameData.bForceStepDamageOnlyFoliage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LoadedCustomCosmeticSkins` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x36A0; confianca media)
+    //  ancorado em `LoadedCustomCosmeticSkins` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36A0; confianca media)
     void*& bHasInitializedCosmeticsField() const
     { return BrzCampoAncorado<void*>(this, "LoadedCustomCosmeticSkins", 96); }
     BrzCampoPonteiro bHideRepairOnDinoToolTipField() const

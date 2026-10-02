@@ -125,11 +125,10 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)
-    // classe: a funcao mora em AShooterWeapon_FlameThrower, e AShooterWeapon_Activated herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetFirePosition(void* a0, void* a1) const
     {
-        NativeCall<void, void*, void*>(this, "AShooterWeapon_FlameThrower.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
+        NativeCall<void, void*, void*>(this, "AShooterWeapon_Activated.GetFirePosition(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
     }
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
@@ -207,11 +206,10 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.StartFire(bool)
-    // classe: a funcao mora em AShooterWeapon_FlameThrower, e AShooterWeapon_Activated herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartFire(bool a0) const
     {
-        NativeCall<void, bool>(this, "AShooterWeapon_FlameThrower.StartFire(bool)", a0);
+        NativeCall<void, bool>(this, "AShooterWeapon_Activated.StartFire(bool)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -232,11 +230,10 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Activated.Tick(float)
-    // classe: a funcao mora em AShooterWeapon_FlameThrower, e AShooterWeapon_Activated herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
-        NativeCall<void, float>(this, "AShooterWeapon_FlameThrower.Tick(float)", a0);
+        NativeCall<void, float>(this, "AShooterWeapon_Activated.Tick(float)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -260,8 +257,8 @@ struct AShooterWeapon_Activated : public AShooterWeapon_FlameThrower
     USoundCue*& EmptySoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "AShooterWeapon_Activated.EmptySound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MovementFireAnim` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1258; confianca alta)
+    //  ancorado em `MovementFireAnim` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1258; confianca alta)
     void*& EndActivationAnimHandleField() const
     { return BrzCampoAncorado<void*>(this, "MovementFireAnim", 16); }
     BrzCampoPonteiro FireDirectionField() const

@@ -100,8 +100,8 @@ struct UGameplayCameraComponent
     unsigned char& DetailModeField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayCameraComponent.DetailMode"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoActivateForPlayer` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x288; confianca alta)
+    //  ancorado em `AutoActivateForPlayer` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x288; confianca alta)
     void*& EvaluationContextField() const
     { return BrzCampoAncorado<void*>(this, "AutoActivateForPlayer", 8); }
     unsigned char& MobilityField() const
@@ -163,8 +163,8 @@ struct UGameplayCameraComponent
     BrzCampoPonteiro bIsActiveField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCameraComponent.bIsActive")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoActivateForPlayer` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x298; confianca alta)
+    //  ancorado em `AutoActivateForPlayer` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x298; confianca alta)
     void*& bIsCameraCutNextFrameField() const
     { return BrzCampoAncorado<void*>(this, "AutoActivateForPlayer", 24); }
     BrzCampoPonteiro bIsEditorOnlyField() const

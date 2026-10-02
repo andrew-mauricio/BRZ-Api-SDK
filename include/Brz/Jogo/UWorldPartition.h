@@ -310,23 +310,23 @@ struct UWorldPartition
     BrzCampoPonteiro ExternalDataLayerManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.ExternalDataLayerManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +37, medido na build 25535041
-    //  (offset absoluto medido: 0x60; confianca media)
+    //  ancorado em `DataLayersLogicOperator` +37 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x60; confianca media)
     void*& GuidField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 37); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +13, medido na build 25535041
-    //  (offset absoluto medido: 0x48; confianca media)
+    //  ancorado em `DataLayersLogicOperator` +13 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x48; confianca media)
     void*& InitStateField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 13); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +21, medido na build 25535041
-    //  (offset absoluto medido: 0x50; confianca media)
+    //  ancorado em `DataLayersLogicOperator` +21 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x50; confianca media)
     void*& InstanceTransformField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 21); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingPolicy` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xF0; confianca alta)
+    //  ancorado em `StreamingPolicy` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF0; confianca alta)
     void*& ReplayField() const
     { return BrzCampoAncorado<void*>(this, "StreamingPolicy", 16); }
     BrzCampoPonteiro RuntimeHashField() const
@@ -338,25 +338,25 @@ struct UWorldPartition
     BrzCampoPonteiro StreamingPolicyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.StreamingPolicy")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingPolicy` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xE8; confianca alta)
+    //  ancorado em `StreamingPolicy` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE8; confianca alta)
     void*& StreamingStateEpochField() const
     { return BrzCampoAncorado<void*>(this, "StreamingPolicy", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +29, medido na build 25535041
-    //  (offset absoluto medido: 0x58; confianca media)
+    //  ancorado em `DataLayersLogicOperator` +29 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x58; confianca media)
     void*& TargetGridHLODField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 29); }
     BrzCampoPonteiro TileVolumesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.TileVolumes")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +53, medido na build 25535041
-    //  (offset absoluto medido: 0x70; confianca media)
+    //  ancorado em `DataLayersLogicOperator` +53 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x70; confianca media)
     void*& TransformField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 53); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x40; confianca media)
+    //  ancorado em `DataLayersLogicOperator` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40; confianca media)
     void*& WorldField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 5); }
     //  no cache antigo este campo se chamava WorldAssetHLOD.
@@ -364,23 +364,23 @@ struct UWorldPartition
     BrzCampoPonteiro WorldAssetHLODField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.RuntimeHash")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +138, medido na build 25535041
-    //  (offset absoluto medido: 0xC5; confianca baixa)
+    //  ancorado em `DataLayersLogicOperator` +138 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC5; confianca baixa)
     void*& bCachedIsServerStreamingEnabledField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 138); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +140, medido na build 25535041
-    //  (offset absoluto medido: 0xC7; confianca baixa)
+    //  ancorado em `DataLayersLogicOperator` +140 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC7; confianca baixa)
     void*& bCachedIsServerStreamingOutEnabledField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 140); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +134, medido na build 25535041
-    //  (offset absoluto medido: 0xC1; confianca baixa)
+    //  ancorado em `DataLayersLogicOperator` +134 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC1; confianca baixa)
     void*& bCachedUseMakingInvisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 134); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +136, medido na build 25535041
-    //  (offset absoluto medido: 0xC3; confianca baixa)
+    //  ancorado em `DataLayersLogicOperator` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC3; confianca baixa)
     void*& bCachedUseMakingVisibleTransactionRequestsField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 136); }
     BrzCampoPonteiro bDisableContentBundlesField() const
@@ -388,8 +388,8 @@ struct UWorldPartition
     BrzCampoPonteiro bEnableStreamingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartition.bEnableStreaming")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DataLayersLogicOperator` +133, medido na build 25535041
-    //  (offset absoluto medido: 0xC0; confianca baixa)
+    //  ancorado em `DataLayersLogicOperator` +133 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC0; confianca baixa)
     void*& bStreamingInEnabledField() const
     { return BrzCampoAncorado<void*>(this, "DataLayersLogicOperator", 133); }
     BitFieldValue<bool, unsigned __int32> bDisableContentBundles()

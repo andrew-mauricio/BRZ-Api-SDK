@@ -165,8 +165,8 @@ struct UPrimalHarvestingComponent
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumOfPerInstanceCustomDataValues` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1E0; confianca alta)
+    //  ancorado em `NumOfPerInstanceCustomDataValues` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E0; confianca alta)
     void*& ActiveInstancedElementField() const
     { return BrzCampoAncorado<void*>(this, "NumOfPerInstanceCustomDataValues", 4); }
     BrzCampoPonteiro AdditionalComponentAttachmentsField() const
@@ -214,8 +214,8 @@ struct UPrimalHarvestingComponent
     float& ExhaustedDepletionTimeIntervalField() const
     { return *GetNativePointerField<float*>(this, "UPrimalHarvestingComponent.ExhaustedDepletionTimeInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHarvestHealth` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x114; confianca alta)
+    //  ancorado em `MaxHarvestHealth` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x114; confianca alta)
     void*& ExtraHarvestingXPMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "MaxHarvestHealth", 4); }
     BrzCampoPonteiro ForceAllowMeleeHarvestingOverridesField() const
@@ -251,8 +251,8 @@ struct UPrimalHarvestingComponent
     BrzCampoPonteiro OnComponentDeactivatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalHarvestingComponent.OnComponentDeactivated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamedDinoHarvestGiveHealthMultiplier` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1B0; confianca alta)
+    //  ancorado em `TamedDinoHarvestGiveHealthMultiplier` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B0; confianca alta)
     void*& OnHarvestingDepletedField() const
     { return BrzCampoAncorado<void*>(this, "TamedDinoHarvestGiveHealthMultiplier", 8); }
     BrzCampoPonteiro OnItemHarvestedField() const

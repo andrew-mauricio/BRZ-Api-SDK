@@ -165,7 +165,7 @@ struct UPrimalLocalProfile : public UObject
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalLocalProfile.GetArkTributePlayerData()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=347+bytes40+chamadores=5+grafo=3/3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=347+bytes40+chamadores=3+grafo=3/3]]
     BrzPonteiro GetArkTributePlayerData() const
     {
         return NativeCall<void*>(this, "UPrimalLocalProfile.GetArkTributePlayerData()");

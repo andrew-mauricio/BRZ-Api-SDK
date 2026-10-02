@@ -863,8 +863,8 @@ struct UShooterEngine
     TArray<void*>& HLODColorationColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UShooterEngine.HLODColorationColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StartupScreenTextBlock` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x12C8; confianca alta)
+    //  ancorado em `StartupScreenTextBlock` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12C8; confianca alta)
     void*& HandshakeInstallStateField() const
     { return BrzCampoAncorado<void*>(this, "StartupScreenTextBlock", 8); }
     TObjectPtr<UTexture2D>& HighFrequencyNoiseTextureField() const

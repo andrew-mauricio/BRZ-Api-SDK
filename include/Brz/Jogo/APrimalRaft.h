@@ -133,7 +133,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.EnsureDecayClocksInitialized()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro EnsureDecayClocksInitialized() const
     {
         return NativeCall<void*>(this, "APrimalRaft.EnsureDecayClocksInitialized()");
@@ -182,7 +182,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.HasAnchorOccupant()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro HasAnchorOccupant() const
     {
         return NativeCall<void*>(this, "APrimalRaft.HasAnchorOccupant()");
@@ -374,7 +374,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.Unanchor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro Unanchor() const
     {
         return NativeCall<void*>(this, "APrimalRaft.Unanchor()");
@@ -414,7 +414,7 @@ struct APrimalRaft : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalRaft.ValidateAnchorState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ValidateAnchorState() const
     {
         return NativeCall<void*>(this, "APrimalRaft.ValidateAnchorState()");
@@ -441,15 +441,15 @@ struct APrimalRaft : public APrimalDinoCharacter
     double& LastAnchorLiftedPersistentTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalRaft.LastAnchorLiftedPersistentTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchoredAutoDestroyTime` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2AE4; confianca alta)
+    //  ancorado em `AnchoredAutoDestroyTime` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AE4; confianca alta)
     int& LastFrameDisabledForcedVelcoityDirectionField() const
     { return BrzCampoAncorado<int>(this, "AnchoredAutoDestroyTime", 12); }
     double& LastRaftAllyRangePersistentTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalRaft.LastRaftAllyRangePersistentTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchoredAutoDestroyTime` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2ADC; confianca alta)
+    //  ancorado em `AnchoredAutoDestroyTime` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2ADC; confianca alta)
     float& LastTracedWaterZField() const
     { return BrzCampoAncorado<float>(this, "AnchoredAutoDestroyTime", 4); }
     UAudioComponent*& MovingSoundComponentField() const
@@ -459,15 +459,15 @@ struct APrimalRaft : public APrimalDinoCharacter
     double& NetworkCreationTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalRaft.NetworkCreationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchoredAutoDestroyTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2AE0; confianca alta)
+    //  ancorado em `AnchoredAutoDestroyTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AE0; confianca alta)
     int& NoWaterTriesField() const
     { return BrzCampoAncorado<int>(this, "AnchoredAutoDestroyTime", 8); }
     float& SurfaceAdjustmentZInterpSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalRaft.SurfaceAdjustmentZInterpSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRaftAllyRangePersistentTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2AB8; confianca alta)
+    //  ancorado em `LastRaftAllyRangePersistentTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AB8; confianca alta)
     double& TimeSinceLastFadeOutField() const
     { return BrzCampoAncorado<double>(this, "LastRaftAllyRangePersistentTime", 8); }
     float& UnAnchoredAutoDestroyTimeField() const

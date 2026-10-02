@@ -36,7 +36,7 @@ struct APrimalStructureSkeletalDoor : public APrimalStructureDoor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSkeletalDoor.OnBeginOverlap(UPrimitiveComponent*,AActor*,UPrimitiveComponent*,in
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnBeginOverlap(void* a0, void* a1, void* a2, int a3, bool a4, void* a5) const
     {
         NativeCall<void, void*, void*, void*, int, bool, void*>(this, "APrimalStructureSkeletalDoor.OnBeginOverlap(UPrimitiveComponent*,AActor*,UPrimitiveComponent*,int,bool,FHitResult&)", a0, a1, a2, a3, a4, a5);
@@ -60,7 +60,7 @@ struct APrimalStructureSkeletalDoor : public APrimalStructureDoor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureSkeletalDoor.Tick(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalStructureSkeletalDoor.Tick(float)", a0);

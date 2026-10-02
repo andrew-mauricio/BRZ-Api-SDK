@@ -279,11 +279,10 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.Link(FArchive&,bool)
-    // classe: a funcao mora em UStruct, e UClass herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Link(void* a0, bool a1) const
     {
-        NativeCall<void, void*, bool>(this, "UStruct.Link(FArchive&,bool)", a0, a1);
+        NativeCall<void, void*, bool>(this, "UClass.Link(FArchive&,bool)", a0, a1);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -296,20 +295,18 @@ struct UClass : public UStruct
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.PostInitProperties()
-    // classe: a funcao mora em UObject, e UClass herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitProperties() const
     {
-        NativeCall<void>(this, "UObject.PostInitProperties()");
+        NativeCall<void>(this, "UClass.PostInitProperties()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UClass.PostLoad()
-    // classe: a funcao mora em UStruct, e UClass herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostLoad() const
     {
-        NativeCall<void>(this, "UStruct.PostLoad()");
+        NativeCall<void>(this, "UClass.PostLoad()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

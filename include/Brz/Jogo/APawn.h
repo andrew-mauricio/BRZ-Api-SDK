@@ -499,8 +499,8 @@ struct APawn : public AActor
     BrzCampoPonteiro AIControllerClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APawn.AIControllerClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreviousController` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4D0; confianca alta)
+    //  ancorado em `PreviousController` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D0; confianca alta)
     float& AllowedYawErrorField() const
     { return BrzCampoAncorado<float>(this, "PreviousController", 8); }
     FieldArray<char> AutoPossessAIField() const
@@ -510,8 +510,8 @@ struct APawn : public AActor
     float& BaseEyeHeightField() const
     { return *GetNativePointerField<float*>(this, "APawn.BaseEyeHeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewPitch` +2, medido na build 25535041
-    //  (offset absoluto medido: 0x4A4; confianca alta)
+    //  ancorado em `RemoteViewPitch` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A4; confianca alta)
     float& BlendedReplayViewPitchField() const
     { return BrzCampoAncorado<float>(this, "RemoteViewPitch", 2); }
     BrzCampoPonteiro ControlInputVectorField() const

@@ -795,7 +795,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.DeactivateMissionForPlayerCharacter(AShooterCharacter*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static void DeactivateMissionForPlayerCharacter(void* a0, bool a1)
     {
         NativeCall<void, void*, bool>(nullptr, "UVictoryCore.DeactivateMissionForPlayerCharacter(AShooterCharacter*,bool)", a0, a1);
@@ -2111,7 +2111,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetPlayerHeatLevel(UObject*,UE::Math::TVector<double>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
     static int GetPlayerHeatLevel(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.GetPlayerHeatLevel(UObject*,UE::Math::TVector<double>&)", a0, a1);
@@ -2127,7 +2127,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.GetPlayerUnderwaterHeatLevel(UObject*,UE::Math::TVector<double>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=111+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     static int GetPlayerUnderwaterHeatLevel(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.GetPlayerUnderwaterHeatLevel(UObject*,UE::Math::TVector<double>&)", a0, a1);
@@ -2783,7 +2783,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsChildOfClassesSoftRefT<AActor>(TSubclassOf<UObject>,TArray<TSoftClassPtr<AActor>,
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+chamadores=2+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+grafo=4/4]]
     static int IsChildOfClassesSoftRefT_AActor_(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.IsChildOfClassesSoftRefT<AActor>(TSubclassOf<UObject>,TArray<TSoftClassPtr<AActor>,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -2823,7 +2823,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.IsChildOfClassesSoftRefT<UObject>(TSubclassOf<UObject>,TArray<TSoftClassPtr<UObject
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+chamadores=5+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=772+bytes40+chamadores=7+grafo=4/4]]
     static int IsChildOfClassesSoftRefT_UObject_(void* a0, void* a1)
     {
         return NativeCall<int, void*, void*>(nullptr, "UVictoryCore.IsChildOfClassesSoftRefT<UObject>(TSubclassOf<UObject>,TArray<TSoftClassPtr<UObject>,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -3631,7 +3631,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OverlappingActors(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,UE::Ma
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=301+chamadores=17+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=301+grafo=4/4]]
     static bool OverlappingActors(void* a0, void* a1, void* a2, float a3, int a4, void* a5, unsigned long long a6, bool a7)
     {
         return NativeCall<bool, void*, void*, void*, float, int, void*, unsigned long long, bool>(nullptr, "UVictoryCore.OverlappingActors(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>,float,int,AActor*,FName,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -3647,7 +3647,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.OverlappingActorsTrace(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,U
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=298+chamadores=7+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=298+chamadores=2+grafo=4/4]]
     static bool OverlappingActorsTrace(void* a0, void* a1, void* a2, float a3, int a4, void* a5, unsigned long long a6, bool a7)
     {
         return NativeCall<bool, void*, void*, void*, float, int, void*, unsigned long long, bool>(nullptr, "UVictoryCore.OverlappingActorsTrace(UWorld*,TArray<FOverlapResult,TSizedDefaultAllocator<32>>&,UE::Math::TVector<double>,float,ECollisionChannel,AActor*,FName,bool)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -4575,7 +4575,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.SetExtraCmdLine(FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     static void SetExtraCmdLine(const FString& a0)
     {
         NativeCall<void, void*>(nullptr, "UVictoryCore.SetExtraCmdLine(FString&)", const_cast<FString*>(&a0));
@@ -5239,7 +5239,7 @@ struct UVictoryCore : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UVictoryCore.UnPauseTimer(UObject*,FString)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=377+bytes40+chamadores=2+grafo=11/11]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=377+bytes40+grafo=11/11]]
     static void UnPauseTimer(void* a0, const FString& a1)
     {
         NativeCall<void, void*, void*>(nullptr, "UVictoryCore.UnPauseTimer(UObject*,FString)", a0, const_cast<FString*>(&a1));

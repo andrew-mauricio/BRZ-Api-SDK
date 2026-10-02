@@ -220,8 +220,8 @@ struct UPrimalRichTextBlock
     BrzCampoPonteiro bDontRenderHighlightField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalRichTextBlock.bDontRenderHighlight")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CenterVertically` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x229; confianca alta)
+    //  ancorado em `CenterVertically` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x229; confianca alta)
     void*& bIgnoreParsingField() const
     { return BrzCampoAncorado<void*>(this, "CenterVertically", 1); }
     BrzCampoPonteiro bIsEnabledField() const

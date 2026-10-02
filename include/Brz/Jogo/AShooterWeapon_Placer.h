@@ -271,8 +271,8 @@ struct AShooterWeapon_Placer : public AShooterWeapon
     BrzCampoPonteiro bSkipStartPlacingCheatCheckField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Placer.bSkipStartPlacingCheatCheck")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bWaitingForPlacement` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x119F; confianca alta)
+    //  ancorado em `bWaitingForPlacement` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x119F; confianca alta)
     bool& bStructureCanBePlacedField() const
     { return BrzCampoAncorado<bool>(this, "bWaitingForPlacement", 1); }
     BrzCampoPonteiro bUseAnimNotifyToPlaceStructureField() const

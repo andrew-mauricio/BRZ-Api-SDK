@@ -219,13 +219,13 @@ struct UPrimalShipSailComponent
     float& FireIntensityField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.FireIntensity"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UnfurlSoundOpenPercentTriggers` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2C8; confianca alta)
+    //  ancorado em `UnfurlSoundOpenPercentTriggers` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C8; confianca alta)
     void*& HasTriggeredUnfurlAtThresholdIndexField() const
     { return BrzCampoAncorado<void*>(this, "UnfurlSoundOpenPercentTriggers", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastRiggingPegOffsetRight` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x518; confianca media)
+    //  ancorado em `MastRiggingPegOffsetRight` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x518; confianca media)
     void*& InitialModSailAttachmentTimerField() const
     { return BrzCampoAncorado<void*>(this, "MastRiggingPegOffsetRight", 104); }
     BrzCampoPonteiro IsReservedToBeMannedField() const
@@ -273,13 +273,13 @@ struct UPrimalShipSailComponent
     float& MinWindEffectivenessSteeringForceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.MinWindEffectivenessSteeringForceMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDontRefreshSeatsLocations` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x5B4; confianca alta)
+    //  ancorado em `bDontRefreshSeatsLocations` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B4; confianca alta)
     void*& ModifiedSailSeatSocketNameLField() const
     { return BrzCampoAncorado<void*>(this, "bDontRefreshSeatsLocations", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDontRefreshSeatsLocations` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x5AC; confianca alta)
+    //  ancorado em `bDontRefreshSeatsLocations` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5AC; confianca alta)
     void*& ModifiedSailSeatSocketNameRField() const
     { return BrzCampoAncorado<void*>(this, "bDontRefreshSeatsLocations", 4); }
     float& NPCUnboardDistanceField() const
@@ -303,8 +303,8 @@ struct UPrimalShipSailComponent
     float& RaftRiderSailRotationRateField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.RaftRiderSailRotationRate"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NPC_UseLocation_OffsetFromMast` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x244; confianca alta)
+    //  ancorado em `NPC_UseLocation_OffsetFromMast` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x244; confianca alta)
     float& RepairCheckIntervalField() const
     { return BrzCampoAncorado<float>(this, "NPC_UseLocation_OffsetFromMast", 4); }
     float& RepairSailAmountRemainingField() const
@@ -400,8 +400,8 @@ struct UPrimalShipSailComponent
     float& Sail_OpenSpeed_MultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalShipSailComponent.Sail_OpenSpeed_Multiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastRiggingPegOffsetRight` +100, medido na build 25535041
-    //  (offset absoluto medido: 0x514; confianca media)
+    //  ancorado em `MastRiggingPegOffsetRight` +100 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x514; confianca media)
     void*& Sail_PreviousCanvasHealthField() const
     { return BrzCampoAncorado<void*>(this, "MastRiggingPegOffsetRight", 100); }
     BrzCampoPonteiro Sail_StartEndPercentOfThrottlePerSailField() const
@@ -495,8 +495,8 @@ struct UPrimalShipSailComponent
     BrzCampoPonteiro bHasMultiUseEntriesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipSailComponent.bHasMultiUseEntries")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NPCUnboardDistance` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x230; confianca alta)
+    //  ancorado em `NPCUnboardDistance` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x230; confianca alta)
     void*& bHasPlayedTautSoundField() const
     { return BrzCampoAncorado<void*>(this, "NPCUnboardDistance", 4); }
     BrzCampoPonteiro bHideLadderControlsField() const

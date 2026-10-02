@@ -586,13 +586,13 @@ struct UPrimalInventoryComponent_StorageInterface
     float& CachedItemUpdateDeltaProcessingTimerLengthField() const
     { return *GetNativePointerField<float*>(this, "UPrimalInventoryComponent_StorageInterface.CachedItemUpdateDeltaProcessingTimerLength"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessItems` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x8B0; confianca media)
+    //  ancorado em `WirelessItems` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8B0; confianca media)
     void*& CachedItemUpdateDeltasField() const
     { return BrzCampoAncorado<void*>(this, "WirelessItems", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessItems` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x8A8; confianca media)
+    //  ancorado em `WirelessItems` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8A8; confianca media)
     void*& CachedItemUpdateHandleField() const
     { return BrzCampoAncorado<void*>(this, "WirelessItems", 80); }
     TArray<void*>& CheatInventoryItemsField() const
@@ -878,8 +878,8 @@ struct UPrimalInventoryComponent_StorageInterface
     BrzCampoPonteiro WirelessItemRangesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent_StorageInterface.WirelessItemRanges")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxLinkedContainers` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xA20; confianca alta)
+    //  ancorado em `MaxLinkedContainers` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA20; confianca alta)
     void*& WirelessItemUpdateTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "MaxLinkedContainers", 8); }
     BrzCampoPonteiro WirelessItemsField() const

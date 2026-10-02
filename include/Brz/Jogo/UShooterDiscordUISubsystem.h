@@ -142,8 +142,8 @@ struct UShooterDiscordUISubsystem
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +248, medido na build 25535041
-    //  (offset absoluto medido: 0x1D8; confianca baixa)
+    //  ancorado em `BackendSubsystem` +248 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D8; confianca baixa)
     void*& ActiveDiscordConversationUserIdField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 248); }
     BrzCampoPonteiro BackendSubsystemField() const
@@ -151,13 +151,13 @@ struct UShooterDiscordUISubsystem
     BrzCampoPonteiro DiscordUISessionActivityInvitesByMessageIdField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDiscordUISubsystem.DiscordUISessionActivityInvitesByMessageId")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x138; confianca media)
+    //  ancorado em `BackendSubsystem` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x138; confianca media)
     void*& DiscordUIUnreadConversationUserIdByMessageIdField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xE8; confianca media)
+    //  ancorado em `BackendSubsystem` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE8; confianca media)
     void*& DiscordUIUnreadCountsField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 8); }
     BrzCampoPonteiro OnActivityInviteField() const
@@ -183,8 +183,8 @@ struct UShooterDiscordUISubsystem
     BrzCampoPonteiro OnUserUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UShooterDiscordUISubsystem.OnUserUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BackendSubsystem` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x188; confianca baixa)
+    //  ancorado em `BackendSubsystem` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x188; confianca baixa)
     void*& PendingDiscordUIUnreadSuppressedConversationUserIdByMessageIdField() const
     { return BrzCampoAncorado<void*>(this, "BackendSubsystem", 168); }
 };

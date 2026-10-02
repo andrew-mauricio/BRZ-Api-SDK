@@ -240,8 +240,8 @@ struct UGameplayCueManager
     BrzCampoPonteiro EditorGameplayCueObjectLibraryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueManager.EditorGameplayCueObjectLibrary")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EditorGameplayCueObjectLibrary` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xE8; confianca media)
+    //  ancorado em `EditorGameplayCueObjectLibrary` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE8; confianca media)
     void*& GameplayCueAssetHandleField() const
     { return BrzCampoAncorado<void*>(this, "EditorGameplayCueObjectLibrary", 80); }
     BrzCampoPonteiro GameplayCueClassesForPreallocationField() const
@@ -259,13 +259,13 @@ struct UGameplayCueManager
     BrzCampoPonteiro RuntimeGameplayCueObjectLibraryField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayCueManager.RuntimeGameplayCueObjectLibrary")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EditorGameplayCueObjectLibrary` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xF8; confianca media)
+    //  ancorado em `EditorGameplayCueObjectLibrary` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF8; confianca media)
     void*& StreamableManagerField() const
     { return BrzCampoAncorado<void*>(this, "EditorGameplayCueObjectLibrary", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EditorGameplayCueObjectLibrary` +328, medido na build 25535041
-    //  (offset absoluto medido: 0x1E0; confianca baixa)
+    //  ancorado em `EditorGameplayCueObjectLibrary` +328 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E0; confianca baixa)
     void*& TranslationManagerField() const
     { return BrzCampoAncorado<void*>(this, "EditorGameplayCueObjectLibrary", 328); }
 };

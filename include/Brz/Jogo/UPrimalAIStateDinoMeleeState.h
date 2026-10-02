@@ -73,7 +73,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.EndAnimationState(FName,ENetRole)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro EndAnimationState(unsigned long long a0, int a1) const
     {
         return NativeCall<void*, unsigned long long, int>(this, "UPrimalAIStateDinoMeleeState.EndAnimationState(FName,ENetRole)", a0, a1);
@@ -97,7 +97,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.OnEnd()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnEnd() const
     {
         return NativeCall<void*>(this, "UPrimalAIStateDinoMeleeState.OnEnd()");
@@ -105,7 +105,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.OnHitActor(FHitResult&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro OnHitActor(void* a0) const
     {
         return NativeCall<void*, void*>(this, "UPrimalAIStateDinoMeleeState.OnHitActor(FHitResult&)", a0);
@@ -129,7 +129,7 @@ struct UPrimalAIStateDinoMeleeState
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAIStateDinoMeleeState.TickAnimationState(float,FName,ENetRole)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TickAnimationState(float a0, unsigned long long a1, int a2) const
     {
         return NativeCall<void*, float, unsigned long long, int>(this, "UPrimalAIStateDinoMeleeState.TickAnimationState(float,FName,ENetRole)", a0, a1, a2);

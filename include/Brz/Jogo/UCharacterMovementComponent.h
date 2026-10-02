@@ -1542,13 +1542,13 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro AvoidanceGroupField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.AvoidanceGroup")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FormerBaseVelocityDecayHalfLife` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x5B8; confianca media)
+    //  ancorado em `FormerBaseVelocityDecayHalfLife` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B8; confianca media)
     float& AvoidanceLockTimerField() const
     { return BrzCampoAncorado<float>(this, "FormerBaseVelocityDecayHalfLife", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FormerBaseVelocityDecayHalfLife` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x5A0; confianca alta)
+    //  ancorado em `FormerBaseVelocityDecayHalfLife` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5A0; confianca alta)
     void*& AvoidanceLockVelocityField() const
     { return BrzCampoAncorado<void*>(this, "FormerBaseVelocityDecayHalfLife", 16); }
     int& AvoidanceUIDField() const
@@ -1572,15 +1572,15 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     float& BuoyancyField() const
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.Buoyancy"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x640; confianca media)
+    //  ancorado em `PendingLaunchVelocity` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x640; confianca media)
     FHitResult& CachedProjectedNavMeshHitResultField() const
     { return BrzCampoAncorado<FHitResult>(this, "PendingLaunchVelocity", 56); }
     TObjectPtr<ACharacter>& CharacterOwnerField() const
     { return *GetNativePointerField<TObjectPtr<ACharacter>*>(this, "UCharacterMovementComponent.CharacterOwner"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostPhysicsTickFunction` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca media)
+    //  ancorado em `PostPhysicsTickFunction` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca media)
     void*& ClientPredictionDataField() const
     { return BrzCampoAncorado<void*>(this, "PostPhysicsTickFunction", 56); }
     float& CrouchedHalfHeightField() const
@@ -1592,8 +1592,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro CustomMovementModeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.CustomMovementMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +344, medido na build 25535041
-    //  (offset absoluto medido: 0x760; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +344 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x760; confianca baixa)
     void*& DecayingFormerBaseVelocityField() const
     { return BrzCampoAncorado<void*>(this, "PendingLaunchVelocity", 344); }
     unsigned char& DefaultLandMovementModeField() const
@@ -1629,13 +1629,13 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     float& JumpZVelocityField() const
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.JumpZVelocity"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +320, medido na build 25535041
-    //  (offset absoluto medido: 0x748; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +320 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x748; confianca baixa)
     FName& LastServerMovementBaseBoneNameField() const
     { return BrzCampoAncorado<FName>(this, "PendingLaunchVelocity", 320); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogInputModifier` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x400; confianca alta)
+    //  ancorado em `AnalogInputModifier` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x400; confianca alta)
     double& LastStuckWarningTimeField() const
     { return BrzCampoAncorado<double>(this, "AnalogInputModifier", 8); }
     BrzCampoPonteiro LastUpdateLocationField() const
@@ -1677,8 +1677,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     float& MaxOutOfWaterStepHeightField() const
     { return *GetNativePointerField<float*>(this, "UCharacterMovementComponent.MaxOutOfWaterStepHeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +336, medido na build 25535041
-    //  (offset absoluto medido: 0x758; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +336 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x758; confianca baixa)
     float& MaxServerClientErrorWhileFallingField() const
     { return BrzCampoAncorado<float>(this, "PendingLaunchVelocity", 336); }
     int& MaxSimulationIterationsField() const
@@ -1740,18 +1740,18 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     int& NetworkSmoothingModeField() const
     { return *GetNativePointerField<int*>(this, "UCharacterMovementComponent.NetworkSmoothingMode"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogInputModifier` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x40C; confianca alta)
+    //  ancorado em `AnalogInputModifier` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40C; confianca alta)
     int& NumJumpApexAttemptsField() const
     { return BrzCampoAncorado<int>(this, "AnalogInputModifier", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GroundFriction` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x280; confianca media)
+    //  ancorado em `GroundFriction` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x280; confianca media)
     void*& OldBaseLocationField() const
     { return BrzCampoAncorado<void*>(this, "GroundFriction", 44); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GroundFriction` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x260; confianca alta)
+    //  ancorado em `GroundFriction` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x260; confianca alta)
     void*& OldBaseQuatField() const
     { return BrzCampoAncorado<void*>(this, "GroundFriction", 12); }
     float& OutofWaterZField() const
@@ -1789,8 +1789,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     double& ServerLastTransformUpdateTimeStampField() const
     { return *GetNativePointerField<double*>(this, "UCharacterMovementComponent.ServerLastTransformUpdateTimeStamp"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostPhysicsTickFunction` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x810; confianca media)
+    //  ancorado em `PostPhysicsTickFunction` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x810; confianca media)
     void*& ServerPredictionDataField() const
     { return BrzCampoAncorado<void*>(this, "PostPhysicsTickFunction", 64); }
     float& StandingDownwardForceScaleField() const
@@ -1798,8 +1798,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro StayBasedInAirHeightField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.StayBasedInAirHeight")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogInputModifier` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x408; confianca alta)
+    //  ancorado em `AnalogInputModifier` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x408; confianca alta)
     void*& StuckWarningCountSinceNotifyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogInputModifier", 16); }
     float& TouchForceFactorField() const
@@ -1823,8 +1823,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro bBasedMovementIgnorePhysicsBaseField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bBasedMovementIgnorePhysicsBase")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +332, medido na build 25535041
-    //  (offset absoluto medido: 0x754; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +332 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x754; confianca baixa)
     bool& bCanTrustClientOnLandingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 332); }
     BrzCampoPonteiro bCanWalkOffLedgesField() const
@@ -1874,18 +1874,18 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro bJustTeleportedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bJustTeleported")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +328, medido na build 25535041
-    //  (offset absoluto medido: 0x750; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +328 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x750; confianca baixa)
     bool& bLastClientIsFallingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 328); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +329, medido na build 25535041
-    //  (offset absoluto medido: 0x751; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +329 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x751; confianca baixa)
     bool& bLastServerIsFallingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 329); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +330, medido na build 25535041
-    //  (offset absoluto medido: 0x752; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +330 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x752; confianca baixa)
     bool& bLastServerIsWalkingField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 330); }
     BrzCampoPonteiro bMaintainHorizontalGroundVelocityField() const
@@ -1893,8 +1893,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro bMovementInProgressField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bMovementInProgress")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `JumpOffJumpZFactor` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x1E0; confianca alta)
+    //  ancorado em `JumpOffJumpZFactor` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E0; confianca alta)
     bool& bMovementModeDirtyField() const
     { return BrzCampoAncorado<bool>(this, "JumpOffJumpZFactor", 28); }
     BrzCampoPonteiro bNetworkAlwaysReplicateTransformUpdateTimestampField() const
@@ -1936,8 +1936,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro bShrinkProxyCapsuleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bShrinkProxyCapsule")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +333, medido na build 25535041
-    //  (offset absoluto medido: 0x755; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +333 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x755; confianca baixa)
     bool& bSimulatedClientWalkingHasFoundValidBaseField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 333); }
     BrzCampoPonteiro bStayBasedInAirField() const
@@ -1945,8 +1945,8 @@ struct UCharacterMovementComponent : public UPawnMovementComponent
     BrzCampoPonteiro bSweepWhileNavWalkingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UCharacterMovementComponent.bSweepWhileNavWalking")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingLaunchVelocity` +331, medido na build 25535041
-    //  (offset absoluto medido: 0x753; confianca baixa)
+    //  ancorado em `PendingLaunchVelocity` +331 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x753; confianca baixa)
     bool& bTeleportedSinceLastUpdateField() const
     { return BrzCampoAncorado<bool>(this, "PendingLaunchVelocity", 331); }
     BrzCampoPonteiro bTouchForceScaledToMassField() const

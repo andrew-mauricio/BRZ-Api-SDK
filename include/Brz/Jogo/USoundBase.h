@@ -117,8 +117,8 @@ struct USoundBase : public UObject
     BrzCampoPonteiro ConcurrencySetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "USoundBase.ConcurrencySet")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VirtualizationMode` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x40; confianca alta)
+    //  ancorado em `VirtualizationMode` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x40; confianca alta)
     void*& CurrentPlayCountField() const
     { return BrzCampoAncorado<void*>(this, "VirtualizationMode", 7); }
     float& DurationField() const

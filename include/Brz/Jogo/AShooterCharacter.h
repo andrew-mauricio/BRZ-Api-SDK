@@ -82,7 +82,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.AddStoredCounter(FString&,double,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddStoredCounter(const FString& a0, double a1, int a2) const
     {
         return NativeCall<void*, void*, double, int>(this, "AShooterCharacter.AddStoredCounter(FString&,double,int)", const_cast<FString*>(&a0), a1, a2);
@@ -182,7 +182,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // jogo_confirmou_dump
     //   AShooterCharacter.ApplyBoneModifiers()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1384+bytes40+grafo=12/12]]
     void ApplyBoneModifiers() const
     {
         NativeCall<void>(this, "AShooterCharacter.ApplyBoneModifiers()");
@@ -262,7 +262,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.BPCanImplantSuicide()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool BPCanImplantSuicide() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.BPCanImplantSuicide()");
@@ -430,7 +430,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.CanDoUsableHarvesting()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro CanDoUsableHarvesting() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.CanDoUsableHarvesting()");
@@ -446,7 +446,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.CanEquipWeapons()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool CanEquipWeapons() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.CanEquipWeapons()");
@@ -494,7 +494,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.CancelWeaponHideForEmote()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void CancelWeaponHideForEmote() const
     {
         NativeCall<void>(this, "AShooterCharacter.CancelWeaponHideForEmote()");
@@ -662,7 +662,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ClientPlayHarvestAnim_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientPlayHarvestAnim_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.ClientPlayHarvestAnim_Implementation()");
@@ -782,7 +782,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.DetachGrapHookCable_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DetachGrapHookCable_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.DetachGrapHookCable_Implementation()");
@@ -838,7 +838,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.FellOutOfWorld(UDamageType&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FellOutOfWorld(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterCharacter.FellOutOfWorld(UDamageType&)", a0);
@@ -846,7 +846,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.FinalLoadedFromSaveGame()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void FinalLoadedFromSaveGame() const
     {
         NativeCall<void>(this, "AShooterCharacter.FinalLoadedFromSaveGame()");
@@ -862,7 +862,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.FinishSpawnIntro()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=360+grafo=6/6]]
     void FinishSpawnIntro() const
     {
         NativeCall<void>(this, "AShooterCharacter.FinishSpawnIntro()");
@@ -942,7 +942,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetActorSoundAttachmentComponentOverride(USceneComponent*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     USceneComponent* GetActorSoundAttachmentComponentOverride(void* a0) const
     {
         return NativeCall<USceneComponent*, void*>(this, "AShooterCharacter.GetActorSoundAttachmentComponentOverride(USceneComponent*)", a0);
@@ -990,7 +990,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetAlternateStandingAnim(float&,float&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAlternateStandingAnim(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterCharacter.GetAlternateStandingAnim(float&,float&)", a0, a1);
@@ -1014,7 +1014,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetBasedOnDino(bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     APrimalDinoCharacter* GetBasedOnDino(bool a0, bool a1) const
     {
         return NativeCall<APrimalDinoCharacter*, bool, bool>(this, "AShooterCharacter.GetBasedOnDino(bool,bool)", a0, a1);
@@ -1022,7 +1022,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetBasedOnDinoConst()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UObject* GetBasedOnDinoConst() const
     {
         return NativeCall<UObject*>(this, "AShooterCharacter.GetBasedOnDinoConst()");
@@ -1030,7 +1030,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetBasedOnRaft(bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetBasedOnRaft(bool a0, bool a1) const
     {
         return NativeCall<void*, bool, bool>(this, "AShooterCharacter.GetBasedOnRaft(bool,bool)", a0, a1);
@@ -1086,7 +1086,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.GetControlledStandingMountedTurret()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=286+chamadores=4]]
     UObject* GetControlledStandingMountedTurret() const
     {
         return NativeCall<UObject*>(this, "AShooterCharacter.GetControlledStandingMountedTurret()");
@@ -1150,7 +1150,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetDinoRidingAnimation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UAnimSequence* GetDinoRidingAnimation() const
     {
         return NativeCall<UAnimSequence*>(this, "AShooterCharacter.GetDinoRidingAnimation()");
@@ -1158,7 +1158,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetDinoRidingMoveAnimation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UAnimSequence* GetDinoRidingMoveAnimation() const
     {
         return NativeCall<UAnimSequence*>(this, "AShooterCharacter.GetDinoRidingMoveAnimation()");
@@ -1246,7 +1246,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetFacialHairMorphTargetValue()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetFacialHairMorphTargetValue() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.GetFacialHairMorphTargetValue()");
@@ -1286,7 +1286,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetHeadHairMorphTargetValue()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetHeadHairMorphTargetValue() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.GetHeadHairMorphTargetValue()");
@@ -1358,7 +1358,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetMaxSpeedModifier(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMaxSpeedModifier(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterCharacter.GetMaxSpeedModifier(bool)", a0);
@@ -1382,7 +1382,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetOrbitCamTargetLocation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetOrbitCamTargetLocation() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.GetOrbitCamTargetLocation()");
@@ -1438,7 +1438,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetPlayerData()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     UPrimalPlayerData* GetPlayerData() const
     {
         return NativeCall<UPrimalPlayerData*>(this, "AShooterCharacter.GetPlayerData()");
@@ -1470,7 +1470,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetRiddenStasisRangeMultiplier()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetRiddenStasisRangeMultiplier() const
     {
         return NativeCall<float>(this, "AShooterCharacter.GetRiddenStasisRangeMultiplier()");
@@ -1478,7 +1478,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetRidingDinoAnimSpeedRatio()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetRidingDinoAnimSpeedRatio() const
     {
         return NativeCall<float>(this, "AShooterCharacter.GetRidingDinoAnimSpeedRatio()");
@@ -1486,7 +1486,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetSeatingAnimation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UAnimSequence* GetSeatingAnimation() const
     {
         return NativeCall<UAnimSequence*>(this, "AShooterCharacter.GetSeatingAnimation()");
@@ -1526,7 +1526,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.GetSpawnedForController()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     UObject* GetSpawnedForController() const
     {
         return NativeCall<UObject*>(this, "AShooterCharacter.GetSpawnedForController()");
@@ -1542,7 +1542,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetStoredCooldownPerClass(FName,double)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetStoredCooldownPerClass(unsigned long long a0, double a1) const
     {
         return NativeCall<void*, unsigned long long, double>(this, "AShooterCharacter.GetStoredCooldownPerClass(FName,double)", a0, a1);
@@ -1642,7 +1642,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GetUnstasisViewerSiblingActor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AActor* GetUnstasisViewerSiblingActor() const
     {
         return NativeCall<AActor*>(this, "AShooterCharacter.GetUnstasisViewerSiblingActor()");
@@ -1650,7 +1650,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.GetUsedDefaultWeapon()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetUsedDefaultWeapon() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.GetUsedDefaultWeapon()");
@@ -1706,7 +1706,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.GiveMapWeapon()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=660+chamadores=2+grafo=5/5]]
     void GiveMapWeapon() const
     {
         NativeCall<void>(this, "AShooterCharacter.GiveMapWeapon()");
@@ -1754,7 +1754,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.HideWeapon()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void HideWeapon() const
     {
         NativeCall<void>(this, "AShooterCharacter.HideWeapon()");
@@ -1886,7 +1886,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.IsGrapplingAttachedToMe()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsGrapplingAttachedToMe() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.IsGrapplingAttachedToMe()");
@@ -1894,7 +1894,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.IsGrapplingHardAttached()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsGrapplingHardAttached() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.IsGrapplingHardAttached()");
@@ -1926,7 +1926,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.IsNearTopOfLadder()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsNearTopOfLadder() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.IsNearTopOfLadder()");
@@ -1966,7 +1966,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.IsPlayingUpperBodyCallAnimation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsPlayingUpperBodyCallAnimation() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.IsPlayingUpperBodyCallAnimation()");
@@ -1974,7 +1974,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.IsPlayingUpperBodyCallAnimation_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPlayingUpperBodyCallAnimation_Implementation() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.IsPlayingUpperBodyCallAnimation_Implementation()");
@@ -2022,7 +2022,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.IsSitting(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: conferida_thunk_vtable
     bool IsSitting(bool a0) const
     {
         return NativeCall<bool, bool>(this, "AShooterCharacter.IsSitting(bool)", a0);
@@ -2078,7 +2078,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.IsValidUnStasisCaster()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsValidUnStasisCaster() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.IsValidUnStasisCaster()");
@@ -2158,7 +2158,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.LocalRefreshRidingRotation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void LocalRefreshRidingRotation() const
     {
         NativeCall<void>(this, "AShooterCharacter.LocalRefreshRidingRotation()");
@@ -2238,7 +2238,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.NotifyBumpedPawn(APawn*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void NotifyBumpedPawn(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterCharacter.NotifyBumpedPawn(APawn*)", a0);
@@ -2246,7 +2246,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.NotifyControllerChanged()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro NotifyControllerChanged() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.NotifyControllerChanged()");
@@ -2318,7 +2318,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OnEndDrag_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnEndDrag_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnEndDrag_Implementation()");
@@ -2414,7 +2414,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OnPrimalCharacterSleeped()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnPrimalCharacterSleeped() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnPrimalCharacterSleeped()");
@@ -2478,7 +2478,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.OnRep_LastPushedDirection()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_LastPushedDirection() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnRep_LastPushedDirection()");
@@ -2486,7 +2486,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OnRep_RawBoneModifiers()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_RawBoneModifiers() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnRep_RawBoneModifiers()");
@@ -2494,7 +2494,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.OnRep_bIsClimbing()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_bIsClimbing() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnRep_bIsClimbing()");
@@ -2526,7 +2526,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.OnStartFire_Code(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStartFire_Code(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterCharacter.OnStartFire_Code(bool)", a0);
@@ -2534,7 +2534,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OnStartTargeting()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=406+grafo=8/8]]
     void OnStartTargeting() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnStartTargeting()");
@@ -2550,7 +2550,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.OnStopFire_Code(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnStopFire_Code(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterCharacter.OnStopFire_Code(bool)", a0);
@@ -2558,7 +2558,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OnStopTargeting()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=320+grafo=6/6]]
     void OnStopTargeting() const
     {
         NativeCall<void>(this, "AShooterCharacter.OnStopTargeting()");
@@ -2582,7 +2582,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OrbitCamOn()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OrbitCamOn() const
     {
         NativeCall<void>(this, "AShooterCharacter.OrbitCamOn()");
@@ -2590,7 +2590,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.OrbitCamToggle()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OrbitCamToggle() const
     {
         NativeCall<void>(this, "AShooterCharacter.OrbitCamToggle()");
@@ -2614,7 +2614,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.PlayDrinkingAnimation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void PlayDrinkingAnimation() const
     {
         NativeCall<void>(this, "AShooterCharacter.PlayDrinkingAnimation()");
@@ -2622,7 +2622,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.PlayEmoteAnimation_Implementation(unsignedchar,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlayEmoteAnimation_Implementation(unsigned char a0, bool a1) const
     {
         NativeCall<void, unsigned char, bool>(this, "AShooterCharacter.PlayEmoteAnimation_Implementation(unsignedchar,bool)", a0, a1);
@@ -2646,7 +2646,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.PlaySpawnAnim()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=598+grafo=6/6]]
     void PlaySpawnAnim() const
     {
         NativeCall<void>(this, "AShooterCharacter.PlaySpawnAnim()");
@@ -2662,7 +2662,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.PlayTalkingAnimation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro PlayTalkingAnimation() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.PlayTalkingAnimation()");
@@ -2875,7 +2875,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerCallFollowDistanceCycleOne_Implementation(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerCallFollowDistanceCycleOne_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterCharacter.ServerCallFollowDistanceCycleOne_Implementation(APrimalDinoCharacter*)", a0);
@@ -2891,7 +2891,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerCallLandFlyerOne_Implementation(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerCallLandFlyerOne_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterCharacter.ServerCallLandFlyerOne_Implementation(APrimalDinoCharacter*)", a0);
@@ -2907,7 +2907,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerCallStayOne_Implementation(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerCallStayOne_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterCharacter.ServerCallStayOne_Implementation(APrimalDinoCharacter*)", a0);
@@ -2979,7 +2979,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerGiveDefaultWeapon_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGiveDefaultWeapon_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.ServerGiveDefaultWeapon_Implementation()");
@@ -3051,7 +3051,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerPlayFireBallistaAnimation_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerPlayFireBallistaAnimation_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.ServerPlayFireBallistaAnimation_Implementation()");
@@ -3059,7 +3059,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.ServerPrepareMountedDinoForLaunch(UE::Math::TVector<double>,UE::Math::TVector<
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro ServerPrepareMountedDinoForLaunch(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "AShooterCharacter.ServerPrepareMountedDinoForLaunch(UE::Math::TVector<double>,UE::Math::TVector<double>,bool)", a0, a1, a2);
@@ -3147,7 +3147,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterCharacter.ServerSetBallistaTargeting(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerSetBallistaTargeting(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterCharacter.ServerSetBallistaTargeting(bool)", a0);
@@ -3155,7 +3155,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerSetBallistaTargeting_Implementation(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerSetBallistaTargeting_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterCharacter.ServerSetBallistaTargeting_Implementation(bool)", a0);
@@ -3163,7 +3163,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterCharacter.ServerSetTargeting(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerSetTargeting(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterCharacter.ServerSetTargeting(bool)", a0);
@@ -3195,7 +3195,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerStopFireBallista_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerStopFireBallista_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.ServerStopFireBallista_Implementation()");
@@ -3211,7 +3211,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerSwitchBallistaAmmo_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSwitchBallistaAmmo_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.ServerSwitchBallistaAmmo_Implementation()");
@@ -3235,7 +3235,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ServerToClientsPlayFireBallistaAnimation_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerToClientsPlayFireBallistaAnimation_Implementation() const
     {
         NativeCall<void>(this, "AShooterCharacter.ServerToClientsPlayFireBallistaAnimation_Implementation()");
@@ -3363,7 +3363,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterCharacter.SetPreventEquipAllWeapons(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void SetPreventEquipAllWeapons(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterCharacter.SetPreventEquipAllWeapons(bool)", a0);
@@ -3443,7 +3443,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.ShouldEvaluatePostProcessAnimBP(int,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldEvaluatePostProcessAnimBP(int a0, int a1) const
     {
         return NativeCall<void*, int, int>(this, "AShooterCharacter.ShouldEvaluatePostProcessAnimBP(int,int)", a0, a1);
@@ -3451,7 +3451,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.ShouldHideNonWeaponHUD()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool ShouldHideNonWeaponHUD() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.ShouldHideNonWeaponHUD()");
@@ -3483,7 +3483,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.StandingMountedTurret_ServerFireAtTarget(AActor*,UE::Math::TVector<double>,int
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro StandingMountedTurret_ServerFireAtTarget(void* a0, void* a1, int a2) const
     {
         return NativeCall<void*, void*, void*, int>(this, "AShooterCharacter.StandingMountedTurret_ServerFireAtTarget(AActor*,UE::Math::TVector<double>,int)", a0, a1, a2);
@@ -3587,7 +3587,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.TakeSeatingStructureHandIK()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TakeSeatingStructureHandIK() const
     {
         return NativeCall<void*>(this, "AShooterCharacter.TakeSeatingStructureHandIK()");
@@ -3651,7 +3651,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.TryAccessInventory()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1014+grafo=12/12]]
     bool TryAccessInventory() const
     {
         return NativeCall<bool>(this, "AShooterCharacter.TryAccessInventory()");
@@ -3747,7 +3747,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.UpdateAutoPlayer()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=946+bytes40+grafo=3/3]]
     void UpdateAutoPlayer() const
     {
         NativeCall<void>(this, "AShooterCharacter.UpdateAutoPlayer()");
@@ -3859,11 +3859,10 @@ struct AShooterCharacter : public APrimalCharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterCharacter.UpdateSwimmingState()
-    // classe: a funcao mora em APrimalCharacter, e AShooterCharacter herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateSwimmingState() const
     {
-        NativeCall<void>(this, "APrimalCharacter.UpdateSwimmingState()");
+        NativeCall<void>(this, "AShooterCharacter.UpdateSwimmingState()");
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -3900,7 +3899,7 @@ struct AShooterCharacter : public APrimalCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterCharacter.WeaponEquipped(AShooterWeapon*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro WeaponEquipped(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterCharacter.WeaponEquipped(AShooterWeapon*)", a0);
@@ -3926,23 +3925,23 @@ struct AShooterCharacter : public APrimalCharacter
     //    AShooterCharacter.GetRidingDino()
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2560; confianca alta)
+    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2560; confianca alta)
     void*& AllianceInviteIDField() const
     { return BrzCampoAncorado<void*>(this, "SplitscreenMainPlayerUniqueNetIdTypeHash", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomFolderFastInventory` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1E50; confianca alta)
+    //  ancorado em `CustomFolderFastInventory` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E50; confianca alta)
     FString& AllianceInviteNameField() const
     { return BrzCampoAncorado<FString>(this, "CustomFolderFastInventory", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2540; confianca alta)
+    //  ancorado em `LastPushedDirection` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2540; confianca alta)
     int& AllianceInviteRequestingTeamField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x2298; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2298; confianca media)
     double& AllianceInviteTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 128); }
     TArray<void*>& AnimOverrideToField() const
@@ -3954,23 +3953,23 @@ struct AShooterCharacter : public APrimalCharacter
     TArray<void*>& AnimsOverrideFromField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterCharacter.AnimsOverrideFrom"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x24E0; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24E0; confianca media)
     float& AppliedBobField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x23A8; confianca media)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x23A8; confianca media)
     void*& AppliedCustomCosmeticAttachmentZOffsetField() const
     { return BrzCampoAncorado<void*>(this, "LastTimeStartedCrouchOrProneTransition", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x256C; confianca alta)
+    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x256C; confianca alta)
     unsigned char& BestInstantShotResultField() const
     { return BrzCampoAncorado<unsigned char>(this, "SplitscreenMainPlayerUniqueNetIdTypeHash", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x24E4; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24E4; confianca media)
     float& BobTimeField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 56); }
     FieldArray<unsigned char> BodyColorsField() const
@@ -3978,8 +3977,8 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro BodyMasksToApplyWhenAccessoryUnequippedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.BodyMasksToApplyWhenAccessoryUnequipped")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CachedAttachmentMaterials` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1AC0; confianca alta)
+    //  ancorado em `CachedAttachmentMaterials` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1AC0; confianca alta)
     TArray<void*>& BoneModifiers_FemaleField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "CachedAttachmentMaterials", 24); }
     float& BuffExtraDamageMultiplierField() const
@@ -3993,23 +3992,23 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro CharacterStatusStateSoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.CharacterStatusStateSounds")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x24C0; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24C0; confianca alta)
     float& ClientSeatedViewRotationPitchField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x24C4; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24C4; confianca alta)
     float& ClientSeatedViewRotationYawField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedRidingDino` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x207C; confianca alta)
+    //  ancorado em `SavedRidingDino` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x207C; confianca alta)
     TWeakObjectPtr<void>& ClimbingLadderField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "SavedRidingDino", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WeaponBobSpeedBaseFalling` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2508; confianca alta)
+    //  ancorado em `WeaponBobSpeedBaseFalling` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2508; confianca alta)
     float& CurrentAimBlendingField() const
     { return BrzCampoAncorado<float>(this, "WeaponBobSpeedBaseFalling", 12); }
     float& CurrentControlledBallistaPitchField() const
@@ -4017,13 +4016,13 @@ struct AShooterCharacter : public APrimalCharacter
     float& CurrentControlledBallistaYawField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.CurrentControlledBallistaYaw"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x24D4; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24D4; confianca media)
     void*& CurrentForwardBindingAlphaField() const
     { return BrzCampoAncorado<void*>(this, "ForwardBindingAlpha", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedRidingDino` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2094; confianca alta)
+    //  ancorado em `SavedRidingDino` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2094; confianca alta)
     TWeakObjectPtr<void>& CurrentGrappledToCharacterField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "SavedRidingDino", 32); }
     TWeakObjectPtr<void>& CurrentItemBalloonField() const
@@ -4035,15 +4034,15 @@ struct AShooterCharacter : public APrimalCharacter
     double& CurrentShadowOpactiyField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.CurrentShadowOpactiy"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2538; confianca alta)
+    //  ancorado em `LastPushedDirection` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2538; confianca alta)
     int& CurrentVoiceModeField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 4); }
     AShooterWeapon*& CurrentWeaponField() const
     { return *GetNativePointerField<AShooterWeapon**>(this, "AShooterCharacter.CurrentWeapon"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x24D8; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24D8; confianca media)
     float& CurrentWeaponBobSpeedField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 44); }
     FItemNetID& CurrentWeaponItemIDField() const
@@ -4071,8 +4070,8 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro DiscordUserIDField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.DiscordUserID")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2220; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2220; confianca media)
     double& DontTargetUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 8); }
     UAnimMontage*& DraggingCharacterAnimField() const
@@ -4100,8 +4099,8 @@ struct AShooterCharacter : public APrimalCharacter
     float& EquippedArmorDurabilityPercent6Field() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.EquippedArmorDurabilityPercent6"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2564; confianca alta)
+    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2564; confianca alta)
     void*& ExpectedBaseIDField() const
     { return BrzCampoAncorado<void*>(this, "SplitscreenMainPlayerUniqueNetIdTypeHash", 8); }
     BrzCampoPonteiro ExtraExtraVectorVarField() const
@@ -4141,8 +4140,8 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro FiredProjectilesCacheField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.FiredProjectilesCache")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x2398; confianca media)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2398; confianca media)
     double& ForceSleepRagdollUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 48); }
     float& ForwardBindingAlphaField() const
@@ -4160,82 +4159,82 @@ struct AShooterCharacter : public APrimalCharacter
     unsigned char& HeadHairIndexField() const
     { return *GetNativePointerField<unsigned char*>(this, "AShooterCharacter.HeadHairIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2544; confianca alta)
+    //  ancorado em `LastPushedDirection` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2544; confianca alta)
     int& IgnoreCollisionSweepUntilFrameNumberField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 16); }
     float& IndoorCheckIntervalField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.IndoorCheckInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x23A0; confianca media)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x23A0; confianca media)
     double& InterpLastCrouchProneStateChangeTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 56); }
     UParticleSystemComponent*& JunctionLinkCableParticleField() const
     { return *GetNativePointerField<UParticleSystemComponent**>(this, "AShooterCharacter.JunctionLinkCableParticle"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x24CC; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24CC; confianca alta)
     float& LastAdditionalHyperThermalInsulationField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x24C8; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24C8; confianca alta)
     float& LastAdditionalHypoThermalInsulationField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1DE8; confianca alta)
+    //  ancorado em `DiscordUserID` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1DE8; confianca alta)
     void*& LastAimRotOffsetField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x2268; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2268; confianca media)
     double& LastAttackTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2554; confianca alta)
+    //  ancorado em `LastPushedDirection` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2554; confianca alta)
     int& LastCameraAttachmentChangedIncrementField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x254C; confianca alta)
+    //  ancorado em `LastPushedDirection` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x254C; confianca alta)
     int& LastCapsuleAttachmentChangedIncrementField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2228; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2228; confianca media)
     double& LastCheckSevenField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x2230; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2230; confianca media)
     double& LastCheckSevenHitField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraExtraVectorVar` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1CA0; confianca media)
+    //  ancorado em `ExtraExtraVectorVar` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1CA0; confianca media)
     void*& LastCheckSevenLocationField() const
     { return BrzCampoAncorado<void*>(this, "ExtraExtraVectorVar", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x2248; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2248; confianca media)
     double& LastCheckSevenTeleportField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2238; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2238; confianca media)
     double& LastCheckSevenTransmissionField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +200, medido na build 25535041
-    //  (offset absoluto medido: 0x22E0; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22E0; confianca baixa)
     double& LastCollisionStuckTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedRidingDino` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2084; confianca alta)
+    //  ancorado em `SavedRidingDino` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2084; confianca alta)
     TWeakObjectPtr<void>& LastControllerField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "SavedRidingDino", 16); }
     BrzCampoPonteiro LastDinoAimRotationOffsetField() const
@@ -4243,18 +4242,18 @@ struct AShooterCharacter : public APrimalCharacter
     double& LastDismountedByOtherNetworkTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.LastDismountedByOtherNetworkTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x22C0; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22C0; confianca baixa)
     double& LastEmotePlayTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +176, medido na build 25535041
-    //  (offset absoluto medido: 0x22C8; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22C8; confianca baixa)
     double& LastEmoteTryPlayTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +208, medido na build 25535041
-    //  (offset absoluto medido: 0x22E8; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +208 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22E8; confianca baixa)
     double& LastExpectedBaseTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 208); }
     APrimalProjectileBoomerang*& LastFiredBoomerangField() const
@@ -4264,70 +4263,70 @@ struct AShooterCharacter : public APrimalCharacter
     UAudioComponent*& LastGrapHookACField() const
     { return *GetNativePointerField<UAudioComponent**>(this, "AShooterCharacter.LastGrapHookAC"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedRidingDino` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x208C; confianca alta)
+    //  ancorado em `SavedRidingDino` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x208C; confianca alta)
     TWeakObjectPtr<void>& LastGrappledToCharacterField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "SavedRidingDino", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x2390; confianca media)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2390; confianca media)
     double& LastIndoorCheckTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +304, medido na build 25535041
-    //  (offset absoluto medido: 0x2348; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +304 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2348; confianca baixa)
     void*& LastLocalUpdateCharsInRangeTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastTimeHadMountedWeaponAnim", 304); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x2550; confianca alta)
+    //  ancorado em `LastPushedDirection` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2550; confianca alta)
     int& LastMeshAttachmentChangedIncrementField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x2288; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2288; confianca media)
     void*& LastNetSoundPlayedTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastTimeHadMountedWeaponAnim", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x22D8; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22D8; confianca baixa)
     double& LastNotStuckTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x22D0; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22D0; confianca baixa)
     double& LastPoopTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2370; confianca alta)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2370; confianca alta)
     double& LastPressReloadTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 8); }
     int& LastPushedDirectionField() const
     { return *GetNativePointerField<int*>(this, "AShooterCharacter.LastPushedDirection"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +288, medido na build 25535041
-    //  (offset absoluto medido: 0x2338; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +288 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2338; confianca baixa)
     double& LastPushedTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 288); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2378; confianca alta)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2378; confianca alta)
     double& LastReleaseReloadTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x2290; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2290; confianca media)
     double& LastReleaseSeatingStructureTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x2380; confianca alta)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2380; confianca alta)
     double& LastReloadToggledAccessoryTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +312, medido na build 25535041
-    //  (offset absoluto medido: 0x2350; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +312 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2350; confianca baixa)
     void*& LastRequestBallistaActionTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastTimeHadMountedWeaponAnim", 312); }
     int& LastRequestedTribeIDField() const
@@ -4341,18 +4340,18 @@ struct AShooterCharacter : public APrimalCharacter
     TWeakObjectPtr<void>& LastSponsoredStructureStoreField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "AShooterCharacter.LastSponsoredStructureStore"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraExtraVectorVar` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x1CB8; confianca media)
+    //  ancorado em `ExtraExtraVectorVar` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1CB8; confianca media)
     void*& LastStasisCastPositionField() const
     { return BrzCampoAncorado<void*>(this, "ExtraExtraVectorVar", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x24B8; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24B8; confianca alta)
     float& LastSweepCapsuleHeightField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x24BC; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24BC; confianca alta)
     float& LastSweepCapsuleRadiusField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 16); }
     float& LastTaggedTimeField() const
@@ -4364,8 +4363,8 @@ struct AShooterCharacter : public APrimalCharacter
     double& LastTimeDestroyedWeaponField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.LastTimeDestroyedWeapon"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +272, medido na build 25535041
-    //  (offset absoluto medido: 0x2328; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +272 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2328; confianca baixa)
     double& LastTimeDetectedSleepingAnimWhileAwakeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 272); }
     double& LastTimeHadControllerField() const
@@ -4373,23 +4372,23 @@ struct AShooterCharacter : public APrimalCharacter
     double& LastTimeHadMountedWeaponAnimField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.LastTimeHadMountedWeaponAnim"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +280, medido na build 25535041
-    //  (offset absoluto medido: 0x2330; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +280 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2330; confianca baixa)
     double& LastTimeHadPreviousInterpolatedRootLocField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 280); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x2250; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2250; confianca media)
     double& LastTimeInFallingField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +264, medido na build 25535041
-    //  (offset absoluto medido: 0x2320; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +264 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2320; confianca baixa)
     double& LastTimeInThirdPersonField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 264); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +296, medido na build 25535041
-    //  (offset absoluto medido: 0x2340; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +296 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2340; confianca baixa)
     double& LastTimeMulticastedAttachmentReplicationField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 296); }
     double& LastTimePushedField() const
@@ -4397,8 +4396,8 @@ struct AShooterCharacter : public APrimalCharacter
     double& LastTimeStartedCrouchOrProneTransitionField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.LastTimeStartedCrouchOrProneTransition"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x22B8; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22B8; confianca baixa)
     double& LastTryAccessInventoryFailTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 160); }
     double& LastUncrouchTimeField() const
@@ -4406,35 +4405,35 @@ struct AShooterCharacter : public APrimalCharacter
     double& LastUnproneTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.LastUnproneTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x22A0; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22A0; confianca baixa)
     double& LastUpdatedAimActorsTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +216, medido na build 25535041
-    //  (offset absoluto medido: 0x22F0; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22F0; confianca baixa)
     double& LastUpdatedLocallyInterpolatedViewLocationXField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +232, medido na build 25535041
-    //  (offset absoluto medido: 0x2300; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +232 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2300; confianca baixa)
     double& LastUpdatedLocallyInterpolatedViewLocationYField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +248, medido na build 25535041
-    //  (offset absoluto medido: 0x2310; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +248 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2310; confianca baixa)
     double& LastUpdatedLocallyInterpolatedViewLocationZField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 248); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x2270; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2270; confianca media)
     double& LastUseHarvestTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 88); }
     int& LastValidCharacterVersionField() const
     { return *GetNativePointerField<int*>(this, "AShooterCharacter.LastValidCharacterVersion"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x2240; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2240; confianca media)
     double& LastValidCheckSevenField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 40); }
     TWeakObjectPtr<void>& LastValidPlayerControllerField() const
@@ -4450,25 +4449,25 @@ struct AShooterCharacter : public APrimalCharacter
     double& LocalDiedAtTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterCharacter.LocalDiedAtTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x2280; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2280; confianca media)
     double& LocalLastViewingInventoryTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 104); }
     float& LocalUpdateCharsInRangeIntervalField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.LocalUpdateCharsInRangeInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +224, medido na build 25535041
-    //  (offset absoluto medido: 0x22F8; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22F8; confianca baixa)
     double& LocallyInterpolatedViewLocationXField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +240, medido na build 25535041
-    //  (offset absoluto medido: 0x2308; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +240 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2308; confianca baixa)
     double& LocallyInterpolatedViewLocationYField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 240); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +256, medido na build 25535041
-    //  (offset absoluto medido: 0x2318; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +256 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2318; confianca baixa)
     double& LocallyInterpolatedViewLocationZField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 256); }
     UAudioComponent*& LowHealthWarningPlayerField() const
@@ -4480,18 +4479,18 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro MyMotionWarpingComponentField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.MyMotionWarpingComponent")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x253C; confianca alta)
+    //  ancorado em `LastPushedDirection` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x253C; confianca alta)
     void*& NetSoundSpamCountField() const
     { return BrzCampoAncorado<void*>(this, "LastPushedDirection", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x22A8; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22A8; confianca baixa)
     double& NextUpdateHyperThermalInsulationTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +152, medido na build 25535041
-    //  (offset absoluto medido: 0x22B0; confianca baixa)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22B0; confianca baixa)
     double& NextUpdateHypoThermalInsulationTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 152); }
     //  no cache antigo este campo se chamava NextWeaponItemID.
@@ -4513,15 +4512,15 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro OnThirdPersonCameraViewField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.OnThirdPersonCameraView")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x24B0; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24B0; confianca alta)
     float& OriginalCollisionHeightField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 4); }
     BrzCampoPonteiro OriginalHairColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.OriginalHairColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraExtraVectorVar` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x1D00; confianca media)
+    //  ancorado em `ExtraExtraVectorVar` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D00; confianca media)
     void*& OriginalLastHitWallSweepCheckLocationField() const
     { return BrzCampoAncorado<void*>(this, "ExtraExtraVectorVar", 120); }
     TArray<void*>& OverrideAnimBlueprintsField() const
@@ -4555,18 +4554,18 @@ struct AShooterCharacter : public APrimalCharacter
     FItemNetID& PreRidingWeaponItemNetIDField() const
     { return *GetNativePointerField<FItemNetID*>(this, "AShooterCharacter.PreRidingWeaponItemNetID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraExtraVectorVar` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x1D18; confianca baixa)
+    //  ancorado em `ExtraExtraVectorVar` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D18; confianca baixa)
     void*& PreviousInterpolatedRootLocField() const
     { return BrzCampoAncorado<void*>(this, "ExtraExtraVectorVar", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x24B4; confianca alta)
+    //  ancorado em `ForwardBindingAlpha` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24B4; confianca alta)
     float& PreviousRootYawSpeedField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RightHandIkTarget` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x1C50; confianca media)
+    //  ancorado em `RightHandIkTarget` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1C50; confianca media)
     void*& PreviousValidLocationsField() const
     { return BrzCampoAncorado<void*>(this, "RightHandIkTarget", 112); }
     UAnimMontage*& ProneInAnimField() const
@@ -4606,8 +4605,8 @@ struct AShooterCharacter : public APrimalCharacter
     float& ServerSeatedViewRotationYawField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.ServerSeatedViewRotationYaw"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPushedDirection` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x2548; confianca alta)
+    //  ancorado em `LastPushedDirection` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2548; confianca alta)
     int& SimulatedLastFrameProcessedForceUpdateAimedActorsField() const
     { return BrzCampoAncorado<int>(this, "LastPushedDirection", 20); }
     BrzCampoPonteiro SkillCooldownsField() const
@@ -4617,8 +4616,8 @@ struct AShooterCharacter : public APrimalCharacter
     TWeakObjectPtr<void>& SpawnedForControllerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "AShooterCharacter.SpawnedForController"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraNameVar` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1E68; confianca alta)
+    //  ancorado em `ExtraNameVar` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1E68; confianca alta)
     FName& SplitScreenCameraStyleOverrideField() const
     { return BrzCampoAncorado<FName>(this, "ExtraNameVar", 8); }
     unsigned int& SplitscreenMainPlayerUniqueNetIdTypeHashField() const
@@ -4626,25 +4625,25 @@ struct AShooterCharacter : public APrimalCharacter
     UAnimMontage*& StartRidingAnimField() const
     { return *GetNativePointerField<UAnimMontage**>(this, "AShooterCharacter.StartRidingAnim"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x2258; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2258; confianca media)
     double& StartedRidingTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 64); }
     UAnimMontage*& StopRidingAnimField() const
     { return *GetNativePointerField<UAnimMontage**>(this, "AShooterCharacter.StopRidingAnim"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x2278; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2278; confianca media)
     double& StopRidingTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicOverrideHairDyeBytes` +109, medido na build 25535041
-    //  (offset absoluto medido: 0x2628; confianca media)
+    //  ancorado em `DynamicOverrideHairDyeBytes` +109 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2628; confianca media)
     void*& StoredCooldownPerClassField() const
     { return BrzCampoAncorado<void*>(this, "DynamicOverrideHairDyeBytes", 109); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicOverrideHairDyeBytes` +29, medido na build 25535041
-    //  (offset absoluto medido: 0x25D8; confianca media)
+    //  ancorado em `DynamicOverrideHairDyeBytes` +29 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25D8; confianca media)
     void*& StoredCounterMapField() const
     { return BrzCampoAncorado<void*>(this, "DynamicOverrideHairDyeBytes", 29); }
     USkeletalMeshComponent*& SurvivorProfilePreviewMeshField() const
@@ -4656,27 +4655,27 @@ struct AShooterCharacter : public APrimalCharacter
     float& TargetingTimeField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.TargetingTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeHadMountedWeaponAnim` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x2260; confianca media)
+    //  ancorado em `LastTimeHadMountedWeaponAnim` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2260; confianca media)
     double& TimeSinceLastControllerField() const
     { return BrzCampoAncorado<double>(this, "LastTimeHadMountedWeaponAnim", 72); }
     BrzCampoPonteiro UnderwearOverrideMasksField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.UnderwearOverrideMasks")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicOverrideHairDyeBytes` +17, medido na build 25535041
-    //  (offset absoluto medido: 0x25CC; confianca media)
+    //  ancorado em `DynamicOverrideHairDyeBytes` +17 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25CC; confianca media)
     void*& UnderwearOverrideTagField() const
     { return BrzCampoAncorado<void*>(this, "DynamicOverrideHairDyeBytes", 17); }
     unsigned int& UniqueNetIdTypeHashField() const
     { return *GetNativePointerField<unsigned int*>(this, "AShooterCharacter.UniqueNetIdTypeHash"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraExtraVectorVar` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x1CD0; confianca media)
+    //  ancorado em `ExtraExtraVectorVar` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1CD0; confianca media)
     void*& UpdateHyperThermalInsulationPositionField() const
     { return BrzCampoAncorado<void*>(this, "ExtraExtraVectorVar", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraExtraVectorVar` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x1CE8; confianca media)
+    //  ancorado em `ExtraExtraVectorVar` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1CE8; confianca media)
     void*& UpdateHypoThermalInsulationPositionField() const
     { return BrzCampoAncorado<void*>(this, "ExtraExtraVectorVar", 96); }
     double& UploadEarliestValidTimeField() const
@@ -4690,13 +4689,13 @@ struct AShooterCharacter : public APrimalCharacter
     float& WalkBobMagnitudeField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.WalkBobMagnitude"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x24DC; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24DC; confianca media)
     float& WalkBobOldSpeedField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x24D0; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24D0; confianca media)
     float& WaterLossRateMultiplierField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 36); }
     BrzCampoPonteiro WeaponBobMagnitudesField() const
@@ -4718,13 +4717,13 @@ struct AShooterCharacter : public APrimalCharacter
     float& WeaponBobSpeedBaseFallingField() const
     { return *GetNativePointerField<float*>(this, "AShooterCharacter.WeaponBobSpeedBaseFalling"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WeaponBobSpeedBaseFalling` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2500; confianca alta)
+    //  ancorado em `WeaponBobSpeedBaseFalling` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2500; confianca alta)
     float& WeaponBobTargetingBlendField() const
     { return BrzCampoAncorado<float>(this, "WeaponBobSpeedBaseFalling", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WeaponBobSpeedBaseFalling` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2504; confianca alta)
+    //  ancorado em `WeaponBobSpeedBaseFalling` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2504; confianca alta)
     float& WeaponBobTimeField() const
     { return BrzCampoAncorado<float>(this, "WeaponBobSpeedBaseFalling", 8); }
     int& _GrapHookCableObjectCountField() const
@@ -4734,8 +4733,8 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro bDisableLookYawField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.bDisableLookYaw")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDismountedByOtherNetworkTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2040; confianca alta)
+    //  ancorado em `LastDismountedByOtherNetworkTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2040; confianca alta)
     void*& bDismountFromInputField() const
     { return BrzCampoAncorado<void*>(this, "LastDismountedByOtherNetworkTime", 8); }
     BrzCampoPonteiro bDrawHealthBarField() const
@@ -4777,8 +4776,8 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro bIsPilotingShipField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.bIsPilotingShip")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DynamicOverrideHairDyeBytes` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x25BF; confianca media)
+    //  ancorado em `DynamicOverrideHairDyeBytes` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25BF; confianca media)
     unsigned char& bIsPlayingSleepAnimField() const
     { return BrzCampoAncorado<unsigned char>(this, "DynamicOverrideHairDyeBytes", 4); }
     BrzCampoPonteiro bIsPressingRunningField() const
@@ -4826,8 +4825,8 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro bSKDynamicMatsHaveBeenRecentlyChangedAndNeedUpdatingOnTheAnimbpField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.bSKDynamicMatsHaveBeenRecentlyChangedAndNeedUpdatingOnTheAnimbp")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2568; confianca alta)
+    //  ancorado em `SplitscreenMainPlayerUniqueNetIdTypeHash` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2568; confianca alta)
     void*& bSetInitialControlPitchField() const
     { return BrzCampoAncorado<void*>(this, "SplitscreenMainPlayerUniqueNetIdTypeHash", 12); }
     BrzCampoPonteiro bShouldInvertTurnInputField() const
@@ -4845,23 +4844,23 @@ struct AShooterCharacter : public APrimalCharacter
     BrzCampoPonteiro bWasProneField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterCharacter.bWasProne")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +60, medido na build 25535041
-    //  (offset absoluto medido: 0x24E8; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24E8; confianca media)
     float& fAutoMoveField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x24EC; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24EC; confianca media)
     float& fAutoStrafeField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForwardBindingAlpha` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x24F0; confianca media)
+    //  ancorado em `ForwardBindingAlpha` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x24F0; confianca media)
     float& fAutoTurnField() const
     { return BrzCampoAncorado<float>(this, "ForwardBindingAlpha", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2388; confianca alta)
+    //  ancorado em `LastTimeStartedCrouchOrProneTransition` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2388; confianca alta)
     double& lastSubmergedTimeField() const
     { return BrzCampoAncorado<double>(this, "LastTimeStartedCrouchOrProneTransition", 32); }
     BitFieldValue<bool, unsigned __int32> bIsTargeting()

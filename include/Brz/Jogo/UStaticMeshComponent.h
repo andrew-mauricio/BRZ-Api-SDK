@@ -174,11 +174,10 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetMaterial(int)
-    // classe: a funcao mora em UMeshComponent, e UStaticMeshComponent herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UMaterialInterface* GetMaterial(int a0) const
     {
-        return NativeCall<UMaterialInterface*, int>(this, "UMeshComponent.GetMaterial(int)", a0);
+        return NativeCall<UMaterialInterface*, int>(this, "UStaticMeshComponent.GetMaterial(int)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -223,7 +222,7 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.GetSocketByName(FName)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=109+chamadores=7]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=109+chamadores=6]]
     UStaticMeshSocket* GetSocketByName(unsigned long long a0) const
     {
         return NativeCall<UStaticMeshSocket*, unsigned long long>(this, "UStaticMeshComponent.GetSocketByName(FName)", a0);
@@ -415,11 +414,10 @@ struct UStaticMeshComponent : public UMeshComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStaticMeshComponent.ShouldCreatePhysicsState()
-    // classe: a funcao mora em UPrimitiveComponent, e UStaticMeshComponent herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldCreatePhysicsState() const
     {
-        return NativeCall<bool>(this, "UPrimitiveComponent.ShouldCreatePhysicsState()");
+        return NativeCall<bool>(this, "UStaticMeshComponent.ShouldCreatePhysicsState()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

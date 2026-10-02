@@ -144,7 +144,7 @@ struct AShooterSpectatorPawn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterSpectatorPawn.SetSavedSpectatorPositionForIndex(int,UE::Math::TVector<double>,UE::Math::
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro SetSavedSpectatorPositionForIndex(int a0, void* a1, void* a2) const
     {
         return NativeCall<void*, int, void*, void*>(this, "AShooterSpectatorPawn.SetSavedSpectatorPositionForIndex(int,UE::Math::TVector<double>,UE::Math::TRotator<double>)", a0, a1, a2);
@@ -407,13 +407,13 @@ struct AShooterSpectatorPawn
     BrzCampoPonteiro OnTargetingTeamChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterSpectatorPawn.OnTargetingTeamChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinOrbitRadius` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x598; confianca alta)
+    //  ancorado em `MinOrbitRadius` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x598; confianca alta)
     void*& OrbitCamRotField() const
     { return BrzCampoAncorado<void*>(this, "MinOrbitRadius", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinOrbitRadius` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x5B0; confianca media)
+    //  ancorado em `MinOrbitRadius` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B0; confianca media)
     float& OrbitCamZoomField() const
     { return BrzCampoAncorado<float>(this, "MinOrbitRadius", 36); }
     double& OriginalCreationTimeField() const
@@ -721,8 +721,8 @@ struct AShooterSpectatorPawn
     BrzCampoPonteiro bUseOnlyPointForLevelBoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterSpectatorPawn.bUseOnlyPointForLevelBounds")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinOrbitRadius` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x5B4; confianca media)
+    //  ancorado em `MinOrbitRadius` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B4; confianca media)
     void*& bUseRealGimbalField() const
     { return BrzCampoAncorado<void*>(this, "MinOrbitRadius", 40); }
     BrzCampoPonteiro bUseStasisGridField() const

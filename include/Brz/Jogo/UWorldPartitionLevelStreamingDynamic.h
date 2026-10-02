@@ -140,8 +140,8 @@ struct UWorldPartitionLevelStreamingDynamic
     BrzCampoPonteiro bEnableTileStreamingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionLevelStreamingDynamic.bEnableTileStreaming")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShouldBeAlwaysLoaded` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x1C9; confianca alta)
+    //  ancorado em `bShouldBeAlwaysLoaded` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1C9; confianca alta)
     void*& bHasSetLevelTransformField() const
     { return BrzCampoAncorado<void*>(this, "bShouldBeAlwaysLoaded", 1); }
     BrzCampoPonteiro bInitiallyLoadedField() const

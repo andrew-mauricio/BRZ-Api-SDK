@@ -84,7 +84,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.CalcAimRotation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CalcAimRotation() const
     {
         NativeCall<void>(this, "APrimalWheeledVehicleCharacter.CalcAimRotation()");
@@ -100,7 +100,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.CanActivateRearModule_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanActivateRearModule_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.CanActivateRearModule_Implementation()");
@@ -140,7 +140,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.ClearRiderCodeNextTick()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClearRiderCodeNextTick() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.ClearRiderCodeNextTick()");
@@ -180,7 +180,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.GamepadThrottle(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GamepadThrottle(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalWheeledVehicleCharacter.GamepadThrottle(float)", a0);
@@ -244,7 +244,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.GetFuelPercent()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float GetFuelPercent() const
     {
         return NativeCall<float>(this, "APrimalWheeledVehicleCharacter.GetFuelPercent()");
@@ -260,7 +260,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.GetNumWheelsOnGround()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     int GetNumWheelsOnGround() const
     {
         return NativeCall<int>(this, "APrimalWheeledVehicleCharacter.GetNumWheelsOnGround()");
@@ -268,7 +268,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.GetOwningClientPing()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float GetOwningClientPing() const
     {
         return NativeCall<float>(this, "APrimalWheeledVehicleCharacter.GetOwningClientPing()");
@@ -300,7 +300,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.GetRearModuleMaxFuelValue()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float GetRearModuleMaxFuelValue() const
     {
         return NativeCall<float>(this, "APrimalWheeledVehicleCharacter.GetRearModuleMaxFuelValue()");
@@ -348,7 +348,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.GetSteerMultiplier()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float GetSteerMultiplier() const
     {
         return NativeCall<float>(this, "APrimalWheeledVehicleCharacter.GetSteerMultiplier()");
@@ -356,7 +356,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.GetSteerMultiplier_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSteerMultiplier_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.GetSteerMultiplier_Implementation()");
@@ -388,7 +388,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.GetTimeSinceThrottleInput()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     double GetTimeSinceThrottleInput() const
     {
         return NativeCall<double>(this, "APrimalWheeledVehicleCharacter.GetTimeSinceThrottleInput()");
@@ -428,7 +428,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.IsCurrentlyUsingCameraSteering()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsCurrentlyUsingCameraSteering() const
     {
         return NativeCall<bool>(this, "APrimalWheeledVehicleCharacter.IsCurrentlyUsingCameraSteering()");
@@ -436,7 +436,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.IsCurrentlyUsingCameraSteering_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsCurrentlyUsingCameraSteering_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.IsCurrentlyUsingCameraSteering_Implementation()");
@@ -492,7 +492,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.MoveForward(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MoveForward(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalWheeledVehicleCharacter.MoveForward(float)", a0);
@@ -500,7 +500,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.MoveRight(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MoveRight(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalWheeledVehicleCharacter.MoveRight(float)", a0);
@@ -516,7 +516,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.MultiUpdateTransformParams_Implementation(FServerToSimulatedClien
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro MultiUpdateTransformParams_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalWheeledVehicleCharacter.MultiUpdateTransformParams_Implementation(FServerToSimulatedClientMovementParams&)", a0);
@@ -628,7 +628,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.OnSaddleStructLoaded(APrimalStructure*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OnSaddleStructLoaded(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalWheeledVehicleCharacter.OnSaddleStructLoaded(APrimalStructure*)", a0);
@@ -644,7 +644,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.OverridesVehicleWheelProperties()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro OverridesVehicleWheelProperties() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.OverridesVehicleWheelProperties()");
@@ -676,7 +676,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.ResetServerValidation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ResetServerValidation() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.ResetServerValidation()");
@@ -756,7 +756,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.ShouldCameraFollowBehindVehicle()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool ShouldCameraFollowBehindVehicle() const
     {
         return NativeCall<bool>(this, "APrimalWheeledVehicleCharacter.ShouldCameraFollowBehindVehicle()");
@@ -764,7 +764,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.ShouldCameraFollowBehindVehicle_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ShouldCameraFollowBehindVehicle_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.ShouldCameraFollowBehindVehicle_Implementation()");
@@ -836,7 +836,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.StopUsingRearModule_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro StopUsingRearModule_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.StopUsingRearModule_Implementation()");
@@ -868,7 +868,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalWheeledVehicleCharacter.ThrottleInput()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ThrottleInput() const
     {
         NativeCall<void>(this, "APrimalWheeledVehicleCharacter.ThrottleInput()");
@@ -972,7 +972,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalWheeledVehicleCharacter.UpdateRearModuleResource(float)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateRearModuleResource(float a0) const
     {
         NativeCall<void, float>(this, "APrimalWheeledVehicleCharacter.UpdateRearModuleResource(float)", a0);
@@ -980,7 +980,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.UpdateRearModuleResource_Implementation(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateRearModuleResource_Implementation(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalWheeledVehicleCharacter.UpdateRearModuleResource_Implementation(float)", a0);
@@ -996,7 +996,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.UpdateRearModuleState_Implementation(bool,float,double)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateRearModuleState_Implementation(bool a0, float a1, double a2) const
     {
         return NativeCall<void*, bool, float, double>(this, "APrimalWheeledVehicleCharacter.UpdateRearModuleState_Implementation(bool,float,double)", a0, a1, a2);
@@ -1004,7 +1004,7 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalWheeledVehicleCharacter.UpdateSaddleStructureCollision()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro UpdateSaddleStructureCollision() const
     {
         return NativeCall<void*>(this, "APrimalWheeledVehicleCharacter.UpdateSaddleStructureCollision()");
@@ -1071,13 +1071,13 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     float& AerialRotationDragField() const
     { return *GetNativePointerField<float*>(this, "APrimalWheeledVehicleCharacter.AerialRotationDrag"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RearModuleMinimumFuelRequired` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2EB8; confianca alta)
+    //  ancorado em `RearModuleMinimumFuelRequired` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EB8; confianca alta)
     void*& AnalogBrakeField() const
     { return BrzCampoAncorado<void*>(this, "RearModuleMinimumFuelRequired", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RearModuleMinimumFuelRequired` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2EB4; confianca alta)
+    //  ancorado em `RearModuleMinimumFuelRequired` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EB4; confianca alta)
     void*& AnalogThrottleField() const
     { return BrzCampoAncorado<void*>(this, "RearModuleMinimumFuelRequired", 12); }
     float& BackForceField() const
@@ -1093,18 +1093,18 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     float& CurrentSteeringInputField() const
     { return *GetNativePointerField<float*>(this, "APrimalWheeledVehicleCharacter.CurrentSteeringInput"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RearModuleMinimumFuelRequired` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2EB0; confianca alta)
+    //  ancorado em `RearModuleMinimumFuelRequired` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EB0; confianca alta)
     float& DefaultAngularDampingField() const
     { return BrzCampoAncorado<float>(this, "RearModuleMinimumFuelRequired", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RearModuleMinimumFuelRequired` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2EAC; confianca alta)
+    //  ancorado em `RearModuleMinimumFuelRequired` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EAC; confianca alta)
     float& DefaultLinearDampingField() const
     { return BrzCampoAncorado<float>(this, "RearModuleMinimumFuelRequired", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LocalSpaceAerialRotationVelocity` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x2D38; confianca alta)
+    //  ancorado em `LocalSpaceAerialRotationVelocity` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2D38; confianca alta)
     void*& DirectionLastLeftGround2DField() const
     { return BrzCampoAncorado<void*>(this, "LocalSpaceAerialRotationVelocity", 24); }
     BrzCampoPonteiro DustPSCField() const
@@ -1112,8 +1112,8 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     UAudioComponent*& EngineACField() const
     { return *GetNativePointerField<UAudioComponent**>(this, "APrimalWheeledVehicleCharacter.EngineAC"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxFlyingFalsePositives` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2EC8; confianca alta)
+    //  ancorado em `MaxFlyingFalsePositives` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EC8; confianca alta)
     void*& FlyingFalsePositiveCountField() const
     { return BrzCampoAncorado<void*>(this, "MaxFlyingFalsePositives", 4); }
     float& ForwardInputTimeoutField() const
@@ -1123,8 +1123,8 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     BrzCampoPonteiro LastBaseRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWheeledVehicleCharacter.LastBaseRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRearModuleUseTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2E40; confianca alta)
+    //  ancorado em `LastRearModuleUseTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2E40; confianca alta)
     void*& LastFrameHadCollisionField() const
     { return BrzCampoAncorado<void*>(this, "LastRearModuleUseTime", 16); }
     BrzCampoPonteiro LastFullyValidatedLocationField() const
@@ -1132,8 +1132,8 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     double& LastManualCameraInputTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalWheeledVehicleCharacter.LastManualCameraInputTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRearModuleUseTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2E38; confianca alta)
+    //  ancorado em `LastRearModuleUseTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2E38; confianca alta)
     void*& LastOwningClientUpdateServerTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastRearModuleUseTime", 8); }
     BrzCampoPonteiro LastPredictedTransformField() const
@@ -1141,8 +1141,8 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     double& LastRearModuleUseTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalWheeledVehicleCharacter.LastRearModuleUseTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPredictedTransform` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x2C90; confianca media)
+    //  ancorado em `LastPredictedTransform` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C90; confianca media)
     void*& LastReplicatedTransformField() const
     { return BrzCampoAncorado<void*>(this, "LastPredictedTransform", 96); }
     double& LastSteeringInputTimeField() const
@@ -1158,15 +1158,15 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     double& LastThrottleReleaseTimeWhenNotUsingCameraSteeringField() const
     { return *GetNativePointerField<double*>(this, "APrimalWheeledVehicleCharacter.LastThrottleReleaseTimeWhenNotUsingCameraSteering"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxFlyingFalsePositives` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x2EE8; confianca media)
+    //  ancorado em `MaxFlyingFalsePositives` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EE8; confianca media)
     void*& LastTimeCheckedAntiFlyCheckField() const
     { return BrzCampoAncorado<void*>(this, "MaxFlyingFalsePositives", 36); }
     double& LastTimeTurnedInputField() const
     { return *GetNativePointerField<double*>(this, "APrimalWheeledVehicleCharacter.LastTimeTurnedInput"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxFlyingFalsePositives` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2ED0; confianca alta)
+    //  ancorado em `MaxFlyingFalsePositives` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2ED0; confianca alta)
     void*& LastValidatedVelocityField() const
     { return BrzCampoAncorado<void*>(this, "MaxFlyingFalsePositives", 12); }
     BrzCampoPonteiro LocalSpaceAerialRotationVelocityField() const
@@ -1192,8 +1192,8 @@ struct APrimalWheeledVehicleCharacter : public APrimalDinoCharacter
     BrzCampoPonteiro OwningClientPingToPredictionVelocityScalarCurveField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWheeledVehicleCharacter.OwningClientPingToPredictionVelocityScalarCurve")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxFlyingFalsePositives` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x2EF0; confianca media)
+    //  ancorado em `MaxFlyingFalsePositives` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2EF0; confianca media)
     void*& RearModuleAirborneHackCheckStartTimeField() const
     { return BrzCampoAncorado<void*>(this, "MaxFlyingFalsePositives", 44); }
     float& RearModuleContinuousCostField() const

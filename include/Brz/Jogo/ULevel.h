@@ -471,40 +471,40 @@ struct ULevel : public UObject
     TArray<void*>& AssetUserDataField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "ULevel.AssetUserData"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WorldPartitionRuntimeCell` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x3C8; confianca media)
+    //  ancorado em `WorldPartitionRuntimeCell` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3C8; confianca media)
     void*& CachedLevelCollectionField() const
     { return BrzCampoAncorado<void*>(this, "WorldPartitionRuntimeCell", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x330; confianca alta)
+    //  ancorado em `LightBuildLevelOffset` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x330; confianca alta)
     void*& CurrentActorIndexForIncrementalUpdateField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x334; confianca media)
+    //  ancorado em `LightBuildLevelOffset` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x334; confianca media)
     void*& CurrentActorIndexForUnregisterComponentsField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 36); }
     BrzCampoPonteiro DestroyedReplicatedStaticActorsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.DestroyedReplicatedStaticActors")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x32C; confianca alta)
+    //  ancorado em `LightBuildLevelOffset` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x32C; confianca alta)
     void*& IncrementalComponentStateField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x370; confianca media)
+    //  ancorado em `LightBuildLevelOffset` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x370; confianca media)
     void*& InstancedFoliageActorField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x368; confianca media)
+    //  ancorado em `LightBuildLevelOffset` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x368; confianca media)
     void*& LevelBoundsActorField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x378; confianca media)
+    //  ancorado em `LightBuildLevelOffset` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x378; confianca media)
     void*& LevelBoundsActorUpdatedEventField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 104); }
     BrzCampoPonteiro LevelBuildDataIdField() const
@@ -532,13 +532,13 @@ struct ULevel : public UObject
     int& NumTextureStreamingUnbuiltComponentsField() const
     { return *GetNativePointerField<int*>(this, "ULevel.NumTextureStreamingUnbuiltComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x338; confianca media)
+    //  ancorado em `LightBuildLevelOffset` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x338; confianca media)
     void*& OnApplyLevelTransformField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x350; confianca media)
+    //  ancorado em `LightBuildLevelOffset` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x350; confianca media)
     void*& OnCleanupLevelField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 64); }
     BrzCampoPonteiro OwningWorldField() const
@@ -546,33 +546,33 @@ struct ULevel : public UObject
     unsigned int& PackedTextureStreamingQualityLevelFeatureLevelField() const
     { return *GetNativePointerField<unsigned int*>(this, "ULevel.PackedTextureStreamingQualityLevelFeatureLevel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AssetUserData` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3E0; confianca alta)
+    //  ancorado em `AssetUserData` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3E0; confianca alta)
     void*& PendingAutoReceiveInputActorsField() const
     { return BrzCampoAncorado<void*>(this, "AssetUserData", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x248; confianca media)
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x248; confianca media)
     void*& PrecomputedLightVolumeField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x258; confianca media)
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x258; confianca media)
     void*& PrecomputedVisibilityHandlerField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x290; confianca media)
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x290; confianca media)
     void*& PrecomputedVolumeDistanceFieldField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x250; confianca media)
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x250; confianca media)
     void*& PrecomputedVolumetricLightmapField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x2F0; confianca baixa)
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2F0; confianca baixa)
     void*& RemoveFromSceneFenceField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 184); }
     float& ShadowmapTotalSizeField() const
@@ -584,13 +584,13 @@ struct ULevel : public UObject
     BrzCampoPonteiro StreamingTexturesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevel.StreamingTextures")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x240; confianca media)
+    //  ancorado em `PackedTextureStreamingQualityLevelFeatureLevel` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x240; confianca media)
     void*& TickTaskLevelField() const
     { return BrzCampoAncorado<void*>(this, "PackedTextureStreamingQualityLevelFeatureLevel", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightBuildLevelOffset` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x320; confianca alta)
+    //  ancorado em `LightBuildLevelOffset` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x320; confianca alta)
     void*& VolumetricLightmapGridManagerField() const
     { return BrzCampoAncorado<void*>(this, "LightBuildLevelOffset", 16); }
     BrzCampoPonteiro WorldDataLayersField() const

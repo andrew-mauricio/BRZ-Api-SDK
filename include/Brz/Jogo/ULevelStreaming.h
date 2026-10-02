@@ -380,13 +380,13 @@ struct ULevelStreaming
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelLODIndex` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xF0; confianca alta)
+    //  ancorado em `LevelLODIndex` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF0; confianca alta)
     void*& AsyncRequestIDsField() const
     { return BrzCampoAncorado<void*>(this, "LevelLODIndex", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelLODIndex` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x100; confianca alta)
+    //  ancorado em `LevelLODIndex` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x100; confianca alta)
     int& CurrentStateField() const
     { return BrzCampoAncorado<int>(this, "LevelLODIndex", 28); }
     BrzCampoPonteiro EditorStreamingVolumesField() const
@@ -394,13 +394,13 @@ struct ULevelStreaming
     BrzCampoPonteiro LODPackageNamesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ULevelStreaming.LODPackageNames")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LODPackageNames` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x70; confianca alta)
+    //  ancorado em `LODPackageNames` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x70; confianca alta)
     void*& LODPackageNamesToLoadField() const
     { return BrzCampoAncorado<void*>(this, "LODPackageNames", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinTimeBetweenVolumeUnloadRequests` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x130; confianca alta)
+    //  ancorado em `MinTimeBetweenVolumeUnloadRequests` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x130; confianca alta)
     void*& LastVolumeUnloadRequestTimeField() const
     { return BrzCampoAncorado<void*>(this, "MinTimeBetweenVolumeUnloadRequests", 8); }
     BrzCampoPonteiro LevelColorField() const
@@ -428,8 +428,8 @@ struct ULevelStreaming
     int& StreamingPriorityField() const
     { return *GetNativePointerField<int*>(this, "ULevelStreaming.StreamingPriority"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelLODIndex` +29, medido na build 25535041
-    //  (offset absoluto medido: 0x101; confianca alta)
+    //  ancorado em `LevelLODIndex` +29 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x101; confianca alta)
     void*& TargetStateField() const
     { return BrzCampoAncorado<void*>(this, "LevelLODIndex", 29); }
     BrzCampoPonteiro WorldAssetField() const

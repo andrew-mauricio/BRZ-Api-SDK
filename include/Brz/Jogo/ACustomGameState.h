@@ -100,7 +100,7 @@ struct ACustomGameState : public AShooterGameState
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ACustomGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=398+grafo=14/14]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=398+grafo=13/13]]
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "ACustomGameState.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);

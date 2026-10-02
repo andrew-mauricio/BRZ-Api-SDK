@@ -85,7 +85,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretBallista.BotControl(APrimalBotCharacter*,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=164+grafo=3/3]]
     BrzPonteiro BotControl(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalStructureTurretBallista.BotControl(APrimalBotCharacter*,int)", a0, a1);
@@ -101,7 +101,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.CanFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool CanFire() const
     {
         return NativeCall<bool>(this, "APrimalStructureTurretBallista.CanFire()");
@@ -117,7 +117,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.CanUse(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanUse(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructureTurretBallista.CanUse(AShooterPlayerController*)", a0);
@@ -141,7 +141,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.ClientsPlayFireAnim_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClientsPlayFireAnim_Implementation() const
     {
         NativeCall<void>(this, "APrimalStructureTurretBallista.ClientsPlayFireAnim_Implementation()");
@@ -269,7 +269,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureTurretBallista.GetCurrentProjectileClass()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     UClass* GetCurrentProjectileClass() const
     {
         return NativeCall<UClass*>(this, "APrimalStructureTurretBallista.GetCurrentProjectileClass()");
@@ -277,7 +277,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureTurretBallista.GetFireProjectileDirection()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=163+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetFireProjectileDirection() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretBallista.GetFireProjectileDirection()");
@@ -285,7 +285,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretBallista.GetFireProjectileDirection_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetFireProjectileDirection_Implementation() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretBallista.GetFireProjectileDirection_Implementation()");
@@ -293,7 +293,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.GetMuzzleFlashSocketName()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=141+chamadores=2]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetMuzzleFlashSocketName(void* retorno) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTurretBallista.GetMuzzleFlashSocketName()", retorno);
@@ -301,7 +301,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretBallista.GetMuzzleLocation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetMuzzleLocation() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretBallista.GetMuzzleLocation()");
@@ -438,7 +438,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.StopFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopFire() const
     {
         NativeCall<void>(this, "APrimalStructureTurretBallista.StopFire()");
@@ -454,7 +454,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.Tick(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalStructureTurretBallista.Tick(float)", a0);
@@ -462,7 +462,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretBallista.TickSeatedBot(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TickSeatedBot(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalStructureTurretBallista.TickSeatedBot(float)", a0);
@@ -470,7 +470,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalStructureTurretBallista.TryFiring(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void TryFiring(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureTurretBallista.TryFiring(bool)", a0);
@@ -478,7 +478,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.TryFiring_Implementation(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TryFiring_Implementation(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureTurretBallista.TryFiring_Implementation(bool)", a0);
@@ -486,7 +486,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTurretBallista.Unstasis()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro Unstasis() const
     {
         return NativeCall<void*>(this, "APrimalStructureTurretBallista.Unstasis()");
@@ -494,7 +494,7 @@ struct APrimalStructureTurretBallista : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretBallista.UpdateAmmoCount(bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateAmmoCount(bool a0, bool a1) const
     {
         NativeCall<void, bool, bool>(this, "APrimalStructureTurretBallista.UpdateAmmoCount(bool,bool)", a0, a1);

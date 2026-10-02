@@ -71,7 +71,7 @@ struct APrimalStructureGhost
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureGhost.CheckAdditionalStructureTag_Implementation(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CheckAdditionalStructureTag_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalStructureGhost.CheckAdditionalStructureTag_Implementation(FName)", a0);
@@ -143,7 +143,7 @@ struct APrimalStructureGhost
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureGhost.SetStructureCollisionChannels(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1642+grafo=6/6]]
     BrzPonteiro SetStructureCollisionChannels(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalStructureGhost.SetStructureCollisionChannels(bool)", a0);
@@ -159,7 +159,7 @@ struct APrimalStructureGhost
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureGhost.TryCreateGhostPreview()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=810+grafo=12/14]]
     BrzPonteiro TryCreateGhostPreview() const
     {
         return NativeCall<void*>(this, "APrimalStructureGhost.TryCreateGhostPreview()");

@@ -177,11 +177,10 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNot
-    // classe: a funcao mora em UPrimalActor, e APrimalStructure herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void AnimNotifyCustomEvent(unsigned long long a0, void* a1, void* a2, void* a3) const
     {
-        NativeCall<void, unsigned long long, void*, void*, void*>(this, "UPrimalActor.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNotify*)", a0, a1, a2, a3);
+        NativeCall<void, unsigned long long, void*, void*, void*>(this, "APrimalStructure.AnimNotifyCustomEvent(FName,USkeletalMeshComponent*,UAnimSequenceBase*,UAnimNotify*)", a0, a1, a2, a3);
     }
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
@@ -526,7 +525,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.BPOverrideDemolish(AShooterPlayerController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool BPOverrideDemolish(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalStructure.BPOverrideDemolish(AShooterPlayerController*)", a0);
@@ -918,7 +917,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.ClearStructureLinks(APlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1684+grafo=14/14]]
     void ClearStructureLinks(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructure.ClearStructureLinks(APlayerController*)", a0);
@@ -966,7 +965,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.ClientUpdateLinkedStructures(TArray<unsignedint,TSizedDefaultAllocator<32>>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=168+bytes40+chamadores=6]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClientUpdateLinkedStructures(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructure.ClientUpdateLinkedStructures(TArray<unsignedint,TSizedDefaultAllocator<32>>&)", a0);
@@ -1198,7 +1197,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructure.FindFoundations(APrimalStructure*,TMap<APrimalStructure*,UE::Math::TVector<doub
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro FindFoundations(void* a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<void*, void*, void*, void*, void*>(this, "APrimalStructure.FindFoundations(APrimalStructure*,TMap<APrimalStructure*,UE::Math::TVector<double>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<APrimalStructure*,UE::Math::TVector<double>,0>>&,TMap<APrimalStructure*,UE::Math::TVector<double>,FDefaultSetAllocator,TDefaultMapHashableKeyFuncs<APrimalStructure*,UE::Math::TVector<double>,0>>&,bool&)", a0, a1, a2, a3);
@@ -1222,7 +1221,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.FlagReachable(APrimalStructure*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     static void FlagReachable(void* a0)
     {
         NativeCall<void, void*>(nullptr, "APrimalStructure.FlagReachable(APrimalStructure*)", a0);
@@ -1246,7 +1245,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.GatherStructuresPlacedOnFloor(APrimalStructure*,TArray<APrimalStructure*,TSized
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void GatherStructuresPlacedOnFloor(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "APrimalStructure.GatherStructuresPlacedOnFloor(APrimalStructure*,TArray<APrimalStructure*,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -1346,7 +1345,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.GetClosestTargetOverride(UE::Math::TVector<double>&,UE::Math::TVector<double>&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=61+chamadores=2]]
     bool GetClosestTargetOverride(void* a0, void* a1) const
     {
         return NativeCall<bool, void*, void*>(this, "APrimalStructure.GetClosestTargetOverride(UE::Math::TVector<double>&,UE::Math::TVector<double>&)", a0, a1);
@@ -1570,7 +1569,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.GetPaintingStaticMesh_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UStaticMeshComponent* GetPaintingStaticMesh_Implementation() const
     {
         return NativeCall<UStaticMeshComponent*>(this, "APrimalStructure.GetPaintingStaticMesh_Implementation()");
@@ -1838,7 +1837,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructure.GetWeldRootShip()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetWeldRootShip() const
     {
         return NativeCall<void*>(this, "APrimalStructure.GetWeldRootShip()");
@@ -1894,7 +1893,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.IsAllowedToBuild(APlayerController*,UE::Math::TVector<double>,UE::Math::TRotato
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     int IsAllowedToBuild(void* a0, void* a1, void* a2, void* a3, bool a4, void* a5, bool a6, bool a7, void* a8) const
     {
         return NativeCall<int, void*, void*, void*, void*, bool, void*, bool, bool, void*>(this, "APrimalStructure.IsAllowedToBuild(APlayerController*,UE::Math::TVector<double>,UE::Math::TRotator<double>,FPlacementData&,bool,UE::Math::TRotator<double>,bool,bool,APawn*)", a0, a1, a2, a3, a4, a5, a6, a7, a8);
@@ -1918,7 +1917,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.IsAttachedToStructureAttachmentBase()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsAttachedToStructureAttachmentBase() const
     {
         return NativeCall<bool>(this, "APrimalStructure.IsAttachedToStructureAttachmentBase()");
@@ -2014,7 +2013,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.IsRepairAllowed()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsRepairAllowed() const
     {
         return NativeCall<bool>(this, "APrimalStructure.IsRepairAllowed()");
@@ -2046,7 +2045,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.IsUsingWorldSpaceMaterial()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsUsingWorldSpaceMaterial() const
     {
         return NativeCall<bool>(this, "APrimalStructure.IsUsingWorldSpaceMaterial()");
@@ -2134,7 +2133,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.LoopingStructureSkinTimer()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void LoopingStructureSkinTimer() const
     {
         NativeCall<void>(this, "APrimalStructure.LoopingStructureSkinTimer()");
@@ -2158,7 +2157,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructure.MultiHandleSkinNetMessage_Implementation(FName,FSkinNetMessageParams&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=328+grafo=4/4]]
     BrzPonteiro MultiHandleSkinNetMessage_Implementation(unsigned long long a0, void* a1) const
     {
         return NativeCall<void*, unsigned long long, void*>(this, "APrimalStructure.MultiHandleSkinNetMessage_Implementation(FName,FSkinNetMessageParams&)", a0, a1);
@@ -2298,7 +2297,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.NetUpdateOriginalOwnerNameAndID_Implementation(int,FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetUpdateOriginalOwnerNameAndID_Implementation(int a0, const FString& a1) const
     {
         NativeCall<void, int, void*>(this, "APrimalStructure.NetUpdateOriginalOwnerNameAndID_Implementation(int,FString&)", a0, const_cast<FString*>(&a1));
@@ -2334,7 +2333,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.NonLoopingStructureSkinTimer()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NonLoopingStructureSkinTimer() const
     {
         NativeCall<void>(this, "APrimalStructure.NonLoopingStructureSkinTimer()");
@@ -2410,7 +2409,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.OnRep_CurrentVariantTag()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_CurrentVariantTag() const
     {
         NativeCall<void>(this, "APrimalStructure.OnRep_CurrentVariantTag()");
@@ -2522,7 +2521,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.PickupStructure(bool,AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [conferida_thunk_vtable+metodo_grafo]
     UPrimalItem* PickupStructure(bool a0, void* a1) const
     {
         return NativeCall<UPrimalItem*, bool, void*>(this, "APrimalStructure.PickupStructure(bool,AShooterPlayerController*)", a0, a1);
@@ -2570,7 +2569,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.PostInitializeComponents()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void PostInitializeComponents() const
     {
         NativeCall<void>(this, "APrimalStructure.PostInitializeComponents()");
@@ -2694,7 +2693,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructure.ReduceMemoryForStasis()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ReduceMemoryForStasis() const
     {
         return NativeCall<void*>(this, "APrimalStructure.ReduceMemoryForStasis()");
@@ -2870,7 +2869,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.SetLinkedIDs()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetLinkedIDs() const
     {
         NativeCall<void>(this, "APrimalStructure.SetLinkedIDs()");
@@ -3083,7 +3082,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructure.TemplateMiscDataRequested()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=182+bytes40+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void TemplateMiscDataRequested(void* retorno) const
     {
         NativeCall<void, void*>(this, "APrimalStructure.TemplateMiscDataRequested()", retorno);
@@ -3131,7 +3130,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructure.Unstasis()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void Unstasis() const
     {
         NativeCall<void>(this, "APrimalStructure.Unstasis()");
@@ -3163,7 +3162,7 @@ struct APrimalStructure : public APrimalTargetableActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructure.UpdateNavigation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=715+chamadores=2+grafo=6/6]]
     BrzPonteiro UpdateNavigation() const
     {
         return NativeCall<void*>(this, "APrimalStructure.UpdateNavigation()");
@@ -3271,8 +3270,8 @@ struct APrimalStructure : public APrimalTargetableActor
     int& BedIDField() const
     { return *GetNativePointerField<int*>(this, "APrimalStructure.BedID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveEffectVFX` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x880; confianca baixa)
+    //  ancorado em `ActiveEffectVFX` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x880; confianca baixa)
     void*& CachedActiveEffectsDamageMultField() const
     { return BrzCampoAncorado<void*>(this, "ActiveEffectVFX", 168); }
     UStaticMeshComponent*& CosmeticVariantStaticMeshField() const
@@ -3290,13 +3289,13 @@ struct APrimalStructure : public APrimalTargetableActor
     BrzCampoPonteiro DestructionEmitterField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructure.DestructionEmitter")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveEffectVFX` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x828; confianca media)
+    //  ancorado em `ActiveEffectVFX` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x828; confianca media)
     void*& EffectExpireTimesField() const
     { return BrzCampoAncorado<void*>(this, "ActiveEffectVFX", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveEffectVFX` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x878; confianca baixa)
+    //  ancorado em `ActiveEffectVFX` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x878; confianca baixa)
     void*& EffectExpiryTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "ActiveEffectVFX", 160); }
     BrzCampoPonteiro ExtraStructureSnapTypeFlagsField() const
@@ -3308,23 +3307,23 @@ struct APrimalStructure : public APrimalTargetableActor
     BrzCampoPonteiro ItemsUseAlternateActorClassAttachmentField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructure.ItemsUseAlternateActorClassAttachment")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSkinAppliedTime` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xBD8; confianca alta)
+    //  ancorado em `LastSkinAppliedTime` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBD8; confianca alta)
     double& LastBumpedDamageTimeField() const
     { return BrzCampoAncorado<double>(this, "LastSkinAppliedTime", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSkinAppliedTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xBC8; confianca alta)
+    //  ancorado em `LastSkinAppliedTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBC8; confianca alta)
     double& LastColorizationTimeField() const
     { return BrzCampoAncorado<double>(this, "LastSkinAppliedTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SkinCooldownDuration` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xC20; confianca alta)
+    //  ancorado em `SkinCooldownDuration` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC20; confianca alta)
     float& LastFadeOpacityField() const
     { return BrzCampoAncorado<float>(this, "SkinCooldownDuration", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSkinAppliedTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xBD0; confianca alta)
+    //  ancorado em `LastSkinAppliedTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBD0; confianca alta)
     double& LastFailedPinTimeField() const
     { return BrzCampoAncorado<double>(this, "LastSkinAppliedTime", 24); }
     float& LastHealthPercentageField() const
@@ -3336,8 +3335,8 @@ struct APrimalStructure : public APrimalTargetableActor
     double& LastSkinAppliedTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalStructure.LastSkinAppliedTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastSkinAppliedTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xBC0; confianca alta)
+    //  ancorado em `LastSkinAppliedTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBC0; confianca alta)
     double& LastStructureStasisTimeField() const
     { return BrzCampoAncorado<double>(this, "LastSkinAppliedTime", 8); }
     TArray<APrimalDinoCharacter*>& LatchedDinosField() const
@@ -3349,8 +3348,8 @@ struct APrimalStructure : public APrimalTargetableActor
     BrzCampoPonteiro LocalOnlySkinCustomPersistentDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructure.LocalOnlySkinCustomPersistentData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OwnerMission` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB90; confianca alta)
+    //  ancorado em `OwnerMission` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB90; confianca alta)
     ABiomeZoneVolume*& MyBiomeZoneVolumeField() const
     { return BrzCampoAncorado<ABiomeZoneVolume*>(this, "OwnerMission", 8); }
     long long& MyCustomCosmeticStructureSkinIDField() const
@@ -3360,8 +3359,8 @@ struct APrimalStructure : public APrimalTargetableActor
     USceneComponent*& MyRootTransformField() const
     { return *GetNativePointerField<USceneComponent**>(this, "APrimalStructure.MyRootTransform"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OwnerMission` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xB98; confianca alta)
+    //  ancorado em `OwnerMission` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB98; confianca alta)
     USkeletalMeshComponent*& MySKCompField() const
     { return BrzCampoAncorado<USkeletalMeshComponent*>(this, "OwnerMission", 16); }
     UStaticMeshComponent*& MyStaticMeshField() const
@@ -3369,15 +3368,15 @@ struct APrimalStructure : public APrimalTargetableActor
     UPrimalHarvestingComponent*& MyStructureHarvestingComponentField() const
     { return *GetNativePointerField<UPrimalHarvestingComponent**>(this, "APrimalStructure.MyStructureHarvestingComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreviewCameraRotation` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xAD8; confianca alta)
+    //  ancorado em `PreviewCameraRotation` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAD8; confianca alta)
     void*& MyStructureHarvestingElementField() const
     { return BrzCampoAncorado<void*>(this, "PreviewCameraRotation", 24); }
     BrzCampoPonteiro NotifyCarriedByDinoChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructure.NotifyCarriedByDinoChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveEffectVFX` +176, medido na build 25535041
-    //  (offset absoluto medido: 0x888; confianca baixa)
+    //  ancorado em `ActiveEffectVFX` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x888; confianca baixa)
     void*& OnClientBlockedUserIdsRecievedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "ActiveEffectVFX", 176); }
     FString& OriginalPlacedTimeStampField() const
@@ -3437,8 +3436,8 @@ struct APrimalStructure : public APrimalTargetableActor
     FPrimalStructureSnapPointOverride& PreviewSnapOverrideField() const
     { return *GetNativePointerField<FPrimalStructureSnapPointOverride*>(this, "APrimalStructure.PreviewSnapOverride"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SaddleDino` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xAF0; confianca alta)
+    //  ancorado em `SaddleDino` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAF0; confianca alta)
     TWeakObjectPtr<void>& PrimaryMeshComponentField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "SaddleDino", 8); }
     APrimalStructure*& PrimarySnappedStructureChildField() const
@@ -3446,18 +3445,18 @@ struct APrimalStructure : public APrimalTargetableActor
     APrimalStructure*& PrimarySnappedStructureParentField() const
     { return *GetNativePointerField<APrimalStructure**>(this, "APrimalStructure.PrimarySnappedStructureParent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AttachedToDinoID1` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xC50; confianca alta)
+    //  ancorado em `AttachedToDinoID1` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC50; confianca alta)
     void*& ProcessTreeTagField() const
     { return BrzCampoAncorado<void*>(this, "AttachedToDinoID1", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlacementYawOffsetIncrement` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xBF0; confianca alta)
+    //  ancorado em `PlacementYawOffsetIncrement` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBF0; confianca alta)
     float& RepairAmountRemainingField() const
     { return BrzCampoAncorado<float>(this, "PlacementYawOffsetIncrement", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LocalOnlySkinCustomPersistentData` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x7A8; confianca media)
+    //  ancorado em `LocalOnlySkinCustomPersistentData` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7A8; confianca media)
     void*& RepairCheckTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "LocalOnlySkinCustomPersistentData", 120); }
     BrzCampoPonteiro ReplicatedStructureMySkinClassField() const
@@ -3491,18 +3490,18 @@ struct APrimalStructure : public APrimalTargetableActor
     BrzCampoPonteiro StructureSkinClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalStructure.StructureSkinClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LocalOnlySkinCustomPersistentData` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x7B0; confianca media)
+    //  ancorado em `LocalOnlySkinCustomPersistentData` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B0; confianca media)
     void*& StructureSkinLoopingTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "LocalOnlySkinCustomPersistentData", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LocalOnlySkinCustomPersistentData` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x7B8; confianca baixa)
+    //  ancorado em `LocalOnlySkinCustomPersistentData` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B8; confianca baixa)
     void*& StructureSkinNonLoopingTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "LocalOnlySkinCustomPersistentData", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LocalOnlySkinCustomPersistentData` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x7C0; confianca baixa)
+    //  ancorado em `LocalOnlySkinCustomPersistentData` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7C0; confianca baixa)
     void*& StructureSkinUndoPreviewTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "LocalOnlySkinCustomPersistentData", 144); }
     int& StructureSnapTypeFlagsField() const
@@ -3510,13 +3509,13 @@ struct APrimalStructure : public APrimalTargetableActor
     TArray<APrimalStructure*>& StructuresPlacedOnFloorField() const
     { return *GetNativePointerField<TArray<APrimalStructure*>*>(this, "APrimalStructure.StructuresPlacedOnFloor"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AttachedToDinoID1` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xC48; confianca alta)
+    //  ancorado em `AttachedToDinoID1` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC48; confianca alta)
     void*& TaggedIndexField() const
     { return BrzCampoAncorado<void*>(this, "AttachedToDinoID1", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AttachedToDinoID1` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xC4C; confianca alta)
+    //  ancorado em `AttachedToDinoID1` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC4C; confianca alta)
     void*& TaggedIndexTwoField() const
     { return BrzCampoAncorado<void*>(this, "AttachedToDinoID1", 8); }
     unsigned char& TribeGroupStructureRankField() const

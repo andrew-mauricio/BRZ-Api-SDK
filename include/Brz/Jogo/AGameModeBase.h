@@ -169,7 +169,7 @@ struct AGameModeBase : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AGameModeBase.GetDefaultPawnClassForController(AController*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=142+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=142+chamadores=2]]
     UClass* GetDefaultPawnClassForController(void* a0) const
     {
         return NativeCall<UClass*, void*>(this, "AGameModeBase.GetDefaultPawnClassForController(AController*)", a0);

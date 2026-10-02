@@ -97,7 +97,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.HideAnimatedSK()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=492+grafo=6/6]]
     void HideAnimatedSK() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.HideAnimatedSK()");
@@ -121,7 +121,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.PeriodicalTrapDamageTimer()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void PeriodicalTrapDamageTimer() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.PeriodicalTrapDamageTimer()");
@@ -129,7 +129,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.PlacedStructure(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureBearTrap.PlacedStructure(AShooterPlayerController*)", a0);
@@ -137,7 +137,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // dump_sobre_sdk_287a0
     //   APrimalStructureBearTrap.ShowAnimatedSK()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ShowAnimatedSK() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.ShowAnimatedSK()");
@@ -145,7 +145,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.TakeDamage(float,FDamageEvent&,AController*,AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     float TakeDamage(float a0, void* a1, void* a2, void* a3) const
     {
         return NativeCall<float, float, void*, void*, void*>(this, "APrimalStructureBearTrap.TakeDamage(float,FDamageEvent&,AController*,AActor*)", a0, a1, a2, a3);
@@ -170,7 +170,7 @@ struct APrimalStructureBearTrap : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBearTrap.UpdateStructureMesh()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UpdateStructureMesh() const
     {
         NativeCall<void>(this, "APrimalStructureBearTrap.UpdateStructureMesh()");

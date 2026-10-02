@@ -36,11 +36,10 @@ struct ATogglePainVolume : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ATogglePainVolume.BeginPlay()
-    // classe: a funcao mora em AActor, e ATogglePainVolume herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
-        NativeCall<void>(this, "AActor.BeginPlay()");
+        NativeCall<void>(this, "ATogglePainVolume.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -130,8 +129,8 @@ struct ATogglePainVolume : public AActor
     float& PainIntervalField() const
     { return *GetNativePointerField<float*>(this, "ATogglePainVolume.PainInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureDamageOverlapRadius` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x540; confianca alta)
+    //  ancorado em `StructureDamageOverlapRadius` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x540; confianca alta)
     void*& PainTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "StructureDamageOverlapRadius", 8); }
     TArray<void*>& SavedStructureDamageOverlapPointsField() const

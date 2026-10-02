@@ -345,8 +345,8 @@ struct APrimalBotAIController : public APrimalDinoAIController
     float& DinoSearchRadiusField() const
     { return *GetNativePointerField<float*>(this, "APrimalBotAIController.DinoSearchRadius"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClaimedDino` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xAB8; confianca alta)
+    //  ancorado em `ClaimedDino` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAB8; confianca alta)
     double& LastTimeGivenAttackPriorityField() const
     { return BrzCampoAncorado<double>(this, "ClaimedDino", 12); }
     BrzCampoPonteiro RiddenDinoControllerClassField() const

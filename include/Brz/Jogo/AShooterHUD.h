@@ -288,7 +288,7 @@ struct AShooterHUD
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterHUD.DrawUIHUD(UCanvas*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro DrawUIHUD(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterHUD.DrawUIHUD(UCanvas*)", a0);
@@ -945,13 +945,13 @@ struct AShooterHUD
     BrzCampoPonteiro AdminMangmentUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.AdminMangmentUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +56, medido na build 25535041
-    //  (offset absoluto medido: 0xD48; confianca media)
+    //  ancorado em `TeamPingTypes` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD48; confianca media)
     void*& AimAssistLastLocationField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlayerInfoRequestTimeInterval` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x5B8; confianca alta)
+    //  ancorado em `PlayerInfoRequestTimeInterval` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B8; confianca alta)
     void*& AllPlayersDataField() const
     { return BrzCampoAncorado<void*>(this, "PlayerInfoRequestTimeInterval", 8); }
     BrzCampoPonteiro AllPlayersListTemplateField() const
@@ -971,18 +971,18 @@ struct AShooterHUD
     BrzCampoPonteiro CachedFloatingOverlapsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CachedFloatingOverlaps")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xD30; confianca alta)
+    //  ancorado em `TeamPingTypes` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD30; confianca alta)
     void*& CantBuildNotifyTimeField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +40, medido na build 25535041
-    //  (offset absoluto medido: 0xD38; confianca media)
+    //  ancorado em `TeamPingTypes` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD38; confianca media)
     void*& CantBuildStringField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x9A0; confianca alta)
+    //  ancorado em `SpeechBubble` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9A0; confianca alta)
     void*& CantUseHereTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 24); }
     BrzCampoPonteiro CanvasField() const
@@ -1002,8 +1002,8 @@ struct AShooterHUD
     float& ClientReplicationSendNowThresholdField() const
     { return *GetNativePointerField<float*>(this, "AShooterHUD.ClientReplicationSendNowThreshold"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x800; confianca media)
+    //  ancorado em `CustomRadialSelector` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x800; confianca media)
     void*& ColorMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 48); }
     BrzCampoPonteiro ConsoleDedicatedUITemplateField() const
@@ -1017,20 +1017,20 @@ struct AShooterHUD
     BrzCampoPonteiro CurrentBasedUIField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CurrentBasedUI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +60, medido na build 25535041
-    //  (offset absoluto medido: 0x9C4; confianca media)
+    //  ancorado em `SpeechBubble` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9C4; confianca media)
     void*& CurrentCrosshairAlphaField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +176, medido na build 25535041
-    //  (offset absoluto medido: 0xE58; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE58; confianca baixa)
     void*& CurrentCrosshairScreenLocationField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 176); }
     BrzCampoPonteiro CurrentMinimapHUDField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CurrentMinimapHUD")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x818; confianca media)
+    //  ancorado em `CustomRadialSelector` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x818; confianca media)
     void*& CurrentMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 72); }
     BrzCampoPonteiro CurrentOpenedInventoryField() const
@@ -1038,20 +1038,20 @@ struct AShooterHUD
     BrzCampoPonteiro CurrentRadialSelectorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.CurrentRadialSelector")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x7D8; confianca media)
+    //  ancorado em `CustomRadialSelector` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7D8; confianca media)
     void*& CurrentRespawnUIField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xDB0; confianca media)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xDB0; confianca media)
     void*& CurrentSpawnMenuField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 8); }
     int& CurrentTargetIndexField() const
     { return *GetNativePointerField<int*>(this, "AShooterHUD.CurrentTargetIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xEE8; confianca alta)
+    //  ancorado em `TutorialUI` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEE8; confianca alta)
     void*& CurrentTutorialIndexField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 8); }
     BrzCampoPonteiro CurrentlyOpenedHubUIField() const
@@ -1095,8 +1095,8 @@ struct AShooterHUD
     BrzCampoPonteiro EmoteRadialSelectorTemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.EmoteRadialSelectorTemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +192, medido na build 25535041
-    //  (offset absoluto medido: 0xE68; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE68; confianca baixa)
     void*& ExtraHitTestInvisibleHiddenUIsField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 192); }
     BrzCampoPonteiro FloatingMultiUseIconBGColorField() const
@@ -1120,13 +1120,13 @@ struct AShooterHUD
     BrzCampoPonteiro HUDAssets02TextureAtlasField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HUDAssets02TextureAtlas")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x994; confianca alta)
+    //  ancorado em `SpeechBubble` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x994; confianca alta)
     void*& HUDDarkField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x990; confianca alta)
+    //  ancorado em `SpeechBubble` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x990; confianca alta)
     void*& HUDLightField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 8); }
     BrzCampoPonteiro HUDMainTextureAtlasField() const
@@ -1134,8 +1134,8 @@ struct AShooterHUD
     BrzCampoPonteiro HUDNotificationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HUDNotifications")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xD28; confianca alta)
+    //  ancorado em `TeamPingTypes` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD28; confianca alta)
     void*& HideChatBoxHandleField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 24); }
     BrzCampoPonteiro HitMarkerTextureField() const
@@ -1143,13 +1143,13 @@ struct AShooterHUD
     BrzCampoPonteiro HitNotifyCrosshairField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HitNotifyCrosshair")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +232, medido na build 25535041
-    //  (offset absoluto medido: 0xBE8; confianca baixa)
+    //  ancorado em `HitNotifyCrosshair` +232 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBE8; confianca baixa)
     void*& HitNotifyDataField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x9B8; confianca media)
+    //  ancorado em `SpeechBubble` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B8; confianca media)
     void*& HitNotifyDisplayTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 48); }
     BrzCampoPonteiro HitNotifyIconField() const
@@ -1157,8 +1157,8 @@ struct AShooterHUD
     BrzCampoPonteiro HitNotifyTextureField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HitNotifyTexture")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xEF0; confianca alta)
+    //  ancorado em `TutorialUI` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEF0; confianca alta)
     void*& HitchStringField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 16); }
     BrzCampoPonteiro HubUITemplateField() const
@@ -1166,13 +1166,13 @@ struct AShooterHUD
     BrzCampoPonteiro HurtCameraShakeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.HurtCameraShake")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca media)
+    //  ancorado em `CustomRadialSelector` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca media)
     void*& IconMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +368, medido na build 25535041
-    //  (offset absoluto medido: 0xC70; confianca baixa)
+    //  ancorado em `HitNotifyCrosshair` +368 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC70; confianca baixa)
     void*& InfoItemsField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 368); }
     float& InitialLifeSpanField() const
@@ -1204,15 +1204,15 @@ struct AShooterHUD
     BrzCampoPonteiro KilledIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.KilledIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +36, medido na build 25535041
-    //  (offset absoluto medido: 0xF04; confianca media)
+    //  ancorado em `TutorialUI` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF04; confianca media)
     void*& KingHitchField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 36); }
     double& LastActorForceReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastActorForceReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CachedFloatingOverlaps` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xF20; confianca alta)
+    //  ancorado em `CachedFloatingOverlaps` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF20; confianca alta)
     void*& LastCachedOverlapsFrameField() const
     { return BrzCampoAncorado<void*>(this, "CachedFloatingOverlaps", 16); }
     double& LastEnterStasisTimeField() const
@@ -1220,33 +1220,33 @@ struct AShooterHUD
     double& LastExitStasisTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastExitStasisTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x9BC; confianca media)
+    //  ancorado em `SpeechBubble` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9BC; confianca media)
     void*& LastFilterEmoteNameField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +216, medido na build 25535041
-    //  (offset absoluto medido: 0xE80; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE80; confianca baixa)
     void*& LastHUDTargetChangedTimeField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x9B0; confianca media)
+    //  ancorado em `SpeechBubble` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B0; confianca media)
     double& LastHitTimeField() const
     { return BrzCampoAncorado<double>(this, "SpeechBubble", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xF00; confianca alta)
+    //  ancorado em `TutorialUI` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF00; confianca alta)
     void*& LastHitchField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +40, medido na build 25535041
-    //  (offset absoluto medido: 0xF08; confianca media)
+    //  ancorado em `TutorialUI` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF08; confianca media)
     void*& LastNumLocalPlayersField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowAllPlayersWhenSpectatingLocal` +6, medido na build 25535041
-    //  (offset absoluto medido: 0x5A8; confianca alta)
+    //  ancorado em `bShowAllPlayersWhenSpectatingLocal` +6 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5A8; confianca alta)
     void*& LastPlayerInfoRequestTimeField() const
     { return BrzCampoAncorado<void*>(this, "bShowAllPlayersWhenSpectatingLocal", 6); }
     TWeakObjectPtr<void>& LastPostProcessVolumeSoundField() const
@@ -1254,8 +1254,8 @@ struct AShooterHUD
     double& LastPreReplicationTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastPreReplicationTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +224, medido na build 25535041
-    //  (offset absoluto medido: 0xE88; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE88; confianca baixa)
     void*& LastReceivedChatMessagesField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 224); }
     FString& LastSelectedWindSourceComponentNameField() const
@@ -1265,8 +1265,8 @@ struct AShooterHUD
     double& LastThrottledTickTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterHUD.LastThrottledTickTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bMultiUseIsDrawingUIHUD` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xD78; confianca alta)
+    //  ancorado em `bMultiUseIsDrawingUIHUD` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD78; confianca alta)
     void*& LastTorpidityIncreaseTimeField() const
     { return BrzCampoAncorado<void*>(this, "bMultiUseIsDrawingUIHUD", 8); }
     TArray<void*>& LayersField() const
@@ -1292,8 +1292,8 @@ struct AShooterHUD
     BrzCampoPonteiro MissionListUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.MissionListUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x890; confianca baixa)
+    //  ancorado em `CustomRadialSelector` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x890; confianca baixa)
     void*& MultiUseActionLocationField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 192); }
     BrzCampoPonteiro MultiUseRadialSelectorField() const
@@ -1349,25 +1349,25 @@ struct AShooterHUD
     TObjectPtr<AActor>& NetworkSpatializationParentField() const
     { return *GetNativePointerField<TObjectPtr<AActor>*>(this, "AShooterHUD.NetworkSpatializationParent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x9A8; confianca alta)
+    //  ancorado em `SpeechBubble` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9A8; confianca alta)
     void*& NoAmmoFadeOutTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpeechBubble` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x998; confianca alta)
+    //  ancorado em `SpeechBubble` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x998; confianca alta)
     void*& NoAmmoNotifyTimeField() const
     { return BrzCampoAncorado<void*>(this, "SpeechBubble", 16); }
     BrzCampoPonteiro NormalFontField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.NormalFont")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +224, medido na build 25535041
-    //  (offset absoluto medido: 0xBE0; confianca baixa)
+    //  ancorado em `HitNotifyCrosshair` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBE0; confianca baixa)
     void*& OffsetField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xB60; confianca media)
+    //  ancorado em `HitNotifyCrosshair` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB60; confianca media)
     void*& OffsetsField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 96); }
     BrzCampoPonteiro OnActorBeginOverlapField() const
@@ -1385,8 +1385,8 @@ struct AShooterHUD
     BrzCampoPonteiro OnMatineeUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.OnMatineeUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SingletonHUDNotifications` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xCB0; confianca alta)
+    //  ancorado em `SingletonHUDNotifications` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCB0; confianca alta)
     void*& OnPlayerTalkingStateChangedDelegateField() const
     { return BrzCampoAncorado<void*>(this, "SingletonHUDNotifications", 16); }
     BrzCampoPonteiro OnSemaphoreTakenField() const
@@ -1438,8 +1438,8 @@ struct AShooterHUD
     FActorTickFunction& PrimaryActorTickField() const
     { return *GetNativePointerField<FActorTickFunction*>(this, "AShooterHUD.PrimaryActorTick"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +28, medido na build 25535041
-    //  (offset absoluto medido: 0xB1C; confianca media)
+    //  ancorado em `HitNotifyCrosshair` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB1C; confianca media)
     void*& PulseValueField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 28); }
     int& RayTracingGroupIdField() const
@@ -1461,13 +1461,13 @@ struct AShooterHUD
     BrzCampoPonteiro SavingOverlayUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.SavingOverlayUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xB18; confianca media)
+    //  ancorado em `HitNotifyCrosshair` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB18; confianca media)
     void*& ScaleUIField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HitNotifyCrosshair` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xB20; confianca media)
+    //  ancorado em `HitNotifyCrosshair` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB20; confianca media)
     void*& ShadowedFontField() const
     { return BrzCampoAncorado<void*>(this, "HitNotifyCrosshair", 32); }
     BrzCampoPonteiro ShowDebugTargetActorField() const
@@ -1489,8 +1489,8 @@ struct AShooterHUD
     TArray<TWeakObjectPtr<void>>& StasisUnRegisteredComponentsField() const
     { return *GetNativePointerField<TArray<TWeakObjectPtr<void>>*>(this, "AShooterHUD.StasisUnRegisteredComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomRadialSelector` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x7E0; confianca media)
+    //  ancorado em `CustomRadialSelector` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7E0; confianca media)
     void*& StringMultiUseActionField() const
     { return BrzCampoAncorado<void*>(this, "CustomRadialSelector", 16); }
     BrzCampoPonteiro SubtitlesUITemplateField() const
@@ -1506,8 +1506,8 @@ struct AShooterHUD
     BrzCampoPonteiro TeamPingWheelSettingsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.TeamPingWheelSettings")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xDB8; confianca media)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xDB8; confianca media)
     void*& TempChatMsgField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 16); }
     BrzCampoPonteiro TextEntryUITemplateField() const
@@ -1515,8 +1515,8 @@ struct AShooterHUD
     float& TimeToHideChatField() const
     { return *GetNativePointerField<float*>(this, "AShooterHUD.TimeToHideChat"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xD20; confianca alta)
+    //  ancorado em `TeamPingTypes` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD20; confianca alta)
     void*& TimerHandle_DoShowSpawnUIField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 16); }
     BrzCampoPonteiro ToggledDebugCategoriesField() const
@@ -1524,8 +1524,8 @@ struct AShooterHUD
     BrzCampoPonteiro TopOverlayHUDUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.TopOverlayHUDUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +208, medido na build 25535041
-    //  (offset absoluto medido: 0xE78; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +208 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE78; confianca baixa)
     void*& TorpidityOpacityField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 208); }
     BrzCampoPonteiro TrackingItemsHUDField() const
@@ -1537,8 +1537,8 @@ struct AShooterHUD
     BrzCampoPonteiro TribeWarUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.TribeWarUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +304, medido na build 25535041
-    //  (offset absoluto medido: 0xED8; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +304 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xED8; confianca baixa)
     void*& TutorialEndTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 304); }
     BrzCampoPonteiro TutorialUIField() const
@@ -1576,8 +1576,8 @@ struct AShooterHUD
     BrzCampoPonteiro bAutoDestroyWhenFinishedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bAutoDestroyWhenFinished")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +72, medido na build 25535041
-    //  (offset absoluto medido: 0xD58; confianca media)
+    //  ancorado em `TeamPingTypes` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD58; confianca media)
     void*& bAutoShowChatField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 72); }
     BrzCampoPonteiro bAutoStasisField() const
@@ -1601,8 +1601,8 @@ struct AShooterHUD
     BrzCampoPonteiro bCanBeInClusterField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bCanBeInCluster")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +212, medido na build 25535041
-    //  (offset absoluto medido: 0xE7C; confianca baixa)
+    //  ancorado em `AdditionalDinoMultiuseCheckDistance` +212 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE7C; confianca baixa)
     void*& bChatVisibleField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalDinoMultiuseCheckDistance", 212); }
     BrzCampoPonteiro bClimbableField() const
@@ -1628,13 +1628,13 @@ struct AShooterHUD
     BrzCampoPonteiro bExchangedRolesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bExchangedRoles")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +79, medido na build 25535041
-    //  (offset absoluto medido: 0xD5F; confianca media)
+    //  ancorado em `TeamPingTypes` +79 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD5F; confianca media)
     void*& bExtraConsoleHideHUDField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 79); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +78, medido na build 25535041
-    //  (offset absoluto medido: 0xD5E; confianca media)
+    //  ancorado em `TeamPingTypes` +78 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD5E; confianca media)
     void*& bExtraHideHUDField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 78); }
     BrzCampoPonteiro bFindCameraComponentWhenViewTargetField() const
@@ -1642,8 +1642,8 @@ struct AShooterHUD
     BrzCampoPonteiro bForceAllowNetMulticastField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForceAllowNetMulticast")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +77, medido na build 25535041
-    //  (offset absoluto medido: 0xD5D; confianca media)
+    //  ancorado em `TeamPingTypes` +77 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD5D; confianca media)
     void*& bForceHUDHiddenField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 77); }
     BrzCampoPonteiro bForceHiddenReplicationField() const
@@ -1665,8 +1665,8 @@ struct AShooterHUD
     BrzCampoPonteiro bForcedHudDrawingRequiresSameTeamField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bForcedHudDrawingRequiresSameTeam")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowingMinimapTooltip` +1, medido na build 25535041
-    //  (offset absoluto medido: 0xF2A; confianca alta)
+    //  ancorado em `bShowingMinimapTooltip` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF2A; confianca alta)
     void*& bFrameGenDisabledBecauseUIField() const
     { return BrzCampoAncorado<void*>(this, "bShowingMinimapTooltip", 1); }
     BrzCampoPonteiro bGenerateOverlapEventsDuringLevelStreamingField() const
@@ -1688,8 +1688,8 @@ struct AShooterHUD
     BrzCampoPonteiro bIgnoresOriginShiftingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIgnoresOriginShifting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +76, medido na build 25535041
-    //  (offset absoluto medido: 0xD5C; confianca media)
+    //  ancorado em `TeamPingTypes` +76 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD5C; confianca media)
     void*& bInitializedUIScenesField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 76); }
     BrzCampoPonteiro bIsDestroyedFromChildActorComponentField() const
@@ -1705,8 +1705,8 @@ struct AShooterHUD
     BrzCampoPonteiro bIsValidUnstasisCasterField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bIsValidUnstasisCaster")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowingMinimapTooltip` +2, medido na build 25535041
-    //  (offset absoluto medido: 0xF2B; confianca alta)
+    //  ancorado em `bShowingMinimapTooltip` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF2B; confianca alta)
     void*& bLastFrameGenDisabledBecauseUIField() const
     { return BrzCampoAncorado<void*>(this, "bShowingMinimapTooltip", 2); }
     BrzCampoPonteiro bLoadedFromSaveGameField() const
@@ -1754,8 +1754,8 @@ struct AShooterHUD
     BrzCampoPonteiro bPreventSavingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bPreventSaving")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TutorialUI` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xEEC; confianca alta)
+    //  ancorado em `TutorialUI` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEEC; confianca alta)
     void*& bPreventShowChatBoxField() const
     { return BrzCampoAncorado<void*>(this, "TutorialUI", 12); }
     BrzCampoPonteiro bRealtimeThrottledTickUseNativeTickField() const
@@ -1765,8 +1765,8 @@ struct AShooterHUD
     BrzCampoPonteiro bRelevantForNetworkReplaysField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bRelevantForNetworkReplays")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bShowAllPlayersWhenSpectating` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x5A1; confianca alta)
+    //  ancorado em `bShowAllPlayersWhenSpectating` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5A1; confianca alta)
     void*& bRemovedPrimalGameplayHudsField() const
     { return BrzCampoAncorado<void*>(this, "bShowAllPlayersWhenSpectating", 1); }
     BrzCampoPonteiro bReplayRewindableField() const
@@ -1798,8 +1798,8 @@ struct AShooterHUD
     BrzCampoPonteiro bShowOverlaysField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bShowOverlays")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ItemRemovedNotificationIconColor` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x918; confianca alta)
+    //  ancorado em `ItemRemovedNotificationIconColor` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x918; confianca alta)
     void*& bShowedKnockedNotificationField() const
     { return BrzCampoAncorado<void*>(this, "ItemRemovedNotificationIconColor", 16); }
     BrzCampoPonteiro bShowingMinimapTooltipField() const
@@ -1809,18 +1809,18 @@ struct AShooterHUD
     BrzCampoPonteiro bStasisedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterHUD.bStasised")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +73, medido na build 25535041
-    //  (offset absoluto medido: 0xD59; confianca media)
+    //  ancorado em `TeamPingTypes` +73 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD59; confianca media)
     void*& bTargetHarvestableField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 73); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +74, medido na build 25535041
-    //  (offset absoluto medido: 0xD5A; confianca media)
+    //  ancorado em `TeamPingTypes` +74 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD5A; confianca media)
     void*& bTargetHarvestableAllowedField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 74); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TeamPingTypes` +75, medido na build 25535041
-    //  (offset absoluto medido: 0xD5B; confianca media)
+    //  ancorado em `TeamPingTypes` +75 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD5B; confianca media)
     void*& bTargetHarvestableIsUsableField() const
     { return BrzCampoAncorado<void*>(this, "TeamPingTypes", 75); }
     BrzCampoPonteiro bTearOffField() const

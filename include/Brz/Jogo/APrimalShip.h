@@ -170,7 +170,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.AquireLoot(APrimalShipLootCrate*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro AquireLoot(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.AquireLoot(APrimalShipLootCrate*)", a0);
@@ -210,7 +210,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BPApplyShipSkillBuff(FName,APrimalCharacter*,AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro BPApplyShipSkillBuff(unsigned long long a0, void* a1, void* a2) const
     {
         return NativeCall<void*, unsigned long long, void*, void*>(this, "APrimalShip.BPApplyShipSkillBuff(FName,APrimalCharacter*,AActor*)", a0, a1, a2);
@@ -226,7 +226,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BPGetCameraCollisionIgnoreActors_Implementation(TArray<AActor*,TSizedDefaultAllocato
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPGetCameraCollisionIgnoreActors_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShip.BPGetCameraCollisionIgnoreActors_Implementation(TArray<AActor*,TSizedDefaultAllocator<32>>&)", a0);
@@ -298,7 +298,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.BeginDestroy()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BeginDestroy() const
     {
         return NativeCall<void*>(this, "APrimalShip.BeginDestroy()");
@@ -338,7 +338,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanDoAnchoringInternal()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=641+grafo=9/9]]
     BrzPonteiro CanDoAnchoringInternal() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanDoAnchoringInternal()");
@@ -354,7 +354,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanDoDocking()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanDoDocking() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanDoDocking()");
@@ -378,7 +378,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.CanFireCannons()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro CanFireCannons() const
     {
         return NativeCall<void*>(this, "APrimalShip.CanFireCannons()");
@@ -498,7 +498,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ForceUnanchored()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ForceUnanchored() const
     {
         return NativeCall<void*>(this, "APrimalShip.ForceUnanchored()");
@@ -586,7 +586,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetCannonballSpeedMultiplier()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=296+grafo=4/4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=296+grafo=3/3]]
     BrzPonteiro GetCannonballSpeedMultiplier() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetCannonballSpeedMultiplier()");
@@ -642,7 +642,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetDriver()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetDriver() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetDriver()");
@@ -714,7 +714,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetMannedSailsCount()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetMannedSailsCount() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetMannedSailsCount()");
@@ -746,7 +746,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetMaximumAnchorLength()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=443+grafo=5/5]]
     BrzPonteiro GetMaximumAnchorLength() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetMaximumAnchorLength()");
@@ -754,7 +754,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetNextCombatMusicTrack(APrimalCharacter*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetNextCombatMusicTrack(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalShip.GetNextCombatMusicTrack(APrimalCharacter*,bool)", a0, a1);
@@ -818,7 +818,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetProviderSkillBuffTargets_Implementation(ESkillBuffAplicationType,AShooterPlayerCo
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetProviderSkillBuffTargets_Implementation(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "APrimalShip.GetProviderSkillBuffTargets_Implementation(ESkillBuffAplicationType,AShooterPlayerController*)", a0, a1);
@@ -1082,7 +1082,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetShipSkillData(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetShipSkillData(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.GetShipSkillData(FName)", a0);
@@ -1202,7 +1202,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetThrottleRatioInterpSpeed()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetThrottleRatioInterpSpeed() const
     {
         return NativeCall<void*>(this, "APrimalShip.GetThrottleRatioInterpSpeed()");
@@ -1218,7 +1218,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.GetTimeToResetRudderAngle(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetTimeToResetRudderAngle(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.GetTimeToResetRudderAngle(float)", a0);
@@ -1250,7 +1250,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.HandleAnchorMovement(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleAnchorMovement(float a0) const
     {
         return NativeCall<void*, float>(this, "APrimalShip.HandleAnchorMovement(float)", a0);
@@ -1258,7 +1258,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.HandleStowedAnchor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HandleStowedAnchor() const
     {
         return NativeCall<void*>(this, "APrimalShip.HandleStowedAnchor()");
@@ -1306,7 +1306,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.InterpThrottleAndInputs(float,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro InterpThrottleAndInputs(float a0, float a1) const
     {
         return NativeCall<void*, float, float>(this, "APrimalShip.InterpThrottleAndInputs(float,float)", a0, a1);
@@ -1402,7 +1402,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.IsShipSkillReadyToUse(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro IsShipSkillReadyToUse(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalShip.IsShipSkillReadyToUse(FName)", a0);
@@ -1742,7 +1742,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RefreshSaddledStructureSceneState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro RefreshSaddledStructureSceneState() const
     {
         return NativeCall<void*>(this, "APrimalShip.RefreshSaddledStructureSceneState()");
@@ -1750,7 +1750,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.RefreshVesselDynamicsState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro RefreshVesselDynamicsState() const
     {
         return NativeCall<void*>(this, "APrimalShip.RefreshVesselDynamicsState()");
@@ -1902,7 +1902,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.ShouldApplyReplicatedVesselState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ShouldApplyReplicatedVesselState() const
     {
         return NativeCall<void*>(this, "APrimalShip.ShouldApplyReplicatedVesselState()");
@@ -1918,7 +1918,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.SpawnAnchor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=554+grafo=4/5]]
     BrzPonteiro SpawnAnchor() const
     {
         return NativeCall<void*>(this, "APrimalShip.SpawnAnchor()");
@@ -1942,7 +1942,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.StartAnchoring()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro StartAnchoring() const
     {
         return NativeCall<void*>(this, "APrimalShip.StartAnchoring()");
@@ -2094,7 +2094,7 @@ struct APrimalShip
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShip.UnweldAllStructuresFromShipHull()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro UnweldAllStructuresFromShipHull() const
     {
         return NativeCall<void*>(this, "APrimalShip.UnweldAllStructuresFromShipHull()");
@@ -2491,13 +2491,13 @@ struct APrimalShip
     float& ClientPositionErrorToleranceSquaredField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ClientPositionErrorToleranceSquared"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WetDockOceanZOffset` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2DE0; confianca alta)
+    //  ancorado em `WetDockOceanZOffset` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2DE0; confianca alta)
     void*& ClientRaftInterpLocField() const
     { return BrzCampoAncorado<void*>(this, "WetDockOceanZOffset", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WetDockOceanZOffset` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x2DF8; confianca alta)
+    //  ancorado em `WetDockOceanZOffset` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2DF8; confianca alta)
     void*& ClientRaftInterpRotField() const
     { return BrzCampoAncorado<void*>(this, "WetDockOceanZOffset", 28); }
     float& ClientReplicationSendNowThresholdField() const
@@ -2507,8 +2507,8 @@ struct APrimalShip
     float& ClientRotationInterpSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ClientRotationInterpSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AutoPilot_ForceMinAngularVelocity_MAX` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x34E8; confianca alta)
+    //  ancorado em `AutoPilot_ForceMinAngularVelocity_MAX` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x34E8; confianca alta)
     void*& ClientStartedInterpolationAtTimeField() const
     { return BrzCampoAncorado<void*>(this, "AutoPilot_ForceMinAngularVelocity_MAX", 4); }
     float& ClientUnanchoringAllowSlowInterpolationPeriodField() const
@@ -2596,8 +2596,8 @@ struct APrimalShip
     float& CurrentAnchorLengthField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.CurrentAnchorLength"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastExtensionZScale` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2FB4; confianca alta)
+    //  ancorado em `MastExtensionZScale` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2FB4; confianca alta)
     void*& CurrentAngularDampingField() const
     { return BrzCampoAncorado<void*>(this, "MastExtensionZScale", 4); }
     unsigned char& CurrentAttackIndexField() const
@@ -2607,8 +2607,8 @@ struct APrimalShip
     BrzCampoPonteiro CurrentIdleFidgetMontageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.CurrentIdleFidgetMontage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MastExtensionZScale` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2FB8; confianca alta)
+    //  ancorado em `MastExtensionZScale` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2FB8; confianca alta)
     void*& CurrentLinearDampingField() const
     { return BrzCampoAncorado<void*>(this, "MastExtensionZScale", 8); }
     BrzCampoPonteiro CurrentManualFireLocationsField() const
@@ -2706,8 +2706,8 @@ struct APrimalShip
     float& DestroyIfNoTargetUnderShoreDistanceAmountField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.DestroyIfNoTargetUnderShoreDistanceAmount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x3534; confianca alta)
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3534; confianca alta)
     void*& DestroyIfNoTargetUnderShoreDistanceCounterField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 4); }
     float& DestroyIfNoTargetUnderShoreDistanceTimerField() const
@@ -2867,8 +2867,8 @@ struct APrimalShip
     TWeakObjectPtr<void>& ForcedMasterTargetField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalShip.ForcedMasterTarget"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x3498; confianca alta)
+    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3498; confianca alta)
     void*& ForcedMovementDirectionField() const
     { return BrzCampoAncorado<void*>(this, "Teleport_AllowedBelowTopDeckDist", 20); }
     float& ForcedWildBabyAgeField() const
@@ -2876,8 +2876,8 @@ struct APrimalShip
     float& ForcesToApplyScaleField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ForcesToApplyScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VesselDynamicsComponent` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2AA8; confianca alta)
+    //  ancorado em `VesselDynamicsComponent` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AA8; confianca alta)
     void*& ForcestoApplyField() const
     { return BrzCampoAncorado<void*>(this, "VesselDynamicsComponent", 16); }
     float& FrontGroupMinYCoordinateField() const
@@ -2927,13 +2927,13 @@ struct APrimalShip
     float& HUDTextScaleMultiplierField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.HUDTextScaleMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3538; confianca alta)
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3538; confianca alta)
     void*& HackCheckingForInvalidPhysXLocationField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x3550; confianca alta)
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3550; confianca alta)
     void*& HackCheckingForInvalidPhysXTimeStopField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 32); }
     float& HalfLegLengthField() const
@@ -3059,8 +3059,8 @@ struct APrimalShip
     double& LastClientCameraRotationServerUpdateField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastClientCameraRotationServerUpdate"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CollisionImpactMinInterval` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3370; confianca alta)
+    //  ancorado em `CollisionImpactMinInterval` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3370; confianca alta)
     void*& LastCollisionImpactTimeField() const
     { return BrzCampoAncorado<void*>(this, "CollisionImpactMinInterval", 8); }
     BrzCampoPonteiro LastControlInputVectorField() const
@@ -3082,8 +3082,8 @@ struct APrimalShip
     double& LastForceAimedCharactersTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastForceAimedCharactersTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CombatMusicTracks` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x32D8; confianca alta)
+    //  ancorado em `CombatMusicTracks` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x32D8; confianca alta)
     void*& LastFrameDisabledForcedVelocityDirectionField() const
     { return BrzCampoAncorado<void*>(this, "CombatMusicTracks", 16); }
     double& LastFrameMarkedTimeField() const
@@ -3143,8 +3143,8 @@ struct APrimalShip
     int& LastPlayedAttackAnimationField() const
     { return *GetNativePointerField<int*>(this, "APrimalShip.LastPlayedAttackAnimation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x33F0; confianca alta)
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x33F0; confianca alta)
     void*& LastPositionField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 8); }
     TWeakObjectPtr<void>& LastPostProcessVolumeSoundField() const
@@ -3162,28 +3162,28 @@ struct APrimalShip
     FString& LastSelectedWindSourceComponentNameField() const
     { return *GetNativePointerField<FString*>(this, "APrimalShip.LastSelectedWindSourceComponentName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3460; confianca alta)
+    //  ancorado em `LastFrameMarkedTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3460; confianca alta)
     void*& LastSentSailRotationToServerTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3468; confianca alta)
+    //  ancorado em `LastFrameMarkedTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3468; confianca alta)
     void*& LastSentSailRotationToServerValueField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x347C; confianca media)
+    //  ancorado em `LastFrameMarkedTime` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x347C; confianca media)
     void*& LastSentSteeringInputToServerValueField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x3470; confianca alta)
+    //  ancorado em `LastFrameMarkedTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3470; confianca alta)
     void*& LastSentThrottleTargetToServerTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastFrameMarkedTime` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x3478; confianca alta)
+    //  ancorado em `LastFrameMarkedTime` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3478; confianca alta)
     void*& LastSentThrottleTargetToServerValueField() const
     { return BrzCampoAncorado<void*>(this, "LastFrameMarkedTime", 32); }
     double& LastSkinnedTimeField() const
@@ -3225,8 +3225,8 @@ struct APrimalShip
     double& LastWalkingTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalShip.LastWalkingTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x3490; confianca alta)
+    //  ancorado em `Teleport_AllowedBelowTopDeckDist` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3490; confianca alta)
     void*& LastWantsForcedMovementTimeField() const
     { return BrzCampoAncorado<void*>(this, "Teleport_AllowedBelowTopDeckDist", 12); }
     float& LatchedFirstPersonViewAngleField() const
@@ -3262,8 +3262,8 @@ struct APrimalShip
     TWeakObjectPtr<void>& LocalCaptainControllerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalShip.LocalCaptainController"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedCurrentWetDockStructureID` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x33A0; confianca alta)
+    //  ancorado em `ReplicatedCurrentWetDockStructureID` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x33A0; confianca alta)
     void*& LongRangeStasisComponentField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedCurrentWetDockStructureID", 12); }
     float& LootCrateRadiusField() const
@@ -3383,8 +3383,8 @@ struct APrimalShip
     UPrimalInventoryComponent*& MyInventoryComponentField() const
     { return *GetNativePointerField<UPrimalInventoryComponent**>(this, "APrimalShip.MyInventoryComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x3410; confianca media)
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3410; confianca media)
     void*& NamePlateTextField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 40); }
     UPrimalNavigationInvokerComponent*& NavigationInvokerComponentField() const
@@ -3906,8 +3906,8 @@ struct APrimalShip
     float& ServerTargetCarriedYawField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.ServerTargetCarriedYaw"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SailClassesForceMultipliers` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3448; confianca alta)
+    //  ancorado em `SailClassesForceMultipliers` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3448; confianca alta)
     void*& ShipBeachedStartTimeField() const
     { return BrzCampoAncorado<void*>(this, "SailClassesForceMultipliers", 16); }
     float& ShipBowOffsetField() const
@@ -3939,8 +3939,8 @@ struct APrimalShip
     unsigned char& ShipTypeField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalShip.ShipType"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnchorMaximumDistanceFromShore` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3570; confianca alta)
+    //  ancorado em `AnchorMaximumDistanceFromShore` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3570; confianca alta)
     void*& ShipVelocityLastTickField() const
     { return BrzCampoAncorado<void*>(this, "AnchorMaximumDistanceFromShore", 8); }
     float& ShipWeightMovementForcePowerField() const
@@ -4112,8 +4112,8 @@ struct APrimalShip
     BrzCampoPonteiro ThrottleForceLocation_OffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.ThrottleForceLocation_Offset")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x3418; confianca media)
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3418; confianca media)
     void*& ThrottleForceMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 48); }
     float& ThrottleInputField() const
@@ -4127,8 +4127,8 @@ struct APrimalShip
     float& TimeBetweenTamedWakingEatAnimationsField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.TimeBetweenTamedWakingEatAnimations"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MovingSoundCue` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2AE8; confianca alta)
+    //  ancorado em `MovingSoundCue` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AE8; confianca alta)
     double& TimeSinceLastFadeOutField() const
     { return BrzCampoAncorado<double>(this, "MovingSoundCue", 8); }
     BrzCampoPonteiro ToggleDeckIconField() const
@@ -4144,8 +4144,8 @@ struct APrimalShip
     float& TorquesToApplyScaleField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.TorquesToApplyScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VesselDynamicsComponent` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2AB8; confianca alta)
+    //  ancorado em `VesselDynamicsComponent` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AB8; confianca alta)
     void*& TorquestoApplyField() const
     { return BrzCampoAncorado<void*>(this, "VesselDynamicsComponent", 32); }
     unsigned char& TribeGroupInventoryRankField() const
@@ -4161,8 +4161,8 @@ struct APrimalShip
     float& UnAnchoredAutoDestroyTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.UnAnchoredAutoDestroyTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VesselDynamicsComponent` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x2AC8; confianca media)
+    //  ancorado em `VesselDynamicsComponent` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2AC8; confianca media)
     void*& UnAnchoredNetworkAndStasisRangeMultiplierField() const
     { return BrzCampoAncorado<void*>(this, "VesselDynamicsComponent", 48); }
     unsigned char& UnSubmergedWaterMovementModeField() const
@@ -4222,8 +4222,8 @@ struct APrimalShip
     float& WaterSubmergedDepthThresholdField() const
     { return *GetNativePointerField<float*>(this, "APrimalShip.WaterSubmergedDepthThreshold"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CollisionImpactMinImpulseForDamage` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x337C; confianca alta)
+    //  ancorado em `CollisionImpactMinImpulseForDamage` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x337C; confianca alta)
     void*& WeldSweepIndexField() const
     { return BrzCampoAncorado<void*>(this, "CollisionImpactMinImpulseForDamage", 4); }
     float& WetDockOceanZOffsetField() const
@@ -4393,8 +4393,8 @@ struct APrimalShip
     BrzCampoPonteiro bBasingRequiresInteriorPositionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bBasingRequiresInteriorPosition")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedCurrentWetDockStructureID` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x3398; confianca alta)
+    //  ancorado em `ReplicatedCurrentWetDockStructureID` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3398; confianca alta)
     void*& bBeganPlayField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedCurrentWetDockStructureID", 4); }
     BrzCampoPonteiro bBlockInputField() const
@@ -4696,8 +4696,8 @@ struct APrimalShip
     BrzCampoPonteiro bGlideWhenMountedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bGlideWhenMounted")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x3558; confianca media)
+    //  ancorado em `DestroyIfNoTargetUnderShoreDistanceTimer` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3558; confianca media)
     void*& bHackCheckingForInvalidPhysXField() const
     { return BrzCampoAncorado<void*>(this, "DestroyIfNoTargetUnderShoreDistanceTimer", 40); }
     BrzCampoPonteiro bHackForcesToApplyCheckForInvalidPhysxField() const
@@ -5139,8 +5139,8 @@ struct APrimalShip
     BrzCampoPonteiro bRidingRequiresTamedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bRidingRequiresTamed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SailsPivotingSoundinfo` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x2CD0; confianca media)
+    //  ancorado em `SailsPivotingSoundinfo` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2CD0; confianca media)
     void*& bRopeReachedEndOfTravelField() const
     { return BrzCampoAncorado<void*>(this, "SailsPivotingSoundinfo", 40); }
     BrzCampoPonteiro bRotateToFaceLatchingObjectField() const
@@ -5504,8 +5504,8 @@ struct APrimalShip
     BrzCampoPonteiro bUsesWaterWalkingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bUsesWaterWalking")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedCurrentWetDockStructureID` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x3399; confianca alta)
+    //  ancorado em `ReplicatedCurrentWetDockStructureID` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3399; confianca alta)
     void*& bUsingLongRangeStasisField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedCurrentWetDockStructureID", 5); }
     BrzCampoPonteiro bVehicleAlwaysAllowTargetingByWildDinosField() const
@@ -5521,13 +5521,13 @@ struct APrimalShip
     BrzCampoPonteiro bWantsToRunField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalShip.bWantsToRun")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShipHullSinkMovementForceMultiplier` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x3408; confianca alta)
+    //  ancorado em `ShipHullSinkMovementForceMultiplier` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3408; confianca alta)
     void*& bWasAnchoredOrDryDockedField() const
     { return BrzCampoAncorado<void*>(this, "ShipHullSinkMovementForceMultiplier", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CreakMetalComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2DD8; confianca alta)
+    //  ancorado em `CreakMetalComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2DD8; confianca alta)
     void*& bWasAtFullSpeedField() const
     { return BrzCampoAncorado<void*>(this, "CreakMetalComponent", 8); }
     BrzCampoPonteiro bWasBeingDraggedField() const

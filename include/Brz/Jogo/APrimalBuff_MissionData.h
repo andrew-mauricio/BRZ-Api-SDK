@@ -205,7 +205,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_MissionData.GetAllCurrentMissions(TArray<AMissionType*,TSizedDefaultAllocator<32>>&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetAllCurrentMissions(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_MissionData.GetAllCurrentMissions(TArray<AMissionType*,TSizedDefaultAllocator<32>>&)", a0);
@@ -401,7 +401,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_MissionData.OnFinishedFadeFromBlack()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void OnFinishedFadeFromBlack() const
     {
         NativeCall<void>(this, "APrimalBuff_MissionData.OnFinishedFadeFromBlack()");
@@ -445,7 +445,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_MissionData.OnRep_CurrentMissions()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_CurrentMissions() const
     {
         NativeCall<void>(this, "APrimalBuff_MissionData.OnRep_CurrentMissions()");
@@ -485,7 +485,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // jogo_confirmou_dump
     //   APrimalBuff_MissionData.ReplicatedMissionDataUpdated()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ReplicatedMissionDataUpdated() const
     {
         NativeCall<void>(this, "APrimalBuff_MissionData.ReplicatedMissionDataUpdated()");
@@ -629,7 +629,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_MissionData.SetMissionData_Double(FName,FName,double)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetMissionData_Double(unsigned long long a0, unsigned long long a1, double a2) const
     {
         NativeCall<void, unsigned long long, unsigned long long, double>(this, "APrimalBuff_MissionData.SetMissionData_Double(FName,FName,double)", a0, a1, a2);
@@ -637,7 +637,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_MissionData.SetMissionData_Float(FName,FName,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetMissionData_Float(unsigned long long a0, unsigned long long a1, float a2) const
     {
         NativeCall<void, unsigned long long, unsigned long long, float>(this, "APrimalBuff_MissionData.SetMissionData_Float(FName,FName,float)", a0, a1, a2);
@@ -681,7 +681,7 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_MissionData.SetupClientMissionCallbacks()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetupClientMissionCallbacks() const
     {
         NativeCall<void>(this, "APrimalBuff_MissionData.SetupClientMissionCallbacks()");
@@ -689,11 +689,10 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_MissionData.SetupForInstigator()
-    // classe: a funcao mora em APrimalBuff, e APrimalBuff_MissionData herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetupForInstigator() const
     {
-        NativeCall<void>(this, "APrimalBuff.SetupForInstigator()");
+        NativeCall<void>(this, "APrimalBuff_MissionData.SetupForInstigator()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -730,11 +729,10 @@ struct APrimalBuff_MissionData : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_MissionData.Tick(float)
-    // classe: a funcao mora em APrimalBuff, e APrimalBuff_MissionData herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
-        NativeCall<void, float>(this, "APrimalBuff.Tick(float)", a0);
+        NativeCall<void, float>(this, "APrimalBuff_MissionData.Tick(float)", a0);
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -774,13 +772,13 @@ struct APrimalBuff_MissionData : public APrimalBuff
     int& ActiveMissionIndexField() const
     { return *GetNativePointerField<int*>(this, "APrimalBuff_MissionData.ActiveMissionIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedMissionDataSubscriptions` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xCB8; confianca alta)
+    //  ancorado em `ReplicatedMissionDataSubscriptions` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCB8; confianca alta)
     double& ClientLastEligibilityCheckNetworkTimeField() const
     { return BrzCampoAncorado<double>(this, "ReplicatedMissionDataSubscriptions", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedMissionDataSubscriptions` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xCC0; confianca alta)
+    //  ancorado em `ReplicatedMissionDataSubscriptions` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCC0; confianca alta)
     void*& ClientMissionEligibilityMapField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedMissionDataSubscriptions", 32); }
     BrzCampoPonteiro CurrentMissionsField() const
@@ -788,8 +786,8 @@ struct APrimalBuff_MissionData : public APrimalBuff
     BrzCampoPonteiro MissionClientDataUpdatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_MissionData.MissionClientDataUpdated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionClientDataUpdated` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xC50; confianca alta)
+    //  ancorado em `MissionClientDataUpdated` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC50; confianca alta)
     void*& MissionDataMapField() const
     { return BrzCampoAncorado<void*>(this, "MissionClientDataUpdated", 16); }
     UParticleSystem*& MissionIndicatorParticlesField() const
@@ -807,8 +805,8 @@ struct APrimalBuff_MissionData : public APrimalBuff
     BrzCampoPonteiro ReplicatedMissionDataSubscriptionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_MissionData.ReplicatedMissionDataSubscriptions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedMissionDataSubscriptions` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xCB0; confianca alta)
+    //  ancorado em `ReplicatedMissionDataSubscriptions` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCB0; confianca alta)
     double& ServerLastEligibilityCheckNetworkTimeField() const
     { return BrzCampoAncorado<double>(this, "ReplicatedMissionDataSubscriptions", 16); }
     BrzCampoPonteiro bHasRequestedMovieSkipField() const
@@ -818,8 +816,8 @@ struct APrimalBuff_MissionData : public APrimalBuff
     BrzCampoPonteiro bSentClientStopMovieField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_MissionData.bSentClientStopMovie")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedMissionDataSubscriptions` +112, medido na build 25535041
-    //  (offset absoluto medido: 0xD10; confianca media)
+    //  ancorado em `ReplicatedMissionDataSubscriptions` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD10; confianca media)
     void*& bShouldMulticastCurrentMissionsField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedMissionDataSubscriptions", 112); }
     BitFieldValue<bool, unsigned __int32> bHasRequestedMovieSkip()

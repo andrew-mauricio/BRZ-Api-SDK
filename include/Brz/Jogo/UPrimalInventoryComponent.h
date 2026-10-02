@@ -1390,7 +1390,7 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.InventoryCustomSortPredicate(UPrimalItem*,UPrimalItem*)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool InventoryCustomSortPredicate(void* a0, void* a1) const
     {
         return NativeCall<bool, void*, void*>(this, "UPrimalInventoryComponent.InventoryCustomSortPredicate(UPrimalItem*,UPrimalItem*)", a0, a1);
@@ -1722,16 +1722,15 @@ struct UPrimalInventoryComponent : public UActorComponent
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UPrimalInventoryComponent.OnRegister()
-    // classe: a funcao mora em UActorComponent, e UPrimalInventoryComponent herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRegister() const
     {
-        NativeCall<void>(this, "UActorComponent.OnRegister()");
+        NativeCall<void>(this, "UPrimalInventoryComponent.OnRegister()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   UPrimalInventoryComponent.OnSortingInputsChanged()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnSortingInputsChanged() const
     {
         NativeCall<void>(this, "UPrimalInventoryComponent.OnSortingInputsChanged()");
@@ -2518,8 +2517,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     TArray<UPrimalItem*>& ArkTributeItemsField() const
     { return *GetNativePointerField<TArray<UPrimalItem*>*>(this, "UPrimalInventoryComponent.ArkTributeItems"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WeaponAsEquipmentAttachmentInfos` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x478; confianca alta)
+    //  ancorado em `WeaponAsEquipmentAttachmentInfos` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x478; confianca alta)
     void*& CC_CosmeticControllerField() const
     { return BrzCampoAncorado<void*>(this, "WeaponAsEquipmentAttachmentInfos", 16); }
     TArray<void*>& CheatInventoryItemsField() const
@@ -2583,8 +2582,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     TArray<void*>& DefaultSlotItemsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent.DefaultSlotItems"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamedDinoForceConsiderFoodTypes` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x5D0; confianca alta)
+    //  ancorado em `TamedDinoForceConsiderFoodTypes` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5D0; confianca alta)
     TArray<UPrimalItem*>& DinoAutoHealingItemsField() const
     { return BrzCampoAncorado<TArray<UPrimalItem*>>(this, "TamedDinoForceConsiderFoodTypes", 16); }
     BrzCampoPonteiro DisabledItemsTEMPField() const
@@ -2610,8 +2609,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     float& ExtraMaxInventoryWeightField() const
     { return *GetNativePointerField<float*>(this, "UPrimalInventoryComponent.ExtraMaxInventoryWeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverrideCraftingFinishedSound` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x5F0; confianca alta)
+    //  ancorado em `OverrideCraftingFinishedSound` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5F0; confianca alta)
     FString& ForceAddToFolderField() const
     { return BrzCampoAncorado<FString>(this, "OverrideCraftingFinishedSound", 16); }
     BrzCampoPonteiro ForceAllowCraftingForInventoryComponentsField() const
@@ -2659,13 +2658,13 @@ struct UPrimalInventoryComponent : public UActorComponent
     TArray<void*>& ItemSpoilingTimeMultipliersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalInventoryComponent.ItemSpoilingTimeMultipliers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverrideCraftingFinishedSound` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x5E8; confianca alta)
+    //  ancorado em `OverrideCraftingFinishedSound` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5E8; confianca alta)
     double& LastAddToCraftQueueSoundTimeField() const
     { return BrzCampoAncorado<double>(this, "OverrideCraftingFinishedSound", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructureCraftingItemSpeedModifier` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x7D8; confianca alta)
+    //  ancorado em `StructureCraftingItemSpeedModifier` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7D8; confianca alta)
     void*& LastCachedItemWeightFrameField() const
     { return BrzCampoAncorado<void*>(this, "StructureCraftingItemSpeedModifier", 4); }
     double& LastCraftRequestTimeField() const
@@ -2673,8 +2672,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     double& LastInventoryRefreshTimeField() const
     { return *GetNativePointerField<double*>(this, "UPrimalInventoryComponent.LastInventoryRefreshTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ExtraMaxInventoryWeight` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x7E8; confianca alta)
+    //  ancorado em `ExtraMaxInventoryWeight` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7E8; confianca alta)
     void*& LastLoadedUserCosmeticField() const
     { return BrzCampoAncorado<void*>(this, "ExtraMaxInventoryWeight", 4); }
     double& LastRefreshCheckItemTimeField() const
@@ -2682,13 +2681,13 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro LastWirelessCraftingCheckLocField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.LastWirelessCraftingCheckLoc")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessExchanges` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x780; confianca media)
+    //  ancorado em `WirelessExchanges` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x780; confianca media)
     int& LastWirelessUpdateFrameField() const
     { return BrzCampoAncorado<int>(this, "WirelessExchanges", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessExchanges` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x778; confianca media)
+    //  ancorado em `WirelessExchanges` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x778; confianca media)
     double& LastWirelessUpdateTimeField() const
     { return BrzCampoAncorado<double>(this, "WirelessExchanges", 96); }
     BrzCampoPonteiro LinkedToStorageInterfacesField() const
@@ -2716,20 +2715,20 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro MultiUseButtonStyleOverridesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.MultiUseButtonStyleOverrides")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRefreshCheckItemTime` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x4B4; confianca alta)
+    //  ancorado em `LastRefreshCheckItemTime` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4B4; confianca alta)
     FItemNetID& NextItemConsumptionIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "LastRefreshCheckItemTime", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRefreshCheckItemTime` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x4AC; confianca alta)
+    //  ancorado em `LastRefreshCheckItemTime` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4AC; confianca alta)
     FItemNetID& NextItemSpoilingIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "LastRefreshCheckItemTime", 12); }
     float& NumItemSetsPowerField() const
     { return *GetNativePointerField<float*>(this, "UPrimalInventoryComponent.NumItemSetsPower"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxNumberOfSortingInputs` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x7D0; confianca alta)
+    //  ancorado em `MaxNumberOfSortingInputs` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7D0; confianca alta)
     void*& NumSharedBlueprintsField() const
     { return BrzCampoAncorado<void*>(this, "MaxNumberOfSortingInputs", 8); }
     int& NumSlotsField() const
@@ -2769,8 +2768,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     int& SavedForceDefaultInventoryRefreshVersionField() const
     { return *GetNativePointerField<int*>(this, "UPrimalInventoryComponent.SavedForceDefaultInventoryRefreshVersion"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomFolderItems` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x548; confianca alta)
+    //  ancorado em `CustomFolderItems` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x548; confianca alta)
     TArray<void*>& ServerCustomFolderField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "CustomFolderItems", 16); }
     TArray<void*>& SetQuantityValuesField() const
@@ -2798,8 +2797,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro WirelessExchangesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.WirelessExchanges")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WirelessExchanges` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x728; confianca alta)
+    //  ancorado em `WirelessExchanges` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x728; confianca alta)
     void*& WirelessResourceMapField() const
     { return BrzCampoAncorado<void*>(this, "WirelessExchanges", 16); }
     BrzCampoPonteiro bAddMaxInventoryItemsToDefaultItemsField() const
@@ -2897,8 +2896,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro bGrinderCanGrindAllField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bGrinderCanGrindAll")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DisplayDefaultItemInventoryCount` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x494; confianca alta)
+    //  ancorado em `DisplayDefaultItemInventoryCount` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x494; confianca alta)
     void*& bHasBeenRegisteredField() const
     { return BrzCampoAncorado<void*>(this, "DisplayDefaultItemInventoryCount", 4); }
     BrzCampoPonteiro bHideDefaultInventoryItemsFromDisplayField() const
@@ -2934,8 +2933,8 @@ struct UPrimalInventoryComponent : public UActorComponent
     BrzCampoPonteiro bLastNotifyCraftingStateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalInventoryComponent.bLastNotifyCraftingState")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRefreshCheckItemTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4A8; confianca alta)
+    //  ancorado em `LastRefreshCheckItemTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4A8; confianca alta)
     void*& bLastPreventUseItemSpoilingTimeMultipliersField() const
     { return BrzCampoAncorado<void*>(this, "LastRefreshCheckItemTime", 8); }
     BrzCampoPonteiro bMaxInventoryWeightUseCharacterStatusField() const

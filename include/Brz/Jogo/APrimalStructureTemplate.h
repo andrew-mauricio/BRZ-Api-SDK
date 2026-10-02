@@ -63,7 +63,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.AlignTemplateToSaddle()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro AlignTemplateToSaddle() const
     {
         return NativeCall<void*>(this, "APrimalStructureTemplate.AlignTemplateToSaddle()");
@@ -79,7 +79,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.BeginPlay()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BeginPlay() const
     {
         return NativeCall<void*>(this, "APrimalStructureTemplate.BeginPlay()");
@@ -119,7 +119,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.CanToggleTemplateEntry(int,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro CanToggleTemplateEntry(int a0, bool a1) const
     {
         return NativeCall<void*, int, bool>(this, "APrimalStructureTemplate.CanToggleTemplateEntry(int,bool)", a0, a1);
@@ -219,7 +219,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.DestroyPreviewMeshComps()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=494+bytes40+grafo=12/12]]
     BrzPonteiro DestroyPreviewMeshComps() const
     {
         return NativeCall<void*>(this, "APrimalStructureTemplate.DestroyPreviewMeshComps()");
@@ -639,7 +639,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.PrepareTemplatePreviewSnaps_TreePlatform()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro PrepareTemplatePreviewSnaps_TreePlatform() const
     {
         return NativeCall<void*>(this, "APrimalStructureTemplate.PrepareTemplatePreviewSnaps_TreePlatform()");
@@ -751,7 +751,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.StartCreatingPreview()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=862+grafo=11/11]]
     BrzPonteiro StartCreatingPreview() const
     {
         return NativeCall<void*>(this, "APrimalStructureTemplate.StartCreatingPreview()");
@@ -823,7 +823,7 @@ struct APrimalStructureTemplate
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureTemplate.TryCreatingPreview()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro TryCreatingPreview() const
     {
         return NativeCall<void*>(this, "APrimalStructureTemplate.TryCreatingPreview()");

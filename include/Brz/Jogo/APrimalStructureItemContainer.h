@@ -51,7 +51,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.AddToValidatedByPinCodePlayerControllers(AShooterPlayerController*
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro AddToValidatedByPinCodePlayerControllers(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.AddToValidatedByPinCodePlayerControllers(AShooterPlayerController*)", a0);
@@ -279,7 +279,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.BPRename(FString)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=159+grafo=3/3]]
     BrzPonteiro BPRename(const FString& a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureItemContainer.BPRename(FString)", const_cast<FString*>(&a0));
@@ -307,7 +307,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CanBeActivated()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool CanBeActivated() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer.CanBeActivated()");
@@ -315,7 +315,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CanDrawFuelRemaining()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool CanDrawFuelRemaining() const
     {
         return NativeCall<bool>(this, "APrimalStructureItemContainer.CanDrawFuelRemaining()");
@@ -331,7 +331,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.CharacterBasedOnUpdate(AActor*,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=415+grafo=8/8]]
     void CharacterBasedOnUpdate(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalStructureItemContainer.CharacterBasedOnUpdate(AActor*,float)", a0, a1);
@@ -420,7 +420,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.DrawStructureTooltip(AShooterHUD*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void DrawStructureTooltip(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "APrimalStructureItemContainer.DrawStructureTooltip(AShooterHUD*,bool)", a0, a1);
@@ -428,7 +428,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.EndPlay(EEndPlayReason::Type)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer.EndPlay(EEndPlayReason::Type)", a0);
@@ -468,7 +468,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultA
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2987+chamadores=2+grafo=113/113]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2987+grafo=113/113]]
     void GetLifetimeReplicatedProps(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);
@@ -476,7 +476,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.GetMaterialsForActivation(TArray<UMaterialInterface*,TSizedDefault
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetMaterialsForActivation(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "APrimalStructureItemContainer.GetMaterialsForActivation(TArray<UMaterialInterface*,TSizedDefaultAllocator<32>>&,TArray<UMaterialInterface*,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
@@ -500,7 +500,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.GetOverrideParticleLightColor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetOverrideParticleLightColor(void* retorno) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.GetOverrideParticleLightColor()", retorno);
@@ -548,7 +548,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.IsValidForStorageInterfaceLinking(APrimalStructureItemContainer*,b
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro IsValidForStorageInterfaceLinking(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.IsValidForStorageInterfaceLinking(APrimalStructureItemContainer*,bool)", a0, a1);
@@ -580,7 +580,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.ManuallyAddWirelessConnection(UPrimalWirelessExchangeData*,APrimal
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ManuallyAddWirelessConnection(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalStructureItemContainer.ManuallyAddWirelessConnection(UPrimalWirelessExchangeData*,APrimalStructureItemContainer*)", a0, a1);
@@ -636,7 +636,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.NetSetContainerActive_Implementation(bool,TSubclassOf<UPrimalItem>
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void NetSetContainerActive_Implementation(bool a0, void* a1, short a2) const
     {
         NativeCall<void, bool, void*, short>(this, "APrimalStructureItemContainer.NetSetContainerActive_Implementation(bool,TSubclassOf<UPrimalItem>,short)", a0, a1, a2);
@@ -684,7 +684,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.NotifySkinInventoryChange()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro NotifySkinInventoryChange() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.NotifySkinInventoryChange()");
@@ -748,7 +748,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.PreviewClosestWirelessSources(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=3394+bytes40+grafo=23/23]]
     void PreviewClosestWirelessSources(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer.PreviewClosestWirelessSources(APrimalDinoCharacter*)", a0);
@@ -768,7 +768,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.RefreshFuelState()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void RefreshFuelState() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.RefreshFuelState()");
@@ -776,7 +776,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.RefreshInventoryItemCounts()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void RefreshInventoryItemCounts() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.RefreshInventoryItemCounts()");
@@ -832,7 +832,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.RemovePowerJunctionLinkParticle()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemovePowerJunctionLinkParticle() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.RemovePowerJunctionLinkParticle()");
@@ -920,7 +920,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.SetSaddleRiderInventoryViewer(AShooterPlayerController*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetSaddleRiderInventoryViewer(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalStructureItemContainer.SetSaddleRiderInventoryViewer(AShooterPlayerController*,bool)", a0, a1);
@@ -984,7 +984,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer.TargetingTeamChanged()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=292+grafo=4/4]]
     void TargetingTeamChanged() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer.TargetingTeamChanged()");
@@ -1080,7 +1080,7 @@ struct APrimalStructureItemContainer : public APrimalStructure
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer.ValidateAndUpdateWirelessExchanges()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ValidateAndUpdateWirelessExchanges() const
     {
         return NativeCall<void*>(this, "APrimalStructureItemContainer.ValidateAndUpdateWirelessExchanges()");

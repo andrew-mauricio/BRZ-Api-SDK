@@ -355,13 +355,13 @@ struct APrimalStructurePlacer : public AInfo
     FString& KeyUseStringField() const
     { return *GetNativePointerField<FString*>(this, "APrimalStructurePlacer.KeyUseString"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x648; confianca alta)
+    //  ancorado em `NumVariantsString` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x648; confianca alta)
     void*& LastExtendedRangeRequestTimeField() const
     { return BrzCampoAncorado<void*>(this, "NumVariantsString", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x658; confianca media)
+    //  ancorado em `NumVariantsString` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x658; confianca media)
     void*& LastHitLocField() const
     { return BrzCampoAncorado<void*>(this, "NumVariantsString", 40); }
     FString& NumVariantsStringField() const
@@ -371,15 +371,15 @@ struct APrimalStructurePlacer : public AInfo
     float& PitchSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalStructurePlacer.PitchSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x650; confianca alta)
+    //  ancorado em `NumVariantsString` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x650; confianca alta)
     FItemNetID& PlaceUsingItemIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "NumVariantsString", 32); }
     TArray<void*>& PlaceableStructuresField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalStructurePlacer.PlaceableStructures"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NumVariantsString` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x640; confianca alta)
+    //  ancorado em `NumVariantsString` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x640; confianca alta)
     float& PlacementAdjustHeightAmtField() const
     { return BrzCampoAncorado<float>(this, "NumVariantsString", 16); }
     int& PlacingAlignmentModeField() const

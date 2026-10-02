@@ -35,11 +35,10 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.BeginDestroy()
-    // classe: a funcao mora em UStreamableRenderAsset, e UTexture herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginDestroy() const
     {
-        NativeCall<void>(this, "UStreamableRenderAsset.BeginDestroy()");
+        NativeCall<void>(this, "UTexture.BeginDestroy()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -52,7 +51,7 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.CancelPendingTextureStreaming()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=201+chamadores=2+grafo=3/3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=201+grafo=3/3]]
     static void CancelPendingTextureStreaming()
     {
         NativeCall<void>(nullptr, "UTexture.CancelPendingTextureStreaming()");
@@ -164,11 +163,10 @@ struct UTexture : public UStreamableRenderAsset
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UTexture.PostLoad()
-    // classe: a funcao mora em UObject, e UTexture herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostLoad() const
     {
-        NativeCall<void>(this, "UObject.PostLoad()");
+        NativeCall<void>(this, "UTexture.PostLoad()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

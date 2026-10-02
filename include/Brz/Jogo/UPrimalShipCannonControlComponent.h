@@ -78,7 +78,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.CanEnterCannons()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro CanEnterCannons() const
     {
         return NativeCall<void*>(this, "UPrimalShipCannonControlComponent.CanEnterCannons()");
@@ -486,7 +486,7 @@ struct UPrimalShipCannonControlComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalShipCannonControlComponent.MulticastUnloadCharacterFromCannon(int,AShooterCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro MulticastUnloadCharacterFromCannon(int a0, void* a1) const
     {
         return NativeCall<void*, int, void*>(this, "UPrimalShipCannonControlComponent.MulticastUnloadCharacterFromCannon(int,AShooterCharacter*)", a0, a1);
@@ -831,8 +831,8 @@ struct UPrimalShipCannonControlComponent
     BrzCampoPonteiro OnGunportsChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalShipCannonControlComponent.OnGunportsChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bGunportsOpen` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x338; confianca alta)
+    //  ancorado em `bGunportsOpen` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x338; confianca alta)
     void*& PendingFireTimersField() const
     { return BrzCampoAncorado<void*>(this, "bGunportsOpen", 8); }
     float& PendingRangeDeltaForRPCField() const

@@ -367,7 +367,7 @@ struct APrimalTargetableActor : public AActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalTargetableActor.UpdatedHealth(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void UpdatedHealth(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalTargetableActor.UpdatedHealth(bool)", a0);
@@ -404,30 +404,30 @@ struct APrimalTargetableActor : public AActor
     BrzCampoPonteiro HurtFX_NiagaraField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalTargetableActor.HurtFX_Niagara")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x580; confianca alta)
+    //  ancorado em `MaxHealth` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x580; confianca alta)
     float& LastHealthBeforeTakeDamageField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x584; confianca alta)
+    //  ancorado em `MaxHealth` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x584; confianca alta)
     float& LastPreBlueprintAdjustmentActualDamageField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x588; confianca alta)
+    //  ancorado em `MaxHealth` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x588; confianca alta)
     float& LastReplicatedHealthField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxHealth` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x57C; confianca alta)
+    //  ancorado em `MaxHealth` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x57C; confianca alta)
     float& LastReplicatedHealthValueField() const
     { return BrzCampoAncorado<float>(this, "MaxHealth", 4); }
     float& LifeSpanAfterDeathField() const
     { return *GetNativePointerField<float*>(this, "APrimalTargetableActor.LifeSpanAfterDeath"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DescriptiveName` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x568; confianca alta)
+    //  ancorado em `DescriptiveName` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x568; confianca alta)
     float& LowHealthPercentageField() const
     { return BrzCampoAncorado<float>(this, "DescriptiveName", 24); }
     float& MaxHealthField() const
@@ -439,18 +439,18 @@ struct APrimalTargetableActor : public AActor
     UPrimalHarvestingComponent*& MyHarvestingComponentField() const
     { return *GetNativePointerField<UPrimalHarvestingComponent**>(this, "APrimalTargetableActor.MyHarvestingComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DestructibleMeshScaleOverride` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x510; confianca alta)
+    //  ancorado em `DestructibleMeshScaleOverride` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x510; confianca alta)
     void*& MyHarvestingElementField() const
     { return BrzCampoAncorado<void*>(this, "DestructibleMeshScaleOverride", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyHarvestingComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x548; confianca alta)
+    //  ancorado em `MyHarvestingComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x548; confianca alta)
     UPrimalStructureSettings*& MyStructureSettingsCDOField() const
     { return BrzCampoAncorado<UPrimalStructureSettings*>(this, "MyHarvestingComponent", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DescriptiveName` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x560; confianca alta)
+    //  ancorado em `DescriptiveName` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x560; confianca alta)
     double& NextAllowRepairTimeField() const
     { return BrzCampoAncorado<double>(this, "DescriptiveName", 16); }
     float& ReplicatedHealthField() const

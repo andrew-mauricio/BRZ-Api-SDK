@@ -116,8 +116,8 @@ struct UPrimalAIStateDinoSpiderMinions
     BrzCampoPonteiro SpawnRandomOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalAIStateDinoSpiderMinions.SpawnRandomOffset")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MinionMaxCount` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x88; confianca alta)
+    //  ancorado em `MinionMaxCount` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x88; confianca alta)
     void*& SpawnedMinionsField() const
     { return BrzCampoAncorado<void*>(this, "MinionMaxCount", 8); }
     BrzCampoPonteiro bBPCanUseStateField() const

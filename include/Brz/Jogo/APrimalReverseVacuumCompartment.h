@@ -78,7 +78,7 @@ struct APrimalReverseVacuumCompartment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalReverseVacuumCompartment.ApplyPinCode(AShooterPlayerController*,int,bool,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ApplyPinCode(void* a0, int a1, bool a2, int a3) const
     {
         return NativeCall<void*, void*, int, bool, int>(this, "APrimalReverseVacuumCompartment.ApplyPinCode(AShooterPlayerController*,int,bool,int)", a0, a1, a2, a3);
@@ -286,7 +286,7 @@ struct APrimalReverseVacuumCompartment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalReverseVacuumCompartment.IsInsideBase_Implementation(UE::Math::TVector<double>&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsInsideBase_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalReverseVacuumCompartment.IsInsideBase_Implementation(UE::Math::TVector<double>&)", a0);
@@ -350,7 +350,7 @@ struct APrimalReverseVacuumCompartment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalReverseVacuumCompartment.RefreshCollisionCompProfile(int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro RefreshCollisionCompProfile(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalReverseVacuumCompartment.RefreshCollisionCompProfile(int)", a0);
@@ -390,7 +390,7 @@ struct APrimalReverseVacuumCompartment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalReverseVacuumCompartment.SetPortholeState(int,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro SetPortholeState(int a0, int a1) const
     {
         return NativeCall<void*, int, int>(this, "APrimalReverseVacuumCompartment.SetPortholeState(int,int)", a0, a1);
@@ -406,7 +406,7 @@ struct APrimalReverseVacuumCompartment
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalReverseVacuumCompartment.SetStructureCollisionChannels(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetStructureCollisionChannels(bool a0) const
     {
         return NativeCall<void*, bool>(this, "APrimalReverseVacuumCompartment.SetStructureCollisionChannels(bool)", a0);

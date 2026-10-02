@@ -65,7 +65,7 @@ struct APrimalBuffAbilityCharges
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuffAbilityCharges.AdjustCharge_Implementation(FName,float,FName&,float&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AdjustCharge_Implementation(unsigned long long a0, float a1, const FName& a2, void* a3) const
     {
         return NativeCall<void*, unsigned long long, float, void*, void*>(this, "APrimalBuffAbilityCharges.AdjustCharge_Implementation(FName,float,FName&,float&)", a0, a1, const_cast<FName*>(&a2), a3);
@@ -165,7 +165,7 @@ struct APrimalBuffAbilityCharges
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuffAbilityCharges.GetChargeSystemConfigConst(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetChargeSystemConfigConst(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalBuffAbilityCharges.GetChargeSystemConfigConst(FName)", a0);
@@ -197,7 +197,7 @@ struct APrimalBuffAbilityCharges
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuffAbilityCharges.HasChargeSystem_Implementation(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro HasChargeSystem_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalBuffAbilityCharges.HasChargeSystem_Implementation(FName)", a0);
@@ -393,7 +393,7 @@ struct APrimalBuffAbilityCharges
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuffAbilityCharges.UnregisterChargeSystem_Implementation(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro UnregisterChargeSystem_Implementation(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalBuffAbilityCharges.UnregisterChargeSystem_Implementation(FName)", a0);

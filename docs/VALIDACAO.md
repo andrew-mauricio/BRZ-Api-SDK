@@ -1,6 +1,6 @@
 # Validação desta distribuição
 
-Build 25535041, 28/09/2026: os headers regerados foram compilados de novo pelos dois scripts abaixo, numa cópia limpa do repositório, e passaram em todas as linhas da tabela. Os 22 plugins do servidor BRZ também foram compilados contra eles.
+Build 25683903, 02/10/2026: os headers regerados foram compilados de novo pelos dois scripts abaixo, numa cópia limpa do repositório, e passaram em todas as linhas da tabela. Os 22 plugins do servidor BRZ foram compilados contra eles, e as 101 chaves que eles pedem resolvem por bytes na tabela da build.
 
 Executada no Windows de desenvolvimento, com MSVC x64, C++17 e `/MT`, usando os headers de `C:\ark\SDK` e `C:\ark\compilados\lib\winmm.lib`.
 

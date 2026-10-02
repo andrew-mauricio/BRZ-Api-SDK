@@ -49,7 +49,7 @@ struct APrimalShipCannonProjectile
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalShipCannonProjectile.ApplyAmmoOnImpactEffect(FHitResult&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ApplyAmmoOnImpactEffect(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalShipCannonProjectile.ApplyAmmoOnImpactEffect(FHitResult&)", a0);

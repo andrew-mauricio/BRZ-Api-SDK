@@ -208,8 +208,8 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro CachedDBsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.CachedDBs")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x280; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x280; confianca media)
     void*& CompletedDialogField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 32); }
     TArray<USoundClass*>& CoreSoundClassesField() const
@@ -243,8 +243,8 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro GlobalGenericConfirmationDialogField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.GlobalGenericConfirmationDialog")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x270; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x270; confianca media)
     unsigned long long& LoadedTotalConversionField() const
     { return BrzCampoAncorado<unsigned long long>(this, "TriggerEffectLibrary", 16); }
     BrzCampoPonteiro MissionCompleteMultiUseWheelTextColorField() const
@@ -274,8 +274,8 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro RagdollKinematicActorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.RagdollKinematicActorClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x278; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x278; confianca media)
     int& SavingFilesCounterField() const
     { return BrzCampoAncorado<int>(this, "TriggerEffectLibrary", 24); }
     UFont*& SmallFont_OfflineField() const
@@ -283,8 +283,8 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro SpawnMenuUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.SpawnMenuUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x290; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x290; confianca media)
     void*& StreamableManagerField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 48); }
     UTriggerEffectLibrary*& TriggerEffectLibraryField() const
@@ -294,8 +294,8 @@ struct UPrimalGlobals : public UObject
     TArray<void*>& UIOnlyShowModIDsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UPrimalGlobals.UIOnlyShowModIDs"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x268; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x268; confianca media)
     void*& UseLangOfflineField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 8); }
     UMaterialInstanceConstant*& VertexVizField() const
@@ -305,18 +305,18 @@ struct UPrimalGlobals : public UObject
     BrzCampoPonteiro bAllowSingleplayerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalGlobals.bAllowSingleplayer")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +11, medido na build 25535041
-    //  (offset absoluto medido: 0x26B; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +11 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26B; confianca media)
     bool& bContentStrippedForDedicatedField() const
     { return BrzCampoAncorado<bool>(this, "TriggerEffectLibrary", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x269; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x269; confianca media)
     bool& bGameMediaLoadedField() const
     { return BrzCampoAncorado<bool>(this, "TriggerEffectLibrary", 9); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TriggerEffectLibrary` +10, medido na build 25535041
-    //  (offset absoluto medido: 0x26A; confianca media)
+    //  ancorado em `TriggerEffectLibrary` +10 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26A; confianca media)
     void*& bStartedAsyncLoadField() const
     { return BrzCampoAncorado<void*>(this, "TriggerEffectLibrary", 10); }
     BrzCampoPonteiro bTotalConversionShowUnofficialServersField() const

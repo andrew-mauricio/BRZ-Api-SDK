@@ -1580,8 +1580,8 @@ struct UEngine : public UObject
     BrzCampoPonteiro AssetManagerClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.AssetManagerClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +240, medido na build 25535041
-    //  (offset absoluto medido: 0xEE8; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +240 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEE8; confianca baixa)
     void*& AudioDeviceManagerField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 240); }
     BrzCampoPonteiro AvoidanceManagerClassField() const
@@ -1651,8 +1651,8 @@ struct UEngine : public UObject
     BrzCampoPonteiro CustomTimeStepField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.CustomTimeStep")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomTimeStep` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xC28; confianca alta)
+    //  ancorado em `CustomTimeStep` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC28; confianca alta)
     void*& CustomTimeStepChangedEventField() const
     { return BrzCampoAncorado<void*>(this, "CustomTimeStep", 8); }
     BrzCampoPonteiro CustomTimeStepClassNameField() const
@@ -1712,28 +1712,28 @@ struct UEngine : public UObject
     BrzCampoPonteiro EmissiveMeshMaterialNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.EmissiveMeshMaterialName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LightMapDensityTextureName` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xBD8; confianca alta)
+    //  ancorado em `LightMapDensityTextureName` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBD8; confianca alta)
     void*& EngineLoopField() const
     { return BrzCampoAncorado<void*>(this, "LightMapDensityTextureName", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +200, medido na build 25535041
-    //  (offset absoluto medido: 0x11B8; confianca baixa)
+    //  ancorado em `NextWorldContextHandle` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11B8; confianca baixa)
     void*& EngineStatsField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x10F8; confianca media)
+    //  ancorado em `NextWorldContextHandle` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10F8; confianca media)
     void*& EngineSubsystemCollectionField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +216, medido na build 25535041
-    //  (offset absoluto medido: 0x11C8; confianca baixa)
+    //  ancorado em `NextWorldContextHandle` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11C8; confianca baixa)
     void*& ErrorsAndWarningsCollectorField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +416, medido na build 25535041
-    //  (offset absoluto medido: 0xF98; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +416 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF98; confianca baixa)
     void*& EyeTrackingDeviceField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 416); }
     float& FixedFrameRateField() const
@@ -1809,8 +1809,8 @@ struct UEngine : public UObject
     TArray<void*>& HLODColorationColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.HLODColorationColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +224, medido na build 25535041
-    //  (offset absoluto medido: 0x11D0; confianca baixa)
+    //  ancorado em `NextWorldContextHandle` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11D0; confianca baixa)
     void*& HandleScreenshotCapturedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "NextWorldContextHandle", 224); }
     TObjectPtr<UTexture2D>& HighFrequencyNoiseTextureField() const
@@ -1832,13 +1832,13 @@ struct UEngine : public UObject
     BrzCampoPonteiro LargeFontNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.LargeFontName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +224, medido na build 25535041
-    //  (offset absoluto medido: 0xED8; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xED8; confianca baixa)
     unsigned long long& LastGCFrameField() const
     { return BrzCampoAncorado<unsigned long long>(this, "SelectionHighlightIntensityBillboards", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NextWorldContextHandle` +232, medido na build 25535041
-    //  (offset absoluto medido: 0x11D8; confianca baixa)
+    //  ancorado em `NextWorldContextHandle` +232 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11D8; confianca baixa)
     FString& LastModDownloadTextField() const
     { return BrzCampoAncorado<FString>(this, "NextWorldContextHandle", 232); }
     TObjectPtr<UMaterial>& LevelColorationLitMaterialField() const
@@ -1874,8 +1874,8 @@ struct UEngine : public UObject
     BrzCampoPonteiro LocalPlayerClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.LocalPlayerClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +248, medido na build 25535041
-    //  (offset absoluto medido: 0xEF0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +248 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEF0; confianca baixa)
     void*& MainAudioDeviceHandleField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 248); }
     float& MaxES3PixelShaderAdditiveComplexityCountField() const
@@ -1929,18 +1929,18 @@ struct UEngine : public UObject
     float& NetErrorLogIntervalField() const
     { return *GetNativePointerField<float*>(this, "UEngine.NetErrorLogInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +192, medido na build 25535041
-    //  (offset absoluto medido: 0xEB8; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEB8; confianca baixa)
     void*& NetworkDDoSEscalationEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +144, medido na build 25535041
-    //  (offset absoluto medido: 0xE88; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE88; confianca baixa)
     void*& NetworkFailureEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +168, medido na build 25535041
-    //  (offset absoluto medido: 0xEA0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEA0; confianca baixa)
     void*& NetworkLagStateChangedEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 168); }
     float& NetworkStressTestClientMode_MaxFPSField() const
@@ -1952,18 +1952,18 @@ struct UEngine : public UObject
     int& NumPawnsAllowedToBeSpawnedInAFrameField() const
     { return *GetNativePointerField<int*>(this, "UEngine.NumPawnsAllowedToBeSpawnedInAFrame"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +432, medido na build 25535041
-    //  (offset absoluto medido: 0xFA8; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +432 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFA8; confianca baixa)
     void*& OnHitchDetectedDelegateField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 432); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x10C0; confianca alta)
+    //  ancorado em `NetErrorLogInterval` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C0; confianca alta)
     void*& OnOverrideBrowseURLField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x10D0; confianca alta)
+    //  ancorado em `NetErrorLogInterval` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10D0; confianca alta)
     void*& OnOverridePendingNetGameUpdateField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 32); }
     FString& ParticleEventManagerClassPathField() const
@@ -1975,13 +1975,13 @@ struct UEngine : public UObject
     BrzCampoPonteiro PhysicsCollisionHandlerClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.PhysicsCollisionHandlerClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +456, medido na build 25535041
-    //  (offset absoluto medido: 0xFC0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +456 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFC0; confianca baixa)
     void*& PortalRpcClientField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 456); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +472, medido na build 25535041
-    //  (offset absoluto medido: 0xFD0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +472 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFD0; confianca baixa)
     void*& PortalRpcLocatorField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 472); }
     TObjectPtr<UTexture2D>& PreIntegratedSkinBRDFTextureField() const
@@ -1995,8 +1995,8 @@ struct UEngine : public UObject
     float& PrimitiveProbablyVisibleTimeField() const
     { return *GetNativePointerField<float*>(this, "UEngine.PrimitiveProbablyVisibleTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +272, medido na build 25535041
-    //  (offset absoluto medido: 0xF08; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +272 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF08; confianca baixa)
     TArray<void*>& PriorityScreenMessagesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "SelectionHighlightIntensityBillboards", 272); }
     TArray<void*>& QuadComplexityColorsField() const
@@ -2016,8 +2016,8 @@ struct UEngine : public UObject
     TArray<void*>& RuntimeServerActorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.RuntimeServerActors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +288, medido na build 25535041
-    //  (offset absoluto medido: 0xF18; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +288 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF18; confianca baixa)
     void*& ScreenMessagesField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 288); }
     int& ScreenSaverInhibitorSemaphoreField() const
@@ -2035,13 +2035,13 @@ struct UEngine : public UObject
     TArray<void*>& ServerActorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.ServerActors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +488, medido na build 25535041
-    //  (offset absoluto medido: 0xFE0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +488 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFE0; confianca baixa)
     void*& ServiceDependenciesField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 488); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +504, medido na build 25535041
-    //  (offset absoluto medido: 0xFF0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +504 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFF0; confianca baixa)
     void*& ServiceLocatorField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 504); }
     TObjectPtr<UMaterial>& ShadedLevelColorationLitMaterialField() const
@@ -2083,15 +2083,15 @@ struct UEngine : public UObject
     TArray<void*>& StationaryLightOverlapColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.StationaryLightOverlapColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +368, medido na build 25535041
-    //  (offset absoluto medido: 0xF68; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +368 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF68; confianca baixa)
     void*& StereoRenderingDeviceField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 368); }
     TArray<void*>& StreamingAccuracyColorsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "UEngine.StreamingAccuracyColors"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `C_BrushShape` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xD00; confianca alta)
+    //  ancorado em `C_BrushShape` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD00; confianca alta)
     float& StreamingDistanceFactorField() const
     { return BrzCampoAncorado<float>(this, "C_BrushShape", 4); }
     BrzCampoPonteiro SubduedSelectionOutlineColorField() const
@@ -2109,15 +2109,15 @@ struct UEngine : public UObject
     BrzCampoPonteiro TickerHandleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.LargeFontName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +232, medido na build 25535041
-    //  (offset absoluto medido: 0xEE0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +232 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEE0; confianca baixa)
     float& TimeSinceLastPendingKillPurgeField() const
     { return BrzCampoAncorado<float>(this, "SelectionHighlightIntensityBillboards", 232); }
     BrzCampoPonteiro TimecodeProviderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.TimecodeProvider")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimecodeProvider` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xC70; confianca alta)
+    //  ancorado em `TimecodeProvider` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC70; confianca alta)
     void*& TimecodeProviderChangedEventField() const
     { return BrzCampoAncorado<void*>(this, "TimecodeProvider", 8); }
     BrzCampoPonteiro TimecodeProviderClassNameField() const
@@ -2133,8 +2133,8 @@ struct UEngine : public UObject
     BrzCampoPonteiro TransitionTypeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.TransitionType")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +120, medido na build 25535041
-    //  (offset absoluto medido: 0xE70; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE70; confianca baixa)
     void*& TravelFailureEventField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 120); }
     BrzCampoPonteiro UseClothAssetMinLODPerQualityLevelsField() const
@@ -2170,8 +2170,8 @@ struct UEngine : public UObject
     TObjectPtr<UMaterial>& VertexColorViewModeMaterial_RedOnlyField() const
     { return *GetNativePointerField<TObjectPtr<UMaterial>*>(this, "UEngine.VertexColorViewModeMaterial_RedOnly"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +400, medido na build 25535041
-    //  (offset absoluto medido: 0xF88; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +400 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF88; confianca baixa)
     void*& ViewExtensionsField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 400); }
     BrzCampoPonteiro WeightMapArrayPlaceholderTextureField() const
@@ -2187,8 +2187,8 @@ struct UEngine : public UObject
     FString& WireframeMaterialNameField() const
     { return *GetNativePointerField<FString*>(this, "UEngine.WireframeMaterialName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x10E0; confianca media)
+    //  ancorado em `NetErrorLogInterval` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10E0; confianca media)
     void*& WorldListField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 48); }
     BrzCampoPonteiro WorldSettingsClassField() const
@@ -2196,8 +2196,8 @@ struct UEngine : public UObject
     BrzCampoPonteiro WorldSettingsClassNameField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.WorldSettingsClassName")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +384, medido na build 25535041
-    //  (offset absoluto medido: 0xF78; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +384 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF78; confianca baixa)
     void*& XRSystemField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 384); }
     BrzCampoPonteiro bAllowMatureLanguageField() const
@@ -2219,32 +2219,32 @@ struct UEngine : public UObject
     unsigned int& bEnableVisualLogRecordingOnStartField() const
     { return *GetNativePointerField<unsigned int*>(this, "UEngine.bEnableVisualLogRecordingOnStart"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +236, medido na build 25535041
-    //  (offset absoluto medido: 0xEE4; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +236 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEE4; confianca baixa)
     void*& bFullPurgeTriggeredField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 236); }
     BrzCampoPonteiro bGenerateDefaultTimecodeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bGenerateDefaultTimecode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomTimeStep` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xC40; confianca alta)
+    //  ancorado em `CustomTimeStep` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC40; confianca alta)
     void*& bIsCurrentCustomTimeStepInitializedField() const
     { return BrzCampoAncorado<void*>(this, "CustomTimeStep", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TimecodeProvider` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xC88; confianca alta)
+    //  ancorado em `TimecodeProvider` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC88; confianca alta)
     void*& bIsCurrentTimecodeProviderInitializedField() const
     { return BrzCampoAncorado<void*>(this, "TimecodeProvider", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +216, medido na build 25535041
-    //  (offset absoluto medido: 0xED0; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xED0; confianca baixa)
     void*& bIsInitializedField() const
     { return BrzCampoAncorado<void*>(this, "SelectionHighlightIntensityBillboards", 216); }
     BrzCampoPonteiro bIsOverridingSelectedColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bIsOverridingSelectedColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetErrorLogInterval` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x10B8; confianca alta)
+    //  ancorado em `NetErrorLogInterval` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10B8; confianca alta)
     void*& bIsVanillaProductField() const
     { return BrzCampoAncorado<void*>(this, "NetErrorLogInterval", 8); }
     BrzCampoPonteiro bLockReadOnlyLevelsField() const
@@ -2256,8 +2256,8 @@ struct UEngine : public UObject
     BrzCampoPonteiro bRenderLightMapDensityGrayscaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UEngine.bRenderLightMapDensityGrayscale")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SelectionHighlightIntensityBillboards` +237, medido na build 25535041
-    //  (offset absoluto medido: 0xEE5; confianca baixa)
+    //  ancorado em `SelectionHighlightIntensityBillboards` +237 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEE5; confianca baixa)
     bool& bShouldDelayGarbageCollectField() const
     { return BrzCampoAncorado<bool>(this, "SelectionHighlightIntensityBillboards", 237); }
     BrzCampoPonteiro bShouldGenerateLowQualityLightmapsField() const

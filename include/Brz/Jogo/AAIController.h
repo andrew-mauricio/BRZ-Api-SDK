@@ -124,11 +124,10 @@ struct AAIController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AAIController.PostInitializeComponents()
-    // classe: a funcao mora em AController, e AAIController herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "AController.PostInitializeComponents()");
+        NativeCall<void>(this, "AAIController.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

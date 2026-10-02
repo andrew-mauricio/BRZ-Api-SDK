@@ -447,15 +447,15 @@ struct AShooterPlayerCameraManager
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerCameraManager.UpdateViewTarget(FTViewTarget&,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro UpdateViewTarget(void* a0, float a1) const
     {
         return NativeCall<void*, void*, float>(this, "AShooterPlayerCameraManager.UpdateViewTarget(FTViewTarget&,float)", a0, a1);
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalCameraModeSource` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x52D4; confianca alta)
+    //  ancorado em `PrimalCameraModeSource` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x52D4; confianca alta)
     void*& ASALastCameraArmLengthField() const
     { return BrzCampoAncorado<void*>(this, "PrimalCameraModeSource", 8); }
     BrzCampoPonteiro ActiveAnimsField() const
@@ -547,8 +547,8 @@ struct AShooterPlayerCameraManager
     TObjectPtr<APawn>& InstigatorField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "AShooterPlayerCameraManager.Instigator"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCompleteCustomDepthStencilOverride` +2, medido na build 25535041
-    //  (offset absoluto medido: 0x3EC0; confianca alta)
+    //  ancorado em `bCompleteCustomDepthStencilOverride` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3EC0; confianca alta)
     void*& InterpTPVCameraOffsetField() const
     { return BrzCampoAncorado<void*>(this, "bCompleteCustomDepthStencilOverride", 2); }
     double& LastActorForceReplicationTimeField() const
@@ -556,13 +556,13 @@ struct AShooterPlayerCameraManager
     FName& LastActualCameraStyleField() const
     { return *GetNativePointerField<FName*>(this, "AShooterPlayerCameraManager.LastActualCameraStyle"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalCameraModeSource` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x5300; confianca media)
+    //  ancorado em `PrimalCameraModeSource` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5300; confianca media)
     void*& LastCameraArmLengthInterpParamsField() const
     { return BrzCampoAncorado<void*>(this, "PrimalCameraModeSource", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCompleteCustomDepthStencilOverride` +10, medido na build 25535041
-    //  (offset absoluto medido: 0x3EC8; confianca alta)
+    //  ancorado em `bCompleteCustomDepthStencilOverride` +10 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3EC8; confianca alta)
     void*& LastCameraStyleField() const
     { return BrzCampoAncorado<void*>(this, "bCompleteCustomDepthStencilOverride", 10); }
     double& LastEnterStasisTimeField() const
@@ -570,25 +570,25 @@ struct AShooterPlayerCameraManager
     double& LastExitStasisTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerCameraManager.LastExitStasisTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCompleteCustomDepthStencilOverride` +6, medido na build 25535041
-    //  (offset absoluto medido: 0x3EC4; confianca alta)
+    //  ancorado em `bCompleteCustomDepthStencilOverride` +6 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3EC4; confianca alta)
     void*& LastFOVScaleMatParamFOVField() const
     { return BrzCampoAncorado<void*>(this, "bCompleteCustomDepthStencilOverride", 6); }
     BrzCampoPonteiro LastFrameCameraCachePrivateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerCameraManager.LastFrameCameraCachePrivate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalCameraModeSource` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x52DC; confianca alta)
+    //  ancorado em `PrimalCameraModeSource` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x52DC; confianca alta)
     void*& LastPivotXInterpParamsField() const
     { return BrzCampoAncorado<void*>(this, "PrimalCameraModeSource", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalCameraModeSource` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x52E8; confianca alta)
+    //  ancorado em `PrimalCameraModeSource` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x52E8; confianca alta)
     void*& LastPivotYInterpParamsField() const
     { return BrzCampoAncorado<void*>(this, "PrimalCameraModeSource", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalCameraModeSource` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x52F4; confianca media)
+    //  ancorado em `PrimalCameraModeSource` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x52F4; confianca media)
     void*& LastPivotZInterpParamsField() const
     { return BrzCampoAncorado<void*>(this, "PrimalCameraModeSource", 40); }
     TWeakObjectPtr<void>& LastPostProcessVolumeSoundField() const
@@ -604,8 +604,8 @@ struct AShooterPlayerCameraManager
     float& LastTPVCollisionHeightField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerCameraManager.LastTPVCollisionHeight"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCompleteCustomDepthStencilOverride` +18, medido na build 25535041
-    //  (offset absoluto medido: 0x3ED0; confianca alta)
+    //  ancorado em `bCompleteCustomDepthStencilOverride` +18 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3ED0; confianca alta)
     void*& LastTargetField() const
     { return BrzCampoAncorado<void*>(this, "bCompleteCustomDepthStencilOverride", 18); }
     double& LastThrottledTickTimeField() const
@@ -647,8 +647,8 @@ struct AShooterPlayerCameraManager
     float& NormalFOVField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerCameraManager.NormalFOV"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalCameraModeSource` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x52D8; confianca alta)
+    //  ancorado em `PrimalCameraModeSource` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x52D8; confianca alta)
     void*& OldCameraLastCameraArmLengthField() const
     { return BrzCampoAncorado<void*>(this, "PrimalCameraModeSource", 12); }
     BrzCampoPonteiro OnActorBeginOverlapField() const

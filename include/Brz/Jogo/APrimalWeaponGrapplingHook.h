@@ -36,11 +36,10 @@ struct APrimalWeaponGrapplingHook : public AShooterWeapon_Projectile
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponGrapplingHook.BeginPlay()
-    // classe: a funcao mora em AShooterWeapon, e APrimalWeaponGrapplingHook herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
-        NativeCall<void>(this, "AShooterWeapon.BeginPlay()");
+        NativeCall<void>(this, "APrimalWeaponGrapplingHook.BeginPlay()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

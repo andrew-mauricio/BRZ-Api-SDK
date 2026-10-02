@@ -332,7 +332,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.BPAdjustDamage(float,FDamageEvent,AController*,AActor*,bool,FHitResult)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=378+bytes40+chamadores=2]]
     float BPAdjustDamage(float a0, void* a1, void* a2, void* a3, bool a4, void* a5) const
     {
         return NativeCall<float, float, void*, void*, void*, bool, void*>(this, "APrimalCharacter.BPAdjustDamage(float,FDamageEvent,AController*,AActor*,bool,FHitResult)", a0, a1, a2, a3, a4, a5);
@@ -412,7 +412,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BPCameraBaseOrientation(APrimalCharacter*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=101+chamadores=4]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro BPCameraBaseOrientation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalCharacter.BPCameraBaseOrientation(APrimalCharacter*)", a0);
@@ -464,7 +464,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BPDidTeleport()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void BPDidTeleport() const
     {
         NativeCall<void>(this, "APrimalCharacter.BPDidTeleport()");
@@ -480,7 +480,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BPGetAddForwardVelocityOnJump()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float BPGetAddForwardVelocityOnJump() const
     {
         return NativeCall<float>(this, "APrimalCharacter.BPGetAddForwardVelocityOnJump()");
@@ -512,7 +512,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BPGetExtraMeleeDamageModifier()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float BPGetExtraMeleeDamageModifier() const
     {
         return NativeCall<float>(this, "APrimalCharacter.BPGetExtraMeleeDamageModifier()");
@@ -840,7 +840,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalCharacter.BPOnLethalDamage(float,FDamageEvent&,AController*,AActor*,bool&)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=219+chamadores=2]]
     void BPOnLethalDamage(float a0, void* a1, void* a2, void* a3, void* a4) const
     {
         NativeCall<void, float, void*, void*, void*, void*>(this, "APrimalCharacter.BPOnLethalDamage(float,FDamageEvent&,AController*,AActor*,bool&)", a0, a1, a2, a3, a4);
@@ -1020,7 +1020,7 @@ struct APrimalCharacter : public ACharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalCharacter.BPOverrideHurtAnim(float,FDamageEvent&,APawn*,AActor*,bool,bool,UE::Math::TVect
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BPOverrideHurtAnim(float a0, void* a1, void* a2, void* a3, bool a4, bool a5, void* a6, void* a7) const
     {
         return NativeCall<void*, float, void*, void*, void*, bool, bool, void*, void*>(this, "APrimalCharacter.BPOverrideHurtAnim(float,FDamageEvent&,APawn*,AActor*,bool,bool,UE::Math::TVector<double>,UE::Math::TVector<double>)", a0, a1, a2, a3, a4, a5, a6, a7);
@@ -1028,7 +1028,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BPOverrideInventoryAccessInput()
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool BPOverrideInventoryAccessInput() const
     {
         return NativeCall<bool>(this, "APrimalCharacter.BPOverrideInventoryAccessInput()");
@@ -1132,7 +1132,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BPPreventForceTriggerIgnoredTrapClass(TSubclassOf<APrimalStructure>)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool BPPreventForceTriggerIgnoredTrapClass(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalCharacter.BPPreventForceTriggerIgnoredTrapClass(TSubclassOf<APrimalStructure>)", a0);
@@ -1284,7 +1284,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BP_ForceAllowAddBuff(TSubclassOf<APrimalBuff>)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool BP_ForceAllowAddBuff(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalCharacter.BP_ForceAllowAddBuff(TSubclassOf<APrimalBuff>)", a0);
@@ -1368,7 +1368,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.BeginPlay()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalCharacter.BeginPlay()");
@@ -1392,7 +1392,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.BuffsPreventImmobilization()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool BuffsPreventImmobilization() const
     {
         return NativeCall<bool>(this, "APrimalCharacter.BuffsPreventImmobilization()");
@@ -1432,7 +1432,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.CameraCheckIsMoving(APrimalCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CameraCheckIsMoving(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalCharacter.CameraCheckIsMoving(APrimalCharacter*)", a0);
@@ -1464,7 +1464,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.CanBeCarried(APrimalCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=133+bytes40+chamadores=2]]
     bool CanBeCarried(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalCharacter.CanBeCarried(APrimalCharacter*)", a0);
@@ -1720,7 +1720,7 @@ struct APrimalCharacter : public ACharacter
 
     // dump_sobre_sdk_287a0
     //   APrimalCharacter.ClientEndRagdollUpdate_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientEndRagdollUpdate_Implementation() const
     {
         NativeCall<void>(this, "APrimalCharacter.ClientEndRagdollUpdate_Implementation()");
@@ -2008,7 +2008,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.DownCallOne()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void DownCallOne() const
     {
         NativeCall<void>(this, "APrimalCharacter.DownCallOne()");
@@ -2016,7 +2016,7 @@ struct APrimalCharacter : public ACharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalCharacter.DrawFloatingChatMessage(AShooterHUD*,FString,double,APrimalCharacter*,UE::Math:
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=3690+bytes40+chamadores=3+grafo=28/28]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=3690+bytes40+grafo=28/28]]
     BrzPonteiro DrawFloatingChatMessage(void* a0, const FString& a1, double a2, void* a3, void* a4) const
     {
         return NativeCall<void*, void*, void*, double, void*, void*>(this, "APrimalCharacter.DrawFloatingChatMessage(AShooterHUD*,FString,double,APrimalCharacter*,UE::Math::TVector<double>)", a0, const_cast<FString*>(&a1), a2, a3, a4);
@@ -2588,7 +2588,7 @@ struct APrimalCharacter : public ACharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalCharacter.GetCurrentReverseVacuumCompartmentWaterLevel()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro GetCurrentReverseVacuumCompartmentWaterLevel() const
     {
         return NativeCall<void*>(this, "APrimalCharacter.GetCurrentReverseVacuumCompartmentWaterLevel()");
@@ -2856,7 +2856,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.GetHasBPOverrideFallVelocityBuff(APrimalBuff*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool GetHasBPOverrideFallVelocityBuff(void* a0, bool a1) const
     {
         return NativeCall<bool, void*, bool>(this, "APrimalCharacter.GetHasBPOverrideFallVelocityBuff(APrimalBuff*,bool)", a0, a1);
@@ -3673,7 +3673,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.GiveKillExperience()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool GiveKillExperience() const
     {
         return NativeCall<bool>(this, "APrimalCharacter.GiveKillExperience()");
@@ -4253,7 +4253,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.IsUsingHandIK()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsUsingHandIK() const
     {
         return NativeCall<bool>(this, "APrimalCharacter.IsUsingHandIK()");
@@ -4573,7 +4573,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalCharacter.NetStopAllAnimMontage()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=45+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void NetStopAllAnimMontage() const
     {
         NativeCall<void>(this, "APrimalCharacter.NetStopAllAnimMontage()");
@@ -4609,7 +4609,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.NotifyBumpedPawn(APawn*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void NotifyBumpedPawn(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalCharacter.NotifyBumpedPawn(APawn*)", a0);
@@ -4729,7 +4729,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.OnDraggedStarted()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnDraggedStarted() const
     {
         NativeCall<void>(this, "APrimalCharacter.OnDraggedStarted()");
@@ -4881,7 +4881,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.OnRep_ReplicatedBasedMovement()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnRep_ReplicatedBasedMovement() const
     {
         NativeCall<void>(this, "APrimalCharacter.OnRep_ReplicatedBasedMovement()");
@@ -4953,7 +4953,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.OnStartRunning()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=194+grafo=4/4]]
     void OnStartRunning() const
     {
         NativeCall<void>(this, "APrimalCharacter.OnStartRunning()");
@@ -5001,7 +5001,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.OnStopRunning()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=161+grafo=3/3]]
     void OnStopRunning() const
     {
         NativeCall<void>(this, "APrimalCharacter.OnStopRunning()");
@@ -5217,7 +5217,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.PlayHurtAnim(float,FDamageEvent&,APawn*,AActor*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void PlayHurtAnim(float a0, void* a1, void* a2, void* a3, bool a4) const
     {
         NativeCall<void, float, void*, void*, void*, bool>(this, "APrimalCharacter.PlayHurtAnim(float,FDamageEvent&,APawn*,AActor*,bool)", a0, a1, a2, a3, a4);
@@ -5257,11 +5257,10 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.PostInitializeComponents()
-    // classe: a funcao mora em ACharacter, e APrimalCharacter herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "ACharacter.PostInitializeComponents()");
+        NativeCall<void>(this, "APrimalCharacter.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -5274,11 +5273,10 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.PreInitializeComponents()
-    // classe: a funcao mora em APawn, e APrimalCharacter herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PreInitializeComponents() const
     {
-        NativeCall<void>(this, "APawn.PreInitializeComponents()");
+        NativeCall<void>(this, "APrimalCharacter.PreInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -5564,7 +5562,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.ServerRequestDrag_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerRequestDrag_Implementation() const
     {
         NativeCall<void>(this, "APrimalCharacter.ServerRequestDrag_Implementation()");
@@ -5580,7 +5578,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.ServerTryPoop_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerTryPoop_Implementation() const
     {
         NativeCall<void>(this, "APrimalCharacter.ServerTryPoop_Implementation()");
@@ -6009,7 +6007,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.StopAnimMontage(UAnimMontage*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopAnimMontage(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalCharacter.StopAnimMontage(UAnimMontage*)", a0);
@@ -6097,7 +6095,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.TickBeingDragged(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void TickBeingDragged(float a0) const
     {
         NativeCall<void, float>(this, "APrimalCharacter.TickBeingDragged(float)", a0);
@@ -6313,7 +6311,7 @@ struct APrimalCharacter : public ACharacter
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalCharacter.UnregisterWithManagers()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro UnregisterWithManagers() const
     {
         return NativeCall<void*>(this, "APrimalCharacter.UnregisterWithManagers()");
@@ -6329,7 +6327,7 @@ struct APrimalCharacter : public ACharacter
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalCharacter.Unstasis()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void Unstasis() const
     {
         NativeCall<void>(this, "APrimalCharacter.Unstasis()");
@@ -6579,8 +6577,8 @@ struct APrimalCharacter : public ACharacter
     float& AddForwardVelocityOnJumpMaxSpeedMultiplierClampField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.AddForwardVelocityOnJumpMaxSpeedMultiplierClamp"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x16C0; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C0; confianca media)
     void*& AnimSharingOverrideTimerField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 68); }
     BrzCampoPonteiro AnimSharingStateField() const
@@ -6588,15 +6586,15 @@ struct APrimalCharacter : public ACharacter
     TArray<void*>& AnimationsPreventInputField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalCharacter.AnimationsPreventInput"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x1110; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1110; confianca media)
     void*& ApplyBiomeZoneBuffHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 120); }
     BrzCampoPonteiro AutoStopReplicationWhenSleepingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.AutoStopReplicationWhenSleeping")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +240, medido na build 25535041
-    //  (offset absoluto medido: 0xF18; confianca baixa)
+    //  ancorado em `TPVCameraOffsetMultiplier` +240 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF18; confianca baixa)
     void*& AutonomousCorrectionOffsetField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 240); }
     float& BPTimerNonDedicatedMaxField() const
@@ -6608,30 +6606,30 @@ struct APrimalCharacter : public ACharacter
     float& BPTimerServerMinField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.BPTimerServerMin"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1688; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1688; confianca alta)
     float& BaseLookUpRateField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 12); }
     float& BaseTargetingDesirabilityField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.BaseTargetingDesirability"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1684; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1684; confianca alta)
     float& BaseTurnRateField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NiagaraSystemsToActivateAfterDragged` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xBA8; confianca media)
+    //  ancorado em `NiagaraSystemsToActivateAfterDragged` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xBA8; confianca media)
     void*& BasedCharacterSetField() const
     { return BrzCampoAncorado<void*>(this, "NiagaraSystemsToActivateAfterDragged", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x11B0; confianca alta)
+    //  ancorado em `TetherActor` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11B0; confianca alta)
     TWeakObjectPtr<void>& BasedElevatorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "TetherActor", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +112, medido na build 25535041
-    //  (offset absoluto medido: 0xAC0; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAC0; confianca media)
     TArray<ABiomeZoneVolume*>& BiomeZoneVolumesField() const
     { return BrzCampoAncorado<TArray<ABiomeZoneVolume*>>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 112); }
     float& BlinkDurationField() const
@@ -6651,13 +6649,13 @@ struct APrimalCharacter : public ACharacter
     float& BuffedResistanceMultField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.BuffedResistanceMult"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA60; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA60; confianca media)
     TArray<APrimalBuff*>& BuffsField() const
     { return BrzCampoAncorado<TArray<APrimalBuff*>>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x16EC; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16EC; confianca alta)
     int& CachedNumberOfClientRagdollCorrectionAttemptsField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 20); }
     BrzCampoPonteiro Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReductionField() const
@@ -6667,8 +6665,8 @@ struct APrimalCharacter : public ACharacter
     FName& CameraProfileIdOverrideField() const
     { return *GetNativePointerField<FName*>(this, "APrimalCharacter.CameraProfileIdOverride"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CharacterSavedDynamicBaseBoneName` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1020; confianca alta)
+    //  ancorado em `CharacterSavedDynamicBaseBoneName` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1020; confianca alta)
     FName& CapsulePreRagdollCollisionProfileNameField() const
     { return BrzCampoAncorado<FName>(this, "CharacterSavedDynamicBaseBoneName", 16); }
     TWeakObjectPtr<void>& CarryingDinoField() const
@@ -6684,13 +6682,13 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro CharacterSavedDynamicBaseRelativeRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.CharacterSavedDynamicBaseRelativeRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +128, medido na build 25535041
-    //  (offset absoluto medido: 0xAD0; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAD0; confianca media)
     TArray<TWeakObjectPtr<void>>& CharactersGrappledToMeField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x16A4; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A4; confianca media)
     float& ClientForceSleepRagdollIntervalField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 40); }
     float& ClientLocationInterpSpeedField() const
@@ -6708,37 +6706,37 @@ struct APrimalCharacter : public ACharacter
     float& CorpseFadeAwayTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.CorpseFadeAwayTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x16B0; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16B0; confianca media)
     float& CorpseHarvestFadeTimeField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 52); }
     float& CorpseLifespanField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.CorpseLifespan"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1707; confianca alta)
+    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1707; confianca alta)
     void*& CostumeEquipmentSlotTypeField() const
     { return BrzCampoAncorado<void*>(this, "TargetableDamageFXDefaultPhysMaterial", 4); }
     BrzCampoPonteiro CurrentAimRotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.CurrentAimRot")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x1690; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1690; confianca alta)
     float& CurrentCarriedYawField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPrimalCameraConfig` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1360; confianca alta)
+    //  ancorado em `CurrentPrimalCameraConfig` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1360; confianca alta)
     void*& CurrentDamageEventField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPrimalCameraConfig", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x16DC; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16DC; confianca alta)
     int& CurrentFrameAnimPreventInputField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +216, medido na build 25535041
-    //  (offset absoluto medido: 0xF00; confianca baixa)
+    //  ancorado em `TPVCameraOffsetMultiplier` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF00; confianca baixa)
     void*& CurrentLocalRootLocField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 216); }
     BrzCampoPonteiro CurrentPrimalCameraConfigField() const
@@ -6794,8 +6792,8 @@ struct APrimalCharacter : public ACharacter
     APrimalCharacter*& DraggedCharacterField() const
     { return *GetNativePointerField<APrimalCharacter**>(this, "APrimalCharacter.DraggedCharacter"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x16E0; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16E0; confianca alta)
     int& DraggingBodyIndexField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 8); }
     APrimalCharacter*& DraggingCharacterField() const
@@ -6803,8 +6801,8 @@ struct APrimalCharacter : public ACharacter
     float& EffectorInterpSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.EffectorInterpSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ASACameraConfigClass` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1220; confianca alta)
+    //  ancorado em `ASACameraConfigClass` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1220; confianca alta)
     void*& EntityHandleField() const
     { return BrzCampoAncorado<void*>(this, "ASACameraConfigClass", 8); }
     float& EnvironmentInteractionPlasticityExponentField() const
@@ -6840,13 +6838,13 @@ struct APrimalCharacter : public ACharacter
     double& ForcePreventCharZInterpUntilTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.ForcePreventCharZInterpUntilTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x10C8; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C8; confianca media)
     void*& ForceSleepRagdollExHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x10C0; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C0; confianca media)
     void*& ForceSleepRagdollHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 40); }
     double& ForceUnfreezeSkeletalDynamicsUntilTimeField() const
@@ -6890,8 +6888,8 @@ struct APrimalCharacter : public ACharacter
     float& KillXPBaseField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.KillXPBase"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x11B8; confianca alta)
+    //  ancorado em `TetherActor` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11B8; confianca alta)
     TWeakObjectPtr<void>& KinematicActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "TetherActor", 32); }
     UAnimMontage*& LandedAnimField() const
@@ -6899,13 +6897,13 @@ struct APrimalCharacter : public ACharacter
     float& LandedSoundMaxRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.LandedSoundMaxRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xE40; confianca media)
+    //  ancorado em `TPVCameraOffsetMultiplier` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE40; confianca media)
     void*& LastApproximatePhysVolumeLocationField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x11E0; confianca media)
+    //  ancorado em `TetherActor` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11E0; confianca media)
     TWeakObjectPtr<void>& LastApproximatePhysicsVolumeField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "TetherActor", 72); }
     TWeakObjectPtr<void>& LastAttackedNearbyPlayerField() const
@@ -6915,25 +6913,25 @@ struct APrimalCharacter : public ACharacter
     TWeakObjectPtr<void>& LastBasedMovementActorRefField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalCharacter.LastBasedMovementActorRef"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x11A0; confianca alta)
+    //  ancorado em `TetherActor` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11A0; confianca alta)
     void*& LastBasedOnDinoField() const
     { return BrzCampoAncorado<void*>(this, "TetherActor", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x11A8; confianca alta)
+    //  ancorado em `TetherActor` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11A8; confianca alta)
     void*& LastBasedOnDinoComponentField() const
     { return BrzCampoAncorado<void*>(this, "TetherActor", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OrbitCamRot` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xFC0; confianca media)
+    //  ancorado em `OrbitCamRot` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFC0; confianca media)
     void*& LastCachedPlayerControlRotationField() const
     { return BrzCampoAncorado<void*>(this, "OrbitCamRot", 96); }
     double& LastCausedDamageTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.LastCausedDamageTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +60, medido na build 25535041
-    //  (offset absoluto medido: 0x16B8; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16B8; confianca media)
     float& LastDamageAmountMaterialValueField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 60); }
     AActor*& LastDamageCauserField() const
@@ -6941,25 +6939,25 @@ struct APrimalCharacter : public ACharacter
     TWeakObjectPtr<void>& LastDamageEventInstigatorField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "APrimalCharacter.LastDamageEventInstigator"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +3, medido na build 25535041
-    //  (offset absoluto medido: 0x1706; confianca alta)
+    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1706; confianca alta)
     void*& LastDeathAnimMovementModeField() const
     { return BrzCampoAncorado<void*>(this, "TargetableDamageFXDefaultPhysMaterial", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x16BC; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16BC; confianca media)
     float& LastFallingZField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +76, medido na build 25535041
-    //  (offset absoluto medido: 0x16C8; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +76 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C8; confianca media)
     int& LastFootPhysicalSurfaceTypeField() const
     { return BrzCampoAncorado<int>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 76); }
     double& LastForceAimedCharactersTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.LastForceAimedCharactersTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xE58; confianca media)
+    //  ancorado em `TPVCameraOffsetMultiplier` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE58; confianca media)
     void*& LastForceFallCheckBaseLocationField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 48); }
     APrimalProjectileGrapplingHook*& LastGrapHookPullingMeField() const
@@ -6971,8 +6969,8 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro LastHitWallSweepCheckLocationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.LastHitWallSweepCheckLocation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x11D8; confianca media)
+    //  ancorado em `TetherActor` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11D8; confianca media)
     TWeakObjectPtr<void>& LastHurtByNearbyPlayerField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "TetherActor", 64); }
     double& LastIkUpdateTimeField() const
@@ -6992,13 +6990,13 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro LastIsInsideVaccumSealedCubeOnDinoField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.LastIsInsideVaccumSealedCubeOnDino")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xA70; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA70; confianca media)
     void*& LastReplicatedRagdollPositionsField() const
     { return BrzCampoAncorado<void*>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xA80; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA80; confianca media)
     void*& LastReplicatedRagdollRotationsField() const
     { return BrzCampoAncorado<void*>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 48); }
     BrzCampoPonteiro LastReverseVacuumCompartmentField() const
@@ -7006,8 +7004,8 @@ struct APrimalCharacter : public ACharacter
     double& LastRunningTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.LastRunningTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x168C; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x168C; confianca alta)
     float& LastSimulatedFallingVelocityZField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 16); }
     double& LastSkinnedTimeField() const
@@ -7015,13 +7013,13 @@ struct APrimalCharacter : public ACharacter
     double& LastStartedSleepingTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.LastStartedSleepingTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +120, medido na build 25535041
-    //  (offset absoluto medido: 0xEA0; confianca media)
+    //  ancorado em `TPVCameraOffsetMultiplier` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEA0; confianca media)
     void*& LastSubmergedCheckLocField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x1698; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1698; confianca alta)
     float& LastTickStaminaValueField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 28); }
     double& LastTimeInSwimmingField() const
@@ -7039,45 +7037,45 @@ struct APrimalCharacter : public ACharacter
     double& LastTookDamageTimeDifferentTeamField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.LastTookDamageTimeDifferentTeam"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +264, medido na build 25535041
-    //  (offset absoluto medido: 0xF30; confianca baixa)
+    //  ancorado em `TPVCameraOffsetMultiplier` +264 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF30; confianca baixa)
     void*& LastTrueGetAimOffsetsLocationCSField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 264); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OrbitCamRot` +72, medido na build 25535041
-    //  (offset absoluto medido: 0xFA8; confianca media)
+    //  ancorado em `OrbitCamRot` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFA8; confianca media)
     void*& LastTrueGetAimOffsetsRotationCSField() const
     { return BrzCampoAncorado<void*>(this, "OrbitCamRot", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x11C0; confianca media)
+    //  ancorado em `TetherActor` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11C0; confianca media)
     TWeakObjectPtr<void>& LastVoiceAudioComponentField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "TetherActor", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +192, medido na build 25535041
-    //  (offset absoluto medido: 0xEE8; confianca baixa)
+    //  ancorado em `TPVCameraOffsetMultiplier` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEE8; confianca baixa)
     void*& LastWalkingLocField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 192); }
     double& LastWalkingTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.LastWalkingTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x16E8; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16E8; confianca alta)
     int& LastYawSpeedWorldFrameCounterField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x1108; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1108; confianca media)
     void*& LifespanExpiredHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `VelocityBasedLandedSounds` +56, medido na build 25535041
-    //  (offset absoluto medido: 0xCD0; confianca media)
+    //  ancorado em `VelocityBasedLandedSounds` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCD0; confianca media)
     void*& LocalDraggedCharacterTransformField() const
     { return BrzCampoAncorado<void*>(this, "VelocityBasedLandedSounds", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1680; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1680; confianca alta)
     float& LowHealthPercentageField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 4); }
     float& MaxDragDistanceField() const
@@ -7089,43 +7087,43 @@ struct APrimalCharacter : public ACharacter
     float& MaxFallSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.MaxFallSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CharacterSavedDynamicBaseBoneName` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1018; confianca alta)
+    //  ancorado em `CharacterSavedDynamicBaseBoneName` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1018; confianca alta)
     FName& MeshPreRagdollCollisionProfileNameField() const
     { return BrzCampoAncorado<FName>(this, "CharacterSavedDynamicBaseBoneName", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +72, medido na build 25535041
-    //  (offset absoluto medido: 0xE70; confianca media)
+    //  ancorado em `TPVCameraOffsetMultiplier` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE70; confianca media)
     void*& MeshPreRagdollRelativeLocationField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OrbitCamRot` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xF78; confianca alta)
+    //  ancorado em `OrbitCamRot` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF78; confianca alta)
     void*& MeshPreRagdollRelativeRotationField() const
     { return BrzCampoAncorado<void*>(this, "OrbitCamRot", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x10E8; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10E8; confianca media)
     void*& MeshTeleportInterpBaseRelativeLocationField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x10D0; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10D0; confianca media)
     void*& MeshTeleportInterpOffsetField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x1100; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1100; confianca media)
     void*& MeshTeleportInterpTimeRemainingField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +108, medido na build 25535041
-    //  (offset absoluto medido: 0x1104; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +108 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1104; confianca media)
     void*& MeshTeleportInterpTotalTimeField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x16FC; confianca media)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16FC; confianca media)
     int& MeshedCounterField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 36); }
     int& MeshingTickCounterMultiplierField() const
@@ -7141,8 +7139,8 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro MouthFlapSoundClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.MouthFlapSoundClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPrimalCameraConfig` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1358; confianca alta)
+    //  ancorado em `CurrentPrimalCameraConfig` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1358; confianca alta)
     ABiomeZoneVolume*& MyBiomeZoneVolumeField() const
     { return BrzCampoAncorado<ABiomeZoneVolume*>(this, "CurrentPrimalCameraConfig", 8); }
     UPrimalCharacterStatusComponent*& MyCharacterStatusComponentField() const
@@ -7150,8 +7148,8 @@ struct APrimalCharacter : public ACharacter
     UPrimalHarvestingComponent*& MyDeathHarvestingComponentField() const
     { return *GetNativePointerField<UPrimalHarvestingComponent**>(this, "APrimalCharacter.MyDeathHarvestingComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedDeathAnim` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x1150; confianca media)
+    //  ancorado em `SavedDeathAnim` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1150; confianca media)
     void*& MyDeathHarvestingElementField() const
     { return BrzCampoAncorado<void*>(this, "SavedDeathAnim", 40); }
     UPrimalInventoryComponent*& MyInventoryComponentField() const
@@ -7165,8 +7163,8 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro NiagaraSystemsToActivateAfterDraggedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.NiagaraSystemsToActivateAfterDragged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x16A8; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A8; confianca media)
     float& NonRelevantServerForceSleepRagdollIntervalField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 44); }
     BrzCampoPonteiro NotifyInputEventField() const
@@ -7178,13 +7176,13 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro NotifyUnstasisField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.NotifyUnstasis")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x16F8; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16F8; confianca alta)
     int& NumFallZFailsField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x16F0; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16F0; confianca alta)
     int& NumberOfClientRagdollCorrectionAttemptsField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 24); }
     BrzCampoPonteiro OldLocationField() const
@@ -7204,8 +7202,8 @@ struct APrimalCharacter : public ACharacter
     float& OrbitCamZoomField() const
     { return *GetNativePointerField<float*>(this, "APrimalCharacter.OrbitCamZoom"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x16AC; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16AC; confianca media)
     float& OriginalCorpseLifespanField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 48); }
     UStructurePaintingComponent*& PaintingComponentField() const
@@ -7215,8 +7213,8 @@ struct APrimalCharacter : public ACharacter
     UAnimMontage*& PinnedAnimField() const
     { return *GetNativePointerField<UAnimMontage**>(this, "APrimalCharacter.PinnedAnim"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x16E4; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16E4; confianca alta)
     int& PlayerNumUnderGroundFailField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 12); }
     BrzCampoPonteiro PoopAltItemClassField() const
@@ -7230,23 +7228,23 @@ struct APrimalCharacter : public ACharacter
     double& PossessedAtTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.PossessedAtTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HurtDecalData` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x910; confianca alta)
+    //  ancorado em `HurtDecalData` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x910; confianca alta)
     void*& PreDragCollisionSetField() const
     { return BrzCampoAncorado<void*>(this, "HurtDecalData", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x1700; confianca media)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1700; confianca media)
     void*& PreDragComponentUpdateFlagField() const
     { return BrzCampoAncorado<void*>(this, "PreventSavingCharOnlyDamageTargetingTeam", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x1704; confianca alta)
+    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1704; confianca alta)
     void*& PreDraggedMovementTickGroupField() const
     { return BrzCampoAncorado<void*>(this, "TargetableDamageFXDefaultPhysMaterial", 1); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +2, medido na build 25535041
-    //  (offset absoluto medido: 0x1705; confianca alta)
+    //  ancorado em `TargetableDamageFXDefaultPhysMaterial` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1705; confianca alta)
     unsigned char& PreDraggingMovementTickGroupField() const
     { return BrzCampoAncorado<unsigned char>(this, "TargetableDamageFXDefaultPhysMaterial", 2); }
     TArray<void*>& PreventBuffClassesWithTagField() const
@@ -7254,28 +7252,28 @@ struct APrimalCharacter : public ACharacter
     int& PreventSavingCharOnlyDamageTargetingTeamField() const
     { return *GetNativePointerField<int*>(this, "APrimalCharacter.PreventSavingCharOnlyDamageTargetingTeam"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x11C8; confianca media)
+    //  ancorado em `TetherActor` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11C8; confianca media)
     TWeakObjectPtr<void>& PreviousMountedDinoField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "TetherActor", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +168, medido na build 25535041
-    //  (offset absoluto medido: 0xED0; confianca baixa)
+    //  ancorado em `TPVCameraOffsetMultiplier` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xED0; confianca baixa)
     void*& PreviousRagdollLocationField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TetherActor` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x11D0; confianca media)
+    //  ancorado em `TetherActor` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11D0; confianca media)
     void*& PreviousSecondaryMountedDinoField() const
     { return BrzCampoAncorado<void*>(this, "TetherActor", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xE88; confianca media)
+    //  ancorado em `TPVCameraOffsetMultiplier` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE88; confianca media)
     void*& PreviousUnderCheckLocationField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastReverseVacuumCompartment` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x173C; confianca alta)
+    //  ancorado em `LastReverseVacuumCompartment` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x173C; confianca alta)
     void*& PrimalAnimRootMotionTranslationScaleField() const
     { return BrzCampoAncorado<void*>(this, "LastReverseVacuumCompartment", 28); }
     float& ProneEyeHeightField() const
@@ -7285,13 +7283,13 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro PropertyBagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.PropertyBag")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraOffsetMultiplier` +144, medido na build 25535041
-    //  (offset absoluto medido: 0xEB8; confianca baixa)
+    //  ancorado em `TPVCameraOffsetMultiplier` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xEB8; confianca baixa)
     void*& RagdollLastFrameLinearVelocityField() const
     { return BrzCampoAncorado<void*>(this, "TPVCameraOffsetMultiplier", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x16F4; confianca alta)
+    //  ancorado em `PreventSavingCharOnlyDamageTargetingTeam` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16F4; confianca alta)
     int& RagdollPenetrationFailuresField() const
     { return BrzCampoAncorado<int>(this, "PreventSavingCharOnlyDamageTargetingTeam", 28); }
     float& RagdollReplicationIntervalField() const
@@ -7299,23 +7297,23 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro ReplicateAllBonesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.ReplicateAllBones")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x10B8; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10B8; confianca media)
     void*& ReplicateRagdollHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xAB0; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAB0; confianca media)
     TArray<void*>& ReplicatedBonesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +64, medido na build 25535041
-    //  (offset absoluto medido: 0xA90; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA90; confianca media)
     void*& ReplicatedBonesConstraintsField() const
     { return BrzCampoAncorado<void*>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xAA0; confianca media)
+    //  ancorado em `Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAA0; confianca media)
     TArray<void*>& ReplicatedBonesIndiciesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "Cached_BaseItemClassesThatAreCheckedForGeneTraitWeightReduction", 80); }
     float& ReplicatedCurrentHealthField() const
@@ -7333,13 +7331,13 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro ReplicatedRagdollRotationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.ReplicatedRagdollRotations")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OrbitCamRot` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xF90; confianca media)
+    //  ancorado em `OrbitCamRot` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF90; confianca media)
     void*& ReplicatedRootRotationField() const
     { return BrzCampoAncorado<void*>(this, "OrbitCamRot", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x16B4; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16B4; confianca media)
     float& RootYawField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 56); }
     UAudioComponent*& RunLoopACField() const
@@ -7365,8 +7363,8 @@ struct APrimalCharacter : public ACharacter
     double& SecondaryMountedDinoTimeField() const
     { return *GetNativePointerField<double*>(this, "APrimalCharacter.SecondaryMountedDinoTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x16A0; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A0; confianca media)
     float& ServerForceSleepRagdollIntervalField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 36); }
     float& ServerTargetCarriedYawField() const
@@ -7388,8 +7386,8 @@ struct APrimalCharacter : public ACharacter
     UAnimMontage*& SyncedMontageField() const
     { return *GetNativePointerField<UAnimMontage**>(this, "APrimalCharacter.SyncedMontage"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x169C; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x169C; confianca alta)
     float& SyncedMontageDurationField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 32); }
     float& TPVCameraHorizontalOffsetFactorMaxField() const
@@ -7403,8 +7401,8 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro TPVCameraOrgOffsetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.TPVCameraOrgOffset")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1694; confianca alta)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1694; confianca alta)
     float& TargetCarriedYawField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 24); }
     unsigned char& TargetableDamageFXDefaultPhysMaterialField() const
@@ -7426,23 +7424,23 @@ struct APrimalCharacter : public ACharacter
     unsigned char& UnSubmergedWaterMovementModeField() const
     { return *GetNativePointerField<unsigned char*>(this, "APrimalCharacter.UnSubmergedWaterMovementMode"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x1120; confianca baixa)
+    //  ancorado em `OnOrbitCameraViewChange` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1120; confianca baixa)
     void*& UnpauseAnimSharingHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x10A8; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10A8; confianca media)
     void*& UpdateDraggingHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x10B0; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10B0; confianca media)
     void*& UpdateRagdollReplicationOnClientHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnOrbitCameraViewChange` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x1118; confianca media)
+    //  ancorado em `OnOrbitCameraViewChange` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1118; confianca media)
     void*& UseFastInventoryHandleField() const
     { return BrzCampoAncorado<void*>(this, "OnOrbitCameraViewChange", 128); }
     BrzCampoPonteiro VelocityBasedEnteredSwimmingSoundsField() const
@@ -7450,8 +7448,8 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro VelocityBasedLandedSoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.VelocityBasedLandedSounds")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x16C4; confianca media)
+    //  ancorado em `TPVCameraHorizontalOffsetFactorMaxClamp` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C4; confianca media)
     float& WalkRunTransitionCooldownField() const
     { return BrzCampoAncorado<float>(this, "TPVCameraHorizontalOffsetFactorMaxClamp", 72); }
     float& WaterSubmergedDepthThresholdField() const
@@ -7535,8 +7533,8 @@ struct APrimalCharacter : public ACharacter
     BrzCampoPonteiro bEnableMouthFlapAnimationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalCharacter.bEnableMouthFlapAnimations")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsMassMoving` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x170B; confianca alta)
+    //  ancorado em `bIsMassMoving` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x170B; confianca alta)
     void*& bExpensiveClientPredictionField() const
     { return BrzCampoAncorado<void*>(this, "bIsMassMoving", 1); }
     BrzCampoPonteiro bForceAllowDediServerGroundConformInterpolateField() const
@@ -7782,8 +7780,8 @@ struct APrimalCharacter : public ACharacter
     int& customBitFlagsField() const
     { return *GetNativePointerField<int*>(this, "APrimalCharacter.customBitFlags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CombatIdle` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1280; confianca alta)
+    //  ancorado em `CombatIdle` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1280; confianca alta)
     UAnimMontage*& lastPlayedMountAnimField() const
     { return BrzCampoAncorado<UAnimMontage*>(this, "CombatIdle", 8); }
     BitFieldValue<bool, unsigned __int32> bIsVoiceTalking()

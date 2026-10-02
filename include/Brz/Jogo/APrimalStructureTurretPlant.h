@@ -53,7 +53,7 @@ struct APrimalStructureTurretPlant : public APrimalStructureTurret
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretPlant.Demolish(APlayerController*,AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void Demolish(void* a0, void* a1) const
     {
         NativeCall<void, void*, void*>(this, "APrimalStructureTurretPlant.Demolish(APlayerController*,AActor*)", a0, a1);
@@ -101,7 +101,7 @@ struct APrimalStructureTurretPlant : public APrimalStructureTurret
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureTurretPlant.SelectAttackOrigin(UE::Math::TVector<double>&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SelectAttackOrigin(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureTurretPlant.SelectAttackOrigin(UE::Math::TVector<double>&)", a0);

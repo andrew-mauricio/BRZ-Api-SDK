@@ -274,20 +274,20 @@ struct APlayerState : public AInfo
     unsigned char& CompressedPingField() const
     { return *GetNativePointerField<unsigned char*>(this, "APlayerState.CompressedPing"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CompressedPing` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x499; confianca alta)
+    //  ancorado em `CompressedPing` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x499; confianca alta)
     unsigned char& CurPingBucketField() const
     { return BrzCampoAncorado<unsigned char>(this, "CompressedPing", 1); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PawnPrivate` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x520; confianca alta)
+    //  ancorado em `PawnPrivate` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x520; confianca alta)
     float& CurPingBucketTimestampField() const
     { return BrzCampoAncorado<float>(this, "PawnPrivate", 24); }
     BrzCampoPonteiro EngineMessageClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerState.EngineMessageClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EngineMessageClass` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x4D8; confianca alta)
+    //  ancorado em `EngineMessageClass` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D8; confianca alta)
     float& ExactPingField() const
     { return BrzCampoAncorado<float>(this, "EngineMessageClass", 8); }
     BrzCampoPonteiro OnPawnSetField() const
@@ -295,8 +295,8 @@ struct APlayerState : public AInfo
     TObjectPtr<APawn>& PawnPrivateField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "APlayerState.PawnPrivate"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PawnPrivate` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x510; confianca alta)
+    //  ancorado em `PawnPrivate` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x510; confianca alta)
     void*& PingBucketField() const
     { return BrzCampoAncorado<void*>(this, "PawnPrivate", 8); }
     unsigned long long& PlayerIDField() const
@@ -310,8 +310,8 @@ struct APlayerState : public AInfo
     float& ScoreField() const
     { return *GetNativePointerField<float*>(this, "APlayerState.score"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SavedNetworkAddress` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x4F0; confianca alta)
+    //  ancorado em `SavedNetworkAddress` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F0; confianca alta)
     FName& SessionNameField() const
     { return BrzCampoAncorado<FName>(this, "SavedNetworkAddress", 16); }
     int& StartTimeField() const

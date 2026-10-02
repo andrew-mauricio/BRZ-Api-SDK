@@ -142,11 +142,10 @@ struct AWorldSettings : public ABasePrimalWorldSettings
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AWorldSettings.PostLoad()
-    // classe: a funcao mora em AActor, e AWorldSettings herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostLoad() const
     {
-        NativeCall<void>(this, "AActor.PostLoad()");
+        NativeCall<void>(this, "AWorldSettings.PostLoad()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente

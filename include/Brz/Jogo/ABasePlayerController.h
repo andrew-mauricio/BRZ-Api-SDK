@@ -164,8 +164,8 @@ struct ABasePlayerController : public APrimalPlayerController
     BrzCampoPonteiro bIsGamepadActiveField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ABasePlayerController.bIsGamepadActive")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `customCursor` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB18; confianca alta)
+    //  ancorado em `customCursor` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB18; confianca alta)
     TWeakObjectPtr<void>& consoleMouseCursorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "customCursor", 8); }
     BrzCampoPonteiro customCursorField() const

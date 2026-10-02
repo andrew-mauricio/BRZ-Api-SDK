@@ -1234,13 +1234,13 @@ struct UPrimalUI
     BrzCampoPonteiro AnimationTickManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.AnimationTickManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x554; confianca media)
+    //  ancorado em `AnalogDeltaY` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x554; confianca media)
     void*& CachedItemForReHighlightField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x738; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x738; confianca media)
     void*& CachedWidgetGeometryField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 80); }
     BrzCampoPonteiro ClippingField() const
@@ -1252,18 +1252,18 @@ struct UPrimalUI
     BrzCampoPonteiro ConfirmationDialogUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.ConfirmationDialogUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x544; confianca media)
+    //  ancorado em `AnalogDeltaY` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x544; confianca media)
     void*& CurrentHighlightedField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +172, medido na build 25535041
-    //  (offset absoluto medido: 0x5B8; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +172 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B8; confianca baixa)
     void*& CurrentToolTipInstanceField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 172); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x5C4; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5C4; confianca baixa)
     void*& CurrentToolTipSponsorField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 184); }
     unsigned char& CursorField() const
@@ -1291,8 +1291,8 @@ struct UPrimalUI
     BrzCampoPonteiro DesiredFocusWidgetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.DesiredFocusWidget")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x4F4; confianca media)
+    //  ancorado em `virtualCursorFrames` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F4; confianca media)
     void*& DraggedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 68); }
     BrzCampoPonteiro ExtensionsField() const
@@ -1300,8 +1300,8 @@ struct UPrimalUI
     BrzCampoPonteiro FlowDirectionPreferenceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.FlowDirectionPreference")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x5CC; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5CC; confianca baixa)
     void*& ForcedWidgetToolTipField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 192); }
     BrzCampoPonteiro ForegroundColorField() const
@@ -1317,13 +1317,13 @@ struct UPrimalUI
     BrzCampoPonteiro HandleVisibilityWithInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.HandleVisibilityWithInput")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x7A0; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7A0; confianca baixa)
     void*& HasBeenAddedToParentRemoveListField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +224, medido na build 25535041
-    //  (offset absoluto medido: 0x7C8; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7C8; confianca baixa)
     void*& HasScaledForSplitscreenField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 224); }
     unsigned char& HighlightStartPointTypeField() const
@@ -1331,8 +1331,8 @@ struct UPrimalUI
     BrzCampoPonteiro HighlightableField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.Highlightable")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x4E0; confianca media)
+    //  ancorado em `virtualCursorFrames` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4E0; confianca media)
     void*& HighlightedWidgetsField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 48); }
     TObjectPtr<UInputComponent>& InputComponentField() const
@@ -1340,48 +1340,48 @@ struct UPrimalUI
     TWeakObjectPtr<void>& ItemContainerField() const
     { return *GetNativePointerField<TWeakObjectPtr<void>*>(this, "UPrimalUI.ItemContainer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x4C4; confianca alta)
+    //  ancorado em `virtualCursorFrames` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4C4; confianca alta)
     void*& LastFocusedDataWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x4BC; confianca alta)
+    //  ancorado em `virtualCursorFrames` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4BC; confianca alta)
     void*& LastFocusedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +124, medido na build 25535041
-    //  (offset absoluto medido: 0x588; confianca media)
+    //  ancorado em `AnalogDeltaY` +124 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x588; confianca media)
     void*& LastGamepadMovementTimeField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 124); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +92, medido na build 25535041
-    //  (offset absoluto medido: 0x568; confianca media)
+    //  ancorado em `AnalogDeltaY` +92 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x568; confianca media)
     void*& LastHighlightedScreenPosField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 92); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +164, medido na build 25535041
-    //  (offset absoluto medido: 0x5B0; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +164 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5B0; confianca baixa)
     void*& LastHighlightedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 164); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x6F8; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6F8; confianca media)
     void*& LastTargetVelocityYField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x6F0; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6F0; confianca media)
     void*& LastTooltipChangeTimeField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +108, medido na build 25535041
-    //  (offset absoluto medido: 0x578; confianca media)
+    //  ancorado em `AnalogDeltaY` +108 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x578; confianca media)
     void*& LastXLeftField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x57C; confianca media)
+    //  ancorado em `AnalogDeltaY` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x57C; confianca media)
     void*& LastYLeftField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 112); }
     BrzCampoPonteiro NamedSlotBindingsField() const
@@ -1391,8 +1391,8 @@ struct UPrimalUI
     BrzCampoPonteiro NavigationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.Navigation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +226, medido na build 25535041
-    //  (offset absoluto medido: 0x7CA; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +226 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7CA; confianca baixa)
     void*& NumTimesRefreshedWhileCollectingGarbageField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 226); }
     BrzCampoPonteiro OnRemovedFromViewportField() const
@@ -1400,33 +1400,33 @@ struct UPrimalUI
     BrzCampoPonteiro OnVisibilityChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.OnVisibilityChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x500; confianca media)
+    //  ancorado em `virtualCursorFrames` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x500; confianca media)
     void*& OpenedTimeField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +196, medido na build 25535041
-    //  (offset absoluto medido: 0x7AC; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +196 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7AC; confianca baixa)
     void*& OrgRenderTransformPivotXField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 196); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +188, medido na build 25535041
-    //  (offset absoluto medido: 0x7A4; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +188 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7A4; confianca baixa)
     void*& OrgRenderTransformPivotYField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 188); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +208, medido na build 25535041
-    //  (offset absoluto medido: 0x7B8; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +208 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B8; confianca baixa)
     void*& OrgRenderTransformScaleField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 208); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +200, medido na build 25535041
-    //  (offset absoluto medido: 0x7B0; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B0; confianca baixa)
     void*& OrgRenderTransformTranslationXField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x7A8; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7A8; confianca baixa)
     void*& OrgRenderTransformTranslationYField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 192); }
     BrzCampoPonteiro OriginalSizeBoxUnstretchedSizeField() const
@@ -1436,15 +1436,15 @@ struct UPrimalUI
     BrzCampoPonteiro OriginalUnstretchedSizeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.OriginalUnstretchedSize")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x55C; confianca media)
+    //  ancorado em `AnalogDeltaY` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x55C; confianca media)
     void*& OverlayWidgetField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 80); }
     BrzCampoPonteiro OverrideButtonSoundsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.OverrideButtonSounds")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x4B4; confianca alta)
+    //  ancorado em `virtualCursorFrames` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4B4; confianca alta)
     void*& OverrideViewingInventoryCompField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 4); }
     BrzCampoPonteiro PaddingField() const
@@ -1452,13 +1452,13 @@ struct UPrimalUI
     BrzCampoPonteiro PixelSnappingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.PixelSnapping")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x728; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x728; confianca media)
     void*& PooledToolTipsField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x718; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x718; confianca media)
     void*& PreviousToolTipsField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 48); }
     int& PriorityField() const
@@ -1466,8 +1466,8 @@ struct UPrimalUI
     BrzCampoPonteiro QueuedWidgetAnimationTransitionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.QueuedWidgetAnimationTransitions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x790; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x790; confianca baixa)
     void*& RemoveChildTickUIsField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 168); }
     float& RenderOpacityField() const
@@ -1477,92 +1477,92 @@ struct UPrimalUI
     BrzCampoPonteiro RenderTransformPivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.RenderTransformPivot")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x700; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x700; confianca media)
     void*& ResolvedFrameInterpolationSensitiveBrushesField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +420, medido na build 25535041
-    //  (offset absoluto medido: 0x6B0; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +420 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6B0; confianca baixa)
     void*& RightStickFunctionModifierKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 420); }
     int& SceneStackPriorityField() const
     { return *GetNativePointerField<int*>(this, "UPrimalUI.SceneStackPriority"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +324, medido na build 25535041
-    //  (offset absoluto medido: 0x650; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +324 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x650; confianca baixa)
     void*& ScrollChatDownKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 324); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +348, medido na build 25535041
-    //  (offset absoluto medido: 0x668; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +348 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x668; confianca baixa)
     void*& ScrollChatUpKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 348); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x520; confianca media)
+    //  ancorado em `AnalogDeltaY` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x520; confianca media)
     void*& ScrollCurrentVelocityField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +396, medido na build 25535041
-    //  (offset absoluto medido: 0x698; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +396 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x698; confianca baixa)
     void*& ScrollDownGamePadKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 396); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x510; confianca media)
+    //  ancorado em `AnalogDeltaY` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x510; confianca media)
     void*& ScrollMaxVelocityField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x530; confianca media)
+    //  ancorado em `AnalogDeltaY` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x530; confianca media)
     void*& ScrollTagetVelocityField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +372, medido na build 25535041
-    //  (offset absoluto medido: 0x680; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +372 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x680; confianca baixa)
     void*& ScrollUpGamePadKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 372); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +148, medido na build 25535041
-    //  (offset absoluto medido: 0x5A0; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +148 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5A0; confianca baixa)
     void*& SelectClosestToLastHighlightedPosHandleField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 148); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x54C; confianca media)
+    //  ancorado em `AnalogDeltaY` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x54C; confianca media)
     void*& SelectedEntryField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +140, medido na build 25535041
-    //  (offset absoluto medido: 0x598; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +140 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x598; confianca baixa)
     void*& SetupInputFocusAndHighlightHandleField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 140); }
     BrzCampoPonteiro ShouldStretchMainScreenWhenHandheldField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.ShouldStretchMainScreenWhenHandheld")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +276, medido na build 25535041
-    //  (offset absoluto medido: 0x620; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +276 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x620; confianca baixa)
     void*& ShowAllianceChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 276); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +204, medido na build 25535041
-    //  (offset absoluto medido: 0x5D8; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +204 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5D8; confianca baixa)
     void*& ShowGlobalChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 204); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +252, medido na build 25535041
-    //  (offset absoluto medido: 0x608; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +252 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x608; confianca baixa)
     void*& ShowLocalChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 252); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +156, medido na build 25535041
-    //  (offset absoluto medido: 0x5A8; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +156 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5A8; confianca baixa)
     void*& ShowToolTipForHighlightedHandleField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 156); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +228, medido na build 25535041
-    //  (offset absoluto medido: 0x5F0; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +228 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5F0; confianca baixa)
     void*& ShowTribeChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 228); }
     BrzCampoPonteiro SizeBoxHandheldSizeField() const
@@ -1580,8 +1580,8 @@ struct UPrimalUI
     BrzCampoPonteiro TickFrequencyField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.TickFrequency")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +300, medido na build 25535041
-    //  (offset absoluto medido: 0x638; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +300 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x638; confianca baixa)
     void*& ToggleAutoChatKeyField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 300); }
     BrzCampoPonteiro ToolTipTextField() const
@@ -1609,8 +1609,8 @@ struct UPrimalUI
     BrzCampoPonteiro XBoxFooterUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.XBoxFooterUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +228, medido na build 25535041
-    //  (offset absoluto medido: 0x7CC; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +228 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7CC; confianca baixa)
     void*& autoScrollWidgetField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 228); }
     BrzCampoPonteiro bAutoProcessSplitscreenScalingField() const
@@ -1618,15 +1618,15 @@ struct UPrimalUI
     BrzCampoPonteiro bAutomaticallyRegisterInputOnConstructionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bAutomaticallyRegisterInputOnConstruction")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x788; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x788; confianca baixa)
     void*& bBlockMovementForAddingField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 160); }
     BrzCampoPonteiro bCachedIsGamepadActiveField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bCachedIsGamepadActive")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +132, medido na build 25535041
-    //  (offset absoluto medido: 0x590; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +132 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x590; confianca baixa)
     void*& bCanBeTopField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 132); }
     BrzCampoPonteiro bCaptureMouseInputField() const
@@ -1640,15 +1640,15 @@ struct UPrimalUI
     BrzCampoPonteiro bCreatedByConstructionScriptField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bCreatedByConstructionScript")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +225, medido na build 25535041
-    //  (offset absoluto medido: 0x7C9; confianca baixa)
+    //  ancorado em `bCachedIsGamepadActive` +225 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7C9; confianca baixa)
     void*& bDirtyCacheField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 225); }
     BrzCampoPonteiro bDisableAxisOrientedSweepTestOnMeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bDisableAxisOrientedSweepTestOnMe")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +447, medido na build 25535041
-    //  (offset absoluto medido: 0x6CB; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +447 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6CB; confianca baixa)
     void*& bDisableHighlightSetAfterAnimationIfCycleHighlightedField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 447); }
     BrzCampoPonteiro bDoExtraDataListButtonPanelFilteringChecksField() const
@@ -1660,8 +1660,8 @@ struct UPrimalUI
     BrzCampoPonteiro bEscapeOpensPauseMenuField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bEscapeOpensPauseMenu")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +21, medido na build 25535041
-    //  (offset absoluto medido: 0x6FD; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +21 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6FD; confianca media)
     void*& bForceDirtyWidgetGeometryCacheField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 21); }
     BrzCampoPonteiro bForceDisableFrameGenField() const
@@ -1671,8 +1671,8 @@ struct UPrimalUI
     BrzCampoPonteiro bForceVirtualCursorEnabledField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bForceVirtualCursorEnabled")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +446, medido na build 25535041
-    //  (offset absoluto medido: 0x6CA; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +446 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6CA; confianca baixa)
     void*& bHasCycleHighlightedField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 446); }
     BrzCampoPonteiro bHasScriptImplementedPaintField() const
@@ -1684,8 +1684,8 @@ struct UPrimalUI
     BrzCampoPonteiro bIsClosingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsClosing")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x4F0; confianca media)
+    //  ancorado em `virtualCursorFrames` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F0; confianca media)
     void*& bIsDraggingWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 64); }
     BrzCampoPonteiro bIsEnabledField() const
@@ -1697,8 +1697,8 @@ struct UPrimalUI
     BrzCampoPonteiro bIsGameplayUIField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsGameplayUI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +445, medido na build 25535041
-    //  (offset absoluto medido: 0x6C9; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +445 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C9; confianca baixa)
     void*& bIsPaintingField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 445); }
     BrzCampoPonteiro bIsTopUIField() const
@@ -1708,27 +1708,27 @@ struct UPrimalUI
     BrzCampoPonteiro bIsVolatileField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bIsVolatile")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +53, medido na build 25535041
-    //  (offset absoluto medido: 0x541; confianca media)
+    //  ancorado em `AnalogDeltaY` +53 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x541; confianca media)
     void*& bKeepControllerOpenedToolTipField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 53); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +54, medido na build 25535041
-    //  (offset absoluto medido: 0x542; confianca media)
+    //  ancorado em `AnalogDeltaY` +54 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x542; confianca media)
     void*& bKeepToolTipOpenField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 54); }
     BrzCampoPonteiro bMenuSupportSlomoField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bMenuSupportSlomo")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +444, medido na build 25535041
-    //  (offset absoluto medido: 0x6C8; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +444 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C8; confianca baixa)
     void*& bModifyRightStickFunctionField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 444); }
     BrzCampoPonteiro bOverride_CursorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bOverride_Cursor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x710; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x710; confianca media)
     void*& bPendingFrameInterpolationSensitiveBrushInitializationField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 40); }
     BrzCampoPonteiro bPreventGamepadDpadNavegationField() const
@@ -1736,20 +1736,20 @@ struct UPrimalUI
     BrzCampoPonteiro bPrimalSetupSpecialAdjacentsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bPrimalSetupSpecialAdjacents")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +116, medido na build 25535041
-    //  (offset absoluto medido: 0x580; confianca media)
+    //  ancorado em `AnalogDeltaY` +116 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x580; confianca media)
     void*& bRemovedFromViewportField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 116); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bCachedIsGamepadActive` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x6FC; confianca media)
+    //  ancorado em `bCachedIsGamepadActive` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6FC; confianca media)
     void*& bResetTooltipField() const
     { return BrzCampoAncorado<void*>(this, "bCachedIsGamepadActive", 20); }
     BrzCampoPonteiro bScaleScreenResolutionField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bScaleScreenResolution")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x540; confianca media)
+    //  ancorado em `AnalogDeltaY` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x540; confianca media)
     void*& bScrolledField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 52); }
     BrzCampoPonteiro bShouldValidateInputOnRemoveField() const
@@ -1793,40 +1793,40 @@ struct UPrimalUI
     BrzCampoPonteiro bUseWindowClippingForHighlightField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bUseWindowClippingForHighlight")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +180, medido na build 25535041
-    //  (offset absoluto medido: 0x5C0; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +180 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5C0; confianca baixa)
     void*& bUsingTooltipField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 180); }
     BrzCampoPonteiro bWantsPrimalItemNotificationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalUI.bWantsPrimalItemNotifications")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +448, medido na build 25535041
-    //  (offset absoluto medido: 0x6CC; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +448 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6CC; confianca baixa)
     void*& leftShoulderDownField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 448); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +449, medido na build 25535041
-    //  (offset absoluto medido: 0x6CD; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +449 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6CD; confianca baixa)
     void*& leftTriggerDownField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 449); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x4D8; confianca media)
+    //  ancorado em `virtualCursorFrames` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D8; confianca media)
     void*& recentlyExpandedTimeField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `virtualCursorFrames` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x4CC; confianca alta)
+    //  ancorado em `virtualCursorFrames` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4CC; confianca alta)
     void*& recentlyExpandedWidgetField() const
     { return BrzCampoAncorado<void*>(this, "virtualCursorFrames", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AnalogDeltaY` +450, medido na build 25535041
-    //  (offset absoluto medido: 0x6CE; confianca baixa)
+    //  ancorado em `AnalogDeltaY` +450 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6CE; confianca baixa)
     void*& rightTriggerDownField() const
     { return BrzCampoAncorado<void*>(this, "AnalogDeltaY", 450); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WasInHandheldMode` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x413; confianca alta)
+    //  ancorado em `WasInHandheldMode` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x413; confianca alta)
     void*& tickedDockedModeChangesField() const
     { return BrzCampoAncorado<void*>(this, "WasInHandheldMode", 1); }
     int& virtualCursorFramesField() const

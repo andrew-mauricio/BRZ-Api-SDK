@@ -162,8 +162,8 @@ struct UWorldPartitionRuntimeSpatialHash
     { return SupportsWorldAssetStreaming(*a0); }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingGrids` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x90; confianca alta)
+    //  ancorado em `StreamingGrids` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x90; confianca alta)
     void*& NameToGridMappingField() const
     { return BrzCampoAncorado<void*>(this, "StreamingGrids", 16); }
     BrzCampoPonteiro SettingsField() const
@@ -175,8 +175,8 @@ struct UWorldPartitionRuntimeSpatialHash
     BrzCampoPonteiro bEnableZCullingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UWorldPartitionRuntimeSpatialHash.bEnableZCulling")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StreamingGrids` +96, medido na build 25535041
-    //  (offset absoluto medido: 0xE0; confianca media)
+    //  ancorado em `StreamingGrids` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE0; confianca media)
     void*& bIsNameToGridMappingDirtyField() const
     { return BrzCampoAncorado<void*>(this, "StreamingGrids", 96); }
     BitFieldValue<bool, unsigned __int32> bEnableZCulling()

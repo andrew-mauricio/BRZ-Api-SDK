@@ -661,7 +661,7 @@ struct APlayerController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerController.CopyStringToClipboard(FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=9+bytes40+chamadores=5]]
     void CopyStringToClipboard(const FString& a0) const
     {
         NativeCall<void, void*>(this, "APlayerController.CopyStringToClipboard(FString&)", const_cast<FString*>(&a0));
@@ -1424,11 +1424,10 @@ struct APlayerController : public APrimalController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APlayerController.PostInitializeComponents()
-    // classe: a funcao mora em AController, e APlayerController herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PostInitializeComponents() const
     {
-        NativeCall<void>(this, "AController.PostInitializeComponents()");
+        NativeCall<void>(this, "APlayerController.PostInitializeComponents()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -2164,53 +2163,53 @@ struct APlayerController : public APrimalController
     TArray<void*>& ActiveForceFeedbackEffectsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APlayerController.ActiveForceFeedbackEffects"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x680; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x680; confianca media)
     void*& ActiveHapticEffect_GunField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x690; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x690; confianca media)
     void*& ActiveHapticEffect_HMDField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x660; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x660; confianca media)
     void*& ActiveHapticEffect_LeftField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x670; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x670; confianca media)
     void*& ActiveHapticEffect_RightField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x86C; confianca media)
+    //  ancorado em `OverridePlayerInputClass` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x86C; confianca media)
     TWeakObjectPtr<void>& AudioListenerAttenuationComponentField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "OverridePlayerInputClass", 44); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x8A8; confianca media)
+    //  ancorado em `OverridePlayerInputClass` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8A8; confianca media)
     void*& AudioListenerAttenuationOverrideField() const
     { return BrzCampoAncorado<void*>(this, "OverridePlayerInputClass", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x864; confianca media)
+    //  ancorado em `OverridePlayerInputClass` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x864; confianca media)
     TWeakObjectPtr<void>& AudioListenerComponentField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "OverridePlayerInputClass", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x878; confianca media)
+    //  ancorado em `OverridePlayerInputClass` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x878; confianca media)
     void*& AudioListenerLocationOverrideField() const
     { return BrzCampoAncorado<void*>(this, "OverridePlayerInputClass", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x890; confianca media)
+    //  ancorado em `OverridePlayerInputClass` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x890; confianca media)
     void*& AudioListenerRotationOverrideField() const
     { return BrzCampoAncorado<void*>(this, "OverridePlayerInputClass", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetViewRotation` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x590; confianca alta)
+    //  ancorado em `TargetViewRotation` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x590; confianca alta)
     void*& BlendedTargetViewRotationField() const
     { return BrzCampoAncorado<void*>(this, "TargetViewRotation", 24); }
     BrzCampoPonteiro CheatClassField() const
@@ -2226,13 +2225,13 @@ struct APlayerController : public APrimalController
     unsigned char& CurrentClickTraceChannelField() const
     { return *GetNativePointerField<unsigned char*>(this, "APlayerController.CurrentClickTraceChannel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastCompletedSeamlessTravelCount` +22, medido na build 25535041
-    //  (offset absoluto medido: 0x7A8; confianca media)
+    //  ancorado em `LastCompletedSeamlessTravelCount` +22 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7A8; confianca media)
     TWeakObjectPtr<void>& CurrentClickablePrimitiveField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "LastCompletedSeamlessTravelCount", 22); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastCompletedSeamlessTravelCount` +118, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca media)
+    //  ancorado em `LastCompletedSeamlessTravelCount` +118 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca media)
     TArray<TWeakObjectPtr<void>>& CurrentInputStackField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "LastCompletedSeamlessTravelCount", 118); }
     unsigned char& CurrentMouseCursorField() const
@@ -2240,8 +2239,8 @@ struct APlayerController : public APrimalController
     BrzCampoPonteiro CurrentTouchInterfaceField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerController.CurrentTouchInterface")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastCompletedSeamlessTravelCount` +30, medido na build 25535041
-    //  (offset absoluto medido: 0x7B0; confianca media)
+    //  ancorado em `LastCompletedSeamlessTravelCount` +30 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7B0; confianca media)
     void*& CurrentTouchablePrimitivesField() const
     { return BrzCampoAncorado<void*>(this, "LastCompletedSeamlessTravelCount", 30); }
     unsigned char& DefaultClickTraceChannelField() const
@@ -2249,15 +2248,15 @@ struct APlayerController : public APrimalController
     unsigned char& DefaultMouseCursorField() const
     { return *GetNativePointerField<unsigned char*>(this, "APlayerController.DefaultMouseCursor"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x640; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x640; confianca media)
     void*& DynamicForceFeedbacksField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 16); }
     float& ForceFeedbackScaleField() const
     { return *GetNativePointerField<float*>(this, "APlayerController.ForceFeedbackScale"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x6A0; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6A0; confianca media)
     void*& ForceFeedbackValuesField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 112); }
     TArray<void*>& HiddenActorsField() const
@@ -2289,8 +2288,8 @@ struct APlayerController : public APrimalController
     unsigned short& LastCompletedSeamlessTravelCountField() const
     { return *GetNativePointerField<unsigned short*>(this, "APlayerController.LastCompletedSeamlessTravelCount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpectatorPawn` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x8D0; confianca alta)
+    //  ancorado em `SpectatorPawn` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8D0; confianca alta)
     double& LastRetryPlayerTimeField() const
     { return BrzCampoAncorado<double>(this, "SpectatorPawn", 8); }
     double& LastSpectatorStateSynchTimeField() const
@@ -2300,25 +2299,25 @@ struct APlayerController : public APrimalController
     BrzCampoPonteiro LastSpectatorSyncRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerController.LastSpectatorSyncRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x650; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x650; confianca media)
     void*& LatentDynamicForceFeedbacksField() const
     { return BrzCampoAncorado<void*>(this, "ActiveForceFeedbackEffects", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SmoothTargetViewRotationSpeed` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x5AC; confianca alta)
+    //  ancorado em `SmoothTargetViewRotationSpeed` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5AC; confianca alta)
     float& LocalPlayerCachedLODDistanceFactorField() const
     { return BrzCampoAncorado<float>(this, "SmoothTargetViewRotationSpeed", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `NetPlayerIndex` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6C8; confianca alta)
+    //  ancorado em `NetPlayerIndex` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6C8; confianca alta)
     void*& MuteListField() const
     { return BrzCampoAncorado<void*>(this, "NetPlayerIndex", 4); }
     TObjectPtr<AHUD>& MyHUDField() const
     { return *GetNativePointerField<TObjectPtr<AHUD>*>(this, "APlayerController.MyHUD"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastCompletedSeamlessTravelCount` +6, medido na build 25535041
-    //  (offset absoluto medido: 0x798; confianca media)
+    //  ancorado em `LastCompletedSeamlessTravelCount` +6 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x798; confianca media)
     TArray<void*>& NetConditionGroupsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "LastCompletedSeamlessTravelCount", 6); }
     TObjectPtr<UNetConnection>& NetConnectionField() const
@@ -2328,8 +2327,8 @@ struct APlayerController : public APrimalController
     BrzCampoPonteiro OverridePlayerInputClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerController.OverridePlayerInputClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveForceFeedbackEffects` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x6B0; confianca media)
+    //  ancorado em `ActiveForceFeedbackEffects` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6B0; confianca media)
     TArray<void*>& PendingMapChangeLevelNamesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "ActiveForceFeedbackEffects", 128); }
     TObjectPtr<UNetConnection>& PendingSwapConnectionField() const
@@ -2363,23 +2362,23 @@ struct APlayerController : public APrimalController
     BrzCampoPonteiro TargetViewRotationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerController.TargetViewRotation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x858; confianca alta)
+    //  ancorado em `OverridePlayerInputClass` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x858; confianca alta)
     void*& TimerHandle_ClientCommitMapChangeField() const
     { return BrzCampoAncorado<void*>(this, "OverridePlayerInputClass", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x850; confianca alta)
+    //  ancorado em `OverridePlayerInputClass` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x850; confianca alta)
     void*& TimerHandle_DelayedPrepareMapChangeField() const
     { return BrzCampoAncorado<void*>(this, "OverridePlayerInputClass", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverridePlayerInputClass` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x848; confianca alta)
+    //  ancorado em `OverridePlayerInputClass` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x848; confianca alta)
     void*& TimerHandle_UnFreezeField() const
     { return BrzCampoAncorado<void*>(this, "OverridePlayerInputClass", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `InactiveStateInputComponent` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x828; confianca alta)
+    //  ancorado em `InactiveStateInputComponent` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x828; confianca alta)
     void*& VirtualJoystickField() const
     { return BrzCampoAncorado<void*>(this, "InactiveStateInputComponent", 16); }
     BrzCampoPonteiro bAutoManageActiveCameraTargetField() const
@@ -2403,8 +2402,8 @@ struct APlayerController : public APrimalController
     BrzCampoPonteiro bPlayerIsWaitingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APlayerController.bPlayerIsWaiting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HiddenPrimitiveComponents` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x5D0; confianca alta)
+    //  ancorado em `HiddenPrimitiveComponents` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5D0; confianca alta)
     void*& bRenderPrimitiveComponentsField() const
     { return BrzCampoAncorado<void*>(this, "HiddenPrimitiveComponents", 16); }
     BrzCampoPonteiro bShouldPerformFullTickWhenPausedField() const

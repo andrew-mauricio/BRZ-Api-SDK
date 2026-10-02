@@ -244,7 +244,7 @@ struct UObjectBaseUtility : public UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBaseUtility.IsA<APawn>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=2]]
     static BrzPonteiro IsA_APawn_()
     {
         return NativeCall<void*>(nullptr, "UObjectBaseUtility.IsA<APawn>()");
@@ -308,7 +308,7 @@ struct UObjectBaseUtility : public UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBaseUtility.IsA<APrimalRaft>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     static BrzPonteiro IsA_APrimalRaft_()
     {
         return NativeCall<void*>(nullptr, "UObjectBaseUtility.IsA<APrimalRaft>()");
@@ -804,7 +804,7 @@ struct UObjectBaseUtility : public UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBaseUtility.IsA<UInstancedStaticMeshComponent>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=17]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=6]]
     static BrzPonteiro IsA_UInstancedStaticMeshComponent_()
     {
         return NativeCall<void*>(nullptr, "UObjectBaseUtility.IsA<UInstancedStaticMeshComponent>()");
@@ -1500,7 +1500,7 @@ struct UObjectBaseUtility : public UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBaseUtility.IsA<UShooterGameUserSettings>()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     static BrzPonteiro IsA_UShooterGameUserSettings_()
     {
         return NativeCall<void*>(nullptr, "UObjectBaseUtility.IsA<UShooterGameUserSettings>()");
@@ -1644,7 +1644,7 @@ struct UObjectBaseUtility : public UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBaseUtility.IsA<UTexture2D>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=7]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=10]]
     static BrzPonteiro IsA_UTexture2D_()
     {
         return NativeCall<void*>(nullptr, "UObjectBaseUtility.IsA<UTexture2D>()");
@@ -1652,7 +1652,7 @@ struct UObjectBaseUtility : public UObjectBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UObjectBaseUtility.IsA<UTexture>()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+bytes40+chamadores=2]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=65+chamadores=2]]
     static BrzPonteiro IsA_UTexture_()
     {
         return NativeCall<void*>(nullptr, "UObjectBaseUtility.IsA<UTexture>()");

@@ -816,8 +816,8 @@ struct UActorComponent : public UObject
     FName& CustomTagField() const
     { return *GetNativePointerField<FName*>(this, "UActorComponent.CustomTag"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AssetUserData` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA0; confianca alta)
+    //  ancorado em `AssetUserData` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA0; confianca alta)
     int& MarkedForEndOfFrameUpdateArrayIndexField() const
     { return BrzCampoAncorado<int>(this, "AssetUserData", 16); }
     BrzCampoPonteiro OnComponentActivatedField() const
@@ -825,8 +825,8 @@ struct UActorComponent : public UObject
     BrzCampoPonteiro OnComponentDeactivatedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UActorComponent.OnComponentDeactivated")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnComponentDeactivated` +1, medido na build 25535041
-    //  (offset absoluto medido: 0xB0; confianca alta)
+    //  ancorado em `OnComponentDeactivated` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB0; confianca alta)
     AActor*& OwnerPrivateField() const
     { return BrzCampoAncorado<AActor*>(this, "OnComponentDeactivated", 1); }
     FActorComponentTickFunction& PrimaryComponentTickField() const
@@ -834,8 +834,8 @@ struct UActorComponent : public UObject
     int& UCSSerializationIndexField() const
     { return *GetNativePointerField<int*>(this, "UActorComponent.UCSSerializationIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnComponentDeactivated` +9, medido na build 25535041
-    //  (offset absoluto medido: 0xB8; confianca alta)
+    //  ancorado em `OnComponentDeactivated` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB8; confianca alta)
     UWorld*& WorldPrivateField() const
     { return BrzCampoAncorado<UWorld*>(this, "OnComponentDeactivated", 9); }
     BrzCampoPonteiro bAlwaysReplicatePropertyConditionalField() const

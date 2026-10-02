@@ -155,8 +155,8 @@ struct UPrimalItemInventoryToolTipWidget
     BrzCampoPonteiro Craft_RequirementsUnmetField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UPrimalItemInventoryToolTipWidget.Craft_RequirementsUnmet")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ItemQualityOverlay` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x568; confianca alta)
+    //  ancorado em `ItemQualityOverlay` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x568; confianca alta)
     void*& CraftingRequirementsCustomLabelField() const
     { return BrzCampoAncorado<void*>(this, "ItemQualityOverlay", 8); }
     unsigned char& CursorField() const

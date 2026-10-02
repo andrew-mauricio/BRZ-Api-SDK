@@ -60,7 +60,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Request<APrimalBuff>(TSoftClassPtr<APrimalBuff>&,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=73+bytes40+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=73+bytes40+chamadores=2]]
     BrzPonteiro Request_APrimalBuff_(void* a0, int a1) const
     {
         return NativeCall<void*, void**, int>(this, "UPrimalAssets.Request<APrimalBuff>(TSoftClassPtr<APrimalBuff>&,int)", &a0, a1);
@@ -164,7 +164,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<ADroppedItem>(TSoftClassPtr<ADroppedItem>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro Resolve_ADroppedItem_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<ADroppedItem>(TSoftClassPtr<ADroppedItem>&)", &a0);
@@ -180,7 +180,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<APrimalBuff>(TSoftClassPtr<APrimalBuff>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=19]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=11]]
     BrzPonteiro Resolve_APrimalBuff_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<APrimalBuff>(TSoftClassPtr<APrimalBuff>&)", &a0);
@@ -188,7 +188,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<APrimalDinoCharacter>(TSoftClassPtr<APrimalDinoCharacter>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=13]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=10]]
     BrzPonteiro Resolve_APrimalDinoCharacter_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<APrimalDinoCharacter>(TSoftClassPtr<APrimalDinoCharacter>&)", &a0);
@@ -212,7 +212,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<APrimalStructure>(TSoftClassPtr<APrimalStructure>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=14]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=12]]
     BrzPonteiro Resolve_APrimalStructure_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<APrimalStructure>(TSoftClassPtr<APrimalStructure>&)", &a0);
@@ -260,7 +260,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<UAnimationAsset>(TSoftObjectPtr<UAnimationAsset>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=124+chamadores=12]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=124+chamadores=8]]
     BrzPonteiro Resolve_UAnimationAsset_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<UAnimationAsset>(TSoftObjectPtr<UAnimationAsset>&)", &a0);
@@ -292,7 +292,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<UObject>(TSoftClassPtr<UObject>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=15]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=13]]
     BrzPonteiro Resolve_UObject_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<UObject>(TSoftClassPtr<UObject>&)", &a0);
@@ -308,7 +308,7 @@ struct UPrimalAssets : public UPrimalAssetsBase
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalAssets.Resolve<UPrimalItem>(TSoftClassPtr<UPrimalItem>&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=6]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=64+chamadores=5]]
     BrzPonteiro Resolve_UPrimalItem_(void* a0) const
     {
         return NativeCall<void*, void**>(this, "UPrimalAssets.Resolve<UPrimalItem>(TSoftClassPtr<UPrimalItem>&)", &a0);

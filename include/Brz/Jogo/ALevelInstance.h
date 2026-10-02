@@ -154,13 +154,13 @@ struct ALevelInstance
     TArray<void*>& LayersField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "ALevelInstance.Layers"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelInstanceSpawnGuid` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x4D8; confianca alta)
+    //  ancorado em `LevelInstanceSpawnGuid` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D8; confianca alta)
     void*& LevelInstanceActorGuidField() const
     { return BrzCampoAncorado<void*>(this, "LevelInstanceSpawnGuid", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LevelInstanceSpawnGuid` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x4F0; confianca media)
+    //  ancorado em `LevelInstanceSpawnGuid` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F0; confianca media)
     void*& LevelInstanceActorImplField() const
     { return BrzCampoAncorado<void*>(this, "LevelInstanceSpawnGuid", 40); }
     BrzCampoPonteiro LevelInstanceComponentField() const

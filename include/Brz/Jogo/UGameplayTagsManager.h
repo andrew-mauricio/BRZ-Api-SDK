@@ -286,87 +286,87 @@ struct UGameplayTagsManager
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +200, medido na build 25535041
-    //  (offset absoluto medido: 0x250; confianca baixa)
+    //  ancorado em `TagSources` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x250; confianca baixa)
     void*& GameplayTagMapCriticalField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 200); }
     BrzCampoPonteiro GameplayTagTablesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsManager.GameplayTagTables")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x240; confianca baixa)
+    //  ancorado em `TagSources` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x240; confianca baixa)
     void*& InvalidTagCharactersField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +240, medido na build 25535041
-    //  (offset absoluto medido: 0x278; confianca baixa)
+    //  ancorado em `TagSources` +240 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x278; confianca baixa)
     void*& NetworkGameplayTagNodeIndexField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 240); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +256, medido na build 25535041
-    //  (offset absoluto medido: 0x288; confianca baixa)
+    //  ancorado em `TagSources` +256 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x288; confianca baixa)
     void*& NetworkGameplayTagNodeIndexHashField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 256); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x1D8; confianca media)
+    //  ancorado em `TagSources` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1D8; confianca media)
     void*& RestrictedGameplayTagSourceNamesField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +165, medido na build 25535041
-    //  (offset absoluto medido: 0x22D; confianca baixa)
+    //  ancorado em `TagSources` +165 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22D; confianca baixa)
     void*& ShouldAllowUnloadingTagsOverrideField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 165); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +167, medido na build 25535041
-    //  (offset absoluto medido: 0x22F; confianca baixa)
+    //  ancorado em `TagSources` +167 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22F; confianca baixa)
     void*& ShouldDeferGameplayTagTreeRebuildsField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 167); }
     BrzCampoPonteiro TagSourcesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayTagsManager.TagSources")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +172, medido na build 25535041
-    //  (offset absoluto medido: 0x234; confianca baixa)
+    //  ancorado em `TagSources` +172 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x234; confianca baixa)
     void*& bDeferBroadcastOnGameplayTagTreeChangedField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 172); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +169, medido na build 25535041
-    //  (offset absoluto medido: 0x231; confianca baixa)
+    //  ancorado em `TagSources` +169 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x231; confianca baixa)
     void*& bDoneAddingNativeTagsField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 169); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x228; confianca baixa)
+    //  ancorado em `TagSources` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x228; confianca baixa)
     void*& bIsConstructingGameplayTagTreeField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +260, medido na build 25535041
-    //  (offset absoluto medido: 0x28C; confianca baixa)
+    //  ancorado em `TagSources` +260 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x28C; confianca baixa)
     void*& bNetworkIndexInvalidatedField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 260); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +164, medido na build 25535041
-    //  (offset absoluto medido: 0x22C; confianca baixa)
+    //  ancorado em `TagSources` +164 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22C; confianca baixa)
     void*& bShouldAllowUnloadingTagsField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 164); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +176, medido na build 25535041
-    //  (offset absoluto medido: 0x238; confianca baixa)
+    //  ancorado em `TagSources` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x238; confianca baixa)
     void*& bShouldBroadcastDeferredOnGameplayTagTreeChangedField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +163, medido na build 25535041
-    //  (offset absoluto medido: 0x22B; confianca baixa)
+    //  ancorado em `TagSources` +163 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22B; confianca baixa)
     void*& bShouldWarnOnInvalidTagsField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 163); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +162, medido na build 25535041
-    //  (offset absoluto medido: 0x22A; confianca baixa)
+    //  ancorado em `TagSources` +162 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22A; confianca baixa)
     void*& bUseDynamicReplicationField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 162); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TagSources` +161, medido na build 25535041
-    //  (offset absoluto medido: 0x229; confianca baixa)
+    //  ancorado em `TagSources` +161 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x229; confianca baixa)
     void*& bUseFastReplicationField() const
     { return BrzCampoAncorado<void*>(this, "TagSources", 161); }
 };

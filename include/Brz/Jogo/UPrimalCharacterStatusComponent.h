@@ -992,8 +992,8 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& DefaultHypothermicInsulationField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.DefaultHypothermicInsulation"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xB78; confianca alta)
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB78; confianca alta)
     float& DefaultMaxOxygenField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 12); }
     float& DehydrationStaminaRecoveryRateField() const
@@ -1029,8 +1029,8 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     unsigned short& ExtraCharacterLevelField() const
     { return *GetNativePointerField<unsigned short*>(this, "UPrimalCharacterStatusComponent.ExtraCharacterLevel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB74; confianca alta)
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB74; confianca alta)
     float& ExtraFoodConsumptionMultiplierField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 8); }
     float& ExtraOxygenSpeedStatMultiplierField() const
@@ -1040,8 +1040,8 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& ExtraTamedHealthMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.ExtraTamedHealthMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xB70; confianca alta)
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB70; confianca alta)
     float& ExtraWaterConsumptionMultiplierField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 4); }
     BrzCampoPonteiro ExtraWidgetClassesForStatPanelField() const
@@ -1113,13 +1113,13 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& KnockedOutTorpidityRecoveryRateMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.KnockedOutTorpidityRecoveryRateMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x9B0; confianca media)
+    //  ancorado em `CurrentStatusStates` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9B0; confianca media)
     void*& LastDecreasedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +300, medido na build 25535041
-    //  (offset absoluto medido: 0xAD0; confianca baixa)
+    //  ancorado em `CurrentStatusStates` +300 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xAD0; confianca baixa)
     void*& LastDepletedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 300); }
     float& LastHyperthermalCharacterInsulationValueField() const
@@ -1127,18 +1127,18 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     float& LastHypothermalCharacterInsulationValueField() const
     { return *GetNativePointerField<float*>(this, "UPrimalCharacterStatusComponent.LastHypothermalCharacterInsulationValue"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +108, medido na build 25535041
-    //  (offset absoluto medido: 0xA10; confianca media)
+    //  ancorado em `CurrentStatusStates` +108 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA10; confianca media)
     void*& LastIncreasedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 108); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentStatusStates` +204, medido na build 25535041
-    //  (offset absoluto medido: 0xA70; confianca baixa)
+    //  ancorado em `CurrentStatusStates` +204 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA70; confianca baixa)
     void*& LastMaxedStatusValuesTimesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentStatusStates", 204); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +20, medido na build 25535041
-    //  (offset absoluto medido: 0xB80; confianca alta)
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB80; confianca alta)
     double& LastReplicatedCurrentStatusValuesTimeField() const
     { return BrzCampoAncorado<double>(this, "SwimmingStaminaRecoveryRateMultiplier", 20); }
     unsigned char& LevelExperienceRampTypeField() const
@@ -1172,8 +1172,8 @@ struct UPrimalCharacterStatusComponent : public UActorComponent
     FieldArray<unsigned char> NumberOfMutationsAppliedTamedField() const
     { return { (void*)this, "UPrimalCharacterStatusComponent.NumberOfMutationsAppliedTamed" }; }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xB8C; confianca alta)
+    //  ancorado em `SwimmingStaminaRecoveryRateMultiplier` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB8C; confianca alta)
     float& OriginalMaxTorporField() const
     { return BrzCampoAncorado<float>(this, "SwimmingStaminaRecoveryRateMultiplier", 32); }
     float& PoopItemFoodConsumptionCacheField() const

@@ -38,7 +38,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.ClientSetActivateNightVision_Implementation(signedchar)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientSetActivateNightVision_Implementation(char a0) const
     {
         NativeCall<void, char>(this, "APrimalWeaponElectronicBinoculars.ClientSetActivateNightVision_Implementation(signedchar)", a0);
@@ -78,7 +78,7 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.ServerSetActivateNightVision_Implementation(signedchar)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetActivateNightVision_Implementation(char a0) const
     {
         NativeCall<void, char>(this, "APrimalWeaponElectronicBinoculars.ServerSetActivateNightVision_Implementation(signedchar)", a0);
@@ -102,11 +102,10 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalWeaponElectronicBinoculars.StartSecondaryAction()
-    // classe: a funcao mora em AShooterWeapon_Melee, e APrimalWeaponElectronicBinoculars herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartSecondaryAction() const
     {
-        NativeCall<void>(this, "AShooterWeapon_Melee.StartSecondaryAction()");
+        NativeCall<void>(this, "APrimalWeaponElectronicBinoculars.StartSecondaryAction()");
     }
 
     // retorno: AsaApi da comunidade — segunda fonte independente
@@ -152,13 +151,13 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     BrzCampoPonteiro CurrentCompassAngleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponElectronicBinoculars.CurrentCompassAngle")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LatLongInterpSpeed` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1194; confianca alta)
+    //  ancorado em `LatLongInterpSpeed` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1194; confianca alta)
     float& CurrentLatField() const
     { return BrzCampoAncorado<float>(this, "LatLongInterpSpeed", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LatLongInterpSpeed` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1198; confianca alta)
+    //  ancorado em `LatLongInterpSpeed` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1198; confianca alta)
     float& CurrentLongField() const
     { return BrzCampoAncorado<float>(this, "LatLongInterpSpeed", 8); }
     float& DistanceSizeField() const
@@ -174,8 +173,8 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     UMaterialInstanceDynamic*& LatitudeMIDField() const
     { return *GetNativePointerField<UMaterialInstanceDynamic**>(this, "APrimalWeaponElectronicBinoculars.LatitudeMID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x11E8; confianca alta)
+    //  ancorado em `MaxTargetingFOV` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11E8; confianca alta)
     float& LatitudeNumberField() const
     { return BrzCampoAncorado<float>(this, "MaxTargetingFOV", 16); }
     float& LatitudeOriginField() const
@@ -187,8 +186,8 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     UMaterialInstanceDynamic*& LongitudeMIDField() const
     { return *GetNativePointerField<UMaterialInstanceDynamic**>(this, "APrimalWeaponElectronicBinoculars.LongitudeMID"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x11EC; confianca alta)
+    //  ancorado em `MaxTargetingFOV` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11EC; confianca alta)
     float& LongitudeNumberField() const
     { return BrzCampoAncorado<float>(this, "MaxTargetingFOV", 20); }
     float& LongitudeOriginField() const
@@ -202,8 +201,8 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     BrzCampoPonteiro NightVisionBuffField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponElectronicBinoculars.NightVisionBuff")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x11E0; confianca alta)
+    //  ancorado em `MaxTargetingFOV` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11E0; confianca alta)
     AShooterPlayerController*& PCField() const
     { return BrzCampoAncorado<AShooterPlayerController*>(this, "MaxTargetingFOV", 8); }
     UMaterialInterface*& ScopeCompassMIField() const
@@ -217,13 +216,13 @@ struct APrimalWeaponElectronicBinoculars : public AShooterWeapon_Melee
     float& YPosDistanceField() const
     { return *GetNativePointerField<float*>(this, "APrimalWeaponElectronicBinoculars.YPosDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +25, medido na build 25535041
-    //  (offset absoluto medido: 0x11F1; confianca alta)
+    //  ancorado em `MaxTargetingFOV` +25 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11F1; confianca alta)
     bool& bFromGamepadLeftField() const
     { return BrzCampoAncorado<bool>(this, "MaxTargetingFOV", 25); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxTargetingFOV` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x11F0; confianca alta)
+    //  ancorado em `MaxTargetingFOV` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11F0; confianca alta)
     void*& bHasApplyedNightVisionBuffField() const
     { return BrzCampoAncorado<void*>(this, "MaxTargetingFOV", 24); }
     BrzCampoPonteiro bIsNightVisionOnField() const

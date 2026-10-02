@@ -759,8 +759,8 @@ struct ACharacter : public APrimalPawn
     BrzCampoPonteiro MovementModeChangedDelegateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.MovementModeChangedDelegate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `JumpCurrentCountPreJump` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6AC; confianca alta)
+    //  ancorado em `JumpCurrentCountPreJump` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6AC; confianca alta)
     void*& NumActorOverlapEventsCounterField() const
     { return BrzCampoAncorado<void*>(this, "JumpCurrentCountPreJump", 4); }
     BrzCampoPonteiro OnCharacterMovementUpdatedField() const
@@ -768,8 +768,8 @@ struct ACharacter : public APrimalPawn
     BrzCampoPonteiro OnReachedJumpApexField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ACharacter.OnReachedJumpApex")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReplicatedGravityDirection` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x660; confianca alta)
+    //  ancorado em `ReplicatedGravityDirection` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x660; confianca alta)
     void*& PreNetReceivedGravityDirectionField() const
     { return BrzCampoAncorado<void*>(this, "ReplicatedGravityDirection", 24); }
     float& ProxyJumpForceStartedTimeField() const

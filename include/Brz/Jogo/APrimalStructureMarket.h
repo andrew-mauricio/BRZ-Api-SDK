@@ -125,7 +125,7 @@ struct APrimalStructureMarket
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureMarket.BeginPlay()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro BeginPlay() const
     {
         return NativeCall<void*>(this, "APrimalStructureMarket.BeginPlay()");
@@ -485,7 +485,7 @@ struct APrimalStructureMarket
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureMarket.MergeReleasedItemIntoInventory(UPrimalItem*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro MergeReleasedItemIntoInventory(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureMarket.MergeReleasedItemIntoInventory(UPrimalItem*)", a0);
@@ -541,7 +541,7 @@ struct APrimalStructureMarket
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureMarket.PlacedStructure(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=519+grafo=7/7]]
     BrzPonteiro PlacedStructure(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalStructureMarket.PlacedStructure(AShooterPlayerController*)", a0);
@@ -565,7 +565,7 @@ struct APrimalStructureMarket
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureMarket.RemoveEmptyUIViewers()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro RemoveEmptyUIViewers() const
     {
         return NativeCall<void*>(this, "APrimalStructureMarket.RemoveEmptyUIViewers()");

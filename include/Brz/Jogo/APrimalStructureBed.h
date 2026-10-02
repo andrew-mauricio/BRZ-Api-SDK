@@ -124,7 +124,7 @@ struct APrimalStructureBed : public APrimalStructureSeating
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureBed.PlacedStructure(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureBed.PlacedStructure(AShooterPlayerController*)", a0);

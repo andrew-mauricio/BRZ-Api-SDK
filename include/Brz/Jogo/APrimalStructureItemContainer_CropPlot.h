@@ -38,7 +38,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.AddWater(float,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float AddWater(float a0, bool a1) const
     {
         return NativeCall<float, float, bool>(this, "APrimalStructureItemContainer_CropPlot.AddWater(float,bool)", a0, a1);
@@ -46,7 +46,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.AllowCraftingResourceConsumption(TSubclassOf<UPrimalItem>
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool AllowCraftingResourceConsumption(void* a0, int a1) const
     {
         return NativeCall<bool, void*, int>(this, "APrimalStructureItemContainer_CropPlot.AllowCraftingResourceConsumption(TSubclassOf<UPrimalItem>,int)", a0, a1);
@@ -158,7 +158,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalStructureItemContainer_CropPlot.CopyCreatureDataFromSeed(UPrimalItem*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void CopyCreatureDataFromSeed(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer_CropPlot.CopyCreatureDataFromSeed(UPrimalItem*)", a0);
@@ -182,7 +182,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_CropPlot.EndPlay(EEndPlayReason::Type)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro EndPlay(int a0) const
     {
         return NativeCall<void*, int>(this, "APrimalStructureItemContainer_CropPlot.EndPlay(EEndPlayReason::Type)", a0);
@@ -270,7 +270,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalStructureItemContainer_CropPlot.GetTendingResourceFromIndex_Implementation(unsignedchar)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=298+grafo=3/3]]
     BrzPonteiro GetTendingResourceFromIndex_Implementation(unsigned char a0) const
     {
         return NativeCall<void*, unsigned char>(this, "APrimalStructureItemContainer_CropPlot.GetTendingResourceFromIndex_Implementation(unsignedchar)", a0);
@@ -374,7 +374,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.PlacedStructure(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlacedStructure(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalStructureItemContainer_CropPlot.PlacedStructure(AShooterPlayerController*)", a0);
@@ -414,7 +414,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.RemovePlantedCrop()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1392+chamadores=2+grafo=17/17]]
     void RemovePlantedCrop() const
     {
         NativeCall<void>(this, "APrimalStructureItemContainer_CropPlot.RemovePlantedCrop()");
@@ -430,7 +430,7 @@ struct APrimalStructureItemContainer_CropPlot : public APrimalStructureItemConta
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalStructureItemContainer_CropPlot.SetWaterState(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void SetWaterState(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalStructureItemContainer_CropPlot.SetWaterState(bool)", a0);

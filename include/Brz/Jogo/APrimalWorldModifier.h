@@ -51,7 +51,7 @@ struct APrimalWorldModifier : public AActor
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalWorldModifier.BPSkinFoliage(UHierarchicalInstancedStaticMeshComponent*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void BPSkinFoliage(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalWorldModifier.BPSkinFoliage(UHierarchicalInstancedStaticMeshComponent*)", a0);

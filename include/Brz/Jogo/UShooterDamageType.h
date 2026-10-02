@@ -35,7 +35,7 @@ struct UShooterDamageType
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterDamageType.ApplyBuffToVictimCharacter(APrimalCharacter*,float,FDamageEvent,AController*,
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ApplyBuffToVictimCharacter(void* a0, float a1, void* a2, void* a3, void* a4) const
     {
         return NativeCall<void*, void*, float, void*, void*, void*>(this, "UShooterDamageType.ApplyBuffToVictimCharacter(APrimalCharacter*,float,FDamageEvent,AController*,AActor*)", a0, a1, a2, a3, a4);

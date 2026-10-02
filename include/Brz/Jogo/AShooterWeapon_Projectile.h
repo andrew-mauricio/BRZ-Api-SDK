@@ -135,7 +135,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.DrawHUD(AShooterHUD*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DrawHUD(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterWeapon_Projectile.DrawHUD(AShooterHUD*)", a0);
@@ -223,7 +223,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterWeapon_Projectile.Listener_LockOn_Update(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=129+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void Listener_LockOn_Update(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterWeapon_Projectile.Listener_LockOn_Update(bool)", a0);
@@ -304,7 +304,7 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterWeapon_Projectile.ShouldUseBPSelectProjectileToFireV2()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool ShouldUseBPSelectProjectileToFireV2() const
     {
         return NativeCall<bool>(this, "AShooterWeapon_Projectile.ShouldUseBPSelectProjectileToFireV2()");
@@ -379,8 +379,8 @@ struct AShooterWeapon_Projectile : public AShooterWeapon
     BrzCampoPonteiro bUseLockOnField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterWeapon_Projectile.bUseLockOn")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileAttachPoint3P` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1158; confianca alta)
+    //  ancorado em `ProjectileAttachPoint3P` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1158; confianca alta)
     int& trashFramesField() const
     { return BrzCampoAncorado<int>(this, "ProjectileAttachPoint3P", 8); }
     BitFieldValue<bool, unsigned __int32> bServerFireProjectileForceUpdateAimActors()

@@ -59,7 +59,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.AddBuffLifetime(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AddBuffLifetime(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.AddBuffLifetime(float)", a0);
@@ -423,7 +423,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPForceEnableTickFunction()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BPForceEnableTickFunction() const
     {
         NativeCall<void>(this, "APrimalBuff.BPForceEnableTickFunction()");
@@ -599,7 +599,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.BPInstigatorSleeped(bool)
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
     void BPInstigatorSleeped(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.BPInstigatorSleeped(bool)", a0);
@@ -935,7 +935,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPOverrideMaxUseDistance(AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=67+chamadores=2]]
     float BPOverrideMaxUseDistance(void* a0) const
     {
         return NativeCall<float, void*>(this, "APrimalBuff.BPOverrideMaxUseDistance(AActor*)", a0);
@@ -1031,7 +1031,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BPPreventAddingOtherBuff(TSubclassOf<APrimalBuff>)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool BPPreventAddingOtherBuff(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.BPPreventAddingOtherBuff(TSubclassOf<APrimalBuff>)", a0);
@@ -1211,7 +1211,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.BuffOverrideInventoryAccessInput(AController*,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=151+chamadores=5]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=151+chamadores=2]]
     bool BuffOverrideInventoryAccessInput(void* a0, bool a1) const
     {
         return NativeCall<bool, void*, bool>(this, "APrimalBuff.BuffOverrideInventoryAccessInput(AController*,bool)", a0, a1);
@@ -1243,7 +1243,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.CalculateNumStacksFromLifetime()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     int CalculateNumStacksFromLifetime() const
     {
         return NativeCall<int>(this, "APrimalBuff.CalculateNumStacksFromLifetime()");
@@ -1323,7 +1323,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.DirectSetBuffDuration(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void DirectSetBuffDuration(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.DirectSetBuffDuration(float)", a0);
@@ -1331,7 +1331,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.DoTeleporterHaptics(APlayerController*,UE::Math::TVector<double>&,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro DoTeleporterHaptics(void* a0, void* a1, float a2) const
     {
         return NativeCall<void*, void*, void*, float>(this, "APrimalBuff.DoTeleporterHaptics(APlayerController*,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -1347,7 +1347,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff.EnableTickFunction()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro EnableTickFunction() const
     {
         return NativeCall<void*>(this, "APrimalBuff.EnableTickFunction()");
@@ -1355,7 +1355,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ExcludeAoEActor(AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1308+bytes40+grafo=8/8]]
     bool ExcludeAoEActor(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.ExcludeAoEActor(AActor*)", a0);
@@ -1371,7 +1371,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ExtendBuffTime(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=649+grafo=12/12]]
     bool ExtendBuffTime(float a0) const
     {
         return NativeCall<bool, float>(this, "APrimalBuff.ExtendBuffTime(float)", a0);
@@ -1379,7 +1379,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.FinalLoadedFromSaveGame()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void FinalLoadedFromSaveGame() const
     {
         NativeCall<void>(this, "APrimalBuff.FinalLoadedFromSaveGame()");
@@ -1419,7 +1419,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // jogo_confirmou_dump
     //   APrimalBuff.GetBuffPostprocessMaterial(AShooterPlayerController*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     UMaterialInstanceDynamic* GetBuffPostprocessMaterial(void* a0) const
     {
         return NativeCall<UMaterialInstanceDynamic*, void*>(this, "APrimalBuff.GetBuffPostprocessMaterial(AShooterPlayerController*)", a0);
@@ -1435,7 +1435,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetBuffTickServerDeltaTime()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float GetBuffTickServerDeltaTime() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetBuffTickServerDeltaTime()");
@@ -1547,7 +1547,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetNumStacks()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     int GetNumStacks() const
     {
         return NativeCall<int>(this, "APrimalBuff.GetNumStacks()");
@@ -1555,7 +1555,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetOverrideWaterJumpVelocity(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     float GetOverrideWaterJumpVelocity(float a0) const
     {
         return NativeCall<float, float>(this, "APrimalBuff.GetOverrideWaterJumpVelocity(float)", a0);
@@ -1571,7 +1571,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.GetRemainingTimeInTopStack()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     float GetRemainingTimeInTopStack() const
     {
         return NativeCall<float>(this, "APrimalBuff.GetRemainingTimeInTopStack()");
@@ -1643,7 +1643,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.InitializeStackDuration()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitializeStackDuration() const
     {
         NativeCall<void>(this, "APrimalBuff.InitializeStackDuration()");
@@ -1651,7 +1651,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.InstigatorDie()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=45+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void InstigatorDie() const
     {
         NativeCall<void>(this, "APrimalBuff.InstigatorDie()");
@@ -1683,7 +1683,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.IsNetRelevantFor(AActor*,AActor*,UE::Math::TVector<double>&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsNetRelevantFor(void* a0, void* a1, void* a2) const
     {
         return NativeCall<bool, void*, void*, void*>(this, "APrimalBuff.IsNetRelevantFor(AActor*,AActor*,UE::Math::TVector<double>&)", a0, a1, a2);
@@ -1708,7 +1708,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ModifyBuffMPCValues(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ModifyBuffMPCValues(bool a0) const
     {
         NativeCall<void, bool>(this, "APrimalBuff.ModifyBuffMPCValues(bool)", a0);
@@ -1716,7 +1716,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   APrimalBuff.Multi_SyncBuffLifetime(float)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=54+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void Multi_SyncBuffLifetime(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff.Multi_SyncBuffLifetime(float)", a0);
@@ -1748,7 +1748,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.NetResetBuffStart_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void NetResetBuffStart_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff.NetResetBuffStart_Implementation()");
@@ -1788,7 +1788,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OnBuffLifetimeUpdated()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnBuffLifetimeUpdated() const
     {
         NativeCall<void>(this, "APrimalBuff.OnBuffLifetimeUpdated()");
@@ -1876,7 +1876,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterFlyingVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OverrideCharacterFlyingVelocity(void* a0, void* a1, float a2) const
     {
         NativeCall<void, void*, void*, float>(this, "APrimalBuff.OverrideCharacterFlyingVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -1884,7 +1884,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterNewFallVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void OverrideCharacterNewFallVelocity(void* a0, void* a1, float a2) const
     {
         NativeCall<void, void*, void*, float>(this, "APrimalBuff.OverrideCharacterNewFallVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float)", a0, a1, a2);
@@ -1892,7 +1892,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterSwimmingVelocity(UE::Math::TVector<double>&,UE::Math::TVector<doubl
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void OverrideCharacterSwimmingVelocity(void* a0, void* a1, void* a2, void* a3, float a4) const
     {
         NativeCall<void, void*, void*, void*, void*, float>(this, "APrimalBuff.OverrideCharacterSwimmingVelocity(UE::Math::TVector<double>&,UE::Math::TVector<double>&,float&,float&,float)", a0, a1, a2, a3, a4);
@@ -1900,7 +1900,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.OverrideCharacterWalkingVelocity(UE::Math::TVector<double>&,float&,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OverrideCharacterWalkingVelocity(void* a0, void* a1, float a2) const
     {
         NativeCall<void, void*, void*, float>(this, "APrimalBuff.OverrideCharacterWalkingVelocity(UE::Math::TVector<double>&,float&,float)", a0, a1, a2);
@@ -1924,7 +1924,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.PreventActorTargeting_Implementation(AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool PreventActorTargeting_Implementation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "APrimalBuff.PreventActorTargeting_Implementation(AActor*)", a0);
@@ -1996,7 +1996,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.ReduceBuffTime(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=695+grafo=13/13]]
     bool ReduceBuffTime(float a0) const
     {
         return NativeCall<bool, float>(this, "APrimalBuff.ReduceBuffTime(float)", a0);
@@ -2036,7 +2036,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.SetBuffCauser(AActor*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=53+chamadores=4]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void SetBuffCauser(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff.SetBuffCauser(AActor*)", a0);
@@ -2084,7 +2084,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.Stasis()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Stasis() const
     {
         NativeCall<void>(this, "APrimalBuff.Stasis()");
@@ -2092,7 +2092,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.StaticAddBuff(TSubclassOf<APrimalBuff>,APrimalCharacter*,UPrimalItem*,AActor*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: conferida_thunk_vtable
     static BrzPonteiro StaticAddBuff(void* a0, void* a1, void* a2, void* a3, bool a4)
     {
         return NativeCall<void*, void**, void*, void*, void*, bool>(nullptr, "APrimalBuff.StaticAddBuff(TSubclassOf<APrimalBuff>,APrimalCharacter*,UPrimalItem*,AActor*,bool)", &a0, a1, a2, a3, a4);
@@ -2132,7 +2132,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff.Unstasis()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Unstasis() const
     {
         NativeCall<void>(this, "APrimalBuff.Unstasis()");
@@ -2156,7 +2156,7 @@ struct APrimalBuff : public APrimalEmitterSpawnable
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff.UpdateBuffLifetime(float,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void UpdateBuffLifetime(float a0, bool a1) const
     {
         NativeCall<void, float, bool>(this, "APrimalBuff.UpdateBuffLifetime(float,bool)", a0, a1);
@@ -2259,8 +2259,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro BuffToGiveOnDeactivationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.BuffToGiveOnDeactivation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostprocessBlendablesToExclude` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x858; confianca alta)
+    //  ancorado em `PostprocessBlendablesToExclude` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x858; confianca alta)
     TArray<TWeakObjectPtr<void>>& BuffedCharactersField() const
     { return BrzCampoAncorado<TArray<TWeakObjectPtr<void>>>(this, "PostprocessBlendablesToExclude", 16); }
     float& CharacterAOEBuffDamageField() const
@@ -2284,8 +2284,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& DeactivateAfterTimeField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.DeactivateAfterTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CharacterStatusValueModifiers` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x788; confianca alta)
+    //  ancorado em `CharacterStatusValueModifiers` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x788; confianca alta)
     void*& DeactivateHandleField() const
     { return BrzCampoAncorado<void*>(this, "CharacterStatusValueModifiers", 16); }
     USoundBase*& DeactivatedSoundField() const
@@ -2295,8 +2295,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& DepleteInstigatorItemDurabilityPerSecondField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.DepleteInstigatorItemDurabilityPerSecond"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OverrideInventoryItemClassWeightMultipliers` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x6F8; confianca alta)
+    //  ancorado em `OverrideInventoryItemClassWeightMultipliers` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6F8; confianca alta)
     void*& DesiredDinoColorsField() const
     { return BrzCampoAncorado<void*>(this, "OverrideInventoryItemClassWeightMultipliers", 16); }
     float& DinoColorizationInterpSpeedField() const
@@ -2310,8 +2310,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     USoundBase*& ExtraActivationSoundToPlayField() const
     { return *GetNativePointerField<USoundBase**>(this, "APrimalBuff.ExtraActivationSoundToPlay"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaximumVelocityZForSlowingFall` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xA9C; confianca alta)
+    //  ancorado em `MaximumVelocityZForSlowingFall` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA9C; confianca alta)
     int& FNameIntField() const
     { return BrzCampoAncorado<int>(this, "MaximumVelocityZForSlowingFall", 4); }
     int& ForceNetworkSpatializationBuffMaxLimitNumField() const
@@ -2323,8 +2323,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     int& ForceNetworkSpatializationMaxLimitBuffTypeFlagField() const
     { return *GetNativePointerField<int*>(this, "APrimalBuff.ForceNetworkSpatializationMaxLimitBuffTypeFlag"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `BuffStartTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x798; confianca alta)
+    //  ancorado em `BuffStartTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x798; confianca alta)
     TWeakObjectPtr<void>& ForcedOnSpectatorPlayerControllerField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "BuffStartTime", 8); }
     float& FrictionModifierField() const
@@ -2344,18 +2344,18 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& InsulationRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.InsulationRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDestroyWhenUnpossessed` +3, medido na build 25535041
-    //  (offset absoluto medido: 0x9F8; confianca alta)
+    //  ancorado em `bDestroyWhenUnpossessed` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9F8; confianca alta)
     double& LastAoEApplyDamageTimeField() const
     { return BrzCampoAncorado<double>(this, "bDestroyWhenUnpossessed", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +11, medido na build 25535041
-    //  (offset absoluto medido: 0xA30; confianca alta)
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +11 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA30; confianca alta)
     double& LastBuffTickTimeClientField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 11); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +3, medido na build 25535041
-    //  (offset absoluto medido: 0xA28; confianca alta)
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA28; confianca alta)
     double& LastBuffTickTimeServerField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 3); }
     double& LastItemDurabilityDepletionTimeField() const
@@ -2379,13 +2379,13 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     UPrimalBuffPersistentData*& MyBuffPersistentDataField() const
     { return *GetNativePointerField<UPrimalBuffPersistentData**>(this, "APrimalBuff.MyBuffPersistentData"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +27, medido na build 25535041
-    //  (offset absoluto medido: 0xA40; confianca alta)
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +27 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA40; confianca alta)
     double& NextBuffTickTimeClientField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 27); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +19, medido na build 25535041
-    //  (offset absoluto medido: 0xA38; confianca alta)
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +19 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA38; confianca alta)
     double& NextBuffTickTimeServerField() const
     { return BrzCampoAncorado<double>(this, "bContinueTickingClientAfterDeactivate", 19); }
     float& OnlyForInstigatorSoundFadeInTimeField() const
@@ -2427,8 +2427,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& StackDurationField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.StackDuration"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AltNumStacks` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB68; confianca alta)
+    //  ancorado em `AltNumStacks` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB68; confianca alta)
     void*& StackUpdateHandleField() const
     { return BrzCampoAncorado<void*>(this, "AltNumStacks", 8); }
     float& StackingUpdatedBuffLifetimeField() const
@@ -2458,13 +2458,13 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     float& TargetingTooltipCheckRangeField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff.TargetingTooltipCheckRange"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `staticPathingDestination` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x910; confianca alta)
+    //  ancorado em `staticPathingDestination` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x910; confianca alta)
     double& TickingDeactivationTimeField() const
     { return BrzCampoAncorado<double>(this, "staticPathingDestination", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PostprocessMaterialAdjusters` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xA88; confianca alta)
+    //  ancorado em `PostprocessMaterialAdjusters` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA88; confianca alta)
     double& TimeForNextAOECheckField() const
     { return BrzCampoAncorado<double>(this, "PostprocessMaterialAdjusters", 24); }
     float& UnsubmergedMaxAccelerationModifierField() const
@@ -2532,8 +2532,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro bAllowTurretsToTargetInstigatorIfTraceHitsBuffField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bAllowTurretsToTargetInstigatorIfTraceHitsBuff")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalRidingDistance` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xB1C; confianca alta)
+    //  ancorado em `AdditionalRidingDistance` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB1C; confianca alta)
     void*& bAlreadyRequestedRelatedMissionDataField() const
     { return BrzCampoAncorado<void*>(this, "AdditionalRidingDistance", 4); }
     BrzCampoPonteiro bAlwaysShowBuffDescriptionField() const
@@ -2649,8 +2649,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro bDisableIfCharacterUnderwaterField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bDisableIfCharacterUnderwater")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bBPModifyCharacterFOV` +1, medido na build 25535041
-    //  (offset absoluto medido: 0xA5B; confianca alta)
+    //  ancorado em `bBPModifyCharacterFOV` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA5B; confianca alta)
     bool& bDisableLightShaftsField() const
     { return BrzCampoAncorado<bool>(this, "bBPModifyCharacterFOV", 1); }
     BrzCampoPonteiro bDisplayHUDProgressBarField() const
@@ -2840,8 +2840,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro bReactivationAddsNewStackField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bReactivationAddsNewStack")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalRidingDistance` +5, medido na build 25535041
-    //  (offset absoluto medido: 0xB1D; confianca alta)
+    //  ancorado em `AdditionalRidingDistance` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB1D; confianca alta)
     bool& bRelatedMissionWasInvalidField() const
     { return BrzCampoAncorado<bool>(this, "AdditionalRidingDistance", 5); }
     BrzCampoPonteiro bRemoteForcedFleeField() const
@@ -2873,8 +2873,8 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro bSupportsCustomHexagonConversionShopField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bSupportsCustomHexagonConversionShop")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +35, medido na build 25535041
-    //  (offset absoluto medido: 0xA48; confianca media)
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +35 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA48; confianca media)
     void*& bTickFunctionDisabledField() const
     { return BrzCampoAncorado<void*>(this, "bContinueTickingClientAfterDeactivate", 35); }
     BrzCampoPonteiro bTriggerBPStasisField() const
@@ -3138,15 +3138,15 @@ struct APrimalBuff : public APrimalEmitterSpawnable
     BrzCampoPonteiro bUsesInstigatorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.bUsesInstigator")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bContinueTickingClientAfterDeactivate` +36, medido na build 25535041
-    //  (offset absoluto medido: 0xA49; confianca media)
+    //  ancorado em `bContinueTickingClientAfterDeactivate` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA49; confianca media)
     bool& bWasStasisedField() const
     { return BrzCampoAncorado<bool>(this, "bContinueTickingClientAfterDeactivate", 36); }
     BrzCampoPonteiro staticPathingDestinationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff.staticPathingDestination")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AdditionalRidingDistance` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xB20; confianca alta)
+    //  ancorado em `AdditionalRidingDistance` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xB20; confianca alta)
     float& teleporterHapticTimeField() const
     { return BrzCampoAncorado<float>(this, "AdditionalRidingDistance", 8); }
     BitFieldValue<bool, unsigned __int32> bSlowInstigatorFalling()

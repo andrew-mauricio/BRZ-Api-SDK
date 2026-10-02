@@ -130,7 +130,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.ForceControlledCharacterMove()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ForceControlledCharacterMove() const
     {
         return NativeCall<void*>(this, "UShooterCharacterMovement.ForceControlledCharacterMove()");
@@ -194,7 +194,7 @@ struct UShooterCharacterMovement
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UShooterCharacterMovement.IsWalkable(FHitResult&,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro IsWalkable(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "UShooterCharacterMovement.IsWalkable(FHitResult&,bool)", a0, a1);

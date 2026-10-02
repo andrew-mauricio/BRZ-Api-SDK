@@ -83,40 +83,40 @@ struct APrimalProjectileBoomerang : public APrimalProjectileArrow
     float& ElapsedTimeToInstigatorField() const
     { return *GetNativePointerField<float*>(this, "APrimalProjectileBoomerang.MaxDistanceToTravel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x890; confianca baixa)
+    //  ancorado em `MaxDistanceToTravel` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x890; confianca baixa)
     TArray<AActor*>& HitHurtListField() const
     { return BrzCampoAncorado<TArray<AActor*>>(this, "MaxDistanceToTravel", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +156, medido na build 25535041
-    //  (offset absoluto medido: 0x884; confianca baixa)
+    //  ancorado em `MaxDistanceToTravel` +156 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x884; confianca baixa)
     TWeakObjectPtr<void>& InstigatorCharacterReferenceField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "MaxDistanceToTravel", 156); }
     float& MaxDistanceToTravelField() const
     { return *GetNativePointerField<float*>(this, "APrimalProjectileBoomerang.MaxDistanceToTravel"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x850; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x850; confianca media)
     void*& NextPointToReachField() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x7F0; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7F0; confianca media)
     void*& P0Field() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca media)
     void*& P1Field() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x820; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x820; confianca media)
     void*& P2Field() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x838; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x838; confianca media)
     void*& P3Field() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 80); }
     float& ReturnFirstPointTravelDistanceMultiplierField() const
@@ -124,23 +124,23 @@ struct APrimalProjectileBoomerang : public APrimalProjectileArrow
     float& ReturnSecondPointTravelDistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "APrimalProjectileBoomerang.ReturnSecondPointTravelDistanceMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x7EC; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x7EC; confianca media)
     float& SqrDesideredTravelDistanceField() const
     { return BrzCampoAncorado<float>(this, "MaxDistanceToTravel", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x868; confianca media)
+    //  ancorado em `MaxDistanceToTravel` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x868; confianca media)
     void*& StartPositionField() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +153, medido na build 25535041
-    //  (offset absoluto medido: 0x881; confianca baixa)
+    //  ancorado em `MaxDistanceToTravel` +153 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x881; confianca baixa)
     bool& bIsFollowingInstigatorField() const
     { return BrzCampoAncorado<bool>(this, "MaxDistanceToTravel", 153); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxDistanceToTravel` +152, medido na build 25535041
-    //  (offset absoluto medido: 0x880; confianca baixa)
+    //  ancorado em `MaxDistanceToTravel` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x880; confianca baixa)
     void*& bIsReturningToInstigatorField() const
     { return BrzCampoAncorado<void*>(this, "MaxDistanceToTravel", 152); }
 };

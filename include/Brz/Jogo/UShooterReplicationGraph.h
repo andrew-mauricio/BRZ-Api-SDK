@@ -182,8 +182,8 @@ struct UShooterReplicationGraph
     float& DistanceMultiplierField() const
     { return *GetNativePointerField<float*>(this, "UShooterReplicationGraph.DistanceMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DistanceMultiplier` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x6B4; confianca alta)
+    //  ancorado em `DistanceMultiplier` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x6B4; confianca alta)
     void*& DistanceMultiplierSqField() const
     { return BrzCampoAncorado<void*>(this, "DistanceMultiplier", 4); }
     float& DormantCellSizeField() const

@@ -63,7 +63,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.AnimateInHLNASubtitleIcon()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AnimateInHLNASubtitleIcon() const
     {
         NativeCall<void>(this, "APrimalBuff_Companion.AnimateInHLNASubtitleIcon()");
@@ -87,7 +87,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.BeginPlay()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void BeginPlay() const
     {
         NativeCall<void>(this, "APrimalBuff_Companion.BeginPlay()");
@@ -263,7 +263,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Companion.GetCurrentCompanionEventData()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetCurrentCompanionEventData() const
     {
         return NativeCall<void*>(this, "APrimalBuff_Companion.GetCurrentCompanionEventData()");
@@ -295,7 +295,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // jogo_confirmou_dump
     //   APrimalBuff_Companion.GetMyPlayerHUD()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     AShooterHUD* GetMyPlayerHUD() const
     {
         return NativeCall<AShooterHUD*>(this, "APrimalBuff_Companion.GetMyPlayerHUD()");
@@ -343,7 +343,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   APrimalBuff_Companion.IsCompanionReadyToMonologue()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool IsCompanionReadyToMonologue() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Companion.IsCompanionReadyToMonologue()");
@@ -351,7 +351,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // dump_sobre_sdk_287a0
     //   APrimalBuff_Companion.IsPlayerADS_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPlayerADS_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Companion.IsPlayerADS_Implementation()");
@@ -359,7 +359,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // dump_sobre_sdk_287a0
     //   APrimalBuff_Companion.IsPlayerLookingAtCompanion_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool IsPlayerLookingAtCompanion_Implementation() const
     {
         return NativeCall<bool>(this, "APrimalBuff_Companion.IsPlayerLookingAtCompanion_Implementation()");
@@ -383,7 +383,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.Net_SetCompanionState(TEnumAsByte<ECompanionState::Type>)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void Net_SetCompanionState(unsigned char a0) const
     {
         NativeCall<void, unsigned char>(this, "APrimalBuff_Companion.Net_SetCompanionState(TEnumAsByte<ECompanionState::Type>)", a0);
@@ -455,7 +455,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.OnEndOverlapCompanionEventTrigger_Implementation(AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnEndOverlapCompanionEventTrigger_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "APrimalBuff_Companion.OnEndOverlapCompanionEventTrigger_Implementation(AActor*)", a0);
@@ -575,7 +575,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // dump_sobre_sdk_287a0
     //   APrimalBuff_Companion.RequestLoadFallbackSubtitlesAudio()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=950+grafo=8/8]]
     void RequestLoadFallbackSubtitlesAudio() const
     {
         NativeCall<void>(this, "APrimalBuff_Companion.RequestLoadFallbackSubtitlesAudio()");
@@ -607,7 +607,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.SetUpAnimTexture()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetUpAnimTexture() const
     {
         NativeCall<void>(this, "APrimalBuff_Companion.SetUpAnimTexture()");
@@ -663,7 +663,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.StopCompanionEvent_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StopCompanionEvent_Implementation() const
     {
         NativeCall<void>(this, "APrimalBuff_Companion.StopCompanionEvent_Implementation()");
@@ -671,7 +671,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.StopCompanionMontage(UAnimMontage*,float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void StopCompanionMontage(void* a0, float a1) const
     {
         NativeCall<void, void*, float>(this, "APrimalBuff_Companion.StopCompanionMontage(UAnimMontage*,float)", a0, a1);
@@ -687,7 +687,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.Tick(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff_Companion.Tick(float)", a0);
@@ -703,7 +703,7 @@ struct APrimalBuff_Companion : public APrimalBuff
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalBuff_Companion.Tick_CompanionEvents_Implementation(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void Tick_CompanionEvents_Implementation(float a0) const
     {
         NativeCall<void, float>(this, "APrimalBuff_Companion.Tick_CompanionEvents_Implementation(float)", a0);
@@ -808,8 +808,8 @@ struct APrimalBuff_Companion : public APrimalBuff
     FName& AnimTextureStartTimeParamNameField() const
     { return *GetNativePointerField<FName*>(this, "APrimalBuff_Companion.AnimTextureStartTimeParamName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReactionExplorerNotesToUnlock` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x12E8; confianca alta)
+    //  ancorado em `ReactionExplorerNotesToUnlock` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12E8; confianca alta)
     void*& AnimateOutHLNASubtitleIconHandleField() const
     { return BrzCampoAncorado<void*>(this, "ReactionExplorerNotesToUnlock", 32); }
     UTexture2D*& AsyncLoadedDialogueAnimTextureField() const
@@ -819,8 +819,8 @@ struct APrimalBuff_Companion : public APrimalBuff
     USoundWave*& AsyncLoadedSoundWaveField() const
     { return *GetNativePointerField<USoundWave**>(this, "APrimalBuff_Companion.AsyncLoadedSoundWave"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AllowedHLNAFocusedSelectedRemoteTargetDistance` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x14C8; confianca alta)
+    //  ancorado em `AllowedHLNAFocusedSelectedRemoteTargetDistance` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x14C8; confianca alta)
     float& CompanionAmbientSoundReductionMultiplierField() const
     { return BrzCampoAncorado<float>(this, "AllowedHLNAFocusedSelectedRemoteTargetDistance", 24); }
     BrzCampoPonteiro CompanionMeshCompField() const
@@ -840,8 +840,8 @@ struct APrimalBuff_Companion : public APrimalBuff
     float& CompanionViewDotField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff_Companion.CompanionViewDot"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AllowedHLNAFocusedSelectedRemoteTargetDistance` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x14CC; confianca alta)
+    //  ancorado em `AllowedHLNAFocusedSelectedRemoteTargetDistance` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x14CC; confianca alta)
     float& CompanionVoiceVolumeMultiplierVRBiomeField() const
     { return BrzCampoAncorado<float>(this, "AllowedHLNAFocusedSelectedRemoteTargetDistance", 28); }
     BrzCampoPonteiro CurrentAnimTextureStringAssetReferenceField() const
@@ -901,15 +901,15 @@ struct APrimalBuff_Companion : public APrimalBuff
     FName& LastPointTag_StartOrbitField() const
     { return *GetNativePointerField<FName*>(this, "APrimalBuff_Companion.LastPointTag_StartOrbit"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReactionExplorerNotesToUnlock` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x12D8; confianca alta)
+    //  ancorado em `ReactionExplorerNotesToUnlock` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12D8; confianca alta)
     void*& LoadAudioTimeoutHandleField() const
     { return BrzCampoAncorado<void*>(this, "ReactionExplorerNotesToUnlock", 16); }
     BrzCampoPonteiro LocalizedAudioTracksField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_Companion.LocalizedAudioTracks")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ReactionExplorerNotesToUnlock` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x12E0; confianca alta)
+    //  ancorado em `ReactionExplorerNotesToUnlock` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12E0; confianca alta)
     void*& MaxReactionLimitTimeoutHandleField() const
     { return BrzCampoAncorado<void*>(this, "ReactionExplorerNotesToUnlock", 24); }
     TArray<UMaterialInstanceDynamic*>& MeshDynamicMaterialsField() const
@@ -941,8 +941,8 @@ struct APrimalBuff_Companion : public APrimalBuff
     TArray<void*>& ReactionStackField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "APrimalBuff_Companion.ReactionStack"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `AllowedHLNAFocusedSelectedRemoteTargetDistance` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x14B8; confianca alta)
+    //  ancorado em `AllowedHLNAFocusedSelectedRemoteTargetDistance` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x14B8; confianca alta)
     TArray<void*>& StreamedAssetsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "AllowedHLNAFocusedSelectedRemoteTargetDistance", 8); }
     BrzCampoPonteiro bDebugCompanionField() const

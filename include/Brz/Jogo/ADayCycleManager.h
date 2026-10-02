@@ -43,7 +43,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.AllowStructureActivation(APrimalStructure*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool AllowStructureActivation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.AllowStructureActivation(APrimalStructure*)", a0);
@@ -51,7 +51,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.AllowWeaponFiring(AActor*)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=66+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool AllowWeaponFiring(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.AllowWeaponFiring(AActor*)", a0);
@@ -123,7 +123,7 @@ struct ADayCycleManager : public AInfo
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   ADayCycleManager.IsRainingAtLocation(UE::Math::TVector<double>)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=163+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool IsRainingAtLocation(void* a0) const
     {
         return NativeCall<bool, void*>(this, "ADayCycleManager.IsRainingAtLocation(UE::Math::TVector<double>)", a0);
@@ -228,8 +228,8 @@ struct ADayCycleManager : public AInfo
     BrzCampoPonteiro HexagonVFXActorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.HexagonVFXActorClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveLightingSequence` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x5C4; confianca alta)
+    //  ancorado em `ActiveLightingSequence` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5C4; confianca alta)
     float& LastCurrentTimeField() const
     { return BrzCampoAncorado<float>(this, "ActiveLightingSequence", 4); }
     BrzCampoPonteiro MaxWindVelocityScaleField() const
@@ -269,8 +269,8 @@ struct ADayCycleManager : public AInfo
     float& SnowAmountField() const
     { return *GetNativePointerField<float*>(this, "ADayCycleManager.SnowAmount"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveLightingSequence` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x5C8; confianca alta)
+    //  ancorado em `ActiveLightingSequence` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x5C8; confianca alta)
     float& SoundLastCurrentTimeField() const
     { return BrzCampoAncorado<float>(this, "ActiveLightingSequence", 8); }
     USoundBase*& Sound_TransitionToMidDayField() const
@@ -292,8 +292,8 @@ struct ADayCycleManager : public AInfo
     BrzCampoPonteiro bCheckForWeaponFiringField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADayCycleManager.bCheckForWeaponFiring")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HexagonVFXActorClass` +9, medido na build 25535041
-    //  (offset absoluto medido: 0x651; confianca alta)
+    //  ancorado em `HexagonVFXActorClass` +9 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x651; confianca alta)
     bool& bFirstDaytimeField() const
     { return BrzCampoAncorado<bool>(this, "HexagonVFXActorClass", 9); }
     BrzCampoPonteiro bHideSupplyCratesField() const

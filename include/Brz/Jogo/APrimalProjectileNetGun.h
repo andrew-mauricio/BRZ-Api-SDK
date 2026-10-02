@@ -52,7 +52,7 @@ struct APrimalProjectileNetGun : public APrimalProjectileArrow
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   APrimalProjectileNetGun.OnImpact_Implementation(FHitResult&,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnImpact_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "APrimalProjectileNetGun.OnImpact_Implementation(FHitResult&,bool)", a0, a1);

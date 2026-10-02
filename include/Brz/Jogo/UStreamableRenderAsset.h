@@ -49,7 +49,7 @@ struct UStreamableRenderAsset : public UObject
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UStreamableRenderAsset.DoesMipDataExist(int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool DoesMipDataExist(int a0) const
     {
         return NativeCall<bool, int>(this, "UStreamableRenderAsset.DoesMipDataExist(int)", a0);

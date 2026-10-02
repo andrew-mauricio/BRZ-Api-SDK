@@ -472,7 +472,7 @@ struct UGameplayAbility
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UGameplayAbility.StaticRegisterNativesUGameplayAbility()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro StaticRegisterNativesUGameplayAbility() const
     {
         return NativeCall<void*>(this, "UGameplayAbility.StaticRegisterNativesUGameplayAbility()");
@@ -495,8 +495,8 @@ struct UGameplayAbility
     BrzCampoPonteiro CancelAbilitiesWithTagField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.CancelAbilitiesWithTag")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetBlockedTags` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2E0; confianca alta)
+    //  ancorado em `TargetBlockedTags` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2E0; confianca alta)
     void*& CancelTaskInstanceNamesField() const
     { return BrzCampoAncorado<void*>(this, "TargetBlockedTags", 32); }
     BrzCampoPonteiro CooldownGameplayEffectClassField() const
@@ -506,8 +506,8 @@ struct UGameplayAbility
     BrzCampoPonteiro CurrentActivationInfoField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.CurrentActivationInfo")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentMontage` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x328; confianca alta)
+    //  ancorado em `CurrentMontage` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x328; confianca alta)
     void*& CurrentActorInfoField() const
     { return BrzCampoAncorado<void*>(this, "CurrentMontage", 8); }
     BrzCampoPonteiro CurrentEventDataField() const
@@ -515,13 +515,13 @@ struct UGameplayAbility
     BrzCampoPonteiro CurrentMontageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.CurrentMontage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentMontage` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x330; confianca alta)
+    //  ancorado em `CurrentMontage` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x330; confianca alta)
     void*& CurrentSpecHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentMontage", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TargetBlockedTags` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x2F0; confianca media)
+    //  ancorado em `TargetBlockedTags` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2F0; confianca media)
     void*& EndTaskInstanceNamesField() const
     { return BrzCampoAncorado<void*>(this, "TargetBlockedTags", 48); }
     unsigned char& InstancingPolicyField() const
@@ -535,8 +535,8 @@ struct UGameplayAbility
     unsigned char& ReplicationPolicyField() const
     { return *GetNativePointerField<unsigned char*>(this, "UGameplayAbility.ReplicationPolicy"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsBlockingOtherAbilities` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x38C; confianca alta)
+    //  ancorado em `bIsBlockingOtherAbilities` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x38C; confianca alta)
     void*& ScopeLockCountField() const
     { return BrzCampoAncorado<void*>(this, "bIsBlockingOtherAbilities", 1); }
     BrzCampoPonteiro SourceBlockedTagsField() const
@@ -548,38 +548,38 @@ struct UGameplayAbility
     BrzCampoPonteiro TargetRequiredTagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayAbility.TargetRequiredTags")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActiveTasks` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x310; confianca alta)
+    //  ancorado em `ActiveTasks` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x310; confianca alta)
     void*& TaskDebugMessagesField() const
     { return BrzCampoAncorado<void*>(this, "ActiveTasks", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentMontage` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x338; confianca alta)
+    //  ancorado em `CurrentMontage` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x338; confianca alta)
     void*& TrackedGameplayCuesField() const
     { return BrzCampoAncorado<void*>(this, "CurrentMontage", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsBlockingOtherAbilities` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x390; confianca alta)
+    //  ancorado em `bIsBlockingOtherAbilities` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x390; confianca alta)
     void*& WaitingToExecuteField() const
     { return BrzCampoAncorado<void*>(this, "bIsBlockingOtherAbilities", 5); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +3, medido na build 25535041
-    //  (offset absoluto medido: 0xCC; confianca alta)
+    //  ancorado em `RemoteInstanceEnded` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCC; confianca alta)
     void*& bHasBlueprintActivateField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +4, medido na build 25535041
-    //  (offset absoluto medido: 0xCD; confianca alta)
+    //  ancorado em `RemoteInstanceEnded` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCD; confianca alta)
     void*& bHasBlueprintActivateFromEventField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +2, medido na build 25535041
-    //  (offset absoluto medido: 0xCB; confianca alta)
+    //  ancorado em `RemoteInstanceEnded` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCB; confianca alta)
     void*& bHasBlueprintCanUseField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 2); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteInstanceEnded` +1, medido na build 25535041
-    //  (offset absoluto medido: 0xCA; confianca alta)
+    //  ancorado em `RemoteInstanceEnded` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCA; confianca alta)
     void*& bHasBlueprintShouldAbilityRespondToEventField() const
     { return BrzCampoAncorado<void*>(this, "RemoteInstanceEnded", 1); }
     BrzCampoPonteiro bIsAbilityEndingField() const

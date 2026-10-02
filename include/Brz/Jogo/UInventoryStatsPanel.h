@@ -202,8 +202,8 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro HandleVisibilityWithInputField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.HandleVisibilityWithInput")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x8C8; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8C8; confianca media)
     void*& HeaderPanelField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 88); }
     FName& HeaderPanelNameField() const
@@ -215,8 +215,8 @@ struct UInventoryStatsPanel
     TObjectPtr<UInputComponent>& InputComponentField() const
     { return *GetNativePointerField<TObjectPtr<UInputComponent>*>(this, "UInventoryStatsPanel.InputComponent"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x880; confianca alta)
+    //  ancorado em `SwitcherTextInactiveColor` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x880; confianca alta)
     void*& InventoryUIField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 16); }
     TWeakObjectPtr<void>& ItemContainerField() const
@@ -246,22 +246,22 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro PixelSnappingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.PixelSnapping")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x8B8; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8B8; confianca media)
     void*& PlayerEnabledEffectField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 72); }
     FName& PlayerEnabledEffectNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.PlayerEnabledEffectName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x890; confianca alta)
+    //  ancorado em `SwitcherTextInactiveColor` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x890; confianca alta)
     void*& PlayerStatsPanelField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 32); }
     FName& PlayerStatsPanelNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.PlayerStatsPanelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x8A0; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8A0; confianca media)
     void*& PlayerStatsTabButtonField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 48); }
     FName& PlayerStatsTabButtonNameField() const
@@ -271,8 +271,8 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro QueuedWidgetAnimationTransitionsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.QueuedWidgetAnimationTransitions")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x8C0; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8C0; confianca media)
     void*& RemoteEnabledEffectField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 80); }
     FName& RemoteEnabledEffectNameField() const
@@ -280,15 +280,15 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro RemoteStatsPanelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.RemoteStatsPanel")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x8A8; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8A8; confianca media)
     void*& RemoteStatsTabButtonField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 56); }
     FName& RemoteStatsTabButtonNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryStatsPanel.RemoteStatsTabButtonName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x8B0; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8B0; confianca media)
     void*& RemoteStatsTabNameField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 64); }
     FName& RemoteStatsTabTextBlockNameField() const
@@ -300,8 +300,8 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro RenderTransformPivotField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.RenderTransformPivot")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x8D0; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8D0; confianca media)
     void*& RootSizeBoxField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 96); }
     FName& RootSizeBoxNameField() const
@@ -317,8 +317,8 @@ struct UInventoryStatsPanel
     float& SplitscreenDPIScalerField() const
     { return *GetNativePointerField<float*>(this, "UInventoryStatsPanel.SplitscreenDPIScaler"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x888; confianca alta)
+    //  ancorado em `SwitcherTextInactiveColor` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x888; confianca alta)
     void*& StatsWidgetSwitcherField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 24); }
     FName& StatsWidgetSwitcherNameField() const
@@ -336,8 +336,8 @@ struct UInventoryStatsPanel
     BrzCampoPonteiro SwitcherTextInactiveColorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryStatsPanel.SwitcherTextInactiveColor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SwitcherTextInactiveColor` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x898; confianca media)
+    //  ancorado em `SwitcherTextInactiveColor` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x898; confianca media)
     void*& TabBgSwitcherField() const
     { return BrzCampoAncorado<void*>(this, "SwitcherTextInactiveColor", 40); }
     FName& TabBgSwitcherNameField() const

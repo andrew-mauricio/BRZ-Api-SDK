@@ -41,7 +41,7 @@ struct UPrimalDinoStatusComponent
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   UPrimalDinoStatusComponent.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllo
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=664+bytes40+grafo=24/24]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=664+grafo=24/24]]
     static BrzPonteiro GetLifetimeReplicatedProps(void* a0)
     {
         return NativeCall<void*, void*>(nullptr, "UPrimalDinoStatusComponent.GetLifetimeReplicatedProps(TArray<FLifetimeProperty,TSizedDefaultAllocator<32>>&)", a0);

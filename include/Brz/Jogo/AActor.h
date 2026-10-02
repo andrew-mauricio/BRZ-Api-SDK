@@ -848,7 +848,7 @@ struct AActor : public UPrimalActor
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AActor.GetComponents<UPrimitiveComponent,TSizedDefaultAllocator<32>>(TArray<UPrimitiveComponent*
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=338+bytes40+chamadores=3]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetComponents_UPrimitiveComponent_TSizedDefaultAllocator_32__(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "AActor.GetComponents<UPrimitiveComponent,TSizedDefaultAllocator<32>>(TArray<UPrimitiveComponent*,TSizedDefaultAllocator<32>>&,bool)", a0, a1);
@@ -2265,7 +2265,7 @@ struct AActor : public UPrimalActor
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AActor.ServerSendExecCommandToEveryone(FName,FBPNetExecParams&,bool,bool,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSendExecCommandToEveryone(unsigned long long a0, void* a1, bool a2, bool a3, bool a4) const
     {
         NativeCall<void, unsigned long long, void*, bool, bool, bool>(this, "AActor.ServerSendExecCommandToEveryone(FName,FBPNetExecParams&,bool,bool,bool)", a0, a1, a2, a3, a4);
@@ -2711,8 +2711,8 @@ struct AActor : public UPrimalActor
     //      (colide com AActor.SetActorLocationAndRotation(UE::Math::TVector<double>,UE::Math::TQuat<double>&,bool,FHitR)
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteRole` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x238; confianca alta)
+    //  ancorado em `RemoteRole` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x238; confianca alta)
     void*& ActorCategoryField() const
     { return BrzCampoAncorado<void*>(this, "RemoteRole", 7); }
     BrzCampoPonteiro AttachmentReplicationField() const
@@ -2722,8 +2722,8 @@ struct AActor : public UPrimalActor
     TArray<void*>& BlueprintCreatedComponentsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AActor.BlueprintCreatedComponents"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `Tags` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3D8; confianca alta)
+    //  ancorado em `Tags` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3D8; confianca alta)
     int& CachedStasisGridIndexField() const
     { return BrzCampoAncorado<int>(this, "Tags", 16); }
     TArray<void*>& ChildrenField() const
@@ -2745,13 +2745,13 @@ struct AActor : public UPrimalActor
     TObjectPtr<APawn>& InstigatorField() const
     { return *GetNativePointerField<TObjectPtr<APawn>*>(this, "AActor.Instigator"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteRole` +3, medido na build 25535041
-    //  (offset absoluto medido: 0x234; confianca alta)
+    //  ancorado em `RemoteRole` +3 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x234; confianca alta)
     int& LastForceNetUpdateFrameField() const
     { return BrzCampoAncorado<int>(this, "RemoteRole", 3); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhysicsReplicationMode` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x378; confianca alta)
+    //  ancorado em `PhysicsReplicationMode` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x378; confianca alta)
     double& LastRenderTimeField() const
     { return BrzCampoAncorado<double>(this, "PhysicsReplicationMode", 4); }
     TArray<void*>& LayersField() const
@@ -2787,8 +2787,8 @@ struct AActor : public UPrimalActor
     BrzCampoPonteiro OnTakeRadialDamageField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.OnTakeRadialDamage")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +53, medido na build 25535041
-    //  (offset absoluto medido: 0x418; confianca media)
+    //  ancorado em `OnEndPlay` +53 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x418; confianca media)
     void*& OwnedComponentsField() const
     { return BrzCampoAncorado<void*>(this, "OnEndPlay", 53); }
     TObjectPtr<AActor>& OwnerField() const
@@ -2804,20 +2804,20 @@ struct AActor : public UPrimalActor
     unsigned char& RemoteRoleField() const
     { return *GetNativePointerField<unsigned char*>(this, "AActor.RemoteRole"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +37, medido na build 25535041
-    //  (offset absoluto medido: 0x408; confianca media)
+    //  ancorado em `OnEndPlay` +37 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x408; confianca media)
     TArray<UActorComponent*>& ReplicatedComponentsField() const
     { return BrzCampoAncorado<TArray<UActorComponent*>>(this, "OnEndPlay", 37); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +21, medido na build 25535041
-    //  (offset absoluto medido: 0x3F8; confianca media)
+    //  ancorado em `OnEndPlay` +21 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3F8; confianca media)
     void*& ReplicatedComponentsInfoField() const
     { return BrzCampoAncorado<void*>(this, "OnEndPlay", 21); }
     BrzCampoPonteiro ReplicatedMovementField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AActor.ReplicatedMovement")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnEndPlay` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x3E8; confianca media)
+    //  ancorado em `OnEndPlay` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3E8; confianca media)
     void*& ReplicatedSubObjectsField() const
     { return BrzCampoAncorado<void*>(this, "OnEndPlay", 5); }
     unsigned char& RoleField() const
@@ -2829,8 +2829,8 @@ struct AActor : public UPrimalActor
     TArray<void*>& TagsField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AActor.Tags"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RootComponent` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x3A8; confianca alta)
+    //  ancorado em `RootComponent` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3A8; confianca alta)
     void*& TimerHandle_LifeSpanExpiredField() const
     { return BrzCampoAncorado<void*>(this, "RootComponent", 8); }
     int& UpdateOverlapsMethodDuringLevelStreamingField() const

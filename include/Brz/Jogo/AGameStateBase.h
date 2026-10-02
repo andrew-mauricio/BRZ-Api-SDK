@@ -167,8 +167,8 @@ struct AGameStateBase : public AInfo
     BrzCampoPonteiro GameModeClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameStateBase.GameModeClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x4E0; confianca alta)
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4E0; confianca alta)
     void*& NumServerWorldTimeSecondsDeltasField() const
     { return BrzCampoAncorado<void*>(this, "ServerWorldTimeSecondsUpdateFrequency", 20); }
     BrzCampoPonteiro OnAnyPostProcessVolumeEnteredField() const
@@ -182,8 +182,8 @@ struct AGameStateBase : public AInfo
     double& ReplicatedWorldTimeSecondsDoubleField() const
     { return *GetNativePointerField<double*>(this, "AGameStateBase.ReplicatedWorldTimeSecondsDouble"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x4E8; confianca alta)
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4E8; confianca alta)
     void*& SemaphoreStorageField() const
     { return BrzCampoAncorado<void*>(this, "ServerWorldTimeSecondsUpdateFrequency", 28); }
     float& ServerWorldTimeSecondsDeltaField() const
@@ -193,13 +193,13 @@ struct AGameStateBase : public AInfo
     BrzCampoPonteiro SpectatorClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AGameStateBase.SpectatorClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x4D8; confianca alta)
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D8; confianca alta)
     double& SumServerWorldTimeSecondsDeltaField() const
     { return BrzCampoAncorado<double>(this, "ServerWorldTimeSecondsUpdateFrequency", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x4D0; confianca alta)
+    //  ancorado em `ServerWorldTimeSecondsUpdateFrequency` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4D0; confianca alta)
     void*& TimerHandle_UpdateServerTimeSecondsField() const
     { return BrzCampoAncorado<void*>(this, "ServerWorldTimeSecondsUpdateFrequency", 4); }
     BrzCampoPonteiro bReplicatedHasBegunPlayField() const

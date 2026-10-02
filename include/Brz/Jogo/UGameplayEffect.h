@@ -90,18 +90,18 @@ struct UGameplayEffect
     BrzCampoPonteiro ApplicationTagRequirementsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.ApplicationTagRequirements")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedAbilities` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xA00; confianca alta)
+    //  ancorado em `GrantedAbilities` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA00; confianca alta)
     void*& CachedAssetTagsField() const
     { return BrzCampoAncorado<void*>(this, "GrantedAbilities", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedAbilities` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xA40; confianca media)
+    //  ancorado em `GrantedAbilities` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA40; confianca media)
     void*& CachedBlockedAbilityTagsField() const
     { return BrzCampoAncorado<void*>(this, "GrantedAbilities", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedAbilities` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xA20; confianca media)
+    //  ancorado em `GrantedAbilities` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA20; confianca media)
     void*& CachedGrantedTagsField() const
     { return BrzCampoAncorado<void*>(this, "GrantedAbilities", 48); }
     BrzCampoPonteiro ChanceToApplyToTargetField() const
@@ -129,13 +129,13 @@ struct UGameplayEffect
     BrzCampoPonteiro GrantedApplicationImmunityTagsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UGameplayEffect.GrantedApplicationImmunityTags")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `GrantedApplicationImmunityQuery` +408, medido na build 25535041
-    //  (offset absoluto medido: 0x840; confianca baixa)
+    //  ancorado em `GrantedApplicationImmunityQuery` +408 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x840; confianca baixa)
     void*& HasGrantedApplicationImmunityQueryField() const
     { return BrzCampoAncorado<void*>(this, "GrantedApplicationImmunityQuery", 408); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoveGameplayEffectQuery` +408, medido na build 25535041
-    //  (offset absoluto medido: 0x9E0; confianca baixa)
+    //  ancorado em `RemoveGameplayEffectQuery` +408 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x9E0; confianca baixa)
     void*& HasRemoveGameplayEffectsQueryField() const
     { return BrzCampoAncorado<void*>(this, "RemoveGameplayEffectQuery", 408); }
     BrzCampoPonteiro InheritableBlockedAbilityTagsContainerField() const

@@ -670,8 +670,8 @@ struct UInventoryPanelWidget
     FName& InventoryButtonNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryPanelWidget.InventoryButtonName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bIsRemoteInventory` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x97C; confianca alta)
+    //  ancorado em `bIsRemoteInventory` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x97C; confianca alta)
     void*& InventoryCompField() const
     { return BrzCampoAncorado<void*>(this, "bIsRemoteInventory", 4); }
     FName& InventoryDataListNameField() const
@@ -685,8 +685,8 @@ struct UInventoryPanelWidget
     BrzCampoPonteiro LastItemSelectedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UInventoryPanelWidget.LastItemSelected")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HandheldWidgetWrapNum` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x958; confianca alta)
+    //  ancorado em `HandheldWidgetWrapNum` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x958; confianca alta)
     void*& LastSkinSelectedField() const
     { return BrzCampoAncorado<void*>(this, "HandheldWidgetWrapNum", 16); }
     BrzCampoPonteiro NamedSlotBindingsField() const
@@ -720,8 +720,8 @@ struct UInventoryPanelWidget
     FName& ReceivingItemsLabelNameField() const
     { return *GetNativePointerField<FName*>(this, "UInventoryPanelWidget.ReceivingItemsLabelName"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `HandheldWidgetWrapNum` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x950; confianca alta)
+    //  ancorado em `HandheldWidgetWrapNum` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x950; confianca alta)
     void*& RefreshItemListsHandleField() const
     { return BrzCampoAncorado<void*>(this, "HandheldWidgetWrapNum", 8); }
     float& RenderOpacityField() const

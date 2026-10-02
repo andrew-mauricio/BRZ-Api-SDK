@@ -194,8 +194,8 @@ struct APrimalWeaponGrenade : public AShooterWeapon_Projectile
     BrzCampoPonteiro bEnablePrepareThrowAnimField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalWeaponGrenade.bEnablePrepareThrowAnim")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ProjectileShootDir` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1288; confianca alta)
+    //  ancorado em `ProjectileShootDir` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1288; confianca alta)
     void*& bHiddenGrenadeFPVField() const
     { return BrzCampoAncorado<void*>(this, "ProjectileShootDir", 24); }
     BrzCampoPonteiro bHideGrenadeOnFireProjectileField() const

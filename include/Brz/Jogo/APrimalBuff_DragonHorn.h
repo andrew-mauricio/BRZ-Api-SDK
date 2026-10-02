@@ -50,7 +50,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.AbortQueuedSkyDash(AShooterPlayerController*,FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro AbortQueuedSkyDash(void* a0, const FString& a1) const
     {
         return NativeCall<void*, void*, void*>(this, "APrimalBuff_DragonHorn.AbortQueuedSkyDash(AShooterPlayerController*,FString&)", a0, const_cast<FString*>(&a1));
@@ -70,7 +70,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.ApplySkillCooldown(UPrimalBuffPersistentData_DragonHorn*,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ApplySkillCooldown(void* a0, int a1) const
     {
         return NativeCall<void*, void*, int>(this, "APrimalBuff_DragonHorn.ApplySkillCooldown(UPrimalBuffPersistentData_DragonHorn*,int)", a0, a1);
@@ -246,7 +246,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.ClearSkyDashMonitor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=447+chamadores=5+grafo=8/8]]
     BrzPonteiro ClearSkyDashMonitor() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.ClearSkyDashMonitor()");
@@ -278,7 +278,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.CommitFlyAwayStorage(AShooterPlayerController*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro CommitFlyAwayStorage(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalBuff_DragonHorn.CommitFlyAwayStorage(AShooterPlayerController*,bool)", a0, a1);
@@ -414,7 +414,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.ForceDinoFlying(APrimalDinoCharacter*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ForceDinoFlying(void* a0, bool a1) const
     {
         return NativeCall<void*, void*, bool>(this, "APrimalBuff_DragonHorn.ForceDinoFlying(APrimalDinoCharacter*,bool)", a0, a1);
@@ -466,7 +466,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.GetDragonHornData()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetDragonHornData() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.GetDragonHornData()");
@@ -482,7 +482,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.GetDragonHornSkillMultiplier(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetDragonHornSkillMultiplier(unsigned long long a0) const
     {
         return NativeCall<void*, unsigned long long>(this, "APrimalBuff_DragonHorn.GetDragonHornSkillMultiplier(FName)", a0);
@@ -554,7 +554,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.GetShooterInstigator()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetShooterInstigator() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.GetShooterInstigator()");
@@ -562,7 +562,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.GetSkillAdjustedGetMeMaxDistance()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetSkillAdjustedGetMeMaxDistance() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.GetSkillAdjustedGetMeMaxDistance()");
@@ -618,7 +618,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.IsLinkedToLiveDino(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=51+chamadores=2]]
     BrzPonteiro IsLinkedToLiveDino(void* a0) const
     {
         return NativeCall<void*, void*>(this, "APrimalBuff_DragonHorn.IsLinkedToLiveDino(APrimalDinoCharacter*)", a0);
@@ -674,7 +674,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.OnGetMeTeleportMontageFinished()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=770+grafo=16/16]]
     BrzPonteiro OnGetMeTeleportMontageFinished() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.OnGetMeTeleportMontageFinished()");
@@ -790,7 +790,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.SetupForInstigator()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro SetupForInstigator() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.SetupForInstigator()");
@@ -906,7 +906,7 @@ struct APrimalBuff_DragonHorn
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   APrimalBuff_DragonHorn.TryMountPendingSkyDashRider()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1692+bytes40+chamadores=2+grafo=16/16]]
     BrzPonteiro TryMountPendingSkyDashRider() const
     {
         return NativeCall<void*>(this, "APrimalBuff_DragonHorn.TryMountPendingSkyDashRider()");
@@ -1165,8 +1165,8 @@ struct APrimalBuff_DragonHorn
     BrzCampoPonteiro FlyAwayIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "APrimalBuff_DragonHorn.FlyAwayIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingFlyAwayController` +12, medido na build 25535041
-    //  (offset absoluto medido: 0xE30; confianca alta)
+    //  ancorado em `PendingFlyAwayController` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE30; confianca alta)
     void*& FlyAwayMonitorTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "PendingFlyAwayController", 12); }
     float& FlyAwaySkyDashSpeedField() const
@@ -1456,8 +1456,8 @@ struct APrimalBuff_DragonHorn
     float& SkyDashMonitorIntervalField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff_DragonHorn.SkyDashMonitorInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingSkyDashTargetLocation` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xDE8; confianca alta)
+    //  ancorado em `PendingSkyDashTargetLocation` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xDE8; confianca alta)
     void*& SkyDashMonitorTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "PendingSkyDashTargetLocation", 24); }
     float& SkyDashMountRadiusField() const
@@ -1471,8 +1471,8 @@ struct APrimalBuff_DragonHorn
     float& SkyDashSpeedField() const
     { return *GetNativePointerField<float*>(this, "APrimalBuff_DragonHorn.SkyDashSpeed"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PendingSkyDashTargetLocation` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xDF0; confianca alta)
+    //  ancorado em `PendingSkyDashTargetLocation` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xDF0; confianca alta)
     void*& SkyDashStartDelayTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "PendingSkyDashTargetLocation", 32); }
     float& SkyDashStartHeightField() const

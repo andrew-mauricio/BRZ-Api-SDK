@@ -214,8 +214,8 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro DroppedItemVelocityField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.DroppedItemVelocity")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PickupAllRange` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x8B8; confianca alta)
+    //  ancorado em `PickupAllRange` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8B8; confianca alta)
     float& DroppedLifeSpanOverrideField() const
     { return BrzCampoAncorado<float>(this, "PickupAllRange", 4); }
     float& ForceSleepTimerField() const
@@ -231,13 +231,13 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro ImpulseOffsetRangesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.ImpulseOffsetRanges")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPickUpDistance` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x800; confianca alta)
+    //  ancorado em `MaxPickUpDistance` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x800; confianca alta)
     double& LastReplicatedMovementField() const
     { return BrzCampoAncorado<double>(this, "MaxPickUpDistance", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventDropAttachment` +30, medido na build 25535041
-    //  (offset absoluto medido: 0x8A0; confianca alta)
+    //  ancorado em `bPreventDropAttachment` +30 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8A0; confianca alta)
     float& LocationStuckTimerField() const
     { return BrzCampoAncorado<float>(this, "bPreventDropAttachment", 30); }
     float& MaxPickUpDistanceField() const
@@ -257,8 +257,8 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro OverlayTooltipScaleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.OverlayTooltipScale")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventDropAttachment` +38, medido na build 25535041
-    //  (offset absoluto medido: 0x8A8; confianca media)
+    //  ancorado em `bPreventDropAttachment` +38 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x8A8; confianca media)
     double& PhysicsKeepAliveUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "bPreventDropAttachment", 38); }
     BrzCampoPonteiro PickUpIconField() const
@@ -270,23 +270,23 @@ struct ADroppedItem : public AActor
     BrzCampoPonteiro PickupSingleIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "ADroppedItem.PickupSingleIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPickUpDistance` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x80C; confianca alta)
+    //  ancorado em `MaxPickUpDistance` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x80C; confianca alta)
     float& PrevAngularDampingField() const
     { return BrzCampoAncorado<float>(this, "MaxPickUpDistance", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MaxPickUpDistance` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x808; confianca alta)
+    //  ancorado em `MaxPickUpDistance` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x808; confianca alta)
     float& PrevLinearDampingField() const
     { return BrzCampoAncorado<float>(this, "MaxPickUpDistance", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpawnDropSoundTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x818; confianca alta)
+    //  ancorado em `SpawnDropSoundTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x818; confianca alta)
     void*& PreviousLocationField() const
     { return BrzCampoAncorado<void*>(this, "SpawnDropSoundTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventDropAttachment` +6, medido na build 25535041
-    //  (offset absoluto medido: 0x888; confianca alta)
+    //  ancorado em `bPreventDropAttachment` +6 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x888; confianca alta)
     void*& PreviousStuckLocationField() const
     { return BrzCampoAncorado<void*>(this, "bPreventDropAttachment", 6); }
     double& SpawnDropSoundTimeField() const

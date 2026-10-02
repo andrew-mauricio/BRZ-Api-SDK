@@ -60,7 +60,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.AcknowledgePossession(APawn*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void AcknowledgePossession(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.AcknowledgePossession(APawn*)", a0);
@@ -112,7 +112,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.AddDinoToMap(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro AddDinoToMap(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.AddDinoToMap(APrimalDinoCharacter*)", a0);
@@ -480,7 +480,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CanGather()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool CanGather() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.CanGather()");
@@ -572,7 +572,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CheckIsOnTransferAllCooldown(UPrimalInventoryComponent*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool CheckIsOnTransferAllCooldown(void* a0) const
     {
         return NativeCall<bool, void*>(this, "AShooterPlayerController.CheckIsOnTransferAllCooldown(UPrimalInventoryComponent*)", a0);
@@ -600,7 +600,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.CheckforOrbiting()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=511+grafo=9/9]]
     void CheckforOrbiting() const
     {
         NativeCall<void>(this, "AShooterPlayerController.CheckforOrbiting()");
@@ -832,7 +832,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientDoMultiUse(UObject*,int)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=11]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=58+chamadores=10]]
     void ClientDoMultiUse(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.ClientDoMultiUse(UObject*,int)", a0, a1);
@@ -840,7 +840,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientDoMultiUse_Implementation(UObject*,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientDoMultiUse_Implementation(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.ClientDoMultiUse_Implementation(UObject*,int)", a0, a1);
@@ -904,7 +904,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientEndReceivingTribeLog_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientEndReceivingTribeLog_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ClientEndReceivingTribeLog_Implementation()");
@@ -1172,7 +1172,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientNotifyReconnected_Implementation(APawn*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyReconnected_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientNotifyReconnected_Implementation(APawn*)", a0);
@@ -1180,7 +1180,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientNotifyRespawned_Implementation(APawn*,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ClientNotifyRespawned_Implementation(void* a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterPlayerController.ClientNotifyRespawned_Implementation(APawn*,bool)", a0, a1);
@@ -1204,7 +1204,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientNotifyTamedDino(TSubclassOf<APrimalDinoCharacter>)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=93+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClientNotifyTamedDino(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientNotifyTamedDino(TSubclassOf<APrimalDinoCharacter>)", a0);
@@ -1316,7 +1316,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientOnCurrentCharacterAndItemsUploaded_Implementation(unsigned__int64
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=896+grafo=22/22]]
     void ClientOnCurrentCharacterAndItemsUploaded_Implementation(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AShooterPlayerController.ClientOnCurrentCharacterAndItemsUploaded_Implementation(unsigned__int64)", a0);
@@ -1616,7 +1616,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveInventoryItems_EndChunked_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientReceiveInventoryItems_EndChunked_Implementation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ClientReceiveInventoryItems_EndChunked_Implementation()");
@@ -1632,7 +1632,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveItemForStructureSkin_Implementation(APrimalStructure*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientReceiveItemForStructureSkin_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceiveItemForStructureSkin_Implementation(APrimalStructure*)", a0);
@@ -1704,7 +1704,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceivePlayerDataArray_AppendPlayerDataChunk_Implementation(TArra
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientReceivePlayerDataArray_AppendPlayerDataChunk_Implementation(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceivePlayerDataArray_AppendPlayerDataChunk_Implementation(TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0);
@@ -1752,7 +1752,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveTamingInfoList(TArray<FTamingDinoInfo,TSizedDefaultAllocat
-    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientReceiveTamingInfoList(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientReceiveTamingInfoList(TArray<FTamingDinoInfo,TSizedDefaultAllocator<32>>&)", a0);
@@ -1776,7 +1776,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientReceiveTradeLog_Implementation(APrimalStructureMarket*,TArray<FMa
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientReceiveTradeLog_Implementation(void* a0, void* a1, bool a2) const
     {
         return NativeCall<void*, void*, void*, bool>(this, "AShooterPlayerController.ClientReceiveTradeLog_Implementation(APrimalStructureMarket*,TArray<FMarketTradeLogEntry,TSizedDefaultAllocator<32>>&,bool)", a0, a1, a2);
@@ -1984,7 +1984,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientSendArkDataPayloadEnd_Implementation(FGuid,EPrimalARKTributeDataT
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=1053+bytes40+grafo=11/11]]
     void ClientSendArkDataPayloadEnd_Implementation(void* a0, int a1, unsigned long long a2) const
     {
         NativeCall<void, void*, int, unsigned long long>(this, "AShooterPlayerController.ClientSendArkDataPayloadEnd_Implementation(FGuid,EPrimalARKTributeDataType::Type,unsigned__int64)", a0, a1, a2);
@@ -2696,7 +2696,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientUpdateItemWeaponClipAmmo(UPrimalInventoryComponent*,FItemNetID,in
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ClientUpdateItemWeaponClipAmmo(void* a0, unsigned long long a1, int a2) const
     {
         return NativeCall<void*, void*, unsigned long long, int>(this, "AShooterPlayerController.ClientUpdateItemWeaponClipAmmo(UPrimalInventoryComponent*,FItemNetID,int)", a0, a1, a2);
@@ -2720,7 +2720,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ClientUpdateMyPlayerDataStruct_Implementation(FPrimalPlayerDataStruct)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ClientUpdateMyPlayerDataStruct_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ClientUpdateMyPlayerDataStruct_Implementation(FPrimalPlayerDataStruct)", a0);
@@ -2744,7 +2744,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClientUploadedDinosLoaded(TArray<FARKTributeDinoListing,TSizedDefaultAl
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=207+bytes40+grafo=4/4]]
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClientUploadedDinosLoaded(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.ClientUploadedDinosLoaded(TArray<FARKTributeDinoListing,TSizedDefaultAllocator<32>>&)", a0);
@@ -2928,7 +2928,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientsideSetActiveWaypointTrackedCreatureViaCharacterIndex(int,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ClientsideSetActiveWaypointTrackedCreatureViaCharacterIndex(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ClientsideSetActiveWaypointTrackedCreatureViaCharacterIndex(int,bool)", a0, a1);
@@ -2936,7 +2936,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientsideSetActiveWaypointTrackedPlayerViaCharacterIndex(int,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ClientsideSetActiveWaypointTrackedPlayerViaCharacterIndex(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ClientsideSetActiveWaypointTrackedPlayerViaCharacterIndex(int,bool)", a0, a1);
@@ -2944,7 +2944,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientsideTogglePOIVisibilityForTrackedCreatureWaypoint(int,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ClientsideTogglePOIVisibilityForTrackedCreatureWaypoint(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ClientsideTogglePOIVisibilityForTrackedCreatureWaypoint(int,bool)", a0, a1);
@@ -2952,7 +2952,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ClientsideTogglePOIVisibilityForTrackedPlayerWaypoint(int,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ClientsideTogglePOIVisibilityForTrackedPlayerWaypoint(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ClientsideTogglePOIVisibilityForTrackedPlayerWaypoint(int,bool)", a0, a1);
@@ -2960,7 +2960,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ClubArkCheckProfileLoadedForLogin()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ClubArkCheckProfileLoadedForLogin() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ClubArkCheckProfileLoadedForLogin()");
@@ -2968,7 +2968,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ConditionalSaveProfile()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=130+grafo=3/3]]
     void ConditionalSaveProfile() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ConditionalSaveProfile()");
@@ -3212,7 +3212,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.DownloadTransferredPlayerCharacter()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void DownloadTransferredPlayerCharacter() const
     {
         NativeCall<void>(this, "AShooterPlayerController.DownloadTransferredPlayerCharacter()");
@@ -3260,7 +3260,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EnableStreamingSource()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void EnableStreamingSource() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EnableStreamingSource()");
@@ -3276,7 +3276,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndAArkGamepadDpadUp()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndAArkGamepadDpadUp() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndAArkGamepadDpadUp()");
@@ -3284,7 +3284,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadBackButton()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndArkGamepadBackButton() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadBackButton()");
@@ -3292,7 +3292,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadDpadDown()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndArkGamepadDpadDown() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadDpadDown()");
@@ -3300,7 +3300,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadDpadRight()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndArkGamepadDpadRight() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadDpadRight()");
@@ -3316,7 +3316,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadFaceButtonLeft()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndArkGamepadFaceButtonLeft() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadFaceButtonLeft()");
@@ -3324,7 +3324,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndArkGamepadFaceButtonRight()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndArkGamepadFaceButtonRight() const
     {
         NativeCall<void>(this, "AShooterPlayerController.EndArkGamepadFaceButtonRight()");
@@ -3364,7 +3364,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.EndMultiuseWheelForActor(bool,AActor*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void EndMultiuseWheelForActor(bool a0, void* a1) const
     {
         NativeCall<void, bool, void*>(this, "AShooterPlayerController.EndMultiuseWheelForActor(bool,AActor*)", a0, a1);
@@ -3380,7 +3380,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.EndWhistleSelectionInput(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=250+grafo=6/6]]
     void EndWhistleSelectionInput(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.EndWhistleSelectionInput(bool)", a0);
@@ -3492,7 +3492,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ForceCraftPressed()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ForceCraftPressed() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ForceCraftPressed()");
@@ -3500,7 +3500,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ForceCraftReleased()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ForceCraftReleased() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ForceCraftReleased()");
@@ -3628,7 +3628,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetCompanionBuff()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     UObject* GetCompanionBuff() const
     {
         return NativeCall<UObject*>(this, "AShooterPlayerController.GetCompanionBuff()");
@@ -3692,7 +3692,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetCurrentMultiUseWheelCategory()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     int GetCurrentMultiUseWheelCategory() const
     {
         return NativeCall<int>(this, "AShooterPlayerController.GetCurrentMultiUseWheelCategory()");
@@ -3732,7 +3732,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetCustomTooltipActor()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro GetCustomTooltipActor() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetCustomTooltipActor()");
@@ -3872,7 +3872,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.GetMapDinos()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetMapDinos() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.GetMapDinos()");
@@ -3952,7 +3952,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetNearbyPOIs()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GetNearbyPOIs(void* retorno) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.GetNearbyPOIs()", retorno);
@@ -4032,7 +4032,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetPlayerCharacterName()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=307+chamadores=10+grafo=3/3]]
     void GetPlayerCharacterName(void* retorno) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.GetPlayerCharacterName()", retorno);
@@ -4192,7 +4192,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.GetProviderUnlockedSkillsAndRanks_Implementation(TArray<FName,TSizedDef
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     BrzPonteiro GetProviderUnlockedSkillsAndRanks_Implementation(void* a0, void* a1) const
     {
         return NativeCall<void*, void*, void*>(this, "AShooterPlayerController.GetProviderUnlockedSkillsAndRanks_Implementation(TArray<FName,TSizedDefaultAllocator<32>>&,TArray<unsignedchar,TSizedDefaultAllocator<32>>&)", a0, a1);
@@ -4360,11 +4360,10 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GetViewTarget()
-    // classe: a funcao mora em APlayerController, e AShooterPlayerController herda dela: o `this` e' compativel por construcao
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     AActor* GetViewTarget() const
     {
-        return NativeCall<AActor*>(this, "APlayerController.GetViewTarget()");
+        return NativeCall<AActor*>(this, "AShooterPlayerController.GetViewTarget()");
     }
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
@@ -4497,7 +4496,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.GiveToMe()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void GiveToMe() const
     {
         NativeCall<void>(this, "AShooterPlayerController.GiveToMe()");
@@ -4521,7 +4520,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.HasBestScoreForMission(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool HasBestScoreForMission(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AShooterPlayerController.HasBestScoreForMission(FName)", a0);
@@ -4529,7 +4528,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.HasCustomCloudData(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool HasCustomCloudData(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AShooterPlayerController.HasCustomCloudData(FName)", a0);
@@ -4641,7 +4640,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IncrementStat(EPrimalGDKStat::Type)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=3]]
     void IncrementStat(int a0) const
     {
         NativeCall<void, int>(this, "AShooterPlayerController.IncrementStat(EPrimalGDKStat::Type)", a0);
@@ -4665,7 +4664,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InitCharacterPainting_Implementation(APrimalCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InitCharacterPainting_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.InitCharacterPainting_Implementation(APrimalCharacter*)", a0);
@@ -4689,7 +4688,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.InputDismissPOI(APlayerController*,int)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void InputDismissPOI(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.InputDismissPOI(APlayerController*,int)", a0, a1);
@@ -4841,7 +4840,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsRemoteControlling()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=152+chamadores=3]]
     bool IsRemoteControlling() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsRemoteControlling()");
@@ -4849,7 +4848,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.IsRidingDino()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsRidingDino() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsRidingDino()");
@@ -4857,7 +4856,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsSOTFIntro()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsSOTFIntro() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.IsSOTFIntro()");
@@ -4881,7 +4880,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.IsSkillUnlocked(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     bool IsSkillUnlocked(unsigned long long a0) const
     {
         return NativeCall<bool, unsigned long long>(this, "AShooterPlayerController.IsSkillUnlocked(FName)", a0);
@@ -5057,7 +5056,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.LoadLocalPlayerArkData()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void LoadLocalPlayerArkData() const
     {
         NativeCall<void>(this, "AShooterPlayerController.LoadLocalPlayerArkData()");
@@ -5309,7 +5308,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnEmoteKey1Release()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnEmoteKey1Release() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnEmoteKey1Release()");
@@ -5317,7 +5316,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnEmoteKey2Press()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnEmoteKey2Press() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnEmoteKey2Press()");
@@ -5325,7 +5324,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnExtendedInfoPress()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnExtendedInfoPress() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnExtendedInfoPress()");
@@ -5333,7 +5332,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnExtendedInfoRelease()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnExtendedInfoRelease() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnExtendedInfoRelease()");
@@ -5397,7 +5396,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnPingUp()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=168+grafo=3/3]]
     void OnPingUp() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnPingUp()");
@@ -5557,7 +5556,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnStartFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnStartFire() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnStartFire()");
@@ -5565,7 +5564,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnStartInGameMenu()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=417+grafo=6/6]]
     void OnStartInGameMenu() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnStartInGameMenu()");
@@ -5581,7 +5580,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnStopFire()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnStopFire() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnStopFire()");
@@ -5589,7 +5588,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnStopTargeting()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OnStopTargeting() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnStopTargeting()");
@@ -5701,7 +5700,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.OnUseItemSlot<9>()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro OnUseItemSlot_9_() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.OnUseItemSlot<9>()");
@@ -5733,7 +5732,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OnWhistlePress()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=418+grafo=5/5]]
     void OnWhistlePress() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OnWhistlePress()");
@@ -5741,7 +5740,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.OpenMapMarkers()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void OpenMapMarkers() const
     {
         NativeCall<void>(this, "AShooterPlayerController.OpenMapMarkers()");
@@ -5825,7 +5824,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PlayReconnectSound()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void PlayReconnectSound() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PlayReconnectSound()");
@@ -5885,7 +5884,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.PressedChangeCameraMode()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=529+grafo=10/10]]
     void PressedChangeCameraMode() const
     {
         NativeCall<void>(this, "AShooterPlayerController.PressedChangeCameraMode()");
@@ -6041,7 +6040,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.RefreshLocalTrackedActors(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2683+chamadores=9+grafo=13/13]]
     void RefreshLocalTrackedActors(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.RefreshLocalTrackedActors(bool)", a0);
@@ -6113,7 +6112,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.RemoveCustomCloudData(FName)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=245+grafo=5/5]]
     void RemoveCustomCloudData(unsigned long long a0) const
     {
         NativeCall<void, unsigned long long>(this, "AShooterPlayerController.RemoveCustomCloudData(FName)", a0);
@@ -6129,7 +6128,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.RemoveDinoFromMap(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro RemoveDinoFromMap(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.RemoveDinoFromMap(APrimalDinoCharacter*)", a0);
@@ -6345,7 +6344,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SendUseItemSlotToStructure()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     bool SendUseItemSlotToStructure() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.SendUseItemSlotToStructure()");
@@ -6377,7 +6376,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerAddAchievementID(FString&,bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=186+bytes40+chamadores=3]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=186+bytes40+chamadores=2]]
     void ServerAddAchievementID(const FString& a0, bool a1) const
     {
         NativeCall<void, void*, bool>(this, "AShooterPlayerController.ServerAddAchievementID(FString&,bool)", const_cast<FString*>(&a0), a1);
@@ -6641,7 +6640,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerClearPOIVisibilityForAllActors_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerClearPOIVisibilityForAllActors_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerClearPOIVisibilityForAllActors_Implementation()");
@@ -6689,7 +6688,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerDPC_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerDPC_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerDPC_Implementation()");
@@ -6777,7 +6776,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerDropAllNotReadyForUploadItems_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerDropAllNotReadyForUploadItems_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerDropAllNotReadyForUploadItems_Implementation()");
@@ -6881,7 +6880,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerGetOriginalHairColor_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGetOriginalHairColor_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerGetOriginalHairColor_Implementation()");
@@ -6901,7 +6900,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerGrindItemInRemoteInventory_Implementation(UPrimalInventoryCompone
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerGrindItemInRemoteInventory_Implementation(void* a0, unsigned long long a1, bool a2) const
     {
         NativeCall<void, void*, unsigned long long, bool>(this, "AShooterPlayerController.ServerGrindItemInRemoteInventory_Implementation(UPrimalInventoryComponent*,FItemNetID,bool)", a0, a1, a2);
@@ -7021,7 +7020,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerProcessItemNetExecCommandBP(UPrimalInventoryComponent*,FItemNetID
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro ServerProcessItemNetExecCommandBP(void* a0, unsigned long long a1, bool a2, unsigned long long a3, void* a4) const
     {
         return NativeCall<void*, void*, unsigned long long, bool, unsigned long long, void*>(this, "AShooterPlayerController.ServerProcessItemNetExecCommandBP(UPrimalInventoryComponent*,FItemNetID,bool,FName,FBPNetExecParams)", a0, a1, a2, a3, a4);
@@ -7061,7 +7060,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerReleaseSeatingStructure_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerReleaseSeatingStructure_Implementation() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerReleaseSeatingStructure_Implementation()");
@@ -7093,7 +7092,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRemovePawnItem_Implementation(FItemNetID,bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRemovePawnItem_Implementation(unsigned long long a0, bool a1) const
     {
         NativeCall<void, unsigned long long, bool>(this, "AShooterPlayerController.ServerRemovePawnItem_Implementation(FItemNetID,bool)", a0, a1);
@@ -7281,7 +7280,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestDinoAncestors_Implementation(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerRequestDinoAncestors_Implementation(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ServerRequestDinoAncestors_Implementation(APrimalDinoCharacter*)", a0);
@@ -7385,7 +7384,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ServerRequestExtendedStructureRange()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void ServerRequestExtendedStructureRange() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ServerRequestExtendedStructureRange()");
@@ -7393,7 +7392,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ServerRequestExtendedStructureRange_Implementation()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ServerRequestExtendedStructureRange_Implementation() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ServerRequestExtendedStructureRange_Implementation()");
@@ -7865,7 +7864,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerRequestUpdateTrackedWaypointsAndMapPlayers(bool)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=4]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=52+chamadores=2]]
     void ServerRequestUpdateTrackedWaypointsAndMapPlayers(bool a0) const
     {
         NativeCall<void, bool>(this, "AShooterPlayerController.ServerRequestUpdateTrackedWaypointsAndMapPlayers(bool)", a0);
@@ -8137,7 +8136,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerSetFreeCraftingQuantity_Implementation(UPrimalInventoryComponent*
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ServerSetFreeCraftingQuantity_Implementation(void* a0, int a1) const
     {
         NativeCall<void, void*, int>(this, "AShooterPlayerController.ServerSetFreeCraftingQuantity_Implementation(UPrimalInventoryComponent*,int)", a0, a1);
@@ -8349,7 +8348,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerTogglePOIVisibilityForTrackedCreatureWaypoint_Implementation(int,
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=118+grafo=3/3]]
     void ServerTogglePOIVisibilityForTrackedCreatureWaypoint_Implementation(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerTogglePOIVisibilityForTrackedCreatureWaypoint_Implementation(int,bool)", a0, a1);
@@ -8365,7 +8364,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ServerTogglePOIVisibilityForTrackedPlayerWaypoint_Implementation(int,bo
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=118+grafo=3/3]]
     void ServerTogglePOIVisibilityForTrackedPlayerWaypoint_Implementation(int a0, bool a1) const
     {
         NativeCall<void, int, bool>(this, "AShooterPlayerController.ServerTogglePOIVisibilityForTrackedPlayerWaypoint_Implementation(int,bool)", a0, a1);
@@ -8853,7 +8852,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetCinematicModeAdvanced(bool,bool,bool,bool,TArray<FName,TSizedDefault
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=671+chamadores=2+grafo=7/7]]
     void SetCinematicModeAdvanced(bool a0, bool a1, bool a2, bool a3, void* a4, bool a5) const
     {
         NativeCall<void, bool, bool, bool, bool, void*, bool>(this, "AShooterPlayerController.SetCinematicModeAdvanced(bool,bool,bool,bool,TArray<FName,TSizedDefaultAllocator<32>>,bool)", a0, a1, a2, a3, a4, a5);
@@ -8885,7 +8884,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetCustomActorTracking_LastSavedCustomTameSearchText(FString&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void SetCustomActorTracking_LastSavedCustomTameSearchText(const FString& a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.SetCustomActorTracking_LastSavedCustomTameSearchText(FString&)", const_cast<FString*>(&a0));
@@ -8921,7 +8920,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.SetCustomCloudData(FCustomItemData&)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=285+grafo=7/7]]
     BrzPonteiro SetCustomCloudData(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.SetCustomCloudData(FCustomItemData&)", a0);
@@ -8977,7 +8976,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.SetImprintQuality(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: conferida_thunk_vtable
     void SetImprintQuality(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.SetImprintQuality(float)", a0);
@@ -9125,7 +9124,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.SetTamingWaypoints(TArray<FTamingWaypointInfo,TSizedDefaultAllocator<32
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro SetTamingWaypoints(void* a0) const
     {
         return NativeCall<void*, void*>(this, "AShooterPlayerController.SetTamingWaypoints(TArray<FTamingWaypointInfo,TSizedDefaultAllocator<32>>)", a0);
@@ -9189,7 +9188,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.SetupVoiceUserVolume()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro SetupVoiceUserVolume() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.SetupVoiceUserVolume()");
@@ -9229,7 +9228,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ShouldHideGameplayUI()
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=132+chamadores=2]]
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     bool ShouldHideGameplayUI() const
     {
         return NativeCall<bool>(this, "AShooterPlayerController.ShouldHideGameplayUI()");
@@ -9253,7 +9252,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ShowAllPlayersListToFollow()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ShowAllPlayersListToFollow() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ShowAllPlayersListToFollow()");
@@ -9269,7 +9268,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ShowBattleGameModeHUD()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ShowBattleGameModeHUD() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ShowBattleGameModeHUD()");
@@ -9277,7 +9276,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: PROVADO pelo bloco _Parms do jogo (nosso, medido no binario)
     //   AShooterPlayerController.ShowStructureCustomCosmeticUI(APrimalStructure*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ShowStructureCustomCosmeticUI(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ShowStructureCustomCosmeticUI(APrimalStructure*)", a0);
@@ -9293,7 +9292,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: CPF_ReturnParm — MESMO mecanismo do motor, NAO e' confirmacao
     //   AShooterPlayerController.ShowTribeManagerBP()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ShowTribeManagerBP() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ShowTribeManagerBP()");
@@ -9433,7 +9432,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadDpadDown()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void StartArkGamepadDpadDown() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadDpadDown()");
@@ -9465,7 +9464,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadFaceButtonLeft()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void StartArkGamepadFaceButtonLeft() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadFaceButtonLeft()");
@@ -9473,7 +9472,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.StartArkGamepadFaceButtonRight()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=617+grafo=8/8]]
     void StartArkGamepadFaceButtonRight() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartArkGamepadFaceButtonRight()");
@@ -9565,7 +9564,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // dump_sobre_sdk_287a0
     //   AShooterPlayerController.StartTalkingWrapper()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void StartTalkingWrapper() const
     {
         NativeCall<void>(this, "AShooterPlayerController.StartTalkingWrapper()");
@@ -9721,7 +9720,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.Tick_SearchForPOIs(float)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: resolve por ORDEM — inferido pela posicao entre duas ancoras, SEM prova de bytes
     void Tick_SearchForPOIs(float a0) const
     {
         NativeCall<void, float>(this, "AShooterPlayerController.Tick_SearchForPOIs(float)", a0);
@@ -9745,7 +9744,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleDinoNameTags()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void ToggleDinoNameTags() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ToggleDinoNameTags()");
@@ -9761,7 +9760,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleMap()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=787+grafo=11/12]]
     void ToggleMap() const
     {
         NativeCall<void>(this, "AShooterPlayerController.ToggleMap()");
@@ -9777,7 +9776,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.ToggleRTSKeyBindsIfChordActive()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro ToggleRTSKeyBindsIfChordActive() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.ToggleRTSKeyBindsIfChordActive()");
@@ -9810,7 +9809,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.ToggleTrackingDinoOnMultiUse(APrimalDinoCharacter*)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     void ToggleTrackingDinoOnMultiUse(void* a0) const
     {
         NativeCall<void, void*>(this, "AShooterPlayerController.ToggleTrackingDinoOnMultiUse(APrimalDinoCharacter*)", a0);
@@ -9898,7 +9897,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.TryLoadProfile()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void TryLoadProfile() const
     {
         NativeCall<void>(this, "AShooterPlayerController.TryLoadProfile()");
@@ -9906,7 +9905,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.TryRemoveUnownedDLC()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     BrzPonteiro TryRemoveUnownedDLC() const
     {
         return NativeCall<void*>(this, "AShooterPlayerController.TryRemoveUnownedDLC()");
@@ -9922,7 +9921,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.TryToStartTalking(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro TryToStartTalking(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterPlayerController.TryToStartTalking(bool)", a0);
@@ -9930,7 +9929,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // PARAMETROS do binario, com a indirecao certa. O RETORNO NAO tem segunda fonte: sai como void*, que le' certo ponteiro/int/bool (RAX) e NAO le' float/double nem struct grande. Confira antes de usar o retorno desta.
     //   AShooterPlayerController.TryToStopTalking(bool)
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: INFERIDO, com segunda evidencia [metodo_grafo]
     BrzPonteiro TryToStopTalking(bool a0) const
     {
         return NativeCall<void*, bool>(this, "AShooterPlayerController.TryToStopTalking(bool)", a0);
@@ -10078,7 +10077,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.UpdateRequestEquippedItemsQueue()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=2540+grafo=10/10]]
     void UpdateRequestEquippedItemsQueue() const
     {
         NativeCall<void>(this, "AShooterPlayerController.UpdateRequestEquippedItemsQueue()");
@@ -10142,7 +10141,7 @@ struct AShooterPlayerController : public ABasePlayerController
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   AShooterPlayerController.UseFastInventory()
-    // endereco: casamento de bytes com a build de referencia
+    // endereco: NAO RESOLVE nesta build — a chamada devolve o zero do tipo e escreve a chave no log
     void UseFastInventory() const
     {
         NativeCall<void>(this, "AShooterPlayerController.UseFastInventory()");
@@ -10513,13 +10512,13 @@ struct AShooterPlayerController : public ABasePlayerController
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPlayerTravelLocation` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x36F0; confianca alta)
+    //  ancorado em `LastPlayerTravelLocation` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36F0; confianca alta)
     void*& AccumulatedRideTimeField() const
     { return BrzCampoAncorado<void*>(this, "LastPlayerTravelLocation", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1040; confianca alta)
+    //  ancorado em `LastRawInputDir` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1040; confianca alta)
     void*& AcknowledgePosessionCallsField() const
     { return BrzCampoAncorado<void*>(this, "LastRawInputDir", 24); }
     BrzCampoPonteiro ActiveWaypoints_CreaturesField() const
@@ -10547,18 +10546,18 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro ActorTracking_TempTrack_TrackState_PlayersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ActorTracking_TempTrack_TrackState_Players")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x3610; confianca media)
+    //  ancorado em `PerfCheckLocations` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3610; confianca media)
     void*& AdvanceMapPerformanceTestHandleField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +2, medido na build 25535041
-    //  (offset absoluto medido: 0x2720; confianca alta)
+    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +2 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2720; confianca alta)
     void*& AimMangetismClosestLocationField() const
     { return BrzCampoAncorado<void*>(this, "CustomActorTracking_HasJustChangedSearchText", 2); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +26, medido na build 25535041
-    //  (offset absoluto medido: 0x2738; confianca alta)
+    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +26 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2738; confianca alta)
     FName& AimMangetismCosestBoneField() const
     { return BrzCampoAncorado<FName>(this, "CustomActorTracking_HasJustChangedSearchText", 26); }
     BrzCampoPonteiro AllCreaturesWhosInfoIsBeingSentToClientFromServerField() const
@@ -10568,105 +10567,105 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro AllPlayersWhosInfoIsBeingSentToClientFromServer_TeammatesField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.AllPlayersWhosInfoIsBeingSentToClientFromServer_Teammates")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +456, medido na build 25535041
-    //  (offset absoluto medido: 0x2318; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +456 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2318; confianca baixa)
     void*& ApplicationEnteredForegroundDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 456); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +448, medido na build 25535041
-    //  (offset absoluto medido: 0x2310; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +448 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2310; confianca baixa)
     void*& ApplicationReactivatedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 448); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +464, medido na build 25535041
-    //  (offset absoluto medido: 0x2320; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +464 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2320; confianca baixa)
     void*& ApplicationSystemBlockListChangedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 464); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +60, medido na build 25535041
-    //  (offset absoluto medido: 0xD4C; confianca media)
+    //  ancorado em `CurrentPlayerCharacterLocation` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD4C; confianca media)
     void*& ArkTributeAsyncBatchCountField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPlayerCharacterLocation", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +56, medido na build 25535041
-    //  (offset absoluto medido: 0xD48; confianca media)
+    //  ancorado em `CurrentPlayerCharacterLocation` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD48; confianca media)
     void*& ArkTributeAsyncLoadIndexField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPlayerCharacterLocation", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1280; confianca alta)
+    //  ancorado em `PhotoModeMarkerActor` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1280; confianca alta)
     void*& AwaitingHUDClassField() const
     { return BrzCampoAncorado<void*>(this, "PhotoModeMarkerActor", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2160; confianca media)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2160; confianca media)
     void*& BeforeSendHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +336, medido na build 25535041
-    //  (offset absoluto medido: 0x22A0; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +336 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22A0; confianca baixa)
     void*& BlockedTextUsersField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 336); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +176, medido na build 25535041
-    //  (offset absoluto medido: 0x2200; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2200; confianca baixa)
     void*& BlockedVoiceQueryResultsField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +256, medido na build 25535041
-    //  (offset absoluto medido: 0x2250; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +256 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2250; confianca baixa)
     void*& BlockedVoiceUsersField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 256); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x3628; confianca baixa)
+    //  ancorado em `PerfCheckLocations` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3628; confianca baixa)
     void*& CacheOwnedPremiumModsField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x25B8; confianca media)
+    //  ancorado em `EnforcementColors` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25B8; confianca media)
     AActor*& CachedAimedUseActorField() const
     { return BrzCampoAncorado<AActor*>(this, "EnforcementColors", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x25C0; confianca media)
+    //  ancorado em `EnforcementColors` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25C0; confianca media)
     UActorComponent*& CachedAimedUseActorComponentField() const
     { return BrzCampoAncorado<UActorComponent*>(this, "EnforcementColors", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x11A0; confianca baixa)
+    //  ancorado em `CurrentTrackingMark` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11A0; confianca baixa)
     void*& CachedCosmeticsForNewPlayerField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x25C8; confianca media)
+    //  ancorado em `EnforcementColors` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25C8; confianca media)
     int& CachedHitBodyIndexField() const
     { return BrzCampoAncorado<int>(this, "EnforcementColors", 64); }
     double& CachedTeamTameListUpdateIntervalField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerController.CachedTeamTameListUpdateInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x25D0; confianca media)
+    //  ancorado em `EnforcementColors` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25D0; confianca media)
     TArray<void*>& Cached_AimedSimplePrimitivesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "EnforcementColors", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +119, medido na build 25535041
-    //  (offset absoluto medido: 0x16E0; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +119 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16E0; confianca media)
     void*& ChatPrivilegCSField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 119); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +15, medido na build 25535041
-    //  (offset absoluto medido: 0x1658; confianca alta)
+    //  ancorado em `bEnableAltFire` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1658; confianca alta)
     float& ChatSpamWeightField() const
     { return BrzCampoAncorado<float>(this, "bEnableAltFire", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +39, medido na build 25535041
-    //  (offset absoluto medido: 0x1A38; confianca media)
+    //  ancorado em `bForceHideGameplayUI` +39 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A38; confianca media)
     TArray<void*>& ClientCachedTribeOnlineListField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bForceHideGameplayUI", 39); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x1180; confianca media)
+    //  ancorado em `CurrentTrackingMark` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1180; confianca media)
     void*& ClientRecvDataField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 128); }
     FString& ClientTimerCachedCustomTameSearchTextField() const
@@ -10680,20 +10679,20 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro ClientsideTrackLatestDeathPOIField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ClientsideTrackLatestDeathPOI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x12A0; confianca media)
+    //  ancorado em `PhotoModeMarkerActor` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12A0; confianca media)
     void*& CloseSteamStatusSceneHandleField() const
     { return BrzCampoAncorado<void*>(this, "PhotoModeMarkerActor", 56); }
     int& ClubArkTokensField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.ClubArkTokens"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +152, medido na build 25535041
-    //  (offset absoluto medido: 0x2420; confianca baixa)
+    //  ancorado em `DiscordUserID` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2420; confianca baixa)
     void*& CommunicationAllowedPermissionsField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x23D0; confianca media)
+    //  ancorado em `DiscordUserID` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x23D0; confianca media)
     void*& CommunicationPermissionsActivelyBeingCheckedField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 72); }
     BrzCampoPonteiro CreativeModeBuffField() const
@@ -10701,8 +10700,8 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro CreaturesAlreadyHandledByTamingAutoAddField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.CreaturesAlreadyHandledByTamingAutoAdd")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +296, medido na build 25535041
-    //  (offset absoluto medido: 0x19A8; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +296 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19A8; confianca baixa)
     void*& CurrentCharacterTransferStateField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 296); }
     BrzCampoPonteiro CurrentClientTeamPingsField() const
@@ -10712,8 +10711,8 @@ struct AShooterPlayerController : public ABasePlayerController
     int& CurrentGameModeMaxNumOfRespawnsField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.CurrentGameModeMaxNumOfRespawns"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +296, medido na build 25535041
-    //  (offset absoluto medido: 0x3420; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +296 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3420; confianca baixa)
     void*& CurrentLeavingVoiceChannelsField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 296); }
     TArray<void*>& CurrentPingsField() const
@@ -10727,8 +10726,8 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro CurrentTrackingMarkField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.CurrentTrackingMark")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +95, medido na build 25535041
-    //  (offset absoluto medido: 0x16C8; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +95 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C8; confianca media)
     TArray<void*>& CurrentTribeLogField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 95); }
     int& CustomActorTracking_DisplayedResultsCountField() const
@@ -10754,15 +10753,15 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro DebugPingLifetimeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.DebugPingLifetime")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x25A0; confianca alta)
+    //  ancorado em `EnforcementColors` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25A0; confianca alta)
     void*& DelayedNetCleanupHandleField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 24); }
     float& DesiredDistanceForActorTrackingPOILoweredTransparencyField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.DesiredDistanceForActorTrackingPOILoweredTransparency"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x23A8; confianca media)
+    //  ancorado em `DiscordUserID` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x23A8; confianca media)
     void*& DiscordLockField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 32); }
     BrzCampoPonteiro DiscordUserIDField() const
@@ -10770,13 +10769,13 @@ struct AShooterPlayerController : public ABasePlayerController
     float& DistanceNearDeathWaypointToClearPOIField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.DistanceNearDeathWaypointToClearPOI"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x1858; confianca media)
+    //  ancorado em `WaypointsSOTF` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1858; confianca media)
     float& DoFSettingCurrentTimerField() const
     { return BrzCampoAncorado<float>(this, "WaypointsSOTF", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +100, medido na build 25535041
-    //  (offset absoluto medido: 0x185C; confianca media)
+    //  ancorado em `WaypointsSOTF` +100 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x185C; confianca media)
     float& DoFSettingTargetTimerField() const
     { return BrzCampoAncorado<float>(this, "WaypointsSOTF", 100); }
     TArray<void*>& EnforcementColorsField() const
@@ -10784,8 +10783,8 @@ struct AShooterPlayerController : public ABasePlayerController
     TArray<void*>& EnforcementRelevantStructuresField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.EnforcementRelevantStructures"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +23, medido na build 25535041
-    //  (offset absoluto medido: 0x1660; confianca alta)
+    //  ancorado em `bEnableAltFire` +23 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1660; confianca alta)
     double& EnteredSpectatingStateTimeField() const
     { return BrzCampoAncorado<double>(this, "bEnableAltFire", 23); }
     TWeakObjectPtr<void>& FastTravelDroppedInventoryField() const
@@ -10795,52 +10794,52 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro FogOfWarClassField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.FogOfWarClass")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnBountyCategoryProgressed` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2540; confianca alta)
+    //  ancorado em `OnBountyCategoryProgressed` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2540; confianca alta)
     void*& ForceColorOverlayColorField() const
     { return BrzCampoAncorado<void*>(this, "OnBountyCategoryProgressed", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnBountyCategoryProgressed` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x2558; confianca media)
+    //  ancorado em `OnBountyCategoryProgressed` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2558; confianca media)
     double& ForceColorOverlayFadeOutTimeField() const
     { return BrzCampoAncorado<double>(this, "OnBountyCategoryProgressed", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `OnBountyCategoryProgressed` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x2550; confianca alta)
+    //  ancorado em `OnBountyCategoryProgressed` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2550; confianca alta)
     double& ForceColorOverlayUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "OnBountyCategoryProgressed", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x19E8; confianca alta)
+    //  ancorado em `bPendingAllowPlayerMovement` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19E8; confianca alta)
     double& ForceDrawCurrentGroupsUntilTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 8); }
     float& ForcedTimerRestrictionOnRequestingTrackingInfoFromServerField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.ForcedTimerRestrictionOnRequestingTrackingInfoFromServer"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x10C0; confianca alta)
+    //  ancorado em `bUsingExtendedInfoMap` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C0; confianca alta)
     void*& GamepadBackHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 16); }
     int& Gen1ENFixDesyncValueField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.Gen1ENFixDesyncValue"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x2514; confianca media)
+    //  ancorado em `MissionWaypoint` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2514; confianca media)
     int& Gen1FixENCountField() const
     { return BrzCampoAncorado<int>(this, "MissionWaypoint", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x2518; confianca media)
+    //  ancorado em `MissionWaypoint` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2518; confianca media)
     int& Gen1FixENCountThresholdField() const
     { return BrzCampoAncorado<int>(this, "MissionWaypoint", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x2510; confianca media)
+    //  ancorado em `MissionWaypoint` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2510; confianca media)
     float& Gen1FixENTimeThresholdField() const
     { return BrzCampoAncorado<float>(this, "MissionWaypoint", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +159, medido na build 25535041
-    //  (offset absoluto medido: 0x1708; confianca baixa)
+    //  ancorado em `bPreventPaintingStreaming` +159 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1708; confianca baixa)
     void*& GetUserCommunicationPrivilegeWithTargetUserCompleteDelegateField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 159); }
     FieldArray<unsigned char> HeldItemSlotField() const
@@ -10850,70 +10849,70 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro HighlightedStructuresField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.HighlightedStructures")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x1358; confianca baixa)
+    //  ancorado em `SteamInventoryStatusUITemplate` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1358; confianca baixa)
     void*& InProgressNonClusterCharacterUploadsField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 168); }
     BrzCampoPonteiro IsChangingCameraModeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.IsChangingCameraMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x1308; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1308; confianca media)
     void*& LastArkTributeDataField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +184, medido na build 25535041
-    //  (offset absoluto medido: 0xD08; confianca baixa)
+    //  ancorado em `PauseMenuUITemplate` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD08; confianca baixa)
     void*& LastAudioComponentVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +432, medido na build 25535041
-    //  (offset absoluto medido: 0x2300; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +432 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2300; confianca baixa)
     double& LastBlockedVoiceQueryTimeField() const
     { return BrzCampoAncorado<double>(this, "bTribeCacheHaveRallyPointData", 432); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xC58; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC58; confianca media)
     void*& LastCachedPlayerControlRotationField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +101, medido na build 25535041
-    //  (offset absoluto medido: 0x17B0; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +101 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17B0; confianca media)
     void*& LastCheckedOwnedDLCField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 101); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +31, medido na build 25535041
-    //  (offset absoluto medido: 0x1A30; confianca alta)
+    //  ancorado em `bForceHideGameplayUI` +31 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A30; confianca alta)
     double& LastClientModifiedARKInventoryTimeField() const
     { return BrzCampoAncorado<double>(this, "bForceHideGameplayUI", 31); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +48, medido na build 25535041
-    //  (offset absoluto medido: 0xC80; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC80; confianca media)
     void*& LastClientNotifyShowProfileRequestCallTimeField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +23, medido na build 25535041
-    //  (offset absoluto medido: 0x1A28; confianca alta)
+    //  ancorado em `bForceHideGameplayUI` +23 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A28; confianca alta)
     double& LastClientRequestTribeOnlineListTimeField() const
     { return BrzCampoAncorado<double>(this, "bForceHideGameplayUI", 23); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x105C; confianca media)
+    //  ancorado em `LastRawInputDir` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x105C; confianca media)
     TWeakObjectPtr<void>& LastControlledPlayerCharacterField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "LastRawInputDir", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SFXVolumeMultiplier` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x1A58; confianca alta)
+    //  ancorado em `SFXVolumeMultiplier` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A58; confianca alta)
     unsigned long long& LastConvertedPlayerIDField() const
     { return BrzCampoAncorado<unsigned long long>(this, "SFXVolumeMultiplier", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SFXVolumeMultiplier` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x1A60; confianca alta)
+    //  ancorado em `SFXVolumeMultiplier` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A60; confianca alta)
     FString& LastConvertedPlayerIDStringField() const
     { return BrzCampoAncorado<FString>(this, "SFXVolumeMultiplier", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xF98; confianca alta)
+    //  ancorado em `LastDeathPrimalCharacter` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF98; confianca alta)
     double& LastDeadCharacterDestructionTimeField() const
     { return BrzCampoAncorado<double>(this, "LastDeathPrimalCharacter", 16); }
     BrzCampoPonteiro LastDeathLocationField() const
@@ -10927,20 +10926,20 @@ struct AShooterPlayerController : public ABasePlayerController
     AShooterCharacter*& LastDiedListenServerHostField() const
     { return *GetNativePointerField<AShooterCharacter**>(this, "AShooterPlayerController.LastDiedListenServerHost"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x1878; confianca media)
+    //  ancorado em `WaypointsSOTF` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1878; confianca media)
     int& LastDownloadCachedTribeIDField() const
     { return BrzCampoAncorado<int>(this, "WaypointsSOTF", 128); }
     BrzCampoPonteiro LastDownloadedTributePlayerDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.LastDownloadedTributePlayerData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x1288; confianca alta)
+    //  ancorado em `PhotoModeMarkerActor` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1288; confianca alta)
     FItemNetID& LastEquipedItemNetIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "PhotoModeMarkerActor", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x25B0; confianca media)
+    //  ancorado em `EnforcementColors` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25B0; confianca media)
     int& LastFrameAimedUseActorCachedField() const
     { return BrzCampoAncorado<int>(this, "EnforcementColors", 40); }
     int& LastFrameScrollDownField() const
@@ -10948,82 +10947,82 @@ struct AShooterPlayerController : public ABasePlayerController
     int& LastFrameScrollUpField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.LastFrameScrollUp"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x1A18; confianca alta)
+    //  ancorado em `bForceHideGameplayUI` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A18; confianca alta)
     double& LastGamepadOpenRemoteInventoryTimeField() const
     { return BrzCampoAncorado<double>(this, "bForceHideGameplayUI", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MissionWaypoint` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x2508; confianca media)
+    //  ancorado em `MissionWaypoint` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2508; confianca media)
     double& LastGen1FixENTimeField() const
     { return BrzCampoAncorado<double>(this, "MissionWaypoint", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +15, medido na build 25535041
-    //  (offset absoluto medido: 0x1678; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1678; confianca media)
     int& LastHarvestedElementIndexField() const
     { return BrzCampoAncorado<int>(this, "bPreventPaintingStreaming", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x1210; confianca media)
+    //  ancorado em `RemoteViewingInventories` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1210; confianca media)
     TWeakObjectPtr<void>& LastHeldUseActorField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "RemoteViewingInventories", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x1220; confianca media)
+    //  ancorado em `RemoteViewingInventories` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1220; confianca media)
     int& LastHeldUseHitBodyIndexField() const
     { return BrzCampoAncorado<int>(this, "RemoteViewingInventories", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x1218; confianca media)
+    //  ancorado em `RemoteViewingInventories` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1218; confianca media)
     TWeakObjectPtr<void>& LastHeldUseHitComponentField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "RemoteViewingInventories", 88); }
     APostProcessVolume*& LastHighestPriorityPostProcessVolumeField() const
     { return *GetNativePointerField<APostProcessVolume**>(this, "AShooterPlayerController.LastHighestPriorityPostProcessVolume"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x1828; confianca media)
+    //  ancorado em `WaypointsSOTF` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1828; confianca media)
     void*& LastHitMarkerCharacterSettingsField() const
     { return BrzCampoAncorado<void*>(this, "WaypointsSOTF", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1808; confianca media)
+    //  ancorado em `WaypointsSOTF` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1808; confianca media)
     double& LastHitMarkerCharacterTimeField() const
     { return BrzCampoAncorado<double>(this, "WaypointsSOTF", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x1818; confianca media)
+    //  ancorado em `WaypointsSOTF` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1818; confianca media)
     double& LastHitMarkerStructureTimeField() const
     { return BrzCampoAncorado<double>(this, "WaypointsSOTF", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +80, medido na build 25535041
-    //  (offset absoluto medido: 0xCA0; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCA0; confianca media)
     void*& LastInstigatorVOEntryField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +125, medido na build 25535041
-    //  (offset absoluto medido: 0x17C8; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +125 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17C8; confianca media)
     void*& LastLargeMoveLocationField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 125); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +149, medido na build 25535041
-    //  (offset absoluto medido: 0x17E0; confianca baixa)
+    //  ancorado em `bHasReachedLowestDepth` +149 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17E0; confianca baixa)
     double& LastLargeMoveTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 149); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x12D8; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12D8; confianca media)
     double& LastMultiUseInteractionTimeField() const
     { return BrzCampoAncorado<double>(this, "SteamInventoryStatusUITemplate", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +117, medido na build 25535041
-    //  (offset absoluto medido: 0x17C0; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +117 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17C0; confianca media)
     double& LastMultiUseTraceTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 117); }
     double& LastNetworkTimeRequestedFilterCachedTeamTameListField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerController.LastNetworkTimeRequestedFilterCachedTeamTameList"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +157, medido na build 25535041
-    //  (offset absoluto medido: 0x17E8; confianca baixa)
+    //  ancorado em `bHasReachedLowestDepth` +157 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17E8; confianca baixa)
     double& LastNotOnUnriddenDinoTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 157); }
     double& LastPingTimeField() const
@@ -11031,8 +11030,8 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro LastPlayerTravelLocationField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.LastPlayerTravelLocation")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +93, medido na build 25535041
-    //  (offset absoluto medido: 0x17A8; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +93 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17A8; confianca media)
     double& LastRPCStayAliveTimeField() const
     { return BrzCampoAncorado<double>(this, "bHasReachedLowestDepth", 93); }
     BrzCampoPonteiro LastRawInputDirField() const
@@ -11040,50 +11039,50 @@ struct AShooterPlayerController : public ABasePlayerController
     FieldArray<double> LastRepeatUseConsumableTimeField() const
     { return { (void*)this, "AShooterPlayerController.LastRepeatUseConsumableTime" }; }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x19F0; confianca alta)
+    //  ancorado em `bPendingAllowPlayerMovement` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19F0; confianca alta)
     double& LastRequestedPlaceStructureTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1270; confianca alta)
+    //  ancorado em `PhotoModeMarkerActor` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1270; confianca alta)
     double& LastRespawnTimeField() const
     { return BrzCampoAncorado<double>(this, "PhotoModeMarkerActor", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x12F0; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12F0; confianca media)
     void*& LastSentCarriedAsPassengerRotationField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x1A00; confianca alta)
+    //  ancorado em `bPendingAllowPlayerMovement` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A00; confianca alta)
     double& LastServerRemovePawnItemTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +152, medido na build 25535041
-    //  (offset absoluto medido: 0x1198; confianca baixa)
+    //  ancorado em `CurrentTrackingMark` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1198; confianca baixa)
     double& LastServerRequestFuelQuantityField() const
     { return BrzCampoAncorado<double>(this, "CurrentTrackingMark", 152); }
     double& LastShowExtendedInfoTimeField() const
     { return *GetNativePointerField<double*>(this, "AShooterPlayerController.LastShowExtendedInfoTime"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +320, medido na build 25535041
-    //  (offset absoluto medido: 0x19C0; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +320 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19C0; confianca baixa)
     void*& LastSnapPointCyclePositionField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 320); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +72, medido na build 25535041
-    //  (offset absoluto medido: 0xC98; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC98; confianca media)
     void*& LastSoundWaveField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x1870; confianca media)
+    //  ancorado em `WaypointsSOTF` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1870; confianca media)
     int& LastSpawnPointIDField() const
     { return BrzCampoAncorado<int>(this, "WaypointsSOTF", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +124, medido na build 25535041
-    //  (offset absoluto medido: 0x1874; confianca media)
+    //  ancorado em `WaypointsSOTF` +124 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1874; confianca media)
     int& LastSpawnRegionIndexField() const
     { return BrzCampoAncorado<int>(this, "WaypointsSOTF", 124); }
     FItemNetID& LastSteamItemIDToAddField() const
@@ -11091,144 +11090,144 @@ struct AShooterPlayerController : public ABasePlayerController
     FItemNetID& LastSteamItemIDToRemoveField() const
     { return *GetNativePointerField<FItemNetID*>(this, "AShooterPlayerController.LastSteamItemIDToRemove"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +392, medido na build 25535041
-    //  (offset absoluto medido: 0x3480; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +392 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3480; confianca baixa)
     void*& LastStructureSkinNetMessageTimeField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 392); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +384, medido na build 25535041
-    //  (offset absoluto medido: 0x3478; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +384 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3478; confianca baixa)
     void*& LastStructureSkinSetPersistentDataTimeField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 384); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SFXVolumeMultiplier` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1A50; confianca alta)
+    //  ancorado em `SFXVolumeMultiplier` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A50; confianca alta)
     double& LastTeleportedTimeField() const
     { return BrzCampoAncorado<double>(this, "SFXVolumeMultiplier", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +34, medido na build 25535041
-    //  (offset absoluto medido: 0x2740; confianca media)
+    //  ancorado em `CustomActorTracking_HasJustChangedSearchText` +34 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2740; confianca media)
     double& LastTimeFoundBetterClosestLocationField() const
     { return BrzCampoAncorado<double>(this, "CustomActorTracking_HasJustChangedSearchText", 34); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ForcedTimerRestrictionOnRequestingTrackingInfoFromServer` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2A88; confianca alta)
+    //  ancorado em `ForcedTimerRestrictionOnRequestingTrackingInfoFromServer` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A88; confianca alta)
     void*& LastTimeRequestedTrackingFromServerField() const
     { return BrzCampoAncorado<void*>(this, "ForcedTimerRestrictionOnRequestingTrackingInfoFromServer", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventCanOpenMap` +15, medido na build 25535041
-    //  (offset absoluto medido: 0x1260; confianca alta)
+    //  ancorado em `bPreventCanOpenMap` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1260; confianca alta)
     void*& LastTimeRequestedTradeDataField() const
     { return BrzCampoAncorado<void*>(this, "bPreventCanOpenMap", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x12E8; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12E8; confianca media)
     void*& LastTimeSentCarriedAsPassengerRotationField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x12E0; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12E0; confianca media)
     double& LastTimeSentCarriedRotationField() const
     { return BrzCampoAncorado<double>(this, "SteamInventoryStatusUITemplate", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x1048; confianca alta)
+    //  ancorado em `LastRawInputDir` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1048; confianca alta)
     void*& LastTimeToAcknowledgePosessionCallsField() const
     { return BrzCampoAncorado<void*>(this, "LastRawInputDir", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xFA0; confianca alta)
+    //  ancorado em `LastDeathPrimalCharacter` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFA0; confianca alta)
     double& LastTransferTimeField() const
     { return BrzCampoAncorado<double>(this, "LastDeathPrimalCharacter", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +300, medido na build 25535041
-    //  (offset absoluto medido: 0x19AC; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +300 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19AC; confianca baixa)
     void*& LastTransferWasDownloadingAscendedCharacterField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 300); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +288, medido na build 25535041
-    //  (offset absoluto medido: 0x19A0; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +288 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19A0; confianca baixa)
     unsigned long long& LastTransferredPlayerIDField() const
     { return BrzCampoAncorado<unsigned long long>(this, "LastDownloadedTributePlayerData", 288); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1A80; confianca media)
+    //  ancorado em `LastShowExtendedInfoTime` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A80; confianca media)
     UPrimalItem*& LastTransferredToRemoteInventoryItemField() const
     { return BrzCampoAncorado<UPrimalItem*>(this, "LastShowExtendedInfoTime", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +111, medido na build 25535041
-    //  (offset absoluto medido: 0x16D8; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +111 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16D8; confianca media)
     double& LastTribeLogRequestTimeField() const
     { return BrzCampoAncorado<double>(this, "bPreventPaintingStreaming", 111); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x12C0; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12C0; confianca media)
     void*& LastTurnSpeedField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x1290; confianca media)
+    //  ancorado em `PhotoModeMarkerActor` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1290; confianca media)
     FItemNetID& LastUnequippedItemNetIDField() const
     { return BrzCampoAncorado<FItemNetID>(this, "PhotoModeMarkerActor", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x1670; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1670; confianca media)
     double& LastUsePressTimeField() const
     { return BrzCampoAncorado<double>(this, "bPreventPaintingStreaming", 7); }
     FieldArray<double> LastUsedItemSlotTimesField() const
     { return { (void*)this, "AShooterPlayerController.LastUsedItemSlotTimes" }; }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x19F8; confianca alta)
+    //  ancorado em `bPendingAllowPlayerMovement` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19F8; confianca alta)
     double& LastVerifyStructureItemTimeField() const
     { return BrzCampoAncorado<double>(this, "bPendingAllowPlayerMovement", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +63, medido na build 25535041
-    //  (offset absoluto medido: 0x16A8; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +63 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A8; confianca media)
     void*& LastViewLocationField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 63); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x21F0; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x21F0; confianca baixa)
     double& LastVoiceOutTimeField() const
     { return BrzCampoAncorado<double>(this, "bTribeCacheHaveRallyPointData", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x11E0; confianca alta)
+    //  ancorado em `RemoteViewingInventories` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11E0; confianca alta)
     TArray<void*>& LastWheelCategoriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "RemoteViewingInventories", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x11F0; confianca media)
+    //  ancorado em `RemoteViewingInventories` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11F0; confianca media)
     TArray<UTexture2D*>& LastWheelIconsField() const
     { return BrzCampoAncorado<TArray<UTexture2D*>>(this, "RemoteViewingInventories", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x1200; confianca media)
+    //  ancorado em `RemoteViewingInventories` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1200; confianca media)
     TArray<void*>& LastWheelStringsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "RemoteViewingInventories", 64); }
     BrzCampoPonteiro LatestClientAutoTrackTamesSettingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.LatestClientAutoTrackTamesSetting")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x12A8; confianca media)
+    //  ancorado em `PhotoModeMarkerActor` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12A8; confianca media)
     long long& LinkedPlayerIDField() const
     { return BrzCampoAncorado<long long>(this, "PhotoModeMarkerActor", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x25E0; confianca media)
+    //  ancorado em `EnforcementColors` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25E0; confianca media)
     unsigned long long& LoadingFramesField() const
     { return BrzCampoAncorado<unsigned long long>(this, "EnforcementColors", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2398; confianca media)
+    //  ancorado em `DiscordUserID` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2398; confianca media)
     void*& MainLobbyJoinTimerField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 16); }
     TArray<void*>& MapDinosField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.MapDinos"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xD30; confianca alta)
+    //  ancorado em `CurrentPlayerCharacterLocation` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD30; confianca alta)
     float& MaxDragWeightToAimBoneField() const
     { return BrzCampoAncorado<float>(this, "CurrentPlayerCharacterLocation", 32); }
     int& MaxTeamPingDataOnClientField() const
@@ -11238,37 +11237,37 @@ struct AShooterPlayerController : public ABasePlayerController
     float& MaxUseDistanceField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.MaxUseDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructurePlacer` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xD58; confianca alta)
+    //  ancorado em `StructurePlacer` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD58; confianca alta)
     void*& MeleeAimAssistTimerField() const
     { return BrzCampoAncorado<void*>(this, "StructurePlacer", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +183, medido na build 25535041
-    //  (offset absoluto medido: 0x1720; confianca baixa)
+    //  ancorado em `bPreventPaintingStreaming` +183 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1720; confianca baixa)
     TArray<void*>& MessageQueueField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 183); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +175, medido na build 25535041
-    //  (offset absoluto medido: 0x1718; confianca baixa)
+    //  ancorado em `bPreventPaintingStreaming` +175 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1718; confianca baixa)
     void*& MessageQueueTasksCounterField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 175); }
     BrzCampoPonteiro MidasTouchDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.MidasTouchData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPlayerTravelLocation` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x36F8; confianca alta)
+    //  ancorado em `LastPlayerTravelLocation` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36F8; confianca alta)
     void*& MilestoneThresholdCountersField() const
     { return BrzCampoAncorado<void*>(this, "LastPlayerTravelLocation", 32); }
     BrzCampoPonteiro MissionWaypointField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.MissionWaypoint")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +52, medido na build 25535041
-    //  (offset absoluto medido: 0xD44; confianca media)
+    //  ancorado em `CurrentPlayerCharacterLocation` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD44; confianca media)
     int& ModifedButtonCountField() const
     { return BrzCampoAncorado<int>(this, "CurrentPlayerCharacterLocation", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventCanOpenMap` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x1258; confianca alta)
+    //  ancorado em `bPreventCanOpenMap` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1258; confianca alta)
     void*& MultiuseForActorTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "bPreventCanOpenMap", 7); }
     FPrimalPlayerDataStruct& MyPlayerDataStructField() const
@@ -11278,54 +11277,54 @@ struct AShooterPlayerController : public ABasePlayerController
     TArray<void*>& NearbyPointsOfInterestField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.NearbyPointsOfInterest"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +23, medido na build 25535041
-    //  (offset absoluto medido: 0x1680; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +23 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1680; confianca media)
     TArray<void*>& NotifiedTribeWarIDsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 23); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +39, medido na build 25535041
-    //  (offset absoluto medido: 0x1690; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +39 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1690; confianca media)
     TArray<void*>& NotifiedTribeWarNamesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bPreventPaintingStreaming", 39); }
     BrzCampoPonteiro OnBountyCategoryProgressedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.OnBountyCategoryProgressed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xC70; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC70; confianca media)
     void*& OnClientMessageOfTheDayRecivedField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 32); }
     BrzCampoPonteiro OnClientReceiveStructuresPlacedOnFloorField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.OnClientReceiveStructuresPlacedOnFloor")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x23A0; confianca media)
+    //  ancorado em `DiscordUserID` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x23A0; confianca media)
     void*& OnFriendsChangedHandleField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1248; confianca alta)
+    //  ancorado em `FastTravelDroppedInventory` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1248; confianca alta)
     void*& OnRepeatUseHeldTimerHandlerField() const
     { return BrzCampoAncorado<void*>(this, "FastTravelDroppedInventory", 24); }
     BrzCampoPonteiro OnSkillsChangedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.OnSkillsChanged")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +440, medido na build 25535041
-    //  (offset absoluto medido: 0x2308; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +440 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2308; confianca baixa)
     void*& OnSystemUIOverlayStateChangedDelegateHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 440); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x11D8; confianca alta)
+    //  ancorado em `RemoteViewingInventories` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x11D8; confianca alta)
     void*& OnUseHeldTimerHandleField() const
     { return BrzCampoAncorado<void*>(this, "RemoteViewingInventories", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShooterHUDDebugActors` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x3690; confianca alta)
+    //  ancorado em `ShooterHUDDebugActors` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3690; confianca alta)
     void*& OutdatedCosmeticIDsField() const
     { return BrzCampoAncorado<void*>(this, "ShooterHUDDebugActors", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShooterHUDDebugActors` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x36A8; confianca media)
+    //  ancorado em `ShooterHUDDebugActors` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36A8; confianca media)
     void*& OutdatedCosmeticsWarningHandleField() const
     { return BrzCampoAncorado<void*>(this, "ShooterHUDDebugActors", 40); }
     BrzCampoPonteiro POIDistanceToScreenCenterDismissField() const
@@ -11343,72 +11342,72 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro PauseMenuUITemplateField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.PauseMenuUITemplate")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PhotoModeMarkerActor` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x1298; confianca media)
+    //  ancorado em `PhotoModeMarkerActor` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1298; confianca media)
     void*& PendingAscensionItemCountField() const
     { return BrzCampoAncorado<void*>(this, "PhotoModeMarkerActor", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +64, medido na build 25535041
-    //  (offset absoluto medido: 0xC90; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC90; confianca media)
     void*& PendingInstigatorHandleField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +144, medido na build 25535041
-    //  (offset absoluto medido: 0xCE0; confianca baixa)
+    //  ancorado em `PauseMenuUITemplate` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCE0; confianca baixa)
     void*& PendingInstigatorVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +160, medido na build 25535041
-    //  (offset absoluto medido: 0xCF0; confianca baixa)
+    //  ancorado em `PauseMenuUITemplate` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xCF0; confianca baixa)
     void*& PendingInstigatorVORowsField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x1190; confianca baixa)
+    //  ancorado em `CurrentTrackingMark` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1190; confianca baixa)
     void*& PendingMarketDataRequestingStructureField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x1AD8; confianca media)
+    //  ancorado em `LastShowExtendedInfoTime` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1AD8; confianca media)
     void*& PendingRequestEquippedItemsQueueField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1A88; confianca media)
+    //  ancorado em `LastShowExtendedInfoTime` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A88; confianca media)
     void*& PendingResponseEquippedItemsQueueField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 24); }
     int& PendingViewingWheelCategoryField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.PendingViewingWheelCategory"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x35E8; confianca media)
+    //  ancorado em `PerfCheckLocations` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35E8; confianca media)
     void*& PerfCheckCurrentLocationIndexField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +84, medido na build 25535041
-    //  (offset absoluto medido: 0x35EC; confianca media)
+    //  ancorado em `PerfCheckLocations` +84 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35EC; confianca media)
     void*& PerfCheckCurrentYawField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 84); }
     BrzCampoPonteiro PerfCheckLocationsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.PerfCheckLocations")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x35C8; confianca media)
+    //  ancorado em `PerfCheckLocations` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35C8; confianca media)
     void*& PerfCheckLocationsShouldTakeMemReportField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x35B8; confianca media)
+    //  ancorado em `PerfCheckLocations` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35B8; confianca media)
     void*& PerfCheckLocationsShouldTakeScreenShotField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x35A8; confianca media)
+    //  ancorado em `PerfCheckLocations` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35A8; confianca media)
     void*& PerfCheckPoiTodsField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x35F0; confianca media)
+    //  ancorado em `PerfCheckLocations` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35F0; confianca media)
     void*& PerfCheckShouldTakeScreenshotField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 88); }
     FString& PerfCheckTimeOfDayField() const
@@ -11418,8 +11417,8 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro PersistentItemUnlocksField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.PersistentItemUnlocks")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x1A0C; confianca media)
+    //  ancorado em `bPendingAllowPlayerMovement` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A0C; confianca media)
     int& PersonalDinoTameCountField() const
     { return BrzCampoAncorado<int>(this, "bPendingAllowPlayerMovement", 44); }
     AActor*& PhotoModeMarkerActorField() const
@@ -11443,77 +11442,77 @@ struct AShooterPlayerController : public ABasePlayerController
     float& PingTraceDistanceField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.PingTraceDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +109, medido na build 25535041
-    //  (offset absoluto medido: 0x17B8; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +109 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17B8; confianca media)
     int& PlayerBadgeGroupField() const
     { return BrzCampoAncorado<int>(this, "bHasReachedLowestDepth", 109); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x12BC; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12BC; confianca media)
     int& PlayerControllerNumField() const
     { return BrzCampoAncorado<int>(this, "SteamInventoryStatusUITemplate", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x2198; confianca media)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2198; confianca media)
     void*& PlayerDataForVoiceField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x2168; confianca media)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2168; confianca media)
     void*& PlayerDataForVoiceCSField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x1860; confianca media)
+    //  ancorado em `WaypointsSOTF` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1860; confianca media)
     TArray<void*>& PlayerInventoryItemsField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "WaypointsSOTF", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +304, medido na build 25535041
-    //  (offset absoluto medido: 0x19B0; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +304 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19B0; confianca baixa)
     double& PossessedFirstPawnTimeField() const
     { return BrzCampoAncorado<double>(this, "LastDownloadedTributePlayerData", 304); }
     UPrimalLocalProfile*& PrimalLocalProfileField() const
     { return *GetNativePointerField<UPrimalLocalProfile**>(this, "AShooterPlayerController.PrimalLocalProfile"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalStatsCacheFlushInterval` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1B58; confianca alta)
+    //  ancorado em `PrimalStatsCacheFlushInterval` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B58; confianca alta)
     void*& PrimalStatsCacheField() const
     { return BrzCampoAncorado<void*>(this, "PrimalStatsCacheFlushInterval", 8); }
     float& PrimalStatsCacheFlushIntervalField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.PrimalStatsCacheFlushInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x21F8; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x21F8; confianca baixa)
     void*& QueryBlockedVoiceStateField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +416, medido na build 25535041
-    //  (offset absoluto medido: 0x22F0; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +416 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x22F0; confianca baixa)
     TArray<void*>& QueuedBlockedVoiceChatUsersToProcessAfterLoggingInField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "bTribeCacheHaveRallyPointData", 416); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x3380; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3380; confianca baixa)
     void*& QueuedVoiceChannelsToJoinField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +216, medido na build 25535041
-    //  (offset absoluto medido: 0x33D0; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x33D0; confianca baixa)
     void*& QueuedVoiceLobbiesToJoinField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x3608; confianca media)
+    //  ancorado em `PerfCheckLocations` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3608; confianca media)
     void*& RecordMapPerformanceTestHandleField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x35F8; confianca media)
+    //  ancorado em `PerfCheckLocations` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35F8; confianca media)
     void*& RecordedPerfChecksField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2158; confianca media)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2158; confianca media)
     void*& RecvHandleField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 8); }
     TArray<TWeakObjectPtr<void>>& RemoteViewingInventoriesField() const
@@ -11521,15 +11520,15 @@ struct AShooterPlayerController : public ABasePlayerController
     float& RespawnSoundDelayField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.RespawnSoundDelay"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ActorTracking_TempTrackActorsNotYetSyncedAtAll` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2BE0; confianca alta)
+    //  ancorado em `ActorTracking_TempTrackActorsNotYetSyncedAtAll` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2BE0; confianca alta)
     void*& RestrictClientAutoMarkDeathWaypointAsReachedField() const
     { return BrzCampoAncorado<void*>(this, "ActorTracking_TempTrackActorsNotYetSyncedAtAll", 16); }
     float& SFXVolumeMultiplierField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.SFXVolumeMultiplier"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xFF8; confianca alta)
+    //  ancorado em `PrimalLocalProfile` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFF8; confianca alta)
     void*& SaveProfileHandleField() const
     { return BrzCampoAncorado<void*>(this, "PrimalLocalProfile", 8); }
     int& SavedMissionBiomeFilterMaskField() const
@@ -11539,35 +11538,35 @@ struct AShooterPlayerController : public ABasePlayerController
     USoundCue*& SelectSlotSoundField() const
     { return *GetNativePointerField<USoundCue**>(this, "AShooterPlayerController.SelectSlotSound"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +5, medido na build 25535041
-    //  (offset absoluto medido: 0x1750; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +5 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1750; confianca media)
     void*& ServerCachedAchievementIDsField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 5); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +52, medido na build 25535041
-    //  (offset absoluto medido: 0x2C20; confianca media)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +52 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C20; confianca media)
     double& ServerClearDeathWaypoint_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 52); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +60, medido na build 25535041
-    //  (offset absoluto medido: 0x2C28; confianca media)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +60 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C28; confianca media)
     float& ServerClearDeathWaypoint_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 60); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +176, medido na build 25535041
-    //  (offset absoluto medido: 0x2A48; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A48; confianca baixa)
     double& ServerClearPOIVisibilityForAllActors_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x2A50; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A50; confianca baixa)
     float& ServerClearPOIVisibilityForAllActors_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 184); }
     BrzCampoPonteiro ServerMessageQueueField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ServerMessageQueue")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +203, medido na build 25535041
-    //  (offset absoluto medido: 0x1734; confianca baixa)
+    //  ancorado em `bPreventPaintingStreaming` +203 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1734; confianca baixa)
     void*& ServerMessageQueueTasksCounterField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 203); }
     float& ServerRequestCustomTrackedActorListInterval_WithUIField() const
@@ -11575,212 +11574,212 @@ struct AShooterPlayerController : public ABasePlayerController
     float& ServerRequestCustomTrackedActorListInterval_WithoutUIField() const
     { return *GetNativePointerField<float*>(this, "AShooterPlayerController.ServerRequestCustomTrackedActorListInterval_WithoutUI"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x29C8; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29C8; confianca media)
     double& ServerRequestCustomTrackedActorList_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 48); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +56, medido na build 25535041
-    //  (offset absoluto medido: 0x29D0; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29D0; confianca media)
     float& ServerRequestCustomTrackedActorList_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 56); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x29B8; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29B8; confianca media)
     double& ServerRequestRemoveDinoFromTamingListByID_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x29C0; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29C0; confianca media)
     float& ServerRequestRemoveDinoFromTamingListByID_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastNetworkTimeRequestedFilterCachedTeamTameList` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x26A8; confianca alta)
+    //  ancorado em `LastNetworkTimeRequestedFilterCachedTeamTameList` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26A8; confianca alta)
     void*& ServerRequestTamingInfoListHandleField() const
     { return BrzCampoAncorado<void*>(this, "LastNetworkTimeRequestedFilterCachedTeamTameList", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x29A8; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29A8; confianca media)
     double& ServerRequestTamingInfoList_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x29B0; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29B0; confianca media)
     float& ServerRequestTamingInfoList_ServerRequestTamingInfoListField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamingWaypoints` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x26C8; confianca alta)
+    //  ancorado em `TamingWaypoints` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26C8; confianca alta)
     void*& ServerRequestTrackedDinoInfoListHandle_WithUIField() const
     { return BrzCampoAncorado<void*>(this, "TamingWaypoints", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamingWaypoints` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x26D0; confianca alta)
+    //  ancorado em `TamingWaypoints` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26D0; confianca alta)
     void*& ServerRequestTrackedDinoInfoListHandle_WithoutUIField() const
     { return BrzCampoAncorado<void*>(this, "TamingWaypoints", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x29E8; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29E8; confianca media)
     double& ServerRequestUpdateTrackedWaypointsAndMapPlayers_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 80); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x29F0; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29F0; confianca media)
     float& ServerRequestUpdateTrackedWaypointsAndMapPlayers_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x29D8; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29D8; confianca media)
     double& ServerRequestUpdateTrackedWaypointsOnly_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x29E0; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29E0; confianca media)
     float& ServerRequestUpdateTrackedWaypointsOnly_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 72); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x2A18; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A18; confianca media)
     double& ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x2A20; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A20; confianca baixa)
     float& ServerSetActiveWaypointTrackedCreatureViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x2A08; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A08; confianca media)
     double& ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 112); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x2A10; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A10; confianca media)
     float& ServerSetActiveWaypointTrackedPlayerViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x2C00; confianca alta)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C00; confianca alta)
     double& ServerSetDeathWaypointInvisible_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 20); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +28, medido na build 25535041
-    //  (offset absoluto medido: 0x2C08; confianca alta)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +28 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C08; confianca alta)
     float& ServerSetDeathWaypointInvisible_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 28); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x2BF0; confianca alta)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2BF0; confianca alta)
     double& ServerSetDeathWaypointVisible_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 4); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2BF8; confianca alta)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2BF8; confianca alta)
     float& ServerSetDeathWaypointVisible_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 12); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +208, medido na build 25535041
-    //  (offset absoluto medido: 0x2A68; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +208 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A68; confianca baixa)
     double& ServerSetFavoriteTrackedCreatureViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 208); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +216, medido na build 25535041
-    //  (offset absoluto medido: 0x2A70; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +216 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A70; confianca baixa)
     float& ServerSetFavoriteTrackedCreatureViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 216); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +192, medido na build 25535041
-    //  (offset absoluto medido: 0x2A58; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +192 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A58; confianca baixa)
     double& ServerSetFavoriteTrackedPlayerViaCharacterIndex_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 192); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +200, medido na build 25535041
-    //  (offset absoluto medido: 0x2A60; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A60; confianca baixa)
     float& ServerSetFavoriteTrackedPlayerViaCharacterIndex_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 200); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +160, medido na build 25535041
-    //  (offset absoluto medido: 0x2A38; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +160 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A38; confianca baixa)
     double& ServerTogglePOIVisibilityForTrackedCreatureWaypoint_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 160); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +168, medido na build 25535041
-    //  (offset absoluto medido: 0x2A40; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +168 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A40; confianca baixa)
     float& ServerTogglePOIVisibilityForTrackedCreatureWaypoint_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 168); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +144, medido na build 25535041
-    //  (offset absoluto medido: 0x2A28; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +144 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A28; confianca baixa)
     double& ServerTogglePOIVisibilityForTrackedPlayerWaypoint_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 144); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +152, medido na build 25535041
-    //  (offset absoluto medido: 0x2A30; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A30; confianca baixa)
     float& ServerTogglePOIVisibilityForTrackedPlayerWaypoint_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +55, medido na build 25535041
-    //  (offset absoluto medido: 0x16A0; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +55 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A0; confianca media)
     int& ServerTribeLogLastLogIndexField() const
     { return BrzCampoAncorado<int>(this, "bPreventPaintingStreaming", 55); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +59, medido na build 25535041
-    //  (offset absoluto medido: 0x16A4; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +59 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16A4; confianca media)
     int& ServerTribeLogLastTribeIDField() const
     { return BrzCampoAncorado<int>(this, "bPreventPaintingStreaming", 59); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x29F8; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x29F8; confianca media)
     double& ServerUntrackAllActors_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x2A00; confianca media)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A00; confianca media)
     float& ServerUntrackAllActors_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 104); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1008; confianca alta)
+    //  ancorado em `PrimalLocalProfile` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1008; confianca alta)
     FString& ServerVersionField() const
     { return BrzCampoAncorado<FString>(this, "PrimalLocalProfile", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +480, medido na build 25535041
-    //  (offset absoluto medido: 0x34D8; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +480 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x34D8; confianca baixa)
     void*& Server_BlockedUserIdsField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 480); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x2C10; confianca media)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C10; confianca media)
     double& Server_RequestLastDeathTrackingActorLoc_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "ClientsideTrackLatestDeathPOI", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ClientsideTrackLatestDeathPOI` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x2C18; confianca media)
+    //  ancorado em `ClientsideTrackLatestDeathPOI` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2C18; confianca media)
     float& Server_RequestLastDeathTrackingActorLoc_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "ClientsideTrackLatestDeathPOI", 44); }
     BrzCampoPonteiro ShooterHUDDebugActorsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ShooterHUDDebugActors")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +69, medido na build 25535041
-    //  (offset absoluto medido: 0x35DD; confianca media)
+    //  ancorado em `PerfCheckLocations` +69 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35DD; confianca media)
     void*& ShouldUploadPerfCheckScreenshotsToJIRAField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 69); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +68, medido na build 25535041
-    //  (offset absoluto medido: 0x35DC; confianca media)
+    //  ancorado em `PerfCheckLocations` +68 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35DC; confianca media)
     void*& ShouldUploadPerfCheckToJIRAField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 68); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +312, medido na build 25535041
-    //  (offset absoluto medido: 0x19B8; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +312 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19B8; confianca baixa)
     int& SnapPointCycleField() const
     { return BrzCampoAncorado<int>(this, "LastDownloadedTributePlayerData", 312); }
     BrzCampoPonteiro SnowManagerField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.SnowManager")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +104, medido na build 25535041
-    //  (offset absoluto medido: 0x1228; confianca media)
+    //  ancorado em `RemoteViewingInventories` +104 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1228; confianca media)
     TWeakObjectPtr<void>& SpawnAtBedField() const
     { return BrzCampoAncorado<TWeakObjectPtr<void>>(this, "RemoteViewingInventories", 104); }
     TArray<APointOfInterestCosmeticActor*>& SpawnedPointCosmeticActorsField() const
@@ -11790,38 +11789,38 @@ struct AShooterPlayerController : public ABasePlayerController
     int& SpectatorCycleIndexField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.SpectatorCycleIndex"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x35D8; confianca media)
+    //  ancorado em `PerfCheckLocations` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35D8; confianca media)
     void*& SpyglassPerfWaitSecondsOverrideField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 64); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bMissionSortByDistance` +15, medido na build 25535041
-    //  (offset absoluto medido: 0x10A8; confianca alta)
+    //  ancorado em `bMissionSortByDistance` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10A8; confianca alta)
     void*& StartChatHandleField() const
     { return BrzCampoAncorado<void*>(this, "bMissionSortByDistance", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x10D8; confianca media)
+    //  ancorado em `bUsingExtendedInfoMap` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10D8; confianca media)
     void*& StartEmoteSelectionHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bMissionSortByDistance` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x10A0; confianca alta)
+    //  ancorado em `bMissionSortByDistance` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10A0; confianca alta)
     void*& StartInventoryRadialSelectorHandleField() const
     { return BrzCampoAncorado<void*>(this, "bMissionSortByDistance", 7); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x10B8; confianca alta)
+    //  ancorado em `bUsingExtendedInfoMap` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10B8; confianca alta)
     void*& StartPlayerActionRadialSelectorHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x10D0; confianca alta)
+    //  ancorado em `bUsingExtendedInfoMap` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10D0; confianca alta)
     void*& StartWhistleSelectionHandleField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +72, medido na build 25535041
-    //  (offset absoluto medido: 0x35E0; confianca media)
+    //  ancorado em `PerfCheckLocations` +72 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35E0; confianca media)
     void*& StartedPerfCheckAtField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 72); }
     BrzCampoPonteiro SteamInventoryStatusUITemplateField() const
@@ -11833,18 +11832,18 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro TamingWaypointsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TamingWaypoints")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPlayerCharacterLocation` +24, medido na build 25535041
-    //  (offset absoluto medido: 0xD28; confianca alta)
+    //  ancorado em `CurrentPlayerCharacterLocation` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD28; confianca alta)
     AActor*& TargetAimMagnetismField() const
     { return BrzCampoAncorado<AActor*>(this, "CurrentPlayerCharacterLocation", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x1050; confianca media)
+    //  ancorado em `LastRawInputDir` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1050; confianca media)
     unsigned long long& TargetOrbitedPlayerIdField() const
     { return BrzCampoAncorado<unsigned long long>(this, "LastRawInputDir", 40); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastRawInputDir` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x1058; confianca media)
+    //  ancorado em `LastRawInputDir` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1058; confianca media)
     void*& TargetOrbitedTrialCountField() const
     { return BrzCampoAncorado<void*>(this, "LastRawInputDir", 48); }
     BrzCampoPonteiro TeamPingSettings_AttackField() const
@@ -11868,50 +11867,50 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro TeamPingSettings_TrackField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TeamPingSettings_Track")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPings` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x20F0; confianca alta)
+    //  ancorado em `CurrentPings` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x20F0; confianca alta)
     void*& TeamPingWheelHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPings", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +224, medido na build 25535041
-    //  (offset absoluto medido: 0x2A78; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +224 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A78; confianca baixa)
     double& TellServerAboutNewAutoTrackSetting_LastRequestedTimeField() const
     { return BrzCampoAncorado<double>(this, "POIDistanceToScreenCenterDismiss", 224); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `POIDistanceToScreenCenterDismiss` +232, medido na build 25535041
-    //  (offset absoluto medido: 0x2A80; confianca baixa)
+    //  ancorado em `POIDistanceToScreenCenterDismiss` +232 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2A80; confianca baixa)
     float& TellServerAboutNewAutoTrackSetting_ServerCallRestrictionIntervalField() const
     { return BrzCampoAncorado<float>(this, "POIDistanceToScreenCenterDismiss", 232); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1238; confianca alta)
+    //  ancorado em `FastTravelDroppedInventory` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1238; confianca alta)
     APawn*& TempLastLostPawnField() const
     { return BrzCampoAncorado<APawn*>(this, "FastTravelDroppedInventory", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `ShooterHUDDebugActors` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x36A0; confianca alta)
+    //  ancorado em `ShooterHUDDebugActors` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x36A0; confianca alta)
     void*& TimeLastDisplayOutdatedCosmeticsWarningField() const
     { return BrzCampoAncorado<void*>(this, "ShooterHUDDebugActors", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +176, medido na build 25535041
-    //  (offset absoluto medido: 0xD00; confianca baixa)
+    //  ancorado em `PauseMenuUITemplate` +176 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD00; confianca baixa)
     void*& TimerDoPlayNextInstigatorVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 176); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `IsChangingCameraMode` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x10E8; confianca alta)
+    //  ancorado em `IsChangingCameraMode` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10E8; confianca alta)
     void*& TimerToggleChangeCameraModeField() const
     { return BrzCampoAncorado<void*>(this, "IsChangingCameraMode", 8); }
     BrzCampoPonteiro ToggleAutoRunIconField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.ToggleAutoRunIcon")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `IsChangingCameraMode` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x10F0; confianca alta)
+    //  ancorado em `IsChangingCameraMode` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10F0; confianca alta)
     void*& ToggleDubleTapTimerMapField() const
     { return BrzCampoAncorado<void*>(this, "IsChangingCameraMode", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +316, medido na build 25535041
-    //  (offset absoluto medido: 0x19BC; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +316 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19BC; confianca baixa)
     int& TotalNumSnapPointsField() const
     { return BrzCampoAncorado<int>(this, "LastDownloadedTributePlayerData", 316); }
     float& TrackActorPOILocationLerpRateWhenNotInClientRangeField() const
@@ -11927,30 +11926,30 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro TrackedActorWaypoints_TeammatesOnMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TrackedActorWaypoints_TeammatesOnMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +32, medido na build 25535041
-    //  (offset absoluto medido: 0xFA8; confianca alta)
+    //  ancorado em `LastDeathPrimalCharacter` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xFA8; confianca alta)
     double& TransferTimeCooldownField() const
     { return BrzCampoAncorado<double>(this, "LastDeathPrimalCharacter", 32); }
     BrzCampoPonteiro TribeCacheRallyPointDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.TribeCacheRallyPointData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x2390; confianca media)
+    //  ancorado em `DiscordUserID` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2390; confianca media)
     void*& TribeLobbyJoinTimerField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentPings` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x20F8; confianca alta)
+    //  ancorado em `CurrentPings` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x20F8; confianca alta)
     void*& TribeRallyPointUpdateHandleField() const
     { return BrzCampoAncorado<void*>(this, "CurrentPings", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructurePlacerClass` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1070; confianca alta)
+    //  ancorado em `StructurePlacerClass` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1070; confianca alta)
     void*& UnFreezeHandleField() const
     { return BrzCampoAncorado<void*>(this, "StructurePlacerClass", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +140, medido na build 25535041
-    //  (offset absoluto medido: 0x3624; confianca baixa)
+    //  ancorado em `PerfCheckLocations` +140 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3624; confianca baixa)
     void*& UploadedDinoCountField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 140); }
     FieldArray<unsigned char> UsedItemSlotField() const
@@ -11960,74 +11959,74 @@ struct AShooterPlayerController : public ABasePlayerController
     int& ViewingWheelCategoryField() const
     { return *GetNativePointerField<int*>(this, "AShooterPlayerController.ViewingWheelCategory"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1240; confianca alta)
+    //  ancorado em `FastTravelDroppedInventory` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1240; confianca alta)
     int& VoiceChatFilerTypeField() const
     { return BrzCampoAncorado<int>(this, "FastTravelDroppedInventory", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +152, medido na build 25535041
-    //  (offset absoluto medido: 0x21E8; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +152 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x21E8; confianca baixa)
     void*& VoiceChatFilerTypeTSField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 152); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +376, medido na build 25535041
-    //  (offset absoluto medido: 0x3470; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +376 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3470; confianca baixa)
     void*& VoiceChatReevaluatingBlockedUsersField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 376); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +128, medido na build 25535041
-    //  (offset absoluto medido: 0x3618; confianca media)
+    //  ancorado em `PerfCheckLocations` +128 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3618; confianca media)
     void*& WaitingCloudClubARKTimerField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 128); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +7, medido na build 25535041
-    //  (offset absoluto medido: 0x1650; confianca alta)
+    //  ancorado em `bEnableAltFire` +7 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1650; confianca alta)
     double& WaitingForSpawnUITimeField() const
     { return BrzCampoAncorado<double>(this, "bEnableAltFire", 7); }
     TArray<void*>& WaypointsSOTFField() const
     { return *GetNativePointerField<TArray<void*>*>(this, "AShooterPlayerController.WaypointsSOTF"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentTrackingMark` +120, medido na build 25535041
-    //  (offset absoluto medido: 0x1178; confianca media)
+    //  ancorado em `CurrentTrackingMark` +120 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1178; confianca media)
     void*& WeakClientRecvInventoryPtrField() const
     { return BrzCampoAncorado<void*>(this, "CurrentTrackingMark", 120); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +56, medido na build 25535041
-    //  (offset absoluto medido: 0xC88; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +56 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC88; confianca media)
     void*& bAbsolutelyForceSetInputModeField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 56); }
     BrzCampoPonteiro bArePlannedStructuresHiddenField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bArePlannedStructuresHidden")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalStatsCacheFlushInterval` +57, medido na build 25535041
-    //  (offset absoluto medido: 0x1B89; confianca media)
+    //  ancorado em `PrimalStatsCacheFlushInterval` +57 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B89; confianca media)
     bool& bAutoPlayerField() const
     { return BrzCampoAncorado<bool>(this, "PrimalStatsCacheFlushInterval", 57); }
     BrzCampoPonteiro bCachedOnlyShowOnlineTribeMembersField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bCachedOnlyShowOnlineTribeMembers")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +19, medido na build 25535041
-    //  (offset absoluto medido: 0x165C; confianca alta)
+    //  ancorado em `bEnableAltFire` +19 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x165C; confianca alta)
     void*& bChatSpammedField() const
     { return BrzCampoAncorado<void*>(this, "bEnableAltFire", 19); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bForceHideGameplayUI` +15, medido na build 25535041
-    //  (offset absoluto medido: 0x1A20; confianca alta)
+    //  ancorado em `bForceHideGameplayUI` +15 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A20; confianca alta)
     void*& bClientIsDPCField() const
     { return BrzCampoAncorado<void*>(this, "bForceHideGameplayUI", 15); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +88, medido na build 25535041
-    //  (offset absoluto medido: 0x16C1; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +88 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C1; confianca media)
     bool& bClientReceivedTribeLogField() const
     { return BrzCampoAncorado<bool>(this, "bPreventPaintingStreaming", 88); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +31, medido na build 25535041
-    //  (offset absoluto medido: 0x1668; confianca alta)
+    //  ancorado em `bEnableAltFire` +31 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1668; confianca alta)
     void*& bCommunicationPrivilegeFetchedField() const
     { return BrzCampoAncorado<void*>(this, "bEnableAltFire", 31); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `CurrentDiscordCalls` +80, medido na build 25535041
-    //  (offset absoluto medido: 0x2380; confianca media)
+    //  ancorado em `CurrentDiscordCalls` +80 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2380; confianca media)
     void*& bCommunicationRestoredField() const
     { return BrzCampoAncorado<void*>(this, "CurrentDiscordCalls", 80); }
     BrzCampoPonteiro bDebugPOIsField() const
@@ -12037,8 +12036,8 @@ struct AShooterPlayerController : public ABasePlayerController
     bool& bDrawBlackBackgroundField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bDrawBlackBackground"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SteamInventoryStatusUITemplate` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x12B8; confianca media)
+    //  ancorado em `SteamInventoryStatusUITemplate` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x12B8; confianca media)
     void*& bDrawLocationField() const
     { return BrzCampoAncorado<void*>(this, "SteamInventoryStatusUITemplate", 8); }
     bool& bEnableAltFireField() const
@@ -12058,15 +12057,15 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bEnemyInvisibleField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bEnemyInvisible")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bDrawBlackBackground` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x1B42; confianca alta)
+    //  ancorado em `bDrawBlackBackground` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B42; confianca alta)
     void*& bFailedToDownloadedTransferredCharacterField() const
     { return BrzCampoAncorado<void*>(this, "bDrawBlackBackground", 1); }
     BrzCampoPonteiro bFirstSpecatorCycleSinceDeathField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bFirstSpecatorCycleSinceDeath")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +90, medido na build 25535041
-    //  (offset absoluto medido: 0x35F2; confianca media)
+    //  ancorado em `PerfCheckLocations` +90 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35F2; confianca media)
     void*& bFirstTimePerfCheckingField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 90); }
     bool& bForceHideGameplayUIField() const
@@ -12074,18 +12073,18 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bGamepadHotbarModifierPressedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bGamepadHotbarModifierPressed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +8, medido na build 25535041
-    //  (offset absoluto medido: 0x1A78; confianca media)
+    //  ancorado em `LastShowExtendedInfoTime` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A78; confianca media)
     void*& bHasDisplayedSplitScreenMessageField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 8); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +87, medido na build 25535041
-    //  (offset absoluto medido: 0x16C0; confianca media)
+    //  ancorado em `bPreventPaintingStreaming` +87 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x16C0; confianca media)
     void*& bHasGottenInitialSpawnLocationField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 87); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +20, medido na build 25535041
-    //  (offset absoluto medido: 0x1244; confianca alta)
+    //  ancorado em `FastTravelDroppedInventory` +20 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1244; confianca alta)
     void*& bHasLoadedProfileField() const
     { return BrzCampoAncorado<void*>(this, "FastTravelDroppedInventory", 20); }
     BrzCampoPonteiro bHasReachedHighestPeakField() const
@@ -12097,8 +12096,8 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bHasViewOnlyInventoryOpenField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bHasViewOnlyInventoryOpen")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x2598; confianca alta)
+    //  ancorado em `EnforcementColors` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2598; confianca alta)
     void*& bHighlightEnforcementStructuresField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 16); }
     BrzCampoPonteiro bIgnoreNextToggleInGameMenuField() const
@@ -12106,20 +12105,20 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bInitializedMissionUIField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bInitializedMissionUI")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastPlayerTravelLocation` +112, medido na build 25535041
-    //  (offset absoluto medido: 0x3748; confianca media)
+    //  ancorado em `LastPlayerTravelLocation` +112 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3748; confianca media)
     void*& bInputWasntResetField() const
     { return BrzCampoAncorado<void*>(this, "LastPlayerTravelLocation", 112); }
     unsigned char& bIsAutoRunEnabledField() const
     { return *GetNativePointerField<unsigned char*>(this, "AShooterPlayerController.bIsAutoRunEnabled"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +17, medido na build 25535041
-    //  (offset absoluto medido: 0x2599; confianca alta)
+    //  ancorado em `EnforcementColors` +17 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2599; confianca alta)
     bool& bIsDelayedNetCleanupField() const
     { return BrzCampoAncorado<bool>(this, "EnforcementColors", 17); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `StructurePlacer` +16, medido na build 25535041
-    //  (offset absoluto medido: 0xD60; confianca alta)
+    //  ancorado em `StructurePlacer` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xD60; confianca alta)
     void*& bIsDoingMeleeAimAssitField() const
     { return BrzCampoAncorado<void*>(this, "StructurePlacer", 16); }
     bool& bIsFastTravellingField() const
@@ -12129,100 +12128,100 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bIsInAdvancedCinematicModeField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bIsInAdvancedCinematicMode")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +64, medido na build 25535041
-    //  (offset absoluto medido: 0x2190; confianca media)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +64 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2190; confianca media)
     void*& bIsMicMutedThreadedField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 64); }
     bool& bIsOnlyViewingRemoteInventoryField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bIsOnlyViewingRemoteInventory"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalStatsCacheFlushInterval` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1B54; confianca alta)
+    //  ancorado em `PrimalStatsCacheFlushInterval` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B54; confianca alta)
     void*& bIsPrimalStatsTimerActiveField() const
     { return BrzCampoAncorado<void*>(this, "PrimalStatsCacheFlushInterval", 4); }
     BrzCampoPonteiro bIsRespawningField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bIsRespawning")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +303, medido na build 25535041
-    //  (offset absoluto medido: 0x19AF; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +303 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19AF; confianca baixa)
     void*& bIsTransferingClubArkCharacterField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 303); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +302, medido na build 25535041
-    //  (offset absoluto medido: 0x19AE; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +302 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19AE; confianca baixa)
     bool& bIsTransferringCharacterField() const
     { return BrzCampoAncorado<bool>(this, "LastDownloadedTributePlayerData", 302); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastShowExtendedInfoTime` +184, medido na build 25535041
-    //  (offset absoluto medido: 0x1B28; confianca baixa)
+    //  ancorado em `LastShowExtendedInfoTime` +184 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1B28; confianca baixa)
     void*& bIsViewingTributeInventoryField() const
     { return BrzCampoAncorado<void*>(this, "LastShowExtendedInfoTime", 184); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +136, medido na build 25535041
-    //  (offset absoluto medido: 0x3620; confianca baixa)
+    //  ancorado em `PerfCheckLocations` +136 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3620; confianca baixa)
     void*& bIsWaitingCloudClubARKField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 136); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +137, medido na build 25535041
-    //  (offset absoluto medido: 0x3621; confianca baixa)
+    //  ancorado em `PerfCheckLocations` +137 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3621; confianca baixa)
     void*& bIsWaitingToGiveInitialProfileItemsField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 137); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x1810; confianca media)
+    //  ancorado em `WaypointsSOTF` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1810; confianca media)
     void*& bLastHitMarkerCharacterAllyField() const
     { return BrzCampoAncorado<void*>(this, "WaypointsSOTF", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `WaypointsSOTF` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x1820; confianca media)
+    //  ancorado em `WaypointsSOTF` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1820; confianca media)
     void*& bLastHitMarkerStructureAllyField() const
     { return BrzCampoAncorado<void*>(this, "WaypointsSOTF", 40); }
     BrzCampoPonteiro bLastSpawnWasFastTravelField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bLastSpawnWasFastTravel")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `FastTravelDroppedInventory` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x1250; confianca alta)
+    //  ancorado em `FastTravelDroppedInventory` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1250; confianca alta)
     void*& bLockedInputDontRecenterMouseField() const
     { return BrzCampoAncorado<void*>(this, "FastTravelDroppedInventory", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +12, medido na build 25535041
-    //  (offset absoluto medido: 0x2394; confianca media)
+    //  ancorado em `DiscordUserID` +12 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2394; confianca media)
     void*& bMainLobbyFailField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 12); }
     bool& bMissionSortByDistanceField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bMissionSortByDistance"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPendingAllowPlayerMovement` +48, medido na build 25535041
-    //  (offset absoluto medido: 0x1A10; confianca media)
+    //  ancorado em `bPendingAllowPlayerMovement` +48 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1A10; confianca media)
     void*& bNextShowCharacterCreationUIDownloadField() const
     { return BrzCampoAncorado<void*>(this, "bPendingAllowPlayerMovement", 48); }
     BrzCampoPonteiro bNotifyPawnBuffsOfDamageEventsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bNotifyPawnBuffsOfDamageEvents")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventCanOpenMap` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x1252; confianca alta)
+    //  ancorado em `bPreventCanOpenMap` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1252; confianca alta)
     void*& bPassedInputBlockingTimeoutField() const
     { return BrzCampoAncorado<void*>(this, "bPreventCanOpenMap", 1); }
     BrzCampoPonteiro bPendingAllowPlayerMovementField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bPendingAllowPlayerMovement")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +199, medido na build 25535041
-    //  (offset absoluto medido: 0x1730; confianca baixa)
+    //  ancorado em `bPreventPaintingStreaming` +199 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1730; confianca baixa)
     void*& bPendingServerCheckField() const
     { return BrzCampoAncorado<void*>(this, "bPreventPaintingStreaming", 199); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PerfCheckLocations` +89, medido na build 25535041
-    //  (offset absoluto medido: 0x35F1; confianca media)
+    //  ancorado em `PerfCheckLocations` +89 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x35F1; confianca media)
     void*& bPerfCheckShouldTakeMemReportField() const
     { return BrzCampoAncorado<void*>(this, "PerfCheckLocations", 89); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x1000; confianca alta)
+    //  ancorado em `PrimalLocalProfile` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1000; confianca alta)
     void*& bPlayerSpeakingField() const
     { return BrzCampoAncorado<void*>(this, "PrimalLocalProfile", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `SpectatorCycleIndex` +4, medido na build 25535041
-    //  (offset absoluto medido: 0x1644; confianca alta)
+    //  ancorado em `SpectatorCycleIndex` +4 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1644; confianca alta)
     void*& bPossessedAnyPawnField() const
     { return BrzCampoAncorado<void*>(this, "SpectatorCycleIndex", 4); }
     bool& bPreventCanOpenMapField() const
@@ -12232,37 +12231,37 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bPreventDefaultCharacterItemsField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bPreventDefaultCharacterItems")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PauseMenuUITemplate` +57, medido na build 25535041
-    //  (offset absoluto medido: 0xC89; confianca media)
+    //  ancorado em `PauseMenuUITemplate` +57 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xC89; confianca media)
     void*& bPreventInstigatorVOField() const
     { return BrzCampoAncorado<void*>(this, "PauseMenuUITemplate", 57); }
     bool& bPreventPaintingStreamingField() const
     { return *GetNativePointerField<bool*>(this, "AShooterPlayerController.bPreventPaintingStreaming"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +24, medido na build 25535041
-    //  (offset absoluto medido: 0x10C8; confianca alta)
+    //  ancorado em `bUsingExtendedInfoMap` +24 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C8; confianca alta)
     void*& bRTSKeyBindsAltFireHeldField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 24); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +26, medido na build 25535041
-    //  (offset absoluto medido: 0x10CA; confianca alta)
+    //  ancorado em `bUsingExtendedInfoMap` +26 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10CA; confianca alta)
     void*& bRTSKeyBindsChordConsumedField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 26); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bUsingExtendedInfoMap` +25, medido na build 25535041
-    //  (offset absoluto medido: 0x10C9; confianca alta)
+    //  ancorado em `bUsingExtendedInfoMap` +25 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x10C9; confianca alta)
     void*& bRTSKeyBindsPoopHeldField() const
     { return BrzCampoAncorado<void*>(this, "bUsingExtendedInfoMap", 25); }
     BrzCampoPonteiro bReachedTamedDinoLimitField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bReachedTamedDinoLimit")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDownloadedTributePlayerData` +301, medido na build 25535041
-    //  (offset absoluto medido: 0x19AD; confianca baixa)
+    //  ancorado em `LastDownloadedTributePlayerData` +301 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x19AD; confianca baixa)
     void*& bReceivedSubscribedAppsField() const
     { return BrzCampoAncorado<void*>(this, "LastDownloadedTributePlayerData", 301); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bPreventPaintingStreaming` +200, medido na build 25535041
-    //  (offset absoluto medido: 0x1731; confianca baixa)
+    //  ancorado em `bPreventPaintingStreaming` +200 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1731; confianca baixa)
     bool& bServerAllowCommunicationField() const
     { return BrzCampoAncorado<bool>(this, "bPreventPaintingStreaming", 200); }
     BrzCampoPonteiro bShouldAutoUploadTribeFlagField() const
@@ -12272,30 +12271,30 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bSprintInputPressedField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bSprintInputPressed")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bEnableAltFire` +1, medido na build 25535041
-    //  (offset absoluto medido: 0x164A; confianca alta)
+    //  ancorado em `bEnableAltFire` +1 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x164A; confianca alta)
     void*& bSuppressAdminIconField() const
     { return BrzCampoAncorado<void*>(this, "bEnableAltFire", 1); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TamingWaypoints` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x26C0; confianca alta)
+    //  ancorado em `TamingWaypoints` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26C0; confianca alta)
     void*& bSyncTamingWithoutUIField() const
     { return BrzCampoAncorado<void*>(this, "TamingWaypoints", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `TrackedActorWaypoints_TeammatesOnMap` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x26F8; confianca alta)
+    //  ancorado em `TrackedActorWaypoints_TeammatesOnMap` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x26F8; confianca alta)
     void*& bSyncTrackedActorsWithoutUIField() const
     { return BrzCampoAncorado<void*>(this, "TrackedActorWaypoints_TeammatesOnMap", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DiscordUserID` +13, medido na build 25535041
-    //  (offset absoluto medido: 0x2395; confianca media)
+    //  ancorado em `DiscordUserID` +13 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2395; confianca media)
     void*& bTeamChangingField() const
     { return BrzCampoAncorado<void*>(this, "DiscordUserID", 13); }
     BrzCampoPonteiro bTribeCacheHaveRallyPointDataField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bTribeCacheHaveRallyPointData")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PrimalLocalProfile` +40, medido na build 25535041
-    //  (offset absoluto medido: 0x1018; confianca media)
+    //  ancorado em `PrimalLocalProfile` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1018; confianca media)
     void*& bUpdateDLCContentField() const
     { return BrzCampoAncorado<void*>(this, "PrimalLocalProfile", 40); }
     BrzCampoPonteiro bUseBPGetExtraWaypointsSOTFField() const
@@ -12307,69 +12306,69 @@ struct AShooterPlayerController : public ABasePlayerController
     BrzCampoPonteiro bUseOldMiniMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUseOldMiniMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `RemoteViewingInventories` +100, medido na build 25535041
-    //  (offset absoluto medido: 0x1224; confianca media)
+    //  ancorado em `RemoteViewingInventories` +100 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x1224; confianca media)
     void*& bUsePressedFromGamepadField() const
     { return BrzCampoAncorado<void*>(this, "RemoteViewingInventories", 100); }
     BrzCampoPonteiro bUsingExtendedInfoMapField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bUsingExtendedInfoMap")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +473, medido na build 25535041
-    //  (offset absoluto medido: 0x2329; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +473 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2329; confianca baixa)
     bool& bWaitingForServerMessageOfTheDayField() const
     { return BrzCampoAncorado<bool>(this, "bTribeCacheHaveRallyPointData", 473); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bTribeCacheHaveRallyPointData` +472, medido na build 25535041
-    //  (offset absoluto medido: 0x2328; confianca baixa)
+    //  ancorado em `bTribeCacheHaveRallyPointData` +472 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x2328; confianca baixa)
     void*& bWaitingToQueryVoiceChatPermissionsAgainField() const
     { return BrzCampoAncorado<void*>(this, "bTribeCacheHaveRallyPointData", 472); }
     BrzCampoPonteiro bWantsToPingField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bWantsToPing")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LastDeathPrimalCharacter` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xF90; confianca alta)
+    //  ancorado em `LastDeathPrimalCharacter` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xF90; confianca alta)
     void*& bWasDeadField() const
     { return BrzCampoAncorado<void*>(this, "LastDeathPrimalCharacter", 8); }
     BrzCampoPonteiro bWasGamepadHotbarModifierPressed_RightShoulderField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "AShooterPlayerController.bWasGamepadHotbarModifierPressed_RightShoulder")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +86, medido na build 25535041
-    //  (offset absoluto medido: 0x17A1; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +86 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17A1; confianca media)
     bool& bZoomingInField() const
     { return BrzCampoAncorado<bool>(this, "bHasReachedLowestDepth", 86); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `bHasReachedLowestDepth` +85, medido na build 25535041
-    //  (offset absoluto medido: 0x17A0; confianca media)
+    //  ancorado em `bHasReachedLowestDepth` +85 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x17A0; confianca media)
     void*& bZoomingOutField() const
     { return BrzCampoAncorado<void*>(this, "bHasReachedLowestDepth", 85); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +96, medido na build 25535041
-    //  (offset absoluto medido: 0x25E8; confianca media)
+    //  ancorado em `EnforcementColors` +96 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25E8; confianca media)
     float& disableWalkFromRadialWheelField() const
     { return BrzCampoAncorado<float>(this, "EnforcementColors", 96); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +44, medido na build 25535041
-    //  (offset absoluto medido: 0x25B4; confianca media)
+    //  ancorado em `EnforcementColors` +44 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25B4; confianca media)
     void*& doingHarvestMeleeField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 44); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +32, medido na build 25535041
-    //  (offset absoluto medido: 0x25A8; confianca alta)
+    //  ancorado em `EnforcementColors` +32 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25A8; confianca alta)
     void*& meleeAttackOrGatheringActiveField() const
     { return BrzCampoAncorado<void*>(this, "EnforcementColors", 32); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +33, medido na build 25535041
-    //  (offset absoluto medido: 0x25A9; confianca media)
+    //  ancorado em `EnforcementColors` +33 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25A9; confianca media)
     bool& meleeAttackOrGatheringIsGatheringField() const
     { return BrzCampoAncorado<bool>(this, "EnforcementColors", 33); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `EnforcementColors` +36, medido na build 25535041
-    //  (offset absoluto medido: 0x25AC; confianca media)
+    //  ancorado em `EnforcementColors` +36 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x25AC; confianca media)
     float& meleeAttackOrGatheringTimerField() const
     { return BrzCampoAncorado<float>(this, "EnforcementColors", 36); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `MyVolumetricDispatcher` +400, medido na build 25535041
-    //  (offset absoluto medido: 0x3488; confianca baixa)
+    //  ancorado em `MyVolumetricDispatcher` +400 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x3488; confianca baixa)
     void*& playerIDToPlatformNameMapField() const
     { return BrzCampoAncorado<void*>(this, "MyVolumetricDispatcher", 400); }
     BitFieldValue<bool, unsigned __int32> bDidAutoRunCheats()

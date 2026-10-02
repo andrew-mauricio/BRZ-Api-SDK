@@ -52,13 +52,13 @@ struct UGameplayTask_SpawnActor
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DidNotSpawn` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x88; confianca alta)
+    //  ancorado em `DidNotSpawn` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x88; confianca alta)
     void*& CachedSpawnLocationField() const
     { return BrzCampoAncorado<void*>(this, "DidNotSpawn", 16); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `DidNotSpawn` +40, medido na build 25535041
-    //  (offset absoluto medido: 0xA0; confianca media)
+    //  ancorado em `DidNotSpawn` +40 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xA0; confianca media)
     void*& CachedSpawnRotationField() const
     { return BrzCampoAncorado<void*>(this, "DidNotSpawn", 40); }
     BrzCampoPonteiro ChildTaskField() const

@@ -251,8 +251,8 @@ struct UMovementComponent : public UActorComponent
     }
 
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `UpdatedPrimitive` +8, medido na build 25535041
-    //  (offset absoluto medido: 0xE0; confianca alta)
+    //  ancorado em `UpdatedPrimitive` +8 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0xE0; confianca alta)
     int& MoveComponentFlagsField() const
     { return BrzCampoAncorado<int>(this, "UpdatedPrimitive", 8); }
     int& PlaneConstraintAxisSettingField() const
@@ -278,13 +278,13 @@ struct UMovementComponent : public UActorComponent
     BrzCampoPonteiro bConstrainToPlaneField() const
     { return BrzCampoPonteiro(GetNativePointerField<void**>(this, "UMovementComponent.bConstrainToPlane")); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlaneConstraintOrigin` +26, medido na build 25535041
-    //  (offset absoluto medido: 0x132; confianca alta)
+    //  ancorado em `PlaneConstraintOrigin` +26 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x132; confianca alta)
     bool& bInInitializeComponentField() const
     { return BrzCampoAncorado<bool>(this, "PlaneConstraintOrigin", 26); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `PlaneConstraintOrigin` +25, medido na build 25535041
-    //  (offset absoluto medido: 0x131; confianca alta)
+    //  ancorado em `PlaneConstraintOrigin` +25 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x131; confianca alta)
     bool& bInOnRegisterField() const
     { return BrzCampoAncorado<bool>(this, "PlaneConstraintOrigin", 25); }
     BrzCampoPonteiro bSnapToPlaneAtStartField() const

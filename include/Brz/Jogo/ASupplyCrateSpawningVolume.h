@@ -139,8 +139,8 @@ struct ASupplyCrateSpawningVolume : public AActor
     float& NoValidSpawnReCheckIntervalField() const
     { return *GetNativePointerField<float*>(this, "ASupplyCrateSpawningVolume.NoValidSpawnReCheckInterval"); }
     //  sem UPROPERTY: a reflexao NAO alcanca este campo por nome.
-    //  ancorado em `LinkedSupplyCrateEntries` +16, medido na build 25535041
-    //  (offset absoluto medido: 0x4F0; confianca alta)
+    //  ancorado em `LinkedSupplyCrateEntries` +16 (distancia do porte de 06/09/2026, 24159508 -> 25090264;
+    //  a ancora resolve por NOME a cada boot; offset absoluto na 25090264: 0x4F0; confianca alta)
     TArray<void*>& OriginalSupplyCrateEntriesField() const
     { return BrzCampoAncorado<TArray<void*>>(this, "LinkedSupplyCrateEntries", 16); }
     float& SP_DelayBeforeFirstCrateField() const

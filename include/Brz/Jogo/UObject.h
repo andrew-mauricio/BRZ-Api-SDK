@@ -467,7 +467,7 @@ struct UObject : public UObjectBaseUtility
 
     // retorno: AsaApi da comunidade — segunda fonte independente
     //   UObject.Serialize(FArchive&)
-    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=99+chamadores=60]]
+    // endereco: inferido pela POSICAO e depois PROVADO [posicao-PROVADA [tam=99+chamadores=59]]
     void Serialize(void* a0) const
     {
         NativeCall<void, void*>(this, "UObject.Serialize(FArchive&)", a0);
